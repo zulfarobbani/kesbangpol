@@ -51,10 +51,10 @@ class Agenda extends GlobalFunc
     {
         $namaAgenda = $data_test['namaAgenda'];
         $deskripsiAgenda = $data_test['deskripsiAgenda'];
-        $datestartAgenda = $data_test['datestartAgenda'];
-        $dateendAgenda = $data_test['dateendAgenda'];
+        // $datestartAgenda = $data_test['datestartAgenda'];
+        // $dateendAgenda = $data_test['dateendAgenda'];
 
-        $sql = "UPDATE ".$this->table." SET namaAgenda = '$namaAgenda', deskripsiAgenda = '$deskripsiAgenda', datestartAgenda = '$datestartAgenda', dateendAgenda = '$dateendAgenda' WHERE idAgenda='$id'";
+        $sql = "UPDATE ".$this->table." SET namaAgenda = '$namaAgenda', deskripsiAgenda = '$deskripsiAgenda' WHERE idAgenda='$id'";
 
         try{
             $data = $this->conn->prepare($sql);

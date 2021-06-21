@@ -42,7 +42,7 @@ $routes->add('agendaedit', new Route('/agenda/edit/{id}', [
 ]));
 
 $routes->add('agendaupdate', new Route('/agenda/edit/{id}/update', [
-    '_controller' => 'App\Agenda\Controller\AgendaController::update',
+    '_controller' => 'App\Agenda\Controller\AgendaController::updateordelete',
 ]));
 
 $routes->add('agendadelete', new Route('/agenda/delete/{id}', [
@@ -579,6 +579,10 @@ $routes->add('sakipupdate', new Route('/sakip/edit/{id}/update', [
 
 $routes->add('sakipdelete', new Route('/sakip/delete/{id}', [
     '_controller' => 'App\Sakip\Controller\SakipController::delete',
+]));
+
+$routes->add('sakipdownloadberkas', new Route('/sakip/download-berkas/{id}', [
+    '_controller' => 'App\Sakip\Controller\SakipController::downloadBerkas',
 ]));
 // crud sakip end
 

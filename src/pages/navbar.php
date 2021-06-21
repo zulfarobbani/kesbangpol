@@ -1,6 +1,6 @@
 
 
- <span><img class="img-fluid" src="../assets/image/Header kesbangpol-01.png" alt="gak ada gambar lohhh" ></span>
+ <span><img class="img-fluid" src="assets/image/Header kesbangpol-01.png" alt="gak ada gambar lohhh" ></span>
   <div class="container-fluid">
     <nav class="navbar-fluid sticky-top navbar-expand" style="background-color: #000099;">
     <div class="collapse navbar-collapse" id="navbarNav">

@@ -19,6 +19,7 @@ class SakipController extends GlobalFunc
     public function index(Request $request)
     {
         $datas = $this->model->selectAll();
+
         return $this->render_template('sakip/index', ['datas' => $datas]);
     }
     
@@ -45,13 +46,41 @@ class SakipController extends GlobalFunc
             }
         }
         $data_test = array(       
-            'namaSakip' =>$nama,
+            'namaSakip' =>$namaSakip1,
             'dateCreate' => $dateCreate
         );
         
 
         $this->model->create($data_test);
         return header("location:http://kesbangpol.com/sakip");
+    }
+
+    public function downloadBerkas(Request $request)
+    {
+        $idSakip = $request->attributes->get("id");
+
+        $detail = $this->model->selectOne($idSakip);
+
+        $filepath = __DIR__ ."/../../../assets/terupload/" .$detail['namaSakip'];
+
+        if(file_exists($filepath)) {
+            header('Content-Description: File Transfer');
+            header('Content-Type: application/octet-stream');
+            header('Content-Disposition: attachment; filename="'
+                                        .basename($filepath).'"');
+            header('Expires: 0');
+            header('Cache-Control: must-revalidate');
+            header('Pragma: public');
+            header('Content-Length: ' . filesize($filepath));
+  
+            // Flush system output buffer
+            flush(); 
+            readfile($filepath);
+            die();
+        } else {
+            http_response_code(404);
+            die();
+        }
     }
 
     public function ReadOne(Request $request)
