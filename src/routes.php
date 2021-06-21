@@ -28,8 +28,11 @@ $routes->add('welcome', new Route('/', [
     }
 ]));
 
-$routes->add('hello', new Route('/hellos/get/{id}', [
+$routes->add('a', new Route('/hellos/get/{id}', [
     '_controller' => 'App\Calendar\Controller\LeapYearController::testing',
+]));
+$routes->add('dashboard', new Route('/dashboard', [
+    '_controller' => 'App\Dashboard\Controller\DashboardController::testing',
 ]));
 
 //curd agenda start
