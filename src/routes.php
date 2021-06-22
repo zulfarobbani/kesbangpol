@@ -28,6 +28,10 @@ $routes->add('welcome', new Route('/', [
     }
 ]));
 
+$routes->add('LoginRegister', new Route('/login-register', [
+    '_controller' => 'App\LoginRegister\Controller\LoginRegisterController::index',
+]));
+
 $routes->add('a', new Route('/hellos/get/{id}', [
     '_controller' => 'App\Calendar\Controller\LeapYearController::testing',
 ]));

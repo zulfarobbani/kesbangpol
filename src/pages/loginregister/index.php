@@ -10,41 +10,39 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
-  <title>SAKIP</title>
+  <title>LOGIN</title>
+  <style type="text/css">
+  	.form-control{
+  		border-radius: 7px;
+  	}
+  </style>
 </head>
 
-<body style="background-color : #EEEEEE;">
+<body style="background-color : #EEEEEE; color: navy;">
 
   <?php include(__DIR__.'/../navbar.php' )?>
   <div class="container-fluid">   
       <div class="row">  
         <div class="col-md-8 top-1 start-0 ps-5">
-          <?php include(__DIR__.'/../navtabsprofil.php' )?>
-          <h4>Panduan SAKIP</h4>
-          <a href="sakip/create" class="btn btn-sm btn-outline-success"><span class="material-icons-outlined align-bottom">post_add</span>Tambah Data</a>
-          <div class="col-12">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th>Nama Berkas</th>
-                  <td></td>
-                </tr>
-              </thead>
-              <tbody>
-                <?php foreach($datas as $key => $values) {?>
-                <tr>
-                  <td><?= explode('.', $values['namaSakip'])[0] ?></td>
-                  <td class="float-end">
-                    <a href="sakip/edit/<?= $values['idSakip'];?>"><span class="material-icons-outlined px-2">edit</span></a>
-                    <a href="sakip/delete/<?= $values['idSakip'];?>"><span class="material-icons-outlined px-2">delete</span></a>
-                    <a href="sakip/download-berkas/<?= $values['idSakip'];?>"><span class="material-icons-outlined px-2">file_download</span></a>
-                  </td>
-                </tr>
-                <?php } ?>
-              </tbody>
-            </table>
+          <!-- START CODE -->
+          <h4 class="mt-3">ORSOSPOL</h4>
+          <div class="row">
+          	<div class="col-md-6 text-end">
+          		<h4 class="fw-light">Login</h4>
+          		<input type="text" class="form-control shadow-sm mb-3" name="" placeholder="Username">
+          		<input type="password" class="form-control shadow-sm mb-3" name="" placeholder="Password">
+          		<button type="submit" class="btn btn-outline-danger"><span style="color: navy;">Masuk</span></button>
+          	</div>
+          	<div class="col-md-6 text-end">
+          		<h4 class="fw-light">Register</h4>
+          		<input type="text" class="form-control shadow-sm mb-3" name="" placeholder="Nama Lengkap Penanggung Jawab">
+          		<input type="text" class="form-control shadow-sm mb-3" name="" placeholder="Username">
+          		<input type="password" class="form-control shadow-sm mb-3" name="" placeholder="Password">
+          		<input type="email" class="form-control shadow-sm mb-3" name="" placeholder="Email">
+          		<button type="submit" class="btn btn-outline-danger"><span style="color: navy;">Daftar</span></button>
+          	</div>
           </div>
-        </div>
+          </div>
         <?php include(__DIR__.'/../sidebar.php' )?>
       </div>
       <?php include(__DIR__.'/../footer.php' )?>
