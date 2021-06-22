@@ -11,39 +11,51 @@
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
   <title>Document</title>
+  <style type="text/css">
+    #pict{
+      filter: grayscale(100%);
+
+    }
+  </style>
 </head>
 
-<body style="background-color : #e9ecef;">
+<body style="background-color : #EEEEEE;">
 
   <?php include(__DIR__.'/../navbar.php' )?>
-  <div class="container-fluid">
-    <div class="col-6 position-absolute top-1 start-0">
-      <h5>Panduan SAKIP</h5>
-      <span><a href="sakip/create">TAMBAH SAKIP</a></span>
-      <div class="col-14">
-        <table class="table">
-          <thead>
-            <tr>
-              <td>Nama Berkas</td>
-              <td>Aksi</td>
-            </tr>
-          </thead>
-          <tbody>
-            <?php foreach($datas as $key => $values) {?>
-            <tr>
-              <td><?= explode('.', $values['namaSakip'])[0] ?></td>
-              <td>
-                <a href="sakip/edit/<?= $values['idSakip'];?>">EDIT</a>
-                <a href="sakip/delete/<?= $values['idSakip'];?>">HAPUS</a>
-                <a href="sakip/download-berkas/<?= $values['idSakip'];?>">Download Berkas</a>
-              </td>
-            </tr>
-            <?php } ?>
-          </tbody>
-        </table>
-      </div>
-    </div>
+  <div class="container-fluid">   
+      <div class="row">  
+        <div class="col-md-8 top-1 start-0 ps-5">
+          <?php include(__DIR__.'/../navtabsprofil.php' )?>
+          <h4>Panduan SAKIP</h4>
+          <a href="sakip/create" class="btn btn-sm btn-outline-success"><span class="material-icons-outlined align-bottom">post_add</span>Tambah Data</a>
+          <div class="col-12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Nama Berkas</th>
+                  <td></td>
+                </tr>
+              </thead>
+              <tbody>
+                <?php foreach($datas as $key => $values) {?>
+                <tr>
+                  <td><?= explode('.', $values['namaSakip'])[0] ?></td>
+                  <td class="float-end">
+                    <a href="sakip/edit/<?= $values['idSakip'];?>"><span class="material-icons-outlined px-2">edit</span></a>
+                    <a href="sakip/delete/<?= $values['idSakip'];?>"><span class="material-icons-outlined px-2">delete</span></a>
+                    <a href="sakip/download-berkas/<?= $values['idSakip'];?>"><span class="material-icons-outlined px-2">file_download</span></a>
+                  </td>
+                </tr>
+                <?php } ?>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <?php include(__DIR__.'/../sidebar.php' )?>
+        
   </div>
+    <?php include(__DIR__.'/../footer.php' )?>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
   </script>
