@@ -73,7 +73,7 @@ class MemberController extends GlobalFunc
         $idKec = $request->request->get('idKec');
         $idKel = $request->request->get('idKel');
         $teleponMember = $request->request->get('teleponMember');
-        $fotoMember = $request->request->get('fotoMember');
+        $fotoMember = $_FILES['fotoMember']['name'];
         $idjabatan = $request->request->get('idjabatan');
         $idPendidikan = $request->request->get('idPendidikan');
         $idOrsospol = $request->request->get('idOrsospol');
@@ -84,6 +84,16 @@ class MemberController extends GlobalFunc
         $whatsapp = $request->request->get('whatsapp');
         $telegram = $request->request->get('telegram');
         $dateCreate = date("Y-m-d");
+        $namaSementara = $_FILES['fotoMember']['tmp_name'];
+        $ekstensi_diperbolehkan	= array('png','img','jpg');
+        $x = explode('.', $fotoMember);
+        $ekstensi = strtolower(end($x));
+        $ukuran	= $_FILES['fotoMember']['size'];
+        if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
+		    if($ukuran < 1044070){			
+			move_uploaded_file($namaSementara, __DIR__.'/../../../assets/foto/'.$fotoMember);
+            }
+        }
 
         $data_test = array(   
             'idSosmed' => $idSosmed,    

@@ -32,7 +32,10 @@ $routes->add('a', new Route('/hellos/get/{id}', [
     '_controller' => 'App\Calendar\Controller\LeapYearController::testing',
 ]));
 $routes->add('dashboard', new Route('/dashboard', [
-    '_controller' => 'App\Dashboard\Controller\DashboardController::testing',
+    '_controller' => 'App\Dashboard\Controller\DashboardController::tampil',
+]));
+$routes->add('beranda', new Route('/beranda', [
+    '_controller' => 'App\Dashboard\Controller\DashboardController::home',
 ]));
 
 //curd agenda start

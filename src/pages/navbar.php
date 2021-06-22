@@ -2,10 +2,10 @@
 
  <span><img class="img-fluid" src="assets/image/Header kesbangpol gada putihan-01.png" alt="gak ada gambar lohhh" ></span>
   <div class="container-fluid">
-    <nav class="navbar-fluid sticky-top navbar-expand" style="background-color: #000099;">
+    <nav class="navbar-fluid sticky-top navbar-expand " style="background-color: #000099;">
     <div class="collapse navbar-collapse" id="navbarNav">
      <div class="container-fluid">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav justify-content-center">
           <li class="nav-item">
           <div class="container-fluid"><span class="material-icons-outlined fs-1" style="color: white;">home</span>
             <a class="nav-link active" aria-current="page" href="#"  style="color: white;">Beranda</a></div>

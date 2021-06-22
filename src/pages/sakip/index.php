@@ -16,7 +16,25 @@
 <body style="background-color : #e9ecef;">
 
   <?php include(__DIR__.'/../navbar.php' )?>
+  
   <div class="container-fluid">
+  <ul class="nav bg-gray">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Struktur Organisasi</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Visi & Misi</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">TUPOKSI</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link " href="/sakip">SAKIP</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/regulasi">REGULASI</a>
+  </li>
+</ul>
     <div class="col-6 position-absolute top-1 start-0">
       <h5>Panduan SAKIP</h5>
       <span><a href="sakip/create">TAMBAH SAKIP</a></span>
