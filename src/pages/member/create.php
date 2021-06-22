@@ -9,7 +9,7 @@
 </head>
 <body>
 <fieldset>
-    <form action="/member/store" method="POST">
+    <form action="/member/store" method="POST" enctype="multipart/form-data">
     <div class="container">
         <div class="mb-3 col-6">
             <label for="" class="form-label">Nama : </label>
@@ -65,8 +65,8 @@
         <div class="mb-3">
             <label for="" class="form-label">Foto : </label>
             <div class="input-group">
-                <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" name="fotoMember">
-                <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>
+            <input type="file" name="fotoMember">
+               
             </div>
         </div>
         <div class="mb-3">

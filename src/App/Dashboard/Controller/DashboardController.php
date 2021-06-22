@@ -16,9 +16,11 @@ class DashboardController extends GlobalFunc
         
     }
     public function tampil(Request $request){
-        return $this->render_template('dasboard/index');
+        return $this->render_template('/dashboard');
     }
-    
+    public function home(Request $request){
+        return $this->render_template('/beranda');
+    }
     public function index(Request $request)
     {
         $datas = $this->model->selectAll();
