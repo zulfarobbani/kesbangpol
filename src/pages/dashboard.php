@@ -16,7 +16,7 @@
     
         <div class="row img-fluid">
             <div class="col d-flex justify-content-center">
-        <a href=""><img src="../assets/icon/Beranda.png" alt="home"> </a> 
+        <a href="/beranda"><img src="../assets/icon/Beranda.png" alt="home"> </a> 
             </div>
         <div class="col d-flex justify-content-center">
         <a><img src="../assets/icon/Icon Profil dashboard.png" alt="profil"></a>

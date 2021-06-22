@@ -163,7 +163,7 @@
                     $('#ModalAdd').modal('show');
                 },
                 events : [
-                    <?php foreach($datas as $key => $value) {?>
+                    <?php foreach($datas as $key => $value) { ?>
                         {
                             id        : "<?= $value['idAgenda']?>",
                             title     : "<?= $value['namaAgenda']?>",
@@ -171,7 +171,7 @@
                             start     : "<?= $value['datestartAgenda']?>",
                             end       : "<?= $value['dateendAgenda']?>"
                         },
-                    <?php }?>
+                    <?php } ?>
                 ],
                 eventRender: function (event, element) {
                     element.bind('click', function () {
