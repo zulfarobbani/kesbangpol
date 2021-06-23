@@ -20,7 +20,7 @@ $routes->add('assets', new Routing\Route('/assets/{path}.{_format}', [
 // ROUTE APPLICATION START BELOW!!! 
 // --------------------------------
 
-$routes->add('welcome', new Route('/', [
+$routes->add('welcome', new Route('/1', [
     '_controller' => function(Request $request) {
         global $app;
 
@@ -36,7 +36,7 @@ $routes->add('a', new Route('/hellos/get/{id}', [
     '_controller' => 'App\Calendar\Controller\LeapYearController::testing',
 ]));
 //dashboard
-$routes->add('dashboard', new Route('/dashboard', [
+$routes->add('dashboard', new Route('/', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::tampil',
 ]));
 //beranda/ home
@@ -49,6 +49,19 @@ $routes->add('visimisi', new Route('/visi-misi', [
 ]));
 $routes->add('tupoksi', new Route('/tupoksi', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::tupoksi',
+]));
+//layanan
+$routes->add('pendataan', new Route('/pendataan', [
+    '_controller' => 'App\Dashboard\Controller\DashboardController::pendataan',
+]));
+$routes->add('permohonan-hibah', new Route('/permohonan-hibah', [
+    '_controller' => 'App\Dashboard\Controller\DashboardController::permohonanhibah',
+]));
+$routes->add('permohonan-penelitian', new Route('/permohonan-penelitian', [
+    '_controller' => 'App\Dashboard\Controller\DashboardController::permohonanpenelitian',
+]));
+$routes->add('unduhan', new Route('/unduhan', [
+    '_controller' => 'App\Dashboard\Controller\DashboardController::unduhan',
 ]));
 
 //curd agenda start

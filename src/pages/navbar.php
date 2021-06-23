@@ -7,7 +7,7 @@
         <ul class="navbar-nav">
           <li class="nav-item text-center px-3 py-1">
             <div class="container-fluid">
-              <a class="nav-link active" aria-current="page" href="#"  style="color: white;">
+              <a class="nav-link active" aria-current="page" href="beranda"  style="color: white;">
               <span class="material-icons-outlined fs-1" style="color: white;">home</span>
               <br>Beranda</a>
             </div>

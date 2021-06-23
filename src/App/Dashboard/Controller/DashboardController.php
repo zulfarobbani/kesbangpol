@@ -4,6 +4,7 @@ namespace App\Dashboard\Controller;
 
 use App\Dashboard\Model\Dashboard;
 use App\Berita\Model\Berita;
+use App\Media\Model\Media;
 use Core\GlobalFunc;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -11,27 +12,50 @@ class DashboardController extends GlobalFunc
 {
     public $model;
     public $model2;
+    public $model3;
 
     public function __construct()
     {
         $this->model = new Dashboard();
         $this->model2 = new Berita();
+        $this->model3 = new Media();
         
     }
+    //dashboard
     public function tampil(Request $request){
         return $this->render_template('/dashboard');
     }
+    //beranda
     public function home(Request $request){
         $datas_2 = $this->model2->selectAll();
-    
-        return $this->render_template('/beranda', ['datas'=>$datas_2]);
+        $datas_3 = $this->model3->selectOne('med60d2d6b462b8b');
+        
+        return $this->render_template('/beranda', ['datas'=>$datas_2, 'foto'=>$datas_3['pathMedia']]);
+        dump($datas_3['pathMedia']);
+        die();
     }
+    //profil
     public function visimisi(Request $request){
         return $this->render_template('/visi-misi');
     }  
     public function tupoksi(Request $request){
         return $this->render_template('/tupoksi');
     }
+    //layanan
+    public function pendataan(Request $request){
+        return $this->render_template('/pendataan');
+    }
+    public function permohonanhibah(Request $request){
+        return $this->render_template('/permohonan-hibah');
+    }
+    public function permohonanpenelitian(Request $request){
+        return $this->render_template('/permohonan-penelitian');
+    }
+    public function unduhan(Request $request){
+        return $this->render_template('/unduhan');
+    }
+
+
     public function index(Request $request)
     {
         $datas = $this->model->selectAll();

@@ -26,7 +26,7 @@
               <div class="" style="width: 12rem;">
                   <div class="d-flex card bg-dark">
                       <div class="flex-shrink-0 card-body">
-                          <img class="img-fluid" src="../assets/berita/" alt="Gambar Berita">
+                          <img class="img-fluid" src="../assets/berita/<?= $foto?>" alt="Gambar Berita">
                           <h5 class="card-title" style="color: white;"><?= $values['namaBerita']?></h5>
                           <p class="card-text" style="color: white;"><?= html_entity_decode(nl2br($values['deskripsiBerita']))?></p>
                           <p class="card-text" style="color: white;"><small class="text-muted"><?= $values['dateCreate']?></small><p class="text-mute"><?= $values['idRelation']?></p></p>
