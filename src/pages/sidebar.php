@@ -1,64 +1,49 @@
-<div class="col-md-4 py-3 pe-4 position-sticky">
-          <div class="row">
-          <h5 class="text-muted mb-4 text-center">Layanan<br>KESBANGPOL</h5>
+<style type="text/css">
+    #pict{
+      filter: grayscale(100%);
+
+    }
+  </style>
+<div class="col-md-4 py-3 pe-4">
+          <div class="row d-flex align-items-center">
+            <h5 class="text-muted mb-3">Selamat Datang</h5>
+            <div class="col-2">
+              <img src="https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png" width="50px" height="50px">
+            </div>
             <div class="col-6">
-              <a href="#" class="btn btn-sm btn-outline-dark d-flex mb-2 py-2">
+                <p class="text-muted m-0">
+                  <span class="fw-bold">Nama ORSOSPOL</span><br>
+                  <span>No. AHU/No. Register</span>
+                </p>
+            </div>
+            <div class="col-4">
+              <a href="#" class="btn btn-outline-danger" style="color:navy;"><i class="fas fa-door-open"></i>Keluar</a>
+            </div>
+          </div>
+        <div class="row">
+          <h5 class="text-muted my-4 text-center">Layanan<br>KESBANGPOL</h5>
+            <div class="col-6">
+              <a href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2 py-2">
                 <span class="material-icons-outlined">link</span>
                 <span>Layanan 1</span>
               </a>
             </div>
             <div class="col-6">
-              <a href="#" class="btn btn-sm btn-outline-dark d-flex mb-2 py-2">
+              <a href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2 py-2">
                 <span class="material-icons-outlined">link</span>
                 <span>Layanan 2</span>
               </a>
             </div>
             <div class="col-6">
-              <a href="#" class="btn btn-sm btn-outline-dark d-flex mb-2 py-2">
+              <a href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2 py-2">
                 <span class="material-icons-outlined">link</span>
                 <span>Layanan 3</span>
               </a>
             </div>
             <div class="col-6">
-              <a href="#" class="btn btn-sm btn-outline-dark d-flex mb-2 py-2">
+              <a href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2 py-2">
                 <span class="material-icons-outlined">link</span>
                 <span>Layanan 4</span>
-              </a>
-            </div>
-            <div class="col-6">
-              <a href="#" class="btn btn-sm btn-outline-dark d-flex mb-2 py-2">
-                <span class="material-icons-outlined">link</span>
-                <span>Layanan 5</span>
-              </a>
-            </div>
-            <div class="col-6">
-              <a href="#" class="btn btn-sm btn-outline-dark d-flex mb-2 py-2">
-                <span class="material-icons-outlined">link</span>
-                <span>Layanan 6</span>
-              </a>
-            </div>
-            <div class="col-6">
-              <a href="#" class="btn btn-sm btn-outline-dark d-flex mb-2 py-2">
-                <span class="material-icons-outlined">link</span>
-                <span>Layanan 7</span>
-              </a>
-            </div>
-            <div class="col-6">
-              <a href="#" class="btn btn-sm btn-outline-dark d-flex mb-2 py-2">
-                <span class="material-icons-outlined">link</span>
-                <span>Layanan 8</span>
-              </a>
-            </div>
-            <div class="col-6">
-              <a href="#" class="btn btn-sm btn-outline-dark d-flex mb-2 py-2">
-                <span class="material-icons-outlined">link</span>
-                <span>Layanan 9</span>
-              </a>
-            </div>
-            <div class="col-6">
-              <a href="#" class="btn btn-sm btn-outline-dark d-flex mb-2 py-2">
-                <span class="material-icons-outlined">link</span>
-                <span>Layanan 10</span>
               </a>
             </div>
 
