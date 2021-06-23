@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,30 +15,17 @@
 
 <body style="background-color : #EEEEEE;">
 
-  <?php include('navbar.php' )?>
+  <?php include(__DIR__.'/../navbar.php' )?>
   <div class="container-fluid">   
       <div class="row">  
         <div class="col-md-8 top-1 start-0 ps-5 mb-3">
+          <?php include(__DIR__.'/../navtabsprofil.php' )?>
           <!-- START CODE -->
-            <div class="row">
-            <?php foreach($datas as $key => $values) {?>
-              <div class="" style="width: 12rem;">
-                  <div class="d-flex card bg-dark">
-                      <div class="flex-shrink-0 card-body">
-                          <img class="img-fluid" src="../assets/berita/" alt="Gambar Berita">
-                          <h5 class="card-title" style="color: white;"><?= $values['namaBerita']?></h5>
-                          <p class="card-text" style="color: white;"><?= html_entity_decode(nl2br($values['deskripsiBerita']))?></p>
-                          <p class="card-text" style="color: white;"><small class="text-muted"><?= $values['dateCreate']?></small><p class="text-mute"><?= $values['idRelation']?></p></p>
-                          
-                      </div>
-                  </div>
-              </div>
-              <?php } ?>
-            </div>
+
           </div>
-        <?php include('sidebar.php' )?>
+        <?php include(__DIR__.'/../sidebar.php' )?>
       </div>
-      <?php include('footer.php' )?>
+      <?php include(__DIR__.'/../footer.php' )?>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">

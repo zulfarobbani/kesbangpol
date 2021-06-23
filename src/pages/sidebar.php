@@ -1,4 +1,4 @@
-<div class="col-md-4 py-3 pe-4">
+<div class="col-md-4 py-3 pe-4 position-sticky">
           <div class="row">
           <h5 class="text-muted mb-4 text-center">Layanan<br>KESBANGPOL</h5>
             <div class="col-6">

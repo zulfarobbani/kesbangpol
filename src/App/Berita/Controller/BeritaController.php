@@ -3,17 +3,19 @@
 namespace App\Berita\Controller;
 
 use App\Berita\Model\Berita;
+use App\Media\Model\Media;
 use Core\GlobalFunc;
 use Symfony\Component\HttpFoundation\Request;
 
 class BeritaController extends GlobalFunc
 {
     public $model;
+    public $model2;
 
     public function __construct()
     {
         $this->model = new Berita();
-        
+        $this->model2 = new Media();
     }
     
     public function index(Request $request)
@@ -29,12 +31,13 @@ class BeritaController extends GlobalFunc
     }
     public function store(Request $request)
     {
+        $fileupload = $_FILES['fotoBerita'];
         $namaBerita = $request->request->get('namaBerita');
         $deskripsiBerita = $request->request->get('deskripsiBerita');
         $idRelation = $request->request->get('idRelation');
         $approvalBerita = $request->request->get('approvalBerita');
         $dateCreate = date("Y-m-d");
- 
+
         $data_test = array(       
             'namaBerita' => $namaBerita,
             'deskripsiBerita' => $deskripsiBerita,
@@ -45,6 +48,7 @@ class BeritaController extends GlobalFunc
 
         
         $this->model->create($data_test);
+        $this->model2->create($fileupload, $dateCreate, $idRelation);
         
         return header("location:http://kesbangpol.com/berita");
     }

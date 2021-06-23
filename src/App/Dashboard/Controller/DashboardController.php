@@ -3,23 +3,34 @@
 namespace App\Dashboard\Controller;
 
 use App\Dashboard\Model\Dashboard;
+use App\Berita\Model\Berita;
 use Core\GlobalFunc;
 use Symfony\Component\HttpFoundation\Request;
 
 class DashboardController extends GlobalFunc
 {
     public $model;
+    public $model2;
 
     public function __construct()
     {
         $this->model = new Dashboard();
+        $this->model2 = new Berita();
         
     }
     public function tampil(Request $request){
         return $this->render_template('/dashboard');
     }
     public function home(Request $request){
-        return $this->render_template('/beranda');
+        $datas_2 = $this->model2->selectAll();
+    
+        return $this->render_template('/beranda', ['datas'=>$datas_2]);
+    }
+    public function visimisi(Request $request){
+        return $this->render_template('/visi-misi');
+    }  
+    public function tupoksi(Request $request){
+        return $this->render_template('/tupoksi');
     }
     public function index(Request $request)
     {

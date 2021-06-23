@@ -31,11 +31,20 @@ $routes->add('welcome', new Route('/', [
 $routes->add('a', new Route('/hellos/get/{id}', [
     '_controller' => 'App\Calendar\Controller\LeapYearController::testing',
 ]));
+//dashboard
 $routes->add('dashboard', new Route('/dashboard', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::tampil',
 ]));
+//beranda/ home
 $routes->add('beranda', new Route('/beranda', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::home',
+]));
+//profile
+$routes->add('visimisi', new Route('/visi-misi', [
+    '_controller' => 'App\Dashboard\Controller\DashboardController::visimisi',
+]));
+$routes->add('tupoksi', new Route('/tupoksi', [
+    '_controller' => 'App\Dashboard\Controller\DashboardController::tupoksi',
 ]));
 
 //curd agenda start
