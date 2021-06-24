@@ -2,33 +2,39 @@
   .nav-link{
     color: navy;
   }
-  .nav{
+  .nav-link:hover{
+    color: #feae88;
+  }
+  #latar{
     background-color: #e0e0e0;
   }
+
 </style>
-<div class="container px-0 py-3 rounded d-flex justify-content-start">
-  <ul class="nav">
-    <li class="nav-item px-2">
-      <a class="nav-link" aria-current="page" href="#">
+<div class="container px-0 py-3 rounded justify-content-start">
+  <div class="row text-center d-flex align-items-center" id="latar">
+    <div class="col-3 p-0">
+      <a class="nav-link p-0" aria-current="page" href="#">
         <span class="material-icons-outlined align-middle">person_add_alt_1</span>
-        Pendataan Orsospol
+        <p class="m-0 p-0">Pendataan<br>Orsospol</p>
       </a>
-    </li>
-    <li class="nav-item px-2">
-      <a class="nav-link" href="#">
+    </div>
+    <div class="col-3 p-0">
+      <a class="nav-link p-0" href="#">
         <span class="material-icons-outlined align-middle">volunteer_activism</span>
-      Permohonan Hibah</a>
-    </li>
-    <li class="nav-item px-2">
-      <a class="nav-link" href="#">
-        <span class="material-icons-outlined align-middle">plagiarism</span>
-      Permohonan Penelitian</a>
-    </li>
-    <li class="nav-item px-2">
-      <a class="nav-link" href="#">
-        <span class="material-icons-outlined align-middle">file_download</span>
-        Unduhan Form Lainnya
+        <p class="m-0 p-0">Permohonan<br>Hibah</p>
       </a>
-    </li>
-  </ul>
+    </div>
+    <div class="col-3 p-0">
+      <a class="nav-link p-0" href="#">
+        <span class="material-icons-outlined align-middle">plagiarism</span>
+        <p class="m-0 p-0">Permohonan<br>Penelitian</p>  
+      </a>
+    </div>
+    <div class="col-3 p-0">
+      <a class="nav-link p-0" href="#">
+        <span class="material-icons-outlined align-middle">file_download</span>
+        <p class="m-0 p-0">Unduhan Form<br>Lainnya</p>
+      </a>
+    </div>
+  </div>
 </div>

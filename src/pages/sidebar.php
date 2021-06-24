@@ -17,7 +17,7 @@
                 </p>
             </div>
             <div class="col-4">
-              <a href="#" class="btn btn-outline-danger" style="color:navy;"><i class="fas fa-door-open"></i>Keluar</a>
+              <a href="#" class="btn btn-outline-danger" style="color:navy;"><i class="fas fa-door-open"></i>&nbsp;&nbsp;&nbsp;Keluar</a>
             </div>
           </div>
         <div class="row">
