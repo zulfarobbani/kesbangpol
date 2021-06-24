@@ -54,6 +54,10 @@ class DashboardController extends GlobalFunc
     public function unduhan(Request $request){
         return $this->render_template('/unduhan');
     }
+    //organisasi terdaftar
+    public function oragnisasi(Request $request){
+        return $this->render_template('/organisasi-terdaftar');
+    }
 
 
     public function index(Request $request)

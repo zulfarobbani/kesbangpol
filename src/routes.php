@@ -63,6 +63,10 @@ $routes->add('permohonan-penelitian', new Route('/permohonan-penelitian', [
 $routes->add('unduhan', new Route('/unduhan', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::unduhan',
 ]));
+//Organisasi terdaftar
+$routes->add('organisasi', new Route('/organisasi-terdaftar',[
+    '_controller' => 'App\Dashboard\Controller\DashboardController::organisasi',
+]));
 
 //curd agenda start
 $routes->add('agenda', new Route('/agenda', [
