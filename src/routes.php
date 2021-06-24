@@ -63,10 +63,58 @@ $routes->add('permohonan-penelitian', new Route('/permohonan-penelitian', [
 $routes->add('unduhan', new Route('/unduhan', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::unduhan',
 ]));
+
 //Organisasi terdaftar
 $routes->add('organisasi', new Route('/organisasi-terdaftar',[
     '_controller' => 'App\Dashboard\Controller\DashboardController::organisasi',
 ]));
+//Ormas
+$routes->add('ormasi', new Route('/ormas',[
+    '_controller' => 'App\Dashboard\Controller\DashboardController::ormas',
+]));
+//OKP
+$routes->add('okp', new Route('/okp',[
+    '_controller' => 'App\Dashboard\Controller\DashboardController::okp',
+]));
+//Komunitas
+$routes->add('komunitas', new Route('/komunitas',[
+    '_controller' => 'App\Dashboard\Controller\DashboardController::komunitas',
+]));
+//Parpol
+$routes->add('parpol', new Route('/parpol',[
+    '_controller' => 'App\Dashboard\Controller\DashboardController::parpol',
+]));
+
+//data-organisasi
+$routes->add('dataOrganisasi', new Route('/data-organisasi',[
+    '_controller' => 'App\Dashboard\Controller\DashboardController::dataOrganisasi',
+]));
+//struktur-organisasi
+$routes->add('strukturOrganisasi', new Route('/struktur-organisasi',[
+    '_controller' => 'App\Dashboard\Controller\DashboardController::strukturOrganisasi',
+]));
+//kelengkapan-administrasi
+$routes->add('kelengkapanAdministrasi', new Route('/kelengkapan-administrasi',[
+    '_controller' => 'App\Dashboard\Controller\DashboardController::kelengkapanAdministrasi',
+]));
+//program kerja tahunan
+$routes->add('progKerjaTahunan', new Route('/prog-kerja-tahunan',[
+    '_controller' => 'App\Dashboard\Controller\DashboardController::progKerjaTahunan',
+]));
+//laporan organisasi
+$routes->add('laporanOrganisasi', new Route('/laporan-organisasi',[
+    '_controller' => 'App\Dashboard\Controller\DashboardController::laporanOrganisasi',
+]));
+
+//Forum Umum
+$routes->add('forumUmum', new Route('/forum-umum',[
+    '_controller' => 'App\Dashboard\Controller\DashboardController::forumUmum',
+]));
+//Forum Private
+$routes->add('forumPrivate', new Route('/forum-private',[
+    '_controller' => 'App\Dashboard\Controller\DashboardController::forumPrivate',
+]));
+
 
 //curd agenda start
 $routes->add('agenda', new Route('/agenda', [

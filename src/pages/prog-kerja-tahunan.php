@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,47 +10,43 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
-  <title>REGULASI</title>
+  <title>PROGRAM KERJA TAHUNAN</title>
 </head>
 
 <body style="background-color : #EEEEEE; color: navy;">
 
-  <?php include(__DIR__.'/../navbar.php' )?>
+  <?php include(__DIR__.'/navbar.php' )?>
   <div class="container-fluid">   
       <div class="row">  
         <div class="col-md-8 top-1 start-0 ps-5 mb-3">
-          <?php include(__DIR__.'/../navtabsprofil.php' )?>
+          <?php include(__DIR__.'/navtabsinfoorganisasi.php' )?>
           <!-- START CODE -->
-          <h4>Regulasi</h4>
-            <!-- <span><a href="regulasi/create">TAMBAH REGULASI</a></span> -->
-            <div class="col-12">
-                <table class="table mt-3" style="color: navy;">
-                    <thead>
-                        <tr>
-                            <th class="col-1">No</th>
-                            <th>Nama Regulasi</th>
-                            <td></td>   
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach($datas as $key => $values) {?>
-                        <tr>
-                            <td><?= $key+=1 ?>.</td>
-                            <td><?= $values['namaRegulasi'] ?></td>
-                            <!-- <td class="float-end">
-                                <a href="regulasi/edit/<?= $values['idRegulasi'];?>">EDIT</a> 
-                                <a href="regulasi/delete/<?= $values['idRegulasi'];?>">HAPUS</a>
-                            </td> -->
-                            
-                        </tr>
-                        <?php } ?>
-                    </tbody>
-                </table>
-            </div>
+          <h4>Program Kerja Tahunan</h4>
+          <div class="col-12">
+            <table class="table mt-3">
+              <thead>
+                <th>Tahun</th>
+                <th>Nama Program Kerja</th>
+                <th></th>
+              </thead>
+              <tbody>
+                <td></td>
+                <td></td>
+                <td class="float-end">
+                  <a href="" style="color: navy;"><span class="material-icons-outlined px-2">file_upload</span></a>
+                </td>
+              </tbody>
+            </table>
+            <div class="d-flex flex-row-reverse">
+             <a href="" type="button" class="btn btn-outline-danger ms-3" style="color: navy;">Simpan</a>
+             <a href="" type="button" class="btn btn-outline-danger" style="color: navy;">Ubah</a>
+           </div>
           </div>
-        <?php include(__DIR__.'/../sidebar.php' )?>
+
+          </div>
+        <?php include(__DIR__.'/sidebar.php' )?>
       </div>
-      <?php include(__DIR__.'/../footer.php' )?>
+      <?php include(__DIR__.'/footer.php' )?>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
@@ -59,4 +55,5 @@
     integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
   </script>
 </body>
+
 </html>

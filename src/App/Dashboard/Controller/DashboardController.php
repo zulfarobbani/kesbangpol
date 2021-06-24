@@ -55,9 +55,56 @@ class DashboardController extends GlobalFunc
         return $this->render_template('/unduhan');
     }
     //organisasi terdaftar
-    public function oragnisasi(Request $request){
+    public function organisasi(Request $request){
         return $this->render_template('/organisasi-terdaftar');
     }
+    //organisasi terdaftar ormas
+    public function ormas(Request $request){
+        return $this->render_template('/ormas');
+    }
+    //organisasi terdaftar OKP
+    public function okp(Request $request){
+        return $this->render_template('/okp');
+    }
+    //organisasi terdaftar Komunitas
+    public function komunitas(Request $request){
+        return $this->render_template('/komunitas');
+    }
+    //organisasi terdaftar parpol
+    public function parpol(Request $request){
+        return $this->render_template('/parpol');
+    }
+
+    //data Organisasi
+    public function dataOrganisasi(Request $request){
+        return $this->render_template('/data-organisasi');
+    }
+    //Struktur Organisasi
+    public function strukturOrganisasi(Request $request){
+        return $this->render_template('/struktur-organisasi');
+    }
+    //kelengkapan Administrasi
+    public function kelengkapanAdministrasi(Request $request){
+        return $this->render_template('/kelengkapan-administrasi');
+    }
+    //program Kerja Tahunan
+    public function progKerjaTahunan(Request $request){
+        return $this->render_template('/prog-kerja-tahunan');
+    }
+    //data Organisasi
+    public function laporanOrganisasi(Request $request){
+        return $this->render_template('/laporan-organisasi');
+    }
+
+    //Forum Umum
+    public function forumUmum(Request $request){
+        return $this->render_template('/forum-umum');
+    }
+    //Forum Private
+    public function forumPrivate(Request $request){
+        return $this->render_template('/forum-private');
+    }
+
 
 
     public function index(Request $request)
