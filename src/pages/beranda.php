@@ -21,14 +21,15 @@
       <div class="row">  
         <div class="col-md-8 top-1 start-0 ps-5 mb-3">
           <!-- START CODE -->
+          <h4 class="fw-normal mt-5">Informasi KESBANG Terkini</h4>
             <div class="row">
             <?php foreach($datas as $key => $values) {?>
               <div class="" style="width: 12rem;">
-                  <div class="d-flex card bg-dark">
+                  <div class="d-flex card bg-light">
                       <div class="flex-shrink-0 card-body">
-                          <img class="img-fluid" src="../assets/berita/<?= $foto?>" alt="Gambar Berita">
-                          <h5 class="card-title" style="color: white;"><?= $values['namaBerita']?></h5>
-                          <p class="card-text" style="color: white;"><?= html_entity_decode(nl2br($values['deskripsiBerita']))?></p>
+                          <img class="img-fluid" src="/assets/berita/<?= $foto?>" alt="Gambar Berita">
+                          <h5 class="card-title"><?= $values['namaBerita']?></h5>
+                          <p class="card-text"><?= html_entity_decode(nl2br($values['deskripsiBerita']))?></p>
                           <p class="card-text" style="color: white;"><small class="text-muted"><?= $values['dateCreate']?></small><p class="text-mute"><?= $values['idRelation']?></p></p>
                           
                       </div>

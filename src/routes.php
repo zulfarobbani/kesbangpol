@@ -121,6 +121,15 @@ $routes->add('forumPrivate', new Route('/forum-private',[
 $routes->add('hubungiKami', new Route('/hubungi-kami', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::hubungiKami',
 ]));
+$routes->add('informasiBerita', new Route('/informasi-berita', [
+    '_controller' => 'App\Dashboard\Controller\DashboardController::informasiBerita',
+]));
+$routes->add('informasiGaleri', new Route('/informasi-galeri', [
+    '_controller' => 'App\Dashboard\Controller\DashboardController::informasiGaleri',
+]));
+$routes->add('informasiPengumuman', new Route('/informasi-pengumuman', [
+    '_controller' => 'App\Dashboard\Controller\DashboardController::informasiPengumuman',
+]));
 
 
 //curd agenda start

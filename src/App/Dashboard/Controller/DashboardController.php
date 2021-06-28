@@ -108,7 +108,19 @@ class DashboardController extends GlobalFunc
     public function biodataAnggota(Request $request){
         return $this->render_template('/biodata-anggota');
     }
-     //Biodata Anggota
+     //Informasi Berita
+    public function informasiBerita(Request $request){
+        return $this->render_template('/informasi-berita');
+    }
+     //Informasi Galeri
+    public function informasiGaleri(Request $request){
+        return $this->render_template('/informasi-galeri');
+    }
+     //Informasi Pengumuman
+    public function informasiPengumuman(Request $request){
+        return $this->render_template('/informasi-Pengumuman');
+    }
+     //Hubungi Kami
     public function hubungiKami(Request $request){
         return $this->render_template('/hubungi-kami');
     }

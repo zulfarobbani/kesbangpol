@@ -24,11 +24,11 @@
             <div class="col-1 my-3 ps-4">
               <i class="fas fa-map-marker-alt"></i>
             </div>
-            <div class="col-4 my-3 m">
+            <div class="col-2 my-3 m">
               <p class="p-0 m-0">Alamat Kantor</p>
             </div>
-            <div class="col-7 my-3">
-              
+            <div class="col-9 my-3"><!-- 
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.53585951585657!2d107.60665363244992!3d-6.941435738795081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e87efa30ef29%3A0x32ec20403fe5c6ba!2sJl.%20Kangkung%20Kidul%20No.18%2C%20Lkr.%20Sel.%2C%20Kec.%20Lengkong%2C%20Kota%20Bandung%2C%20Jawa%20Barat%2040263%2C%20Indonesia!5e0!3m2!1sid!2sus!4v1624851400427!5m2!1sid!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
             </div>
             <div class="col-1 my-3 ps-4">
               <i class="far fa-phone-alt"></i>
