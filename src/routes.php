@@ -43,7 +43,11 @@ $routes->add('dashboard', new Route('/', [
 $routes->add('beranda', new Route('/beranda', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::home',
 ]));
+
 //profile
+$routes->add('biodataAnggota', new Route('/biodata-anggota', [
+    '_controller' => 'App\Dashboard\Controller\DashboardController::biodataAnggota',
+]));
 $routes->add('visimisi', new Route('/visi-misi', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::visimisi',
 ]));
@@ -113,6 +117,9 @@ $routes->add('forumUmum', new Route('/forum-umum',[
 //Forum Private
 $routes->add('forumPrivate', new Route('/forum-private',[
     '_controller' => 'App\Dashboard\Controller\DashboardController::forumPrivate',
+]));
+$routes->add('hubungiKami', new Route('/hubungi-kami', [
+    '_controller' => 'App\Dashboard\Controller\DashboardController::hubungiKami',
 ]));
 
 
@@ -695,5 +702,6 @@ $routes->add('sosmedupdate', new Route('/sosmed/edit/{id}/update', [
 $routes->add('sosmeddelete', new Route('/sosmed/delete/{id}', [
     '_controller' => 'App\Sosmed\Controller\SosmedController::delete',
 ]));
+
 // crud sakip end
 return $routes;

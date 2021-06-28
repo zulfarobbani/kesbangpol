@@ -104,7 +104,14 @@ class DashboardController extends GlobalFunc
     public function forumPrivate(Request $request){
         return $this->render_template('/forum-private');
     }
-
+     //Biodata Anggota
+    public function biodataAnggota(Request $request){
+        return $this->render_template('/biodata-anggota');
+    }
+     //Biodata Anggota
+    public function hubungiKami(Request $request){
+        return $this->render_template('/hubungi-kami');
+    }
 
 
     public function index(Request $request)

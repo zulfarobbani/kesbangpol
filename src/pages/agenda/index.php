@@ -19,13 +19,17 @@
 
 <body style="background-color : #e9ecef;">
     <?php include(__DIR__.'/../navbar.php' )?>
-
-    <div class="row mt-5">
-        <div class="col-lg-12">
-            <div id="agenda" class="col-centered">
-            </div>
-        </div>
-    </div>
+      <div class="container-fluid">   
+      <div class="row">  
+        <div class="col-md-8 top-1 start-0 ps-5 mb-3">
+          <?php include(__DIR__.'/../navtabsprofil.php' )?>
+          <!-- START CODE -->
+          <div id="agenda" class="col-centered"></div>
+          </div>
+        <?php include(__DIR__.'/../sidebar.php' )?>
+      </div>
+      <?php include(__DIR__.'/../footer.php' )?>
+  </div>
 
     <!-- Modal Create Event-->
     <div class="modal fade" id="ModalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
