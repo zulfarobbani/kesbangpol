@@ -15,19 +15,19 @@
 
 <body style="background-color : #EEEEEE; color: navy;">
 
-  <?php include(__DIR__.'/navbar.php' )?>
+  <?php include(__DIR__.'/../navbar.php' )?>
   <div class="container-fluid">   
       <div class="row">  
         <div class="col-md-8 top-1 start-0 ps-5 mb-3">
           <div class="container-fluid p-1 mt-4">  
             <div class="input-group">
               <span class="input-group-text bg-body border-0 text-muted"><span class="material-icons-outlined align-middle">search</span></span>
-              <input type="text" class="form-control border-0" placeholder="Cari Komunitas">
+              <input type="text" class="form-control border-0" placeholder="Cari OKP">
             </div>
           </div>
-          <?php include(__DIR__.'/navtabsorganisasi.php' )?>
+          <?php include(__DIR__.'/../navtabsorganisasi.php' )?>
           <!-- START CODE -->
-          <h4>Komunitas Belum Berbadan Hukum Terdaftar</h4>
+          <h4>OKP Terdaftar</h4>
 
           <div class="col-12">
             <table class="table mt-3" style="color: navy;">
@@ -44,7 +44,7 @@
                 <tr>
                   <td>1.</td>
                   <td>00000000000</td>
-                  <td>Komunitas A</td>
+                  <td>OPK A</td>
                   <td>Jalan Pahlawan</td>
                   <!-- <td class="float-end">
                     <a href="regulasi/edit/<?= $values['idRegulasi'];?>">EDIT</a> 
@@ -57,9 +57,9 @@
           </div>
 
           </div>
-        <?php include(__DIR__.'/sidebar.php' )?>
+        <?php include(__DIR__.'/../sidebar.php' )?>
       </div>
-      <?php include(__DIR__.'/footer.php' )?>
+      <?php include(__DIR__.'/../footer.php' )?>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">

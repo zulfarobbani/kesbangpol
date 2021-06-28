@@ -30,7 +30,7 @@
                     <h5 class="text-info text-center">Profil</h5></a>
             </div>
             <div class="col d-flex justify-content-center">
-                <a href=""  class="text-info text-center"><img src="../assets/icon/Organisasi terdaftar.png" alt="Organisasi Terdaftar">
+                <a href="/ormas"  class="text-info text-center"><img src="../assets/icon/Organisasi terdaftar.png" alt="Organisasi Terdaftar">
                     <h5>Organisasi<br>Terdaftar</h5></a> 
             </div>
             <div class="col d-flex justify-content-center">

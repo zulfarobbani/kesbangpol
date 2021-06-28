@@ -1,5 +1,5 @@
 
- <span><img class="img-fluid" src="assets/image/Header kesbangpol Revisi ke 5-01.png" alt="gak ada gambar lohhh" ></span>
+ <span><img class="img-fluid" src="../assets/image/Header kesbangpol Revisi ke 5-01.png" alt="gak ada gambar" ></span>
   <div class="container-fluid p-0">
     <nav class="navbar-fluid sticky-top navbar-expand" style="background-color: #000099;">
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -35,7 +35,7 @@
           </li>
           <li class="nav-item text-center px-3 py-1">
             <div class="container-fluid">
-              <a class="nav-link " href="#"  style="color: white;">
+              <a class="nav-link " href="/ormas"  style="color: white;">
               <span class="material-icons-outlined fs-1" style="color: white;">groups</span>
                 <br>Organisasi Terdaftar</a>
             </div>

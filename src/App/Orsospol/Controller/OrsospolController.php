@@ -26,8 +26,7 @@ class OrsospolController extends GlobalFunc
         $data_komunitas = $this->model->selectAll("jor60d0575b7b225");
         $data_parpol = $this->model->selectAll("jor60d05997283b8");
         
-        dump($data_ormas, $data_okp, $data_komunitas, $data_parpol);
-        die();
+        
 
         return $this->render_template('orsospol/index', ['data_ormas' => $data_ormas, 'data_okp' => $data_okp, 'data_komunitas' => $data_komunitas, 'data_parpol' => $data_parpol]);
     }

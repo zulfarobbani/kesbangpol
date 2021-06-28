@@ -15,7 +15,7 @@
 
 <body style="background-color : #EEEEEE; color: navy;">
 
-  <?php include(__DIR__.'/navbar.php' )?>
+  <?php include(__DIR__.'/../navbar.php' )?>
   <div class="container-fluid">   
       <div class="row">  
         <div class="col-md-8 top-1 start-0 ps-5 mb-3">
@@ -25,7 +25,7 @@
               <input type="text" class="form-control border-0" placeholder="Cari PARPOL">
             </div>
           </div>
-          <?php include(__DIR__.'/navtabsorganisasi.php' )?>
+          <?php include(__DIR__.'/../navtabsorganisasi.php' )?>
           <!-- START CODE -->
           <h4>Partai Politik Teerdaftar</h4>
 
@@ -57,9 +57,9 @@
           </div>
 
           </div>
-        <?php include(__DIR__.'/sidebar.php' )?>
+        <?php include(__DIR__.'/../sidebar.php' )?>
       </div>
-      <?php include(__DIR__.'/footer.php' )?>
+      <?php include(__DIR__.'/../footer.php' )?>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">

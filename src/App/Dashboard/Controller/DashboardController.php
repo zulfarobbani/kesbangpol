@@ -60,19 +60,19 @@ class DashboardController extends GlobalFunc
     }
     //organisasi terdaftar ormas
     public function ormas(Request $request){
-        return $this->render_template('/ormas');
+        return $this->render_template('/organisasi-terdaftar/ormas');
     }
     //organisasi terdaftar OKP
     public function okp(Request $request){
-        return $this->render_template('/okp');
+        return $this->render_template('/organisasi-terdaftar/okp');
     }
     //organisasi terdaftar Komunitas
     public function komunitas(Request $request){
-        return $this->render_template('/komunitas');
+        return $this->render_template('/organisasi-terdaftar/komunitas');
     }
     //organisasi terdaftar parpol
     public function parpol(Request $request){
-        return $this->render_template('/parpol');
+        return $this->render_template('/organisasi-terdaftar/parpol');
     }
 
     //data Organisasi
