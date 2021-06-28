@@ -18,7 +18,7 @@
       </a>
     </div>
     <div class="col-sm-2 px-2">
-      <a class="nav-link p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" href="#">
+      <a class="nav-link p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" href="\visi-misi">
         <span class="material-icons-outlined align-middle">radar</span>
         <span>Visi & Misi</span>
       </a>
