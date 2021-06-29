@@ -22,7 +22,7 @@
         <div class="col-md-8 top-1 start-0 ps-5 mb-3">
           <?php include(__DIR__.'/navtabsforum.php' )?>
           <!-- START CODE -->
-          <script async src="https://telegram.org/js/telegram-widget.js?15" data-telegram-discussion="forumorsospolumum/2" data-comments-limit="5"></script>
+          <script async src="https://telegram.org/js/telegram-widget.js?15" data-telegram-discussion="forumorsospolumum/2"  data-comments-limit="5" data-height="400" data-colorful="1"></script>></script>
           
             
           </div>
