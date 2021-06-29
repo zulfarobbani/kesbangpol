@@ -23,39 +23,7 @@
           <?php include(__DIR__.'/navtabsforum.php' )?>
           <!-- START CODE -->
           <script async src="https://telegram.org/js/telegram-widget.js?15" data-telegram-discussion="forumorsospolumum/2" data-comments-limit="5"></script>
-          <div class="col-12">
-            <div class="card shadow" style="height: 20rem">
-              <div class="row p-2">
-                <div class="col-1 mb-3">
-                  <img src="https://www.pngarts.com/files/5/User-Avatar-Transparent.png" width="70px">
-                </div>
-                <div class="col-11">
-                  <div class="card rounded" style="height: 50px;"></div>
-                </div>
-                <div class="col-1 mb-3">
-                  <img src="https://www.pngarts.com/files/5/User-Avatar-Transparent.png" width="70px">
-                </div>
-                <div class="col-11">
-                  <div class="card rounded" style="height: 50px;"></div>
-                </div>
-                <div class="col-1 mb-3">
-                  <img src="https://www.pngarts.com/files/5/User-Avatar-Transparent.png" width="70px">
-                </div>
-                <div class="col-11">
-                  <div class="card rounded" style="height: 50px;"></div>
-                </div>
-              </div>
-            </div>
-            </div>
-            <div class="col-12">
-              <div class="input-group my-3">
-                <input type="text" class="form-control border-0" placeholder="Ketik Pesan" aria-describedby="button-addon2">
-                <button class="bg-body border-0" type="button" id="button-addon2"><span class="material-icons-outlined">send</span></button>
-              </div>
-            </div>
-              <div class="col-12 d-flex flex-row-reverse">
-                <a href="" type="button" class="btn btn-outline-danger ms-3" style="color: navy;">Simpan</a>
-              </div>
+          
             
           </div>
 
