@@ -23,8 +23,7 @@
           <?php include(__DIR__.'/navtabsforum.php' )?>
           <!-- START CODE -->
           <h4>Forum Diskusi ORSOSPOL</h4>
-          <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-<div class="elfsight-app-9b268ed4-cef8-40b8-b4a7-459e434ae733"></div>
+
           <div class="row">
 
             <div class="col-md-4">
@@ -70,6 +69,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
     integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
   </script>
+  <script> window.intergramId = "1718039883" </script>
+<script id="intergram" type="text/javascript" src="https://www.intergram.xyz/js/widget.js"></script>
 </body>
 
 </html>
