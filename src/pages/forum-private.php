@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+  <link rel="canonical" href="https://t.me/forumorsospol/3">
   <title></title>
 </head>
 
@@ -22,7 +23,7 @@
           <?php include(__DIR__.'/navtabsforum.php' )?>
           <!-- START CODE -->
           <h4>Forum Diskusi ORSOSPOL</h4>
-          <img src="/assets/image/ss.jpg" width="80%">
+          <script async src="https://telegram.org/js/telegram-widget.js?15" data-telegram-discussion="forumorsospol/3" data-comments-limit="5"></script>
             
           </div>
 
