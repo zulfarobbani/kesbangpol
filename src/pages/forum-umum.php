@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+  <link rel="canonical" href="https://t.me/forumorsospolumum/2">
   <title></title>
 </head>
 
@@ -21,6 +22,7 @@
         <div class="col-md-8 top-1 start-0 ps-5 mb-3">
           <?php include(__DIR__.'/navtabsforum.php' )?>
           <!-- START CODE -->
+          <script async src="https://telegram.org/js/telegram-widget.js?15" data-telegram-discussion="forumorsospolumum/2" data-comments-limit="5"></script>
           <div class="col-12">
             <div class="card shadow" style="height: 20rem">
               <div class="row p-2">
