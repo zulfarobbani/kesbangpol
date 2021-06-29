@@ -23,7 +23,8 @@
           <?php include(__DIR__.'/navtabsforum.php' )?>
           <!-- START CODE -->
           <h4>Forum Diskusi ORSOSPOL</h4>
-          
+          <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-9b268ed4-cef8-40b8-b4a7-459e434ae733"></div>
           <div class="row">
 
             <div class="col-md-4">
