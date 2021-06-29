@@ -23,10 +23,11 @@
           <?php include(__DIR__.'/navtabsforum.php' )?>
           <!-- START CODE -->
           <h4>Forum Diskusi ORSOSPOL</h4>
+          
           <div class="row">
 
-            <div class="col">
-              <div class="card" style="width: 18rem;">
+            <div class="col-md-4">
+              <div class="card" style="width: 12rem;">
               <img src="https://cdn5.telesco.pe/file/gUxcprs8fkvd1ggekfEZPoEtav-MZoXckfDAKI8B8t2j82uvpqQEtqpl-_3jebt2AEEbMWZNvppZtUH_gPiUIBS2cmJOOKhAhlABrQMTCxCQRSy-n11oGuEZXjDq53IDy97uyfWNxeotj1mW25tIw1HmuygWwdnng6vdivNQ-LiqyOgOElkovjzbm3lyMj1VECNJOOwyOD73oMcLHRumKafuJtIaDL8ZtRlw5o4MqPb0Q9vVjaehObIELrE0Rwi27MotZqnqw5QWZb5eOehEIFe2hehkCxiePV1aiwWI4xeguyXBpyMWmkOtZlqMR4_dDDNupyGgM7MMLoxdfoZ6xw.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Ridwan Mulyawan</h5>
@@ -36,8 +37,8 @@
             </div>
           </div>
 
-          <div class="col">
-              <div class="card" style="width: 18rem;">
+          <div class="col-md-4">
+              <div class="card" style="width: 12rem;">
               <img src="https://cdn5.telesco.pe/file/gUxcprs8fkvd1ggekfEZPoEtav-MZoXckfDAKI8B8t2j82uvpqQEtqpl-_3jebt2AEEbMWZNvppZtUH_gPiUIBS2cmJOOKhAhlABrQMTCxCQRSy-n11oGuEZXjDq53IDy97uyfWNxeotj1mW25tIw1HmuygWwdnng6vdivNQ-LiqyOgOElkovjzbm3lyMj1VECNJOOwyOD73oMcLHRumKafuJtIaDL8ZtRlw5o4MqPb0Q9vVjaehObIELrE0Rwi27MotZqnqw5QWZb5eOehEIFe2hehkCxiePV1aiwWI4xeguyXBpyMWmkOtZlqMR4_dDDNupyGgM7MMLoxdfoZ6xw.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Ridwan Mulyawan</h5>
@@ -47,8 +48,10 @@
             </div>
           </div>
 
-          
+
         </div>
+
+
 
 
 
