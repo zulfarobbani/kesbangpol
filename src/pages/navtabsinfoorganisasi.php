@@ -18,8 +18,8 @@
         <p class="m-0 p-0">Data<br>Organisasi</p>
       </a>
     </div>
-    <div class="col-2 p-0">
-      <a class="nav-link p-0" href="\struktur-organisasi">
+    <div class="col-3 p-0">
+      <a class="nav-link p-0" href="\struktur-organisasi-terdaftar">
         <span class="material-icons-outlined align-middle mt-1">account_tree</span>
         <p class="m-0 p-0">Struktur<br>Organisasi</p>
       </a>
@@ -30,7 +30,7 @@
         <p class="m-0 p-0">Kelengkapan<br>Administrasi</p>  
       </a>
     </div>
-    <div class="col-2 p-0">
+    <div class="col-3 p-0">
       <a class="nav-link p-0" href="\prog-kerja-tahunan">
         <i class="far fa-calendar-alt fs-4 mt-1"></i>
         <p class="m-0 p-0">Program<br>Kerja Tahunan</p>

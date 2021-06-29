@@ -130,6 +130,9 @@ $routes->add('informasiGaleri', new Route('/informasi-galeri', [
 $routes->add('informasiPengumuman', new Route('/informasi-pengumuman', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::informasiPengumuman',
 ]));
+$routes->add('strukturOrganisasiTerdaftar', new Route('/struktur-organisasi-terdaftar', [
+    '_controller' => 'App\Dashboard\Controller\DashboardController::strukturOrganisasiTerdaftar',
+]));
 
 
 //curd agenda start

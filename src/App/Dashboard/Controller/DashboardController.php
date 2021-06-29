@@ -124,6 +124,11 @@ class DashboardController extends GlobalFunc
     public function hubungiKami(Request $request){
         return $this->render_template('/hubungi-kami');
     }
+     //struktur organisasi terdaftar
+    public function strukturOrganisasiTerdaftar(Request $request){
+        return $this->render_template('/struktur-organisasi-terdaftar');
+    }
+
 
 
     public function index(Request $request)
