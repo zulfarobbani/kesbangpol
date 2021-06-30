@@ -26,7 +26,7 @@
 
           <div class="row">
 
-            <div class="col-md-4">
+            <div class="col">
               <div class="card" style="width: 12rem;">
               <img src="https://cdn5.telesco.pe/file/gUxcprs8fkvd1ggekfEZPoEtav-MZoXckfDAKI8B8t2j82uvpqQEtqpl-_3jebt2AEEbMWZNvppZtUH_gPiUIBS2cmJOOKhAhlABrQMTCxCQRSy-n11oGuEZXjDq53IDy97uyfWNxeotj1mW25tIw1HmuygWwdnng6vdivNQ-LiqyOgOElkovjzbm3lyMj1VECNJOOwyOD73oMcLHRumKafuJtIaDL8ZtRlw5o4MqPb0Q9vVjaehObIELrE0Rwi27MotZqnqw5QWZb5eOehEIFe2hehkCxiePV1aiwWI4xeguyXBpyMWmkOtZlqMR4_dDDNupyGgM7MMLoxdfoZ6xw.jpg" class="card-img-top" alt="...">
               <div class="card-body">
@@ -37,7 +37,7 @@
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col">
               <div class="card" style="width: 12rem;">
               <img src="https://cdn5.telesco.pe/file/gUxcprs8fkvd1ggekfEZPoEtav-MZoXckfDAKI8B8t2j82uvpqQEtqpl-_3jebt2AEEbMWZNvppZtUH_gPiUIBS2cmJOOKhAhlABrQMTCxCQRSy-n11oGuEZXjDq53IDy97uyfWNxeotj1mW25tIw1HmuygWwdnng6vdivNQ-LiqyOgOElkovjzbm3lyMj1VECNJOOwyOD73oMcLHRumKafuJtIaDL8ZtRlw5o4MqPb0Q9vVjaehObIELrE0Rwi27MotZqnqw5QWZb5eOehEIFe2hehkCxiePV1aiwWI4xeguyXBpyMWmkOtZlqMR4_dDDNupyGgM7MMLoxdfoZ6xw.jpg" class="card-img-top" alt="...">
               <div class="card-body">
@@ -69,8 +69,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
     integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
   </script>
-  <script> window.intergramId = "1718039883" </script>
-<script id="intergram" type="text/javascript" src="https://www.intergram.xyz/js/widget.js"></script>
+  
  
 </body>
 

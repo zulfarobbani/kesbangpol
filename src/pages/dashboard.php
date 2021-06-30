@@ -26,7 +26,7 @@
                     <h5 class="text-info text-center">Beranda</h5></a> 
             </div>
             <div class="col d-flex justify-content-center">
-                <a href=""><img src="../assets/icon/Icon Profil dashboard.png" alt="profil">
+                <a href="/struktur-organisasi"><img src="../assets/icon/Icon Profil dashboard.png" alt="profil">
                     <h5 class="text-info text-center">Profil</h5></a>
             </div>
             <div class="col d-flex justify-content-center">
@@ -34,7 +34,7 @@
                     <h5>Organisasi<br>Terdaftar</h5></a> 
             </div>
             <div class="col d-flex justify-content-center">
-                <a href=""  class="text-info text-center"><img src="../assets/icon/Forum orsospol.png" alt="Forum Orsospol">
+                <a href="/forum-umum"  class="text-info text-center"><img src="../assets/icon/Forum orsospol.png" alt="Forum Orsospol">
                     <h5>Forum<br>ORSOSPOL</h5></a>
             </div> 
             <div class="col d-flex justify-content-center">
@@ -42,7 +42,7 @@
                     <h5 class="text-info text-center">Layanan</h5></a> 
             </div>
             <div class="col d-flex justify-content-center">
-                <a href=""><img src="../assets/icon/Contact us.png" alt="Hubungi Kami">
+                <a href="/hubungi-kami"><img src="../assets/icon/Contact us.png" alt="Hubungi Kami">
                     <h5 class="text-info text-center">Hubungi<br>Kami</h5></a>   
             </div>
         </div>
