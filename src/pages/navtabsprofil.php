@@ -12,7 +12,7 @@
 <div class="container px-0 py-3 roundedjustify-content-start">
   <div class="row py-1" id="bgprofile">
     <div class="col-sm-2 px-2" >
-      <a class="nav-link p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" aria-current="page" href="#">
+      <a class="nav-link p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" aria-current="page" href="\struktur-organisasi">
         <span class="material-icons-outlined align-middle">account_tree</span>
         <span>Struktur Organisasi</span>
       </a>

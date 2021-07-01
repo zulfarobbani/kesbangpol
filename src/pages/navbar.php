@@ -14,21 +14,21 @@
           </li>
           <li class="nav-item text-center px-3 py-1">
             <div class="container-fluid">
-              <a class="nav-link" href="#"  style="color: white;">
+              <a class="nav-link" href="\struktur-organisasi"  style="color: white;">
               <span class="material-icons-outlined fs-1" style="color: white;">people</span>
               <br>Profile</a>
             </div>
           </li>
           <li class="nav-item text-center px-3 py-1" >
             <div class="container-fluid">
-              <a class="nav-link" href="#" style="color: white;">
+              <a class="nav-link" href="\pendataan" style="color: white;">
               <span class="material-icons-outlined fs-1" style="color: white;">rss_feed</span> 
                 <br>Layanan</a> 
             </div>
           </li>
           <li class="nav-item text-center px-3 py-1">
             <div class="container-fluid">
-              <a class="nav-link " href="#" style="color: white;">
+              <a class="nav-link " href="\informasi-berita" style="color: white;">
               <span class="material-icons-outlined fs-1" style="color: white;">info</span>
                 <br>informasi</a>
             </div>
@@ -42,14 +42,14 @@
           </li>
           <li class="nav-item text-center px-3 py-1">
             <div class="container-fluid">
-              <a class="nav-link " href="#"  style="color: white;">
+              <a class="nav-link " href="\forum-umum"  style="color: white;">
               <span class="material-icons-outlined fs-1" style="color: white;">forum</span>
                 <br>Forum Orsospol</a>
             </div>
           </li> 
           <li class="nav-item text-center px-3 py-1">
             <div class="container-fluid">
-              <a class="nav-link " href="#"  style="color: white;">
+              <a class="nav-link " href="\hubungi-kami"  style="color: white;">
               <span class="material-icons-outlined fs-1 font-center" style="color: white;">support_agent</span>
               <br>Hubungi Kami</a>
             </div>

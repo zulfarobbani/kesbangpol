@@ -10,42 +10,22 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
-  <link rel="canonical" href="https://t.me/forumorsospol/3">
-  <title></title>
+  <title>Struktur Organisasi</title>
 </head>
 
-<body style="background-color : #EEEEEE;">
+<body style="background-color : #EEEEEE; color:navy;">
 
   <?php include(__DIR__.'/navbar.php' )?>
   <div class="container-fluid">   
       <div class="row">  
         <div class="col-md-8 top-1 start-0 ps-5 mb-3">
-          <?php include(__DIR__.'/navtabsforum.php' )?>
+          <?php include(__DIR__.'/navtabsprofil.php' )?>
           <!-- START CODE -->
-          <h4>Forum Diskusi ORSOSPOL</h4>
+          <h4 class="mt-2">Struktur Organisasi</h4>
+          <img src="assets/image/struktur.jpg" class="mt-4" width="100%">
 
-          <div class="card text-center">
-            <div class="card-header">
-              Private Chat
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Let's Talk To Us</h5>
-              <p class="card-text">We appreciate any suggestion from all of you</p>
-              <a href="https://t.me/zendaclause" target="_blank" class="btn btn-primary">Talk To Us</a>
-            </div>
-            
           </div>
-
-          
-
-
-
-
-            
-          </div>
-
         <?php include(__DIR__.'/sidebar.php' )?>
-          </div>
       </div>
       <?php include(__DIR__.'/footer.php' )?>
   </div>
@@ -55,8 +35,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
     integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
   </script>
-  
- 
 </body>
 
 </html>

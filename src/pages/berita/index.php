@@ -21,7 +21,7 @@
     <tr>
         <td><?= $key+=1 ?></td>
         <td><?= $values['namaBerita'] ?></td>
-        <td><?= $values['deskripsiBerita'] ?></td>
+        <td maxlength="20"><?= $values['deskripsiBerita'] ?></td>
         <td><?= $values['idRelation'] ?></td>
         <td><?= $values['approvalBerita'] ?></td>
         <td>
