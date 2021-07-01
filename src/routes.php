@@ -74,19 +74,19 @@ $routes->add('organisasi', new Route('/organisasi-terdaftar',[
 ]));
 //Ormas
 $routes->add('ormasi', new Route('/organisasi-terdaftar/ormas',[
-    '_controller' => 'App\Dashboard\Controller\DashboardController::ormas',
+    '_controller' => 'App\Orsospol\Controller\OrsospolController::ormas',
 ]));
 //OKP
 $routes->add('okp', new Route('/organisasi-terdaftar/okp',[
-    '_controller' => 'App\Dashboard\Controller\DashboardController::okp',
+    '_controller' => 'App\Orsospol\Controller\OrsospolController::okp',
 ]));
 //Komunitas
 $routes->add('komunitas', new Route('/organisasi-terdaftar/komunitas',[
-    '_controller' => 'App\Dashboard\Controller\DashboardController::komunitas',
+    '_controller' => 'App\Orsospol\Controller\OrsospolController::komunitas',
 ]));
 //Parpol
 $routes->add('parpol', new Route('/organisasi-terdaftar/parpol',[
-    '_controller' => 'App\Dashboard\Controller\DashboardController::parpol',
+    '_controller' => 'App\Orsospol\Controller\OrsospolController::parpol',
 ]));
 
 //data-organisasi

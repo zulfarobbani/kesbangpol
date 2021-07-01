@@ -25,10 +25,36 @@ class OrsospolController extends GlobalFunc
         $data_okp = $this->model->selectAll("jor60d0574b03b65");
         $data_komunitas = $this->model->selectAll("jor60d0575b7b225");
         $data_parpol = $this->model->selectAll("jor60d05997283b8");
-        
-        
 
         return $this->render_template('orsospol/index', ['data_ormas' => $data_ormas, 'data_okp' => $data_okp, 'data_komunitas' => $data_komunitas, 'data_parpol' => $data_parpol]);
+    }
+    public function ormas(Request $request)
+    {
+        $data_ormas = $this->model->selectAll("jor60d0573fb33fe");
+        
+
+        return $this->render_template('organisasi-terdaftar/ormas', ['data_ormas' => $data_ormas]);
+    }
+    public function okp(Request $request)
+    {
+        $data_okp = $this->model->selectAll("jor60d0574b03b65");
+        
+
+        return $this->render_template('organisasi-terdaftar/okp', ['data_okp' => $data_okp]);
+    }
+    public function komunitas(Request $request)
+    {
+        $data_komunitas = $this->model->selectAll("jor60d0575b7b225");
+        
+
+        return $this->render_template('organisasi-terdaftar/komunitas', ['data_komunitas' => $data_komunitas]);
+    }
+    public function parpol(Request $request)
+    {
+        $data_parpol = $this->model->selectAll("jor60d05997283b8");
+        
+
+        return $this->render_template('organisasi-terdaftar/parpol', ['data_parpol' => $data_parpol]);
     }
     
     public function create(Request $request)

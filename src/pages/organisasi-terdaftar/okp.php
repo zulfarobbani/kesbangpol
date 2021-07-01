@@ -40,12 +40,14 @@
                   <td></td>   
                 </tr>
               </thead>
+              <?php foreach($data_okp as $key => $values) { ?>
               <tbody>
                 <tr>
-                  <td>1.</td>
-                  <td>00000000000</td>
-                  <td>OPK A</td>
-                  <td>Jalan Pahlawan</td>
+
+                  <td><?=$key+=1?></td>
+                  <td><?= $values['']?></td>
+                  <td><?= $values['namaOrsospol']?></td>
+                  <td><?= $values['alamatOrsospol']?></td>
                   <!-- <td class="float-end">
                     <a href="regulasi/edit/<?= $values['idRegulasi'];?>">EDIT</a> 
                     <a href="regulasi/delete/<?= $values['idRegulasi'];?>">HAPUS</a>
@@ -53,6 +55,7 @@
                             
                   </tr>
               </tbody>
+              <?php }?>
             </table>
           </div>
 
