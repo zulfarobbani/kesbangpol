@@ -8,8 +8,11 @@
 </head>
 <body>
 <fieldset>
-    <form action="/galeri/store" method="POST">
+    <form action="/informasi/galeri/store" method="POST" enctype="multipart/form-data">
     <input type="hidden" values="<?= $id_test?>"></input>
+        <label for="">Foto Galeri : </label>
+        <input type="file" name="fotoGaleri">
+        <br>
         <label for="">Nama Galeri : </label>
         <input type="text" name="namaGallery">
         <br>

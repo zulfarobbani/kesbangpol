@@ -18,7 +18,7 @@ class Pengumuman extends GlobalFunc
     
     public function selectAll()
     {
-        $sql = "SELECT * FROM ".$this->table;
+        $sql = "SELECT pengumuman.*, media.* FROM ".$this->table." LEFT JOIN media ON pengumuman.idMedia = media.idMedia";
         
         try {
             $query = $this->conn->prepare($sql);
@@ -37,8 +37,9 @@ class Pengumuman extends GlobalFunc
          $namaPengumuman = $data_test['namaPengumuman'];
          $deskripsiPengumuman = $data_test['deskripsiPengumuman'];
          $dateCreate = $data_test['dateCreate'];
+         $idMedia = $data_test['idMedia'];
 
-        $sql = "INSERT INTO ".$this->table." VALUES ('$idPengumuman','$namaPengumuman', '$deskripsiPengumuman', '$dateCreate')";
+        $sql = "INSERT INTO ".$this->table." VALUES ('$idPengumuman','$namaPengumuman', '$deskripsiPengumuman', '$dateCreate', '$idMedia')";
         
         try {
             $data = $this->conn->prepare($sql);

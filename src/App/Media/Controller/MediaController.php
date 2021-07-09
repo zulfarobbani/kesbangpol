@@ -42,7 +42,7 @@ class MediaController extends GlobalFunc
         );
 
         
-        $this->model->create($data_test);
+        // $this->model->create($data_test);
         
         return header("location:http://kesbangpol.com/media");
     }
@@ -66,8 +66,8 @@ class MediaController extends GlobalFunc
         $data_test = array(
             'pathMedia' => $pathMedia,
             'idEntity' => $idEntity,
-            'idRelation' => $idRelation,
-            'approvalGallery'=> $approvalGallery
+            'idRelation' => $idRelation 
+            // 'approvalGallery'=> $approvalGallery
         );
         
        $this->model->update($id, $data_test);

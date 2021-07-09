@@ -18,8 +18,8 @@ class Berita extends GlobalFunc
 
     public function selectAll()
     {
-        $sql = "SELECT berita.*, member.idMember, member.idOrsospol FROM ".$this->table." LEFT JOIN member ON berita.idRelation = member.idMember" ;
-
+        $sql = "SELECT berita.*, member.idMember, member.idOrsospol, media.* FROM ".$this->table." LEFT JOIN member ON berita.idRelation = member.idMember
+        LEFT JOIN media ON berita.idMedia = media.idMedia" ;
         try {
             $query = $this->conn->prepare($sql);
             $query->execute();
@@ -40,8 +40,9 @@ class Berita extends GlobalFunc
          $idRelation = $data_test['idRelation'];
          $approvalBerita = $data_test['approvalBerita'];
          $dateCreate = $data_test['dateCreate'];
+         $idMedia = $data_test['idMedia'];
 
-        $sql = "INSERT INTO ".$this->table." VALUES ('$idBerita','$namaBerita', '$deskripsiBerita', '$idRelation', '$approvalBerita', '$dateCreate')";
+        $sql = "INSERT INTO ".$this->table." VALUES ('$idBerita','$namaBerita', '$deskripsiBerita', '$idRelation', '$approvalBerita', '$dateCreate', '$idMedia')";
 
         try {
             $data = $this->conn->prepare($sql);

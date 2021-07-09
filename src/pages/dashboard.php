@@ -17,6 +17,17 @@
 <body style="background-color : #EEEEEE;">
 <div class="container-fluid">
 <img class="img-fluid"src="../assets/image/Header kesbangpol Revisi ke 5-01.png" alt="header" style="height: 200; width: 1284;">
+<div class="row justify-content-center">
+    <div class="card" style="width: 18rem;">
+        <a href="#"><img src="..." class="card-img img-fluid" alt="..."></a>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <a href="#"><img src="..." class="card-img img-fluid" alt="..."></a>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <a href="#"><img src="..." class="card-img img-fluid" alt="..."></a>
+    </div>
+</div>
     <h1 class="d-flex justify-content-center" style="color: #004080;">Selamat Datang</h1>
     <h3 class="d-flex justify-content-center" style="color: #1a8cff; ">Di Situs Resmi Kantor Kesatuan Bangsa dan Politik Kota Cimahi</h3>
     

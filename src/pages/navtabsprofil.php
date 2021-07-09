@@ -11,7 +11,7 @@
 </style>
 <div class="container px-0 py-3 roundedjustify-content-start">
   <div class="row py-1" id="bgprofile">
-    <div class="col-sm-2 px-2" >
+    <div class="col-sm-3 px-2" >
       <a class="nav-link p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" aria-current="page" href="\struktur-organisasi">
         <span class="material-icons-outlined align-middle">account_tree</span>
         <span>Struktur Organisasi</span>
@@ -33,12 +33,6 @@
       <a class="nav-link p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" href="\sakip">
         <span class="material-icons-outlined align-middle">note_alt</span>
         SAKIP
-      </a>
-    </div>
-    <div class="col-sm-2 px-2">
-      <a class="nav-link p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" href="\kinerja">
-        <span class="material-icons-outlined align-middle">trending_up</span>
-        Kinerja
       </a>
     </div>
     <div class="col-sm-2 px-2">

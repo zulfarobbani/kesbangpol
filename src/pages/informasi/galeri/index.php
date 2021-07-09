@@ -15,38 +15,34 @@
 
 <body style="background-color : #EEEEEE;">
 
-  <?php include(__DIR__.'/navbar.php' )?>
+  <?php include(__DIR__.'/../../navbar.php' )?>
   <div class="container-fluid">   
       <div class="row">  
         <div class="col-md-8 top-1 start-0 ps-5 mb-3">
-          <?php include(__DIR__.'/navtabslayanan.php' )?>
+          <?php include(__DIR__.'/../../navtabsinformasi.php' )?>
           <!-- START CODE -->
-            <div class="col-12">
-            <table class="table mt-3" style="color: navy;">
-              <thead>
-                <tr>
-                  <th>Nama Berkas</th>
-                  <td></td>
-                </tr>
-              </thead>
-              <tbody>
-                <?php foreach($datas as $key => $values) {?>
-                <tr>
-                  <td style="font-size: 20px"=><?= explode('.', $values['namaSakip'])[0] ?></td>
-                  <td class="float-end">
-                    <!-- <a href="sakip/edit/<?= $values['idSakip'];?>"><span class="material-icons-outlined px-2">edit</span></a>
-                    <a href="sakip/delete/<?= $values['idSakip'];?>"><span class="material-icons-outlined px-2">delete</span></a> -->
-                    <a href="sakip/download-berkas/<?= $values['idSakip'];?>" style="color: navy;"><span class="material-icons-outlined px-2">file_download</span></a>
-                  </td>
-                </tr>
-                <?php } ?>
-              </tbody>
-            </table>
+          <div class="row">
+          <div class="card-group">
+            <?php foreach($datas as $key => $values) {?>
+              <div class="" style="width: 12rem;">
+                  <div class="d-flex card bg-light">
+                      <div class="flex-shrink-0 card-body">
+                          <img class="img-fluid" src="/assets/berita/<?= $values['pathMedia']?>" alt="Gambar Berita">
+                          <h5 class="card-title"><?= $values['namaGallery']?></h5>
+                          <p class="card-text"><?= html_entity_decode(nl2br($values['deskripsiGallery']))?></p>
+                          <p class="card-text" style="color: white;"><small class="text-muted"><?= $values['dateCreate']?></small><p class="text-mute"><?= $values['idRelation']?></p></p>
+                          
+                      </div>
+                  </div>
+              </div>
+              <?php } ?>
+              </div>
+            </div>
           </div>
-          </div>
-        <?php include(__DIR__.'/sidebar.php' )?>
+          
+        <?php include(__DIR__.'/../../sidebar.php' )?>
       </div>
-      <?php include(__DIR__.'/footer.php' )?>
+      <?php include(__DIR__.'/../../footer.php' )?>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">

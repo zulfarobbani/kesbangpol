@@ -3,32 +3,37 @@
 namespace App\Gallery\Controller;
 
 use App\Gallery\Model\Gallery;
+use App\Media\Model\Media;
 use Core\GlobalFunc;
 use Symfony\Component\HttpFoundation\Request;
 
 class GalleryController extends GlobalFunc
 {
     public $model;
+    public $model2;
 
     public function __construct()
     {
         $this->model = new Gallery();
+        $this->model2 = new Media();
         
     }
     
     public function index(Request $request)
     {
         $datas = $this->model->selectAll();
-        return $this->render_template('galeri/index', ['datas' => $datas]);
+        return $this->render_template('informasi/galeri/index', ['datas' => $datas]);
     }
     
     public function create(Request $request)
     {
-        return $this->render_template('galeri/create');
+        return $this->render_template('informasi/galeri/create');
 
     }
     public function store(Request $request)
     {
+        $fileupload = $_FILES['fotoGaleri'];
+        $idMedia = uniqid('med');
         $namaGallery = $request->request->get('namaGallery');
         $deskripsiGallery = $request->request->get('deskripsiGallery');
         $idRelation = $request->request->get('idRelation');
@@ -40,13 +45,15 @@ class GalleryController extends GlobalFunc
             'deskripsiGallery' => $deskripsiGallery,
             'idRelation' => $idRelation,
             'approvalGallery'=> $approvalGallery,
-            'dateCreate' => $dateCreate
+            'dateCreate' => $dateCreate,
+            'idMedia' => $idMedia
         );
 
         
         $this->model->create($data_test);
+        $this->model2->create($idMedia ,$fileupload, $dateCreate, $idRelation);
         
-        return header("location:http://kesbangpol.com/galeri");
+        return header("location:http://kesbangpol.com/informasi/galeri");
     }
     public function ReadOne(Request $request)
     {
@@ -54,7 +61,7 @@ class GalleryController extends GlobalFunc
         $datas = $this->model->selectOne($id);
         
 
-        return $this->render_template('galeri/edit', ['idGallery' => $datas['idGallery'], 'namaGallery'=>$datas['namaGallery'], 'deskripsiGallery'=>$datas['deskripsiGallery'], 'idRelation'=>$datas['idRelation'], 'approvalGallery'=>$datas['approvalGallery']]);
+        return $this->render_template('informasi/galeri/edit', ['idGallery' => $datas['idGallery'], 'namaGallery'=>$datas['namaGallery'], 'deskripsiGallery'=>$datas['deskripsiGallery'], 'idRelation'=>$datas['idRelation'], 'approvalGallery'=>$datas['approvalGallery']]);
     }
     public function update(Request $request)
     {
@@ -74,7 +81,7 @@ class GalleryController extends GlobalFunc
         
        $this->model->update($id, $data_test);
 
-       return header("location:http://kesbangpol.com/galeri");
+       return header("location:http://kesbangpol.com/informasi/galeri");
     }
     public function delete(Request $request)
     {
@@ -82,6 +89,6 @@ class GalleryController extends GlobalFunc
         $this->model->delete($id);
 
 
-        return header("location:http://kesbangpol.com/galeri");
+        return header("location:http://kesbangpol.com/informasi/galeri");
     }
 }

@@ -45,7 +45,7 @@
                 <tr>
 
                   <td><?=$key+=1?></td>
-                  <td><?= $values['']?></td>
+                  <td><?= $values['idOrsospol']?></td>
                   <td><?= $values['namaOrsospol']?></td>
                   <td><?= $values['alamatOrsospol']?></td>
                   <!-- <td class="float-end">

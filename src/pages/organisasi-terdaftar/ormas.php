@@ -28,7 +28,7 @@
           <?php include(__DIR__.'/../navtabsorganisasi.php' )?>
           <!-- START CODE -->
           <h4>ORMAS Berbadan Hukum Terdaftar</h4>
-
+          
           <div class="col-12">
             <table class="table mt-3" style="color: navy;">
               <thead>
@@ -45,7 +45,7 @@
                 <tr>
 
                   <td><?=$key+=1?></td>
-                  <td><?= $values['']?></td>
+                  <td><?= $values['idOrsospol']?></td>
                   <td><?= $values['namaOrsospol']?></td>
                   <td><?= $values['alamatOrsospol']?></td>
                   <!-- <td class="float-end">

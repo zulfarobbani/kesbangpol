@@ -55,16 +55,16 @@ $routes->add('tupoksi', new Route('/tupoksi', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::tupoksi',
 ]));
 //layanan
-$routes->add('pendataan', new Route('/pendataan', [
+$routes->add('pendataan', new Route('/layanan/pendataan', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::pendataan',
 ]));
-$routes->add('permohonan-hibah', new Route('/permohonan-hibah', [
+$routes->add('permohonan-hibah', new Route('/layanan/permohonan-hibah', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::permohonanhibah',
 ]));
-$routes->add('permohonan-penelitian', new Route('/permohonan-penelitian', [
+$routes->add('permohonan-penelitian', new Route('/layanan/permohonan-penelitian', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::permohonanpenelitian',
 ]));
-$routes->add('unduhan', new Route('/unduhan', [
+$routes->add('unduhan', new Route('/layanan/unduhan', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::unduhan',
 ]));
 
@@ -136,79 +136,79 @@ $routes->add('strukturOrganisasiTerdaftar', new Route('/struktur-organisasi-terd
 
 
 //curd agenda start
-$routes->add('agenda', new Route('/agenda', [
+$routes->add('agenda', new Route('/informasi/agenda', [
     '_controller' => 'App\Agenda\Controller\AgendaController::index',
 ]));
 
-$routes->add('agendaedit', new Route('/agenda/edit/{id}', [
+$routes->add('agendaedit', new Route('/informasi/agenda/edit/{id}', [
     '_controller' => 'App\Agenda\Controller\AgendaController::ReadOne',
 ]));
 
-$routes->add('agendaupdate', new Route('/agenda/edit/{id}/update', [
+$routes->add('agendaupdate', new Route('/informasi/agenda/edit/{id}/update', [
     '_controller' => 'App\Agenda\Controller\AgendaController::updateordelete',
 ]));
 
-$routes->add('agendadelete', new Route('/agenda/delete/{id}', [
+$routes->add('agendadelete', new Route('/informasi/agenda/delete/{id}', [
     '_controller' => 'App\Agenda\Controller\AgendaController::delete',
 ]));
 
-$routes->add('agendacreate', new Route('/agenda/create', [
+$routes->add('agendacreate', new Route('/informasi/agenda/create', [
     '_controller' => 'App\Agenda\Controller\AgendaController::create',
 ]));
 
-$routes->add('agendasimpan', new Route('/agenda/store', [
+$routes->add('agendasimpan', new Route('/informasi/agenda/store', [
     '_controller' => 'App\Agenda\Controller\AgendaController::store',
 ]));
 //crud agenda end
 
 //curd berita start
-$routes->add('berita', new Route('/berita', [
+$routes->add('berita', new Route('/informasi/berita', [
     '_controller' => 'App\Berita\Controller\BeritaController::index',
 ]));
 
-$routes->add('beritacreate', new Route('/berita/create', [
+$routes->add('beritacreate', new Route('/informasi/berita/create', [
     '_controller' => 'App\Berita\Controller\BeritaController::create',
 ]));
 
-$routes->add('beritasimpan', new Route('/berita/store', [
+$routes->add('beritasimpan', new Route('/informasi/berita/store', [
     '_controller' => 'App\Berita\Controller\BeritaController::store',
 ]));
 
-$routes->add('beritaedit', new Route('/berita/edit/{id}', [
+$routes->add('beritaedit', new Route('/informasi/berita/edit/{id}', [
     '_controller' => 'App\Berita\Controller\BeritaController::ReadOne',
 ]));
 
-$routes->add('beritaupdate', new Route('/berita/edit/{id}/update', [
+$routes->add('beritaupdate', new Route('/informasi/berita/edit/{id}/update', [
     '_controller' => 'App\Berita\Controller\BeritaController::update',
 ]));
 
-$routes->add('beritadelete', new Route('/berita/delete/{id}', [
+$routes->add('beritadelete', new Route('/informasi/berita/delete/{id}', [
     '_controller' => 'App\Berita\Controller\BeritaController::delete',
 ]));
 //crud berita end
 
 //curd galeri start
-$routes->add('galeri', new Route('/galeri', [
+$routes->add('galeri', new Route('/informasi/galeri', [
     '_controller' => 'App\Gallery\Controller\GalleryController::index',
 ]));
 
-$routes->add('galericreate', new Route('/galeri/create', [
+$routes->add('galericreate', new Route('/informasi/galeri/create', [
     '_controller' => 'App\Gallery\Controller\GalleryController::create',
 ]));
 
-$routes->add('galerisimpan', new Route('/galeri/store', [
+$routes->add('galerisimpan', new Route('/informasi/galeri/store', [
     '_controller' => 'App\Gallery\Controller\GalleryController::store',
 ]));
 
-$routes->add('galeriedit', new Route('/galeri/edit/{id}', [
+$routes->add('galeriedit', new Route('/informasi/galeri/edit/{id}', [
     '_controller' => 'App\Gallery\Controller\GalleryController::ReadOne',
 ]));
 
-$routes->add('galeriupdate', new Route('/galeri/edit/{id}/update', [
+$routes->add('galeriupdate', new Route('/informasi/galeri/edit/{id}/update', [
     '_controller' => 'App\Gallery\Controller\GalleryController::update',
 ]));
 
-$routes->add('galeridelete', new Route('/galeri/delete/{id}', [
+$routes->add('galeridelete', new Route('/informasi/galeri/delete/{id}', [
     '_controller' => 'App\Gallery\Controller\GalleryController::delete',
 ]));
 //crud galeri end
@@ -555,27 +555,27 @@ $routes->add('pendidikandelete', new Route('/pendidikan/delete/{id}', [
 //crud pendidikan end
 
 //crud pengumuman start
-$routes->add('pengumuman', new Route('/pengumuman', [
+$routes->add('pengumuman', new Route('/informasi/pengumuman', [
     '_controller' => 'App\Pengumuman\Controller\PengumumanController::index',
 ]));
 
-$routes->add('pengumumancreate', new Route('/pengumuman/create', [
+$routes->add('pengumumancreate', new Route('/informasi/pengumuman/create', [
     '_controller' => 'App\Pengumuman\Controller\PengumumanController::create',
 ]));
 
-$routes->add('pengumumansimpan', new Route('/pengumuman/store', [
+$routes->add('pengumumansimpan', new Route('/informasi/pengumuman/store', [
     '_controller' => 'App\Pengumuman\Controller\PengumumanController::store',
 ]));
 
-$routes->add('pengumumanedit', new Route('/pengumuman/edit/{id}', [
+$routes->add('pengumumanedit', new Route('/informasi/pengumuman/edit/{id}', [
     '_controller' => 'App\Pengumuman\Controller\PengumumanController::ReadOne',
 ]));
 
-$routes->add('pengumumanupdate', new Route('/pengumuman/edit/{id}/update', [
+$routes->add('pengumumanupdate', new Route('/informasi/pengumuman/edit/{id}/update', [
     '_controller' => 'App\Pengumuman\Controller\PengumumanController::update',
 ]));
 
-$routes->add('pengumumandelete', new Route('/pengumuman/delete/{id}', [
+$routes->add('pengumumandelete', new Route('/informasi/pengumuman/delete/{id}', [
     '_controller' => 'App\Pengumuman\Controller\PengumumanController::delete',
 ]));
 // crud pengumuman end

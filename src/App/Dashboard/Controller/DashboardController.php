@@ -28,11 +28,9 @@ class DashboardController extends GlobalFunc
     //beranda
     public function home(Request $request){
         $datas_2 = $this->model2->selectAll();
-        $datas_3 = $this->model3->selectOne('med60d2d6b462b8b');
+        $datas_3 = $this->model3->selectOne('');
         
-        return $this->render_template('/beranda', ['datas'=>$datas_2, 'foto'=>$datas_3['pathMedia']]);
-        dump($datas_3['pathMedia']);
-        die();
+        return $this->render_template('/beranda', ['datas'=>$datas_2 /*, 'foto'=>$datas_3['pathMedia']*/]);
     }
     //profil
     public function visimisi(Request $request){
@@ -43,16 +41,16 @@ class DashboardController extends GlobalFunc
     }
     //layanan
     public function pendataan(Request $request){
-        return $this->render_template('/pendataan');
+        return $this->render_template('/layanan/pendataan');
     }
     public function permohonanhibah(Request $request){
-        return $this->render_template('/permohonan-hibah');
+        return $this->render_template('/layanan/permohonan-hibah');
     }
     public function permohonanpenelitian(Request $request){
-        return $this->render_template('/permohonan-penelitian');
+        return $this->render_template('/layanan/permohonan-penelitian');
     }
     public function unduhan(Request $request){
-        return $this->render_template('/unduhan');
+        return $this->render_template('/layanan/unduhan');
     }
     //organisasi terdaftar
     public function organisasi(Request $request){

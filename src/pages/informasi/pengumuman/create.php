@@ -8,12 +8,14 @@
 </head>
 <body>
 <fieldset>
-    <form action="/pengumuman/store" method="POST">
+    <form action="/informasi/pengumuman/store" method="POST" enctype="multipart/form-data">
+        <label for="">Foto pengumuman</label>
+        <input type="file" name="foto"><br>
         <label for="">Nama Pengumuman : </label>
         <input type="text" name="namaPengumuman">
         <br>
         <label for="">Deskripsi : </label>
-        <input type="text" name="deskripsiPengumuman">
+        <textarea type="text" name="deskripsiPengumuman"></textarea>
         <br>
         <button type="submit">Submit</button>
     </form>

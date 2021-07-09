@@ -8,7 +8,7 @@
 </head>
 <body>
 <fieldset>
-    <form action="/berita/store" method="POST" enctype="multipart/form-data">
+    <form action="/informasi/berita/store" method="POST" enctype="multipart/form-data">
     <input type="hidden" values="<?= $id_test?>"></input>
         <label>Foto Berita : </label>
         <input type="file" name="fotoBerita"><br>

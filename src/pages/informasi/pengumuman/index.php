@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,32 +15,35 @@
 
 <body style="background-color : #EEEEEE;">
 
-  <?php include('navbar.php' )?>
+  <?php include(__DIR__.'/../../navbar.php' )?>
   <div class="container-fluid">   
       <div class="row">  
         <div class="col-md-8 top-1 start-0 ps-5 mb-3">
+          <?php include(__DIR__.'/../../navtabsinformasi.php' )?>
           <!-- START CODE -->
-          <h4 class="fw-normal mt-5">Informasi KESBANG Terkini</h4>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+          <span><a href="\informasi/pengumuman/create">Tambah Pengumuman</a></span>
+          <div class="row">
+          <div class="card-group">
             <?php foreach($datas as $key => $values) {?>
-            
               <div class="" style="width: 12rem;">
                   <div class="d-flex card bg-light">
                       <div class="flex-shrink-0 card-body">
-                      <a href="#"><img class="img-fluid" src="/assets/berita/<?= $values['pathMedia']?>" alt="Gambar Berita">
-                          <h5 class="card-title"><?= $values['namaBerita']?></h5></a>
-                          <p class="card-text"><?= html_entity_decode(nl2br($values['deskripsiBerita']))?></p>
-                          <p class="card-text" style="color: white;"><small class="text-muted"><?= $values['dateCreate']?></small><p class="text-mute"><?= $values['idRelation']?></p></p>
+                          <img class="img-fluid" src="/assets/berita/<?= $values['pathMedia']?>" alt="Gambar Berita">
+                          <h5 class="card-title"><?= $values['namaPengumuman']?></h5>
+                          <p class="card-text"><?= html_entity_decode(nl2br($values['deskripsiPengumuman']))?></p>
+                          <p class="card-text" style="color: white;"><small class="text-muted"><?= $values['dateCreate']?></small></p>
                           
                       </div>
                   </div>
               </div>
               <?php } ?>
+              </div>
             </div>
           </div>
-        <?php include('sidebar.php' )?>
+          
+        <?php include(__DIR__.'/../../sidebar.php' )?>
       </div>
-      <?php include('footer.php' )?>
+      <?php include(__DIR__.'/../../footer.php' )?>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">

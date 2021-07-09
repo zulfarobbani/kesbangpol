@@ -18,25 +18,25 @@
 </head>
 
 <body style="background-color : #e9ecef; color: navy;">
-    <?php include(__DIR__.'/../navbar.php' )?>
+    <?php include(__DIR__.'/../../navbar.php' )?>
       <div class="container-fluid">   
       <div class="row">  
         <div class="col-md-8 top-1 start-0 ps-5 mb-3">
-          <?php include(__DIR__.'/../navtabsinformasi.php' )?>
+          <?php include(__DIR__.'/../../navtabsinformasi.php' )?>
           <!-- START CODE -->
           <h4 class="mb-3">Agenda</h4>
           <div id="agenda" class="col-centered"></div>
           </div>
-        <?php include(__DIR__.'/../sidebar.php' )?>
+        <?php include(__DIR__.'/../../sidebar.php' )?>
       </div>
-      <?php include(__DIR__.'/../footer.php' )?>
+      <?php include(__DIR__.'/../../footer.php' )?>
   </div>
 
     <!-- Modal Create Event-->
     <div class="modal fade" id="ModalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <form class="form-horizontal" method="POST" action="/agenda/store">
+                <form class="form-horizontal" method="POST" action="/informasi/agenda/store">
 
                     <div class="modal-header">
                         <h4 class="modal-title" id="myModalLabel">Add Event</h4>
@@ -182,7 +182,7 @@
                     element.bind('click', function () {
                         $('#ModalEdit #title').val(event.title);
                         $('#ModalEdit #deskripsi').val(event.deskripsi);
-                        $('#ModalEdit #formEdit').attr('action', '/agenda/edit/'+ event.id +'/update');
+                        $('#ModalEdit #formEdit').attr('action', '/informasi/agenda/edit/'+ event.id +'/update');
                         $('#ModalEdit').modal('show');
                     });
                 }

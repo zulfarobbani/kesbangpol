@@ -1,5 +1,5 @@
 
- <span><img class="img-fluid" src="../assets/image/Header kesbangpol Revisi ke 5-01.png" alt="gak ada gambar" ></span>
+ <span><a href="\"><img class="img-fluid" src="../assets/image/Header kesbangpol Revisi ke 5-01.png" alt="gak ada gambar"></a></span>
   <div class="container-fluid p-0">
     <nav class="navbar-fluid sticky-top navbar-expand" style="background-color: #000099;">
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -7,7 +7,7 @@
         <ul class="navbar-nav">
           <li class="nav-item text-center px-3 py-1">
             <div class="container-fluid">
-              <a class="nav-link active" aria-current="page" href="beranda"  style="color: white;">
+              <a class="nav-link active" aria-current="page" href="\beranda"  style="color: white;">
               <span class="material-icons-outlined fs-1" style="color: white;">home</span>
               <br>Beranda</a>
             </div>
@@ -21,21 +21,21 @@
           </li>
           <li class="nav-item text-center px-3 py-1" >
             <div class="container-fluid">
-              <a class="nav-link" href="\pendataan" style="color: white;">
+              <a class="nav-link" href="\layanan/pendataan" style="color: white;">
               <span class="material-icons-outlined fs-1" style="color: white;">rss_feed</span> 
                 <br>Layanan</a> 
             </div>
           </li>
           <li class="nav-item text-center px-3 py-1">
             <div class="container-fluid">
-              <a class="nav-link " href="\informasi-berita" style="color: white;">
+              <a class="nav-link " href="\informasi/berita" style="color: white;">
               <span class="material-icons-outlined fs-1" style="color: white;">info</span>
                 <br>informasi</a>
             </div>
           </li>
           <li class="nav-item text-center px-3 py-1">
             <div class="container-fluid">
-              <a class="nav-link " href="/ormas"  style="color: white;">
+              <a class="nav-link " href="\organisasi-terdaftar/ormas"  style="color: white;">
               <span class="material-icons-outlined fs-1" style="color: white;">groups</span>
                 <br>Organisasi Terdaftar</a>
             </div>

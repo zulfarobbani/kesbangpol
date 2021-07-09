@@ -33,26 +33,23 @@ class Media extends GlobalFunc
         }
     }
     
-    public function create($fileUpload, $dateCreate, $idRelation)
+    public function create($idMedia, $fileUpload, $dateCreate, $idRelation)
     {
-        $idMedia = uniqid("med");
         $file = $fileUpload;
-        $namaBerita = $file['name'];
+        $namaMedia = $file['name'];
         $namaSementara = $file['tmp_name'];
         $ekstensi_diperbolehkan	= array('png','jpg');
-        $x = explode('.', $namaBerita);
+        $x = explode('.', $namaMedia);
         $nama = strtolower($x['0']);
         $ekstensi = strtolower(end($x));
         $ukuran	= $file['size'];
         if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
 		    if($ukuran < 1044070){			
-			move_uploaded_file($namaSementara, __DIR__.'/../../../assets/berita/'.$namaBerita);
+			move_uploaded_file($namaSementara, __DIR__.'/../../../assets/berita/'.$namaMedia);
             }
         }
-         
-        $sql = "INSERT INTO ".$this->table." VALUES ('$idMedia', '$namaBerita', '$idRelation', '1', '$dateCreate')";
-      dump($sql);
-      die();
+        $sql = "INSERT INTO ".$this->table." VALUES ('$idMedia', '$namaMedia', '$idRelation', '1', '$dateCreate')";
+     
         try {
             $data = $this->conn->prepare($sql);
 

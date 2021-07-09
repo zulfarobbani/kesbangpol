@@ -19,7 +19,7 @@ class AgendaController extends GlobalFunc
     public function index(Request $request)
     {
         $datas = $this->model->selectAll();
-        return $this->render_template('agenda/index', ['datas' => $datas]);
+        return $this->render_template('informasi/agenda/index', ['datas' => $datas]);
     }
 
     public function ReadOne(Request $request)
@@ -28,7 +28,7 @@ class AgendaController extends GlobalFunc
         $datas = $this->model->selectOne($id);
         
 
-        return $this->render_template('agenda/edit', ['idAgenda' => $datas['idAgenda'], 'namaAgenda'=>$datas['namaAgenda'], 'deskripsiAgenda'=>$datas['deskripsiAgenda'], 'datestartAgenda'=>$datas['datestartAgenda'], 'dateendAgenda'=>$datas['dateendAgenda']]);
+        return $this->render_template('informasi/agenda/edit', ['idAgenda' => $datas['idAgenda'], 'namaAgenda'=>$datas['namaAgenda'], 'deskripsiAgenda'=>$datas['deskripsiAgenda'], 'datestartAgenda'=>$datas['datestartAgenda'], 'dateendAgenda'=>$datas['dateendAgenda']]);
     }
     public function updateordelete(Request $request)
     {
@@ -53,7 +53,7 @@ class AgendaController extends GlobalFunc
             $this->model->delete($id);
         }
 
-        return header("location:http://kesbangpol.com/agenda");
+        return header("location:http://kesbangpol.com/informasi/agenda");
     }
     // public function delete(Request $request)
     // {
@@ -65,7 +65,7 @@ class AgendaController extends GlobalFunc
     // }
     public function create(Request $request)
     {
-        return $this->render_template('agenda/create');
+        return $this->render_template('informasi/agenda/create');
 
     }
     public function store(Request $request)
@@ -87,6 +87,6 @@ class AgendaController extends GlobalFunc
 
         $this->model->create($data_test);
         
-        return header("location:http://kesbangpol.com/agenda");
+        return header("location:http://kesbangpol.com/informasi/agenda");
     }
 }

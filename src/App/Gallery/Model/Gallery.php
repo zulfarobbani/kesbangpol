@@ -18,8 +18,8 @@ class Gallery extends GlobalFunc
 
     public function selectAll()
     {
-        $sql = "SELECT gallery.*, member.idMember, member.idOrsospol FROM ".$this->table." LEFT JOIN member ON gallery.idRelation = member.idMember";
-
+        $sql = "SELECT gallery.*, member.idMember, member.idOrsospol, media.* FROM ".$this->table." LEFT JOIN member ON gallery.idRelation = member.idMember LEFT JOIN media ON gallery.idMedia = media.idMedia ";
+        
         try {
             $query = $this->conn->prepare($sql);
             $query->execute();
@@ -40,8 +40,9 @@ class Gallery extends GlobalFunc
          $idRelation = $data_test['idRelation'];
          $approvalGallery = $data_test['approvalGallery'];
          $dateCreate = $data_test['dateCreate'];
+         $idMedia = $data_test['idMedia'];
 
-        $sql = "INSERT INTO ".$this->table." VALUES ('$idGallery','$namaGallery', '$deskripsiGallery', '$idRelation', '$approvalGallery', '$dateCreate')";
+        $sql = "INSERT INTO ".$this->table." VALUES ('$idGallery','$namaGallery', '$deskripsiGallery', '$idRelation', '$approvalGallery', '$dateCreate', '$idMedia')";
        
         try {
             $data = $this->conn->prepare($sql);

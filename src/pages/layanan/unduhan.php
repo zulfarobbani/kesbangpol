@@ -13,52 +13,36 @@
   <title></title>
 </head>
 
-<body style="background-color : #EEEEEE; color: navy;">
+<body style="background-color : #EEEEEE;">
 
   <?php include(__DIR__.'/../navbar.php' )?>
   <div class="container-fluid">   
       <div class="row">  
         <div class="col-md-8 top-1 start-0 ps-5 mb-3">
-          <div class="container-fluid p-1 mt-4">  
-            <div class="input-group">
-              <span class="input-group-text bg-body border-0 text-muted"><span class="material-icons-outlined align-middle">search</span></span>
-              <input type="text" class="form-control border-0" placeholder="Cari OKP">
-            </div>
-          </div>
-          <?php include(__DIR__.'/../navtabsorganisasi.php' )?>
+          <?php include(__DIR__.'/../navtabslayanan.php' )?>
           <!-- START CODE -->
-          <h4>OKP Terdaftar</h4>
-
-          <div class="col-12">
+            <div class="col-12">
             <table class="table mt-3" style="color: navy;">
               <thead>
                 <tr>
-                  <th class="col-1">No</th>
-                  <th class="col-3">No. AHU</th>
-                  <th>Nama</th>
-                  <th>Alamat</th>
-                  <td></td>   
+                  <th>Nama Berkas</th>
+                  <td></td>
                 </tr>
               </thead>
-              <?php foreach($data_okp as $key => $values) { ?>
               <tbody>
+                <?php foreach($datas as $key => $values) {?>
                 <tr>
-
-                  <td><?=$key+=1?></td>
-                  <td><?= $values['idOrsospol']?></td>
-                  <td><?= $values['namaOrsospol']?></td>
-                  <td><?= $values['alamatOrsospol']?></td>
-                  <!-- <td class="float-end">
-                    <a href="regulasi/edit/<?= $values['idRegulasi'];?>">EDIT</a> 
-                    <a href="regulasi/delete/<?= $values['idRegulasi'];?>">HAPUS</a>
-                  </td> -->
-                            
-                  </tr>
+                  <td style="font-size: 20px"=><?= explode('.', $values['namaSakip'])[0] ?></td>
+                  <td class="float-end">
+                    <!-- <a href="sakip/edit/<?= $values['idSakip'];?>"><span class="material-icons-outlined px-2">edit</span></a>
+                    <a href="sakip/delete/<?= $values['idSakip'];?>"><span class="material-icons-outlined px-2">delete</span></a> -->
+                    <a href="sakip/download-berkas/<?= $values['idSakip'];?>" style="color: navy;"><span class="material-icons-outlined px-2">file_download</span></a>
+                  </td>
+                </tr>
+                <?php } ?>
               </tbody>
-              <?php }?>
             </table>
           </div>
-
           </div>
         <?php include(__DIR__.'/../sidebar.php' )?>
       </div>

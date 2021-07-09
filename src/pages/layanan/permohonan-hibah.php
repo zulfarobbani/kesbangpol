@@ -15,11 +15,11 @@
 
 <body style="background-color : #EEEEEE;">
 
-  <?php include(__DIR__.'/navbar.php' )?>
+  <?php include(__DIR__.'/../navbar.php' )?>
   <div class="container-fluid">   
       <div class="row">  
         <div class="col-md-8 top-1 start-0 ps-5 mb-3">
-          <?php include(__DIR__.'/navtabslayanan.php' )?>
+          <?php include(__DIR__.'/../navtabslayanan.php' )?>
           <!-- START CODE -->
             <h3 style="color: #004080;">Tata Cara Pengajuan Permohonan Hibah</h3>
             <div class="fst-normal">
@@ -38,9 +38,9 @@
 
             <div class="float-end"><button class="btn btn-outline-danger">Unduh</button></div>
           </div>
-        <?php include(__DIR__.'/sidebar.php' )?>
+        <?php include(__DIR__.'/../sidebar.php' )?>
       </div>
-      <?php include(__DIR__.'/footer.php' )?>
+      <?php include(__DIR__.'/../footer.php' )?>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
