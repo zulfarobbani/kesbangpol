@@ -115,7 +115,7 @@
                             <div class="form-group">
                                 <div class="col-sm-offset-6 col-sm">
                                     <div class="checkbox">
-                                        <label class="text-danger"><input type="checkbox" name="delete" value="1"> Delete
+                                        <label class="text-danger"><input type="checkbox" name="delete" value="delete"> Delete
                                             event</label>
                                     </div>
                                 </div>
@@ -163,8 +163,13 @@
                 selectHelper: true,
                 showNonCurrentDates: false,
                 select: function (start, end) {
+                    var dateEnd = new Date(moment(end).format('YYYY-MM-DD'));
+
+                    dateEnd.setDate(dateEnd.getDate() - 1);
+                    
+
                     $('#ModalAdd #start').val(moment(start).format('YYYY-MM-DD'));
-                    $('#ModalAdd #end').val(moment(end).format('YYYY-MM-DD'));
+                    $('#ModalAdd #end').val(moment(dateEnd).format('YYYY-MM-DD'));
                     $('#ModalAdd').modal('show');
                 },
                 events : [
