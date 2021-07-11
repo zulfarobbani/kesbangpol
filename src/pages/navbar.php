@@ -1,7 +1,6 @@
-
- <span><a href="\"><img class="img-fluid" src="/assets/image/Header kesbangpol Revisi ke 5-01.png" alt="gak ada gambar"></a></span>
+ <span><a href="\"><img class="w-100" src="/assets/image/ribbon-logo-02.png" alt="gak ada gambar"></a></span>
   <div class="container-fluid p-0">
-    <nav class="navbar-fluid sticky-top navbar-expand" style="background-color: #000099;">
+    <nav class="navbar-fluid shadow sticky-top navbar-expand" style="background-color: #000099;">
       <div class="collapse navbar-collapse" id="navbarNav">
        <div class="container-fluid d-flex justify-content-center">
         <ul class="navbar-nav">
