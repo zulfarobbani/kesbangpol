@@ -46,7 +46,7 @@ class Media extends GlobalFunc
         $ukuran    = $file['size'];
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 1044070) {
-                move_uploaded_file($namaSementara, __DIR__ . '/../../../../web/assets/media/' . $nama."".uniqid()."".$ekstensi);
+                move_uploaded_file($namaSementara, __DIR__ . '/../../../../web/assets/media/' . $nama."".uniqid().".".$ekstensi);
             }
         }
         $dateCreate = date('Y-m-d');
