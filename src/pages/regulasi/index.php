@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+  <link rel="stylesheet" href="/assets/css/style.css">
   <title>REGULASI</title>
 </head>
 
@@ -21,7 +22,10 @@
         <div class="col-md-8 top-1 start-0 ps-5 mb-3">
           <?php include(__DIR__.'/../navtabsprofil.php' )?>
           <!-- START CODE -->
-          <h4>Regulasi</h4>
+          <div class="d-block">
+          <h4 class="d-inline">Regulasi</h4>
+          <a class="btn btn-outline-danger float-end navy d-inline" href="/profile-kesbangpol"><i class="fas fa-edit"></i> Edit</a>
+          </div>
             <!-- <span><a href="regulasi/create">TAMBAH REGULASI</a></span> -->
             <div class="col-12">
                 <table class="table mt-3" style="color: navy;">
@@ -36,7 +40,8 @@
                         <?php foreach($datas as $key => $values) {?>
                         <tr>
                             <td><?= $key+=1 ?>.</td>
-                            <td><?= $values['namaRegulasi'] ?></td>
+                            <!-- bere modal pratinjau regulasi d list ieu -->
+                            <td><?= $values['namaRegulasi'] ?> <a class="float-end"><i class="fas fa-eye"></i></a></td>
                             <!-- <td class="float-end">
                                 <a href="regulasi/edit/<?= $values['idRegulasi'];?>">EDIT</a> 
                                 <a href="regulasi/delete/<?= $values['idRegulasi'];?>">HAPUS</a>
