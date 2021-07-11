@@ -1,5 +1,6 @@
 h2 {
     color: red;
+<<<<<<< HEAD
 }
 
 .navy{
@@ -14,4 +15,6 @@ h2 {
     display: -webkit-box !important;
     -webkit-box-orient: vertical !important;
     overflow: hidden !important;
+=======
+>>>>>>> d680885fda14c84dce978ef6f407835dac25b887
 }
