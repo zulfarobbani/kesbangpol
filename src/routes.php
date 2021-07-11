@@ -213,6 +213,10 @@ $routes->add('galeriupdate', new Route('/informasi/galeri/edit/{id}/update', [
 $routes->add('galeridelete', new Route('/informasi/galeri/delete/{id}', [
     '_controller' => 'App\Gallery\Controller\GalleryController::delete',
 ]));
+
+$routes->add('galeridetail', new Route('/informasi/galeri/detail', [
+    '_controller' => 'App\Gallery\Controller\GalleryController::detail',
+]));
 //crud galeri end
 
 //crud jabatan start

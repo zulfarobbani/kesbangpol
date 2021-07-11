@@ -83,6 +83,14 @@ class GalleryController extends GlobalFunc
 
        return header("location:http://kesbangpol.com/informasi/galeri");
     }
+
+    public function detail(Request $request) {
+        //$id = $request->attributes->get('id');
+        //$datas = $this->model->selectOne($id);
+        
+    return $this->render_template('informasi/galeri/detail'/*, ['detail_berita' => $datas]*/);
+    }
+
     public function delete(Request $request)
     {
         $id = $request->attributes->get('id');
