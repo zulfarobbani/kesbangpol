@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 11, 2021 at 08:18 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.1
+-- Generation Time: Jul 09, 2021 at 04:22 AM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 7.4.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -65,8 +64,8 @@ CREATE TABLE `berita` (
 --
 
 INSERT INTO `berita` (`idBerita`, `namaBerita`, `deskripsiBerita`, `idRelation`, `approvalBerita`, `dateCreate`, `idMedia`) VALUES
-('brt60e2aac52039e', 'pernikahan Licht dan Tetia', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit similique quae quia corporis eos, laboriosam eveniet ipsa perspiciatis amet adipisci beatae nam quibusdam laborum numquam quisquam voluptatem doloremque consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit similique quae quia corporis eos, laboriosam eveniet ipsa perspiciatis amet adipisci beatae nam quibusdam laborum numquam quisquam voluptatem doloremque consectetur.\r\n\r\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit similique quae quia corporis eos, laboriosam eveniet ipsa perspiciatis amet adipisci beatae nam quibusdam laborum numquam quisquam voluptatem doloremque consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit similique quae quia corporis eos, laboriosam eveniet ipsa perspiciatis amet adipisci beatae nam quibusdam laborum numquam quisquam voluptatem doloremque consectetur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit similique quae quia corporis eos, laboriosam eveniet ipsa perspiciatis amet adipisci beatae nam quibusdam laborum numquam quisquam voluptatem doloremque consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit similique quae quia corporis eos, laboriosam eveniet ipsa perspiciatis amet adipisci beatae nam quibusdam laborum numquam quisquam voluptatem doloremque consectetur.\r\n\r\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit similique quae quia corporis eos, laboriosam eveniet ipsa perspiciatis amet adipisci beatae nam quibusdam laborum numquam quisquam voluptatem doloremque consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit similique quae quia corporis eos, laboriosam eveniet ipsa perspiciatis amet adipisci beatae nam quibusdam laborum numquam quisquam voluptatem doloremque consectetur.\r\n            \r\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit similique quae quia corporis eos, laboriosam eveniet ipsa perspiciatis amet adipisci beatae nam quibusdam laborum numquam quisquam voluptatem doloremque consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit similique quae quia corporis eos, laboriosam eveniet ipsa perspiciatis amet adipisci beatae nam quibusdam laborum numquam quisquam voluptatem doloremque consectetur.', '1', 1, '2021-07-05', 'med60e2aac520372'),
-('brt60e2d40f44d60', 'Anime ', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit similique quae quia corporis eos, laboriosam eveniet ipsa perspiciatis amet adipisci beatae nam quibusdam laborum numquam quisquam voluptatem doloremque consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit similique quae quia corporis eos, laboriosam eveniet ipsa perspiciatis amet adipisci beatae nam quibusdam laborum numquam quisquam voluptatem doloremque consectetur.\r\n\r\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit similique quae quia corporis eos, laboriosam eveniet ipsa perspiciatis amet adipisci beatae nam quibusdam laborum numquam quisquam voluptatem doloremque consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit similique quae quia corporis eos, laboriosam eveniet ipsa perspiciatis amet adipisci beatae nam quibusdam laborum numquam quisquam voluptatem doloremque consectetur.Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit similique quae quia corporis eos, laboriosam eveniet ipsa perspiciatis amet adipisci beatae nam quibusdam laborum numquam quisquam voluptatem doloremque consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit similique quae quia corporis eos, laboriosam eveniet ipsa perspiciatis amet adipisci beatae nam quibusdam laborum numquam quisquam voluptatem doloremque consectetur.\r\n\r\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit similique quae quia corporis eos, laboriosam eveniet ipsa perspiciatis amet adipisci beatae nam quibusdam laborum numquam quisquam voluptatem doloremque consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit similique quae quia corporis eos, laboriosam eveniet ipsa perspiciatis amet adipisci beatae nam quibusdam laborum numquam quisquam voluptatem doloremque consectetur.\r\n            \r\n            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit similique quae quia corporis eos, laboriosam eveniet ipsa perspiciatis amet adipisci beatae nam quibusdam laborum numquam quisquam voluptatem doloremque consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto fugit similique quae quia corporis eos, laboriosam eveniet ipsa perspiciatis amet adipisci beatae nam quibusdam laborum numquam quisquam voluptatem doloremque consectetur.', '1', 1, '2021-07-05', 'med60e2d40f44d41');
+('brt60e2aac52039e', 'pernikahan Licht dan Tetia', 'Pernikahn ini akhirnya terjadi dan hal yang tidak diinginkan pun terjadi yaitu bangsa manusia menyerang bangsa elf', '1', 1, '2021-07-05', 'med60e2aac520372'),
+('brt60e2d40f44d60', 'Anime ', 'Anime Angel Beats akan segera Menemui endingnya.', '1', 1, '2021-07-05', 'med60e2d40f44d41');
 
 -- --------------------------------------------------------
 
@@ -87469,7 +87468,6 @@ CREATE TABLE `media` (
   `pathMedia` varchar(255) NOT NULL,
   `idRelation` varchar(255) DEFAULT NULL,
   `idEntity` varchar(255) NOT NULL,
-  `jenisDokumen` varchar(255) DEFAULT NULL,
   `dateCreate` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -87477,16 +87475,13 @@ CREATE TABLE `media` (
 -- Dumping data for table `media`
 --
 
-INSERT INTO `media` (`idMedia`, `pathMedia`, `idRelation`, `idEntity`, `jenisDokumen`, `dateCreate`) VALUES
-('med60d2d6b462b8b', '[Kusonime] Black Clover - 41.mkv_snapshot_03.09_[2020.07.02_10.24.30].jpg', '1', '1', NULL, '2021-06-23'),
-('med60e2aac520372', '[Kusonime] Black Clover - 108.mkv_snapshot_01.48_[2020.08.17_01.08.31].jpg', '1', '1', NULL, '2021-07-05'),
-('med60e2b875a099d', '[Kusonime] Angel Beats! BD - 05.mkv_snapshot_23.56_[2020.03.26_05.05.25].jpg', '1', '1', NULL, '2021-07-05'),
-('med60e2bc6aa2679', '', '', '1', NULL, '2021-07-05'),
-('med60e2cc9f19a0d', '[Kusonime] Black Clover - 65.mkv_snapshot_01.59_[2020.09.17_23.35.30].jpg', '', '1', NULL, '2021-07-05'),
-('med60e2d40f44d41', '[Kusonime] Angel Beats! BD - OVA1.mkv_snapshot_28.41_[2020.03.16_15.26.38].jpg', '1', '1', NULL, '2021-07-05'),
-('med60e97425aa621', '1.jpg', '1', '1', 'struktur_organisasi', '2021-07-10'),
-('med60ea79499c3a3', '1.jpg', 'skp60ea79498f727', '1', '', '2021-07-11'),
-('med60ea86f7e328e', '3.jpg', 'reg60ea86f7d7a5c', '1', '', '2021-07-11');
+INSERT INTO `media` (`idMedia`, `pathMedia`, `idRelation`, `idEntity`, `dateCreate`) VALUES
+('med60d2d6b462b8b', '[Kusonime] Black Clover - 41.mkv_snapshot_03.09_[2020.07.02_10.24.30].jpg', '1', '1', '2021-06-23'),
+('med60e2aac520372', '[Kusonime] Black Clover - 108.mkv_snapshot_01.48_[2020.08.17_01.08.31].jpg', '1', '1', '2021-07-05'),
+('med60e2b875a099d', '[Kusonime] Angel Beats! BD - 05.mkv_snapshot_23.56_[2020.03.26_05.05.25].jpg', '1', '1', '2021-07-05'),
+('med60e2bc6aa2679', '', '', '1', '2021-07-05'),
+('med60e2cc9f19a0d', '[Kusonime] Black Clover - 65.mkv_snapshot_01.59_[2020.09.17_23.35.30].jpg', '', '1', '2021-07-05'),
+('med60e2d40f44d41', '[Kusonime] Angel Beats! BD - OVA1.mkv_snapshot_28.41_[2020.03.16_15.26.38].jpg', '1', '1', '2021-07-05');
 
 -- --------------------------------------------------------
 
@@ -87634,28 +87629,6 @@ INSERT INTO `profile` (`idProfile`, `namaProfile`, `deskripsiProfile`, `idRelati
 -- --------------------------------------------------------
 
 --
--- Table structure for table `profilekesbangpol`
---
-
-CREATE TABLE `profilekesbangpol` (
-  `idProfilekesbangpol` varchar(255) NOT NULL,
-  `visi` text NOT NULL,
-  `misi` text NOT NULL,
-  `tugaspokok` text NOT NULL,
-  `fungsi` text NOT NULL,
-  `dateCreate` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `profilekesbangpol`
---
-
-INSERT INTO `profilekesbangpol` (`idProfilekesbangpol`, `visi`, `misi`, `tugaspokok`, `fungsi`, `dateCreate`) VALUES
-('pfk60e975a4270a8', '12Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum mollis euismod. Proin viverra dui\r\neu tortor egestas, sit amet maximus tellus maximus. Etiam vestibulum, metus suscipit suscipit blandit,\r\nturpis dui accumsan diam, nec pharetra elit elit vel odio. Cras nec felis vel ipsum consequat elementum.\r\nCras interdum nunc tristique finibus lacinia. Mauris ac sodales augue. Pellentesque congue velit a ex aliquet, pulvinar mollis mauris interdum. Ut sit amet mauris vitae tellus gravida scelerisque. Aenean auctor at\r\nmi sit amet gravida.', '1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum mollis euismod. Proin viverra dui\r\neu tortor egestas, sit amet maximus tellus maximus. Etiam vestibulum, metus suscipit suscipit blandit,\r\nturpis dui accumsan diam, nec pharetra elit elit vel odio. Cras nec felis vel ipsum consequat elementum.\r\nCras interdum nunc tristique finibus lacinia. Mauris ac sodales augue. Pellentesque congue velit a ex aliquet, pulvinar mollis mauris interdum. Ut sit amet mauris vitae tellus gravida scelerisque. Aenean auctor at\r\nmi sit amet gravida.', '1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum mollis euismod. Proin viverra dui\r\neu tortor egestas, sit amet maximus tellus maximus. Etiam vestibulum, metus suscipit suscipit blandit,\r\nturpis dui accumsan diam, nec pharetra elit elit vel odio. Cras nec felis vel ipsum consequat elementum.\r\nCras interdum nunc tristique finibus lacinia. Mauris ac sodales augue. Pellentesque congue velit a ex aliquet, pulvinar mollis mauris interdum. Ut sit amet mauris vitae tellus gravida scelerisque. Aenean auctor at\r\nmi sit amet gravida.', '1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum mollis euismod. Proin viverra dui\r\neu tortor egestas, sit amet maximus tellus maximus. Etiam vestibulum, metus suscipit suscipit blandit,\r\nturpis dui accumsan diam, nec pharetra elit elit vel odio. Cras nec felis vel ipsum consequat elementum.\r\nCras interdum nunc tristique finibus lacinia. Mauris ac sodales augue. Pellentesque congue velit a ex aliquet, pulvinar mollis mauris interdum. Ut sit amet mauris vitae tellus gravida scelerisque. Aenean auctor at\r\nmi sit amet gravida.', '2021-07-10');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `progker`
 --
 
@@ -87734,7 +87707,7 @@ CREATE TABLE `regulasi` (
 --
 
 INSERT INTO `regulasi` (`idRegulasi`, `namaRegulasi`, `dateCreate`) VALUES
-('reg60ea86f7d7a5c', 'Peraturan Umum', '2021-07-11');
+('reg60c06f6e1372b', 'epep1', '2021-06-09');
 
 -- --------------------------------------------------------
 
@@ -87753,7 +87726,7 @@ CREATE TABLE `sakip` (
 --
 
 INSERT INTO `sakip` (`idSakip`, `namaSakip`, `dateCreate`) VALUES
-('skp60ea79498f727', 'SOP', '2021-07-11');
+('skp60d19d242c17a', '( Lembar Kerja 01 ).docx', '2021-06-22');
 
 -- --------------------------------------------------------
 
@@ -87943,12 +87916,6 @@ ALTER TABLE `pengumuman`
 ALTER TABLE `profile`
   ADD PRIMARY KEY (`idProfile`),
   ADD KEY `idTables` (`idRelation`);
-
---
--- Indexes for table `profilekesbangpol`
---
-ALTER TABLE `profilekesbangpol`
-  ADD PRIMARY KEY (`idProfilekesbangpol`);
 
 --
 -- Indexes for table `progker`

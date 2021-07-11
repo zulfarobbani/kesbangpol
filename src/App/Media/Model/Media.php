@@ -44,14 +44,15 @@ class Media extends GlobalFunc
         $nama = strtolower($x['0']);
         $ekstensi = strtolower(end($x));
         $ukuran    = $file['size'];
+        $filename = $nama."".uniqid().".".$ekstensi;
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 1044070) {
-                move_uploaded_file($namaSementara, __DIR__ . '/../../../../web/assets/media/' . $nama."".uniqid()."".$ekstensi);
+                move_uploaded_file($namaSementara, __DIR__ . '/../../../../web/assets/media/' . $filename);
             }
         }
         $dateCreate = date('Y-m-d');
 
-        $sql = "INSERT INTO " . $this->table . " VALUES ('$idMedia', '$namaMedia', '$idRelation', $idEntity, '$jenisDokumen', '$dateCreate')";
+        $sql = "INSERT INTO " . $this->table . " VALUES ('$idMedia', '$filename', '$idRelation', $idEntity, '$jenisDokumen', '$dateCreate')";
 
         try {
             $data = $this->conn->prepare($sql);

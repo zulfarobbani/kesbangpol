@@ -8,7 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
-    <title></title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title><?= $detail_berita['namaBerita'] ?></title>
 </head>
 
 <body style="background-color : #EEEEEE;">
@@ -22,8 +23,8 @@
                 <div class="row g-4">
                     <div class="col-12">
                         <h3 class="fw-bold mt-3 mb-4"><?= $detail_berita['namaBerita'] ?></h3>
-                        <img class="img-fluid" src="/assets/media/<?= $detail_berita['pathMedia'] ?>" alt="Gambar Berita">
-                        <p class="mt-4"><?= html_entity_decode(nl2br($detail_berita['deskripsiBerita'])) ?></p>
+                        <img class="w-100" src="/assets/media/<?= $detail_berita['pathMedia'] ?>" alt="Gambar Berita">
+                        <p class="mt-4" align="justify"><?= html_entity_decode(nl2br($detail_berita['deskripsiBerita'])) ?></p>
                     </div>
                 </div>
             </div>

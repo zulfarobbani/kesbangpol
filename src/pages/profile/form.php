@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
     <title>Struktur Organisasi</title>
 </head>
 
@@ -18,369 +20,370 @@
             <div class="col-md-8 top-1 start-0 ps-5 mb-3">
                 <!-- START CODE -->
                 <div class="card mt-5">
-  <div class="card-body">
-  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="strukturorganisasi-tab" data-bs-toggle="tab" data-bs-target="#strukturorganisasi" type="button" role="tab" aria-controls="strukturorganisasi" aria-selected="true">Struktur Organisasi</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="visimisi-tab" data-bs-toggle="tab" data-bs-target="#visimisi" type="button" role="tab" aria-controls="visimisi" aria-selected="false">Visi Misi</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="tupoksi-tab" data-bs-toggle="tab" data-bs-target="#tupoksi" type="button" role="tab" aria-controls="tupoksi" aria-selected="false">TUPOKSI</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="sakip-tab" data-bs-toggle="tab" data-bs-target="#sakip" type="button" role="tab" aria-controls="sakip" aria-selected="false">SAKIP</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="regulasi-tab" data-bs-toggle="tab" data-bs-target="#regulasi" type="button" role="tab" aria-controls="regulasi" aria-selected="false">Regulasi</button>
-                    </li>
-                </ul>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="strukturorganisasi" role="tabpanel" aria-labelledby="strukturorganisasi-tab">
-                        <div class="container mt-4">
-                            <form action="profile-kesbangpol/struktur-organisasi/store" method="post" enctype="multipart/form-data">
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Gambar Struktur Organisasi</label>
-                                    <div class="row">
-                                        <div class="col">
-                                            <input type="file" class="form-control" id="exampleFormControlInput1" name="sotk">
+                    <div class="card-body">
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="strukturorganisasi-tab" data-bs-toggle="tab" data-bs-target="#strukturorganisasi" type="button" role="tab" aria-controls="strukturorganisasi" aria-selected="true">Struktur Organisasi</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="visimisi-tab" data-bs-toggle="tab" data-bs-target="#visimisi" type="button" role="tab" aria-controls="visimisi" aria-selected="false">Visi Misi</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tupoksi-tab" data-bs-toggle="tab" data-bs-target="#tupoksi" type="button" role="tab" aria-controls="tupoksi" aria-selected="false">TUPOKSI</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="sakip-tab" data-bs-toggle="tab" data-bs-target="#sakip" type="button" role="tab" aria-controls="sakip" aria-selected="false">SAKIP</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="regulasi-tab" data-bs-toggle="tab" data-bs-target="#regulasi" type="button" role="tab" aria-controls="regulasi" aria-selected="false">Regulasi</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="strukturorganisasi" role="tabpanel" aria-labelledby="strukturorganisasi-tab">
+                                <div class="container mt-4">
+                                    <form action="profile-kesbangpol/struktur-organisasi/store" method="post" enctype="multipart/form-data">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Gambar Struktur Organisasi</label>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <input type="file" class="form-control" id="exampleFormControlInput1" name="sotk">
+                                                </div>
+                                                <div class="col-2">
+                                                    <?php if ($struktur_organisasi) { ?>
+                                                        <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-image="/assets/media/<?= $struktur_organisasi['pathMedia'] ?>">
+                                                            Lihat Struktur Organisasi
+                                                        </button>
+                                                    <?php } ?>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-2">
-                                            <?php if ($struktur_organisasi) { ?>
-                                                <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-image="/assets/media/<?= $struktur_organisasi['pathMedia'] ?>">
-                                                    Lihat Struktur Organisasi
-                                                </button>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="visimisi" role="tabpanel" aria-labelledby="visimisi-tab">
+                                <div class="container mt-4">
+                                    <form action="profile-kesbangpol/visi-misi/store" method="post">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Visi</label>
+                                            <textarea name="visi" id="" class="form-control"><?= $profileKesbangpol['visi'] ?></textarea>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Misi</label>
+                                            <textarea name="misi" id="" class="form-control"><?= $profileKesbangpol['misi'] ?></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tupoksi" role="tabpanel" aria-labelledby="tupoksi-tab">
+                                <div class="container mt-4">
+                                    <form action="profile-kesbangpol/tupoksi/store" method="post">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Tugas Pokok</label>
+                                            <textarea name="tugaspokok" id="" class="form-control"><?= $profileKesbangpol['tugaspokok'] ?></textarea>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label">Fungsi</label>
+                                            <textarea name="fungsi" id="" class="form-control"><?= $profileKesbangpol['fungsi'] ?></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="sakip" role="tabpanel" aria-labelledby="sakip-tab">
+                                <div class="container mt-4">
+                                    <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
+                                        Tambah
+                                    </button>
+                                    <table class="table table-sm">
+                                        <thead>
+                                            <tr>
+                                                <td>No</td>
+                                                <td>Nama Berkas</td>
+                                                <td>Berkas</td>
+                                                <td>Aksi</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php foreach ($sakip as $key => $value) { ?>
+                                                <tr>
+                                                    <td><?= $key += 1 ?></td>
+                                                    <td><?= $value['namaSakip'] ?></td>
+                                                    <td><?= $value['pathMedia'] ?></td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-file="/assets/media/<?= $value['pathMedia'] ?>">
+                                                            Lihat
+                                                        </button>
+                                                        <a href="/sakip/<?= $value['idSakip'] ?>/download" class="btn btn-sm btn-light" target="_blank">Download</a>
+                                                        <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-namaSakip="<?= $value['namaSakip'] ?>" data-bs-idSakip="<?= $value['idSakip'] ?>">
+                                                            Edit
+                                                        </button>
+                                                        <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idSakip="<?= $value['idSakip'] ?>">
+                                                            Hapus
+                                                        </button>
+                                                    </td>
+                                                </tr>
                                             <?php } ?>
-                                        </div>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="regulasi" role="tabpanel" aria-labelledby="regulasi-tab">
+                                <div class="container mt-4">
+                                    <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createModalRegulasi">
+                                        Tambah
+                                    </button>
+                                    <table class="table table-sm">
+                                        <thead>
+                                            <tr>
+                                                <td>No</td>
+                                                <td>Nama Regulasi</td>
+                                                <td>Aksi</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php foreach ($regulasi as $key => $value) { ?>
+                                                <tr>
+                                                    <td><?= $key += 1 ?></td>
+                                                    <td><?= $value['namaRegulasi'] ?></td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#detailModalRegulasi" data-bs-fileRegulasi="/assets/media/<?= $value['pathMedia'] ?>">
+                                                            Lihat
+                                                        </button>
+                                                        <a href="/regulasi/<?= $value['idRegulasi'] ?>/download" class="btn btn-sm btn-light" target="_blank">Download</a>
+                                                        <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#editModalRegulasi" data-bs-namaRegulasi="<?= $value['namaRegulasi'] ?>" data-bs-idRegulasi="<?= $value['idRegulasi'] ?>">
+                                                            Edit
+                                                        </button>
+                                                        <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModalRegulasi" data-bs-idRegulasi="<?= $value['idRegulasi'] ?>">
+                                                            Hapus
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            <?php } ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Modal Detail Struktur Organisasi -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title" id="exampleModalLabel">File Regulasi</h6>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="" alt="" class="img-fluid imageSotk">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
+                            </div>
                         </div>
-                    </div>
-                    <div class="tab-pane fade" id="visimisi" role="tabpanel" aria-labelledby="visimisi-tab">
-                        <div class="container mt-4">
-                            <form action="profile-kesbangpol/visi-misi/store" method="post">
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Visi</label>
-                                    <textarea name="visi" id="" class="form-control"><?= $profileKesbangpol['visi'] ?></textarea>
+
+                        <!-- ==================== MODAL SAKIP ====================  -->
+                        <!-- Modal Tambah -->
+                        <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title" id="exampleModalLabel">Tambah SAKIP</h6>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="sakip/store" method="post" enctype="multipart/form-data">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Nama Sakip</label>
+                                                <input type="text" name="namaSakip" class="form-control">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">File Sakip</label>
+                                                <input type="file" name="fileSakip" class="form-control">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Misi</label>
-                                    <textarea name="misi" id="" class="form-control"><?= $profileKesbangpol['misi'] ?></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Modal Edit -->
+                        <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title" id="exampleModalLabel">Edit SAKIP</h6>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="sakip/store" method="post" enctype="multipart/form-data" class="formEdit">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Nama Sakip</label>
+                                                <input type="text" name="namaSakip" class="form-control namaSakip">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">File Sakip</label>
+                                                <input type="file" name="fileSakip" class="form-control">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
+                            </div>
                         </div>
-                    </div>
-                    <div class="tab-pane fade" id="tupoksi" role="tabpanel" aria-labelledby="tupoksi-tab">
-                        <div class="container mt-4">
-                            <form action="profile-kesbangpol/tupoksi/store" method="post">
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Tugas Pokok</label>
-                                    <textarea name="tugaspokok" id="" class="form-control"><?= $profileKesbangpol['tugaspokok'] ?></textarea>
+
+                        <!-- Modal Detail -->
+                        <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title" id="exampleModalLabel">File SAKIP</h6>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="" alt="" class="img-fluid fileSakip">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Fungsi</label>
-                                    <textarea name="fungsi" id="" class="form-control"><?= $profileKesbangpol['fungsi'] ?></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Modal Hapus -->
+                        <div class="modal fade" id="hapusModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title" id="exampleModalLabel">Hapus SAKIP</h6>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Apakah anda yakin ingin menghapus file tersebut?</p>
+                                        <form action="" method="post" class="form-hapus"></form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger btn-hapus">Hapus</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
+                                    </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
+                            </div>
                         </div>
-                    </div>
-                    <div class="tab-pane fade" id="sakip" role="tabpanel" aria-labelledby="sakip-tab">
-                        <div class="container mt-4">
-                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
-                                Tambah
-                            </button>
-                            <table class="table table-sm">
-                                <thead>
-                                    <tr>
-                                        <td>No</td>
-                                        <td>Nama Berkas</td>
-                                        <td>Berkas</td>
-                                        <td>Aksi</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach ($sakip as $key => $value) { ?>
-                                        <tr>
-                                            <td><?= $key += 1 ?></td>
-                                            <td><?= $value['namaSakip'] ?></td>
-                                            <td><?= $value['pathMedia'] ?></td>
-                                            <td>
-                                                <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-file="/assets/media/<?= $value['pathMedia'] ?>">
-                                                    Lihat
-                                                </button>
-                                                <a href="/sakip/<?= $value['idSakip'] ?>/download" class="btn btn-sm btn-light" target="_blank">Download</a>
-                                                <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-namaSakip="<?= $value['namaSakip'] ?>" data-bs-idSakip="<?= $value['idSakip'] ?>">
-                                                    Edit
-                                                </button>
-                                                <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idSakip="<?= $value['idSakip'] ?>">
-                                                    Hapus
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="regulasi" role="tabpanel" aria-labelledby="regulasi-tab">
-                        <div class="container mt-4">
-                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createModalRegulasi">
-                                Tambah
-                            </button>
-                            <table class="table table-sm">
-                                <thead>
-                                    <tr>
-                                        <td>No</td>
-                                        <td>Nama Regulasi</td>
-                                        <td>Aksi</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach ($regulasi as $key => $value) { ?>
-                                        <tr>
-                                            <td><?= $key += 1 ?></td>
-                                            <td><?= $value['namaRegulasi'] ?></td>
-                                            <td>
-                                                <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#detailModalRegulasi" data-bs-fileRegulasi="/assets/media/<?= $value['pathMedia'] ?>">
-                                                    Lihat
-                                                </button>
-                                                <a href="/regulasi/<?= $value['idRegulasi'] ?>/download" class="btn btn-sm btn-light" target="_blank">Download</a>
-                                                <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#editModalRegulasi" data-bs-namaRegulasi="<?= $value['namaRegulasi'] ?>" data-bs-idRegulasi="<?= $value['idRegulasi'] ?>">
-                                                    Edit
-                                                </button>
-                                                <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModalRegulasi" data-bs-idRegulasi="<?= $value['idRegulasi'] ?>">
-                                                    Hapus
-                                                </button>
-                                            </td>
-                                        </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                        <!-- ==================== END MODAL SAKIP ====================  -->
 
-                </div>
-
-                <!-- Modal Detail Struktur Organisasi -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h6 class="modal-title" id="exampleModalLabel">File Regulasi</h6>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <img src="" alt="" class="img-fluid imageSotk">
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ==================== MODAL SAKIP ====================  -->
-                <!-- Modal Tambah -->
-                <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h6 class="modal-title" id="exampleModalLabel">Tambah SAKIP</h6>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form action="sakip/store" method="post" enctype="multipart/form-data">
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Nama Sakip</label>
-                                        <input type="text" name="namaSakip" class="form-control">
+                        <!-- ==================== MODAL REGULASI ====================  -->
+                        <!-- Modal Tambah -->
+                        <div class="modal fade" id="createModalRegulasi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title" id="exampleModalLabel">Tambah Regulasi</h6>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">File Sakip</label>
-                                        <input type="file" name="fileSakip" class="form-control">
+                                    <div class="modal-body">
+                                        <form action="regulasi/store" method="post" enctype="multipart/form-data">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Nama Regulasi</label>
+                                                <input type="text" name="namaRegulasi" class="form-control">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">File Regulasi</label>
+                                                <input type="file" name="fileRegulasi" class="form-control">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </form>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Modal Edit -->
-                <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h6 class="modal-title" id="exampleModalLabel">Edit SAKIP</h6>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form action="sakip/store" method="post" enctype="multipart/form-data" class="formEdit">
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Nama Sakip</label>
-                                        <input type="text" name="namaSakip" class="form-control namaSakip">
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">File Sakip</label>
-                                        <input type="file" name="fileSakip" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal Edit -->
+                        <div class="modal fade" id="editModalRegulasi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title" id="exampleModalLabel">Edit Regulasi</h6>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Modal Detail -->
-                <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h6 class="modal-title" id="exampleModalLabel">File SAKIP</h6>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <img src="" alt="" class="img-fluid fileSakip">
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Modal Hapus -->
-                <div class="modal fade" id="hapusModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h6 class="modal-title" id="exampleModalLabel">Hapus SAKIP</h6>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <p>Apakah anda yakin ingin menghapus file tersebut?</p>
-                                <form action="" method="post" class="form-hapus"></form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger btn-hapus">Hapus</button>
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ==================== END MODAL SAKIP ====================  -->
-
-                <!-- ==================== MODAL REGULASI ====================  -->
-                <!-- Modal Tambah -->
-                <div class="modal fade" id="createModalRegulasi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h6 class="modal-title" id="exampleModalLabel">Tambah Regulasi</h6>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form action="regulasi/store" method="post" enctype="multipart/form-data">
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Nama Regulasi</label>
-                                        <input type="text" name="namaRegulasi" class="form-control">
+                                    <div class="modal-body">
+                                        <form action="" method="post" enctype="multipart/form-data" class="formEditRegulasi">
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Nama Regulasi</label>
+                                                <input type="text" name="namaRegulasi" class="form-control namaRegulasi">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">File Sakip</label>
+                                                <input type="file" name="fileRegulasi" class="form-control">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </form>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">File Regulasi</label>
-                                        <input type="file" name="fileRegulasi" class="form-control">
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Modal Edit -->
-                <div class="modal fade" id="editModalRegulasi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h6 class="modal-title" id="exampleModalLabel">Edit Regulasi</h6>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form action="" method="post" enctype="multipart/form-data" class="formEditRegulasi">
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">Nama Regulasi</label>
-                                        <input type="text" name="namaRegulasi" class="form-control namaRegulasi">
+                        <!-- Modal Detail -->
+                        <div class="modal fade" id="detailModalRegulasi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title" id="exampleModalLabel">File Regulasi</h6>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="exampleFormControlInput1" class="form-label">File Sakip</label>
-                                        <input type="file" name="fileRegulasi" class="form-control">
+                                    <div class="modal-body">
+                                        <img src="" alt="" class="img-fluid fileRegulasi">
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <!-- Modal Detail -->
-                <div class="modal fade" id="detailModalRegulasi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h6 class="modal-title" id="exampleModalLabel">File Regulasi</h6>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <img src="" alt="" class="img-fluid fileRegulasi">
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <!-- Modal Hapus -->
+                        <div class="modal fade" id="hapusModalRegulasi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title" id="exampleModalLabel">Hapus Regulasi</h6>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Apakah anda yakin ingin menghapus file tersebut?</p>
+                                        <form action="" method="post" class="form-hapus-regulasi"></form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger btn-hapus-regulasi">Hapus</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <!-- ==================== END MODAL REGULASI ====================  -->
                 </div>
+                <a class="btn btn-outline-danger navy mt-3 float-end" href="/struktur-organisasi"><i class="fas fa-check"></i> Selesai Ubah</a>
+            </div>
+            <!-- end form -->
+            <?php include(__DIR__ . '/../sidebar.php') ?>
 
-                <!-- Modal Hapus -->
-                <div class="modal fade" id="hapusModalRegulasi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h6 class="modal-title" id="exampleModalLabel">Hapus Regulasi</h6>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <p>Apakah anda yakin ingin menghapus file tersebut?</p>
-                                <form action="" method="post" class="form-hapus-regulasi"></form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-danger btn-hapus-regulasi">Hapus</button>
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                <!-- ==================== END MODAL REGULASI ====================  -->
-  </div>
-</div>
-<!-- end form -->
-                <?php include(__DIR__ . '/../sidebar.php') ?>
-            
             <?php include(__DIR__ . '/../footer.php') ?>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
