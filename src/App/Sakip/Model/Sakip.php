@@ -8,6 +8,7 @@ use PDOException;
 class Sakip extends GlobalFunc
 {
     private $table = 'sakip';
+    private $primaryKey = 'idSakip';
     public $conn;
 
     public function __construct()
@@ -18,7 +19,7 @@ class Sakip extends GlobalFunc
     
     public function selectAll()
     {
-        $sql = "SELECT * FROM ".$this->table;
+        $sql = "SELECT * FROM ".$this->table." LEFT JOIN media ON media.idRelation = ".$this->table.".idSakip";
         
         try {
             $query = $this->conn->prepare($sql);
@@ -36,14 +37,14 @@ class Sakip extends GlobalFunc
          $id = uniqid("skp");
          $namaSakip = $data_test['namaSakip'];
          
-         $dateCreate = $data_test['dateCreate'];
+         $dateCreate = date('Y-m-d');
 
         $sql = "INSERT INTO ".$this->table." VALUES ('$id','$namaSakip', '$dateCreate')";
         
         try {
             $data = $this->conn->prepare($sql);
             $data->execute();
-            return $data->rowCount();
+            return $id;
         } catch (PDOException $e) {
             echo $e;
             die();
@@ -52,7 +53,7 @@ class Sakip extends GlobalFunc
 
     public function selectOne($id)
     {
-        $sql = "SELECT * FROM ".$this->table." WHERE idSakip = '$id'";
+        $sql = "SELECT * FROM ".$this->table." LEFT JOIN media ON media.idRelation = ".$this->table.".idSakip WHERE ".$this->primaryKey." = '$id'";
 
         try {
             $query = $this->conn->prepare($sql);
@@ -69,11 +70,13 @@ class Sakip extends GlobalFunc
     {
         $namaSakip = $data_test['namaSakip'];
         
-        $sql = "UPDATE ".$this->table." SET namaSakip = '$namaSakip' WHERE idSakip ='$id'";
+        $sql = "UPDATE ".$this->table." SET namaSakip = '$namaSakip' WHERE ".$this->primaryKey." ='$id'";
         
         try{
             $data = $this->conn->prepare($sql);
-            $data->execute();  
+            $data->execute();
+
+            return $id;
         }catch (PDOexception $e){
             echo $e;
             die();
@@ -82,7 +85,7 @@ class Sakip extends GlobalFunc
 
     public function delete($id)
     {
-        $sql = "DELETE FROM ".$this->table." WHERE idSakip = '$id'";
+        $sql = "DELETE FROM ".$this->table." WHERE ".$this->primaryKey." = '$id'";
 
         try{    
             $query = $this->conn->prepare($sql);

@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Berita\Model;
+namespace App\ProfileKesbangpol\Model;
 
 use Core\GlobalFunc;
 use PDOException;
 
-class Berita extends GlobalFunc
+class ProfileKesbangpol extends GlobalFunc
 {
-    private $table = 'berita';
+    private $table = 'profilekesbangpol';
+    private $primaryKey = 'idProfilekesbangpol';
     public $conn;
 
     public function __construct()
@@ -18,8 +19,8 @@ class Berita extends GlobalFunc
 
     public function selectAll()
     {
-        $sql = "SELECT berita.*, member.idMember, member.idOrsospol, media.* FROM ".$this->table." LEFT JOIN member ON berita.idRelation = member.idMember
-        LEFT JOIN media ON berita.idMedia = media.idMedia" ;
+        $sql = "SELECT * FROM ".$this->table;
+
         try {
             $query = $this->conn->prepare($sql);
             $query->execute();
@@ -34,16 +35,13 @@ class Berita extends GlobalFunc
     
     public function create($data_test = [])
     {
-         $idBerita = uniqid("brt");
-         $namaBerita = $data_test['namaBerita'];
-         $deskripsiBerita = $data_test['deskripsiBerita'];
-         $idRelation = $data_test['idRelation'];
-         $approvalBerita = $data_test['approvalBerita'];
-         $dateCreate = $data_test['dateCreate'];
-         $idMedia = $data_test['idMedia'];
+         $idProfile = uniqid("pfk");
+         $visi = $data_test['visi'];
+         $misi = $data_test['misi'];
+         $dateCreate = date('Y-m-d');
 
-        $sql = "INSERT INTO ".$this->table." VALUES ('$idBerita','$namaBerita', '$deskripsiBerita', '$idRelation', '$approvalBerita', '$dateCreate', '$idMedia')";
-
+        $sql = "INSERT INTO ".$this->table." VALUES ('$idProfile','$visi', '$misi', '$dateCreate')";
+        
         try {
             $data = $this->conn->prepare($sql);
 
@@ -56,7 +54,7 @@ class Berita extends GlobalFunc
     }
     public function selectOne($id)
     {
-        $sql = "SELECT * FROM ".$this->table." LEFT JOIN media ON berita.idMedia = media.idMedia WHERE idBerita = '$id'";
+        $sql = "SELECT * FROM ".$this->table." WHERE ".$this->primaryKey." = '$id'";
 
         try {
             $query = $this->conn->prepare($sql);
@@ -71,12 +69,12 @@ class Berita extends GlobalFunc
     }
     public function update($id, $data_test = [])
     {
-        $namaBerita = $data_test['namaBerita'];
-         $deskripsiBerita = $data_test['deskripsiBerita'];
-         $idRelation = $data_test['idRelation'];
-         $approvalBerita = $data_test['approvalBerita'];
+        $setValue = "";
+        foreach ($data_test as $key => $value) {
+            $setValue.= $key." = '".$value."', ";
+        }
 
-        $sql = "UPDATE ".$this->table." SET namaBerita = '$namaBerita', deskripsiBerita = '$deskripsiBerita', idRelation = '$idRelation', approvalBerita = '$approvalBerita' WHERE idBerita='$id'";
+        $sql = "UPDATE ".$this->table." SET ".$setValue." ".$this->primaryKey." = '$id'";
 
         try{
             $data = $this->conn->prepare($sql);
@@ -89,7 +87,7 @@ class Berita extends GlobalFunc
 
     public function delete($id)
     {
-        $sql = "DELETE FROM ".$this->table." WHERE idBerita = '$id'";
+        $sql = "DELETE FROM ".$this->table." WHERE ".$this->primaryKey." = '$id'";
 
         try{
             $query = $this->conn->prepare($sql);
@@ -98,6 +96,22 @@ class Berita extends GlobalFunc
            
         }catch(PDOException $e) {
             dump($e);
+            die();
+        }
+    }
+
+    public function selectTop()
+    {
+        $sql = "SELECT * FROM ".$this->table;
+
+        try {
+            $query = $this->conn->prepare($sql);
+            $query->execute();
+            $data = $query->fetch();
+
+            return $data;
+        } catch (PDOException $e) {
+            echo $e;
             die();
         }
     }

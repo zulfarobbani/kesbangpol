@@ -27,8 +27,8 @@ class BeritaController extends GlobalFunc
     public function create(Request $request)
     {
         return $this->render_template('informasi/berita/create');
-
     }
+
     public function store(Request $request)
     {
         $fileupload = $_FILES['fotoBerita'];
@@ -54,14 +54,22 @@ class BeritaController extends GlobalFunc
         
         return header("location:http://kesbangpol.com/informasi/berita");
     }
+
     public function ReadOne(Request $request)
     {
         $id = $request->attributes->get('id');
         $datas = $this->model->selectOne($id);
         
-
         return $this->render_template('informasi/berita/edit', ['idBerita' => $datas['idBerita'], 'namaBerita'=>$datas['namaBerita'], 'deskripsiBerita'=>$datas['deskripsiBerita'], 'idRelation'=>$datas['idRelation'], 'approvalBerita'=>$datas['approvalBerita']]);
     }
+
+    public function detail(Request $request) {
+        $id = $request->attributes->get('id');
+        $datas = $this->model->selectOne($id);
+        
+        return $this->render_template('informasi/berita/detail', ['detail_berita' => $datas]);
+    }
+
     public function update(Request $request)
     {
         $id = $request->request->get('id');
@@ -82,6 +90,7 @@ class BeritaController extends GlobalFunc
 
        return header("location:http://kesbangpol.com/informasi/berita");
     }
+
     public function delete(Request $request)
     {
         $id = $request->attributes->get('id');

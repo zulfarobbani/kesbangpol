@@ -8,14 +8,6 @@ use Core\GlobalFunc;
 $routes = new Routing\RouteCollection();
 $app = new GlobalFunc;
 
-// ############################  !!DO NOT EDIT!! ############################ 
-$routes->add('assets', new Routing\Route('/assets/{path}.{_format}', [
-    '_controller' => 'Core\GlobalFunc::assets'
-], [
-    'path' => '[^.]+'
-]));
-// ############################  ------------ ############################ 
-
 
 // ROUTE APPLICATION START BELOW!!! 
 // --------------------------------
@@ -93,10 +85,16 @@ $routes->add('parpol', new Route('/organisasi-terdaftar/parpol',[
 $routes->add('dataOrganisasi', new Route('/data-organisasi',[
     '_controller' => 'App\Dashboard\Controller\DashboardController::dataOrganisasi',
 ]));
+
 //struktur-organisasi
 $routes->add('strukturOrganisasi', new Route('/struktur-organisasi',[
     '_controller' => 'App\Dashboard\Controller\DashboardController::strukturOrganisasi',
 ]));
+
+$routes->add('strukturOrganisasiForm', new Route('/struktur-organisasi/create',[
+    '_controller' => 'App\Dashboard\Controller\DashboardController::strukturOrganisasi',
+]));
+
 //kelengkapan-administrasi
 $routes->add('kelengkapanAdministrasi', new Route('/kelengkapan-administrasi',[
     '_controller' => 'App\Dashboard\Controller\DashboardController::kelengkapanAdministrasi',
@@ -164,6 +162,10 @@ $routes->add('agendasimpan', new Route('/informasi/agenda/store', [
 //curd berita start
 $routes->add('berita', new Route('/informasi/berita', [
     '_controller' => 'App\Berita\Controller\BeritaController::index',
+]));
+
+$routes->add('beritaDetail', new Route('/informasi/berita/{id}', [
+    '_controller' => 'App\Berita\Controller\BeritaController::detail',
 ]));
 
 $routes->add('beritacreate', new Route('/informasi/berita/create', [
@@ -607,6 +609,41 @@ $routes->add('profiledelete', new Route('/profile/delete/{id}', [
 ]));
 //crud profile end
 
+//curd profile kesbangpol start
+$routes->add('profileKesbangpol', new Route('/profile-kesbangpol', [
+    '_controller' => 'App\ProfileKesbangpol\Controller\ProfileKesbangpolController::index',
+]));
+
+$routes->add('profileKesbangpolcreate', new Route('/profile-kesbangpol/create', [
+    '_controller' => 'App\ProfileKesbangpol\Controller\ProfileKesbangpolController::create',
+]));
+
+$routes->add('profileKesbangpolsimpanSotk', new Route('/profile-kesbangpol/struktur-organisasi/store', [
+    '_controller' => 'App\ProfileKesbangpol\Controller\ProfileKesbangpolController::storeSOTK',
+]));
+
+$routes->add('profileKesbangpolsimpanVisimisi', new Route('/profile-kesbangpol/visi-misi/store', [
+    '_controller' => 'App\ProfileKesbangpol\Controller\ProfileKesbangpolController::storeVisimisi',
+]));
+
+$routes->add('profileKesbangpolsimpanTupoksi', new Route('/profile-kesbangpol/tupoksi/store', [
+    '_controller' => 'App\ProfileKesbangpol\Controller\ProfileKesbangpolController::storeTupoksi',
+]));
+
+
+$routes->add('profileKesbangpoledit', new Route('/profile-kesbangpol/edit/{id}', [
+    '_controller' => 'App\ProfileKesbangpol\Controller\ProfileKesbangpolController::ReadOne',
+]));
+
+$routes->add('profileKesbangpolupdate', new Route('/profile-kesbangpol/edit/{id}/update', [
+    '_controller' => 'App\ProfileKesbangpol\Controller\ProfileKesbangpolController::update',
+]));
+
+$routes->add('profileKesbangpoldelete', new Route('/profile-kesbangpol/delete/{id}', [
+    '_controller' => 'App\ProfileKesbangpol\Controller\ProfileKesbangpolController::delete',
+]));
+//crud profile end
+
 //crud provinsi start
 $routes->add('provinsi', new Route('/provinsi', [
     '_controller' => 'App\Provinsi\Controller\ProvinsiController::index',
@@ -650,12 +687,16 @@ $routes->add('regulasiedit', new Route('/regulasi/edit/{id}', [
     '_controller' => 'App\Regulasi\Controller\RegulasiController::ReadOne',
 ]));
 
-$routes->add('regulasiupdate', new Route('/regulasi/edit/{id}/update', [
+$routes->add('regulasiupdate', new Route('/regulasi/{id}/update', [
     '_controller' => 'App\Regulasi\Controller\RegulasiController::update',
 ]));
 
-$routes->add('regulasidelete', new Route('/regulasi/delete/{id}', [
+$routes->add('regulasidelete', new Route('/regulasi/{id}/delete', [
     '_controller' => 'App\Regulasi\Controller\RegulasiController::delete',
+]));
+
+$routes->add('regulasidownloadberkas', new Route('/regulasi/{id}/download', [
+    '_controller' => 'App\Regulasi\Controller\RegulasiController::downloadBerkas',
 ]));
 // crud regulasi end
 
@@ -676,15 +717,15 @@ $routes->add('sakipedit', new Route('/sakip/edit/{id}', [
     '_controller' => 'App\Sakip\Controller\SakipController::ReadOne',
 ]));
 
-$routes->add('sakipupdate', new Route('/sakip/edit/{id}/update', [
+$routes->add('sakipupdate', new Route('/sakip/{id}/update', [
     '_controller' => 'App\Sakip\Controller\SakipController::update',
 ]));
 
-$routes->add('sakipdelete', new Route('/sakip/delete/{id}', [
+$routes->add('sakipdelete', new Route('/sakip/{id}/delete', [
     '_controller' => 'App\Sakip\Controller\SakipController::delete',
 ]));
 
-$routes->add('sakipdownloadberkas', new Route('/sakip/download-berkas/{id}', [
+$routes->add('sakipdownloadberkas', new Route('/sakip/{id}/download', [
     '_controller' => 'App\Sakip\Controller\SakipController::downloadBerkas',
 ]));
 // crud sakip end

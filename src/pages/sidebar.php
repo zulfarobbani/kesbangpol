@@ -72,7 +72,7 @@
             </div>
             <div class="col-6" id="pict">
               <a href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-                <img src="../assets/image/simbah.png" class="mx-auto" height="40px">
+                <img src="/assets/image/simbah.png" class="mx-auto" height="40px">
               </a>
             </div>
             <div class="col-6" id="pict">
@@ -94,7 +94,7 @@
             </div>
             <div class="col-6" id="pict">
               <a href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-                <img src="../assets/image/pesduk.png" class="mx-auto" height="40px" style="filter: invert(100%);">
+                <img src="/assets/image/pesduk.png" class="mx-auto" height="40px" style="filter: invert(100%);">
               </a>
             </div>
             <div class="col-6" id="pict">
@@ -105,7 +105,7 @@
             </div>
             <div class="col-6" id="pict">
               <a href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-                <img src="../assets/image/Epad.png" class="mx-auto" height="40px" style="filter: invert(100%);">
+                <img src="/assets/image/Epad.png" class="mx-auto" height="40px" style="filter: invert(100%);">
               </a>
             </div>
             <div class="col-6" id="pict">
@@ -116,7 +116,7 @@
             </div>
             <div class="col-6" id="pict">
               <a href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-                <img src="../assets/image/kdn.png" class="ms-1 me-2" height="40px">
+                <img src="/assets/image/kdn.png" class="ms-1 me-2" height="40px">
                 <span class="text-start" style="font-size: 11px;"><b>Sistem Informasi<br>Pemerintahan Daerah</b></span>
               </a>
             </div>
@@ -128,7 +128,7 @@
             </div>
             <div class="col-6" id="pict">
               <a href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-                <img src="../assets/image/mantra.png" class="ms-1 me-2" height="40px">
+                <img src="/assets/image/mantra.png" class="ms-1 me-2" height="40px">
               </a>
             </div>
             <div class="col-6" id="pict">
@@ -140,7 +140,7 @@
             <div class="col-6" id="pict">
               <a href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2">
                 <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="ms-2 me-3" height="40px">
-                <span class="text-start"><img src="../assets/image/webmaill.png" height="15px">Kota Cimahi</span>
+                <span class="text-start"><img src="/assets/image/webmaill.png" height="15px">Kota Cimahi</span>
               </a>
             </div>
             <div class="col-6" id="pict">
@@ -151,7 +151,7 @@
             </div>
             <div class="col-6" id="pict">
               <a href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-                <img src="../assets/image/silatikk.png" class="ms-2 me-2" height="40px">
+                <img src="/assets/image/silatikk.png" class="ms-2 me-2" height="40px">
                 <span class="text-start" style="font-size: 25px;"><b>SILATIK</b></span>
               </a>
             </div>
@@ -163,7 +163,7 @@
             </div>
             <div class="col-6" id="pict">
               <a href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-                <img src="../assets/image/wpo.png" class="mx-auto" height="40px">
+                <img src="/assets/image/wpo.png" class="mx-auto" height="40px">
                 <span class="text-start pt-1" style="font-size:10px;"><b>Wajib Pajak Online</b><br>Kota Cimahi</span>
               </a>
             </div>
@@ -175,7 +175,7 @@
             </div>
             <div class="col-6" id="pict">
               <a href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-                <img src="../assets/image/jdihn.png" class="ms-1" height="40px">
+                <img src="/assets/image/jdihn.png" class="ms-1" height="40px">
               </a>
             </div>
             <div class="col-6" id="pict">
@@ -186,7 +186,7 @@
             </div>
             <div class="col-6" id="pict">
               <a href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-                <img src="../assets/image/cimasistaker.png"height="40px">
+                <img src="/assets/image/cimasistaker.png"height="40px">
               </a>
             </div>
             <div class="col-6" id="pict">
@@ -197,7 +197,7 @@
             </div>
             <div class="col-6" id="pict">
               <a href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-                <img src="../assets/image/lapse.png" class="ms-4" height="40px">
+                <img src="/assets/image/lapse.png" class="ms-4" height="40px">
               </a>
             </div>
             <div class="col-6" id="pict">
@@ -208,7 +208,7 @@
             </div>
             <div class="col-6" id="pict">
               <a href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-                <img src="../assets/image/copendata.png" class="mx-auto" height="40px" style="filter: invert(60%);">
+                <img src="/assets/image/copendata.png" class="mx-auto" height="40px" style="filter: invert(60%);">
               </a>
             </div>
             <div class="col-6" id="pict">
@@ -219,8 +219,8 @@
             </div>
             <div class="col-6" id="pict">
               <a href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-                <img src="../assets/image/silima1.png" class="mx-auto" height="40px">
-                <img src="../assets/image/silima2.png" class="mx-auto" height="40px">
+                <img src="/assets/image/silima1.png" class="mx-auto" height="40px">
+                <img src="/assets/image/silima2.png" class="mx-auto" height="40px">
               </a>
             </div>
             <div class="col-6" id="pict">
@@ -231,7 +231,7 @@
             </div>
             <div class="col-6" id="pict">
               <a href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-                <img src="../assets/image/sirup1.png" class="mx-auto" height="40px">
+                <img src="/assets/image/sirup1.png" class="mx-auto" height="40px">
               </a>
             </div>
             <div class="col-6" id="pict">
@@ -242,17 +242,17 @@
             </div>
             <div class="col-6" id="pict">
               <a href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-                <img src="../assets/image/sikacii.png" class="mx-auto" height="40px"  style="filter: invert(30%);">
+                <img src="/assets/image/sikacii.png" class="mx-auto" height="40px"  style="filter: invert(30%);">
               </a>
             </div>
             <div class="col-6" id="pict">
               <a href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-                <img src="../assets/image/simrenda.png" class="mx-auto" height="40px" style="filter: invert(60%);">
+                <img src="/assets/image/simrenda.png" class="mx-auto" height="40px" style="filter: invert(60%);">
               </a>
             </div>
             <div class="col-6" id="pict">
               <a href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-                <img src="../assets/image/sipkd.png" class="mx-auto" height="40px"  style="filter: invert(30%);">
+                <img src="/assets/image/sipkd.png" class="mx-auto" height="40px"  style="filter: invert(30%);">
               </a>
             </div>
 

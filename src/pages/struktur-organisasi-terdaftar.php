@@ -22,7 +22,7 @@
           <?php include(__DIR__.'/navtabsinfoorganisasi.php' )?>
           <!-- START CODE -->
           <h4 class="mt-2">Struktur Organisasi</h4>
-          <img src="assets/image/struktur.jpg" class="mt-4" width="100%">
+          <img src="/assets/image/struktur.jpg" class="mt-4" width="100%">
 
           </div>
         <?php include(__DIR__.'/sidebar.php' )?>

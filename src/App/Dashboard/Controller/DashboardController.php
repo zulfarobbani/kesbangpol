@@ -23,108 +23,109 @@ class DashboardController extends GlobalFunc
     }
     //dashboard
     public function tampil(Request $request){
-        return $this->render_template('/dashboard');
+        return $this->render_template('dashboard');
     }
     //beranda
     public function home(Request $request){
         $datas_2 = $this->model2->selectAll();
         $datas_3 = $this->model3->selectOne('');
         
-        return $this->render_template('/beranda', ['datas'=>$datas_2 /*, 'foto'=>$datas_3['pathMedia']*/]);
+        // return $this->render_template('beranda', ['datas'=>$datas_2 , 'foto'=>$datas_3['pathMedia']]);
+        return $this->render_template('beranda', ['datas'=>$datas_2]);
     }
     //profil
     public function visimisi(Request $request){
-        return $this->render_template('/visi-misi');
+        return $this->render_template('visi-misi');
     }  
     public function tupoksi(Request $request){
-        return $this->render_template('/tupoksi');
+        return $this->render_template('tupoksi');
     }
     //layanan
     public function pendataan(Request $request){
-        return $this->render_template('/layanan/pendataan');
+        return $this->render_template('layanan/pendataan');
     }
     public function permohonanhibah(Request $request){
-        return $this->render_template('/layanan/permohonan-hibah');
+        return $this->render_template('layanan/permohonan-hibah');
     }
     public function permohonanpenelitian(Request $request){
-        return $this->render_template('/layanan/permohonan-penelitian');
+        return $this->render_template('layanan/permohonan-penelitian');
     }
     public function unduhan(Request $request){
-        return $this->render_template('/layanan/unduhan');
+        return $this->render_template('layanan/unduhan');
     }
     //organisasi terdaftar
     public function organisasi(Request $request){
-        return $this->render_template('/organisasi-terdaftar');
+        return $this->render_template('organisasi-terdaftar');
     }
     //organisasi terdaftar ormas
     public function ormas(Request $request){
-        return $this->render_template('/organisasi-terdaftar/ormas');
+        return $this->render_template('organisasi-terdaftar/ormas');
     }
     //organisasi terdaftar OKP
     public function okp(Request $request){
-        return $this->render_template('/organisasi-terdaftar/okp');
+        return $this->render_template('organisasi-terdaftar/okp');
     }
     //organisasi terdaftar Komunitas
     public function komunitas(Request $request){
-        return $this->render_template('/organisasi-terdaftar/komunitas');
+        return $this->render_template('organisasi-terdaftar/komunitas');
     }
     //organisasi terdaftar parpol
     public function parpol(Request $request){
-        return $this->render_template('/organisasi-terdaftar/parpol');
+        return $this->render_template('organisasi-terdaftar/parpol');
     }
 
     //data Organisasi
     public function dataOrganisasi(Request $request){
-        return $this->render_template('/data-organisasi');
+        return $this->render_template('data-organisasi');
     }
     //Struktur Organisasi
     public function strukturOrganisasi(Request $request){
-        return $this->render_template('/struktur-organisasi');
+        return $this->render_template('struktur-organisasi');
     }
     //kelengkapan Administrasi
     public function kelengkapanAdministrasi(Request $request){
-        return $this->render_template('/kelengkapan-administrasi');
+        return $this->render_template('kelengkapan-administrasi');
     }
     //program Kerja Tahunan
     public function progKerjaTahunan(Request $request){
-        return $this->render_template('/prog-kerja-tahunan');
+        return $this->render_template('prog-kerja-tahunan');
     }
     //data Organisasi
     public function laporanOrganisasi(Request $request){
-        return $this->render_template('/laporan-organisasi');
+        return $this->render_template('laporan-organisasi');
     }
 
     //Forum Umum
     public function forumUmum(Request $request){
-        return $this->render_template('/forum-umum');
+        return $this->render_template('forum-umum');
     }
     //Forum Private
     public function forumPrivate(Request $request){
-        return $this->render_template('/forum-private');
+        return $this->render_template('forum-private');
     }
      //Biodata Anggota
     public function biodataAnggota(Request $request){
-        return $this->render_template('/biodata-anggota');
+        return $this->render_template('biodata-anggota');
     }
      //Informasi Berita
     public function informasiBerita(Request $request){
-        return $this->render_template('/informasi-berita');
+        return $this->render_template('informasi-berita');
     }
      //Informasi Galeri
     public function informasiGaleri(Request $request){
-        return $this->render_template('/informasi-galeri');
+        return $this->render_template('informasi-galeri');
     }
      //Informasi Pengumuman
     public function informasiPengumuman(Request $request){
-        return $this->render_template('/informasi-Pengumuman');
+        return $this->render_template('informasi-Pengumuman');
     }
      //Hubungi Kami
     public function hubungiKami(Request $request){
-        return $this->render_template('/hubungi-kami');
+        return $this->render_template('hubungi-kami');
     }
      //struktur organisasi terdaftar
     public function strukturOrganisasiTerdaftar(Request $request){
-        return $this->render_template('/struktur-organisasi-terdaftar');
+        return $this->render_template('struktur-organisasi-terdaftar');
     }
 
 
