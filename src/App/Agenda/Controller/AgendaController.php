@@ -35,7 +35,11 @@ class AgendaController extends GlobalFunc
         $id = $request->attributes->get('id');
         $delete = $request->request->get('delete');
 
-        if ($delete == null){
+        if ($delete == 'delete'){
+
+            $this->model->delete($id);
+            
+        } else {
             $namaAgenda = $request->request->get('namaAgenda');
             $deskripsiAgenda = $request->request->get('deskripsiAgenda');
             // $datestartAgenda = $request->request->get('datestartAgenda');
@@ -49,8 +53,6 @@ class AgendaController extends GlobalFunc
             );
             
             $this->model->update($id, $data_test);
-        } else {
-            $this->model->delete($id);
         }
 
         return header("location:http://kesbangpol.com/informasi/agenda");
