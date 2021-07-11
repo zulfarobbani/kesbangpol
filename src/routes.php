@@ -46,7 +46,41 @@ $routes->add('visimisi', new Route('/visi-misi', [
 $routes->add('tupoksi', new Route('/tupoksi', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::tupoksi',
 ]));
+
 //layanan
+$routes->add('layananKonten', new Route('/layanan-kesbangpol', [
+    '_controller' => 'App\LayananKesbangpol\Controller\LayananKesbangpolController::layananKonten',
+]));
+$routes->add('layananKontenStore', new Route('/layanan-kesbangpol/store', [
+    '_controller' => 'App\LayananKesbangpol\Controller\LayananKesbangpolController::layananKontenStore',
+]));
+$routes->add('layananKontenGet', new Route('/layanan-kesbangpol/{id}/get', [
+    '_controller' => 'App\LayananKesbangpol\Controller\LayananKesbangpolController::layananKontenGet',
+]));
+$routes->add('layananKontenUpdate', new Route('/layanan-kesbangpol/{id}/update', [
+    '_controller' => 'App\LayananKesbangpol\Controller\LayananKesbangpolController::layananKontenUpdate',
+]));
+$routes->add('layananKontenDelete', new Route('/layanan-kesbangpol/{id}/delete', [
+    '_controller' => 'App\LayananKesbangpol\Controller\LayananKesbangpolController::layananKontenDelete',
+]));
+
+//layanan unduhan
+$routes->add('layananUnduhanKontenStore', new Route('/layanan-kesbangpol/unduhan/store', [
+    '_controller' => 'App\LayananUnduhan\Controller\LayananUnduhanController::store',
+]));
+$routes->add('layananUnduhanKontenGet', new Route('/layanan-kesbangpol/unduhan/{id}/get', [
+    '_controller' => 'App\LayananUnduhan\Controller\LayananUnduhanController::get',
+]));
+$routes->add('layananUnduhanKontenUpdate', new Route('/layanan-kesbangpol/unduhan/{id}/update', [
+    '_controller' => 'App\LayananUnduhan\Controller\LayananUnduhanController::update',
+]));
+$routes->add('layananUnduhanKontenDelete', new Route('/layanan-kesbangpol/unduhan/{id}/delete', [
+    '_controller' => 'App\LayananUnduhan\Controller\LayananUnduhanController::delete',
+]));
+$routes->add('layananUnduhanKontenDownload', new Route('/layanan-kesbangpol/unduhan/{id}/download', [
+    '_controller' => 'App\LayananUnduhan\Controller\LayananUnduhanController::downloadBerkas',
+]));
+
 $routes->add('pendataan', new Route('/layanan/pendataan', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::pendataan',
 ]));
@@ -396,7 +430,6 @@ $routes->add('layananoutdelete', new Route('/layananout/delete/{id}', [
     '_controller' => 'App\layananout\Controller\layananoutController::delete',
 ]));
 //crud layanan out end
-
 
 
 //crud layanan in start

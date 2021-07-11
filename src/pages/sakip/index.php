@@ -41,13 +41,11 @@
                 </tr>
               </thead>
               <tbody>
-                <?php foreach($datas as $key => $values) {?>
+                <?php foreach($datas as $key => $value) {?>
                 <tr>
-                  <td style="font-size: 20px"=><?= explode('.', $values['namaSakip'])[0] ?></td>
-                  <td class="float-end">
-                    <!-- <a href="sakip/edit/<?= $values['idSakip'];?>"><span class="material-icons-outlined px-2">edit</span></a>
-                    <a href="sakip/delete/<?= $values['idSakip'];?>"><span class="material-icons-outlined px-2">delete</span></a> -->
-                    <a href="sakip/download-berkas/<?= $values['idSakip'];?>" style="color: navy;"><span class="material-icons-outlined px-2">file_download</span></a>
+                  <td style="font-size: 20px"=><?= $value['namaSakip'] ?></td>
+                  <td>
+                    <a href="sakip/<?= $value['idSakip'];?>/download" style="color: navy;" class="float-end" target="_blank"><span class="material-icons-outlined px-2">file_download</span></a>
                   </td>
                 </tr>
                 <?php } ?>

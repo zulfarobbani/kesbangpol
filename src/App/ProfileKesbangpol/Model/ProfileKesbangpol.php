@@ -100,9 +100,9 @@ class ProfileKesbangpol extends GlobalFunc
         }
     }
 
-    public function selectTop()
+    public function selectTop($select = "*")
     {
-        $sql = "SELECT * FROM ".$this->table;
+        $sql = "SELECT ".$select." FROM ".$this->table;
 
         try {
             $query = $this->conn->prepare($sql);

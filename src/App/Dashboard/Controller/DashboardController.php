@@ -4,7 +4,10 @@ namespace App\Dashboard\Controller;
 
 use App\Dashboard\Model\Dashboard;
 use App\Berita\Model\Berita;
+use App\LayananKesbangpol\Model\LayananKesbangpol;
+use App\LayananUnduhan\Model\LayananUnduhan;
 use App\Media\Model\Media;
+use App\ProfileKesbangpol\Model\ProfileKesbangpol;
 use Core\GlobalFunc;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -35,23 +38,41 @@ class DashboardController extends GlobalFunc
     }
     //profil
     public function visimisi(Request $request){
-        return $this->render_template('visi-misi');
+        $profileKesbangpol = new ProfileKesbangpol();
+        $selectProfile = $profileKesbangpol->selectTop("visi, misi");
+
+        return $this->render_template('visi-misi', ['visimisi' => $selectProfile]);
     }  
     public function tupoksi(Request $request){
-        return $this->render_template('tupoksi');
+        $profileKesbangpol = new ProfileKesbangpol();
+        $selectProfile = $profileKesbangpol->selectTop("tugaspokok, fungsi");
+
+        return $this->render_template('tupoksi', ['tupoksi' => $selectProfile]);
     }
     //layanan
     public function pendataan(Request $request){
-        return $this->render_template('layanan/pendataan');
+        $layanan = new LayananKesbangpol();
+        $data_layanan = $layanan->selectOneLayanan("WHERE namaLayanan = 'Pendataan ORMAS'");
+        
+        return $this->render_template('layanan/pendataan', ['layanan' => $data_layanan]);
     }
     public function permohonanhibah(Request $request){
-        return $this->render_template('layanan/permohonan-hibah');
+        $layanan = new LayananKesbangpol();
+        $data_layanan = $layanan->selectOneLayanan("WHERE namaLayanan = 'Permohonan Hibah'");
+        
+        return $this->render_template('layanan/permohonan-hibah', ['layanan' => $data_layanan]);
     }
     public function permohonanpenelitian(Request $request){
-        return $this->render_template('layanan/permohonan-penelitian');
+        $layanan = new LayananKesbangpol();
+        $data_layanan = $layanan->selectOneLayanan("WHERE namaLayanan = 'Permohonan Penelitian'");
+
+        return $this->render_template('layanan/permohonan-penelitian', ['layanan' => $data_layanan]);
     }
     public function unduhan(Request $request){
-        return $this->render_template('layanan/unduhan');
+        $unduhan = new LayananUnduhan();
+        $data_unduhan = $unduhan->selectAll();
+
+        return $this->render_template('layanan/unduhan', ['unduhan' => $data_unduhan]);
     }
     //organisasi terdaftar
     public function organisasi(Request $request){
@@ -80,7 +101,10 @@ class DashboardController extends GlobalFunc
     }
     //Struktur Organisasi
     public function strukturOrganisasi(Request $request){
-        return $this->render_template('struktur-organisasi');
+        $media = new Media();
+        $selectMedia = $media->selectOneMedia("jenisDokumen = 'struktur_organisasi'");
+
+        return $this->render_template('struktur-organisasi', ['strukturOrganisasi' => $selectMedia]);
     }
     //kelengkapan Administrasi
     public function kelengkapanAdministrasi(Request $request){
