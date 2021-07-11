@@ -8,23 +8,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
-<<<<<<< HEAD
   <link rel="stylesheet" href="/assets/css/style.css">
   <title>KESBANGPOL</title>
-=======
-  <title></title>
-  <style>
-        .text-elps-3 {
-            -webkit-line-clamp: 3 !important;
-        }
-
-        .text-elps {
-            display: -webkit-box !important;
-            -webkit-box-orient: vertical !important;
-            overflow: hidden !important;
-        }
-    </style>
->>>>>>> d680885fda14c84dce978ef6f407835dac25b887
 </head>
 
 <body style="background-color : #EEEEEE;">
@@ -35,7 +20,6 @@
       <div class="col-md-8 top-1 start-0 ps-5 mb-3">
         <!-- START CODE -->
         <h4 class="fw-normal mt-5">Informasi KESBANG Terkini</h4>
-<<<<<<< HEAD
         <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
           <?php foreach ($datas as $key => $value) { ?>
             <div class="card text-white bg-dark mx-2" style="width: 18rem;padding-right : 0!important; padding-left:0!important;">
@@ -48,26 +32,6 @@
     <a href="informasi/berita/<?= $value['idBerita'] ?>" class="btn btn-outline-light float-end">Selengkapnya...</a>
   </div>
 </div>
-=======
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <?php foreach ($datas as $key => $value) { ?>
-
-            <div class="" style="width: 12rem;">
-              <div class="d-flex card bg-light">
-                <div class="flex-shrink-0 card-body">
-                  <a href="informasi/berita/<?= $value['idBerita'] ?>" style="text-decoration: none;color: black;">
-                    <img class="img-fluid" src="/assets/media/<?= $value['pathMedia'] ?>" alt="Gambar Berita">
-                    <h6 class="card-title mt-2"><?= $value['namaBerita'] ?></h6>
-                    <p class="card-text text-elps text-elps-3"><?= html_entity_decode(nl2br($value['deskripsiBerita'])) ?></p>
-                    <p class="card-text" style="color: white;"><small class="text-muted"><?= $value['dateCreate'] ?></small>
-                      <!-- <p class="text-mute"><?= $value['idRelation'] ?></p> -->
-                    </p>
-                  </a>
-
-                </div>
-              </div>
-            </div>
->>>>>>> d680885fda14c84dce978ef6f407835dac25b887
           <?php } ?>
         </div>
       </div>

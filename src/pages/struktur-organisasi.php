@@ -10,10 +10,7 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
-<<<<<<< HEAD
   <link rel="stylesheet" href="/assets/css/style.css">
-=======
->>>>>>> d680885fda14c84dce978ef6f407835dac25b887
   <title>Struktur Organisasi</title>
 </head>
 
@@ -25,14 +22,10 @@
         <div class="col-md-8 top-1 start-0 ps-5 mb-3">
           <?php include(__DIR__.'/navtabsprofil.php' )?>
           <!-- START CODE -->
-<<<<<<< HEAD
           <div class="d-block">
           <h4 class="mt-2 d-inline">Struktur Organisasi</h4>
           <a class="btn btn-outline-danger d-inline float-end text-dark" href="/profile-kesbangpol"><i class="fas fa-edit"></i> Edit</a>
           </div>
-=======
-          <h4 class="mt-2">Struktur Organisasi</h4>
->>>>>>> d680885fda14c84dce978ef6f407835dac25b887
           <img src="/assets/image/struktur.jpg" class="mt-4" width="100%">
 
           </div>
