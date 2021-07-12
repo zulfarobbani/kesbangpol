@@ -15,3 +15,12 @@ h2 {
     -webkit-box-orient: vertical !important;
     overflow: hidden !important;
 }
+
+#btnadd{
+    color: navy;
+    border: 2px solid navy;
+  }
+  #btnadd:hover{
+    color: white;
+    background-color: navy;
+  }

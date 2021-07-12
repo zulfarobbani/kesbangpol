@@ -8,6 +8,7 @@ use PDOException;
 class Berita extends GlobalFunc
 {
     private $table = 'berita';
+    private $primaryKey = 'idBerita';
     public $conn;
 
     public function __construct()
@@ -18,8 +19,7 @@ class Berita extends GlobalFunc
 
     public function selectAll()
     {
-        $sql = "SELECT berita.*, member.idMember, member.idOrsospol, media.* FROM ".$this->table." LEFT JOIN member ON berita.idRelation = member.idMember
-        LEFT JOIN media ON berita.idMedia = media.idMedia" ;
+        $sql = "SELECT * FROM ".$this->table." LEFT JOIN member ON ".$this->table.".idRelation = member.idMember LEFT JOIN media ON ".$this->table.".coverBerita = media.idMedia" ;
         try {
             $query = $this->conn->prepare($sql);
             $query->execute();
@@ -56,7 +56,7 @@ class Berita extends GlobalFunc
     }
     public function selectOne($id)
     {
-        $sql = "SELECT * FROM ".$this->table." LEFT JOIN media ON berita.idMedia = media.idMedia WHERE idBerita = '$id'";
+        $sql = "SELECT * FROM ".$this->table." LEFT JOIN media ON ".$this->table.".idMedia = media.idMedia WHERE ".$this->primaryKey." = '$id'";
 
         try {
             $query = $this->conn->prepare($sql);
@@ -89,7 +89,7 @@ class Berita extends GlobalFunc
 
     public function delete($id)
     {
-        $sql = "DELETE FROM ".$this->table." WHERE idBerita = '$id'";
+        $sql = "DELETE FROM ".$this->table." WHERE ".$this->primaryKey." = '$id'";
 
         try{
             $query = $this->conn->prepare($sql);

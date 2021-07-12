@@ -21,12 +21,22 @@ class BeritaController extends GlobalFunc
     public function index(Request $request)
     {
         $datas = $this->model->selectAll();
+        
         return $this->render_template('informasi/berita/index', ['datas' => $datas]);
+    }
+
+    public function beritaKonten(Request $request)
+    {
+        $datas = $this->model->selectAll();
+
+        return $this->render_template('informasi/berita/form', ['datas' => $datas]);
     }
     
     public function create(Request $request)
     {
-        return $this->render_template('informasi/berita/create');
+        $datas = $this->model->selectAll();
+
+        return $this->render_template('informasi/berita/form', ['datas' => $datas]);
     }
 
     public function store(Request $request)

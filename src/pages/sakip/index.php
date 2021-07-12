@@ -10,17 +10,8 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+  <link rel="stylesheet" href="/assets/css/style.css">
   <title>SAKIP</title>
-  <style type="text/css">
-    #btnadd{
-      color: navy;
-      border: 2px solid navy;
-    }
-    #btnadd:hover{
-      color: white;
-      background-color: navy;
-    }
-  </style>
 </head>
 
 <body style="background-color : #EEEEEE; color: navy;">
@@ -30,8 +21,11 @@
       <div class="row">  
         <div class="col-md-8 top-1 start-0 ps-5">
           <?php include(__DIR__.'/../navtabsprofil.php' )?>
-          <h4>Panduan SAKIP</h4>
+          <div class="d-block">
+          <h4 class="d-inline">Panduan SAKIP</h4>
           <!-- <a href="sakip/create" class="btn btn-sm mt-3 float-end" id="btnadd"><span class="material-icons-outlined align-bottom">post_add</span>Tambah Data</a> -->
+          <a class="btn btn-outline-danger float-end navy d-inline" href="/profile-kesbangpol"><i class="fas fa-edit"></i> Edit</a>
+          </div>
           <div class="col-12">
             <table class="table mt-3">
               <thead>

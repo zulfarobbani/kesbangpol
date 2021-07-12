@@ -194,16 +194,12 @@ $routes->add('agendasimpan', new Route('/informasi/agenda/store', [
 //crud agenda end
 
 //curd berita start
+$routes->add('beritacreate', new Route('/informasi-kesbangpol/berita', [
+    '_controller' => 'App\Berita\Controller\BeritaController::beritaKonten',
+]));
+
 $routes->add('berita', new Route('/informasi/berita', [
     '_controller' => 'App\Berita\Controller\BeritaController::index',
-]));
-
-$routes->add('beritaDetail', new Route('/informasi/berita/{id}', [
-    '_controller' => 'App\Berita\Controller\BeritaController::detail',
-]));
-
-$routes->add('beritacreate', new Route('/informasi/berita/create', [
-    '_controller' => 'App\Berita\Controller\BeritaController::create',
 ]));
 
 $routes->add('beritasimpan', new Route('/informasi/berita/store', [
@@ -220,6 +216,9 @@ $routes->add('beritaupdate', new Route('/informasi/berita/edit/{id}/update', [
 
 $routes->add('beritadelete', new Route('/informasi/berita/delete/{id}', [
     '_controller' => 'App\Berita\Controller\BeritaController::delete',
+]));
+$routes->add('beritaDetail', new Route('/informasi/berita/{id}', [
+    '_controller' => 'App\Berita\Controller\BeritaController::detail',
 ]));
 //crud berita end
 

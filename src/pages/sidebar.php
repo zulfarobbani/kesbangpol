@@ -321,8 +321,8 @@
                     <script>
                       var f = document.createElement("iframe");
                       f.src = "https://kopi.dev/widget-covid-19/";
-                      f.width = "100%";
-                      f.height = 280;
+                      f.width = 500;
+                      f.height = 500;
                       f.scrolling = "no";
                       f.frameBorder = 0;
                       var rootEl = document.getElementById("kopi-covid");
