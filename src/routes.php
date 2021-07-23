@@ -193,17 +193,43 @@ $routes->add('agendasimpan', new Route('/informasi/agenda/store', [
 ]));
 //crud agenda end
 
-//curd berita start
-$routes->add('beritacreate', new Route('/informasi-kesbangpol/berita', [
+//crud berita start
+$routes->add('beritaKonten', new Route('/informasi-kesbangpol/berita', [
     '_controller' => 'App\Berita\Controller\BeritaController::beritaKonten',
 ]));
+$routes->add('beritaKontenStore', new Route('/informasi-kesbangpol/berita/store', [
+    '_controller' => 'App\Berita\Controller\BeritaController::beritaKontenStore',
+]));
+$routes->add('beritaKontenGet', new Route('/informasi-kesbangpol/berita/{id}/get', [
+    '_controller' => 'App\Berita\Controller\BeritaController::beritaKontenGet',
+]));
+$routes->add('beritaKontenUpdate', new Route('/informasi-kesbangpol/berita/{id}/update', [
+    '_controller' => 'App\Berita\Controller\BeritaController::beritaKontenUpdate',
+]));
+$routes->add('beritaKontenDelete', new Route('/informasi-kesbangpol/berita/{id}/delete', [
+    '_controller' => 'App\Berita\Controller\BeritaController::beritaKontenDelete',
+]));
+
+//curd pengumuman
+$routes->add('pengumumanKonten', new Route('/informasi-kesbangpol/pengumuman', [
+    '_controller' => 'App\PengumumanKesbangpol\Controller\PengumumanKesbangpolController::pengumumanKonten',
+]));
+$routes->add('pengumumanKontenStore', new Route('/informasi-kesbangpol/pengumuman/store', [
+    '_controller' => 'App\PengumumanKesbangpol\Controller\PengumumanKesbangpolController::pengumumanKontenStore',
+]));
+$routes->add('pengumumanKontenGet', new Route('/informasi-kesbangpol/pengumuman/{id}/get', [
+    '_controller' => 'App\PengumumanKesbangpol\Controller\PengumumanKesbangpolController::pengumumanKontenGet',
+]));
+$routes->add('pengumumanKontenUpdate', new Route('/informasi-kesbangpol/pengumuman/{id}/update', [
+    '_controller' => 'App\PengumumanKesbangpol\Controller\PengumumanKesbangpolController::pengumumanKontenUpdate',
+]));
+$routes->add('pengumumanKontenDelete', new Route('/informasi-kesbangpol/pengumuman/{id}/delete', [
+    '_controller' => 'App\PengumumanKesbangpol\Controller\PengumumanKesbangpolController::pengumumanKontenDelete',
+]));
+
 
 $routes->add('berita', new Route('/informasi/berita', [
     '_controller' => 'App\Berita\Controller\BeritaController::index',
-]));
-
-$routes->add('beritasimpan', new Route('/informasi/berita/store', [
-    '_controller' => 'App\Berita\Controller\BeritaController::store',
 ]));
 
 $routes->add('beritaedit', new Route('/informasi/berita/edit/{id}', [

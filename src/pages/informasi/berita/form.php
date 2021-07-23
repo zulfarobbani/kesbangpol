@@ -70,7 +70,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="informasi-kesbangpol/berita/store" method="post" enctype="multipart/form-data">
+                                    <form action="berita/store" method="post" enctype="multipart/form-data">
                                         <div class="mb-3">
                                             <label for="exampleFormControlInput1" class="form-label">Judul Berita</label>
                                             <input type="text" name="namaBerita" class="form-control">
@@ -81,7 +81,7 @@
                                         </div>
                                         <div class="mb-3">
                                             <label for="exampleFormControlInput1" class="form-label">Konten Berita</label>
-                                            <textarea id="summernote-content" name="kontenBerita" required></textarea>
+                                            <textarea id="editor1" name="deskripsiBerita"></textarea>
                                         </div>
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </form>
@@ -98,33 +98,29 @@
                         <div class="modal-dialog modal-xl">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h6 class="modal-title" id="exampleModalLabel">Edit Layanan</h6>
+                                    <h6 class="modal-title" id="exampleModalLabel">Edit Berita</h6>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="" method="post" enctype="multipart/form-data" class="formEdit">
+                                    <form action="" method="post" enctype="multipart/form-data" class="editForm">
                                         <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Nama Layanan</label>
-                                            <input type="text" name="namaLayanan" class="form-control namaLayanan" readonly>
+                                            <label for="exampleFormControlInput1" class="form-label">Judul Berita</label>
+                                            <input type="text" name="namaBerita" class="form-control judulBerita">
                                         </div>
-                                        <div class="row">
-                                            <div class="col-1">
-                                                <img src="" alt="" class="img-fluid img-thumbnail iconLayanan">
-                                            </div>
-                                            <div class="col">
-                                                <div class="mb-3">
-                                                    <label for="exampleFormControlInput1" class="form-label">Icon Layanan</label>
-                                                    <input type="file" name="iconLayanan" class="form-control">
+                                        <div class="mb-3">
+                                            <div class="row">
+                                                <div class="col-2">
+                                                    <img src="" alt="" class="img-fluid img-thumbnail coverBerita">
+                                                </div>
+                                                <div class="col">
+                                                    <label for="exampleFormControlInput1" class="form-label">Cover Berita</label>
+                                                    <input type="file" name="coverBerita" class="form-control coverBeritaInput">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Judul Layanan</label>
-                                            <input type="text" name="judulLayanan" class="form-control judulLayanan">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Deskripsi Layanan</label>
-                                            <textarea name="deskripsiLayanan" id="" class="form-control deskripsiLayanan"></textarea>
+                                            <label for="exampleFormControlInput1" class="form-label">Konten Berita</label>
+                                            <textarea name="deskripsiBerita" class="kontenBerita" id="editor2"></textarea>
                                         </div>
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </form>
@@ -141,34 +137,27 @@
                         <div class="modal-dialog modal-xl">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h6 class="modal-title" id="exampleModalLabel">Detail Layanan</h6>
+                                    <h6 class="modal-title" id="exampleModalLabel">Detail Berita</h6>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <div class="row">
                                         <div class="col-12 mb-3">
-                                            <b>Nama Layanan</b>
-                                            <div class="row">
-                                                <div class="col-1">
-                                                    <img src="" alt="" class="img-fluid img-thumbnail iconLayanan" width="50">
-                                                </div>
-                                                <div class="col">
-                                                    <p>
-                                                    <h6 class="namaLayanan text-dark"></h6>
-                                                    </p>
-                                                </div>
-                                            </div>
+                                            <b>Judul Berita</b>
+                                            <p>
+                                            <h6 class="judulBerita text-dark"></h6>
+                                            </p>
                                         </div>
                                         <div class="col-12 mb-3">
-                                            <b>Judul Layanan</b>
+                                            <b>Cover Berita</b>
                                             <p>
-                                            <h6 class="judulLayanan text-dark"></h6>
+                                                <img src="" alt="" class="img-fluid img-thumbnail coverBerita" width="200">
                                             </p>
                                         </div>
                                         <div class="col-12">
-                                            <b>Deskripsi Layanan</b>
+                                            <b>Konten Berita</b>
                                             <p>
-                                            <h6 class="deskripsiLayanan text-dark"></h6>
+                                            <h6 class="kontenBerita text-dark"></h6>
                                             </p>
                                         </div>
                                     </div>
@@ -185,7 +174,7 @@
                         <div class="modal-dialog modal-xl">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h6 class="modal-title" id="exampleModalLabel">Hapus Layanan</h6>
+                                    <h6 class="modal-title" id="exampleModalLabel">Hapus Berita</h6>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
@@ -201,104 +190,9 @@
                     </div>
                     <!-- ==================== END MODAL LAYANAN ====================  -->
 
-                    <!-- ==================== MODAL Unduhan ====================  -->
-                    <!-- Modal Tambah -->
-                    <div class="modal fade" id="createModalUnduhan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-xl">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h6 class="modal-title" id="exampleModalLabel">Tambah Unduhan</h6>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form action="layanan-kesbangpol/unduhan/store" method="post" enctype="multipart/form-data">
-                                        <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Nama Unduhan</label>
-                                            <input type="text" name="namaLayananunduhan" class="form-control">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">File Unduhan</label>
-                                            <input type="file" name="fileLayananunduhan" class="form-control">
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Modal Edit -->
-                    <div class="modal fade" id="editModalUnduhan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-xl">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h6 class="modal-title" id="exampleModalLabel">Edit Unduhan</h6>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form action="" method="post" enctype="multipart/form-data" class="formEditUnduhan">
-                                        <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Nama Unduhan</label>
-                                            <input type="text" name="namaLayananunduhan" class="form-control namaLayananunduhan">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">File Unduhan</label>
-                                            <input type="file" name="fileLayananunduhan" class="form-control">
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Modal Detail -->
-                    <div class="modal fade" id="detailModalUnduhan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-xl">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h6 class="modal-title" id="exampleModalLabel">File SAKIP</h6>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <img src="" alt="" class="img-fluid fileLayananunduhan">
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Modal Hapus -->
-                    <div class="modal fade" id="hapusModalUnduhan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-xl">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h6 class="modal-title" id="exampleModalLabel">Hapus Unduhan</h6>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Apakah anda yakin ingin menghapus file tersebut?</p>
-                                    <form action="" method="post" class="form-hapus-unduhan"></form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-danger btn-hapus-unduhan">Hapus</button>
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ==================== END MODAL Unduhan ====================  -->
 
                 </div>
-                <a class="btn btn-outline-danger navy mt-3 float-end" href="/layanan/pendataan"><i class="fas fa-check"></i> Selesai Ubah</a>
+                <a class="btn btn-outline-danger navy mt-3 float-end" href="/informasi/berita"><i class="fas fa-check"></i> Selesai Ubah</a>
             </div>
             <!-- end form -->
             <?php include(__DIR__ . '/../../sidebar.php') ?>
@@ -306,55 +200,91 @@
     </div>
     <?php include(__DIR__ . '/../../footer.php') ?>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
     <script src="/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script src="/assets/plugins/ckeditor5-build-classic/ckeditor.js"></script>
+
     <script>
         $(document).ready(function() {
             // ======================== Layanan ======================== 
-            var editModalUnduhan = document.getElementById('editModalUnduhan')
-            editModalUnduhan.addEventListener('show.bs.modal', function(event) {
+            var editModal = document.getElementById('editModal')
+            editModal.addEventListener('show.bs.modal', function(event) {
                 // Button that triggered the modal
                 var button = event.relatedTarget
                 // Extract info from data-bs-* attributes
-                var idLayananunduhan = button.getAttribute('data-bs-idLayananunduhan')
-                var namaLayananunduhan = button.getAttribute('data-bs-namaLayananunduhan')
+                var idBerita = button.getAttribute('data-bs-idBerita')
 
-                var formLayanan = editModalUnduhan.querySelector('.formEditUnduhan')
-                formLayanan.setAttribute('action', '/layanan-kesbangpol/unduhan/' + idLayananunduhan + '/update')
+                $.ajax({
+                    type: "post",
+                    url: "/informasi-kesbangpol/berita/" + idBerita + "/get"
+                }).done(function(response) {
+                    var editForm = editModal.querySelector('.editForm')
+                    editForm.setAttribute('action', '/informasi-kesbangpol/berita/' + idBerita + '/update')
 
-                var namaUnduhanContainer = editModalUnduhan.querySelector('.namaLayananunduhan')
-                namaUnduhanContainer.value = namaLayananunduhan
+                    var judulBerita = editModal.querySelector('.judulBerita')
+                    judulBerita.value = response.data.namaBerita
+                    var coverBerita = editModal.querySelector('.coverBerita')
+                    coverBerita.setAttribute('src', '/assets/media/' + response.data.pathMedia)
+                    var kontenBerita = editModal.querySelector('.kontenBerita')
+                    kontenBerita.innerHTML = response.data.deskripsiBerita
+                    
+                    ClassicEditor
+                        .create(document.querySelector('#editor2'), {
+                            removePlugins: ['Heading']
+                        })
+                        .catch(error => {
+                            console.error(error);
+                        });
+                })
             })
 
-            var detailModalUnduhan = document.getElementById('detailModalUnduhan')
-            detailModalUnduhan.addEventListener('show.bs.modal', function(event) {
+            var detailModal = document.getElementById('detailModal')
+            detailModal.addEventListener('show.bs.modal', function(event) {
                 // Button that triggered the modal
                 var button = event.relatedTarget
                 // Extract info from data-bs-* attributes
-                var fileUnduhan = button.getAttribute('data-bs-file')
+                var idBerita = button.getAttribute('data-bs-idBerita')
 
-                var fileLayananUnduhan = detailModalUnduhan.querySelector('.fileLayananunduhan')
-                fileLayananUnduhan.setAttribute('src', fileUnduhan)
+                $.ajax({
+                    type: "post",
+                    url: "/informasi-kesbangpol/berita/" + idBerita + "/get"
+                }).done(function(response) {
+                    var judulBerita = detailModal.querySelector('.judulBerita')
+                    judulBerita.innerHTML = response.data.namaBerita
+                    var coverBerita = detailModal.querySelector('.coverBerita')
+                    coverBerita.setAttribute('src', '/assets/media/' + response.data.pathMedia)
+                    var kontenBerita = detailModal.querySelector('.kontenBerita')
+                    kontenBerita.innerHTML = response.data.deskripsiBerita
+                })
             })
 
-            var hapusModalUnduhan = document.getElementById('hapusModalUnduhan')
-            hapusModalUnduhan.addEventListener('show.bs.modal', function(event) {
+            var hapusModal = document.getElementById('hapusModal')
+            hapusModal.addEventListener('show.bs.modal', function(event) {
                 // Button that triggered the modal
                 var button = event.relatedTarget
                 // Extract info from data-bs-* attributes
-                var idLayananunduhan = button.getAttribute('data-bs-idLayananunduhan')
+                var idBerita = button.getAttribute('data-bs-idBerita')
                 // If necessary, you could initiate an AJAX request here
                 // and then do the updating in a callback.
                 //
                 // Update the modal's content.
-                var formHapusunduhan = hapusModalUnduhan.querySelector('.form-hapus-unduhan')
-                formHapusunduhan.setAttribute('action', '/layanan-kesbangpol/unduhan/' + idLayananunduhan + '/delete')
+                var formHapusunduhan = hapusModal.querySelector('.form-hapus')
+                formHapusunduhan.setAttribute('action', '/informasi-kesbangpol/berita/' + idBerita + '/delete')
             })
 
-            $('.btn-hapus-unduhan').on('click', function() {
-                $('.form-hapus-unduhan').submit();
+            $('.btn-hapus').on('click', function() {
+                $('.form-hapus').submit();
             })
             // ======================== END Layanan ======================== 
+
+            ClassicEditor
+                .create(document.querySelector('#editor1'), {
+                    removePlugins: ['Heading']
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+
         })
     </script>
 </body>

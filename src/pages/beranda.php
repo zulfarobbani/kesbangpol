@@ -27,7 +27,7 @@
   <div class="card-body ">
     <h5 class="card-title"><?= $value['namaBerita'] ?></h5>
     <em>Author : </em>
-    <p class="card-text text-elps text-elps-3" align="justify"><?= html_entity_decode(nl2br($value['deskripsiBerita'])) ?></p>
+    <p class="card-text text-elps text-elps-3" align="justify"><?= $value['deskripsiBerita'] ?></p>
     <span class="card-text" style="color: white;"><small class="text-light"><?= $value['dateCreate'] ?></small></span>
     <a href="informasi/berita/<?= $value['idBerita'] ?>" class="btn btn-outline-light float-end">Selengkapnya...</a>
   </div>

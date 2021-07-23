@@ -5,6 +5,8 @@ namespace App\Berita\Controller;
 use App\Berita\Model\Berita;
 use App\Media\Model\Media;
 use Core\GlobalFunc;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 
 class BeritaController extends GlobalFunc
@@ -31,82 +33,67 @@ class BeritaController extends GlobalFunc
 
         return $this->render_template('informasi/berita/form', ['datas' => $datas]);
     }
-    
-    public function create(Request $request)
-    {
-        $datas = $this->model->selectAll();
 
-        return $this->render_template('informasi/berita/form', ['datas' => $datas]);
-    }
-
-    public function store(Request $request)
+    public function beritaKontenStore(Request $request)
     {
-        $fileupload = $_FILES['fotoBerita'];
+        $data = $request->request;
+        $berita = $this->model->create($data);
+
+        // store cover berita
+        $media = new Media();
         $idMedia = uniqid('med');
-        $namaBerita = $request->request->get('namaBerita');
-        $deskripsiBerita = $request->request->get('deskripsiBerita');
-        $idRelation = $request->request->get('idRelation');
-        $approvalBerita = $request->request->get('approvalBerita');
-        $dateCreate = date("Y-m-d");
+        $idUser = '1';
+        $fileCoverBerita = $media->create($idMedia, $_FILES['coverBerita'], $berita, $idUser, 'cover_berita');
 
-        $data_test = array( 
-            'idMedia' => $idMedia,      
-            'namaBerita' => $namaBerita,
-            'deskripsiBerita' => $deskripsiBerita,
-            'idRelation' => $idRelation,
-            'approvalBerita'=> $approvalBerita,
-            'dateCreate' => $dateCreate
-        );
-
-        
-        $this->model->create($data_test);
-        $this->model2->create($idMedia,$fileupload, $dateCreate, $idRelation);
-        
-        return header("location:http://kesbangpol.com/informasi/berita");
+        return new RedirectResponse('/informasi-kesbangpol/berita');
     }
 
-    public function ReadOne(Request $request)
+    public function beritaKontenGet(Request $request)
     {
         $id = $request->attributes->get('id');
-        $datas = $this->model->selectOne($id);
-        
-        return $this->render_template('informasi/berita/edit', ['idBerita' => $datas['idBerita'], 'namaBerita'=>$datas['namaBerita'], 'deskripsiBerita'=>$datas['deskripsiBerita'], 'idRelation'=>$datas['idRelation'], 'approvalBerita'=>$datas['approvalBerita']]);
+        $detail = $this->model->selectOne($id);
+
+        return new JsonResponse([
+            'data' => $detail
+        ]);
     }
 
-    public function detail(Request $request) {
-        $id = $request->attributes->get('id');
-        $datas = $this->model->selectOne($id);
-        
-        return $this->render_template('informasi/berita/detail', ['detail_berita' => $datas]);
-    }
-
-    public function update(Request $request)
+    public function beritaKontenUpdate(Request $request)
     {
-        $id = $request->request->get('id');
-        $namaBerita = $request->request->get('namaBerita');
-        $deskripsiBerita = $request->request->get('deskripsiBerita');
-        $idRelation = $request->request->get('idRelation');
-        $approvalBerita = $request->request->get('approvalBerita');
-
         $id = $request->attributes->get('id');
-        $data_test = array(
-            'namaBerita' => $namaBerita,
-            'deskripsiBerita' => $deskripsiBerita,
-            'idRelation' => $idRelation,
-            'approvalBerita'=> $approvalBerita
-        );
-        
-       $this->model->update($id, $data_test);
+        $data = $request->request;
+        $berita = $this->model->update($id, $data);
 
-       return header("location:http://kesbangpol.com/informasi/berita");
+        if ($_FILES['coverBerita']['name'] != '') {
+            $media = new Media();
+            // select existing media coverBerita
+            $selectcoverBerita = $media->selectOneMedia("idRelation = '$id'");
+            // delete existing media coverBerita
+            $deletecoverBerita = $media->delete($selectcoverBerita['idMedia']);
+            // delete file media coverBerita
+            $deleteFilecoverBerita = $media->deleteFile($selectcoverBerita['pathMedia']);
+
+            $idMedia = uniqid('med');
+            $idUser = '1';
+            $filecoverBerita = $media->create($idMedia, $_FILES['coverBerita'], $berita, $idUser, 'cover_berita');
+        }
+
+        return new RedirectResponse('/informasi-kesbangpol/berita');
     }
 
-    public function delete(Request $request)
+    public function beritaKontenDelete(Request $request)
     {
         $id = $request->attributes->get('id');
         $this->model->delete($id);
 
+        $media = new Media();
+        // select existing media cover Berita
+        $selectcoverBerita = $media->selectOneMedia("idRelation = '$id'");
+        // delete existing media cover Berita
+        $deletecoverBerita = $media->delete($selectcoverBerita['idMedia']);
+        // delete file media cover Berita
+        $deleteFilecoverBerita = $media->deleteFile($selectcoverBerita['pathMedia']);
 
-        return header("location:http://kesbangpol.com/informasi/berita");
+        return new RedirectResponse('/informasi-kesbangpol/berita');
     }
 }

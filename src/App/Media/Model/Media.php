@@ -66,6 +66,30 @@ class Media extends GlobalFunc
         }
     }
 
+    public function uploadFile($file)
+    {
+        $fileUpload = $file;
+        $target_file_name = null;
+        if (!is_null($fileUpload)) {
+            $source_path  = $fileUpload['tmp_name'];
+            $file_name = $fileUpload['name'];
+            $file_extension = pathinfo($file_name, PATHINFO_EXTENSION);
+            $target_file_name = time() . "-" . uniqid() . "." . $file_extension;
+            $target_directory = "../web/assets/media/" . $target_file_name;
+            $file_type = $fileUpload['type'];
+            $euy = array();
+            if ($file_type != "image/gif" && $file_type != "image/jpg" && $file_type != "image/png" && $file_type != "image/jpeg" && $file_type != "image/png" && $file_type != "application/pdf" && $file_type != "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet") {
+                // $euy['status']         =           "FAILED";
+                // $euy['message']        =           "Invalid file type. (File type only jpg, jpeg, gif, and png allowed)";
+                // return $euy;
+            } else {
+                move_uploaded_file($source_path, $target_directory);
+            }
+        }
+
+        return $target_file_name;
+    }
+
     public function selectOne($id)
     {
         $sql = "SELECT * FROM " . $this->table . " WHERE ".$this->primaryKey." = '$id'";

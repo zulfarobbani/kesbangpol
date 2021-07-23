@@ -19,7 +19,7 @@ class Berita extends GlobalFunc
 
     public function selectAll()
     {
-        $sql = "SELECT * FROM ".$this->table." LEFT JOIN member ON ".$this->table.".idRelation = member.idMember LEFT JOIN media ON ".$this->table.".coverBerita = media.idMedia" ;
+        $sql = "SELECT * FROM " . $this->table . " LEFT JOIN member ON " . $this->table . ".idRelation = member.idMember LEFT JOIN media ON " . $this->table . ".idRelation = media.idMedia";
         try {
             $query = $this->conn->prepare($sql);
             $query->execute();
@@ -31,57 +31,85 @@ class Berita extends GlobalFunc
             die();
         }
     }
-    
-    public function create($data_test = [])
-    {
-         $idBerita = uniqid("brt");
-         $namaBerita = $data_test['namaBerita'];
-         $deskripsiBerita = $data_test['deskripsiBerita'];
-         $idRelation = $data_test['idRelation'];
-         $approvalBerita = $data_test['approvalBerita'];
-         $dateCreate = $data_test['dateCreate'];
-         $idMedia = $data_test['idMedia'];
 
-        $sql = "INSERT INTO ".$this->table." VALUES ('$idBerita','$namaBerita', '$deskripsiBerita', '$idRelation', '$approvalBerita', '$dateCreate', '$idMedia')";
+    // public function create($data_test = [])
+    // {
+    //      $idBerita = uniqid("brt");
+    //      $namaBerita = $data_test['namaBerita'];
+    //      $deskripsiBerita = $data_test['deskripsiBerita'];
+    //      $idRelation = $data_test['idRelation'];
+    //      $approvalBerita = $data_test['approvalBerita'];
+    //      $dateCreate = $data_test['dateCreate'];
+    //      $idMedia = $data_test['idMedia'];
+
+    //     $sql = "INSERT INTO ".$this->table." VALUES ('$idBerita','$namaBerita', '$deskripsiBerita', '$idRelation', '$approvalBerita', '$dateCreate', '$idMedia')";
+
+    //     try {
+    //         $data = $this->conn->prepare($sql);
+
+    //         $data->execute();
+    //         return $data->rowCount();
+    //     } catch (PDOException $e) {
+    //         echo $e;
+    //         die();
+    //     }
+    // }
+
+    public function create($datas)
+    {
+        $idBerita = uniqid('nws');
+        $namaBerita = $datas->get('namaBerita');
+        $deskripsiBerita = $datas->get('deskripsiBerita');
+        $idRelation = '1';
+        $approvalBerita = '1';
+        $authorBerita = '1';
+        $dateCreate = date('Y-m-d');
+
+        $sql = "INSERT INTO " . $this->table . " VALUES ('$idBerita', '$namaBerita', '$deskripsiBerita', '$idRelation', '$approvalBerita', '$authorBerita', '$dateCreate')";
 
         try {
             $data = $this->conn->prepare($sql);
 
             $data->execute();
-            return $data->rowCount();
+            return $idBerita;
         } catch (PDOException $e) {
             echo $e;
             die();
         }
     }
+
     public function selectOne($id)
     {
-        $sql = "SELECT * FROM ".$this->table." LEFT JOIN media ON ".$this->table.".idMedia = media.idMedia WHERE ".$this->primaryKey." = '$id'";
+        $sql = "SELECT * FROM " . $this->table . " LEFT JOIN media ON " . $this->table . "." . $this->primaryKey . " = media.idRelation WHERE " . $this->primaryKey . " = '$id'";
 
         try {
             $query = $this->conn->prepare($sql);
             $query->execute();
             $data = $query->fetch();
-            
+
             return $data;
         } catch (PDOException $e) {
             echo $e;
             die();
         }
     }
-    public function update($id, $data_test = [])
+    public function update($idBerita, $datas)
     {
-        $namaBerita = $data_test['namaBerita'];
-         $deskripsiBerita = $data_test['deskripsiBerita'];
-         $idRelation = $data_test['idRelation'];
-         $approvalBerita = $data_test['approvalBerita'];
+        $namaBerita = $datas->get('namaBerita');
+        $deskripsiBerita = $datas->get('deskripsiBerita');
+        $idRelation = '1';
+        $approvalBerita = '1';
+        $authorBerita = '1';
+        $dateCreate = date('Y-m-d');
 
-        $sql = "UPDATE ".$this->table." SET namaBerita = '$namaBerita', deskripsiBerita = '$deskripsiBerita', idRelation = '$idRelation', approvalBerita = '$approvalBerita' WHERE idBerita='$id'";
-
-        try{
+        $sql = "UPDATE " . $this->table . " SET namaBerita = '$namaBerita', deskripsiBerita = '$deskripsiBerita', idRelation = '$idRelation', approvalBerita = '$approvalBerita', authorBerita = '$authorBerita' WHERE ".$this->primaryKey." ='$idBerita'";
+        
+        try {
             $data = $this->conn->prepare($sql);
-            $data->execute();  
-        }catch (PDOexception $e){
+            $data->execute();
+
+            return $idBerita;
+        } catch (PDOexception $e) {
             echo $e;
             die();
         }
@@ -89,14 +117,13 @@ class Berita extends GlobalFunc
 
     public function delete($id)
     {
-        $sql = "DELETE FROM ".$this->table." WHERE ".$this->primaryKey." = '$id'";
+        $sql = "DELETE FROM " . $this->table . " WHERE " . $this->primaryKey . " = '$id'";
 
-        try{
+        try {
             $query = $this->conn->prepare($sql);
             $query->execute();
             return $query;
-           
-        }catch(PDOException $e) {
+        } catch (PDOException $e) {
             dump($e);
             die();
         }

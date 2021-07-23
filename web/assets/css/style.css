@@ -6,14 +6,26 @@ h2 {
   color: navy;
 }
 
-.text-elps-3 {
-  -webkit-line-clamp: 3 !important;
-}
-
 .text-elps {
   display: -webkit-box !important;
   -webkit-box-orient: vertical !important;
   overflow: hidden !important;
+}
+
+.text-elps-1 {
+  -webkit-line-clamp: 1 !important;
+}
+
+.text-elps-2 {
+  -webkit-line-clamp: 2 !important;
+}
+
+.text-elps-3 {
+  -webkit-line-clamp: 3 !important;
+}
+
+.text-elps-4 {
+  -webkit-line-clamp: 4 !important;
 }
 
 #btnadd {

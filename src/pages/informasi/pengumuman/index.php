@@ -22,7 +22,7 @@
         <div class="col-md-8 top-1 start-0 ps-5 mb-3">
           <?php include(__DIR__.'/../../navtabsinformasi.php' )?>
           <!-- START CODE -->
-          <a class="btn btn-outline-danger d-block float-end navy" href="\informasi/pengumuman/create"><i class="fas fa-edit"></i> Edit</a>
+          <a class="btn btn-outline-danger d-block float-end navy" href="/informasi-kesbangpol/pengumuman"><i class="fas fa-edit"></i> Edit</a>
           <div class="row">
           <div class="card-group">
             <?php foreach($datas as $key => $values) {?>

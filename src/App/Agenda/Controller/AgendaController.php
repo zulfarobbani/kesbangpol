@@ -4,6 +4,7 @@ namespace App\Agenda\Controller;
 
 use App\Agenda\Model\Agenda;
 use Core\GlobalFunc;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 
 class AgendaController extends GlobalFunc
@@ -55,7 +56,7 @@ class AgendaController extends GlobalFunc
             $this->model->update($id, $data_test);
         }
 
-        return header("location:http://kesbangpol.com/informasi/agenda");
+        return new RedirectResponse('/informasi/agenda');
     }
     // public function delete(Request $request)
     // {
@@ -89,6 +90,6 @@ class AgendaController extends GlobalFunc
 
         $this->model->create($data_test);
         
-        return header("location:http://kesbangpol.com/informasi/agenda");
+        return new RedirectResponse('/informasi/agenda');
     }
 }

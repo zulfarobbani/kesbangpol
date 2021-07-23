@@ -13,7 +13,6 @@ class MediaController extends GlobalFunc
     public function __construct()
     {
         $this->model = new Media();
-        
     }
     
     public function index(Request $request)
@@ -25,7 +24,6 @@ class MediaController extends GlobalFunc
     public function create(Request $request)
     {
         return $this->render_template('media/create');
-
     }
     public function store(Request $request)
     {
@@ -34,7 +32,7 @@ class MediaController extends GlobalFunc
         $idEntity = $request->request->get('idEntity');
         $dateCreate = date("Y-m-d");
  
-        $data_test = array(       
+        $data_test = array(
             'pathMedia' => $pathMedia,
             'idRelation' => $idRelation,
             'idEntity' => $idEntity,
