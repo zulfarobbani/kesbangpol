@@ -16,10 +16,10 @@
 <body style="background-color : #EEEEEE; color: navy;">
 
   <?php include(__DIR__.'/../navbar.php' )?>
-  <div class="container-fluid">   
+  <div class="container-fluid">
       <div class="row">  
         <div class="col-md-8 top-1 start-0 ps-5 mb-3">
-          <div class="container-fluid p-1 mt-4">  
+          <div class="container-fluid p-1 mt-4">
             <div class="input-group">
               <span class="input-group-text bg-body border-0 text-muted"><span class="material-icons-outlined align-middle">search</span></span>
               <input type="text" class="form-control border-0" placeholder="Cari ORMAS">
@@ -40,17 +40,17 @@
                   <td></td>   
                 </tr>
               </thead>
-              <?php foreach($data_ormas as $key => $values) { ?>
+              <?php foreach($datas as $key => $value) { ?>
               <tbody>
                 <tr>
 
                   <td><?=$key+=1?></td>
-                  <td><?= $values['idOrsospol']?></td>
-                  <td><?= $values['namaOrsospol']?></td>
-                  <td><?= $values['alamatOrsospol']?></td>
+                  <td><?= $value['noAHU']?></td>
+                  <td><?= $value['namaOrsospol']?></td>
+                  <td><?= $value['alamatOrsospol']?></td>
                   <!-- <td class="float-end">
-                    <a href="regulasi/edit/<?= $values['idRegulasi'];?>">EDIT</a> 
-                    <a href="regulasi/delete/<?= $values['idRegulasi'];?>">HAPUS</a>
+                    <a href="regulasi/edit/<?= $value['idRegulasi'];?>">EDIT</a> 
+                    <a href="regulasi/delete/<?= $value['idRegulasi'];?>">HAPUS</a>
                   </td> -->
                             
                   </tr>

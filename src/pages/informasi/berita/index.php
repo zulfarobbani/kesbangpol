@@ -17,26 +17,32 @@
   <?php include(__DIR__ . '/../../navbar.php') ?>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-8 top-1 start-0 ps-5 mb-3">
+      <div class="col-md-9 top-1 start-0 ps-5 mb-3">
         <?php include(__DIR__ . '/../../navtabsinformasi.php') ?>
         <!-- START CODE -->
-        <a class="btn btn-outline-danger d-block float-end navy" href="/informasi-kesbangpol/berita"><i class="fas fa-edit"></i> Edit</a>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- <div class="row row-cols-1 row-cols-md-4 g-4"> -->
+        <div class="row g-4">
           <?php foreach ($datas as $key => $values) { ?>
-            <div class="card text-white bg-dark mb-3 mx-3" style="max-width: 540px;padding-left:0!important;padding-right:0!important;">
-              <div class="row g-0">
-                <div class="col-md-4">
-                  <img src="/assets/media/<?= $values['pathMedia'] ?>" class="img-fluid rounded-start" alt="<?= $values['namaBerita'] ?>">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h5 class="card-title text-white"> <a href="informasi/berita/<?= $values['idBerita'] ?>" style="text-decoration:none;" class="text-white"><?= $values['namaBerita'] ?></a></h5>
-                    <p class="card-text"><small class="text-light"><?= $values['dateCreate'] ?></small></p>
+            <div class="col-1 col-md-3">
+              <div class="card text-white bg-dark mb-3" style="padding-left:0!important;padding-right:0!important;">
+                <div class="row g-0">
+                  <div class="col-md-4 px-2 py-2">
+                    <div class="h-100" style="background: url('/assets/media/<?= $values['pathMedia'] ?>');background-size: 110px;background-position: center;background-repeat: no-repeat;"></div>
+                    <!-- <img src="/assets/media/<?= $values['pathMedia'] ?>" class="img-fluid rounded-start align-middle" alt="<?= $values['namaBerita'] ?>"> -->
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body p-2">
+                      <a href="/informasi/berita/<?= $values['idBerita'] ?>" style="text-decoration:none;">
+                        <h5 class="card-title text-white text-elps text-elps-3" style="font-size: 12px;"><?= $values['namaBerita'] ?></h5>
+                      </a>
+                      <p class="card-text" style="font-size: 12px;"><small class="text-light"><?= $values['dateCreate'] ?></small></p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           <?php } ?>
+
         </div>
       </div>
 

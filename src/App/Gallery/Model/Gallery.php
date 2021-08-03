@@ -8,6 +8,7 @@ use PDOException;
 class Gallery extends GlobalFunc
 {
     private $table = 'gallery';
+    private $primaryKey = 'idGallery';
     public $conn;
 
     public function __construct()
@@ -18,7 +19,7 @@ class Gallery extends GlobalFunc
 
     public function selectAll()
     {
-        $sql = "SELECT gallery.*, member.idMember, member.idOrsospol, media.* FROM ".$this->table." LEFT JOIN member ON gallery.idRelation = member.idMember LEFT JOIN media ON gallery.idMedia = media.idMedia ";
+        $sql = "SELECT * FROM ".$this->table." LEFT JOIN media ON ".$this->table.".".$this->primaryKey." = media.idRelation ";
         
         try {
             $query = $this->conn->prepare($sql);
@@ -56,7 +57,7 @@ class Gallery extends GlobalFunc
     }
     public function selectOne($id)
     {
-        $sql = "SELECT * FROM ".$this->table." WHERE idGallery = '$id'";
+        $sql = "SELECT * FROM ".$this->table." WHERE ".$this->primaryKey." = '$id'";
 
         try {
             $query = $this->conn->prepare($sql);

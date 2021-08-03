@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
     <link rel="stylesheet" href="/assets/css/style.css">
 
-    <title>Struktur Organisasi</title>
+    <title>Pengumuman</title>
 </head>
 
 <body style="background-color : #EEEEEE; color:navy;">

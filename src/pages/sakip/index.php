@@ -24,7 +24,6 @@
           <div class="d-block">
           <h4 class="d-inline">Panduan SAKIP</h4>
           <!-- <a href="sakip/create" class="btn btn-sm mt-3 float-end" id="btnadd"><span class="material-icons-outlined align-bottom">post_add</span>Tambah Data</a> -->
-          <a class="btn btn-outline-danger float-end navy d-inline" href="/profile-kesbangpol"><i class="fas fa-edit"></i> Edit</a>
           </div>
           <div class="col-12">
             <table class="table mt-3">

@@ -27,6 +27,14 @@ class BeritaController extends GlobalFunc
         return $this->render_template('informasi/berita/index', ['datas' => $datas]);
     }
 
+    public function detail(Request $request)
+    {
+        $id = $request->attributes->get('id');
+        $detail = $this->model->selectOne($id);
+
+        return $this->render_template('informasi/berita/detail', ['detail' => $detail]);
+    }
+
     public function beritaKonten(Request $request)
     {
         $datas = $this->model->selectAll();

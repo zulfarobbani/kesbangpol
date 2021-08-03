@@ -24,7 +24,6 @@
           <!-- START CODE -->
           <div class="d-block">
           <h4 class="mt-2 d-inline">Struktur Organisasi</h4>
-          <a class="btn btn-outline-danger d-inline float-end text-dark" href="/profile-kesbangpol"><i class="fas fa-edit"></i> Edit</a>
           </div>
           <img src="/assets/media/<?= $strukturOrganisasi['pathMedia'] ?>" class="mt-4" width="100%">
 

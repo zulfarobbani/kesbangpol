@@ -4,6 +4,7 @@ namespace App\Kabupaten\Controller;
 
 use App\Kabupaten\Model\Kabupaten;
 use Core\GlobalFunc;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
 class KabupatenController extends GlobalFunc
@@ -13,7 +14,6 @@ class KabupatenController extends GlobalFunc
     public function __construct()
     {
         $this->model = new Kabupaten();
-        
     }
     
     public function index(Request $request)
@@ -24,10 +24,9 @@ class KabupatenController extends GlobalFunc
     
     public function create(Request $request)
     {
-       
         return $this->render_template('kabupaten/create');
-
     }
+
     public function store(Request $request)
     {
         $namaProvinsi = $request->request->get('namaProvinsi');
@@ -40,7 +39,6 @@ class KabupatenController extends GlobalFunc
             'dateCreate' => $dateCreate
         );
         
-
         $this->model->create($data_test);
         
         return header("location:http://kesbangpol.com/kabupaten");
@@ -59,7 +57,6 @@ class KabupatenController extends GlobalFunc
         $namaProvinsi = $request->request->get('namaProvinsi');
         $namaKab = $request->request->get('namaKab');
         
-        
         $id = $request->attributes->get('id');
         $data_test = array(
             'namaProvinsi' => $namaProvinsi,
@@ -75,7 +72,14 @@ class KabupatenController extends GlobalFunc
         $id = $request->attributes->get('id');
         $this->model->delete($id);
 
-
         return header("location:http://kesbangpol.com/kabupaten");
+    }
+
+    public function get(Request $request)
+    {
+        $idProvinsi = $request->attributes->get('id');
+        $data = $this->model->get($idProvinsi);
+
+        return new JsonResponse($data);
     }
 }

@@ -4,6 +4,7 @@ namespace App\Orsospol\Controller;
 
 use App\Orsospol\Model\Orsospol;
 use App\Member\Model\Member;
+use App\OrsospolKesbangpol\Model\JenisOrsospolKesbangpol;
 use Core\GlobalFunc;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -15,78 +16,77 @@ class OrsospolController extends GlobalFunc
 
     public function __construct()
     {
+        parent::beginSession();
         $this->model = new Orsospol();
         $this->model1 = new Member();
     }
-    
+
     public function index(Request $request)
     {
-        $data_ormas = $this->model->selectAll("jor60d0573fb33fe");
-        $data_okp = $this->model->selectAll("jor60d0574b03b65");
-        $data_komunitas = $this->model->selectAll("jor60d0575b7b225");
-        $data_parpol = $this->model->selectAll("jor60d05997283b8");
+        $jenisOrsospol = new JenisOrsospolKesbangpol();
+        $data_jenisOrsospol = $jenisOrsospol->selectAll("WHERE namaJenisorsospol = 'ORMAS'")[0];
+        $datas = $this->ormas->selectAll($data_jenisOrsospol['idJenisorsospol']);
 
-        return $this->render_template('orsospol/index', ['data_ormas' => $data_ormas, 'data_okp' => $data_okp, 'data_komunitas' => $data_komunitas, 'data_parpol' => $data_parpol]);
+        return $this->render_template('orsospol/index', ['datas' => $datas]);
     }
+
     public function ormas(Request $request)
     {
-        $data_ormas = $this->model->selectAll("jor60d0573fb33fe");
-        
+        $idUser = $this->session->get('idUser');
+        $jenisOrsospol = new JenisOrsospolKesbangpol();
+        $data_jenisOrsospol = $jenisOrsospol->selectAll("WHERE namaJenisorsospol = 'ORMAS'")[0];
+        $datas = $this->model->selectAll($data_jenisOrsospol['idJenisorsospol'], "AND idUser = '$idUser'");
 
-        return $this->render_template('organisasi-terdaftar/ormas', ['data_ormas' => $data_ormas]);
+        return $this->render_template('organisasi-terdaftar/ormas', ['datas' => $datas]);
     }
     public function okp(Request $request)
     {
         $data_okp = $this->model->selectAll("jor60d0574b03b65");
-        
 
         return $this->render_template('organisasi-terdaftar/okp', ['data_okp' => $data_okp]);
     }
     public function komunitas(Request $request)
     {
         $data_komunitas = $this->model->selectAll("jor60d0575b7b225");
-        
 
         return $this->render_template('organisasi-terdaftar/komunitas', ['data_komunitas' => $data_komunitas]);
     }
     public function parpol(Request $request)
     {
         $data_parpol = $this->model->selectAll("jor60d05997283b8");
-        
 
         return $this->render_template('organisasi-terdaftar/parpol', ['data_parpol' => $data_parpol]);
     }
-    
+
     public function create(Request $request)
     {
         $data_prov = $this->model->provinsiall();
         $jenisorsospol = $this->model->jenisorsospolall();
-        
-        return $this->render_template('orsospol/create', ['data_prov'=>$data_prov, 'jenisorsospol'=>$jenisorsospol]);
 
+        return $this->render_template('orsospol/create', ['data_prov' => $data_prov, 'jenisorsospol' => $jenisorsospol]);
     }
     public function createkab(Request $request)
     {
         $data_kab1 = $request->request->get('data');
-        
-        $dataret =$this->model->kabupatenone($data_kab1);
-     return new JsonResponse($dataret);
+
+        $dataret = $this->model->kabupatenone($data_kab1);
+        return new JsonResponse($dataret);
     }
 
     public function createkec(Request $request)
     {
         $data_kec = $request->request->get('data');
 
-        $dataret =$this->model1->kecamatanone($data_kec);
-     return new JsonResponse($dataret);
+        $dataret = $this->model1->kecamatanone($data_kec);
+        return new JsonResponse($dataret);
     }
 
     public function createkel(Request $request)
     {
         $data_kel = $request->request->get('data');
 
-        $dataret =$this->model1->kelurahanone($data_kel);
-     return new JsonResponse($dataret);
+        $dataret = $this->model1->kelurahanone($data_kel);
+        return new JsonResponse($dataret);
     }
 
     public function store(Request $request)
@@ -116,36 +116,36 @@ class OrsospolController extends GlobalFunc
         $approvalOrsospol = $request->request->get('approvalOrsospol');
         $dateCreate = date("Y-m-d");
 
-        $data_test = array(   
-            'idSosmed' => $idSosmed,    
-            'namaOrsospol' =>$namaOrsospol,
-            'jenisOrsospol' =>$jenisorsospol,
-            'notarisOrsospol' =>$notarisOrsospol,
-            'kemenkumhamOrsospol' =>$kemenkumhamOrsospol,
-            'idProvinsi' =>$idProvinsi,
-            'idKab' =>$idKab,
-            'idKec' =>$idKec,
-            'idKel' =>$idKel,
-            'teleponOrsospol' =>$teleponOrsospol,
-            'npwpOrsospol' =>$npwpOrsospol,
-            'bankOrsospol' =>$bankOrsospol,
-            'rekeningOrsospol' =>$rekeningOrsospol,
-            'alamatOrsospol' =>$alamatOrsospol,
-            'emailOrsospol' =>$emailOrsospol,
-            'approvalOrsospol'=>$approvalOrsospol,
-            'instagram' =>$instagram,
-            'websiteOrsospol' =>$websiteOrsospol,
-            'facebook' =>$facebook,
-            'youtube' =>$youtube,
-            'twitter'=>$twitter,
-            'whatsapp' =>$whatsapp,
-            'telegram' =>$telegram,
+        $data_test = array(
+            'idSosmed' => $idSosmed,
+            'namaOrsospol' => $namaOrsospol,
+            'jenisOrsospol' => $jenisorsospol,
+            'notarisOrsospol' => $notarisOrsospol,
+            'kemenkumhamOrsospol' => $kemenkumhamOrsospol,
+            'idProvinsi' => $idProvinsi,
+            'idKab' => $idKab,
+            'idKec' => $idKec,
+            'idKel' => $idKel,
+            'teleponOrsospol' => $teleponOrsospol,
+            'npwpOrsospol' => $npwpOrsospol,
+            'bankOrsospol' => $bankOrsospol,
+            'rekeningOrsospol' => $rekeningOrsospol,
+            'alamatOrsospol' => $alamatOrsospol,
+            'emailOrsospol' => $emailOrsospol,
+            'approvalOrsospol' => $approvalOrsospol,
+            'instagram' => $instagram,
+            'websiteOrsospol' => $websiteOrsospol,
+            'facebook' => $facebook,
+            'youtube' => $youtube,
+            'twitter' => $twitter,
+            'whatsapp' => $whatsapp,
+            'telegram' => $telegram,
             'dateCreate' => $dateCreate
         );
-        
+
         $this->model->create($data_test);
         $this->model->simpansosmed($data_test);
-        
+
         return header("location:http://kesbangpol.com/orsospol");
     }
 
@@ -156,8 +156,7 @@ class OrsospolController extends GlobalFunc
         $data_prov = $this->model->provinsiall();
         $jenisorsospol = $this->model->jenisorsospolall();
 
-        
-        return $this->render_template('orsospol/edit', ['datas' => $datas, 'data_prov'=>$data_prov, 'jenisorsospol'=>$jenisorsospol  ]);
+        return $this->render_template('orsospol/edit', ['datas' => $datas, 'data_prov' => $data_prov, 'jenisorsospol' => $jenisorsospol]);
     }
     public function update(Request $request)
     {
@@ -181,38 +180,38 @@ class OrsospolController extends GlobalFunc
         $twitter = $request->request->get('twitter');
         $whatsapp = $request->request->get('whatsapp');
         $telegram = $request->request->get('telegram');
-        
+
         $idMember = $request->attributes->get('idMember');
         $idSosmed = $request->attributes->get('idSosmed');
         $data_test = array(
-            'namaMember' =>$namaMember,
-            'nikMember' =>$nikMember,
-            'niaMember' =>$niaMember,
-            'alamatMember' =>$alamatMember,
-            'idProvinsi' =>$idProvinsi,
-            'idKab' =>$idKab,
-            'idKec' =>$idKec,
-            'idKel' =>$idKel,
-            'teleponMember' =>$teleponMember,
-            'fotoMember' =>$fotoMember,
-            'idjabatan' =>$idjabatan,
-            'idPendidikan' =>$idPendidikan,
-            'idOrsospol' =>$idOrsospol       
-        );   
-        $data_sosmed = array(
-            'instagram' =>$instagram,
-            'namaMember' =>$namaMember,
-            'facebook' =>$facebook,
-            'youtube' =>$youtube,
-            'twitter'=>$twitter,
-            'whatsapp' =>$whatsapp,
-            'telegram' =>$telegram
+            'namaMember' => $namaMember,
+            'nikMember' => $nikMember,
+            'niaMember' => $niaMember,
+            'alamatMember' => $alamatMember,
+            'idProvinsi' => $idProvinsi,
+            'idKab' => $idKab,
+            'idKec' => $idKec,
+            'idKel' => $idKel,
+            'teleponMember' => $teleponMember,
+            'fotoMember' => $fotoMember,
+            'idjabatan' => $idjabatan,
+            'idPendidikan' => $idPendidikan,
+            'idOrsospol' => $idOrsospol
         );
-        
+        $data_sosmed = array(
+            'instagram' => $instagram,
+            'namaMember' => $namaMember,
+            'facebook' => $facebook,
+            'youtube' => $youtube,
+            'twitter' => $twitter,
+            'whatsapp' => $whatsapp,
+            'telegram' => $telegram
+        );
+
         $this->model->update($idMember, $data_test);
         $this->model->updatesosmed($idSosmed, $data_sosmed);
-        
-      return header("location:http://kesbangpol.com/member");
+
+        return header("location:http://kesbangpol.com/member");
     }
     public function delete(Request $request)
     {
@@ -220,7 +219,6 @@ class OrsospolController extends GlobalFunc
         $idSosmed = $request->attributes->get('idSosmed');
         $this->model->delete($idOrsos);
         $this->model->deletesosmed($idSosmed);
-
 
         return header("location:http://kesbangpol.com/orsospol");
     }

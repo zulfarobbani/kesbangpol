@@ -27,7 +27,7 @@
           </div>
           <?php include(__DIR__.'/../navtabsorganisasi.php' )?>
           <!-- START CODE -->
-          <h4>Partai Politik Teerdaftar</h4>
+          <h4>Partai Politik Terdaftar</h4>
 
           <div class="col-12">
             <table class="table mt-3" style="color: navy;">

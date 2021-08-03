@@ -13,7 +13,6 @@ class ProvinsiController extends GlobalFunc
     public function __construct()
     {
         $this->model = new Provinsi();
-        
     }
     
     public function index(Request $request)
@@ -70,7 +69,6 @@ class ProvinsiController extends GlobalFunc
     {
         $id = $request->attributes->get('id');
         $this->model->delete($id);
-
 
         return header("location:http://kesbangpol.com/provinsi");
     }

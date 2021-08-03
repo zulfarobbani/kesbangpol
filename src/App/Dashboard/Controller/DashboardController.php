@@ -22,6 +22,7 @@ class DashboardController extends GlobalFunc
         $this->model = new Dashboard();
         $this->model2 = new Berita();
         $this->model3 = new Media();
+        // parent::beginSession();
         
     }
     //dashboard
@@ -30,6 +31,7 @@ class DashboardController extends GlobalFunc
     }
     //beranda
     public function home(Request $request){
+        // $this->dd($this->session);
         $datas_2 = $this->model2->selectAll();
         $datas_3 = $this->model3->selectOne('');
         

@@ -43,3 +43,6 @@
     </div>
   </div>
 </div>
+<?php if ($idRole == '9asdkqhjwew') { ?>
+<a class="btn btn-outline-danger float-end navy d-block" href="/profile-kesbangpol"><i class="fas fa-edit"></i> Edit</a>
+<?php } ?>

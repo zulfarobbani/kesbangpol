@@ -38,4 +38,6 @@
     </div>
   </div>
 </div>
+<?php if ($idRole == '9asdkqhjwew') { ?>
 <a class="btn btn-outline-danger d-inline float-end text-dark" href="/layanan-kesbangpol"><i class="fas fa-edit"></i> Edit</a>
+<?php } ?>

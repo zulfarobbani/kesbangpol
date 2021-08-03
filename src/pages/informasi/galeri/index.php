@@ -20,18 +20,16 @@
       <div class="col-md-8 top-1 start-0 ps-5 mb-3">
         <?php include(__DIR__ . '/../../navtabsinformasi.php') ?>
         <!-- START CODE -->
-        <a class="btn btn-outline-danger d-block float-end navy" href="\informasi/pengumuman/create"><i class="fas fa-edit"></i> Edit</a>
         <div class="row">
           <div class="card-group">
             <?php foreach ($datas as $key => $values) { ?>
-              <a class="navy" href="galeri/detail" style="text-decoration:none;">
+              <a class="navy" href="galeri/<?= $values['idGallery'] ?>/detail" style="text-decoration:none;">
                 <div class="card" style="width: 18rem;">
                   <img class="card-img-top" src="/assets/media/<?= $values['pathMedia'] ?>" alt="Gambar Berita">
                   <div class="card-body">
                     <h5 class="card-title"><?= $values['namaGallery'] ?></h5>
                     <p class="card-text"><?= html_entity_decode(nl2br($values['deskripsiGallery'])) ?></p>
                     <p class="card-text" style="color: white;"><small class="text-muted"><?= $values['dateCreate'] ?></small>
-                    <p class="text-mute"><?= $values['idRelation'] ?></p>
                     </p>
                   </div>
                 </div>

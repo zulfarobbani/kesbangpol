@@ -31,11 +31,11 @@ class Kabupaten extends GlobalFunc
             die();
         }
     }
-    public function create($data_test = [])
+    public function create($datas = [])
     {
-         $id = uniqid(prkab);
-         $namaProvinsi = $data_test['namaProvinsi'];
-         $namaKab = $data_text['namaKab'];
+         $id = $datas['id'];
+         $namaProvinsi = $datas['namaProvinsi'];
+         $namaKab = $datas['namaKab'];
 
         $sql = "INSERT INTO ".$this->table." VALUES ('$id','$namaProvinsi', '$namaKab')";
        
@@ -92,6 +92,22 @@ class Kabupaten extends GlobalFunc
            
         }catch(PDOException $e) {
             dump($e);
+            die();
+        }
+    }
+
+    public function get($id)
+    {
+        $sql = "SELECT * FROM ".$this->table." WHERE provinsi_id = '$id'";
+
+        try {
+            $query = $this->conn->prepare($sql);
+            $query->execute();
+            $data = $query->fetchAll();
+            
+            return $data;
+        } catch (PDOException $e) {
+            echo $e;
             die();
         }
     }

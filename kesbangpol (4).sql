@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 09, 2021 at 04:22 AM
--- Server version: 10.4.18-MariaDB
--- PHP Version: 7.4.18
+-- Generation Time: Aug 03, 2021 at 07:03 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -41,7 +42,7 @@ CREATE TABLE `agenda` (
 --
 
 INSERT INTO `agenda` (`idAgenda`, `namaAgenda`, `deskripsiAgenda`, `datestartAgenda`, `dateendAgenda`, `dateCreate`) VALUES
-('agn60e28797a2323', '', '', '0000-00-00', '0000-00-00', '2021-07-05');
+('agn60ec215d16211', 'agenda1', 'deskripsi agenda 1', '2021-07-12', '2021-07-12', '2021-07-12');
 
 -- --------------------------------------------------------
 
@@ -55,17 +56,18 @@ CREATE TABLE `berita` (
   `deskripsiBerita` text NOT NULL,
   `idRelation` varchar(255) NOT NULL,
   `approvalBerita` int(1) NOT NULL,
+  `authorBerita` varchar(255) NOT NULL,
   `dateCreate` date NOT NULL,
-  `idMedia` varchar(255) NOT NULL
+  `jenisBerita` char(1) NOT NULL COMMENT '1=berita kesbangpol, 2=berita orsospol'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `berita`
 --
 
-INSERT INTO `berita` (`idBerita`, `namaBerita`, `deskripsiBerita`, `idRelation`, `approvalBerita`, `dateCreate`, `idMedia`) VALUES
-('brt60e2aac52039e', 'pernikahan Licht dan Tetia', 'Pernikahn ini akhirnya terjadi dan hal yang tidak diinginkan pun terjadi yaitu bangsa manusia menyerang bangsa elf', '1', 1, '2021-07-05', 'med60e2aac520372'),
-('brt60e2d40f44d60', 'Anime ', 'Anime Angel Beats akan segera Menemui endingnya.', '1', 1, '2021-07-05', 'med60e2d40f44d41');
+INSERT INTO `berita` (`idBerita`, `namaBerita`, `deskripsiBerita`, `idRelation`, `approvalBerita`, `authorBerita`, `dateCreate`, `jenisBerita`) VALUES
+('nws60ec078cde90c', 'Bupati Bekasi Meninggal karena COVID-19, Plt Sekda Jadi Pelaksana Harian', '<p>Bupati Kabupaten Bekasi Eka Supri Atmadja meninggal dunia karena COVID-19 pada Minggu (11/7) malam. Kondisi itu membuat Bekasi tidak memiliki kepala daerah definitif.&nbsp;</p><p>Namun, Kapuspen Kemendagri Benny Irwan memastikan bupati tidak ada kekosongan kepemimpinan pascaditinggal oleh Eka Supri Atmadja.</p><p>\"Tidak ada kekosongan pimpinan di Kabupaten Bekasi karena sesuai peraturan perundang-undangan, \"Tidak ada kekosongan pimpinan di Kabupaten Bekasi karena sesuai peraturan perundang-undangan,\" ucap Benny dalam pesan singkat, Senin (12/7).</p><p>Siapa penggantinya?</p><p>Eka adalah wakil bupati yang naik menjadi bupati karena bupati sebelumnya, Neneng Hasanah Yasin, tersangkut kasus korupsi. Eka lalu dilantik pada 12 Juni 2019 sebagai bupati. Tapi sejak saat itu Kabupaten Bekasi tidak memiliki wakil.</p><p>Selain itu, Bekasi juga tidak punya sekretaris daerah karena Sekda sebelumnya pensiun. Kemudian ditunjuk Pelaksana Tugas (Plt) Sekda yaitu Kepala Badan Pendapatan Daerah Herman Hanafi. Maka, pengganti sementara bupati Bekasi adalah Plt Sekda.</p><p>\"Saat ini Plt Sekda akan melaksanakan tugas kepala daerah sehari-hari (Plh kepala daerah). Ini sebagai kebijakan awal,\" kata Benny.</p><p>Benny mengatakan pagi ini Kemendagri akan mengirim surat atau radiogram ke Pemprov Jabar soal penunjukan tersebut.</p><p>\"Hal ini sudah menjadi perhatian Kemendagri dan sudah dikoordinasikan dengan Pemerintah Daerah Provinsi Jawa Barat untuk ditindaklanjuti sesuai ketentuan yang berlaku,\" pungkasnya.</p>', '1', 1, '1', '2021-07-12', '1'),
+('nws60fd135c15b04', 'Nasib PPKM Segera Diumumkan, Masukan Epidemiolog hingga Pekerja Harus Didengar', '<p>Hari ini pemerintah akan mengumumkan status PPKM Level 4 yang sebelumnya disebut PPKM Darurat. Presiden Jokowi dalam pernyataan sebelumnya menyebut jika kasus COVID-19 melandai, maka PPKM akan dilonggarkan secara bertahap mulai 26 Juli, besok.</p><p>Informasi yang dihimpun, konferensi pers terkait kejelasan status PPKM itu akan digelar hari ini. Anggota Komisi Kesehatan DPR, Saleh Partaonan Daulay, memberi sejumlah catatan.</p><p>\"Saya kira, pemerintah harus mendengarkan masukan dari berbagai pihak, ahli epidemiolog, kalangan pengusaha, pekerja, masyarakat terdampak, dan juga kelompok-kelompok masyarakat lainnya,\" kata Saleh, Minggu (25/7).</p><p>\"Masukan tersebut tentu sangat perlu untuk melengkapi hasil evaluasi PPKM Darurat yang telah dilaksanakan,\" tambah Saleh.</p><p>Bagi Saleh, kombinasi antara masukan dari berbagai pihak dan hasil evaluasi itulah semestinya yang dijadikan sebagai dasar bagi pemerintah untuk mengambil kebijakan berikutnya.</p><p>\"Tanpa diminta, sudah banyak kalangan yang bersuara. Mereka memberi masukan dari banyak aspek. Termasuk aspek efektivitas PPKM Darurat, kemampuan faskes, kecukupan tenaga medis, alat dan obat-obatan, bahkan sampai pada dampak yang ditimbulkan bagi roda perekonomian masyarakat. Tidak hanya ekonomi menengah ke atas, tetapi juga UMKM dan kelas menengah ke bawah. Ada juga yang memberi masukan terkait penguatan jaminan sosial, dan lain lain,\" urai politikus PAN ini.</p><p>Saleh mengamini, tidak mudah bagi pemerintah untuk menentukan kebijakan lanjutan. Pasalnya, masukan-masukan yang disampaikan juga cukup beragam. Misalnya, menurut informasi yang diamati Saleh, ada yang menilai bahwa PPKM Darurat berhasil, namun ada juga yang menilai tidak berhasil.</p><p>Pun, ada pula yang menilai perlu diperpanjang, ada yang menilai tidak perlu, dan ada yang menilai agar dicari kebijakan alternatif lain.</p><p>\"Dari semua itu, ujungnya nanti dikembalikan kepada pemerintah. Sebab, pemerintahlah yang memiliki data status penanganan COVID-19 di Indonesia. Pemerintah juga yang mengetahui dampak dari kebijakan tersebut terhadap kehidupan sosial ekonomi masyarakat\" ujar legislator dapil Sumut ini.</p><p>Lebih lanjut, Saleh menegaskan, jika pemerintah ternyata akan memperpanjang, maka harus dipastikan bahwa jaring pengaman sosial dalam bentuk bansos dan subsidi harus benar-benar diberikan ke masyarakat dan tepat sasaran.</p><p>\"Subsidi dan bantuan sosial itu kan tidak di seluruh Indonesia. Hanya di daerah yang diberlakukan PPKM darurat atau PPKM level 4. Perhitungan terhadap hal ini juga harus dilakukan secara cermat. Harus dipastikan tidak ada masyarakat yang dilupakan,\" tutur Saleh.</p><p>Saleh menyarankan agar di dalam pengumuman perpanjangan atau pelonggaran kebijakan PPKM, pemerintah memberikan alasan secara terbuka. Tidak perlu ada yang ditutupi.</p><p>\"Pemerintah harus menunjukkan bahwa semua potensi yang dimiliki sudah dikerahkan secara maksimal. Harus dijelaskan juga bahwa masukan dari masyarakat selalu didengar. Karena itu, perbaikan selalu dilakukan sesuai dengan apa yang diharapkan oleh semua pihak,\" tutup Saleh.</p><p>Sumber : https://kumparan.com/kumparannews/nasib-ppkm-segera-diumumkan-masukan-epidemiolog-hingga-pekerja-harus-didengar-1wCZSGYvj82/full</p>', '1', 1, '1', '2021-07-25', '1');
 
 -- --------------------------------------------------------
 
@@ -79,6 +81,30 @@ CREATE TABLE `chronology` (
   `idRelation` varchar(255) NOT NULL,
   `dateCreate` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `chronology`
+--
+
+INSERT INTO `chronology` (`idChronology`, `deskripsiChronology`, `idRelation`, `dateCreate`) VALUES
+('crn60fc1ca3720c9', ' telah menambah gallery \"\"', 'prt60fc1ca2e4c6f', '2021-07-24'),
+('crn60fc1fe9803a0', ' telah menambah gallery \"\"', 'prt60fc1fe92082b', '2021-07-24'),
+('crn60fce47bdc433', ' telah mengubah gallery \"\"', 'prt60fce47a55204', '2021-07-25'),
+('crn60fce621c26ad', ' telah mengubah gallery \"\"', 'prt60fce621bdb1a', '2021-07-25'),
+('crn60fce67f26905', ' telah mengubah gallery \"\"', 'prt60fce67f25c01', '2021-07-25'),
+('crn60fce7d3698f6', ' telah mengubah gallery \"alskdjl\"', 'prt60fce7d350340', '2021-07-25'),
+('crn60fce8491d5b0', ' telah mengubah gallery \"alskdjl\"', 'prt60fce8491cc71', '2021-07-25'),
+('crn60fce89e92ac0', ' telah mengubah gallery \"alskdjl\"', 'prt60fc1fe92082b', '2021-07-25'),
+('crn60fce8a9c8368', ' telah mengubah gallery \"alskdjl\"', 'prt60fc1fe92082b', '2021-07-25'),
+('crn60fce98b2687f', ' telah mengubah gallery \"alskdjl\"', 'prt60fc1fe92082b', '2021-07-25'),
+('crn60fce9981a706', ' telah mengubah gallery \"alskdjl1\"', 'prt60fc1fe92082b', '2021-07-25'),
+('crn60fcea17a924e', ' telah mengubah gallery \"alskdjl1\"', 'prt60fc1fe92082b', '2021-07-25'),
+('crn60fcf74763e3b', 'User 1 telah menghapus gallery \"alskdjl1\"', 'prt60fc1fe92082b', '2021-07-25'),
+('crn60fcfee481565', ' telah menambah gallery \"\"', 'prt60fcfee3d114d', '2021-07-25'),
+('crn60fcff0fda373', ' telah menambah gallery \"\"', 'prt60fcff0f3d877', '2021-07-25'),
+('crn61039d777d9af', 'User 1 telah menambah user \"Fulan 2\"', 'usr61039d7730554', '2021-07-30'),
+('crn61039ddb64758', 'User 1 telah mengubah user \"\"', 'usr61039d7730554', '2021-07-30'),
+('crn61039de82ed59', 'User 1 telah mengubah user \"\"', 'usr61039d7730554', '2021-07-30');
 
 -- --------------------------------------------------------
 
@@ -145,18 +171,45 @@ CREATE TABLE `gallery` (
   `idGallery` varchar(255) NOT NULL,
   `namaGallery` text NOT NULL,
   `deskripsiGallery` text NOT NULL,
-  `idRelation` varchar(255) NOT NULL,
-  `approvalGallery` int(1) NOT NULL,
-  `dateCreate` date NOT NULL,
-  `idMedia` varchar(255) NOT NULL
+  `idRelation` varchar(255) DEFAULT NULL,
+  `approvalGallery` int(1) DEFAULT NULL,
+  `dateCreate` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `gallery`
 --
 
-INSERT INTO `gallery` (`idGallery`, `namaGallery`, `deskripsiGallery`, `idRelation`, `approvalGallery`, `dateCreate`, `idMedia`) VALUES
-('glr60e2b875a09bd', 'Angel Beats', 'Galeri yang terinspirasi dari angel beats ', '1', 1, '2021-07-05', 'med60e2b875a099d');
+INSERT INTO `gallery` (`idGallery`, `namaGallery`, `deskripsiGallery`, `idRelation`, `approvalGallery`, `dateCreate`) VALUES
+('prt60fcfee3d114d', 'Gallery 1', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem ipsa quia, quod sapiente aliquid officiis numquam cumque dicta dolorum, excepturi architecto, est iure autem praesentium aut minima ullam saepe in.', '', 0, '2021-07-25'),
+('prt60fcff0f3d877', 'Gallery 2', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem ipsa quia, quod sapiente aliquid officiis numquam cumque dicta dolorum, excepturi architecto, est iure autem praesentium aut minima ullam saepe in.', '', 0, '2021-07-25');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallerydetail`
+--
+
+CREATE TABLE `gallerydetail` (
+  `idGallerydetail` varchar(255) NOT NULL,
+  `idGallery` varchar(255) NOT NULL,
+  `namaGallerydetail` varchar(255) NOT NULL,
+  `deskripsiGallerydetail` text NOT NULL,
+  `dateCreate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `gallerydetail`
+--
+
+INSERT INTO `gallerydetail` (`idGallerydetail`, `idGallery`, `namaGallerydetail`, `deskripsiGallerydetail`, `dateCreate`) VALUES
+('dpr60fcfee40a672', 'prt60fcfee3d114d', 'Image 1', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem ipsa quia, quod sapiente aliquid officiis numquam cumque dicta dolorum, excepturi architecto, est iure autem praesentium aut minima ullam saepe in.', '2021-07-25'),
+('dpr60fcfee43abcf', 'prt60fcfee3d114d', 'Image 2', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem ipsa quia, quod sapiente aliquid officiis numquam cumque dicta dolorum, excepturi architecto, est iure autem praesentium aut minima ullam saepe in.', '2021-07-25'),
+('dpr60fcfee461127', 'prt60fcfee3d114d', 'Image 3', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem ipsa quia, quod sapiente aliquid officiis numquam cumque dicta dolorum, excepturi architecto, est iure autem praesentium aut minima ullam saepe in.', '2021-07-25'),
+('dpr60fcff0f6f28b', 'prt60fcff0f3d877', 'Image 1', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem ipsa quia, quod sapiente aliquid officiis numquam cumque dicta dolorum, excepturi architecto, est iure autem praesentium aut minima ullam saepe in.', '2021-07-25'),
+('dpr60fcff0f8bb81', 'prt60fcff0f3d877', 'Image 2', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem ipsa quia, quod sapiente aliquid officiis numquam cumque dicta dolorum, excepturi architecto, est iure autem praesentium aut minima ullam saepe in.', '2021-07-25'),
+('dpr60fcff0fadecc', 'prt60fcff0f3d877', 'Image 3', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem ipsa quia, quod sapiente aliquid officiis numquam cumque dicta dolorum, excepturi architecto, est iure autem praesentium aut minima ullam saepe in.', '2021-07-25'),
+('dpr60fcff0fc9260', 'prt60fcff0f3d877', 'Image 4', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem ipsa quia, quod sapiente aliquid officiis numquam cumque dicta dolorum, excepturi architecto, est iure autem praesentium aut minima ullam saepe in.', '2021-07-25');
 
 -- --------------------------------------------------------
 
@@ -87398,6 +87451,31 @@ INSERT INTO `kelurahan` (`idKelurahan`, `kecamatan_id`, `namekel`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `kontakdarurat`
+--
+
+CREATE TABLE `kontakdarurat` (
+  `idKontakdarurat` varchar(255) NOT NULL,
+  `namaKontakdarurat` varchar(255) NOT NULL,
+  `isiKontakdarurat` varchar(255) NOT NULL,
+  `dateCreate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kontakdarurat`
+--
+
+INSERT INTO `kontakdarurat` (`idKontakdarurat`, `namaKontakdarurat`, `isiKontakdarurat`, `dateCreate`) VALUES
+('kdr61038b129fcc2', 'PLN', '12837812', '2021-07-30'),
+('kdr61038b1dd1968', 'DAMKAR', '812387123', '2021-07-30'),
+('kdr61038b2886622', 'Polisi', '23237434', '2021-07-30'),
+('kdr61038b32ea7f3', 'Ambulance', '273847234', '2021-07-30'),
+('kdr61038b4269d2e', 'Satpol PP', '8748234', '2021-07-30'),
+('kdr61038d165b7c2', 'Hotline Publik', '8278234', '2021-07-30');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `laporan`
 --
 
@@ -87418,6 +87496,29 @@ INSERT INTO `laporan` (`idLaporan`, `idOrsospol`, `tahunLaporan`, `dateCreate`) 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `layanan`
+--
+
+CREATE TABLE `layanan` (
+  `idLayanan` varchar(255) NOT NULL,
+  `namaLayanan` varchar(255) NOT NULL,
+  `judulLayanan` varchar(255) NOT NULL,
+  `deskripsiLayanan` text NOT NULL,
+  `dateCreate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `layanan`
+--
+
+INSERT INTO `layanan` (`idLayanan`, `namaLayanan`, `judulLayanan`, `deskripsiLayanan`, `dateCreate`) VALUES
+('lyn60eac520efc12', 'Pendataan ORMAS', 'Tata Cara Pengajuan Permohonan Pendataan ORMAS', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum mollis euismod. Proin viverra dui\r\neu tortor egestas, sit amet maximus tellus maximus. Etiam vestibulum, metus suscipit suscipit blandit, turpis\r\ndui accumsan diam, nec pharetra elit elit vel odio. Cras nec felis vel ipsum consequat elementum. Cras interdum nunc tristique finibus lacinia. Mauris ac sodales augue. Pellentesque congue velit a ex aliquet, pulvinar\r\nmollis mauris interdum. Ut sit amet mauris vitae tellus gravida scelerisque. Aenean auctor at mi sit amet gravida.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum mollis euismod. Proin viverra dui\r\neu tortor egestas, sit amet maximus tellus maximus. Etiam vestibulum, metus suscipit suscipit blandit, turpis\r\ndui accumsan diam, nec pharetra elit elit vel odio. Cras nec felis vel ipsum consequat elementum. Cras interdum nunc tristique finibus lacinia. Mauris ac sodales augue. Pellentesque congue velit a ex aliquet, pulvinar\r\nmollis mauris interdum. Ut sit amet mauris vitae tellus gravida scelerisque. Aenean auctor at mi sit amet gravida.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum mollis euismod. Proin viverra dui\r\neu tortor egestas, sit amet maximus tellus maximus. Etiam vestibulum, metus suscipit suscipit blandit, turpis\r\ndui accumsan diam, nec pharetra elit elit vel odio. Cras nec felis vel ipsum consequat elementum. Cras interdum nunc tristique finibus lacinia. Mauris ac sodales augue. Pellentesque congue velit a ex aliquet, pulvinar\r\nmollis mauris interdum. Ut sit amet mauris vitae tellus gravida scelerisque. Aenean auctor at mi sit amet gravida.', '2021-07-11'),
+('lyn60eac57caf4e0', 'Permohonan Hibah', 'Tata Cara Pengajuan Permohonan Hibah', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum mollis euismod. Proin viverra dui\r\neu tortor egestas, sit amet maximus tellus maximus. Etiam vestibulum, metus suscipit suscipit blandit, turpis\r\ndui accumsan diam, nec pharetra elit elit vel odio. Cras nec felis vel ipsum consequat elementum. Cras interdum nunc tristique finibus lacinia. Mauris ac sodales augue. Pellentesque congue velit a ex aliquet, pulvinar\r\nmollis mauris interdum. Ut sit amet mauris vitae tellus gravida scelerisque. Aenean auctor at mi sit amet gravida.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum mollis euismod. Proin viverra dui\r\neu tortor egestas, sit amet maximus tellus maximus. Etiam vestibulum, metus suscipit suscipit blandit, turpis\r\ndui accumsan diam, nec pharetra elit elit vel odio. Cras nec felis vel ipsum consequat elementum. Cras interdum nunc tristique finibus lacinia. Mauris ac sodales augue. Pellentesque congue velit a ex aliquet, pulvinar\r\nmollis mauris interdum. Ut sit amet mauris vitae tellus gravida scelerisque. Aenean auctor at mi sit amet gravida.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum mollis euismod. Proin viverra dui\r\neu tortor egestas, sit amet maximus tellus maximus. Etiam vestibulum, metus suscipit suscipit blandit, turpis\r\ndui accumsan diam, nec pharetra elit elit vel odio. Cras nec felis vel ipsum consequat elementum. Cras interdum nunc tristique finibus lacinia. Mauris ac sodales augue. Pellentesque congue velit a ex aliquet, pulvinar\r\nmollis mauris interdum. Ut sit amet mauris vitae tellus gravida scelerisque. Aenean auctor at mi sit amet gravida.', '2021-07-11'),
+('lyn60eac5d14f639', 'Permohonan Penelitian', 'Tata Cara Pengajuan Permohonan Penelitian', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum mollis euismod. Proin viverra dui\r\neu tortor egestas, sit amet maximus tellus maximus. Etiam vestibulum, metus suscipit suscipit blandit, turpis\r\ndui accumsan diam, nec pharetra elit elit vel odio. Cras nec felis vel ipsum consequat elementum. Cras interdum nunc tristique finibus lacinia. Mauris ac sodales augue. Pellentesque congue velit a ex aliquet, pulvinar\r\nmollis mauris interdum. Ut sit amet mauris vitae tellus gravida scelerisque. Aenean auctor at mi sit amet gravida.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum mollis euismod. Proin viverra dui\r\neu tortor egestas, sit amet maximus tellus maximus. Etiam vestibulum, metus suscipit suscipit blandit, turpis\r\ndui accumsan diam, nec pharetra elit elit vel odio. Cras nec felis vel ipsum consequat elementum. Cras interdum nunc tristique finibus lacinia. Mauris ac sodales augue. Pellentesque congue velit a ex aliquet, pulvinar\r\nmollis mauris interdum. Ut sit amet mauris vitae tellus gravida scelerisque. Aenean auctor at mi sit amet gravida.\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum mollis euismod. Proin viverra dui\r\neu tortor egestas, sit amet maximus tellus maximus. Etiam vestibulum, metus suscipit suscipit blandit, turpis\r\ndui accumsan diam, nec pharetra elit elit vel odio. Cras nec felis vel ipsum consequat elementum. Cras interdum nunc tristique finibus lacinia. Mauris ac sodales augue. Pellentesque congue velit a ex aliquet, pulvinar\r\nmollis mauris interdum. Ut sit amet mauris vitae tellus gravida scelerisque. Aenean auctor at mi sit amet gravida.', '2021-07-11');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `layananeksternal`
 --
 
@@ -87425,6 +87526,7 @@ CREATE TABLE `layananeksternal` (
   `idLayanan` varchar(255) NOT NULL,
   `namaLayanan` text NOT NULL,
   `urlLayanan` varchar(255) NOT NULL,
+  `fotoLayanan` varchar(255) NOT NULL,
   `dateCreate` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -87432,10 +87534,10 @@ CREATE TABLE `layananeksternal` (
 -- Dumping data for table `layananeksternal`
 --
 
-INSERT INTO `layananeksternal` (`idLayanan`, `namaLayanan`, `urlLayanan`, `dateCreate`) VALUES
-('lyx60bf5d8f941c0', 'layup', 'layup.com', '2021-06-08'),
-('lyx60bf6c88e365f', 'layup', 'lyout.com', '2021-06-08'),
-('lyx60bf6ce3998f6', 'lyout', 'layup.com', '2021-06-08');
+INSERT INTO `layananeksternal` (`idLayanan`, `namaLayanan`, `urlLayanan`, `fotoLayanan`, `dateCreate`) VALUES
+('lyx60bf5d8f941c0', 'layup', 'layup.com', '', '2021-06-08'),
+('lyx60bf6c88e365f', 'layup', 'lyout.com', '', '2021-06-08'),
+('lyx60bf6ce3998f6', 'lyout', 'layup.com', '', '2021-06-08');
 
 -- --------------------------------------------------------
 
@@ -87446,7 +87548,8 @@ INSERT INTO `layananeksternal` (`idLayanan`, `namaLayanan`, `urlLayanan`, `dateC
 CREATE TABLE `layananinternal` (
   `idLayanan` varchar(255) NOT NULL,
   `namaLayanan` text NOT NULL,
-  `deskripsiLayanan` text NOT NULL,
+  `urlLayanan` varchar(255) NOT NULL,
+  `fotoLayanan` varchar(255) NOT NULL,
   `dateCreate` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -87454,8 +87557,28 @@ CREATE TABLE `layananinternal` (
 -- Dumping data for table `layananinternal`
 --
 
-INSERT INTO `layananinternal` (`idLayanan`, `namaLayanan`, `deskripsiLayanan`, `dateCreate`) VALUES
-('lyi60bf6e9d69233', 'layin', 'ini adalah sebuah layana atas', '2021-06-08');
+INSERT INTO `layananinternal` (`idLayanan`, `namaLayanan`, `urlLayanan`, `fotoLayanan`, `dateCreate`) VALUES
+('lyi60bf6e9d69233', 'layin', 'ini adalah sebuah layana atas', '', '2021-06-08');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `layananunduhan`
+--
+
+CREATE TABLE `layananunduhan` (
+  `idLayananunduhan` varchar(255) NOT NULL,
+  `namaLayananunduhan` varchar(255) NOT NULL,
+  `dateCreate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `layananunduhan`
+--
+
+INSERT INTO `layananunduhan` (`idLayananunduhan`, `namaLayananunduhan`, `dateCreate`) VALUES
+('ldn60eadae8b2818', 'Unduhan Layanan 1', '2021-07-11'),
+('ldn60eadaf63316b', 'Unduhan Layanan 2', '2021-07-11');
 
 -- --------------------------------------------------------
 
@@ -87467,7 +87590,8 @@ CREATE TABLE `media` (
   `idMedia` varchar(255) NOT NULL,
   `pathMedia` varchar(255) NOT NULL,
   `idRelation` varchar(255) DEFAULT NULL,
-  `idEntity` varchar(255) NOT NULL,
+  `idEntity` varchar(255) DEFAULT NULL,
+  `jenisDokumen` varchar(255) DEFAULT NULL,
   `dateCreate` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -87475,13 +87599,44 @@ CREATE TABLE `media` (
 -- Dumping data for table `media`
 --
 
-INSERT INTO `media` (`idMedia`, `pathMedia`, `idRelation`, `idEntity`, `dateCreate`) VALUES
-('med60d2d6b462b8b', '[Kusonime] Black Clover - 41.mkv_snapshot_03.09_[2020.07.02_10.24.30].jpg', '1', '1', '2021-06-23'),
-('med60e2aac520372', '[Kusonime] Black Clover - 108.mkv_snapshot_01.48_[2020.08.17_01.08.31].jpg', '1', '1', '2021-07-05'),
-('med60e2b875a099d', '[Kusonime] Angel Beats! BD - 05.mkv_snapshot_23.56_[2020.03.26_05.05.25].jpg', '1', '1', '2021-07-05'),
-('med60e2bc6aa2679', '', '', '1', '2021-07-05'),
-('med60e2cc9f19a0d', '[Kusonime] Black Clover - 65.mkv_snapshot_01.59_[2020.09.17_23.35.30].jpg', '', '1', '2021-07-05'),
-('med60e2d40f44d41', '[Kusonime] Angel Beats! BD - OVA1.mkv_snapshot_28.41_[2020.03.16_15.26.38].jpg', '1', '1', '2021-07-05');
+INSERT INTO `media` (`idMedia`, `pathMedia`, `idRelation`, `idEntity`, `jenisDokumen`, `dateCreate`) VALUES
+('med60d2d6b462b8b', '[Kusonime] Black Clover - 41.mkv_snapshot_03.09_[2020.07.02_10.24.30].jpg', '1', '1', NULL, '2021-06-23'),
+('med60e2aac520372', '[Kusonime] Black Clover - 108.mkv_snapshot_01.48_[2020.08.17_01.08.31].jpg', '1', '1', NULL, '2021-07-05'),
+('med60e2b875a099d', '[Kusonime] Angel Beats! BD - 05.mkv_snapshot_23.56_[2020.03.26_05.05.25].jpg', '1', '1', NULL, '2021-07-05'),
+('med60e2cc9f19a0d', '[Kusonime] Black Clover - 65.mkv_snapshot_01.59_[2020.09.17_23.35.30].jpg', '', '1', NULL, '2021-07-05'),
+('med60e2d40f44d41', '[Kusonime] Angel Beats! BD - OVA1.mkv_snapshot_28.41_[2020.03.16_15.26.38].jpg', '1', '1', NULL, '2021-07-05'),
+('med60ea79499c3a3', '1.jpg', 'skp60ea79498f727', '1', '', '2021-07-11'),
+('med60ea86f7e328e', '3.jpg', 'reg60ea86f7d7a5c', '1', '', '2021-07-11'),
+('med60ea997406846', 'arios_swiss_bel_hotel60ea99740685f.png', 'skp60ea9973dca17', '1', '', '2021-07-11'),
+('med60eac521144c9', 'networking60eac521144d4.png', 'lyn60eac520efc12', '1', '', '2021-07-11'),
+('med60eac57cdd395', 'love60eac57cdd3aa.png', 'lyn60eac57caf4e0', '1', '', '2021-07-11'),
+('med60eac5d194b5d', 'paper60eac5d194b7a.png', 'lyn60eac5d14f639', '1', '', '2021-07-11'),
+('med60eadae8bc4f3', '160eadae8bc4fc.jpg', 'ldn60eadae8b2818', '1', '', '2021-07-11'),
+('med60eadaf643c0e', '260eadaf643c22.jpg', 'ldn60eadaf63316b', '1', '', '2021-07-11'),
+('med60eadde8b4aa6', 'struktur60eadde99a5d9.jpg', '1', '1', 'struktur_organisasi', '2021-07-11'),
+('med60ec1417e1d3d', 'wfqlftfbbbffogrryrrs60ec1417e1d51.jpg', 'nws60ec078cde90c', '1', 'cover_berita', '2021-07-12'),
+('med60ec20a639217', 'wfqlftfbbbffogrryrrs60ec20a639233.jpg', 'png60ec1e54badf2', '1', 'cover_pengumuman', '2021-07-12'),
+('med60fcfee3ed16c', '160fcfee3ed178.jpg', 'prt60fcfee3d114d', '', '', '2021-07-25'),
+('med60fcfee41a243', '260fcfee41a261.jpg', 'dpr60fcfee40a672', '', '', '2021-07-25'),
+('med60fcfee450905', '160fcfee450915.jpg', 'dpr60fcfee43abcf', '', '', '2021-07-25'),
+('med60fcfee476e7f', '260fcfee476e93.jpg', 'dpr60fcfee461127', '', '', '2021-07-25'),
+('med60fcff0f4c207', '460fcff0f4c212.jpg', 'prt60fcff0f3d877', '', '', '2021-07-25'),
+('med60fcff0f7b347', '460fcff0f7b367.jpg', 'dpr60fcff0f6f28b', '', '', '2021-07-25'),
+('med60fcff0f9f111', '360fcff0f9f11e.jpg', 'dpr60fcff0f8bb81', '', '', '2021-07-25'),
+('med60fcff0fbcf17', '260fcff0fbcf24.jpg', 'dpr60fcff0fadecc', '', '', '2021-07-25'),
+('med60fcff0fd026c', '160fcff0fd027b.jpg', 'dpr60fcff0fc9260', '', '', '2021-07-25'),
+('med60fd135c26178', 'xfynxlec6ni0sjsovhbj60fd135c26188.jpg', 'nws60fd135c15b04', '1', 'cover_berita', '2021-07-25'),
+('med6100c2bb2be09', '16100c2bb2be1d.jpg', 'ors6100c2babda0a', '1', 'kemenkumhamOrsospol', '2021-07-28'),
+('med6100c2bb554b4', '16100c2bb554cb.jpg', 'ors6100c2babda0a', '1', 'npwpOrsospol', '2021-07-28'),
+('med61023bcba4920', '161023bcba493e.jpg', 'ors61023bcb7b300', '1', 'kemenkumhamOrsospol', '2021-07-29'),
+('med61023bcbc8c3d', '161023bcbc8c5e.jpg', 'ors61023bcb7b300', '1', 'npwpOrsospol', '2021-07-29'),
+('med6102468764ce5', '16102468764d05.jpg', 'ors6102468760f1c', '1', 'kemenkumhamOrsospol', '2021-07-29'),
+('med6102468770eff', '16102468770f31.jpg', 'ors6102468760f1c', '1', 'npwpOrsospol', '2021-07-29'),
+('med610248089d3a8', '1610248089d3bf.jpg', 'ors610248086c2af', '1', 'kemenkumhamOrsospol', '2021-07-29'),
+('med61024808b03fa', '161024808b041a.jpg', 'ors610248086c2af', '1', 'npwpOrsospol', '2021-07-29'),
+('med61024b48aea3e', '161024b48aeab9.jpg', 'ors61024b489c9b8', '1', 'kemenkumhamOrsospol', '2021-07-29'),
+('med61024b48cd45b', '161024b48cd479.jpg', 'ors61024b489c9b8', '1', 'npwpOrsospol', '2021-07-29'),
+('png60fd082fe5c13', 'ojdp6fmf0fv4djzjthns60fd082fe5c1e.jpg', 'png60fd082fba29f', '1', 'cover_pengumuman', '2021-07-25');
 
 -- --------------------------------------------------------
 
@@ -87525,31 +87680,37 @@ CREATE TABLE `orsospol` (
   `idOrsospol` varchar(255) NOT NULL,
   `namaOrsospol` text NOT NULL,
   `idJenisorsospol` varchar(255) NOT NULL,
-  `notarisOrsospol` varchar(255) NOT NULL,
-  `kemenkumhamOrsospol` varchar(255) NOT NULL,
-  `npwpOrsospol` varchar(20) NOT NULL,
-  `rekeningOrsospol` varchar(255) NOT NULL,
-  `bankOrsospol` text NOT NULL,
-  `alamatOrsospol` text NOT NULL,
-  `idProvinsi` char(2) NOT NULL,
-  `idKabupaten` char(4) NOT NULL,
-  `idKecamatan` char(7) NOT NULL,
-  `idKelurahan` char(10) NOT NULL,
-  `emailOrsospol` varchar(255) NOT NULL,
-  `teleponOrsospol` varchar(255) NOT NULL,
-  `websiteOrsospol` varchar(255) NOT NULL,
-  `idSosialmedia` varchar(255) NOT NULL,
-  `approvalOrsospol` int(1) NOT NULL,
-  `dateCreate` date NOT NULL
+  `notarisOrsospol` varchar(255) DEFAULT NULL,
+  `kemenkumhamOrsospol` varchar(255) DEFAULT NULL,
+  `npwpOrsospol` varchar(20) DEFAULT NULL,
+  `rekeningOrsospol` varchar(255) DEFAULT NULL,
+  `bankOrsospol` text DEFAULT NULL,
+  `alamatOrsospol` text DEFAULT NULL,
+  `idProvinsi` char(2) DEFAULT NULL,
+  `idKabupaten` char(4) DEFAULT NULL,
+  `idKecamatan` char(7) DEFAULT NULL,
+  `idKelurahan` char(10) DEFAULT NULL,
+  `emailOrsospol` varchar(255) DEFAULT NULL,
+  `teleponOrsospol` varchar(255) DEFAULT NULL,
+  `websiteOrsospol` varchar(255) DEFAULT NULL,
+  `idSosialmedia` varchar(255) DEFAULT NULL,
+  `approvalOrsospol` int(1) DEFAULT NULL,
+  `dateCreate` date NOT NULL,
+  `noAHU` varchar(255) DEFAULT NULL,
+  `idUser` varchar(255) DEFAULT NULL,
+  `singkatanOrsospol` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `orsospol`
 --
 
-INSERT INTO `orsospol` (`idOrsospol`, `namaOrsospol`, `idJenisorsospol`, `notarisOrsospol`, `kemenkumhamOrsospol`, `npwpOrsospol`, `rekeningOrsospol`, `bankOrsospol`, `alamatOrsospol`, `idProvinsi`, `idKabupaten`, `idKecamatan`, `idKelurahan`, `emailOrsospol`, `teleponOrsospol`, `websiteOrsospol`, `idSosialmedia`, `approvalOrsospol`, `dateCreate`) VALUES
-('ors60c86cb4eee28', 'TOKYO MANJI', 'jor60d0573fb33fe', 'Ryuu', 'Dragn', '02345678213', '09876543123', 'BCA', 'Jl. Tokiyo no.19', '32', '3204', '3204140', '3204140006', 'tokiyomanji@gmail.com', '08923461236', 'www.tokiyomanji.com', 'sos60c86cb4eee00', 1, '2021-06-15'),
-('ors60e2d5bf34b8f', 'KANTO MANJI', 'jor60d0575b7b225', 'Katsuri', 'Kotori', '029183120421847', '327825678326832', 'BCA', 'Jl.Kanto no.24', '32', '3204', '3204140', '3204140003', 'KANTOMANJI@gmail.com', '062749138242', 'KANTOMANJI.com', 'sos60e2d5bf34b65', 1, '2021-07-05');
+INSERT INTO `orsospol` (`idOrsospol`, `namaOrsospol`, `idJenisorsospol`, `notarisOrsospol`, `kemenkumhamOrsospol`, `npwpOrsospol`, `rekeningOrsospol`, `bankOrsospol`, `alamatOrsospol`, `idProvinsi`, `idKabupaten`, `idKecamatan`, `idKelurahan`, `emailOrsospol`, `teleponOrsospol`, `websiteOrsospol`, `idSosialmedia`, `approvalOrsospol`, `dateCreate`, `noAHU`, `idUser`, `singkatanOrsospol`) VALUES
+('ors60e2d5bf34b8f', 'kjasd', 'jor60d0575b7b225', 'sdads', 'asdas', '029183120421847', '327825678326832', 'BCA', 'Jl.Kanto no.24', '32', '3204', '3204140', '3204140003', 'KANTOMANJI@gmail.com', '062749138242', 'KANTOMANJI.com', 'sos60e2d5bf34b65', 1, '2021-07-05', '0000002', '', ''),
+('ors6100c2babda0a', 'asd1', 'jor60d0573fb33fe', 'asd', 'asd', 'asd', 'asd', 'asd', 'as', '13', '1301', '1301011', '1301011001', 'asd@asd.sd', 'asdasd', 'asd', 'sos6100c2bb0efe2', 1, '2021-07-28', '0000002', '', ''),
+('ors610248086c2af', 'asd', 'jor60d0574b03b65', 'asd', 'asd', 'asd', 'asd', 'asd', 'asd', '33', '3315', '3315130', '3315130013', 'asd@asd.sd', 'asd', 'asd', 'sos61024807cbcad', 1, '2021-07-29', '0000001', '', ''),
+('ors61024b489c9b8', 'asd', 'jor60d05997283b8', 'asd', 'asd', 'asd', 'asd', 'asd', 'asd', '14', '1401', '1401012', '1401012001', 'asd@asd.sd', 'asd', 'ads', 'sos61024b485d17b', 1, '2021-07-29', '0000001', '', ''),
+('ors6106c82a70f77', 'Orsospol 1', 'jor60d0573fb33fe', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, '2021-08-01', '0000003', 'usr6106c82a3b736', 'Orsos1');
 
 -- --------------------------------------------------------
 
@@ -87581,16 +87742,16 @@ CREATE TABLE `pengumuman` (
   `idPengumuman` varchar(255) NOT NULL,
   `namaPengumuman` text NOT NULL,
   `deskripsiPengumuman` text NOT NULL,
-  `dateCreate` date NOT NULL,
-  `idMedia` varchar(255) NOT NULL
+  `dateCreate` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `pengumuman`
 --
 
-INSERT INTO `pengumuman` (`idPengumuman`, `namaPengumuman`, `deskripsiPengumuman`, `dateCreate`, `idMedia`) VALUES
-('peg60e2cc9f19a46', 'Kemarau', 'Kemarau akan datang bersiaplah untuk menghadapi kemarau', '2021-07-05', 'med60e2cc9f19a0d');
+INSERT INTO `pengumuman` (`idPengumuman`, `namaPengumuman`, `deskripsiPengumuman`, `dateCreate`) VALUES
+('png60ec1e54badf2', 'Bupati Bekasi Meninggal karena COVID-19, Plt Sekda Jadi Pelaksana Harian', '<p>Bupati Kabupaten Bekasi Eka Supri Atmadja meninggal dunia karena COVID-19 pada Minggu (11/7) malam. Kondisi itu membuat Bekasi tidak memiliki kepala daerah definitif.&nbsp;</p>', '2021-07-12'),
+('png60fd082fba29f', '1 Kota dan 2 Kabupaten di NTT Ini Masuk Penerapan PPKM Level 4', '<p><strong>MAUMERE</strong> â€“ Berdasarakan hasil Rapat Koordinasi (Rakor) yang yang dilakukan secara virtual pada Sabtu (24/7) dari pukul 14.00 WITA â€“ 16.30 WITA dengan agenda Pembahasan Penerapan PPKM Level IV di luar Jawa Bali, tiga daerah di Provinsi NTT ini masuk penerapan PPKM Level IV.</p><p>Rakor Pembahasan Penerapan PPKM Level IV di luar Jawa Bali dengan nara sumber, Menko Perekonomian RI, Menteri Keuangan RI, Menteri Perhubungan RI, Wamenkes, dan Staf khusus menteri sosial itu memperoleh kesimpulan, pemberlakukan PPKM diluar Jawa Bali digelar terhitung mulai tanggal 26 Juli sd 8 Agustus 2021, penetapan level PPKM untuk Kabupaten dan kota akan diterapkan pada 45 Kabupaten dan kota di 21 Provinsi, termasuk di Provinsi NTT di Kupang Kota, Sikka dan Sumba Timur.</p>', '2021-07-25');
 
 -- --------------------------------------------------------
 
@@ -87625,6 +87786,28 @@ CREATE TABLE `profile` (
 
 INSERT INTO `profile` (`idProfile`, `namaProfile`, `deskripsiProfile`, `idRelation`, `dateCreate`) VALUES
 ('prf60c1965cb6526', 'zulfa', 'wadzaqwxsedcrfvtgbyhnujmik,lo', '1', '2021-06-10');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `profilekesbangpol`
+--
+
+CREATE TABLE `profilekesbangpol` (
+  `idProfilekesbangpol` varchar(255) NOT NULL,
+  `visi` text NOT NULL,
+  `misi` text NOT NULL,
+  `tugaspokok` text NOT NULL,
+  `fungsi` text NOT NULL,
+  `dateCreate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `profilekesbangpol`
+--
+
+INSERT INTO `profilekesbangpol` (`idProfilekesbangpol`, `visi`, `misi`, `tugaspokok`, `fungsi`, `dateCreate`) VALUES
+('pfk60e975a4270a8', '12Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum mollis euismod. Proin viverra dui\r\neu tortor egestas, sit amet maximus tellus maximus. Etiam vestibulum, metus suscipit suscipit blandit,\r\nturpis dui accumsan diam, nec pharetra elit elit vel odio. Cras nec felis vel ipsum consequat elementum.\r\nCras interdum nunc tristique finibus lacinia. Mauris ac sodales augue. Pellentesque congue velit a ex aliquet, pulvinar mollis mauris interdum. Ut sit amet mauris vitae tellus gravida scelerisque. Aenean auctor at\r\nmi sit amet gravida.', '1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum mollis euismod. Proin viverra dui\r\neu tortor egestas, sit amet maximus tellus maximus. Etiam vestibulum, metus suscipit suscipit blandit,\r\nturpis dui accumsan diam, nec pharetra elit elit vel odio. Cras nec felis vel ipsum consequat elementum.\r\nCras interdum nunc tristique finibus lacinia. Mauris ac sodales augue. Pellentesque congue velit a ex aliquet, pulvinar mollis mauris interdum. Ut sit amet mauris vitae tellus gravida scelerisque. Aenean auctor at\r\nmi sit amet gravida.', '1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum mollis euismod. Proin viverra dui\r\neu tortor egestas, sit amet maximus tellus maximus. Etiam vestibulum, metus suscipit suscipit blandit,\r\nturpis dui accumsan diam, nec pharetra elit elit vel odio. Cras nec felis vel ipsum consequat elementum.\r\nCras interdum nunc tristique finibus lacinia. Mauris ac sodales augue. Pellentesque congue velit a ex aliquet, pulvinar mollis mauris interdum. Ut sit amet mauris vitae tellus gravida scelerisque. Aenean auctor at\r\nmi sit amet gravida.', '1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum mollis euismod. Proin viverra dui\r\neu tortor egestas, sit amet maximus tellus maximus. Etiam vestibulum, metus suscipit suscipit blandit,\r\nturpis dui accumsan diam, nec pharetra elit elit vel odio. Cras nec felis vel ipsum consequat elementum.\r\nCras interdum nunc tristique finibus lacinia. Mauris ac sodales augue. Pellentesque congue velit a ex aliquet, pulvinar mollis mauris interdum. Ut sit amet mauris vitae tellus gravida scelerisque. Aenean auctor at\r\nmi sit amet gravida.', '2021-07-10');
 
 -- --------------------------------------------------------
 
@@ -87707,7 +87890,28 @@ CREATE TABLE `regulasi` (
 --
 
 INSERT INTO `regulasi` (`idRegulasi`, `namaRegulasi`, `dateCreate`) VALUES
-('reg60c06f6e1372b', 'epep1', '2021-06-09');
+('reg60ea86f7d7a5c', 'Peraturan Umum', '2021-07-11');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `role`
+--
+
+CREATE TABLE `role` (
+  `idRole` varchar(255) NOT NULL,
+  `namaRole` varchar(255) NOT NULL,
+  `aliasRole` varchar(255) NOT NULL,
+  `dateCreate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `role`
+--
+
+INSERT INTO `role` (`idRole`, `namaRole`, `aliasRole`, `dateCreate`) VALUES
+('9asdkqhjwew', 'KESBANGPOL', 'kesbangpol', '2021-07-29'),
+('zxc98djh232', 'Orsospol', 'orsospol', '2021-07-29');
 
 -- --------------------------------------------------------
 
@@ -87726,7 +87930,8 @@ CREATE TABLE `sakip` (
 --
 
 INSERT INTO `sakip` (`idSakip`, `namaSakip`, `dateCreate`) VALUES
-('skp60d19d242c17a', '( Lembar Kerja 01 ).docx', '2021-06-22');
+('skp60ea79498f727', 'SOP', '2021-07-11'),
+('skp60ea9973dca17', 'SOP1', '2021-07-11');
 
 -- --------------------------------------------------------
 
@@ -87750,24 +87955,40 @@ CREATE TABLE `sosialmedia` (
 --
 
 INSERT INTO `sosialmedia` (`idSosialmedia`, `instagramSosialmedia`, `facebookSosialmedia`, `youtubeSosialmedia`, `twitterSosialmedia`, `whatsappSosialmedia`, `telegramSosialmedia`, `dateCreate`) VALUES
-('sos60c86cb4eee00', 'TOkiYO_Manji', 'Tokyo Mannji', 'Tokyo Manji', 'Manjitokyo', '09820284028', '01927426475', '2021-06-15'),
 ('sos60c96b6b7511a', 'zulfarob_68', 'zulfa robbani s.', 'zulfa gaming', 'robbanizulfa86', '088809401456', '088809401456', '2021-06-16'),
 ('sos60d03e5ff3a8c', 'zulfarob_86', 'zulfa robbani', 'D4RKsUrFeR Gaming', 'robbanizulfa86', '088809401456', '088809401456', '2021-06-21'),
-('sos60e2d5bf34b65', 'Kanto_Manji', 'Kanto Manji', 'Kanto manji', 'Kanto Manji', '079823647212', '023456273812', '2021-07-05');
+('sos60e2d5bf34b65', 'Kanto_Manji', 'Kanto Manji', 'Kanto manji', 'Kanto Manji', '079823647212', '023456273812', '2021-07-05'),
+('sos6100c1d100321', 'asd', 'asd', 'asd', 'asd', 'ad', 'asd', '2021-07-28'),
+('sos6100c2bb0efe2', 'asd', 'asd', 'asd', 'asd', 'asd', 'asd', '2021-07-28'),
+('sos61023bcb248f2', 'asd', 'asd', 'asd', 'asd', 'asd', 'asd', '2021-07-29'),
+('sos61024710369f0', 'asd', 'asd', 'asd', 'asd', 'asd', 'asd', '2021-07-29'),
+('sos61024807cbcad', 'asd', 'asd', 'asd', 'asd', 'asd', 'asd', '2021-07-29'),
+('sos61024b485d17b', 'asd', 'aasd', 'asd', 'asd', 'asd', 'asd', '2021-07-29');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `widget`
+-- Table structure for table `users`
 --
 
-CREATE TABLE `widget` (
-  `idWidget` varchar(255) NOT NULL,
-  `namaWidget` text NOT NULL,
-  `fotoWidget` blob NOT NULL,
-  `idLayanan` varchar(255) NOT NULL,
+CREATE TABLE `users` (
+  `idUser` varchar(255) NOT NULL,
+  `namaUser` varchar(255) NOT NULL,
+  `usernameUser` varchar(255) NOT NULL,
+  `passwordUser` varchar(255) NOT NULL,
+  `idRole` varchar(255) NOT NULL,
+  `emailUser` varchar(255) NOT NULL,
   `dateCreate` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`idUser`, `namaUser`, `usernameUser`, `passwordUser`, `idRole`, `emailUser`, `dateCreate`) VALUES
+('usr61037f9c85184', 'Admin', 'admin', '$2y$10$rkiappIPSzPR4j38.jmHFucb140ebGlzsHUy4ulRzsI/ygkWusXYW', '9asdkqhjwew', 'admin@gmail.com', '2021-07-30'),
+('usr61039d7730554', 'Fulan 2', 'fulan2', '$2y$10$FwLFidxBc52iWpCzZdy9teWuJNsQXf0PAh8mNkqDqs.4czn4orvqq', 'zxc98djh232', 'fulan2@gmail.com', '2021-07-30'),
+('usr6106c82a3b736', 'Fulan', 'orsospol1', '$2y$10$Tqa71PY8tXzR3g8B5rdaJ.vQxggP/eEJl4wIY3PS.Cc3R/28YstOq', 'zxc98djh232', 'orsospol1@gmail.com', '2021-08-01');
 
 --
 -- Indexes for dumped tables
@@ -87822,6 +88043,12 @@ ALTER TABLE `gallery`
   ADD KEY `idTables` (`idRelation`);
 
 --
+-- Indexes for table `gallerydetail`
+--
+ALTER TABLE `gallerydetail`
+  ADD PRIMARY KEY (`idGallerydetail`);
+
+--
 -- Indexes for table `jabatan`
 --
 ALTER TABLE `jabatan`
@@ -87862,6 +88089,12 @@ ALTER TABLE `laporan`
   ADD KEY `idOrsospol` (`idOrsospol`);
 
 --
+-- Indexes for table `layanan`
+--
+ALTER TABLE `layanan`
+  ADD PRIMARY KEY (`idLayanan`);
+
+--
 -- Indexes for table `layananeksternal`
 --
 ALTER TABLE `layananeksternal`
@@ -87872,6 +88105,12 @@ ALTER TABLE `layananeksternal`
 --
 ALTER TABLE `layananinternal`
   ADD PRIMARY KEY (`idLayanan`);
+
+--
+-- Indexes for table `layananunduhan`
+--
+ALTER TABLE `layananunduhan`
+  ADD PRIMARY KEY (`idLayananunduhan`);
 
 --
 -- Indexes for table `media`
@@ -87918,6 +88157,12 @@ ALTER TABLE `profile`
   ADD KEY `idTables` (`idRelation`);
 
 --
+-- Indexes for table `profilekesbangpol`
+--
+ALTER TABLE `profilekesbangpol`
+  ADD PRIMARY KEY (`idProfilekesbangpol`);
+
+--
 -- Indexes for table `progker`
 --
 ALTER TABLE `progker`
@@ -87937,6 +88182,12 @@ ALTER TABLE `regulasi`
   ADD PRIMARY KEY (`idRegulasi`);
 
 --
+-- Indexes for table `role`
+--
+ALTER TABLE `role`
+  ADD PRIMARY KEY (`idRole`);
+
+--
 -- Indexes for table `sakip`
 --
 ALTER TABLE `sakip`
@@ -87949,11 +88200,10 @@ ALTER TABLE `sosialmedia`
   ADD PRIMARY KEY (`idSosialmedia`);
 
 --
--- Indexes for table `widget`
+-- Indexes for table `users`
 --
-ALTER TABLE `widget`
-  ADD PRIMARY KEY (`idWidget`),
-  ADD KEY `idLayanan` (`idLayanan`);
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`idUser`);
 
 --
 -- Constraints for dumped tables
@@ -87976,12 +88226,6 @@ ALTER TABLE `kecamatan`
 --
 ALTER TABLE `kelurahan`
   ADD CONSTRAINT `villages_district_id_foreign` FOREIGN KEY (`kecamatan_id`) REFERENCES `kecamatan` (`idKecamatan`);
-
---
--- Constraints for table `media`
---
-ALTER TABLE `media`
-  ADD CONSTRAINT `media_ibfk_1` FOREIGN KEY (`idEntity`) REFERENCES `entitas` (`idEntitas`);
 
 --
 -- Constraints for table `member`

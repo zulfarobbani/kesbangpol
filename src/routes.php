@@ -23,6 +23,13 @@ $routes->add('welcome', new Route('/1', [
 $routes->add('LoginRegister', new Route('/login-register', [
     '_controller' => 'App\LoginRegister\Controller\LoginRegisterController::index',
 ]));
+$routes->add('login', new Route('/login', [
+    '_controller' => 'App\Login\Controller\LoginController::login',
+]));
+$routes->add('logout', new Route('/logout', [
+    '_controller' => 'App\Login\Controller\LoginController::logout',
+]));
+
 
 $routes->add('a', new Route('/hellos/get/{id}', [
     '_controller' => 'App\Calendar\Controller\LeapYearController::testing',
@@ -62,6 +69,27 @@ $routes->add('layananKontenUpdate', new Route('/layanan-kesbangpol/{id}/update',
 ]));
 $routes->add('layananKontenDelete', new Route('/layanan-kesbangpol/{id}/delete', [
     '_controller' => 'App\LayananKesbangpol\Controller\LayananKesbangpolController::layananKontenDelete',
+]));
+
+//role
+$routes->add('role', new Route('/role', [
+    '_controller' => 'App\Role\Controller\RoleController::index',
+]));
+$routes->add('roleStore', new Route('/role/store', [
+    '_controller' => 'App\Role\Controller\RoleController::store',
+]));
+$routes->add('roleGet', new Route('/role/{id}/get', [
+    '_controller' => 'App\Role\Controller\RoleController::get',
+]));
+$routes->add('roleUpdate', new Route('/role/{id}/update', [
+    '_controller' => 'App\Role\Controller\RoleController::update',
+]));
+$routes->add('roleDelete', new Route('/role/{id}/delete', [
+    '_controller' => 'App\Role\Controller\RoleController::delete',
+]));
+
+$routes->add('registerOrsospol', new Route('/register-orsospol', [
+    '_controller' => 'App\Register\Controller\RegisterController::register',
 ]));
 
 //layanan unduhan
@@ -115,8 +143,38 @@ $routes->add('parpol', new Route('/organisasi-terdaftar/parpol',[
     '_controller' => 'App\Orsospol\Controller\OrsospolController::parpol',
 ]));
 
+// Organisasi Terdaftar
+// ormas
+$routes->add('ormasKesbangpol', new Route('/organisasi-terdaftar-kesbangpol/ormas', [
+    '_controller' => 'App\OrsospolKesbangpol\Controller\OrsospolKesbangpolController::ormas',
+]));
+// okp
+$routes->add('okpKesbangpol', new Route('/organisasi-terdaftar-kesbangpol/okp', [
+    '_controller' => 'App\OrsospolKesbangpol\Controller\OrsospolKesbangpolController::okp',
+]));
+// komunitas
+$routes->add('komunitasKesbangpol', new Route('/organisasi-terdaftar-kesbangpol/komunitas', [
+    '_controller' => 'App\OrsospolKesbangpol\Controller\OrsospolKesbangpolController::komunitas',
+]));
+// parpol
+$routes->add('parpolKesbangpol', new Route('/organisasi-terdaftar-kesbangpol/parpol', [
+    '_controller' => 'App\OrsospolKesbangpol\Controller\OrsospolKesbangpolController::parpol',
+]));
+$routes->add('orsospolKesbangpolStore', new Route('/organisasi-terdaftar-kesbangpol/orsospol/store', [
+    '_controller' => 'App\OrsospolKesbangpol\Controller\OrsospolKesbangpolController::orsospolStore',
+]));
+$routes->add('orsospolKesbangpolGet', new Route('/organisasi-terdaftar-kesbangpol/orsospol/{id}/get', [
+    '_controller' => 'App\OrsospolKesbangpol\Controller\OrsospolKesbangpolController::orsospolGet',
+]));
+$routes->add('orsospolKesbangpolUpdate', new Route('/organisasi-terdaftar-kesbangpol/orsospol/{id}/update', [
+    '_controller' => 'App\OrsospolKesbangpol\Controller\OrsospolKesbangpolController::orsospolUpdate',
+]));
+$routes->add('orsospolKesbangpolDelete', new Route('/organisasi-terdaftar-kesbangpol/orsospol/{id}/delete', [
+    '_controller' => 'App\OrsospolKesbangpol\Controller\OrsospolKesbangpolController::orsospolDelete',
+]));
+
 //data-organisasi
-$routes->add('dataOrganisasi', new Route('/data-organisasi',[
+$routes->add('dataOrganisasi', new Route('/data-organisasi', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::dataOrganisasi',
 ]));
 
@@ -165,6 +223,8 @@ $routes->add('informasiPengumuman', new Route('/informasi-pengumuman', [
 $routes->add('strukturOrganisasiTerdaftar', new Route('/struktur-organisasi-terdaftar', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::strukturOrganisasiTerdaftar',
 ]));
+
+
 
 
 //curd agenda start
@@ -227,6 +287,41 @@ $routes->add('pengumumanKontenDelete', new Route('/informasi-kesbangpol/pengumum
     '_controller' => 'App\PengumumanKesbangpol\Controller\PengumumanKesbangpolController::pengumumanKontenDelete',
 ]));
 
+//curd kontak darurat
+$routes->add('kontakdarurat', new Route('/informasi/kontak-darurat', [
+    '_controller' => 'App\KontakDarurat\Controller\KontakDaruratController::kontakdarurat',
+]));
+$routes->add('kontakdaruratStore', new Route('/informasi/kontak-darurat/store', [
+    '_controller' => 'App\KontakDarurat\Controller\KontakDaruratController::kontakdaruratStore',
+]));
+$routes->add('kontakdaruratGet', new Route('/informasi/kontak-darurat/{id}/get', [
+    '_controller' => 'App\KontakDarurat\Controller\KontakDaruratController::kontakdaruratGet',
+]));
+$routes->add('kontakdaruratUpdate', new Route('/informasi/kontak-darurat/{id}/update', [
+    '_controller' => 'App\KontakDarurat\Controller\KontakDaruratController::kontakdaruratUpdate',
+]));
+$routes->add('kontakdaruratDelete', new Route('/informasi/kontak-darurat/{id}/delete', [
+    '_controller' => 'App\KontakDarurat\Controller\KontakDaruratController::kontakdaruratDelete',
+]));
+
+//curd users
+$routes->add('users', new Route('/users', [
+    '_controller' => 'App\Users\Controller\UsersController::index',
+]));
+$routes->add('usersStore', new Route('/users/store', [
+    '_controller' => 'App\Users\Controller\UsersController::store',
+]));
+$routes->add('usersGet', new Route('/users/{id}/get', [
+    '_controller' => 'App\Users\Controller\UsersController::get',
+]));
+$routes->add('usersUpdate', new Route('/users/{id}/update', [
+    '_controller' => 'App\Users\Controller\UsersController::update',
+]));
+$routes->add('usersDelete', new Route('/users/{id}/delete', [
+    '_controller' => 'App\Users\Controller\UsersController::delete',
+]));
+
+
 
 $routes->add('berita', new Route('/informasi/berita', [
     '_controller' => 'App\Berita\Controller\BeritaController::index',
@@ -273,8 +368,44 @@ $routes->add('galeridelete', new Route('/informasi/galeri/delete/{id}', [
     '_controller' => 'App\Gallery\Controller\GalleryController::delete',
 ]));
 
-$routes->add('galeridetail', new Route('/informasi/galeri/detail', [
+$routes->add('galeridetail', new Route('/informasi/galeri/{id}/detail', [
     '_controller' => 'App\Gallery\Controller\GalleryController::detail',
+]));
+
+
+// CRUD Gallery
+$routes->add('gallery', new Route('/informasi-kesbangpol/gallery', [
+    '_controller' => 'App\GalleryKesbangpol\Controller\GalleryKesbangpolController::index'
+]));
+$routes->add('galleryCreate', new Route('/informasi-kesbangpol/gallery/create', [
+    '_controller' => 'App\GalleryKesbangpol\Controller\GalleryKesbangpolController::create'
+]));
+$routes->add('galleryStore', new Route('/informasi-kesbangpol/gallery/store', [
+    '_controller' => 'App\GalleryKesbangpol\Controller\GalleryKesbangpolController::store'
+]));
+$routes->add('galleryEdit', new Route('/informasi-kesbangpol/gallery/{id}/edit', [
+    '_controller' => 'App\GalleryKesbangpol\Controller\GalleryKesbangpolController::edit'
+]));
+$routes->add('galleryUpdate', new Route('/informasi-kesbangpol/gallery/{id}/update', [
+    '_controller' => 'App\GalleryKesbangpol\Controller\GalleryKesbangpolController::update'
+]));
+$routes->add('galleryDelete', new Route('/informasi-kesbangpol/gallery/{id}/delete', [
+    '_controller' => 'App\GalleryKesbangpol\Controller\GalleryKesbangpolController::delete'
+]));
+$routes->add('galleryDetail', new Route('/informasi-kesbangpol/gallery/{id}/detail', [
+    '_controller' => 'App\GalleryKesbangpol\Controller\GalleryKesbangpolController::detail'
+]));
+$routes->add('galleryReceipt', new Route('/informasi-kesbangpol/gallery/{id}/print-receipt', [
+    '_controller' => 'App\GalleryKesbangpol\Controller\GalleryKesbangpolController::print_receipt'
+]));
+$routes->add('galleryRetur', new Route('/informasi-kesbangpol/gallery/{id}/retur', [
+    '_controller' => 'App\GalleryKesbangpol\Controller\GalleryKesbangpolController::retur'
+]));
+$routes->add('galleryReturStore', new Route('/informasi-kesbangpol/gallery/{id}/retur-store', [
+    '_controller' => 'App\GalleryKesbangpol\Controller\GalleryKesbangpolController::retur_store'
+]));
+$routes->add('galleryGet', new Route('/informasi-kesbangpol/gallery/{id}/get', [
+    '_controller' => 'App\GalleryKesbangpol\Controller\GalleryKesbangpolController::get'
 ]));
 //crud galeri end
 
@@ -329,84 +460,6 @@ $routes->add('jenisorsospoldelete', new Route('/jenisorsospol/delete/{id}', [
     '_controller' => 'App\Jenisorsospol\Controller\JenisorsospolController::delete',
 ]));
 //crud jenisorsospol end
-
-//crud kabupaten start
-$routes->add('kabupaten', new Route('/kabupaten', [
-    '_controller' => 'App\Kabupaten\Controller\KabupatenController::index',
-]));
-
-$routes->add('kabupatencreate', new Route('/kabupaten/create', [
-    '_controller' => 'App\Kabupaten\Controller\KabupatenController::create',
-]));
-
-$routes->add('kabupatensimpan', new Route('/kabupaten/store', [
-    '_controller' => 'App\Kabupaten\Controller\KabupatenController::store',
-]));
-
-$routes->add('kabupatenedit', new Route('/kabupaten/edit/{id}', [
-    '_controller' => 'App\Kabupaten\Controller\KabupatenController::ReadOne',
-]));
-
-$routes->add('kabupatenupdate', new Route('/kabupaten/edit/{id}/update', [
-    '_controller' => 'App\Kabupaten\Controller\KabupatenController::update',
-]));
-
-$routes->add('kabupatendelete', new Route('/kabupaten/delete/{id}', [
-    '_controller' => 'App\Kabupaten\Controller\KabupatenController::delete',
-]));
-// crud kabupaten end
-
-//crud kecamatan start
-$routes->add('kecamatan', new Route('/kecamatan', [
-    '_controller' => 'App\Kecamatan\Controller\KecamatanController::index',
-]));
-
-$routes->add('kecamatancreate', new Route('/kecamatan/create', [
-    '_controller' => 'App\Kecamatan\Controller\KecamatanController::create',
-]));
-
-$routes->add('kecamatansimpan', new Route('/kecamatan/store', [
-    '_controller' => 'App\Kecamatan\Controller\KecamatanController::store',
-]));
-
-$routes->add('kecamatanedit', new Route('/kecamatan/edit/{id}', [
-    '_controller' => 'App\Kecamatan\Controller\KecamatanController::ReadOne',
-]));
-
-$routes->add('kecamatanupdate', new Route('/kecamatan/edit/{id}/update', [
-    '_controller' => 'App\Kecamatan\Controller\KecamatanController::update',
-]));
-
-$routes->add('kecamatandelete', new Route('/kecamatan/delete/{id}', [
-    '_controller' => 'App\Kecamatan\Controller\KecamatanController::delete',
-]));
-// crud kecamatan end
-
-//crud kelurahan start
-$routes->add('kelurahan', new Route('/kelurahan', [
-    '_controller' => 'App\Kelurahan\Controller\KelurahanController::index',
-]));
-
-$routes->add('kelurahancreate', new Route('/kelurahan/create', [
-    '_controller' => 'App\Kelurahan\Controller\KelurahanController::create',
-]));
-
-$routes->add('kelurahansimpan', new Route('/kelurahan/store', [
-    '_controller' => 'App\Kelurahan\Controller\KelurahanController::store',
-]));
-
-$routes->add('kelurahanedit', new Route('/kelurahan/edit/{id}', [
-    '_controller' => 'App\Kelurahan\Controller\KelurahanController::ReadOne',
-]));
-
-$routes->add('kelurahanupdate', new Route('/kelurahan/edit/{id}/update', [
-    '_controller' => 'App\Kelurahan\Controller\KelurahanController::update',
-]));
-
-$routes->add('kelurahandelete', new Route('/kelurahan/delete/{id}', [
-    '_controller' => 'App\Kelurahan\Controller\KelurahanController::delete',
-]));
-// crud kelurahan end
 
 //crud laporan start
 $routes->add('laporan', new Route('/laporan', [
@@ -642,6 +695,10 @@ $routes->add('pengumumanupdate', new Route('/informasi/pengumuman/edit/{id}/upda
 $routes->add('pengumumandelete', new Route('/informasi/pengumuman/delete/{id}', [
     '_controller' => 'App\Pengumuman\Controller\PengumumanController::delete',
 ]));
+
+$routes->add('pengumumanDetail', new Route('/informasi/pengumuman/{id}', [
+    '_controller' => 'App\Pengumuman\Controller\PengumumanController::detail',
+]));
 // crud pengumuman end
 
 
@@ -706,31 +763,106 @@ $routes->add('profileKesbangpoldelete', new Route('/profile-kesbangpol/delete/{i
 ]));
 //crud profile end
 
-//crud provinsi start
+// CRUD provinsi
 $routes->add('provinsi', new Route('/provinsi', [
     '_controller' => 'App\Provinsi\Controller\ProvinsiController::index',
 ]));
-
-$routes->add('provinsicreate', new Route('/provinsi/create', [
+$routes->add('provinsiCreate', new Route('/provinsi/create', [
     '_controller' => 'App\Provinsi\Controller\ProvinsiController::create',
 ]));
-
-$routes->add('provinsisimpan', new Route('/provinsi/store', [
+$routes->add('provinsiStore', new Route('/provinsi/store', [
     '_controller' => 'App\Provinsi\Controller\ProvinsiController::store',
 ]));
-
-$routes->add('provinsiedit', new Route('/provinsi/edit/{id}', [
-    '_controller' => 'App\Provinsi\Controller\ProvinsiController::ReadOne',
+$routes->add('provinsiEdit', new Route('/provinsi/{id}/edit', [
+    '_controller' => 'App\Provinsi\Controller\ProvinsiController::edit',
 ]));
-
-$routes->add('provinsiupdate', new Route('/provinsi/edit/{id}/update', [
+$routes->add('provinsiDetail', new Route('/provinsi/detail/{id}', [
+    '_controller' => 'App\Provinsi\Controller\ProvinsiController::detail',
+]));
+$routes->add('provinsiUpdate', new Route('/provinsi/{id}/update', [
     '_controller' => 'App\Provinsi\Controller\ProvinsiController::update',
 ]));
-
-$routes->add('provinsidelete', new Route('/provinsi/delete/{id}', [
+$routes->add('provinsiDelete', new Route('/provinsi/{id}/delete', [
     '_controller' => 'App\Provinsi\Controller\ProvinsiController::delete',
 ]));
-// crud provinsi end
+
+// CRUD kabupaten
+$routes->add('kabupaten', new Route('/kabupaten', [
+    '_controller' => 'App\Kabupaten\Controller\KabupatenController::index',
+]));
+$routes->add('kabupatenCreate', new Route('/kabupaten/create', [
+    '_controller' => 'App\Kabupaten\Controller\KabupatenController::create',
+]));
+$routes->add('kabupatenStore', new Route('/kabupaten/store', [
+    '_controller' => 'App\Kabupaten\Controller\KabupatenController::store',
+]));
+$routes->add('kabupatenEdit', new Route('/kabupaten/{id}/edit', [
+    '_controller' => 'App\Kabupaten\Controller\KabupatenController::edit',
+]));
+$routes->add('kabupatenDetail', new Route('/kabupaten/detail/{id}', [
+    '_controller' => 'App\Kabupaten\Controller\KabupatenController::detail',
+]));
+$routes->add('kabupatenUpdate', new Route('/kabupaten/{id}/update', [
+    '_controller' => 'App\Kabupaten\Controller\KabupatenController::update',
+]));
+$routes->add('kabupatenDelete', new Route('/kabupaten/{id}/delete', [
+    '_controller' => 'App\Kabupaten\Controller\KabupatenController::delete',
+]));
+$routes->add('kabupatenGet', new Route('/kabupaten/get/{id}', [
+    '_controller' => 'App\Kabupaten\Controller\KabupatenController::get',
+]));
+
+// CRUD kecamatan
+$routes->add('kecamatan', new Route('/kecamatan', [
+    '_controller' => 'App\Kecamatan\Controller\KecamatanController::index',
+]));
+$routes->add('kecamatanCreate', new Route('/kecamatan/create', [
+    '_controller' => 'App\Kecamatan\Controller\KecamatanController::create',
+]));
+$routes->add('kecamatanStore', new Route('/kecamatan/store', [
+    '_controller' => 'App\Kecamatan\Controller\KecamatanController::store',
+]));
+$routes->add('kecamatanDetail', new Route('/kecamatan/detail/{id}', [
+    '_controller' => 'App\Kecamatan\Controller\KecamatanController::detail',
+]));
+$routes->add('kecamatanEdit', new Route('/kecamatan/{id}/edit', [
+    '_controller' => 'App\Kecamatan\Controller\KecamatanController::edit',
+]));
+$routes->add('kecamatanUpdate', new Route('/kecamatan/{id}/update', [
+    '_controller' => 'App\Kecamatan\Controller\KecamatanController::update',
+]));
+$routes->add('kecamatanDelete', new Route('/kecamatan/{id}/delete', [
+    '_controller' => 'App\Kecamatan\Controller\KecamatanController::delete',
+]));
+$routes->add('kecamatanGet', new Route('/kecamatan/get/{id}', [
+    '_controller' => 'App\Kecamatan\Controller\KecamatanController::get',
+]));
+
+// CRUD kelurahan
+$routes->add('kelurahan', new Route('/kelurahan', [
+    '_controller' => 'App\Kelurahan\Controller\KelurahanController::index',
+]));
+$routes->add('kelurahanCreate', new Route('/kelurahan/create', [
+    '_controller' => 'App\Kelurahan\Controller\KelurahanController::create',
+]));
+$routes->add('kelurahanStore', new Route('/kelurahan/store', [
+    '_controller' => 'App\Kelurahan\Controller\KelurahanController::store',
+]));
+$routes->add('kelurahanDetail', new Route('/kelurahan/detail/{id}', [
+    '_controller' => 'App\Kelurahan\Controller\KelurahanController::detail',
+]));
+$routes->add('kelurahanEdit', new Route('/kelurahan/{id}/edit', [
+    '_controller' => 'App\Kelurahan\Controller\KelurahanController::edit',
+]));
+$routes->add('kelurahanUpdate', new Route('/kelurahan/{id}/update', [
+    '_controller' => 'App\Kelurahan\Controller\KelurahanController::update',
+]));
+$routes->add('kelurahanDelete', new Route('/kelurahan/{id}/delete', [
+    '_controller' => 'App\Kelurahan\Controller\KelurahanController::delete',
+]));
+$routes->add('kelurahanGet', new Route('/kelurahan/get/{id}', [
+    '_controller' => 'App\Kelurahan\Controller\KelurahanController::get',
+]));
 
 //crud regulasi start
 $routes->add('regulasi', new Route('/regulasi', [

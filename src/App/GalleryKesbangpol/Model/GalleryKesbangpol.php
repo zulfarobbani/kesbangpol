@@ -2,13 +2,15 @@
 
 namespace App\GalleryKesbangpol\Model;
 
+use App\GroupItem\Model\GroupItem;
+use App\Transaksi\Model\Transaksi;
 use Core\GlobalFunc;
 use PDOException;
 
 class GalleryKesbangpol extends GlobalFunc
 {
-    private $table = 'pengumuman';
-    private $primaryKey = 'idPengumuman';
+    private $table = 'gallery';
+    private $primaryKey = 'idGallery';
     public $conn;
 
     public function __construct()
@@ -17,67 +19,9 @@ class GalleryKesbangpol extends GlobalFunc
         $this->conn = $globalFunc->conn;
     }
 
-    public function selectAll()
+    public function countRows()
     {
-        $sql = "SELECT * FROM " . $this->table . " LEFT JOIN media ON " . $this->table . ".".$this->primaryKey." = media.idRelation";
-        try {
-            $query = $this->conn->prepare($sql);
-            $query->execute();
-            $data = $query->fetchAll();
-
-            return $data;
-        } catch (PDOException $e) {
-            echo $e;
-            die();
-        }
-    }
-
-    // public function create($data_test = [])
-    // {
-    //      $idBerita = uniqid("brt");
-    //      $namaBerita = $data_test['namaBerita'];
-    //      $deskripsiBerita = $data_test['deskripsiBerita'];
-    //      $idRelation = $data_test['idRelation'];
-    //      $approvalBerita = $data_test['approvalBerita'];
-    //      $dateCreate = $data_test['dateCreate'];
-    //      $idMedia = $data_test['idMedia'];
-
-    //     $sql = "INSERT INTO ".$this->table." VALUES ('$idBerita','$namaBerita', '$deskripsiBerita', '$idRelation', '$approvalBerita', '$dateCreate', '$idMedia')";
-
-    //     try {
-    //         $data = $this->conn->prepare($sql);
-
-    //         $data->execute();
-    //         return $data->rowCount();
-    //     } catch (PDOException $e) {
-    //         echo $e;
-    //         die();
-    //     }
-    // }
-
-    public function create($datas)
-    {
-        $idPengumuman = uniqid('png');
-        $namaPengumuman = $datas->get('namaPengumuman');
-        $deskripsiPengumuman = $datas->get('deskripsiPengumuman');
-        $dateCreate = date('Y-m-d');
-
-        $sql = "INSERT INTO " . $this->table . " VALUES ('$idPengumuman', '$namaPengumuman', '$deskripsiPengumuman', '$dateCreate')";
-
-        try {
-            $data = $this->conn->prepare($sql);
-
-            $data->execute();
-            return $idPengumuman;
-        } catch (PDOException $e) {
-            echo $e;
-            die();
-        }
-    }
-
-    public function selectOne($id)
-    {
-        $sql = "SELECT * FROM " . $this->table . " LEFT JOIN media ON " . $this->table . "." . $this->primaryKey . " = media.idRelation WHERE " . $this->primaryKey . " = '$id'";
+        $sql = "SELECT COUNT(".$this->primaryKey.") as count FROM " . $this->table;
 
         try {
             $query = $this->conn->prepare($sql);
@@ -90,18 +34,69 @@ class GalleryKesbangpol extends GlobalFunc
             die();
         }
     }
-    public function update($idPengumuman, $datas)
-    {
-        $namaPengumuman = $datas->get('namaPengumuman');
-        $deskripsiPengumuman = $datas->get('deskripsiPengumuman');
 
-        $sql = "UPDATE " . $this->table . " SET namaPengumuman = '$namaPengumuman', deskripsiPengumuman = '$deskripsiPengumuman' WHERE ".$this->primaryKey." ='$idPengumuman'";
-        
+    public function selectAll($where = "")
+    {
+        $sql = "SELECT * FROM " . $this->table ." LEFT JOIN media ON media.idRelation = ".$this->table.".".$this->primaryKey." ".$where;
+
+        try {
+            $query = $this->conn->prepare($sql);
+            $query->execute();
+            $data = $query->fetchAll();
+
+            return $data;
+        } catch (PDOException $e) {
+            echo $e;
+            die();
+        }
+    }
+
+    public function create($datas)
+    {
+        $id = uniqid('prt');
+        $namaGallery = $datas->get('namaGallery');
+        $deskripsiGallery = $datas->get('deskripsiGallery');
+        $dateCreate = date('Y-m-d');
+
+        $sql = "INSERT INTO " . $this->table . " VALUES ('$id', '$namaGallery', '$deskripsiGallery', '', '', '$dateCreate')";
+
         try {
             $data = $this->conn->prepare($sql);
             $data->execute();
 
-            return $idPengumuman;
+            return $id;
+        } catch (PDOException $e) {
+            echo $e;
+            die();
+        }
+    }
+    public function selectOne($id)
+    {
+        $sql = "SELECT * FROM " . $this->table . " LEFT JOIN media ON media.idRelation = ".$this->table.".".$this->primaryKey." WHERE ".$this->primaryKey." = '$id'";
+
+        try {
+            $query = $this->conn->prepare($sql);
+            $query->execute();
+            $data = $query->fetch();
+
+            return $data;
+        } catch (PDOException $e) {
+            echo $e;
+            die();
+        }
+    }
+    public function update($id, $datas)
+    {
+        $namaGallery = $datas->get('namaGallery');
+        $deskripsiGallery = $datas->get('deskripsiGallery');
+
+        $sql = "UPDATE " . $this->table . " SET namaGallery = '$namaGallery', deskripsiGallery = '$deskripsiGallery' WHERE ".$this->primaryKey." = '$id'";
+
+        try {
+            $data = $this->conn->prepare($sql);
+            $data->execute();
+
+            return $id;
         } catch (PDOexception $e) {
             echo $e;
             die();
@@ -110,15 +105,27 @@ class GalleryKesbangpol extends GlobalFunc
 
     public function delete($id)
     {
-        $sql = "DELETE FROM " . $this->table . " WHERE " . $this->primaryKey . " = '$id'";
+        $sql = "DELETE FROM " . $this->table . " WHERE ".$this->primaryKey." = '$id'";
 
         try {
             $query = $this->conn->prepare($sql);
             $query->execute();
+
             return $query;
         } catch (PDOException $e) {
             dump($e);
             die();
         }
+    }
+
+    public function chronologyMessage($action, $user, $object)
+    {
+        $message = [
+            'store' => $user." telah menambah gallery \"".$object['gallery']."\"",
+            'update' => $user." telah mengubah gallery \"".$object['gallery']."\"",
+            'delete' => $user." telah menghapus gallery \"".$object['gallery']."\""
+        ];
+
+        return $message[$action];
     }
 }

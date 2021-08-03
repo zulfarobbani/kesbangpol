@@ -2,6 +2,7 @@
 
 namespace Core;
 
+use App\KontakDarurat\Model\KontakDarurat;
 use Config\Database;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,15 +16,18 @@ class GlobalFunc
 
     public function __construct()
     {
+        $this->baseUrl = 'http://crt-framework.com/';
         $db = new Database();
         $this->conn = $db->conn;
-        $this->baseUrl = 'http://crt-framework.com/';
     }
 
     public function beginSession()
     {
-        $this->session = new Session();
-        $this->session->start();
+        // $this->dd($this->session->isStarted());
+        if ($this->session == null || $this->session->isStarted() == false) {
+            $this->session = new Session();
+            $this->session->start();
+        }
     }
 
     public function render_template($page, $data = [], $request = null)
@@ -31,12 +35,20 @@ class GlobalFunc
         if (!is_null($request)) {
             extract($request->attributes->all(), EXTR_SKIP);
         }
-        extract($data, EXTR_SKIP);
 
-        // ** fungsi panggil asset **
-        $assets = function ($pathFile) {
-            return $this->baseUrl.'assets/'.$pathFile;
-        };
+        $this->beginSession();
+
+        $data['namaUser'] = !is_null($this->session) ? $this->session->get('namaUser') : null;
+        $data['namaOrsospol'] = !is_null($this->session) ? $this->session->get('namaOrsospol') : null;
+        $data['noAHU'] = !is_null($this->session) ? $this->session->get('noAHU') : null;
+        $data['idJenisorsospol'] = !is_null($this->session) ? $this->session->get('idJenisorsospol') : null;
+        $data['idRole'] = !is_null($this->session) ? $this->session->get('idRole') : null;
+
+        $kontakdaruratModel = new KontakDarurat();
+        $kontakdarurat = $kontakdaruratModel->selectAll();
+        $data['kontakDarurat'] = $kontakdarurat;
+
+        extract($data, EXTR_SKIP);
 
         ob_start();
         include sprintf(__DIR__.'/../../src/pages/%s.php', $page);
@@ -70,5 +82,13 @@ class GlobalFunc
 
         $response->headers->set('Content-Type', $content_type);
         return $response;
+    }
+
+    public function dd(...$var)
+    {
+        foreach ($var as $key => $value) {
+            dump($value);
+        }
+        die();
     }
 }

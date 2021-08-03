@@ -19,7 +19,7 @@
       <div class="col-md-8 top-1 start-0 ps-5 mb-3">
         <?php include(__DIR__ . '/navtabsprofil.php') ?>
         <!-- START CODE -->
-        <a class="btn btn-outline-danger float-end navy d-block" href="/profile-kesbangpol"><i class="fas fa-edit"></i> Edit</a>
+        
         <h4 class="mt-5">Visi</h4>
         <p><?= $visimisi['visi'] ?></p>
         <h4 class="mt-5">Misi</h4>

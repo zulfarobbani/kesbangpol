@@ -17,10 +17,11 @@ class Media extends GlobalFunc
         $this->conn = $globalFunc->conn;
     }
 
-    public function selectAll()
+    public function selectAll($where = "")
     {
-        $sql = "SELECT media.*, entitas.idEntitas, member.idMember FROM " . $this->table . " 
-        LEFT JOIN entitas ON media.idEntity = entitas.idEntitas LEFT JOIN member on media.idRelation = member.idMember";
+        // $sql = "SELECT media.*, entitas.idEntitas, member.idMember FROM " . $this->table . " 
+        // LEFT JOIN entitas ON media.idEntity = entitas.idEntitas LEFT JOIN member on media.idRelation = member.idMember";
+        $sql = "SELECT * FROM " . $this->table . " " . $where;
 
         try {
             $query = $this->conn->prepare($sql);
@@ -39,7 +40,7 @@ class Media extends GlobalFunc
         $file = $fileUpload;
         $namaMedia = $file['name'];
         $namaSementara = $file['tmp_name'];
-        $ekstensi_diperbolehkan    = array('png', 'jpg');
+        $ekstensi_diperbolehkan = array('png', 'jpg');
         $x = explode('.', $namaMedia);
         $nama = strtolower($x['0']);
         $ekstensi = strtolower(end($x));
@@ -52,11 +53,10 @@ class Media extends GlobalFunc
         }
         $dateCreate = date('Y-m-d');
 
-        $sql = "INSERT INTO " . $this->table . " VALUES ('$idMedia', '$filename', '$idRelation', $idEntity, '$jenisDokumen', '$dateCreate')";
+        $sql = "INSERT INTO " . $this->table . " VALUES ('$idMedia', '$filename', '$idRelation', '$idEntity', '$jenisDokumen', '$dateCreate')";
 
         try {
             $data = $this->conn->prepare($sql);
-
             $data->execute();
             
             return $data->rowCount();

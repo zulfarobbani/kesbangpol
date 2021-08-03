@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,60 +10,67 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
     <title>Dashboard</title>
     <style type="text/css">
-        a{
+        a {
             text-decoration: none;
         }
     </style>
 </head>
+
 <body style="background-color : #EEEEEE;">
-<div class="container-fluid">
-<img class="img-fluid"src="../assets/image/Header kesbangpol Revisi ke 5-01.png" alt="header" style="height: 200; width: 1284;">
-<div class="row justify-content-center">
-    <div class="card" style="width: 18rem;">
-        <a href="#"><img src="..." class="card-img img-fluid" alt="..."></a>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <a href="#"><img src="..." class="card-img img-fluid" alt="..."></a>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <a href="#"><img src="..." class="card-img img-fluid" alt="..."></a>
-    </div>
-</div>
-    <h1 class="d-flex justify-content-center" style="color: #004080;">Selamat Datang</h1>
-    <h3 class="d-flex justify-content-center" style="color: #1a8cff; ">Di Situs Resmi Kantor Kesatuan Bangsa dan Politik Kota Cimahi</h3>
-    
+<img class="img-fluid" src="../assets/image/Header kesbangpol Revisi ke 5-01.png" alt="header" style="height: 200; width: 1284;">
+    <div class="container">
+        <div class="row justify-content-center mb-3">
+            <dic class="col-4">
+                <a href="#"><img style="height: 120px;" src="/assets/image/kesbangpol1.png" class="card-img img-fluid" alt="..."></a>
+            </dic>
+            <div class="col-4">
+                <a href="#"><img style="height: 120px;" src="/assets/image/kesbangpol2.png" class="card-img img-fluid" alt="..."></a>
+            </div>
+            <div class="col-4">
+                <a href="#"><img style="height: 120px;" src="/assets/image/kesbangpol3.png" class="card-img img-fluid" alt="..."></a>
+            </div>
+        </div>
+        <h1 class="d-flex justify-content-center" style="color: #004080;">Selamat Datang</h1>
+        <h3 class="d-flex justify-content-center" style="color: #1a8cff; ">Di Situs Resmi Kantor Kesatuan Bangsa dan Politik Kota Cimahi</h3>
+
         <div class="row img-fluid mt-5">
             <div class="col d-flex justify-content-center">
                 <a href="/beranda"><img src="../assets/icon/Beranda.png" alt="home">
-                    <h5 class="text-info text-center">Beranda</h5></a> 
+                    <h5 class="text-info text-center">Beranda</h5>
+                </a>
             </div>
             <div class="col d-flex justify-content-center">
                 <a href="/struktur-organisasi"><img src="../assets/icon/Icon Profil dashboard.png" alt="profil">
-                    <h5 class="text-info text-center">Profil</h5></a>
+                    <h5 class="text-info text-center">Profil</h5>
+                </a>
             </div>
             <div class="col d-flex justify-content-center">
-                <a href="/ormas"  class="text-info text-center"><img src="../assets/icon/Organisasi terdaftar.png" alt="Organisasi Terdaftar">
-                    <h5>Organisasi<br>Terdaftar</h5></a> 
+                <a href="/ormas" class="text-info text-center"><img src="../assets/icon/Organisasi terdaftar.png" alt="Organisasi Terdaftar">
+                    <h5>Organisasi<br>Terdaftar</h5>
+                </a>
             </div>
             <div class="col d-flex justify-content-center">
-                <a href="/forum-umum"  class="text-info text-center"><img src="../assets/icon/Forum orsospol.png" alt="Forum Orsospol">
-                    <h5>Forum<br>ORSOSPOL</h5></a>
-            </div> 
+                <a href="/forum-umum" class="text-info text-center"><img src="../assets/icon/Forum orsospol.png" alt="Forum Orsospol">
+                    <h5>Forum<br>ORSOSPOL</h5>
+                </a>
+            </div>
             <div class="col d-flex justify-content-center">
                 <a href=""><img src="../assets/icon/Icon Layanan Dashboard.png" alt="Layanan">
-                    <h5 class="text-info text-center">Layanan</h5></a> 
+                    <h5 class="text-info text-center">Layanan</h5>
+                </a>
             </div>
             <div class="col d-flex justify-content-center">
                 <a href="/hubungi-kami"><img src="../assets/icon/Contact us.png" alt="Hubungi Kami">
-                    <h5 class="text-info text-center">Hubungi<br>Kami</h5></a>   
+                    <h5 class="text-info text-center">Hubungi<br>Kami</h5>
+                </a>
             </div>
         </div>
-        <?php include(__DIR__.'/footer.php' )?>
     </div>
+    <?php include(__DIR__ . '/footer.php') ?>
 
 
 
-<!-- <div class="position-absolute bottom-0 end-0" id="ko   pi-covid"></div>
+    <!-- <div class="position-absolute bottom-0 end-0" id="ko   pi-covid"></div>
 <script>
   var f = document.createElement("iframe");
   f.src = "https://kopi.dev/widget-covid-19/";
@@ -75,6 +83,7 @@
   rootEl.appendChild(f);
 </script> -->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
+
 </html>

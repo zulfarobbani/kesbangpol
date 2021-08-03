@@ -33,7 +33,7 @@ class Provinsi extends GlobalFunc
     }
     public function create($data_test = [])
     {
-        $id = uniqid(pro);
+        $id = uniqid('pro');
          $namaProvinsi = $data_test['namaProvinsi'];
 
         $sql = "INSERT INTO ".$this->table." VALUES ('$id','$namaProvinsi')";

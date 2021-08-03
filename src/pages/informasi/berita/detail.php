@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <title><?= $detail_berita['namaBerita'] ?></title>
+    <title><?= $detail['namaBerita'] ?></title>
 </head>
 
 <body style="background-color : #EEEEEE;">
@@ -19,12 +19,12 @@
         <div class="row">
             <div class="col-md-8 top-1 start-0 ps-5 mb-3">
                 <!-- START CODE -->
-                <h6 class="fw-normal mt-5">Informasi KESBANG Terkini</h6>
+                <h6 class="fw-normal mt-5"><a href="/informasi/berita" class="btn btn-sm btn-outlined-light"><i class="fas fa-arrow-left"></i></a> Informasi KESBANG Terkini</h6>
                 <div class="row g-4">
                     <div class="col-12">
-                        <h3 class="fw-bold mt-3 mb-4"><?= $detail_berita['namaBerita'] ?></h3>
-                        <img class="w-100" src="/assets/media/<?= $detail_berita['pathMedia'] ?>" alt="Gambar Berita">
-                        <p class="mt-4" align="justify"><?= html_entity_decode(nl2br($detail_berita['deskripsiBerita'])) ?></p>
+                        <h3 class="fw-bold mt-3 mb-4"><?= $detail['namaBerita'] ?></h3>
+                        <img class="w-100" src="/assets/media/<?= $detail['pathMedia'] ?>" alt="Gambar Berita">
+                        <p class="mt-4" align="justify"><?= html_entity_decode(nl2br($detail['deskripsiBerita'])) ?></p>
                     </div>
                 </div>
             </div>

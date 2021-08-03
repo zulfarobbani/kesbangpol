@@ -15,3 +15,9 @@ $(".gallery .nest .subnest a").click(function() {
         scrollTop: parseInt($("#top").offset().top)
     }, 400);
 });
+
+$('.galleryDetail').on('click', function() {
+    $('.namaGallerydetail').html($(this).attr('data-name'))
+    $('.deskripsiGallerydetail').html($(this).attr('data-deskripsi'))
+    $('.imageGallerydetail').prop('src', $(this).attr('data-image'))
+})

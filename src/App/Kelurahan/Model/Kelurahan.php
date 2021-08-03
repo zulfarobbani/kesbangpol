@@ -95,4 +95,20 @@ class Kelurahan extends GlobalFunc
             die();
         }
     }
+
+    public function get($id)
+    {
+        $sql = "SELECT * FROM ".$this->table." WHERE kecamatan_id = '$id'";
+
+        try {
+            $query = $this->conn->prepare($sql);
+            $query->execute();
+            $data = $query->fetchAll();
+            
+            return $data;
+        } catch (PDOException $e) {
+            echo $e;
+            die();
+        }
+    }
 }

@@ -74,11 +74,8 @@ class RegulasiController extends GlobalFunc
 
         if ($_FILES['fileRegulasi']['name'] != '') {
             $media = new Media();
-            // select existing media regulasi
             $selectRegulasi = $media->selectOneMedia("idRelation = '$id'");
-            // delete existing media regulasi
             $deleteRegulasi = $media->delete($selectRegulasi['idMedia']);
-            // delete file media regulasi
             $deleteFileRegulasi = $media->deleteFile($selectRegulasi['pathMedia']);
 
             $idMedia = uniqid('med');

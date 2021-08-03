@@ -5,6 +5,7 @@ namespace App\Pengumuman\Controller;
 use App\Pengumuman\Model\Pengumuman;
 use App\Media\Model\Media;
 use Core\GlobalFunc;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 
 class PengumumanController extends GlobalFunc
@@ -50,14 +51,13 @@ class PengumumanController extends GlobalFunc
         $this->model->create($data_test);
         $this->model2->create($idMedia, $fileupload, $dateCreate, $idRelation );
         
-        return header("location:http://kesbangpol.com/informasi/pengumuman");
+        return new RedirectResponse("/informasi/pengumuman");
     }
 
     public function ReadOne(Request $request)
     {
         $id = $request->attributes->get('id');
         $datas = $this->model->selectOne($id);
-
     
         return $this->render_template('informasi/pengumuman/edit', ['idPengumuman' => $datas['idPengumuman'], 'namaPengumuman'=>$datas['namaPengumuman'], 'deskripsiPengumuman'=>$datas['deskripsiPengumuman']]);
     }
@@ -76,7 +76,7 @@ class PengumumanController extends GlobalFunc
         
        $this->model->update($id, $data_test);
 
-       return header("location:http://kesbangpol.com/informasi/pengumuman");
+       return new RedirectResponse("/informasi/pengumuman");
     }
     public function delete(Request $request)
     {
@@ -84,6 +84,14 @@ class PengumumanController extends GlobalFunc
         $this->model->delete($id);
 
 
-        return header("location:http://kesbangpol.com/informasi/pengumuman");
+        return new RedirectResponse("/informasi/pengumuman");
+    }
+
+    public function detail(Request $request)
+    {
+        $id = $request->attributes->get('id');
+        $datas = $this->model->selectOne($id);
+
+        return $this->render_template('/informasi/pengumuman/detail', ['detail' => $datas]);
     }
 }

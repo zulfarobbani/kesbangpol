@@ -18,8 +18,8 @@
 
 <style type="text/css">
     footer{
-        background-image: url(/assets/image/footer.png);
-        background-size: cover;
+        /* background-image: url(/assets/image/footer.png);
+        background-size: cover; */
     }
     #rowfooter{
         padding-top: 5%;

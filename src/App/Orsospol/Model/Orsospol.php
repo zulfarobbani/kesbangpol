@@ -16,14 +16,14 @@ class Orsospol extends GlobalFunc
         $this->conn = $globalFunc->conn;
     }
     
-    public function selectAll($idJenisOrsospol)
+    public function selectAll($idJenisOrsospol, $moreWhere = "")
     {
         $sql = "SELECT orsospol.*, provinsi.*, kabupaten.*, kecamatan.*, kelurahan.*, jenisorsospol.*, sosialmedia.* FROM ".$this->table." LEFT JOIN provinsi ON orsospol   .idProvinsi = provinsi.idProvinsi 
         LEFT JOIN kabupaten ON orsospol .idKabupaten = kabupaten.idKabupaten
         LEFT JOIN kecamatan ON orsospol .idKecamatan = kecamatan.idKecamatan
         LEFT JOIN kelurahan ON orsospol .idKelurahan = kelurahan.idKelurahan
         LEFT JOIN jenisorsospol ON orsospol.idJenisorsospol = jenisorsospol.idJenisorsospol
-        LEFT JOIN sosialmedia ON orsospol.idSosialmedia = sosialmedia.idSosialmedia WHERE orsospol.idJenisorsospol = '$idJenisOrsospol'";
+        LEFT JOIN sosialmedia ON orsospol.idSosialmedia = sosialmedia.idSosialmedia WHERE orsospol.idJenisorsospol = '$idJenisOrsospol' ".$moreWhere;
         
         try {
             $query = $this->conn->prepare($sql);

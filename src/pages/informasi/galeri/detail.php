@@ -18,53 +18,18 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 top-1 start-0 ps-5 mb-3">
-                <h3 class="fw-normal mt-5">Judul Gallery</h3>
+                <h3 class="fw-normal mt-5"><a href="/informasi/galeri" class="btn btn-sm btn-outlined-light"><i class="fas fa-arrow-left"></i></a> <?= $detail['namaGallery'] ?></h3>
                 <div id="top"></div>
                 <section class="gallery">
                     <div class="row nest">
                         <a href="#" class="close"></a>
-                        <div class="col-md-4 col-sm-6 subnest">
-                            <a href="#item02">
-                                <img src="https://cdn.dribbble.com/users/545884/screenshots/3981307/lorena2.png" class="img-fluid" alt="">
-                            </a>
-                        </div>
-
-                        <div class="col-md-4 col-sm-6 subnest">
-                            <a href="#item02">
-                                <img src="https://cdn.dribbble.com/users/545884/screenshots/3892302/contact.png" class="img-fluid" alt="">
-                            </a>
-                        </div>
-
-                        <div class="col-md-4 col-sm-6 subnest">
-                            <a href="#item02">
-                                <img src="https://cdn.dribbble.com/users/545884/screenshots/4154721/dive--001.png" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-6 subnest">
-                            <a class="image" href="#item01">
-                                <img src="https://cdn.dribbble.com/users/545884/screenshots/4356121/darko--dr.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-6 subnest">
-                            <a class="image" href="#item02">
-                                <img src="https://cdn.dribbble.com/users/545884/screenshots/3695553/news.png" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-6 subnest">
-                            <a class="image" href="#item01">
-                                <img src="https://cdn.dribbble.com/users/3816/screenshots/15864817/media/9da962b6a1fe3f636e14d15a877ce108.png" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-6 subnest">
-                            <a class="image" href="#item01">
-                                <img src="https://cdn.dribbble.com/users/545884/screenshots/3148799/technical-book.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-6 subnest">
-                            <a class="image" href="#item01">
-                                <img src="https://cdn.dribbble.com/users/545884/screenshots/2883479/cover.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
+                        <?php foreach ($detailItem as $key => $value) { ?>
+                            <div class="col-md-4 col-sm-6 subnest">
+                                <a href="#item01" class="galleryDetail" data-image="/assets/media/<?= $value['pathMedia'] ?>" data-name="<?= $value['namaGallerydetail'] ?>" data-deskripsi="<?= $value['deskripsiGallerydetail'] ?>">
+                                    <img src="/assets/media/<?= $value['pathMedia'] ?>" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                        <?php } ?>
                     </div> <!-- / row -->
 
                     <!-- Item 01 -->
@@ -72,11 +37,11 @@
 
                         <div class="row">
                             <div class="description col-md-6 col-sm-12">
-                                <h1>Item 01</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
+                                <h1 class="namaGallerydetail"></h1>
+                                <p class="deskripsiGallerydetail"></p>
                             </div>
 
-                            <img src="https://cdn.dribbble.com/users/545884/screenshots/3981307/lorena2.png" alt="" class="col-md-6 col-sm-12">
+                            <img class="imageGallerydetail" src="" alt="" class="col-md-6 col-sm-12">
                         </div>
                     </div> <!-- / row -->
 

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
     <link rel="stylesheet" href="/assets/css/style.css">
 
-    <title>Struktur Organisasi</title>
+    <title>Berita</title>
 </head>
 
 <body style="background-color : #EEEEEE; color:navy;">
@@ -78,6 +78,14 @@
                                         <div class="mb-3">
                                             <label for="exampleFormControlInput1" class="form-label">Cover Berita</label>
                                             <input type="file" name="coverBerita" class="form-control">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="">Jenis Berita</label>
+                                            <select name="jenisBerita" class="form-control">
+                                                <option value="">-- Jenis berita --</option>
+                                                <option value="1">Berita Kesbangpol</option>
+                                                <option value="2">Berita Orsospol</option>
+                                            </select>
                                         </div>
                                         <div class="mb-3">
                                             <label for="exampleFormControlInput1" class="form-label">Konten Berita</label>

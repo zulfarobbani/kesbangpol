@@ -4,6 +4,7 @@ namespace App\Kecamatan\Controller;
 
 use App\Kecamatan\Model\Kecamatan;
 use Core\GlobalFunc;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 
 
@@ -79,5 +80,13 @@ class KecamatanController extends GlobalFunc
 
 
         return header("location:http://kesbangpol.com/kecamatan");
+    }
+
+    public function get(Request $request)
+    {
+        $idKabupaten = $request->attributes->get('id');
+        $data = $this->model->get($idKabupaten);
+
+        return new JsonResponse($data);
     }
 }

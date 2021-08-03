@@ -19,7 +19,7 @@ class Berita extends GlobalFunc
 
     public function selectAll()
     {
-        $sql = "SELECT * FROM " . $this->table . " LEFT JOIN member ON " . $this->table . ".idRelation = member.idMember LEFT JOIN media ON " . $this->table . ".idRelation = media.idMedia";
+        $sql = "SELECT * FROM " . $this->table . " LEFT JOIN media ON " . $this->table . ".".$this->primaryKey." = media.idRelation";
         try {
             $query = $this->conn->prepare($sql);
             $query->execute();
@@ -60,12 +60,13 @@ class Berita extends GlobalFunc
         $idBerita = uniqid('nws');
         $namaBerita = $datas->get('namaBerita');
         $deskripsiBerita = $datas->get('deskripsiBerita');
+        $jenisBerita = $datas->get('jenisBerita');
         $idRelation = '1';
         $approvalBerita = '1';
         $authorBerita = '1';
         $dateCreate = date('Y-m-d');
 
-        $sql = "INSERT INTO " . $this->table . " VALUES ('$idBerita', '$namaBerita', '$deskripsiBerita', '$idRelation', '$approvalBerita', '$authorBerita', '$dateCreate')";
+        $sql = "INSERT INTO " . $this->table . " VALUES ('$idBerita', '$namaBerita', '$deskripsiBerita', '$idRelation', '$approvalBerita', '$authorBerita', '$dateCreate', '$jenisBerita')";
 
         try {
             $data = $this->conn->prepare($sql);
@@ -97,12 +98,13 @@ class Berita extends GlobalFunc
     {
         $namaBerita = $datas->get('namaBerita');
         $deskripsiBerita = $datas->get('deskripsiBerita');
+        $jenisBerita = $datas->get('jenisBerita');
         $idRelation = '1';
         $approvalBerita = '1';
         $authorBerita = '1';
         $dateCreate = date('Y-m-d');
 
-        $sql = "UPDATE " . $this->table . " SET namaBerita = '$namaBerita', deskripsiBerita = '$deskripsiBerita', idRelation = '$idRelation', approvalBerita = '$approvalBerita', authorBerita = '$authorBerita' WHERE ".$this->primaryKey." ='$idBerita'";
+        $sql = "UPDATE " . $this->table . " SET namaBerita = '$namaBerita', deskripsiBerita = '$deskripsiBerita', idRelation = '$idRelation', approvalBerita = '$approvalBerita', authorBerita = '$authorBerita', jenisBerita = '$jenisBerita' WHERE ".$this->primaryKey." ='$idBerita'";
         
         try {
             $data = $this->conn->prepare($sql);
