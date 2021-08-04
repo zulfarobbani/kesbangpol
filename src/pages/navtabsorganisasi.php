@@ -41,6 +41,6 @@
     </div>
   </div>
 </div>
-<?php if ($idRole == '9asdkqhjwew') { ?>
+<?php if ($idRole != '') { ?>
 <a class="btn btn-outline-danger d-block float-end navy" href="/organisasi-terdaftar-kesbangpol/ormas"><i class="fas fa-edit"></i> Edit</a>
 <?php } ?>

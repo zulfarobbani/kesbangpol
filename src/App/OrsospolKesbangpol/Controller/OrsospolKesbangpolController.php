@@ -19,13 +19,15 @@ class OrsospolKesbangpolController extends GlobalFunc
     public function __construct()
     {
         $this->ormas = new OrsospolKesbangpol();
+        parent::beginSession();
     }
 
     public function ormas(Request $request)
     {
+        $idUser = $this->session->get('idUser');
         $jenisOrsospol = new JenisOrsospolKesbangpol();
         $data_jenisOrssospol = $jenisOrsospol->selectAll("WHERE namaJenisorsospol = 'ORMAS'")[0];
-        $datas = $this->ormas->selectAll($data_jenisOrssospol['idJenisorsospol']);
+        $datas = $this->ormas->selectAll($data_jenisOrssospol['idJenisorsospol'], "AND idUser = '$idUser'");
 
         $provinsi = new Provinsi();
         $data_provinsi = $provinsi->selectAll();

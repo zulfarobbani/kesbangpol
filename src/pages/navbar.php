@@ -48,7 +48,7 @@
           </li> 
           <li class="nav-item text-center px-3 py-1">
             <div class="container-fluid">
-              <a class="nav-link " href="/hubungi-kami"  style="color: white;">
+              <a class="nav-link " href="https://linktr.ee/ardhin" target="_blank" style="color: white;">
               <span class="material-icons-outlined fs-1 font-center" style="color: white;">support_agent</span>
               <br>Hubungi Kami</a>
             </div>

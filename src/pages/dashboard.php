@@ -60,7 +60,7 @@
                 </a>
             </div>
             <div class="col d-flex justify-content-center">
-                <a href="/hubungi-kami"><img src="../assets/icon/Contact us.png" alt="Hubungi Kami">
+                <a href="https://linktr.ee/ardhin" target="_blank"><img src="../assets/icon/Contact us.png" alt="Hubungi Kami">
                     <h5 class="text-info text-center">Hubungi<br>Kami</h5>
                 </a>
             </div>

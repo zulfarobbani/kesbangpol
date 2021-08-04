@@ -23,9 +23,11 @@
                     <div class="card-body">
                         <h5>ORMAS Berbadan Hukum Terdaftar</h5>
                         <div class="container mt-4">
+                            <?php if ($idRole == '9asdkqhjwew') { ?>
                             <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
                                 Tambah
                             </button>
+                            <?php } ?>
                             <table class="table table-sm">
                                 <thead>
                                     <tr>
@@ -48,9 +50,11 @@
                                                 <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
                                                     Edit
                                                 </button>
+                                                <?php if ($idRole == '9asdkqhjwew') { ?>
                                                 <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
                                                     Hapus
                                                 </button>
+                                                <?php } ?>
                                             </td>
                                         </tr>
                                     <?php } ?>

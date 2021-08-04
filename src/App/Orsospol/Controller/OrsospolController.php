@@ -35,7 +35,8 @@ class OrsospolController extends GlobalFunc
         $idUser = $this->session->get('idUser');
         $jenisOrsospol = new JenisOrsospolKesbangpol();
         $data_jenisOrsospol = $jenisOrsospol->selectAll("WHERE namaJenisorsospol = 'ORMAS'")[0];
-        $datas = $this->model->selectAll($data_jenisOrsospol['idJenisorsospol'], "AND idUser = '$idUser'");
+        $datas = $this->model->selectAll($data_jenisOrsospol['idJenisorsospol']);
+        // $datas = $this->model->selectAll($data_jenisOrsospol['idJenisorsospol'], "AND idUser = '$idUser'");
 
         return $this->render_template('organisasi-terdaftar/ormas', ['datas' => $datas]);
     }
