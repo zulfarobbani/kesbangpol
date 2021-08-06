@@ -12,7 +12,7 @@
     <title><?= "Detail Gallery" ?></title>
 </head>
 
-<body style="background-color : #EEEEEE;">
+<body>
 
     <?php include(__DIR__ . '/../../navbar.php') ?>
     <div class="container-fluid">

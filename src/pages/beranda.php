@@ -12,11 +12,11 @@
   <title>KESBANGPOL</title>
 </head>
 
-<body style="background-color : #EEEEEE;">
+<body>
 
   <?php include(__DIR__ . '/navbar.php') ?>
   <div class="container-fluid">
-    <div class="row">
+    <div class="row pb-5" style="background-color : #EEEEEE;">
       <div class="col-md-8 top-1 start-0 ps-5 mb-3">
         <!-- START CODE -->
         <h4 class="fw-normal mt-5">Informasi KESBANG Terkini</h4>
@@ -37,8 +37,8 @@
       </div>
       <?php include(__DIR__ . '/sidebar.php') ?>
     </div>
-    <?php include(__DIR__ . '/footer.php') ?>
   </div>
+  <?php include(__DIR__ . '/footer.php') ?>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">

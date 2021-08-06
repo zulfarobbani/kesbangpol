@@ -16,7 +16,7 @@
     </style>
 </head>
 
-<body style="background-color : #EEEEEE;">
+<body>
 <img class="img-fluid" src="../assets/image/Header kesbangpol Revisi ke 5-01.png" alt="header" style="height: 200; width: 1284;">
     <div class="container">
         <div class="row justify-content-center mb-3">
