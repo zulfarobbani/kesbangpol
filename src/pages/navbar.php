@@ -1,5 +1,5 @@
- <span><a href="\"><img class="w-100" src="/assets/image/ribbon-logo-02.png" alt="gak ada gambar"></a></span>
-  <div class="container-fluid p-0">
+ <span><a href="\"><img class="w-100" src="/assets/image/ribbon-logo-02.png" alt="gak ada gambar" id="bajingan"></a></span>
+  <div class="container-fluid p-0 d-none d-md-block">
     <nav class="navbar-fluid shadow sticky-top navbar-expand" style="background-color: #000099;height: 55px;">
       <div class="collapse navbar-collapse" id="navbarNav" style="height: 55px;">
        <div class="container-fluid d-flex justify-content-center" style="height: 55px;">

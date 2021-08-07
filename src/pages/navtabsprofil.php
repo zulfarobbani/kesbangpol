@@ -9,36 +9,36 @@
     background-color: #e0e0e0;
   }
 </style>
-<div class="container px-0 py-3 roundedjustify-content-start">
+<div class="container px-0 py-3 rounded justify-content-start">
   <div class="row py-1" id="bgprofile">
-    <div class="col-sm-3 px-2" >
+    <div class="bagi5 col-md-2 px-2" >
       <a class="nav-link p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" aria-current="page" href="\struktur-organisasi">
         <span class="material-icons-outlined align-middle">account_tree</span>
-        <span>Struktur Organisasi</span>
+        <span class="d-none d-md-block">Struktur Organisasi</span>
       </a>
     </div>
-    <div class="col-sm-2 px-2">
+    <div class="bagi5 col-md-2 px-2">
       <a class="nav-link p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" href="\visi-misi">
         <span class="material-icons-outlined align-middle">radar</span>
-        <span>Visi & Misi</span>
+        <span class="d-none d-md-block">Visi & Misi</span>
       </a>
     </div>
-    <div class="col-sm-2 px-2">
+    <div class="bagi5 col-md-2 px-2">
       <a class="nav-link p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" href="/tupoksi">
         <span class="material-icons-outlined align-middle">assignment_ind</span>
-        <span>TUPOKSI</span>
+        <span class="d-none d-md-block">TUPOKSI</span>
       </a>
     </div>
-    <div class="col-sm-2 px-2">
+    <div class="bagi5 col-md-2 px-2">
       <a class="nav-link p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" href="\sakip">
         <span class="material-icons-outlined align-middle">note_alt</span>
-        SAKIP
+        <span class="d-none d-md-block">SAKIP</span>
       </a>
     </div>
-    <div class="col-sm-2 px-2">
+    <div class="bagi5 col-md-2 px-2">
       <a class="nav-link p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" href="\regulasi">
         <span class="material-icons-outlined align-middle">gavel</span>
-        Regulasi
+        <span class="d-none d-md-block">Regulasi</span>
       </a>
     </div>
   </div>

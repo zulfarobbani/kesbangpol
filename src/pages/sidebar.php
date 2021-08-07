@@ -27,7 +27,7 @@
   <?php } ?>
 
   <div class="row">
-    <h5 class="text-muted my-4 text-center">Layanan<br><b>KESBANGPOL</b></h5>
+    <h5 class="text-muted my-4 text-center" id="layanankesbangpol">Layanan<br><b>KESBANGPOL</b></h5> 
     <div class="col-6">
       <a href="/layanan/pendataan" class="btn btn-sm btn-outline-secondary d-flex mb-2 py-2">
         <span class="material-icons-outlined align-middle">person_add_alt_1</span>&nbsp;&nbsp;
@@ -53,7 +53,7 @@
       </a>
     </div>
 
-    <h5 class="text-muted my-4 text-center">Tautan Layanan Publik<br><b>Kota Cimahi</b></h5>
+    <h5 class="text-muted my-4 text-center" id="layananpublik">Tautan Layanan Publik<br><b>Kota Cimahi</b></h5>
     <div class="col-6" id="pict">
       <a style="height: 52px;box-sizing: border-box;padding-left: 15px;position:relative" href="http://sipt.kemendag.go.id" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
         <img style="position: absolute;top: 10%;" src="/assets/image/sipt.png" class="" height="40px">
@@ -263,7 +263,7 @@
     </div>
 
     <div class="p-3">
-      <h5 class="text-muted my-4 text-center">Kontak Darurat</h5>
+      <h5 class="text-muted my-4 text-center" id="kontakdarurat">Kontak Darurat</h5>
       <div class="border border-secondary rounded">
         <div class="col-8 text-start py-3 mx-auto" id="pict">
           <div class="row">

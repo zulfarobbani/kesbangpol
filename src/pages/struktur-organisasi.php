@@ -15,11 +15,12 @@
 </head>
 
 <body style="background-color : #EEEEEE; color:navy;">
-
+<?php include(__DIR__ . '/mobilemenu.php') ?>
+<?php include(__DIR__ . '/mobilenav.php') ?>
   <?php include(__DIR__.'/navbar.php' )?>
   <div class="container-fluid">   
       <div class="row">  
-        <div class="col-md-8 top-1 start-0 ps-5 mb-3">
+        <div class="col-md-8 mb-3">
           <?php include(__DIR__.'/navtabsprofil.php' )?>
           <!-- START CODE -->
           <div class="d-block">
@@ -37,6 +38,10 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
     integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+
   </script>
 </body>
 
