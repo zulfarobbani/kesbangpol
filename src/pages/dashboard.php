@@ -14,25 +14,25 @@
         a {
             text-decoration: none;
         }
-        #menudepan h5{
-            font-size:1rem;
+
+        #menudepan h5 {
+            font-size: 1rem;
         }
     </style>
 </head>
 
 <body>
-<img class="w-100" src="../assets/image/Header kesbangpol Revisi ke 5-01.png" alt="header">
+    <img class="w-100" src="../assets/image/Header kesbangpol Revisi ke 5-01.png" alt="header">
     <div class="container">
-    <div class="wrapper mt-3">
-      <div class="carousel owl-carousel">
-        <div class="card card-1">
-        <img  src="/assets/image/kesbangpol1.png" class="card-img img-fluid" alt="..."></div>
-<div class="card card-2">
-<img  src="/assets/image/kesbangpol2.png" class="card-img img-fluid" alt="..."></div>
-<div class="card card-3">
-<img  src="/assets/image/kesbangpol3.png" class="card-img img-fluid" alt="..."></div>
-</div>
-</div>
+        <div class="wrapper mt-3">
+            <div class="carousel owl-carousel">
+                <?php foreach ($banner as $key => $value) { ?>
+                    <div class="card card-1">
+                        <img src="/assets/media/<?= $value['pathMedia'] ?>" class="card-img img-fluid" alt="...">
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
         <h1 class="d-flex justify-content-center mt-2" style="color: #004080;">Selamat Datang</h1>
         <h3 class="d-flex justify-content-center text-center" style="color: #1a8cff; ">Di Situs Resmi Kantor Kesatuan Bangsa dan Politik Kota Cimahi</h3>
 
@@ -71,10 +71,10 @@
     </div>
     <?php include(__DIR__ . '/footer.php') ?>
     <style>
-        footer{
-            position:absolute;
+        footer {
+            position: absolute;
             bottom: 0;
-    width: 100%;
+            width: 100%;
         }
     </style>
 
@@ -97,28 +97,28 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
-      $(".carousel").owlCarousel({
-        margin: 20,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 2000,
-        autoplayHoverPause: true,
-        responsive: {
-          0:{
-            items:1,
-            nav: false
-          },
-          600:{
-            items:3,
-            autoHeight:true,
-            nav: false
-          },
-          1000:{
-            items:3,
-            nav: false
-          }
-        }
-      });
+        $(".carousel").owlCarousel({
+            margin: 20,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                600: {
+                    items: 3,
+                    autoHeight: true,
+                    nav: false
+                },
+                1000: {
+                    items: 3,
+                    nav: false
+                }
+            }
+        });
     </script>
 </body>
 

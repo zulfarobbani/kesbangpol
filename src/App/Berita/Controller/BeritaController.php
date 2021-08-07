@@ -70,6 +70,7 @@ class BeritaController extends GlobalFunc
     {
         $id = $request->attributes->get('id');
         $data = $request->request;
+        $this->dd($data);
         $berita = $this->model->update($id, $data);
 
         if ($_FILES['coverBerita']['name'] != '') {

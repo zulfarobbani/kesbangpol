@@ -2,6 +2,7 @@
 
 namespace App\Dashboard\Controller;
 
+use App\Banner\Model\Banner;
 use App\Dashboard\Model\Dashboard;
 use App\Berita\Model\Berita;
 use App\LayananKesbangpol\Model\LayananKesbangpol;
@@ -27,16 +28,20 @@ class DashboardController extends GlobalFunc
     }
     //dashboard
     public function tampil(Request $request){
-        return $this->render_template('dashboard');
+        $banner = new Banner();
+        $data_banner = $banner->selectAll();
+
+        return $this->render_template('dashboard', ['banner' => $data_banner]);
     }
     //beranda
     public function home(Request $request){
         // $this->dd($this->session);
         $datas_2 = $this->model2->selectAll();
         $datas_3 = $this->model3->selectOne('');
+        $site_url = 'http://'.explode('/', $request->server->get('HTTP_REFERER'))[2];
         
         // return $this->render_template('beranda', ['datas'=>$datas_2 , 'foto'=>$datas_3['pathMedia']]);
-        return $this->render_template('beranda', ['datas'=>$datas_2]);
+        return $this->render_template('beranda', ['datas'=>$datas_2, 'site_url' => $site_url]);
     }
     //profil
     public function visimisi(Request $request){

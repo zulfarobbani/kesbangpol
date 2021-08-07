@@ -13,40 +13,100 @@
 </head>
 
 <body>
-<?php include(__DIR__ . '/mobilemenu.php') ?>
-<?php include(__DIR__ . '/mobilenav.php') ?>
+  <?php include(__DIR__ . '/mobilemenu.php') ?>
+  <?php include(__DIR__ . '/mobilenav.php') ?>
   <?php include(__DIR__ . '/navbar.php') ?>
   <div class="container-fluid">
     <div class="row pb-5" style="background-color : #EEEEEE;">
       <div class="col-md-8 top-1 start-0">
         <div class="container-fluid">
-        <!-- START CODE -->
-        <h4 class="fw-normal mt-5">Informasi KESBANG Terkini</h4>
-        <div class="row mt-3">
-          <?php foreach ($datas as $key => $value) { ?>
-            <div class="col-sm-2 col-md-4">
-            <div class="card text-white bg-dark m-3" style="padding-right : 0!important; padding-left:0!important;">
-              <img src="/assets/media/<?= $value['pathMedia'] ?>" class="card-img-top" alt="<?= $value['namaBerita'] ?>">
-              <div class="card-body ">
-                <h6 class="card-title text-elps text-elps-3" style="font-size: 13px;"><?= $value['namaBerita'] ?></h6>
-                <!-- <em style="font-size: 12px;">Author : Admin</em><br> -->
-                <!-- <div class="card-text text-elps text-elps-3" align="justify"><?= $value['deskripsiBerita'] ?></div> -->
-                <!-- <span class="card-text" style="color: white;font-size: 12px;"><small class="text-light"><?= $value['dateCreate'] ?></small></span> -->
-                <a href="informasi/berita/<?= $value['idBerita'] ?>" class="btn btn-sm btn-outline-light float-end mt-3">Selengkapnya...</a>
+          <!-- START CODE -->
+          <h4 class="fw-normal mt-5">Informasi KESBANG Terkini</h4>
+          <div class="row mt-3">
+            <?php foreach ($datas as $key => $value) { ?>
+              <div class="col-sm-2 col-md-3" style="padding: 0 0;">
+                <div class="card text-white bg-dark m-1" style="padding-right : 0!important; padding-left:0!important;">
+                  <a href="/informasi/berita/<?= $value['idBerita'] ?>"><img src="/assets/media/<?= $value['pathMedia'] ?>" class="card-img-top" alt="<?= $value['namaBerita'] ?>"></a>
+                  <div class="card-body pb-1">
+                    <a href="/informasi/berita/<?= $value['idBerita'] ?>" class="text-decoration-none text-white">
+                    <h6 class="card-title text-elps text-elps-3" style="font-size: 13px;"><?= $value['namaBerita'] ?></h6>
+                    </a>
+                    <!-- <em style="font-size: 12px;">Author : Admin</em><br> -->
+                    <!-- <div class="card-text text-elps text-elps-3" align="justify"><?= $value['deskripsiBerita'] ?></div> -->
+                    <!-- <span class="card-text" style="color: white;font-size: 12px;"><small class="text-light"><?= $value['dateCreate'] ?></small></span> -->
+                    <a href="#" class="float-end btn-sosmed" data-bs-toggle="modal" data-bs-target="#modalSosmed" data-bs-url="<?= $site_url ?>/informasi/berita/<?= $value['idBerita'] ?>">
+                      <span class="material-icons-outlined fs-6" style="color: white;">more_vert</span>
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
-            </div>
-          <?php } ?>
-        </div>
+            <?php } ?>
+          </div>
         </div>
       </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="modalSosmed" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Share Berita</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row justify-content-center">
+                <div class="col-2 mb-3">
+                  <a href="" class="facebook" target="_blank"><img src="/assets/icon/sosmed/facebook.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Facebook</span></a>
+                </div>
+                <div class="col-2 mb-3">
+                  <a href="" class="twitter" target="_blank"><img src="/assets/icon/sosmed/twitter.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Twitter</span></a>
+                </div>
+                <!-- <div class="col-2 mb-3">
+                  <a href="" class="googleplus" target="_blank"><img src="/assets/icon/sosmed/google-plus.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Google +</span></a>
+                </div> -->
+                <div class="col-2 mb-3">
+                  <a href="" class="reddit" target="_blank"><img src="/assets/icon/sosmed/reddit.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Reddit</span></a>
+                </div>
+                <!-- <div class="col-2 mb-3">
+                  <a href="" class="linkedin" target="_blank"><img src="/assets/icon/sosmed/linkedin.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>LinkedIn</span></a>
+                </div> -->
+                <div class="col-2 mb-3">
+                  <a href="" class="pinterest" target="_blank"><img src="/assets/icon/sosmed/pinterest.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Pinterest</span></a>
+                </div>
+                <div class="col-2 mb-3">
+                  <a href="" class="email" target="_blank"><img src="/assets/icon/sosmed/email.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Email</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <?php include(__DIR__ . '/sidebar.php') ?>
       <?php include(__DIR__ . '/footer.php') ?>
     </div>
   </div>
+  <script src="/assets/js/jquery-3.3.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
+  </script>
+
+  <script>
+    $(document).on('click', '.btn-sosmed', function() {
+      var btn = $(this);
+      var modal = $('#modalSosmed');
+
+      modal.find('.facebook').prop('href', 'http://www.facebook.com/sharer.php?u='+btn.attr('data-bs-url'));
+      modal.find('.twitter').prop('href', 'http://twitter.com/share?url='+btn.attr('data-bs-url'));
+      // modal.find('.googleplus').prop('href', 'https://plus.google.com/share?url='+btn.attr('data-bs-url'));
+      modal.find('.reddit').prop('href', 'http://reddit.com/submit?url='+btn.attr('data-bs-url'));
+      modal.find('.pinterest').prop('href', 'http://pinterest.com/pin/create/button/?url='+btn.attr('data-bs-url'));
+      modal.find('.email').prop('href', 'mailto:?Subject=Berita Kesbangpol&Body=Klik%20link%20untuk%20melihat%20berita%20%20 '+btn.attr('data-bs-url'));
+    })
   </script>
 </body>
 

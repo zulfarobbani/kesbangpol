@@ -105,6 +105,7 @@ class Berita extends GlobalFunc
         $dateCreate = date('Y-m-d');
 
         $sql = "UPDATE " . $this->table . " SET namaBerita = '$namaBerita', deskripsiBerita = '$deskripsiBerita', idRelation = '$idRelation', approvalBerita = '$approvalBerita', authorBerita = '$authorBerita', jenisBerita = '$jenisBerita' WHERE ".$this->primaryKey." ='$idBerita'";
+        $this->dd($sql);
         
         try {
             $data = $this->conn->prepare($sql);
