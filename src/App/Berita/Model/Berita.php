@@ -25,6 +25,10 @@ class Berita extends GlobalFunc
             $query->execute();
             $data = $query->fetchAll();
 
+            foreach ($data as $key => $value) {
+                $data[$key]['deskripsiBerita'] = html_entity_decode(nl2br($value['deskripsiBerita']));
+            }
+
             return $data;
         } catch (PDOException $e) {
             echo $e;
