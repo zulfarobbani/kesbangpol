@@ -78,9 +78,26 @@
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
+=======
+
+            <div class="news-card">
+    <a href="informasi/berita/<?= $value['idBerita'] ?>" class="news-card__card-link"></a>
+    <img src="/assets/media/<?= $value['pathMedia'] ?>" alt="<?= $value['namaBerita'] ?>" class="news-card__image">
+    <div class="news-card__text-wrapper">
+      <h2 class="news-card__title"><?= $value['namaBerita'] ?></h2>
+      <div class="news-card__post-date"><?= $value['dateCreate'] ?></div>
+      <div class="news-card__details-wrapper">
+        <p class="news-card__excerpt"><?= $value['deskripsiBerita'] ?></p>
+        <a href="informasi/berita/<?= $value['idBerita'] ?>" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+      </div>
+    </div>
+  </div>
+          <?php } ?>
+>>>>>>> 4d36490bc28b15121d64c20b983e26a0f67b2e93
           </div>
         </div>
       </div>
