@@ -12,7 +12,7 @@
                         <a href="/users"><span class="material-icons-outlined fs-4 font-center" style="color: white;">groups</span><span>Login</span></a>
                         <?php } ?>
                         <?php if ($idRole == null) { ?>
-                        <a href="#"><span class="material-icons-outlined fs-4 font-center text-white">meeting_room</span><span>Login</span></a>
+                        <a href="/login-register"><span class="material-icons-outlined fs-4 font-center text-white">meeting_room</span><span>Login</span></a>
                         <?php } ?>
 					</div>
 				</nav>

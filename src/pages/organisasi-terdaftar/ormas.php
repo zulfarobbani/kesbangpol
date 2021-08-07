@@ -14,11 +14,12 @@
 </head>
 
 <body style="background-color : #EEEEEE; color: navy;">
-
+<?php include(__DIR__ . '/../mobilemenu.php') ?>
+<?php include(__DIR__ . '/../mobilenav.php') ?>
   <?php include(__DIR__.'/../navbar.php' )?>
   <div class="container-fluid">
       <div class="row">  
-        <div class="col-md-8 top-1 start-0 ps-5 mb-3">
+        <div class="col-md-8 mb-3">
           <div class="container-fluid p-1 mt-4">
             <div class="input-group">
               <span class="input-group-text bg-body border-0 text-muted"><span class="material-icons-outlined align-middle">search</span></span>
