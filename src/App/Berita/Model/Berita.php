@@ -97,15 +97,14 @@ class Berita extends GlobalFunc
     public function update($idBerita, $datas)
     {
         $namaBerita = $datas->get('namaBerita');
-        $deskripsiBerita = $datas->get('deskripsiBerita');
+        $deskripsiBerita = htmlspecialchars($datas->get('deskripsiBerita'));
         $jenisBerita = $datas->get('jenisBerita');
         $idRelation = '1';
         $approvalBerita = '1';
         $authorBerita = '1';
         $dateCreate = date('Y-m-d');
 
-        $sql = "UPDATE " . $this->table . " SET namaBerita = '$namaBerita', deskripsiBerita = '$deskripsiBerita', idRelation = '$idRelation', approvalBerita = '$approvalBerita', authorBerita = '$authorBerita', jenisBerita = '$jenisBerita' WHERE ".$this->primaryKey." ='$idBerita'";
-        $this->dd($sql);
+        $sql = "UPDATE " . $this->table . " SET namaBerita = '$namaBerita', deskripsiBerita = \"$deskripsiBerita\", idRelation = '$idRelation', approvalBerita = '$approvalBerita', authorBerita = '$authorBerita', jenisBerita = '$jenisBerita' WHERE ".$this->primaryKey." ='$idBerita'";
         
         try {
             $data = $this->conn->prepare($sql);

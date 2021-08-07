@@ -60,6 +60,7 @@ class BeritaController extends GlobalFunc
     {
         $id = $request->attributes->get('id');
         $detail = $this->model->selectOne($id);
+        $detail['deskripsiBerita'] = html_entity_decode(nl2br($detail['deskripsiBerita']));
 
         return new JsonResponse([
             'data' => $detail
@@ -70,7 +71,6 @@ class BeritaController extends GlobalFunc
     {
         $id = $request->attributes->get('id');
         $data = $request->request;
-        $this->dd($data);
         $berita = $this->model->update($id, $data);
 
         if ($_FILES['coverBerita']['name'] != '') {
