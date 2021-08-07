@@ -22,7 +22,7 @@
         <div class="container-fluid">
         <!-- START CODE -->
         <h4 class="fw-normal mt-5">Informasi KESBANG Terkini</h4>
-        <div class="row mt-3">
+        <div class="content-wrapper">
           <?php foreach ($datas as $key => $value) { ?>
             <div class="col-sm-2 col-md-4">
             <div class="card text-white bg-dark m-3" style="padding-right : 0!important; padding-left:0!important;">
@@ -36,8 +36,21 @@
               </div>
             </div>
             </div>
+
+            <div class="news-card">
+    <a href="informasi/berita/<?= $value['idBerita'] ?>" class="news-card__card-link"></a>
+    <img src="/assets/media/<?= $value['pathMedia'] ?>" alt="<?= $value['namaBerita'] ?>" class="news-card__image">
+    <div class="news-card__text-wrapper">
+      <h2 class="news-card__title"><?= $value['namaBerita'] ?></h2>
+      <div class="news-card__post-date"><?= $value['dateCreate'] ?></div>
+      <div class="news-card__details-wrapper">
+        <p class="news-card__excerpt"><?= $value['deskripsiBerita'] ?></p>
+        <a href="informasi/berita/<?= $value['idBerita'] ?>" class="news-card__read-more">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+      </div>
+    </div>
+  </div>
           <?php } ?>
-        </div>
+          </div>
         </div>
       </div>
       <?php include(__DIR__ . '/sidebar.php') ?>
