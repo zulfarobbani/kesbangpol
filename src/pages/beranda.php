@@ -27,12 +27,9 @@
               <div class="news-card">
     <img src="/assets/media/<?= $value['pathMedia'] ?>" alt="<?= $value['namaBerita'] ?>" class="news-card__image">
     <div class="news-card__text-wrapper">
-      <h2 class="news-card__title"><?= $value['namaBerita'] ?></h2>
+    <a href="/informasi/berita/<?= $value['idBerita'] ?>" ><h2 class="news-card__title"><?= $value['namaBerita'] ?></h2></a>
       <div class="news-card__post-date"><?= $value['dateCreate'] ?></div>
       <div class="news-card__details-wrapper">
-        <div class="text-elps text-elps-3">
-        <p class="news-card__excerpt"><?= $value['deskripsiBerita'] ?></p>
-        </div>
         <a href="#" class="float-end btn-sosmed d-inline" data-bs-toggle="modal" data-bs-target="#modalSosmed" data-bs-url="<?= $site_url ?>/informasi/berita/<?= $value['idBerita'] ?>">
                       <span class="material-icons-outlined fs-6 mr-3 mt-3" style="color: white;">more_vert</span>
                     </a>

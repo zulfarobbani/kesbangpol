@@ -21,23 +21,21 @@
       <div class="col-md-8 mb-3">
         <?php include(__DIR__ . '/../../navtabsinformasi.php') ?>
         <!-- START CODE -->
-        <div class="row">
-          <div class="card-group">
+        <ul class="cards" style="padding:0;">
             <?php foreach ($datas as $key => $values) { ?>
-              <a class="navy" href="galeri/<?= $values['idGallery'] ?>/detail" style="text-decoration:none;">
-                <div class="card" style="width: 18rem;">
-                  <img class="card-img-top" src="/assets/media/<?= $values['pathMedia'] ?>" alt="Gambar Berita">
-                  <div class="card-body">
-                    <h5 class="card-title"><?= $values['namaGallery'] ?></h5>
-                    <p class="card-text"><?= html_entity_decode(nl2br($values['deskripsiGallery'])) ?></p>
-                    <p class="card-text" style="color: white;"><small class="text-muted"><?= $values['dateCreate'] ?></small>
-                    </p>
-                  </div>
-                </div>
-                </a>
+              <li class="cards__item">
+    <div class="kartu">
+      <div class="kartu__image" style="background-image: url(/assets/media/<?= $values['pathMedia'] ?>);"></div>
+      <div class="kartu__content">
+        <div class="kartu__title"><a href="galeri/<?= $values['idGallery'] ?>/detail"><?= $values['namaGallery'] ?></a></div>
+        <p class="kartu__text"><?= html_entity_decode(nl2br($values['deskripsiGallery'])) ?></p>
+        <button class="btn btn--block kartu__btn"><?= $values['dateCreate'] ?></button>
+      </div>
+    </div>
+  </li>
               <?php } ?>
-          </div>
-        </div>
+          </ul>
+
       </div>
 
       <?php include(__DIR__ . '/../../sidebar.php') ?>
