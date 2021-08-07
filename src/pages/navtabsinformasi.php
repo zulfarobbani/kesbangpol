@@ -38,8 +38,14 @@
     <?php if ($idRole == '9asdkqhjwew') { ?>
     <div class="col-sm-3 px-2">
       <a class="nav-link p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" href="/informasi/kontak-darurat">
-        <span class="material-icons-outlined align-middle">photo_library</span>
+        <span class="material-icons-outlined align-middle">contacts</span>
         <span>Kontak Darurat</span>
+      </a>
+    </div>
+    <div class="col-sm-3 px-2">
+      <a class="nav-link p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" href="/informasi/banner">
+        <span class="material-icons-outlined align-middle">article</span>
+        <span>Banner</span>
       </a>
     </div>
     <?php } ?>

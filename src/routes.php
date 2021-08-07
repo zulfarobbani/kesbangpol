@@ -304,6 +304,32 @@ $routes->add('kontakdaruratDelete', new Route('/informasi/kontak-darurat/{id}/de
     '_controller' => 'App\KontakDarurat\Controller\KontakDaruratController::kontakdaruratDelete',
 ]));
 
+//crud banner start
+$routes->add('banner', new Route('/informasi/banner', [
+    '_controller' => 'App\Banner\Controller\BannerController::index',
+]));
+
+$routes->add('bannercreate', new Route('/informasi/banner/create', [
+    '_controller' => 'App\Banner\Controller\BannerController::create',
+]));
+
+$routes->add('bannersimpan', new Route('/informasi/banner/store', [
+    '_controller' => 'App\Banner\Controller\BannerController::store',
+]));
+
+$routes->add('banneredit', new Route('/informasi/banner/edit/{id}', [
+    '_controller' => 'App\Banner\Controller\BannerController::ReadOne',
+]));
+
+$routes->add('bannerupdate', new Route('/informasi/banner/{id}/update', [
+    '_controller' => 'App\Banner\Controller\BannerController::update',
+]));
+
+$routes->add('bannerdelete', new Route('/informasi/banner/{id}/delete', [
+    '_controller' => 'App\Banner\Controller\BannerController::delete',
+]));
+// crud sakip end
+
 //curd users
 $routes->add('users', new Route('/users', [
     '_controller' => 'App\Users\Controller\UsersController::index',
@@ -320,7 +346,6 @@ $routes->add('usersUpdate', new Route('/users/{id}/update', [
 $routes->add('usersDelete', new Route('/users/{id}/delete', [
     '_controller' => 'App\Users\Controller\UsersController::delete',
 ]));
-
 
 
 $routes->add('berita', new Route('/informasi/berita', [
