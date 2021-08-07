@@ -213,6 +213,8 @@ header p {
   transition: all 0.3s ease-in-out;
 }
 
+
+
 .content-wrapper {
   margin: 0 auto;
   max-width: 1200px;
@@ -290,6 +292,8 @@ header p {
 .news-card__title {
     transition: color 1s ease;
     margin-bottom: .5rem;
+    font-size:1rem;
+    color:#fff;
   }
 
 .news-card__post-date {
@@ -321,8 +325,10 @@ header p {
     }
   }
 
-.news-card__excerpt {
+.news-card__details-wrapper p{
     font-weight: 300;
+    font-size:1rem;
+    line-height:1rem;
   }
 
 .news-card__read-more {
