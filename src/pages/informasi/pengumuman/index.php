@@ -24,7 +24,7 @@
         <div class="row">
           <div class="card-group">
             <?php foreach ($datas as $key => $value) { ?>
-              <div class="card">
+              <div class="card mt-2">
                 <a href="/informasi/pengumuman/<?= $value['idPengumuman'] ?>">
                   <img class="img-fluid" src="/assets/media/<?= $value['pathMedia'] ?>" alt="Gambar Berita">
                   <div class="card-body text-dark">

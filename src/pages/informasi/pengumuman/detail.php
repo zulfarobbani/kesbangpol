@@ -13,11 +13,12 @@
 </head>
 
 <body>
-
+<?php include(__DIR__ . '/../../mobilemenu.php') ?>
+<?php include(__DIR__ . '/../../mobilenav.php') ?>
     <?php include(__DIR__ . '/../../navbar.php') ?>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8 top-1 start-0 ps-5 mb-3">
+            <div class="col-md-8 mb-3">
                 <!-- START CODE -->
                 <h6 class="fw-normal mt-5"><a href="/informasi/pengumuman" class="btn btn-sm btn-outlined-light"><i class="fas fa-arrow-left"></i></a> Pengumuman</h6>
                 <div class="row g-4">

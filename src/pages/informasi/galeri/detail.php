@@ -17,14 +17,14 @@
     <?php include(__DIR__ . '/../../navbar.php') ?>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8 top-1 start-0 ps-5 mb-3">
+            <div class="col-md-8 mb-3">
                 <h3 class="fw-normal mt-5"><a href="/informasi/galeri" class="btn btn-sm btn-outlined-light"><i class="fas fa-arrow-left"></i></a> <?= $detail['namaGallery'] ?></h3>
                 <div id="top"></div>
                 <section class="gallery">
                     <div class="row nest">
                         <a href="#" class="close"></a>
                         <?php foreach ($detailItem as $key => $value) { ?>
-                            <div class="col-md-4 col-sm-6 subnest">
+                            <div class="col-6 col-md-4 subnest">
                                 <a href="#item01" class="galleryDetail" data-image="/assets/media/<?= $value['pathMedia'] ?>" data-name="<?= $value['namaGallerydetail'] ?>" data-deskripsi="<?= $value['deskripsiGallerydetail'] ?>">
                                     <img src="/assets/media/<?= $value['pathMedia'] ?>" class="img-fluid" alt="">
                                 </a>

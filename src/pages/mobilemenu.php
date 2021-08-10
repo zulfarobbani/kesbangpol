@@ -9,7 +9,7 @@
 						<a href="/forum-umum"><span class="material-icons-outlined fs-4 text-white">forum</span><span>Forum ORSOSPOL</span></a>
                         <a href="https://linktr.ee/ardhin"><span class="material-icons-outlined fs-4 font-center text-white">support_agent</span><span>Hubungi Kami</span></a>
                         <?php if ($idRole == '9asdkqhjwew') { ?>
-                        <a href="/users"><span class="material-icons-outlined fs-4 font-center" style="color: white;">groups</span><span>Login</span></a>
+                        <a href="/users"><span class="material-icons-outlined fs-4 font-center" style="color: white;">groups</span><span>User Manajemen</span></a>
                         <?php } ?>
                         <?php if ($idRole == null) { ?>
                         <a href="/login-register"><span class="material-icons-outlined fs-4 font-center text-white">meeting_room</span><span>Login</span></a>

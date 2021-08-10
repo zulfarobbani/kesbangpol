@@ -22,28 +22,22 @@
         <?php include(__DIR__ . '/../../navtabsinformasi.php') ?>
         <!-- START CODE -->
         <!-- <div class="row row-cols-1 row-cols-md-4 g-4"> -->
-        <div class="row g-4">
-          <?php foreach ($datas as $key => $values) { ?>
-            <div class="col-1 col-md-3">
-              <div class="card text-white bg-dark mb-3" style="padding-left:0!important;padding-right:0!important;">
-                <div class="row g-0">
-                  <div class="col-md-4 px-2 py-2">
-                    <div class="h-100" style="background: url('/assets/media/<?= $values['pathMedia'] ?>');background-size: 110px;background-position: center;background-repeat: no-repeat;"></div>
-                    <!-- <img src="/assets/media/<?= $values['pathMedia'] ?>" class="img-fluid rounded-start align-middle" alt="<?= $values['namaBerita'] ?>"> -->
-                  </div>
-                  <div class="col-md-8">
-                    <div class="card-body p-2">
-                      <a href="/informasi/berita/<?= $values['idBerita'] ?>" style="text-decoration:none;">
-                        <h5 class="card-title text-white text-elps text-elps-3" style="font-size: 12px;"><?= $values['namaBerita'] ?></h5>
-                      </a>
-                      <p class="card-text" style="font-size: 12px;"><small class="text-light"><?= $values['dateCreate'] ?></small></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-          <?php } ?>
+        <div class="content-wrapper">
+        <?php foreach ($datas as $key => $value) { ?>
+              <div class="news-card">
+    <img src="/assets/media/<?= $value['pathMedia'] ?>" alt="<?= $value['namaBerita'] ?>" class="news-card__image">
+    <div class="news-card__text-wrapper">
+    <a href="/informasi/berita/<?= $value['idBerita'] ?>" ><h2 class="news-card__title"><?= $value['namaBerita'] ?></h2></a>
+      <div class="news-card__post-date"><?= $value['dateCreate'] ?></div>
+      <div class="news-card__details-wrapper">
+        <a href="#" class="float-end btn-sosmed d-inline" data-bs-toggle="modal" data-bs-target="#modalSosmed" data-bs-url="<?= $site_url ?>/informasi/berita/<?= $value['idBerita'] ?>">
+                      <span class="material-icons-outlined fs-6 mr-3 mt-3" style="color: white;">more_vert</span>
+                    </a>
+        <a href="/informasi/berita/<?= $value['idBerita'] ?>" class="news-card__read-more d-inline">Read more <i class="fas fa-long-arrow-alt-right mt-3"></i></a>
+      </div>
+    </div>
+  </div>
+            <?php } ?>
 
         </div>
       </div>

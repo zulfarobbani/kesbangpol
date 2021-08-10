@@ -13,11 +13,13 @@
     <title>Struktur Organisasi</title>
 </head>
 
-<body>
+<body style="background-color : #EEEEEE; color:navy;">
+<?php include(__DIR__ . '/../mobilemenu.php') ?>
+<?php include(__DIR__ . '/../mobilenav.php') ?>
     <?php include(__DIR__ . '/../navbar.php') ?>
     <div class="container-fluid">
-        <div class="row" style="background-color : #EEEEEE;">
-            <div class="col-md-8 top-1 start-0 ps-5 mb-3">
+        <div class="row">
+            <div class="col-md-8 mb-3">
                 <!-- START CODE -->
                 <div class="card mt-5">
                     <div class="card-body">
@@ -51,10 +53,10 @@
                                                     <td><?= $value['namaLayanan'] ?></td>
                                                     <td><?= $value['judulLayanan'] ?></td>
                                                     <td>
-                                                        <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-idLayanan="<?= $value['idLayanan'] ?>">
+                                                        <button type="button" class="btn btn-sm btn-success m-2" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-idLayanan="<?= $value['idLayanan'] ?>">
                                                             Lihat
                                                         </button>
-                                                        <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-idLayanan="<?= $value['idLayanan'] ?>">
+                                                        <button type="button" class="btn btn-sm btn-secondary m-2" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-idLayanan="<?= $value['idLayanan'] ?>">
                                                             Edit
                                                         </button>
                                                         <!-- <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idLayanan="<?= $value['idLayanan'] ?>">
@@ -88,14 +90,14 @@
                                                     <td><?= $value['namaLayananunduhan'] ?></td>
                                                     <td><?= $value['pathMedia'] ?></td>
                                                     <td>
-                                                        <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#detailModalUnduhan" data-bs-file="/assets/media/<?= $value['pathMedia'] ?>">
+                                                        <button type="button" class="btn btn-sm btn-success m-2" data-bs-toggle="modal" data-bs-target="#detailModalUnduhan" data-bs-file="/assets/media/<?= $value['pathMedia'] ?>">
                                                             Lihat
                                                         </button>
                                                         <a href="/layanan-kesbangpol/unduhan/<?= $value['idLayananunduhan'] ?>/download" class="btn btn-sm btn-light" target="_blank">Download</a>
-                                                        <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#editModalUnduhan" data-bs-namaLayananunduhan="<?= $value['namaLayananunduhan'] ?>" data-bs-idLayananunduhan="<?= $value['idLayananunduhan'] ?>">
+                                                        <button type="button" class="btn btn-sm btn-secondary m-2" data-bs-toggle="modal" data-bs-target="#editModalUnduhan" data-bs-namaLayananunduhan="<?= $value['namaLayananunduhan'] ?>" data-bs-idLayananunduhan="<?= $value['idLayananunduhan'] ?>">
                                                             Edit
                                                         </button>
-                                                        <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModalUnduhan" data-bs-idLayananunduhan="<?= $value['idLayananunduhan'] ?>">
+                                                        <button type="button" class="btn btn-sm btn-danger m-2" data-bs-toggle="modal" data-bs-target="#hapusModalUnduhan" data-bs-idLayananunduhan="<?= $value['idLayananunduhan'] ?>">
                                                             Hapus
                                                         </button>
                                                     </td>

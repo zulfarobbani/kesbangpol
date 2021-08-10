@@ -14,10 +14,12 @@
 </head>
 
 <body style="background-color : #EEEEEE; color:navy;">
+<?php include(__DIR__ . '/../../mobilemenu.php') ?>
+<?php include(__DIR__ . '/../../mobilenav.php') ?>
     <?php include(__DIR__ . '/../../navbar.php') ?>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8 top-1 start-0 ps-5 mb-3">
+            <div class="col-md-8 mb-3">
                 <!-- START CODE -->
                 <div class="card mt-5">
                     <div class="card-body">
@@ -45,13 +47,13 @@
                                             <!-- <td><?= $value['authorBerita'] ?></td> -->
                                             <td><?= $value['dateCreate'] ?></td>
                                             <td>
-                                                <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-idBerita="<?= $value['idBerita'] ?>">
+                                                <button type="button" class="btn btn-sm btn-success my-2" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-idBerita="<?= $value['idBerita'] ?>">
                                                     Lihat
                                                 </button>
-                                                <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-idBerita="<?= $value['idBerita'] ?>">
+                                                <button type="button" class="btn btn-sm btn-secondary my-2" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-idBerita="<?= $value['idBerita'] ?>">
                                                     Edit
                                                 </button>
-                                                <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idBerita="<?= $value['idBerita'] ?>">
+                                                <button type="button" class="btn btn-sm btn-danger my-2" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idBerita="<?= $value['idBerita'] ?>">
                                                     Hapus
                                                 </button>
                                             </td>

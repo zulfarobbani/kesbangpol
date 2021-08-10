@@ -13,11 +13,21 @@
     <title>Struktur Organisasi</title>
 </head>
 
+<<<<<<< HEAD
 <body>
     <?php include(__DIR__ . '/../navbar.php') ?>
     <div class="container-fluid">
         <div class="row" style="background-color : #EEEEEE;">
             <div class="col-md-8 top-1 start-0 ps-5 mb-3">
+=======
+<body style="background-color : #EEEEEE; color:navy;">
+<?php include(__DIR__ . '/../mobilemenu.php') ?>
+<?php include(__DIR__ . '/../mobilenav.php') ?>
+    <?php include(__DIR__ . '/../navbar.php') ?>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 mb-3">
+>>>>>>> 315a9efef2467cc4af3e91e80d85c1a1c5d5bfe2
                 <!-- START CODE -->
                 <div class="card mt-5">
                     <div class="card-body">
@@ -45,12 +55,12 @@
                                         <div class="mb-3">
                                             <label for="exampleFormControlInput1" class="form-label">Gambar Struktur Organisasi</label>
                                             <div class="row">
-                                                <div class="col">
+                                                <div class="col-8 col-md-10">
                                                     <input type="file" class="form-control" id="exampleFormControlInput1" name="sotk">
                                                 </div>
-                                                <div class="col-2">
+                                                <div class="col-4 col-md-2">
                                                     <?php if ($struktur_organisasi) { ?>
-                                                        <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-image="/assets/media/<?= $struktur_organisasi['pathMedia'] ?>">
+                                                        <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-image="/assets/media/<?= $struktur_organisasi['pathMedia'] ?>" style="font-size:0.7rem;">
                                                             Lihat Struktur Organisasi
                                                         </button>
                                                     <?php } ?>
@@ -96,6 +106,7 @@
                                     <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
                                         Tambah
                                     </button>
+                                    <div class="table-responsive">
                                     <table class="table table-sm">
                                         <thead>
                                             <tr>
@@ -127,6 +138,7 @@
                                             <?php } ?>
                                         </tbody>
                                     </table>
+                                    </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="regulasi" role="tabpanel" aria-labelledby="regulasi-tab">

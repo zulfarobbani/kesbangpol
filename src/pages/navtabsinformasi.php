@@ -53,5 +53,5 @@
   </div>
 </div>
 <?php if ($idRole == '9asdkqhjwew') { ?>
-<a class="btn btn-outline-danger d-block float-end navy" href="/informasi-kesbangpol/berita"><i class="fas fa-edit"></i> Edit</a>
+<a class="btn btn-outline-danger d-block float-end navy" href="/informasi-kesbangpol/berita" id="editinfoberita"><i class="fas fa-edit"></i> Edit</a>
 <?php } ?>
