@@ -502,9 +502,6 @@ header p {
   color: white;
 }
 
-.nav-item:hover {
-  background-color: white;
-}
 
 .nav-item:hover .nav-link {
   color: #feae88!important;
