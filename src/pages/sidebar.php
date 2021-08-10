@@ -4,7 +4,7 @@
 
   }
 </style>
-<div class="col py-3 pe-4">
+<div class="col py-3 pe-4 d-none d-md-block">
   <?php if ($idRole != null) { ?>
     <div class="row d-flex align-items-center">
       <h5 class="text-muted mb-3">Selamat Datang</h5>
