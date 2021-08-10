@@ -78,6 +78,5 @@
 	}
 
 	init();
-	console.log(isOpen, isOpen2);
 
 })();

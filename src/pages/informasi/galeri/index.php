@@ -19,6 +19,8 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-8 mb-3">
+      <div class="card rounded-3 mt-5 px-3">
+        <div class="card-body">
         <?php include(__DIR__ . '/../../navtabsinformasi.php') ?>
         <!-- START CODE -->
         <ul class="cards" style="padding:0;">
@@ -35,7 +37,8 @@
   </li>
               <?php } ?>
           </ul>
-
+        </div>
+      </div>
       </div>
 
       <?php include(__DIR__ . '/../../sidebar.php') ?>
