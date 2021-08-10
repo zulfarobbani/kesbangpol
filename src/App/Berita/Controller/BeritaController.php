@@ -42,6 +42,13 @@ class BeritaController extends GlobalFunc
         return $this->render_template('informasi/berita/form', ['datas' => $datas]);
     }
 
+    public function beritaKontenApproval(Request $request)
+    {
+        $datas = $this->model->selectAll();
+
+        return $this->render_template('informasi/berita/formApproval', ['datas' => $datas]);
+    }
+
     public function beritaKontenStore(Request $request)
     {
         $data = $request->request;

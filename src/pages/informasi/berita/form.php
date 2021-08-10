@@ -22,9 +22,11 @@
                 <div class="card mt-5">
                     <div class="card-body">
                         <div class="container mt-4">
+                            <h4>Berita</h4>
                             <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
                                 Tambah
                             </button>
+                            <a href="/informasi-kesbangpol/berita/approval" class="btn btn-sm btn-success">Approval berita</a>
                             <table class="table table-sm">
                                 <thead>
                                     <tr>

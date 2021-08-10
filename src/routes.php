@@ -255,6 +255,14 @@ $routes->add('beritaKontenDelete', new Route('/informasi-kesbangpol/berita/{id}/
     '_controller' => 'App\Berita\Controller\BeritaController::beritaKontenDelete',
 ]));
 
+//approval berita
+$routes->add('beritaKontenApproval', new Route('/informasi-kesbangpol/berita/approval', [
+    '_controller' => 'App\Berita\Controller\BeritaController::beritaKontenApproval',
+]));
+$routes->add('beritaKontenApprovalStore', new Route('/informasi-kesbangpol/berita/approval/store', [
+    '_controller' => 'App\Berita\Controller\BeritaController::beritaKontenApprovalStore',
+]));
+
 //curd pengumuman
 $routes->add('pengumumanKonten', new Route('/informasi-kesbangpol/pengumuman', [
     '_controller' => 'App\PengumumanKesbangpol\Controller\PengumumanKesbangpolController::pengumumanKonten',
