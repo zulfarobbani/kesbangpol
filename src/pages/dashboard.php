@@ -22,49 +22,57 @@
 </head>
 
 <body>
-    <img class="w-100" src="../assets/image/Header kesbangpol Revisi ke 5-01.png" alt="header">
-    <div class="container">
+    <img class="w-100" src="/assets/image/Header kesbangpol Revisi ke 5-01.png" alt="header" style="height: 100px;">
+    <!-- <img class="w-100" src="/assets/image/Header kesbangpol Revisi ke 5-01.png" alt="header"> -->
+    <!-- <div class="bg-img-header" style="background: #eeeeee;">
+        <div class="img-header" style="height: 120px;background: url('/assets/image/Header kesbangpol Revisi ke 5-01.png');background-repeat: no-repeat;background-position: center;background-size:920px;">
+        </div>
+    </div> -->
+    <div class="container-fluid">
         <div class="wrapper mt-3">
             <div class="carousel owl-carousel">
                 <?php foreach ($banner as $key => $value) { ?>
-                    <div class="card card-1">
-                        <img src="/assets/media/<?= $value['pathMedia'] ?>" class="card-img img-fluid" alt="...">
+                    <div class="card card-1" style="height: 170px;background: url(/assets/media/<?= $value['pathMedia'] ?>);background-size: 460px;background-position: center;background-repeat: no-repeat;">
+                        <!-- <img src="/assets/media/<?= $value['pathMedia'] ?>" class="card-img img-fluid" alt="..."> -->
                     </div>
                 <?php } ?>
             </div>
         </div>
-        <h1 class="d-flex justify-content-center mt-2" style="color: #004080;">Selamat Datang</h1>
-        <h3 class="d-flex justify-content-center text-center" style="color: #1a8cff; ">Di Situs Resmi Kantor Kesatuan Bangsa dan Politik Kota Cimahi</h3>
+        <h3 class="d-flex justify-content-center mt-2" style="color: grey;margin: 0;color: grey;">Selamat Datang</h3>
+        <h6 class="d-flex justify-content-center text-center" style="color: #adadad;color: #adadad;margin: 0;">di</h6>
+        <h6 class="d-flex justify-content-center text-center" style="color: #adadad;color: #adadad;margin: 0;">Situs Resmi</h6>
+        <h3 class="d-flex justify-content-center text-center" style="color: #adadad;color: #adadad;margin: 5px 0 5px 0;">Badan Kesatuan Bangsa dan Politik</h3>
+        <h5 class="d-flex justify-content-center text-center" style="color: #adadad; ">Kota Cimahi</h5>
 
         <div class="row mt-5" id="menudepan">
             <div class="col-4 col-md-4 col-lg-2">
-                <a href="/beranda"><img src="/assets/icon/Beranda.png" class="d-block mx-auto" alt="home">
-                    <h5 class="text-info text-center">Beranda</h5>
+                <a href="/beranda"><img src="/assets/icon/Beranda_info.png" class="d-block mx-auto text-info" style="width: 40px;" alt="home">
+                    <p class="text-center fw-bold fs-5 mt-2" style="color:#000099;">Beranda</p>
                 </a>
             </div>
             <div class="col-4 col-md-4 col-lg-2">
-                <a href="/struktur-organisasi"><img src="/assets/icon/Icon Profil dashboard.png" class="d-block mx-auto" alt="profil">
-                    <h5 class="text-info text-center">Profil</h5>
+                <a href="/struktur-organisasi"><img src="/assets/icon/Icon_Profil_dashboard_info.png" style="width: 40px;" class="d-block mx-auto text-info" alt="profil">
+                    <p class="text-center fw-bold fs-5 mt-2" style="color:#000099;">Profil</p>
                 </a>
             </div>
             <div class="col-4 col-md-4 col-lg-2">
-                <a href="/ormas" class="text-info text-center"><img src="/assets/icon/Organisasi terdaftar.png" class="d-block mx-auto" alt="Organisasi Terdaftar">
-                    <h5>Organisasi<br>Terdaftar</h5>
+                <a href="/ormas" class="text-info text-center"><img src="/assets/icon/Organisasi_terdaftar_info.png" style="width: 40px;" class="d-block mx-auto" alt="Organisasi Terdaftar">
+                    <p class="text-center fw-bold fs-5 mt-2" style="color:#000099;">Organisasi Terdaftar</p>
                 </a>
             </div>
             <div class="col-4 col-md-4 col-lg-2">
-                <a href="/forum-umum" class="text-info text-center"><img src="/assets/icon/Forum orsospol.png" class="d-block mx-auto" alt="Forum Orsospol">
-                    <h5>Forum<br>ORSOSPOL</h5>
+                <a href="/forum-umum" class="text-info text-center"><img src="/assets/icon/Forum_orsospol_info.png" style="width: 40px;" class="d-block mx-auto" alt="Forum Orsospol">
+                    <p class="text-center fw-bold fs-5 mt-2" style="color:#000099;">Forum Orsospol</p>
                 </a>
             </div>
             <div class="col-4 col-md-4 col-lg-2">
-                <a href=""><img src="/assets/icon/Icon Layanan Dashboard.png" class="d-block mx-auto" alt="Layanan">
-                    <h5 class="text-info text-center">Layanan</h5>
+                <a href=""><img src="/assets/icon/Icon_Layanan_Dashboard_info.png" style="width: 40px;" class="d-block mx-auto" alt="Layanan">
+                    <p class="text-center fw-bold fs-5 mt-2" style="color:#000099;">Layanan</p>
                 </a>
             </div>
             <div class="col-4 col-md-4 col-lg-2">
-                <a href="https://linktr.ee/ardhin" target="_blank"><img src="/assets/icon/Contact us.png" class="d-block mx-auto" alt="Hubungi Kami">
-                    <h5 class="text-info text-center">Hubungi<br>Kami</h5>
+                <a href="https://linktr.ee/ardhin" target="_blank"><img src="/assets/icon/Contact_us_info.png" style="width: 40px;" class="d-block mx-auto" alt="Hubungi Kami">
+                    <p class="text-center fw-bold fs-5 mt-2" style="color:#000099;">Hubungi Kami</p>
                 </a>
             </div>
         </div>

@@ -21,42 +21,47 @@
         /* background-image: url(/assets/image/footer.png);
         background-size: cover; */
         background-color: #EEEEEE;
-        border-top: 2px solid lightgrey;
+        /* border-top: 2px solid lightgrey; */
     }
 
-    #rowfooter {
-        padding-top: 20px;
+    @font-face {
+        font-family: Magazine;
+        src: url('/assets/font/Magazine_Font_Family_(Fontmirror)/Magazine Regular 400.ttf');
+    }
+
+    .judul-kesbangpol {
+        font-family: Bodoni;
     }
 </style>
 <!-- Footer Main Area-->
-<footer class="p-0">
+<footer class="p-2">
     <!-- Grid row -->
-    <div class="row m-0 pb-4" id="rowfooter">
+    <div class="row m-0" id="rowfooter">
         <!-- End of Full-width single-column -->
         <!-- Multi-column 3 of 3 -->
-        <div class="col-12 col-md-4 text-center">
-            <p class="text-secondary"><b>KESBANGPOL</b>
-                <br>Kota Cimahi
-            </p>
+        <div class="col-12 col-md-4 text-center" style="height: fit-content;">
+            <p class="text-secondary judul-kesbangpol fs-4 mb-0"><b>KESBANGPOL</b></p>
+            <p class="m-0" style="font-size: 12px;">Badan Kesatuan Bangsa & Politik</p>
         </div>
-        <div class="col-12 col-md-4 text-center">
-            <p class="text-secondary">Gedung Perkantoran Pemkot Cimahi
-                <br>Jl. Demang Hardjakusumah Gedung C Lt.4
-            </p>
+        <div class="col-12 col-md-4 text-center" style="height: fit-content;">
+            <p class="text-secondary m-0" style="font-size: 12px;">Gedung Perkantoran Pemkot Cimahi</p>
+            <p class="text-secondary m-0" style="font-size: 12px;">Jl. Demang Hardjakusumah, Gedung C, Lt.4</p>
+            <p class="text-secondary m-0" style="font-size: 12px;">Kota Cimahi</p>
         </div>
-        <div class="col-12 col-md-4 text-center">
-            <ul class="list-unstyled d-block text-center">
-                <li class="d-inline">
-                    <a href="" role="button"><i class="fab fa-facebook-square text-secondary fs-2"></i></a>
+        <div class="col-12 col-md-4 text-center mt-1" style="height: fit-content;">
+            <h6>Media Sosial</h6>
+            <ul class="list-unstyled d-block text-center" style="margin: 0;">
+                <li class="d-inline" style="margin-right: 10px;">
+                    <a href="" role="button"><img src="/assets/icon/sosmed/facebook.png" alt="" style="width:18px;"></a>
                 </li>
-                <li class="d-inline">
-                    <a href="" role="button"><i class="fab fa-youtube text-secondary fs-2"></i></a>
+                <li class="d-inline" style="margin-right: 10px;">
+                    <a href="" role="button"><img src="/assets/icon/sosmed/youtube.png" alt="" style="width:26px;"></a>
                 </li>
-                <li class="d-inline">
-                    <a href="" role="button"><i class="fab fa-twitter-square text-secondary fs-2"></i></a>
+                <li class="d-inline" style="margin-right: 10px;">
+                    <a href="" role="button"><img src="/assets/icon/sosmed/twitter-sign.png" alt="" style="width:20px;"></a>
                 </li>
-                <li class="d-inline">
-                    <a href="" role="button"><i class="fab fa-instagram text-secondary fs-2"></i></a>
+                <li class="d-inline" style="margin-right: 10px;">
+                    <a href="" role="button"><img src="/assets/icon/sosmed/instagram.png" alt="" style="width:20px;"></a>
                 </li>
             </ul>
         </div>
