@@ -19,12 +19,16 @@
   <div class="container-fluid">
     <div class="row" style="background-color : #EEEEEE;">
       <div class="col-md-8 mb-3">
+      <div class="card rounded-3 mt-5 px-3">
+        <div class="card-body">
         <?php include(__DIR__ . '/navtabsprofil.php') ?>
         <!-- START CODE -->
         <h4 class="mt-5">Tugas Pokok</h4>
         <p><?= $tupoksi['tugaspokok'] ?></p>
         <h4 class="mt-5">Fungsi</h4>
         <p><?= $tupoksi['fungsi'] ?></p>
+</div>
+</div>
       </div>
       <?php include(__DIR__ . '/sidebar.php') ?>
     </div>

@@ -19,6 +19,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 mb-3">
+            <div class="card rounded-3 mt-5 px-3">
+        <div class="card-body">
                 <!-- START CODE -->
                 <h6 class="fw-normal mt-5"><a href="/informasi/berita" class="btn btn-sm btn-outlined-light"><i class="fas fa-arrow-left"></i></a> Informasi KESBANG Terkini</h6>
                 <div class="row g-4">
@@ -28,6 +30,8 @@
                         <p class="mt-4" align="justify"><?= html_entity_decode(nl2br($detail['deskripsiBerita'])) ?></p>
                     </div>
                 </div>
+        </div>
+            </div>
             </div>
             <?php include(__DIR__ . '/../../sidebar.php') ?>
         </div>

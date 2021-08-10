@@ -21,6 +21,8 @@
   <div class="container-fluid">   
       <div class="row" style="background-color : #EEEEEE;">
         <div class="col-md-8">
+        <div class="card rounded-3 mt-5 px-3">
+        <div class="card-body">
           <?php include(__DIR__.'/../navtabsprofil.php' )?>
           <div class="d-block">
           <h4 class="d-inline">Panduan SAKIP</h4>
@@ -46,6 +48,8 @@
               </tbody>
             </table>
           </div>
+                </div>
+                </div>
         </div>
         <?php include(__DIR__.'/../sidebar.php' )?>
       </div>

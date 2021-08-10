@@ -19,6 +19,8 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-8 mb-3">
+      <div class="card rounded-3 mt-5 px-3">
+        <div class="card-body">
         <?php include(__DIR__ . '/../../navtabsinformasi.php') ?>
         <!-- START CODE -->
         <!-- <div class="row row-cols-1 row-cols-md-4 g-4"> -->
@@ -27,7 +29,7 @@
               <div class="news-card">
     <img src="/assets/media/<?= $value['pathMedia'] ?>" alt="<?= $value['namaBerita'] ?>" class="news-card__image">
     <div class="news-card__text-wrapper">
-    <a href="/informasi/berita/<?= $value['idBerita'] ?>" ><h2 class="news-card__title"><?= $value['namaBerita'] ?></h2></a>
+    <a href="/informasi/berita/<?= $value['idBerita'] ?>" style="text-decoration:none;"><h2 class="news-card__title"><?= $value['namaBerita'] ?></h2></a>
       <div class="news-card__post-date"><?= $value['dateCreate'] ?></div>
       <div class="news-card__details-wrapper">
         <a href="#" class="float-end btn-sosmed d-inline" data-bs-toggle="modal" data-bs-target="#modalSosmed" data-bs-url="<?= $site_url ?>/informasi/berita/<?= $value['idBerita'] ?>">
@@ -38,8 +40,9 @@
     </div>
   </div>
             <?php } ?>
-
         </div>
+        </div>
+      </div>
       </div>
 
       <?php include(__DIR__ . '/../../sidebar.php') ?>

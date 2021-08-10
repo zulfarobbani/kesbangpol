@@ -20,8 +20,11 @@
     <div class="row pb-5" style="background-color : #EEEEEE;">
       <div class="col-md-8 top-1 start-0">
         <div class="container-fluid">
+
+  <div class="card mt-5">
+        <div class="card-body">
           <!-- START CODE -->
-          <h4 class="fw-normal mt-5">Informasi KESBANG Terkini</h4>
+          <h4 class="fw-normal">Informasi KESBANG Terkini</h4>
           <div class="content-wrapper">
             <?php foreach ($datas as $key => $value) { ?>
               <div class="news-card">
@@ -39,6 +42,8 @@
   </div>
   <!--  -->
             <?php } ?>
+          </div>
+          </div>
           </div>
         </div>
       </div>

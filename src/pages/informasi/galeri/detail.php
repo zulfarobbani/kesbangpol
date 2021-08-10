@@ -18,6 +18,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 mb-3">
+            <div class="card rounded-3 mt-5 px-3">
+        <div class="card-body">
                 <h3 class="fw-normal mt-5"><a href="/informasi/galeri" class="btn btn-sm btn-outlined-light"><i class="fas fa-arrow-left"></i></a> <?= $detail['namaGallery'] ?></h3>
                 <div id="top"></div>
                 <section class="gallery">
@@ -60,8 +62,8 @@
                     </div> <!-- / Item 02 -->
 
                 </section> <!-- / projects -->
-
-
+        </div>
+        </div>
             </div>
             <?php include(__DIR__ . '/../../sidebar.php') ?>
         </div>

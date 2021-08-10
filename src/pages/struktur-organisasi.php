@@ -21,13 +21,16 @@
   <div class="container-fluid">   
       <div class="row" style="background-color : #EEEEEE;">  
         <div class="col-md-8 mb-3">
+        <div class="card rounded-3 mt-5 px-3">
+        <div class="card-body">
           <?php include(__DIR__.'/navtabsprofil.php' )?>
           <!-- START CODE -->
           <div class="d-block">
           <h4 class="mt-2 d-inline">Struktur Organisasi</h4>
           </div>
           <img src="/assets/media/<?= $strukturOrganisasi['pathMedia'] ?>" class="mt-4" width="100%">
-
+        </div>
+        </div>
           </div>
         <?php include(__DIR__.'/sidebar.php' )?>
       </div>

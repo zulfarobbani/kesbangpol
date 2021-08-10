@@ -20,15 +20,12 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-8 mb-3">
+      <div class="card rounded-3 mt-5 px-3">
+        <div class="card-body">
         <?php include(__DIR__ . '/navtabsforum.php') ?>
         <!-- START CODE -->
         <h4>Forum Diskusi ORSOSPOL</h4>
-
-        <div class="card text-center">
-          <div class="card-header">
-            Private Chat
-          </div>
-          <div class="card-body">
+        <em class="d-block d-md-none mb-2" style="font-size:0.7rem;">Klik tombol di sebelah kiri untuk memulai percakapan</em>
             <script>
               window.intergramId = "986376907"
               window.intergramCustomizations = {
@@ -42,13 +39,11 @@
                 alwaysUseFloatingButton: false // Use the mobile floating button also on large screens
               };
             </script>
-            <script id="intergram" type="text/javascript" src="/assets/js/intergram.js"></script> <em class="d-block d-md-none" style="font-size:0.75rem;position:absolute; right:5%; top:55%;">Klik tombol di sebelah kiri untuk memulai percakapan</em>
+            <script id="intergram" type="text/javascript" src="/assets/js/intergram.js"></script>
 
-          </div>
 
         </div>
-
-
+      </div>
       </div>
 
       <?php include(__DIR__ . '/sidebar.php') ?>

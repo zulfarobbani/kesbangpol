@@ -22,11 +22,14 @@
   <div class="container-fluid">   
       <div class="row">  
         <div class="col-md-8 mb-3">
+        <div class="card rounded-3 mt-5 px-3">
+        <div class="card-body">
           <?php include(__DIR__.'/navtabsforum.php' )?>
           <!-- START CODE -->
           <script async src="https://telegram.org/js/telegram-widget.js?15" data-telegram-discussion="forumorsospolumum/2"  data-comments-limit="5" data-height="600" data-colorful="1"></script>
           
-            
+        </div>
+        </div>
           </div>
 
         <?php include(__DIR__.'/sidebar.php' )?>

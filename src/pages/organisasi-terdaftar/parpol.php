@@ -21,6 +21,8 @@
   <div class="container-fluid">   
       <div class="row">  
         <div class="col-md-8 mb-3">
+        <div class="card rounded-3 mt-5 px-3">
+        <div class="card-body">
           <!-- <div class="container-fluid p-1 mt-4">  
             <div class="input-group">
               <span class="input-group-text bg-body border-0 text-muted"><span class="material-icons-outlined align-middle">search</span></span>
@@ -60,7 +62,8 @@
               <?php }?>
             </table>
           </div>
-
+        </div>
+        </div>
           </div>
         <?php include(__DIR__.'/../sidebar.php' )?>
       </div>

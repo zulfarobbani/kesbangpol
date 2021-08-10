@@ -21,9 +21,12 @@
 <?php include(__DIR__ . '/../mobilemenu.php') ?>
 <?php include(__DIR__ . '/../mobilenav.php') ?>
   <?php include(__DIR__ . '/../navbar.php') ?>
+  
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-8">
+      <div class="card rounded-3 mt-5 px-3">
+        <div class="card-body">
         <!-- START CODE -->
         <h4 class="mt-3">ORSOSPOL</h4>
         <div class="mb-3 mt-2">
@@ -46,7 +49,7 @@
             </form>
           </div>
           <div class="col-md-6 text-end">
-            <h4 class="fw-light pt-5">Register</h4>
+            <h4 class="fw-light">Register</h4>
             <form action="register-orsospol" method="POST">
               <input type="text" class="form-control shadow-sm mb-3" name="namaOrsosopol" placeholder="Nama Orsospol" required>
               <input type="text" class="form-control shadow-sm mb-3" name="singkatanOrsospol" placeholder="Singkatan Orsospol" required>
@@ -67,6 +70,8 @@
             </form>
           </div>
         </div>
+                </div>
+      </div>
       </div>
       <?php include(__DIR__ . '/../sidebar.php') ?>
     </div>
