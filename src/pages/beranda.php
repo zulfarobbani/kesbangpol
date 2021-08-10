@@ -27,13 +27,13 @@
               <div class="news-card">
     <img src="/assets/media/<?= $value['pathMedia'] ?>" alt="<?= $value['namaBerita'] ?>" class="news-card__image">
     <div class="news-card__text-wrapper">
-    <a href="/informasi/berita/<?= $value['idBerita'] ?>" ><h2 class="news-card__title"><?= $value['namaBerita'] ?></h2></a>
+    <a href="/informasi/berita/<?= $value['idBerita'] ?>" style="text-decoration:none;"><h2 class="news-card__title"><?= $value['namaBerita'] ?></h2></a>
       <div class="news-card__post-date"><?= $value['dateCreate'] ?></div>
       <div class="news-card__details-wrapper">
         <a href="#" class="float-end btn-sosmed d-inline" data-bs-toggle="modal" data-bs-target="#modalSosmed" data-bs-url="<?= $site_url ?>/informasi/berita/<?= $value['idBerita'] ?>">
                       <span class="material-icons-outlined fs-6 mr-3 mt-3" style="color: white;">more_vert</span>
                     </a>
-        <a href="/informasi/berita/<?= $value['idBerita'] ?>" class="news-card__read-more d-inline">Read more <i class="fas fa-long-arrow-alt-right mt-3"></i></a>
+        <a href="/informasi/berita/<?= $value['idBerita'] ?>" class="news-card__read-more d-inline text-white">Read more <i class="fas fa-long-arrow-alt-right mt-3"></i></a>
       </div>
     </div>
   </div>
