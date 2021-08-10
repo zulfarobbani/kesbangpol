@@ -32,11 +32,11 @@
     </style>
 </head>
 
-<body>
+<body style="background: #eeeeee;">
     <!-- <img class="w-100" src="/assets/image/Header kesbangpol Revisi ke 5-01.png" alt="header"> -->
     <!-- <img class="w-100" src="/assets/image/Header kesbangpol Revisi ke 5-01.png" alt="header"> -->
-    <div class="bg-img-header" style="background: #eeeeee;">
-        <div class="img-header" style="height: 100px;background: url('/assets/image/header/header-02.png');background-repeat: no-repeat;background-position-x: center;background-position-y: -50px;background-size:cover;position:relative;">
+    <div class="bg-img-header" style="background: #d2d2d2;border-bottom: 2px solid #bfbfbf;">
+        <div class="img-header" style="height: 100px;background: url('/assets/image/header/ribbonbaru-02.png');background-repeat: no-repeat;background-position-x: center;background-position-y: -50px;background-size:cover;position:relative;">
             <img src="/assets/image/header/header-03.png" alt="" style="width: 150px;position:absolute;left: 50%;margin-left: -70px;top: 60%;margin-top: -50px;">
         </div>
     </div>

@@ -34,7 +34,7 @@
     }
 </style>
 <!-- Footer Main Area-->
-<footer class="p-2">
+<footer class="p-2" style="border-top: 2px solid #bfbfbf;background: #d2d2d2;">
     <!-- Grid row -->
     <div class="row m-0" id="rowfooter">
         <!-- End of Full-width single-column -->
