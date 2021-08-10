@@ -49,7 +49,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Share Berita</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" class="btn btn-outline-danger btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <div class="row justify-content-center">
@@ -59,18 +59,27 @@
                 <div class="col-2 mb-3">
                   <a href="" class="twitter" target="_blank"><img src="/assets/icon/sosmed/twitter.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Twitter</span></a>
                 </div>
+                <div class="col-2 mb-3">
+                  <a href="" class="whatsapp" target="_blank"><img src="/assets/icon/sosmed/whatsapp.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Whatsapp</span></a>
+                </div>
+                <div class="col-2 mb-3">
+                  <a href="" class="telegram" target="_blank"><img src="/assets/icon/sosmed/telegram.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Telegram</span></a>
+                </div>
+                <div class="col-2 mb-3">
+                  <a href="" class="instagram" target="_blank"><img src="/assets/icon/sosmed/instagram.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Instagram</span></a>
+                </div>
                 <!-- <div class="col-2 mb-3">
                   <a href="" class="googleplus" target="_blank"><img src="/assets/icon/sosmed/google-plus.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Google +</span></a>
-                </div> -->
+                </div> 
                 <div class="col-2 mb-3">
                   <a href="" class="reddit" target="_blank"><img src="/assets/icon/sosmed/reddit.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Reddit</span></a>
                 </div>
-                <!-- <div class="col-2 mb-3">
+                <div class="col-2 mb-3">
                   <a href="" class="linkedin" target="_blank"><img src="/assets/icon/sosmed/linkedin.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>LinkedIn</span></a>
-                </div> -->
+                </div>
                 <div class="col-2 mb-3">
                   <a href="" class="pinterest" target="_blank"><img src="/assets/icon/sosmed/pinterest.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Pinterest</span></a>
-                </div>
+                </div> -->
                 <div class="col-2 mb-3">
                   <a href="" class="email" target="_blank"><img src="/assets/icon/sosmed/email.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Email</span></a>
                 </div>
