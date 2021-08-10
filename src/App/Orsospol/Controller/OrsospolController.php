@@ -23,9 +23,15 @@ class OrsospolController extends GlobalFunc
 
     public function index(Request $request)
     {
+        $search = $request->query->get('search');
+        $where = "";
+        if ($search != '' || $search != null) {
+            $where.= " AND namaOrsospol LIKE '%$search%'";
+        }
+
         $jenisOrsospol = new JenisOrsospolKesbangpol();
         $data_jenisOrsospol = $jenisOrsospol->selectAll("WHERE namaJenisorsospol = 'ORMAS'")[0];
-        $datas = $this->ormas->selectAll($data_jenisOrsospol['idJenisorsospol']);
+        $datas = $this->ormas->selectAll($data_jenisOrsospol['idJenisorsospol'], $where);
 
         return $this->render_template('orsospol/index', ['datas' => $datas]);
     }

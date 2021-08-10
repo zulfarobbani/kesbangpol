@@ -6,19 +6,21 @@ use Symfony\Component\HttpFoundation\Request;
 use Core\GlobalFunc;
 
 $routes = new Routing\RouteCollection();
-$app = new GlobalFunc;
+$app = new GlobalFunc();
 
+// $app->beginSession();
+// dump($app->session->get('idRole'));
 
 // ROUTE APPLICATION START BELOW!!! 
 // --------------------------------
 
-$routes->add('welcome', new Route('/1', [
-    '_controller' => function(Request $request) {
-        global $app;
+// $routes->add('welcome', new Route('/', [
+//     '_controller' => function(Request $request) {
+//         global $app;
 
-        return $app->render_template('welcome');
-    }
-]));
+//         return $app->render_template('welcome');
+//     }
+// ]));
 
 $routes->add('LoginRegister', new Route('/login-register', [
     '_controller' => 'App\LoginRegister\Controller\LoginRegisterController::index',
@@ -69,23 +71,6 @@ $routes->add('layananKontenUpdate', new Route('/layanan-kesbangpol/{id}/update',
 ]));
 $routes->add('layananKontenDelete', new Route('/layanan-kesbangpol/{id}/delete', [
     '_controller' => 'App\LayananKesbangpol\Controller\LayananKesbangpolController::layananKontenDelete',
-]));
-
-//role
-$routes->add('role', new Route('/role', [
-    '_controller' => 'App\Role\Controller\RoleController::index',
-]));
-$routes->add('roleStore', new Route('/role/store', [
-    '_controller' => 'App\Role\Controller\RoleController::store',
-]));
-$routes->add('roleGet', new Route('/role/{id}/get', [
-    '_controller' => 'App\Role\Controller\RoleController::get',
-]));
-$routes->add('roleUpdate', new Route('/role/{id}/update', [
-    '_controller' => 'App\Role\Controller\RoleController::update',
-]));
-$routes->add('roleDelete', new Route('/role/{id}/delete', [
-    '_controller' => 'App\Role\Controller\RoleController::delete',
 ]));
 
 $routes->add('registerOrsospol', new Route('/register-orsospol', [
@@ -345,6 +330,41 @@ $routes->add('usersUpdate', new Route('/users/{id}/update', [
 ]));
 $routes->add('usersDelete', new Route('/users/{id}/delete', [
     '_controller' => 'App\Users\Controller\UsersController::delete',
+]));
+
+
+//crud role
+$routes->add('roles', new Route('/roles', [
+    '_controller' => 'App\Role\Controller\RoleController::form',
+]));
+$routes->add('rolesGet', new Route('/roles/{id}/get', [
+    '_controller' => 'App\Role\Controller\RoleController::get',
+]));
+$routes->add('rolesStore', new Route('/roles/store', [
+    '_controller' => 'App\Role\Controller\RoleController::store',
+]));
+$routes->add('rolesUpdate', new Route('/roles/{id}/update', [
+    '_controller' => 'App\Role\Controller\RoleController::update',
+]));
+$routes->add('rolesDelete', new Route('/roles/{id}/delete', [
+    '_controller' => 'App\Role\Controller\RoleController::delete',
+]));
+
+//crud permissions
+$routes->add('permissions', new Route('/permissions', [
+    '_controller' => 'App\Permissions\Controller\PermissionsController::form',
+]));
+$routes->add('permissionsGet', new Route('/permissions/{id}/get', [
+    '_controller' => 'App\Permissions\Controller\PermissionsController::get',
+]));
+$routes->add('permissionsStore', new Route('/permissions/store', [
+    '_controller' => 'App\Permissions\Controller\PermissionsController::store',
+]));
+$routes->add('permissionsUpdate', new Route('/permissions/{id}/update', [
+    '_controller' => 'App\Permissions\Controller\PermissionsController::update',
+]));
+$routes->add('permissionsDelete', new Route('/permissions/{id}/delete', [
+    '_controller' => 'App\Permissions\Controller\PermissionsController::delete',
 ]));
 
 

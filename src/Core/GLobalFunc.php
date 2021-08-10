@@ -3,6 +3,7 @@
 namespace Core;
 
 use App\KontakDarurat\Model\KontakDarurat;
+use App\Permissions\Model\RolePermissions;
 use Config\Database;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -23,7 +24,6 @@ class GlobalFunc
 
     public function beginSession()
     {
-        // $this->dd($this->session->isStarted());
         if ($this->session == null || $this->session->isStarted() == false) {
             $this->session = new Session();
             $this->session->start();
@@ -36,6 +36,8 @@ class GlobalFunc
             extract($request->attributes->all(), EXTR_SKIP);
         }
 
+        global $requestUri;
+
         $this->beginSession();
 
         $data['namaUser'] = !is_null($this->session) ? $this->session->get('namaUser') : null;
@@ -45,13 +47,47 @@ class GlobalFunc
         $data['idRole'] = !is_null($this->session) ? $this->session->get('idRole') : null;
 
         $kontakdaruratModel = new KontakDarurat();
-        $kontakdarurat = $kontakdaruratModel->selectAll();
-        $data['kontakDarurat'] = $kontakdarurat;
+        $data['kontakDarurat'] = $kontakdaruratModel->selectAll();
+
+        if ($data['idRole'] != null) {
+            $rolepermissionsModel = new RolePermissions();
+            $data['rolepermissions'] = $rolepermissionsModel->get($data['idRole']);
+        } else {
+            $data['rolepermissions'] = [];
+        }
+
+        $isPermited = function ($userpermissions, $permissions, $option = 'required-all') {
+            $permissionAmount = count($permissions);
+            $result = false;
+
+            // option "required-all"
+            if ($option == 'required-all') {
+                foreach ($userpermissions as $key => $value) {
+                    foreach ($permissions as $key1 => $value1) {
+                        if ($value['aliasPermission'] == $value1) {
+                            $permissionAmount--;
+                        }
+                    }
+                }
+                $result = $permissionAmount == 0 ? true : false;
+            } else {
+            // option "required-one"
+                foreach ($userpermissions as $key => $value) {
+                    if (in_array($value['aliasPermission'], $permissions)) {
+                        $result = true;
+                        break;
+                    }
+                }
+            }
+
+            return $result;
+        };
+        $data['isPermited'] = $isPermited;
 
         extract($data, EXTR_SKIP);
 
         ob_start();
-        include sprintf(__DIR__.'/../../src/pages/%s.php', $page);
+        include sprintf(__DIR__ . '/../../src/pages/%s.php', $page);
 
         return new Response(ob_get_clean());
     }
@@ -59,9 +95,9 @@ class GlobalFunc
     public function assets(Request $request)
     {
         $extension = $request->attributes->get('_format');
-        $file = $request->attributes->get('path').'.'.$extension;
-        $pathFile = __DIR__.'/../../src/assets/'.$file;
-        
+        $file = $request->attributes->get('path') . '.' . $extension;
+        $pathFile = __DIR__ . '/../../src/assets/' . $file;
+
         if (!file_exists($pathFile)) {
             $response = new Response("File Not Found!");
             $response->headers->set('Content-Type', 'text/plain');

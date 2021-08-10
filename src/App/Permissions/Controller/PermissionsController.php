@@ -1,57 +1,52 @@
 <?php
 
-namespace App\Role\Controller;
+namespace App\Permissions\Controller;
 
 use App\Permissions\Model\Permissions;
-use App\Role\Model\Role;
-use App\Permissions\Model\RolePermissions;
 use Core\GlobalFunc;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 
-class RoleController extends GlobalFunc
+class PermissionsController extends GlobalFunc
 {
     public $model;
 
     public function __construct()
     {
-        $this->model = new Role();
+        $this->model = new Permissions();
     }
 
     public function form(Request $request)
     {
         $datas = $this->model->selectAll();
-        $permissions = new Permissions();
-        $data_permissions = $permissions->selectAll();
-
-        return $this->render_template('roles/form', ['datas' => $datas, 'permissions' => $data_permissions]);
+        return $this->render_template('permissions/form', ['datas' => $datas]);
     }
 
     public function index(Request $request)
     {
         $datas = $this->model->selectAll();
-        return $this->render_template('roles/index', ['datas' => $datas]);
+        return $this->render_template('permissions/index', ['datas' => $datas]);
     }
 
     public function create(Request $request)
     {
-        return $this->render_template('roles/create');
+        return $this->render_template('permissions/create');
     }
 
     public function store(Request $request)
     {
         $this->model->create($request->request);
 
-        return new RedirectResponse('/roles');
+        return new RedirectResponse('/permissions');
     }
 
-    public function edit(Request $request)
+    public function detail(Request $request)
     {
         $id = $request->attributes->get('id');
         $detail = $this->model->selectOne($id);
 
-        return $this->render_template('roles/edit', ['id' => $id, 'detail' => $detail]);
+        return $this->render_template('permissions/edit', ['id' => $id, 'detail' => $detail]);
     }
 
     public function get(Request $request)
@@ -59,10 +54,7 @@ class RoleController extends GlobalFunc
         $id = $request->attributes->get('id');
         $detail = $this->model->selectOne($id);
 
-        $role_permissions = new RolePermissions();
-        $get_role_permissions = $role_permissions->get($id);
-
-        return new JsonResponse(['detail' => $detail, 'permissions' => $get_role_permissions]);
+        return new JsonResponse(['detail' => $detail]);
     }
 
     public function update(Request $request)
@@ -70,10 +62,7 @@ class RoleController extends GlobalFunc
         $id = $request->attributes->get('id');
         $this->model->update($id, $request->request);
 
-        $role_permissions = new RolePermissions();
-        $update_role_permissions = $role_permissions->update($request->request, $id);
-
-        return new RedirectResponse('/roles');
+        return new RedirectResponse('/permissions');
     }
 
     public function delete(Request $request)
@@ -81,6 +70,6 @@ class RoleController extends GlobalFunc
         $id = $request->attributes->get('id');
         $this->model->delete($id);
 
-        return new RedirectResponse('/roles');
+        return new RedirectResponse('/permissions');
     }
 }

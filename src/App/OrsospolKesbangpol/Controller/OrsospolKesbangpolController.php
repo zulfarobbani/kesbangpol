@@ -25,9 +25,12 @@ class OrsospolKesbangpolController extends GlobalFunc
     public function ormas(Request $request)
     {
         $idUser = $this->session->get('idUser');
+        $aliasRole = $this->session->get('aliasRole');
+        $where = $aliasRole != 'kesbangpol' ? "AND idUser = '$idUser'" : "";
+
         $jenisOrsospol = new JenisOrsospolKesbangpol();
         $data_jenisOrssospol = $jenisOrsospol->selectAll("WHERE namaJenisorsospol = 'ORMAS'")[0];
-        $datas = $this->ormas->selectAll($data_jenisOrssospol['idJenisorsospol'], "AND idUser = '$idUser'");
+        $datas = $this->ormas->selectAll($data_jenisOrssospol['idJenisorsospol'], $where);
 
         $provinsi = new Provinsi();
         $data_provinsi = $provinsi->selectAll();
@@ -37,9 +40,13 @@ class OrsospolKesbangpolController extends GlobalFunc
 
     public function komunitas(Request $request)
     {
+        $idUser = $this->session->get('idUser');
+        $aliasRole = $this->session->get('aliasRole');
+        $where = $aliasRole != 'kesbangpol' ? "AND idUser = '$idUser'" : "";
+
         $jenisOrsospol = new JenisOrsospolKesbangpol();
         $data_jenisOrssospol = $jenisOrsospol->selectAll("WHERE namaJenisorsospol = 'Komunitas'")[0];
-        $datas = $this->ormas->selectAll($data_jenisOrssospol['idJenisorsospol']);
+        $datas = $this->ormas->selectAll($data_jenisOrssospol['idJenisorsospol'], $where);
 
         $provinsi = new Provinsi();
         $data_provinsi = $provinsi->selectAll();
@@ -49,9 +56,13 @@ class OrsospolKesbangpolController extends GlobalFunc
 
     public function okp(Request $request)
     {
+        $idUser = $this->session->get('idUser');
+        $aliasRole = $this->session->get('aliasRole');
+        $where = $aliasRole != 'kesbangpol' ? "AND idUser = '$idUser'" : "";
+
         $jenisOrsospol = new JenisOrsospolKesbangpol();
         $data_jenisOrssospol = $jenisOrsospol->selectAll("WHERE namaJenisorsospol = 'OKP'")[0];
-        $datas = $this->ormas->selectAll($data_jenisOrssospol['idJenisorsospol']);
+        $datas = $this->ormas->selectAll($data_jenisOrssospol['idJenisorsospol'], $where);
 
         $provinsi = new Provinsi();
         $data_provinsi = $provinsi->selectAll();
@@ -61,9 +72,13 @@ class OrsospolKesbangpolController extends GlobalFunc
 
     public function parpol(Request $request)
     {
+        $idUser = $this->session->get('idUser');
+        $aliasRole = $this->session->get('aliasRole');
+        $where = $aliasRole != 'kesbangpol' ? "AND idUser = '$idUser'" : "";
+
         $jenisOrsospol = new JenisOrsospolKesbangpol();
         $data_jenisOrssospol = $jenisOrsospol->selectAll("WHERE namaJenisorsospol = 'PARPOL'")[0];
-        $datas = $this->ormas->selectAll($data_jenisOrssospol['idJenisorsospol']);
+        $datas = $this->ormas->selectAll($data_jenisOrssospol['idJenisorsospol'], $where);
 
         $provinsi = new Provinsi();
         $data_provinsi = $provinsi->selectAll();

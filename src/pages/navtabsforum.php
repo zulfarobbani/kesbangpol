@@ -12,13 +12,13 @@
 <div class="container px-0 py-3 roundedjustify-content-start">
   <div class="row py-1" id="bgprofile">
     <div class="col-6 p-2" >
-      <a class="nav-link p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" aria-current="page" href="\forum-umum">
+      <a class="nav-link <?= $requestUri == '/forum-umum' ? 'nav-link-active' : '' ?> p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" aria-current="page" href="\forum-umum">
         <span class="material-icons-outlined align-middle">question_answer</span>
         <span class="d-none d-md-block">Umum</span>
       </a>
     </div>
     <div class="col-6 px-2">
-      <a class="nav-link p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" href="\forum-private">
+      <a class="nav-link <?= $requestUri == '/forum-private' ? 'nav-link-active' : '' ?> p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" href="\forum-private">
         <i class="far fa-comments"></i>
         <span class="d-none d-md-block">Private</span>
       </a>

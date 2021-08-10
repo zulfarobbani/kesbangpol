@@ -67,7 +67,7 @@ class Users extends GlobalFunc
 
     public function selectOneWhere($where = "")
     {
-        $sql = "SELECT * FROM " . $this->table . " LEFT JOIN media ON media.idRelation = " . $this->table . "." . $this->primaryKey . " " . $where;
+        $sql = "SELECT * FROM " . $this->table . " LEFT JOIN role ON role.idRole = ".$this->table.".idRole LEFT JOIN media ON media.idRelation = " . $this->table . "." . $this->primaryKey . " " . $where;
         // $this->dd($sql);
 
         try {

@@ -12,12 +12,12 @@
   <title></title>
 </head>
 
-<body style="background-color : #EEEEEE; color: navy;">
+<body>
 <?php include(__DIR__ . '/mobilemenu.php') ?>
 <?php include(__DIR__ . '/mobilenav.php') ?>
   <?php include(__DIR__ . '/navbar.php') ?>
   <div class="container-fluid">
-    <div class="row">
+    <div class="row" style="background-color : #EEEEEE;">
       <div class="col-md-8 mb-3">
         <?php include(__DIR__ . '/navtabsprofil.php') ?>
         <!-- START CODE -->

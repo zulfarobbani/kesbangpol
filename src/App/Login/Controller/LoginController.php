@@ -39,6 +39,7 @@ class LoginController extends GlobalFunc
                 $this->session->set('idUser', $data_user['idUser']);
                 $this->session->set('namaUser', $data_user['namaUser']);
                 $this->session->set('idRole', $data_user['idRole']);
+                $this->session->set('aliasRole', $data_user['aliasRole']);
                 $this->session->set('idOrsospol', $data_orsospol['idOrsospol']);
                 $this->session->set('namaOrsospol', $data_orsospol['namaOrsospol']);
                 $this->session->set('noAHU', $data_orsospol['noAHU']);

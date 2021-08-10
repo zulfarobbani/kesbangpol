@@ -1,15 +1,14 @@
 <?php
 
-namespace App\Role\Model;
+namespace App\Permissions\Model;
 
 use Core\GlobalFunc;
 use PDOException;
 
-class Role extends GlobalFunc
+class Permissions extends GlobalFunc
 {
-    private $table = 'role';
-    private $primaryKey = 'idRole';
-
+    private $table = 'permissions';
+    private $primaryKey = 'idPermission';
     public $conn;
 
     public function __construct()
@@ -33,15 +32,14 @@ class Role extends GlobalFunc
             die();
         }
     }
-
     public function create($datas)
     {
-        $id = uniqid('rol');
-        $namaRole = $datas->get('namaRole');
-        $aliasRole = strtolower(implode('-', explode(' ', $namaRole)));
+        $id = uniqid('per');
+        $namaPermission = $datas->get('namaPermission');
+        $aliasPermission = strtolower(implode('-', explode(' ', $namaPermission)));
         $dateCreate = date('Y-m-d');
 
-        $sql = "INSERT INTO " . $this->table . " VALUES ('$id', '$namaRole', '$aliasRole', '$dateCreate')";
+        $sql = "INSERT INTO " . $this->table . " VALUES ('$id', '$namaPermission', '$aliasPermission', '$dateCreate')";
 
         try {
             $data = $this->conn->prepare($sql);
@@ -72,10 +70,10 @@ class Role extends GlobalFunc
 
     public function update($id, $datas)
     {
-        $namaRole = $datas->get('namaRole');
-        $aliasRole = strtolower(implode('-', explode(' ', $namaRole)));
+        $namaPermission = $datas->get('namaPermission');
+        $aliasPermission = strtolower(implode('-', explode(' ', $namaPermission)));
 
-        $sql = "UPDATE " . $this->table . " SET namaRole = '$namaRole', aliasRole = '$aliasRole' WHERE ".$this->primaryKey." = '$id'";
+        $sql = "UPDATE " . $this->table . " SET namaPermission = '$namaPermission', aliasPermission = '$aliasPermission' WHERE ".$this->primaryKey." = '$id'";
 
         try {
             $data = $this->conn->prepare($sql);

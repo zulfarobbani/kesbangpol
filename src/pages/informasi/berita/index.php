@@ -18,7 +18,7 @@
   <?php include(__DIR__ . '/../../navbar.php') ?>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-9 mb-3">
+      <div class="col-md-8 mb-3">
         <?php include(__DIR__ . '/../../navtabsinformasi.php') ?>
         <!-- START CODE -->
         <!-- <div class="row row-cols-1 row-cols-md-4 g-4"> -->
@@ -42,6 +42,7 @@
                 </div>
               </div>
             </div>
+            
           <?php } ?>
 
         </div>

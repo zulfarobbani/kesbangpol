@@ -27,6 +27,11 @@ class Framework extends HttpKernel implements HttpKernelInterface
     public function handle(Request $request, $type = HttpKernelInterface::MASTER_REQUEST,
         $catch = true)
     {
+        // !!!! OVERIDE CORE SYSTEM !!!!
+        $GLOBALS['requestUri'] = $request->getRequestUri();
+        
+        // !!!! ------------------- !!!!
+
         $this->matcher->getContext()->fromRequest($request);
 
         try {

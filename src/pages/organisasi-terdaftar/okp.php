@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+  <link rel="stylesheet" href="/assets/css/style.css">
   <title></title>
 </head>
 
@@ -20,12 +21,12 @@
   <div class="container-fluid">   
       <div class="row">  
         <div class="col-md-8 mb-3">
-          <div class="container-fluid p-1 mt-4">  
+          <!-- <div class="container-fluid p-1 mt-4">  
             <div class="input-group">
               <span class="input-group-text bg-body border-0 text-muted"><span class="material-icons-outlined align-middle">search</span></span>
               <input type="text" class="form-control border-0" placeholder="Cari OKP">
             </div>
-          </div>
+          </div> -->
           <?php include(__DIR__.'/../navtabsorganisasi.php' )?>
           <!-- START CODE -->
           <h4>OKP Terdaftar</h4>

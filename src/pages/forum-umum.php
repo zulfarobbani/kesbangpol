@@ -11,6 +11,7 @@
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
   <link rel="canonical" href="https://t.me/forumorsospolumum/2">
+  <link rel="stylesheet" href="/assets/css/style.css">
   <title></title>
 </head>
 

@@ -2,10 +2,6 @@ body {
   background-color: #d2d2d2;
 }
 
-h2 {
-  color: red;
-}
-
 .navy {
   color: navy;
 }
@@ -357,3 +353,30 @@ header p {
       color: yellow;
     }
 
+.nav-item .nav-link {
+  color: white;
+}
+
+.nav-item:hover {
+  background-color: white;
+}
+
+.nav-item:hover .nav-link {
+  color: #feae88!important;
+}
+
+.nav-item-active {
+  background-color: white;
+}
+
+.nav-link-active {
+  color: #feae88!important;
+}
+
+#pills-tab .nav-item .nav-link {
+  color: blue;
+}
+
+#pills-tab .nav-item .nav-link.active {
+  color: white;
+}

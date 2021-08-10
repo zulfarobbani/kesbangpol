@@ -13,10 +13,10 @@
     <title>Struktur Organisasi</title>
 </head>
 
-<body style="background-color : #EEEEEE; color:navy;">
+<body>
     <?php include(__DIR__ . '/../navbar.php') ?>
     <div class="container-fluid">
-        <div class="row">
+        <div class="row" style="background-color : #EEEEEE;">
             <div class="col-md-8 top-1 start-0 ps-5 mb-3">
                 <!-- START CODE -->
                 <div class="card mt-5">
