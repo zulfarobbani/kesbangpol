@@ -18,6 +18,7 @@ class BeritaController extends GlobalFunc
     {
         $this->model = new Berita();
         $this->model2 = new Media();
+        parent::beginSession();
     }
     
     public function index(Request $request)
@@ -51,13 +52,13 @@ class BeritaController extends GlobalFunc
 
     public function beritaKontenStore(Request $request)
     {
+        $idUser = $this->session->get('idUser');
         $data = $request->request;
-        $berita = $this->model->create($data);
+        $berita = $this->model->create($data, $idUser);
 
         // store cover berita
         $media = new Media();
         $idMedia = uniqid('med');
-        $idUser = '1';
         $fileCoverBerita = $media->create($idMedia, $_FILES['coverBerita'], $berita, $idUser, 'cover_berita');
 
         return new RedirectResponse('/informasi-kesbangpol/berita');
@@ -111,5 +112,14 @@ class BeritaController extends GlobalFunc
         $deleteFilecoverBerita = $media->deleteFile($selectcoverBerita['pathMedia']);
 
         return new RedirectResponse('/informasi-kesbangpol/berita');
+    }
+
+    public function beritaKontenApprovalStore(Request $request)
+    {
+        $id = $request->attributes->get('id');
+        $data = $request->request->get('approvalBerita');
+        $berita = $this->model->approval($id, $data);
+
+        return new RedirectResponse('/informasi-kesbangpol/berita/approval');
     }
 }

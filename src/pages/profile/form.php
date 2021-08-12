@@ -13,13 +13,6 @@
     <title>Struktur Organisasi</title>
 </head>
 
-<<<<<<< HEAD
-<body>
-    <?php include(__DIR__ . '/../navbar.php') ?>
-    <div class="container-fluid">
-        <div class="row" style="background-color : #EEEEEE;">
-            <div class="col-md-8 top-1 start-0 ps-5 mb-3">
-=======
 <body style="background-color : #EEEEEE; color:navy;">
 <?php include(__DIR__ . '/../mobilemenu.php') ?>
 <?php include(__DIR__ . '/../mobilenav.php') ?>
@@ -27,7 +20,6 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 mb-3">
->>>>>>> 315a9efef2467cc4af3e91e80d85c1a1c5d5bfe2
                 <!-- START CODE -->
                 <div class="card mt-5">
                     <div class="card-body">

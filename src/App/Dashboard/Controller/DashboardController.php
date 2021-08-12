@@ -39,9 +39,12 @@ class DashboardController extends GlobalFunc
         $datas_2 = $this->model2->selectAll();
         $datas_3 = $this->model3->selectOne('');
         $site_url = 'http://'.explode('/', $request->server->get('HTTP_REFERER'))[2];
+
+        $banner = new Banner();
+        $data_banner = $banner->selectAll();
         
         // return $this->render_template('beranda', ['datas'=>$datas_2 , 'foto'=>$datas_3['pathMedia']]);
-        return $this->render_template('beranda', ['datas'=>$datas_2, 'site_url' => $site_url]);
+        return $this->render_template('beranda', ['datas'=>$datas_2, 'site_url' => $site_url, 'banner' => $banner]);
     }
     //profil
     public function visimisi(Request $request){

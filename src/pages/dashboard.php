@@ -9,8 +9,15 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <title>Dashboard</title>
     <style type="text/css">
+    html,body{
+        overflow-x: hidden;
+        font-family: 'Atkinson Hyperlegible', sans-serif;
+    }
         a {
             text-decoration: none;
         }
@@ -29,33 +36,40 @@
             border: 2px solid lightgray;
             padding: 10px 0;
         }
+
+        .put{
+            position: absolute!important;bottom: 0!important;
+        }
     </style>
 </head>
 
 <body style="background: #eeeeee;">
     <!-- <img class="w-100" src="/assets/image/Header kesbangpol Revisi ke 5-01.png" alt="header"> -->
     <!-- <img class="w-100" src="/assets/image/Header kesbangpol Revisi ke 5-01.png" alt="header"> -->
-    <div class="bg-img-header" style="background: #d2d2d2;border-bottom: 2px solid #bfbfbf;">
-        <div class="img-header" style="height: 100px;background: url('/assets/image/header/ribbonbaru-02.png');background-repeat: no-repeat;background-position-x: center;background-position-y: -50px;background-size:cover;position:relative;">
-            <img src="/assets/image/header/header-03.png" alt="" style="width: 150px;position:absolute;left: 50%;margin-left: -70px;top: 60%;margin-top: -50px;">
+    <div class="bg-img-header" style="background: #d2d2d2;">
+        <div class="img-header" style="height: 90px;background: url('/assets/image/header/ribbonbaru-02.png');background-repeat: no-repeat;background-position-x: center;background-position-y: center;background-size:cover;position:relative;">
+            <img src="/assets/image/header/header-03.png" alt="" style="width: 150px;position:absolute;left: 50%;margin-left: -70px;top: 70%;margin-top: -50px;">
         </div>
     </div>
     <div class="container-fluid">
         <div class="wrapper mt-3 mb-4">
             <div class="carousel owl-carousel">
                 <?php foreach ($banner as $key => $value) { ?>
-                    <div class="card card-1" style="height: 170px;background: url(/assets/media/<?= $value['pathMedia'] ?>);background-size: 460px;background-position: center;background-repeat: no-repeat;">
-                        <!-- <img src="/assets/media/<?= $value['pathMedia'] ?>" class="card-img img-fluid" alt="..."> -->
+                    <!--<div class="card card-1" style="height: 170px;background: url(/assets/media/<?= $value['pathMedia'] ?>);background-size: 460px;background-position: center;background-repeat: no-repeat;">-->
+                         <img src="/assets/media/<?= $value['pathMedia'] ?>" class="card-img img-fluid" alt="...">
+                         <?php } ?>
                     </div>
-                <?php } ?>
             </div>
         </div>
 
-        <h3 class="d-flex justify-content-center mt-2" style="color: grey;margin: 0;color: grey;">Selamat Datang</h3>
-        <h6 class="d-flex justify-content-center text-center" style="color: #adadad;color: #adadad;margin: 0;">di</h6>
-        <h6 class="d-flex justify-content-center text-center" style="color: #adadad;color: #adadad;margin: 0;">Situs Resmi</h6>
-        <h3 class="d-flex justify-content-center text-center" style="color: #adadad;color: #adadad;margin: 5px 0 5px 0;">Badan Kesatuan Bangsa dan Politik</h3>
-        <h5 class="d-flex justify-content-center text-center" style="color: #adadad; ">Kota Cimahi</h5>
+        <!-- <h3 class="d-flex justify-content-center mt-2" style="color: #adadad;margin: 0;">Selamat Datang</h3>
+        <h6 class="d-flex justify-content-center text-center" style="color: #adadad;margin: 0;">di</h6>
+        <h6 class="d-flex justify-content-center text-center" style="color: #adadad;margin: 0;">Situs Resmi</h6> -->
+        <h3 class="d-flex justify-content-center mt-2" style="color: #adadad;margin: 0;">Selamat Datang</h3>
+        <h6 class="d-flex justify-content-center text-center" style="color: #adadad;margin: 0;">di</h6>
+        <h5 class="d-flex justify-content-center text-center" style="color: grey;margin: 0;">Situs Resmi</h5>
+        <h3 class="d-flex justify-content-center text-center" style="color: grey;margin: 5px 0 5px 0;">Badan Kesatuan Bangsa dan Politik</h3>
+        <h5 class="d-flex justify-content-center text-center" style="color: grey; ">Kota Cimahi</h5>
 
         <div class="row mt-4" id="menudepan">
             <div class="col-4 col-md-4 col-lg-2">
@@ -117,9 +131,7 @@
     <?php include(__DIR__ . '/footer.php') ?>
     <style>
         footer {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+            
         }
     </style>
 

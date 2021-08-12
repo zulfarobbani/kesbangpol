@@ -259,7 +259,7 @@ $routes->add('beritaKontenDelete', new Route('/informasi-kesbangpol/berita/{id}/
 $routes->add('beritaKontenApproval', new Route('/informasi-kesbangpol/berita/approval', [
     '_controller' => 'App\Berita\Controller\BeritaController::beritaKontenApproval',
 ]));
-$routes->add('beritaKontenApprovalStore', new Route('/informasi-kesbangpol/berita/approval/store', [
+$routes->add('beritaKontenApprovalStore', new Route('/informasi-kesbangpol/berita/{id}/approval', [
     '_controller' => 'App\Berita\Controller\BeritaController::beritaKontenApprovalStore',
 ]));
 

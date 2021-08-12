@@ -7,7 +7,7 @@
 <div class="col py-3 pe-4 d-none d-md-block">
   <?php if ($idRole != null) { ?>
     <div class="row d-flex align-items-center">
-      <h5 class="text-muted mb-3">Selamat Datang</h5>
+      <h5 class="text-muted mb-3"><b>Selamat Datang</b></h5>
       <div class="col-2">
         <img src="https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png" width="50px" height="50px">
       </div>
@@ -81,7 +81,7 @@
     <div class="col-6" id="pict">
       <a style="height: 52px;box-sizing: border-box;padding-left: 7px;position:relative" href="http://www.simbah.co.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
         <img style="position: absolute;top: 25%;" src="/assets/image/simbah.png" class="" height="25px">
-        <span class="text-start" style="font-size:9px;padding-left: 70px;"><b>Sistem Informasi</b><br>Pengelolaan Bank Sampah</span>
+        <span class="text-start" style="font-size:9px;padding-left: 70px;padding-top:5px;"><b>Sistem Informasi</b><br>Pengelolaan Bank Sampah</span>
       </a>
     </div>
     <div class="col-6" id="pict">
@@ -237,7 +237,7 @@
     <div class="col-6" id="pict">
       <a style="height: 52px;box-sizing: border-box;padding-left: 7px;position:relative" href="https://silima.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
         <img style="position: absolute;top: 10%;" src="/assets/image/silima1.png" class="" height="40px">
-        <img src="/assets/image/silima2.png" class="" height="40px" style="padding-left: 50px;">
+        <span class="text-start" style="font-size:12px;padding-left: 60px;"><b>Dinas Tenaga Kerja</b><br>Kota Cimahi</span>
       </a>
     </div>
     <div class="col-6" id="pict">
