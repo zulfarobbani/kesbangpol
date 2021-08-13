@@ -13,26 +13,29 @@
 </head>
 
 <body>
-<?php include(__DIR__ . '/../mobilemenu.php') ?>
-<?php include(__DIR__ . '/../mobilenav.php') ?>
+  <?php include(__DIR__ . '/../mobilemenu.php') ?>
+  <?php include(__DIR__ . '/../mobilenav.php') ?>
   <?php include(__DIR__ . '/../navbar.php') ?>
   <div class="container-fluid">
     <div class="row" style="background-color : #EEEEEE;">
       <div class="col-md-8 mb-3">
-      <div class="card rounded-3 mt-5 px-3">
-        <div class="card-body">
-        <?php include(__DIR__ . '/../navtabslayanan.php') ?>
-        <!-- START CODE -->
-        <div>
-          <h3 class="mb-4 mt-2" style="color: #004080;"><?= $layanan['judulLayanan'] ?></h3>
-          <div class="fst-normal">
-            <?= $layanan['deskripsiLayanan'] ?>
-          </div>
+        <div class="card rounded-3 mt-5 px-3">
+          <div class="card-body">
+            <?php include(__DIR__ . '/../navtabslayanan.php') ?>
+            <!-- START CODE -->
+            <div>
+              <h3 class="mb-4 mt-2" style="color: #004080;"><?= $layanan['judulLayanan'] ?></h3>
+              <div class="fst-normal">
+                <?= $layanan['deskripsiLayanan'] ?>
+              </div>
 
-          <!-- <div class="float-end"><button class="btn btn-outline-danger">Unduh</button></div> -->
+              <div class="d-flex flex-row-reverse mt-4">
+                <a class="btn btn-outline-danger navy" href="/login-register"><span class="material-icons-outlined align-middle" style="font-size: 17px;margin-right: 5px;">person_add_alt_1</span> Daftarkan organisasi anda</a>
+              </div>
+              <!-- <div class="float-end"><button class="btn btn-outline-danger">Unduh</button></div> -->
+            </div>
+          </div>
         </div>
-</div>
-</div>
       </div>
 
       <?php include(__DIR__ . '/../sidebar.php') ?>

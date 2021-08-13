@@ -28,12 +28,11 @@
         </div>
         <!-- <span><a href="regulasi/create">TAMBAH REGULASI</a></span> -->
         <div class="col-12">
-          <table class="table mt-3" style="color: navy;">
-            <thead>
+          <table class="table table-striped mt-3">
+            <thead style="color: navy;">
               <tr>
                 <th class="col-1">No</th>
                 <th>Nama Regulasi</th>
-                <td></td>
               </tr>
             </thead>
             <tbody>

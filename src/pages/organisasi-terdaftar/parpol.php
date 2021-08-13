@@ -34,14 +34,13 @@
           <h4>Partai Politik Terdaftar</h4>
 
           <div class="col-12">
-            <table class="table mt-3" style="color: navy;">
-              <thead>
+            <table class="table table-striped mt-3">
+              <thead style="color: navy;">
                 <tr>
                   <th class="col-1">No</th>
                   <th class="col-3">No. AHU</th>
                   <th>Nama</th>
                   <th>Alamat</th>
-                  <td></td>   
                 </tr>
               </thead>
               <?php foreach($data_parpol as $key => $values) { ?>

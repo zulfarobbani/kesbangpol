@@ -19,9 +19,9 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-8 mb-3">
-      <div class="card rounded-3 mt-5 px-3">
-        <div class="card-body">
-        <!-- <div class="container-fluid p-1 mt-4">
+        <div class="card rounded-3 mt-5 px-3">
+          <div class="card-body">
+            <!-- <div class="container-fluid p-1 mt-4">
           <form action="" method="GET">
             <div class="input-group">
               <span class="input-group-text bg-body border-0 text-muted"><span class="material-icons-outlined align-middle">search</span></span>
@@ -29,41 +29,40 @@
             </div>
           </form>
         </div> -->
-        <?php include(__DIR__ . '/../navtabsorganisasi.php') ?>
-        <!-- START CODE -->
-        <h4>ORMAS Berbadan Hukum Terdaftar</h4>
+            <?php include(__DIR__ . '/../navtabsorganisasi.php') ?>
+            <!-- START CODE -->
+            <h4>ORMAS Berbadan Hukum Terdaftar</h4>
 
-        <div class="col-12">
-          <table class="table mt-3" style="color: navy;">
-            <thead>
-              <tr>
-                <th class="col-1">No</th>
-                <th class="col-3">No. AHU</th>
-                <th>Nama</th>
-                <th>Alamat</th>
-                <td></td>
-              </tr>
-            </thead>
-            <?php foreach ($datas as $key => $value) { ?>
-              <tbody>
-                <tr>
+            <div class="col-12">
+              <table class="table table-striped mt-3">
+                <thead style="color: navy;">
+                  <tr>
+                    <th class="col-1">No</th>
+                    <th class="col-3">No. AHU</th>
+                    <th>Nama</th>
+                    <th>Alamat</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php foreach ($datas as $key => $value) { ?>
+                    <tr>
 
-                  <td><?= $key += 1 ?></td>
-                  <td><?= $value['noAHU'] ?></td>
-                  <td><?= $value['namaOrsospol'] ?></td>
-                  <td><?= $value['alamatOrsospol'] ?></td>
-                  <!-- <td class="float-end">
+                      <td><?= $key += 1 ?></td>
+                      <td><?= $value['noAHU'] ?></td>
+                      <td><?= $value['namaOrsospol'] ?></td>
+                      <td><?= $value['alamatOrsospol'] ?></td>
+                      <!-- <td class="float-end">
                     <a href="regulasi/edit/<?= $value['idRegulasi']; ?>">EDIT</a> 
                     <a href="regulasi/delete/<?= $value['idRegulasi']; ?>">HAPUS</a>
                   </td> -->
 
-                </tr>
-              </tbody>
-            <?php } ?>
-          </table>
+                    </tr>
+                  <?php } ?>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
-        </div>
-      </div>
       </div>
       <?php include(__DIR__ . '/../sidebar.php') ?>
     </div>
