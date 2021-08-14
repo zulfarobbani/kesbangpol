@@ -27,12 +27,13 @@
             <!-- START CODE -->
             <div>
               <h3 class="mb-4 mt-2" style="color: #004080;"><?= $layanan['judulLayanan'] ?></h3>
-              <div class="fst-normal">
+              <div class="fst-normal teksjustify paragraf">
                 <?= $layanan['deskripsiLayanan'] ?>
               </div>
 
-              <div class="d-flex flex-row-reverse mt-4">
-                <a class="btn btn-outline-danger navy" href="/login-register"><span class="material-icons-outlined align-middle" style="font-size: 17px;margin-right: 5px;">person_add_alt_1</span> Daftarkan organisasi anda</a>
+              <div class="d-block mt-4">
+                <a class="btn btn-outline-danger navy ms-auto hstack gap-1 justify-content-center" href="/login-register">
+                <span class="material-icons-outlined align-middle" style="font-size: 17px;margin-right: 5px;">person_add_alt_1</span> Daftarkan organisasi anda</a>
               </div>
               <!-- <div class="float-end"><button class="btn btn-outline-danger">Unduh</button></div> -->
             </div>

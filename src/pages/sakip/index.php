@@ -39,9 +39,9 @@
                 <tbody>
                   <?php foreach ($datas as $key => $value) { ?>
                     <tr>
-                      <td style="font-size: 20px"=><?= $value['namaSakip'] ?></td>
+                      <td class="judulberkas align-middle"><?= $value['namaSakip'] ?></td>
                       <td>
-                        <a href="sakip/<?= $value['idSakip']; ?>/download" style="color: navy;" class="float-end" target="_blank"><span class="material-icons-outlined px-2">file_download</span></a>
+                        <a href="sakip/<?= $value['idSakip']; ?>/download" class="float-end text-decoration-none btn btn-outline-danger navy hstack gap-1" target="_blank"><span class="material-icons-outlined px-2">file_download</span> Unduh Berkas</a>
                       </td>
                     </tr>
                   <?php } ?>

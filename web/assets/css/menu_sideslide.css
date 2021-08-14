@@ -123,10 +123,10 @@
 	overflow-y: scroll;
 	position: fixed;
 	z-index: 1001;
-	width: 300px;
+	width: 370px;
 	height: 100%;
 	background: #d2d2d2;
-	padding: 2.5em 1.5em 0;
+	padding: 2.5em 1.5em 0 0.3em;
 	font-size: 1.15em;
 	-webkit-transform: translate3d(2560px,0,0);
 	transform: translate3d(2560px,0,0);
@@ -230,8 +230,8 @@
 
 /* Shown menu 2*/
 .show-menu2 .menu-wrap2 {
-	-webkit-transform: translate3d(120px,0,0);
-	transform: translate3d(120px,0,0);
+	-webkit-transform: translate3d(18%,0,0);
+	transform: translate3d(18%,0,0);
 	-webkit-transition: -webkit-transform 0.8s;
 	transition: transform 0.8s;
 	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);

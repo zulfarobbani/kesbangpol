@@ -37,9 +37,9 @@
           </div>
         <?php include(__DIR__.'/../../sidebar.php' )?>
       </div>
-      <?php include(__DIR__.'/../../footer.php' )?>
+      
   </div>
-
+  <?php include(__DIR__.'/../../footer.php' )?>
     <!-- Modal Create Event-->
     <div class="modal fade" id="ModalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">

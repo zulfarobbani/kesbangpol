@@ -36,9 +36,9 @@
             <tbody>
               <?php foreach ($unduhan as $key => $value) { ?>
                 <tr>
-                  <td style="font-size: 20px"><?= $value['namaLayananunduhan'] ?></td>
-                  <td>
-                    <a href="/layanan-kesbangpol/unduhan/<?= $value['idLayananunduhan']; ?>/download" style="color: navy;" target="_blank"><span class="material-icons-outlined px-2 float-end">file_download</span></a>
+                  <td class="paragraf align-middle"><?= $value['namaLayananunduhan'] ?></td>
+                  <td class="hstack">
+                    <a href="/layanan-kesbangpol/unduhan/<?= $value['idLayananunduhan']; ?>/download" target="_blank" class="btn btn-outline-danger navy ms-auto hstack gap-1"><span class="material-icons-outlined px-2">file_download</span> Unduh Berkas</a>
                   </td>
                 </tr>
               <?php } ?>

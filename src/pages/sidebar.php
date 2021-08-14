@@ -9,6 +9,15 @@
   .p-8{
     padding:0.8rem!important;
   }
+/* Medium devices (landscape tablets, below 600) */
+@media only screen and (max-width: 600px) {
+  .spansidebar{
+    font-size:7pt!important;
+  }
+  .sidegamar{
+    max-height:50%!important;
+  }
+}
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .spansidebar{
@@ -42,20 +51,17 @@
   <?php if ($idRole != null) { ?>
     <div class="row d-flex align-items-center">
       <h5 class="text-muted mb-3"><b>Selamat Datang</b></h5>
-      <div class="col-2">
-        <img src="https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png" width="50px" height="50px">
-      </div>
-      <div class="col-6">
-        <p class="text-muted m-0">
-          <span class="fw-bold"><?= $idRole == '9asdkqhjwew' ? 'Admin' : $namaOrsospol ?></span><br>
+      <div class="col-8 hstack gap-1">
+      <img src="https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png" width="50px" height="50px">
+          <span class="text-mute fw-bold"><?= $idRole == '9asdkqhjwew' ? 'Admin' : $namaOrsospol ?></span><br>
           <?php if ($idRole != '9asdkqhjwew') { ?>
             <span><?= $noAHU ?></span>
           <?php } ?>
           <!-- <span>No. AHU/No. Register</span> -->
-        </p>
+
       </div>
-      <div class="col-4">
-        <a href="/logout" class="btn btn-outline-danger" style="color:navy;"><i class="fas fa-door-open"></i>&nbsp;&nbsp;&nbsp;Keluar</a>
+      <div class="col-4 px-2">
+        <a href="/logout" class="btn btn-outline-danger py-2 px-0 text-center hstack gap-1 justify-content-center" style="color:navy;"><i class="fas fa-door-open"></i><span class="teksnav"> Keluar</span></a>
       </div>
     </div>
   <?php } ?>

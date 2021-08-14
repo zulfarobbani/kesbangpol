@@ -34,7 +34,7 @@
             <h4>OKP Terdaftar</h4>
 
             <div class="col-12">
-              <table class="table table-striped mt-3">
+              <table class="table table-bordered table-striped mt-3">
                 <thead style="color: navy;">
                   <tr>
                     <th class="col-1">No</th>
@@ -45,7 +45,7 @@
                 </thead>
                 <tbody>
                   <?php foreach ($data_okp as $key => $values) { ?>
-                    <tr>
+                    <tr class="paragraf align-middle">
 
                       <td><?= $key += 1 ?></td>
                       <td><?= $values['idOrsospol'] ?></td>

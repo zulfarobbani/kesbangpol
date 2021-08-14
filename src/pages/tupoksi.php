@@ -25,10 +25,14 @@
           <div class="card-body">
             <?php include(__DIR__ . '/navtabsprofil.php') ?>
             <!-- START CODE -->
-            <h4 class="mt-5">Tugas Pokok</h4>
-            <p><?= $tupoksi['tugaspokok'] ?></p>
-            <h4 class="mt-5">Fungsi</h4>
-            <p><?= $tupoksi['fungsi'] ?></p>
+            <h4 class="mt-2">Tugas Pokok</h4>
+            <div style="text-align:justify">
+            <p class="teksjustify paragraf"><?= $tupoksi['tugaspokok'] ?></p>
+            </div>
+            <h4 class="mt-2">Fungsi</h4>
+            <div style="text-align:justify">
+            <p class="teksjustify paragraf"><?= $tupoksi['fungsi'] ?></p>
+            </div>
           </div>
         </div>
       </div>

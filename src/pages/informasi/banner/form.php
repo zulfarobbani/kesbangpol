@@ -26,36 +26,52 @@
                 <div class="card mt-5">
                     <div class="card-body">
                         <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-6">
                             <h4>Banner</h4>
-                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
+                            </div>
+                            <div class="col-6 hstack">
+                            <button type="button" class="btn btn-sm btn-primary ms-auto" data-bs-toggle="modal" data-bs-target="#createModal">
                                 Tambah
                             </button>
-                            <table class="table table-sm">
+                            </div>
+                            </div>
+                            <table class="table table-bordered table-sm">
                                 <thead>
                                     <tr>
-                                        <td>No</td>
-                                        <td>Nama Banner</td>
-                                        <td>Banner</td>
-                                        <td>Aksi</td>
+                                        <th>No</th>
+                                        <th>Nama Banner</th>
+                                        <th>Banner</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php foreach ($datas as $key => $value) { ?>
-                                        <tr>
+                                        <tr class="paragraf align-middle">
                                             <td><?= $key += 1 ?></td>
                                             <td><?= $value['namaBanner'] ?></td>
                                             <td><?= $value['pathMedia'] ?></td>
                                             <td>
-                                                <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-file="/assets/media/<?= $value['pathMedia'] ?>">
+                                                <div class="row">
+                                                    <div class="col">
+                                                <button type="button" class="btn btn-sm btn-success w-100 my-1" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-file="/assets/media/<?= $value['pathMedia'] ?>">
                                                     Lihat
                                                 </button>
-                                                <a href="/banner/<?= $value['idBanner'] ?>/download" class="btn btn-sm btn-light" target="_blank">Download</a>
-                                                <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-namaBanner="<?= $value['namaBanner'] ?>" data-bs-idBanner="<?= $value['idBanner'] ?>">
+                                                </div>
+                                                <div class="col">
+                                                <a href="/banner/<?= $value['idBanner'] ?>/download" class="btn btn-sm btn-light w-100 my-1" target="_blank">Download</a>
+                                                </div>
+                                                <div class="col">
+                                                <button type="button" class="btn btn-sm btn-secondary w-100 my-1" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-namaBanner="<?= $value['namaBanner'] ?>" data-bs-idBanner="<?= $value['idBanner'] ?>">
                                                     Edit
                                                 </button>
-                                                <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idBanner="<?= $value['idBanner'] ?>">
+                                                </div>
+                                                <div class="col">
+                                                <button type="button" class="btn btn-sm btn-danger w-100 my-1" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idBanner="<?= $value['idBanner'] ?>">
                                                     Hapus
                                                 </button>
+                                                </div>
+                                                </div>
                                             </td>
                                         </tr>
                                     <?php } ?>

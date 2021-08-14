@@ -23,34 +23,36 @@
                 <!-- START CODE -->
                 <div class="card mt-5">
                     <div class="card-body">
-                        <h5>PARPOL Terdaftar</h5>
                         <div class="container mt-4">
-                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
+                        <div class="hstack mb-3">
+                        <h5>PARPOL Terdaftar</h5>
+                            <button type="button" class="ms-auto btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
                                 Tambah
                             </button>
-                            <table class="table table-sm">
+                            </div>
+                            <table class="table table-bordered table-sm">
                                 <thead>
                                     <tr>
-                                        <td>No. AHU</td>
-                                        <td>Nama</td>
-                                        <td>Alamat</td>
-                                        <td>Aksi</td>
+                                        <th>No. AHU</th>
+                                        <th>Nama</th>
+                                        <th>Alamat</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php foreach ($datas as $key => $value) { ?>
-                                        <tr>
+                                        <tr class="align-middle paragraf">
                                             <td><?= $value['noAHU'] ?></td>
                                             <td><?= $value['namaOrsospol'] ?></td>
                                             <td><?= $value['alamatOrsospol'] ?></td>
-                                            <td>
-                                                <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
+                                            <td class="hstack gap-1">
+                                                <button type="button" class="btn w-100 btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
                                                     Lihat
                                                 </button>
-                                                <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
+                                                <button type="button" class="btn w-100 btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
                                                     Edit
                                                 </button>
-                                                <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
+                                                <button type="button" class="btn w-100 btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
                                                     Hapus
                                                 </button>
                                             </td>

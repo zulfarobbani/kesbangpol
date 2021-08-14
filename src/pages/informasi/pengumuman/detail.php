@@ -8,6 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
     <title><?= $detail['namaPengumuman'] ?></title>
 </head>
@@ -25,9 +28,9 @@
                         <h6 class="fw-normal mt-2"><a href="/informasi/berita" class="btn btn-sm btn-outline-secondary"><i class="fas fa-arrow-left"></i></a>&nbsp;&nbsp; Pengumuman</h6>
                         <div class="row g-4">
                             <div class="col-12">
-                                <h3 class="fw-bold mt-3 mb-4"><?= $detail['namaPengumuman'] ?></h3>
+                                <h5 class="fw-bold mt-3 mb-4"><?= $detail['namaPengumuman'] ?></h5>
                                 <img class="w-100" src="/assets/media/<?= $detail['pathMedia'] ?>" alt="Gambar Berita">
-                                <p class="mt-4" align="justify"><?= html_entity_decode(nl2br($detail['deskripsiPengumuman'])) ?></p>
+                                <p class="mt-4 teksjustify"><?= html_entity_decode(nl2br($detail['deskripsiPengumuman'])) ?></p>
                             </div>
                         </div>
                     </div>

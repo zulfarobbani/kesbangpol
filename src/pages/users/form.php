@@ -26,13 +26,20 @@
                 <div class="card mt-5">
                     <div class="card-body">
                         <div class="container mt-4">
-                            <button type="button" class="btn btn-sm btn-success rounded-pill h-75 px-4 text-white" id="btnIjo" data-bs-toggle="modal" data-bs-target="#ModalTambahUser">
+                            <div class="row mb-3">
+                            <div class="col-12 col-md">
+                            <h3 class="d-inline">Manajemen User</h3>
+                            </div>
+                            <div class="col-12 col-md">
+                            <button type="button" class="btn ms-auto btn-success rounded-2 hstack gap-2 mx-0 px-3" id="btnIjo" data-bs-toggle="modal" data-bs-target="#ModalTambahUser">
                                 <span class="material-icons-outlined">person_add</span>
                                 <span class="align-top">Tambah User</span>
                             </button>
+                            </div>
+</div>
 
                             <div class="table-responsive">
-                                <table class="table table-striped">
+                                <table class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
                                             <th scope="col">Nama User</th>
@@ -44,22 +51,32 @@
                                     </thead>
                                     <tbody>
                                         <?php foreach ($datas as $key => $data) { ?>
-                                            <tr>
+                                            <tr class="paragraf align-middle">
                                                 <td><?= $data['namaUser'] ?></td>
                                                 <td><?= $data['usernameUser'] ?></td>
                                                 <td><?= $data['emailUser'] ?></td>
                                                 <td><?= date('d M Y', strtotime($data['dateCreate'])) ?></td>
-                                                <td class="d-flex">
-                                                    <button type="button" class="btn btn-primary px-2 py-1 me-1 text-white btnEdit" id="btnBiru" data-bs-toggle="modal" data-bs-target="#ModalUbahUser" data-bs-idUser="<?= $data['idUser'] ?>"><i class="fa fa-edit"></i></button>
+                                                <td >
+                                                    <div class="row">
+                                                    <div class="col-12 col-md">
+                                                    
+                                                    <button type="button" class="btn hstack gap-1 paragraf w-100 btn-primary px-2 py-1  btnEdit" id="btnBiru" data-bs-toggle="modal" data-bs-target="#ModalUbahUser" data-bs-idUser="<?= $data['idUser'] ?>"><i class="fa fa-edit"></i> Ubah</button>
+                                                    </div>
+                                                    <div class="col-12 col-md">
+                                                    
+                                                    <button type="button" class="btn hstack gap-1 paragraf w-100 btn-warning px-2 py-1  btnDetail" id="btnKuning" data-bs-toggle="modal" data-bs-target="#ModalRincianUser" data-bs-idUser="<?= $data['idUser'] ?>"><i class="fa fa-search-plus"></i> Lihat
+                                        </button></div>
+                                                    <div class="col-12 col-md">
+                                                    
+                                                    <button type="button" class="btn hstack gap-1 paragraf w-100 btn-danger px-2 py-1  btnHapus" id="btnMerah" data-bs-toggle="modal" data-bs-target="#ModalHapusUser" data-bs-idUser="<?= $data['idUser'] ?>"><i class="fa fa-trash-alt"></i> Hapus</button></div>
 
-                                                    <button type="button" class="btn btn-warning px-2 py-1 me-1 text-white btnDetail" id="btnKuning" data-bs-toggle="modal" data-bs-target="#ModalRincianUser" data-bs-idUser="<?= $data['idUser'] ?>"><i class="fa fa-search-plus"></i></button>
-
-                                                    <button type="button" class="btn btn-danger px-2 py-1 me-1 text-white btnHapus" id="btnMerah" data-bs-toggle="modal" data-bs-target="#ModalHapusUser" data-bs-idUser="<?= $data['idUser'] ?>"><i class="fa fa-trash-alt"></i></button>
-
-                                                    <button type="button" class="btn btn-danger rounded-pill px-3 py-1 btn-sm text-white btnResetPassword" id="btnMerah" data-bs-toggle="modal" data-bs-target="#ModalResetPassword" data-bs-idUser="<?= $data['idUser'] ?>"><i class="fa fa-lock-open"></i> Reset Password</button>
+                                                    <div class="col-12 col-md">
+                                                    <button type="button" class="btn hstack gap-1 paragraf w-100 btn-info px-3 py-1 btnResetPassword" id="btnMerah" data-bs-toggle="modal" data-bs-target="#ModalResetPassword" data-bs-idUser="<?= $data['idUser'] ?>"><i class="fa fa-lock-open"></i> Reset</button>
+                                                    </div> 
+                                                    </div>
                                                 </td>
-                                            </tr>
-                                        <?php } ?>
+                                                <?php } ?>
+                                          </tr>
                                     </tbody>
                                 </table>
                             </div>

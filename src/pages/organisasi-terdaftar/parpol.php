@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
@@ -36,7 +35,7 @@
           <h4>Partai Politik Terdaftar</h4>
 
           <div class="col-12">
-            <table class="table table-striped mt-3">
+            <table class="table table-bordered table-striped mt-3">
               <thead style="color: navy;">
                 <tr>
                   <th class="col-1">No</th>
@@ -47,7 +46,7 @@
               </thead>
               <?php foreach($data_parpol as $key => $values) { ?>
               <tbody>
-                <tr>
+                <tr class="align-middle paragraf">
 
                   <td><?=$key+=1?></td>
                   <td><?= $values['idOrsospol']?></td>

@@ -8,6 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
 
     <title>Komunitas Terdaftar</title>
@@ -21,34 +24,36 @@
                 <!-- START CODE -->
                 <div class="card mt-5">
                     <div class="card-body">
-                        <h5>Komunitas Terdaftar</h5>
                         <div class="container mt-4">
-                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
+                            <div class="hstack mb-3">
+                        <h5>Komunitas Terdaftar</h5>
+                            <button type="button" class="btn btn-sm btn-primary ms-auto" data-bs-toggle="modal" data-bs-target="#createModal">
                                 Tambah
                             </button>
-                            <table class="table table-sm">
+                            </div>
+                            <table class="table table-bordered table-sm">
                                 <thead>
                                     <tr>
-                                        <td>No. AHU</td>
-                                        <td>Nama</td>
-                                        <td>Alamat</td>
-                                        <td>Aksi</td>
+                                        <th>No. AHU</th>
+                                        <th>Nama</th>
+                                        <th>Alamat</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php foreach ($datas as $key => $value) { ?>
-                                        <tr>
+                                        <tr class="paragraf align-middle">
                                             <td><?= $value['noAHU'] ?></td>
                                             <td><?= $value['namaOrsospol'] ?></td>
                                             <td><?= $value['alamatOrsospol'] ?></td>
-                                            <td>
-                                                <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
+                                            <td class="hstack gap-1">
+                                                <button type="button" class="btn w-100 btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
                                                     Lihat
                                                 </button>
-                                                <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
+                                                <button type="button" class="btn w-100 btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
                                                     Edit
                                                 </button>
-                                                <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
+                                                <button type="button" class="btn w-100 btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
                                                     Hapus
                                                 </button>
                                             </td>

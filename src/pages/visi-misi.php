@@ -26,10 +26,14 @@
             <?php include(__DIR__ . '/navtabsprofil.php') ?>
             <!-- START CODE -->
 
-            <h4 class="mt-5">Visi</h4>
+            <h4 class="mt-2">Visi</h4>
+            <div class="teksjustify paragraf">
             <p><?= $visimisi['visi'] ?></p>
-            <h4 class="mt-5">Misi</h4>
-            <p><?= $visimisi['misi'] ?></p>
+            </div>
+            <h4 class="mt-2">Misi</h4>
+            <div>
+            <p class="teksjustify paragraf"><?= $visimisi['misi'] ?></p>
+            </div>
           </div>
         </div>
       </div>

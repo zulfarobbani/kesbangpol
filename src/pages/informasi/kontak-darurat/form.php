@@ -26,35 +26,49 @@
                 <div class="card mt-5">
                     <div class="card-body">
                         <div class="container mt-4">
+                            <div class="row">
+                                <div class="col-6 col-md-6">
                             <h4>Kontak Darurat</h4>
-                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
+                            </div>
+                            <div class="col-6 col-md-6 hstack">
+                            <button type="button" class="btn btn-sm btn-primary ms-auto" data-bs-toggle="modal" data-bs-target="#createModal">
                                 Tambah
                             </button>
-                            <table class="table table-sm">
+                            </div>
+                            </div>
+                            <table class="table table-bordered table-responsive">
                                 <thead>
                                     <tr>
-                                        <td>No</td>
-                                        <td>Nama Kontak Darurat</td>
-                                        <td>Isi Kontak Darurat</td>
-                                        <td>Aksi</td>
+                                        <th>No</th>
+                                        <th>Nama Kontak Darurat</th>
+                                        <th>Isi Kontak Darurat</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php foreach ($datas as $key => $value) { ?>
                                         <tr>
-                                            <td><?= $key += 1 ?></td>
-                                            <td><?= $value['namaKontakdarurat'] ?></td>
-                                            <td><?= $value['isiKontakdarurat'] ?></td>
+                                            <td class="paragraf align-middle"><?= $key += 1 ?></td>
+                                            <td class="paragraf align-middle"><?= $value['namaKontakdarurat'] ?></td>
+                                            <td class="paragraf align-middle"><?= $value['isiKontakdarurat'] ?></td>
                                             <td>
-                                                <button type="button" class="btn btn-sm btn-success my-1" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-idKontakdarurat="<?= $value['idKontakdarurat'] ?>">
+                                                <div class="row no-gutter ">
+                                                <div class="col-12 col-md">
+                                                <button type="button" class="btn w-100 btn-sm btn-success my-1" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-idKontakdarurat="<?= $value['idKontakdarurat'] ?>">
                                                     Lihat
                                                 </button>
-                                                <button type="button" class="btn btn-sm btn-secondary my-1" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-idKontakdarurat="<?= $value['idKontakdarurat'] ?>">
+                                                </div>
+                                                <div class="col-12 col-md">
+                                                <button type="button" class="btn w-100 btn-sm btn-secondary my-1" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-idKontakdarurat="<?= $value['idKontakdarurat'] ?>">
                                                     Edit
                                                 </button>
-                                                <button type="button" class="btn btn-sm btn-danger my-1" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idKontakdarurat="<?= $value['idKontakdarurat'] ?>">
+                                                </div>
+                                                <div class="col-12 col-md">
+                                                <button type="button" class="btn w-100 btn-sm btn-danger my-1" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idKontakdarurat="<?= $value['idKontakdarurat'] ?>">
                                                     Hapus
                                                 </button>
+                                                </div>
+                                                </div>
                                             </td>
                                         </tr>
                                     <?php } ?>

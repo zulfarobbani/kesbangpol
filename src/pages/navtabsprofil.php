@@ -8,35 +8,35 @@
   }
 </style>
 <div class="container px-0 py-3 rounded justify-content-start">
-  <div class="row py-1" id="bgprofile" style="margin-left: 0;margin-right: 0;">
-    <div class="bagi5 col-md-2 px-2">
-      <a class="nav-link <?= $requestUri == '/struktur-organisasi' ? 'nav-link-active' : '' ?> p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" aria-current="page" href="\struktur-organisasi">
-        <span class="material-icons-outlined align-middle" style="font-size: 13pt;">account_tree</span>
-        <span class="d-none d-md-block text-dark" style="font-size: 9pt;">Struktur Organisasi</span>
+  <div class="row py-3 rounded-2" id="bgprofile" style="margin-left: 0;margin-right: 0;">
+    <div class="col col-md px-2">
+      <a class="nav-link <?= $requestUri == '/struktur-organisasi' ? 'nav-link-active' : '' ?> p-0 text-center hstack gap-1 justify-content-center fw-bold" aria-current="page" href="\struktur-organisasi">
+        <span class="material-icons-outlined align-self-center" >account_tree</span>
+        <span class="d-none d-md-block text-start align-self-center teksnav" >Struktur Organisasi</span>
       </a>
     </div>
-    <div class="bagi5 col-md-2 px-2">
-      <a class="nav-link <?= $requestUri == '/visi-misi' ? 'nav-link-active' : '' ?> p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" href="\visi-misi">
-        <span class="material-icons-outlined align-middle" style="font-size: 13pt;">radar</span>
-        <span class="d-none d-md-block text-dark" style="font-size: 9pt;">Visi & Misi</span>
+    <div class="col col-md px-2">
+      <a class="nav-link <?= $requestUri == '/visi-misi' ? 'nav-link-active' : '' ?> p-0 text-center hstack gap-1 justify-content-center fw-bold" href="\visi-misi">
+        <span class="material-icons-outlined align-self-center" >radar</span>
+        <span class="d-none d-md-block text-start align-self-center teksnav" >Visi & Misi</span>
       </a>
     </div>
-    <div class="bagi5 col-md-2 px-2">
-      <a class="nav-link <?= $requestUri == '/tupoksi' ? 'nav-link-active' : '' ?> p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" href="/tupoksi">
-        <span class="material-icons-outlined align-middle" style="font-size: 13pt;">assignment_ind</span>
-        <span class="d-none d-md-block text-dark" style="font-size: 9pt;">TUPOKSI</span>
+    <div class="col col-md px-2">
+      <a class="nav-link <?= $requestUri == '/tupoksi' ? 'nav-link-active' : '' ?> p-0 text-center hstack gap-1 justify-content-center fw-bold" href="/tupoksi">
+        <span class="material-icons-outlined align-self-center" >assignment_ind</span>
+        <span class="d-none d-md-block text-start align-self-center teksnav" >TUPOKSI</span>
       </a>
     </div>
-    <div class="bagi5 col-md-2 px-2">
-      <a class="nav-link <?= $requestUri == '/sakip' ? 'nav-link-active' : '' ?> p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" href="\sakip">
-        <span class="material-icons-outlined align-middle" style="font-size: 13pt;">note_alt</span>
-        <span class="d-none d-md-block text-dark" style="font-size: 9pt;">SAKIP</span>
+    <div class="col col-md px-2">
+      <a class="nav-link <?= $requestUri == '/sakip' ? 'nav-link-active' : '' ?> p-0 text-center hstack gap-1 justify-content-center fw-bold" href="\sakip">
+        <span class="material-icons-outlined align-self-center" >note_alt</span>
+        <span class="d-none d-md-block text-start align-self-center teksnav" >SAKIP</span>
       </a>
     </div>
-    <div class="bagi5 col-md-2 px-2">
-      <a class="nav-link <?= $requestUri == '/regulasi' ? 'nav-link-active' : '' ?> p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" href="\regulasi">
-        <span class="material-icons-outlined align-middle" style="font-size: 13pt;">gavel</span>
-        <span class="d-none d-md-block text-dark" style="font-size: 9pt;">Regulasi</span>
+    <div class="col col-md px-2">
+      <a class="nav-link <?= $requestUri == '/regulasi' ? 'nav-link-active' : '' ?> p-0 text-center hstack gap-1 justify-content-center fw-bold" href="\regulasi">
+        <span class="material-icons-outlined align-self-center" >gavel</span>
+        <span class="d-none d-md-block text-start align-self-center teksnav" >Regulasi</span>
       </a>
     </div>
   </div>

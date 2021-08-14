@@ -8,6 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
     <title><?= "Detail Gallery" ?></title>
 </head>
@@ -24,7 +27,7 @@
                 <div id="top"></div>
                 <section class="gallery">
                     <div class="row nest">
-                        <a href="#" class="close"></a>
+                    <a href="#" class="close" style="filter:invert(75%);"></a>
                         <?php foreach ($detailItem as $key => $value) { ?>
                             <div class="col-6 col-md-4 subnest">
                                 <a href="#item01" class="galleryDetail" data-image="/assets/media/<?= $value['pathMedia'] ?>" data-name="<?= $value['namaGallerydetail'] ?>" data-deskripsi="<?= $value['deskripsiGallerydetail'] ?>">
@@ -36,31 +39,15 @@
 
                     <!-- Item 01 -->
                     <div id="item01" class="port">
-
+                   
                         <div class="row">
-                            <div class="description col-md-6 col-sm-12">
+                            <div class="description col">
                                 <h1 class="namaGallerydetail"></h1>
+                                <img class="imageGallerydetail w-100" src="" alt="" >
                                 <p class="deskripsiGallerydetail"></p>
                             </div>
-
-                            <img class="imageGallerydetail" src="" alt="" class="col-md-6 col-sm-12">
                         </div>
                     </div> <!-- / row -->
-
-
-                    <!-- Item 02 -->
-                    <div id="item02" class="port">
-
-                        <div class="row">
-                            <div class="description col-md-6 col-sm-12">
-                                <h1>Item 02</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
-                            </div>
-                            <img src="https://cdn.dribbble.com/users/545884/screenshots/2883479/cover.jpg" alt="" class="col-md-6 col-sm-12">
-                        </div> <!-- / row -->
-
-                    </div> <!-- / Item 02 -->
-
                 </section> <!-- / projects -->
         </div>
         </div>

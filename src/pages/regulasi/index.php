@@ -33,18 +33,18 @@
               <table class="table table-striped mt-3">
                 <thead style="color: navy;">
                   <tr>
-                    <th class="col-1">No</th>
+                    <!--<th class="col-1">No</th>-->
                     <th>Nama Regulasi</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php foreach ($datas as $key => $values) { ?>
                     <tr>
-                      <td><?= $key += 1 ?>.</td>
+                      <!--<td class="align-middle"><?= $key += 1 ?>.</td>-->
                       <!-- bere modal pratinjau regulasi d list ieu -->
-                      <td>
+                      <td class="align-middle hstack">
                         <?= $values['namaRegulasi'] ?>
-                        <a class="float-end" data-bs-toggle="collapse" data-bs-target="#collapseExample_1" aria-expanded="false" aria-controls="collapseExample"><i class="text-dark fas fa-eye"></i></a>
+                        <a class="btn btn-outline-danger navy ms-auto" data-bs-toggle="collapse" data-bs-target="#collapseExample_1" aria-expanded="false" aria-controls="collapseExample"><i class=" fas fa-eye"></i> Pratinjau Berkas</a>
                       </td>
                     </tr>
                     <tr>

@@ -16,30 +16,30 @@
     font-size: 18px;
   }
 </style>
-<div class="container-fluid rounded justify-content-start">
-  <div class="row text-center d-flex align-items-center" id="latar">
-    <div class="col-3">
-      <a class="nav-link <?= $requestUri == '/organisasi-terdaftar/ormas' ? 'nav-link-active' : '' ?> p-0 fw-bold" aria-current="page" href="/organisasi-terdaftar/ormas" id="fsorganisasi">
-        <span class="material-icons-outlined align-middle" style="font-size: 17px;">local_library</span>
-        <span class="m-0 p-0 fw-bold d-none d-md-block text-dark" style="font-size: 13px;">ORMAS</span>
+<div class="container-fluid px-0 py-3 rounded justify-content-start">
+  <div class="row py-3 mx-0 rounded-2" id="latar">
+    <div class="col px-2">
+      <a class="nav-link <?= $requestUri == '/organisasi-terdaftar/ormas' ? 'nav-link-active' : '' ?>  p-0 text-center hstack gap-1 justify-content-center fw-bold" aria-current="page" href="/organisasi-terdaftar/ormas" id="fsorganisasi">
+        <span class="material-icons-outlined" >local_library</span>
+        <span class="  fw-bold d-none d-md-block teksnav">ORMAS</span>
       </a>
     </div>
-    <div class="col-3 p-0" id="fsorganisasi">
-      <a class="nav-link <?= $requestUri == '/organisasi-terdaftar/okp' ? 'nav-link-active' : '' ?> p-0 fw-bold" href="/organisasi-terdaftar/okp">
-        <span class="material-icons-outlined align-middle" style="font-size: 17px;">people</span>
-        <span class="m-0 p-0 fw-bold d-none d-md-block text-dark" style="font-size: 13px;">OKP</span>
+    <div class="col " id="fsorganisasi">
+      <a class="nav-link <?= $requestUri == '/organisasi-terdaftar/okp' ? 'nav-link-active' : '' ?>  p-0 text-center hstack gap-1 justify-content-center fw-bold" href="/organisasi-terdaftar/okp">
+        <span class="material-icons-outlined" >people</span>
+        <span class="  fw-bold d-none d-md-block teksnav">OKP</span>
       </a>
     </div>
-    <div class="col-3 p-0" id="fsorganisasi">
-      <a class="nav-link <?= $requestUri == '/organisasi-terdaftar/komunitas' ? 'nav-link-active' : '' ?> p-0 fw-bold" href="/organisasi-terdaftar/komunitas">
-        <span class="material-icons-outlined align-middle" style="font-size: 17px;">groups</span>
-        <span class="m-0 p-0 fw-bold d-none d-md-block text-dark" style="font-size: 13px;">Komunitas</span>
+    <div class="col " id="fsorganisasi">
+      <a class="nav-link <?= $requestUri == '/organisasi-terdaftar/komunitas' ? 'nav-link-active' : '' ?>  p-0 text-center hstack gap-1 justify-content-center fw-bold" href="/organisasi-terdaftar/komunitas">
+        <span class="material-icons-outlined" >groups</span>
+        <span class="  fw-bold d-none d-md-block teksnav">Komunitas</span>
       </a>
     </div>
-    <div class="col-3 p-0" id="fsorganisasi">
-      <a class="nav-link <?= $requestUri == '/organisasi-terdaftar/parpol' ? 'nav-link-active' : '' ?> p-0 fw-bold" href="/organisasi-terdaftar/parpol">
-        <span class="material-icons-outlined align-middle" style="font-size: 17px;">femoji_flags</span>
-        <span class="m-0 p-0 fw-bold d-none d-md-block text-dark" style="font-size: 13px;">PARPOL</span>
+    <div class="col " id="fsorganisasi">
+      <a class="nav-link <?= $requestUri == '/organisasi-terdaftar/parpol' ? 'nav-link-active' : '' ?>  p-0 text-center hstack gap-1 justify-content-center fw-bold" href="/organisasi-terdaftar/parpol">
+        <span class="material-icons-outlined" >femoji_flags</span>
+        <span class="  fw-bold d-none d-md-block teksnav">PARPOL</span>
       </a>
     </div>
   </div>
