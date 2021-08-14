@@ -6,6 +6,7 @@
   .nav-link:hover {
     color: #feae88;
   }
+  
 
   #latar {
     background-color: #e0e0e0;
@@ -15,8 +16,8 @@
     font-size: 18px;
   }
 </style>
-<div class="container px-0 my-3 rounded justify-content-start">
-  <div class="row text-center d-flex align-items-center mx-1" id="latar">
+<div class="container-fluid rounded justify-content-start">
+  <div class="row text-center d-flex align-items-center" id="latar">
     <div class="col-3">
       <a class="nav-link <?= $requestUri == '/organisasi-terdaftar/ormas' ? 'nav-link-active' : '' ?> p-0 fw-bold" aria-current="page" href="/organisasi-terdaftar/ormas" id="fsorganisasi">
         <span class="material-icons-outlined align-middle" style="font-size: 17px;">local_library</span>

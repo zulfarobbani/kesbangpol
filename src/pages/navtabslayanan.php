@@ -12,7 +12,7 @@
   }
 </style>
 <div class="container px-0 py-3 rounded justify-content-start">
-  <div class="row text-center d-flex align-items-center" id="latar">
+  <div class="row text-center d-flex align-items-center" id="latar" style="margin-left: 0;margin-right: 0;">
     <div class="col-3 p-0">
       <a class="nav-link <?= $requestUri == '/layanan/pendataan' ? 'nav-link-active' : '' ?> py-2 d-flex fw-bold" aria-current="page" href="/layanan/pendataan">
         <span class="material-icons-outlined align-middle" style="font-size: 17px;margin-right: 10px;">person_add_alt_1</span>
@@ -38,9 +38,9 @@
       </a>
     </div>
   </div>
+  <?php if ($idRole == '9asdkqhjwew') { ?>
+    <div class="d-flex flex-row-reverse mt-3">
+      <a class="btn btn-outline-danger navy" href="/layanan-kesbangpol"><i class="fas fa-edit"></i> Edit</a>
+    </div>
+  <?php } ?>
 </div>
-<?php if ($idRole == '9asdkqhjwew') { ?>
-  <div class="d-flex flex-row-reverse">
-    <a class="btn btn-outline-danger navy" href="/layanan-kesbangpol"><i class="fas fa-edit"></i> Edit</a>
-  </div>
-<?php } ?>

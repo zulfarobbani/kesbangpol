@@ -13,30 +13,31 @@
 </head>
 
 <body>
-<?php include(__DIR__ . '/../../mobilemenu.php') ?>
-<?php include(__DIR__ . '/../../mobilenav.php') ?>
+    <?php include(__DIR__ . '/../../mobilemenu.php') ?>
+    <?php include(__DIR__ . '/../../mobilenav.php') ?>
     <?php include(__DIR__ . '/../../navbar.php') ?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 mb-3">
-            <div class="card rounded-3 mt-5 px-3">
-        <div class="card-body">
-                <!-- START CODE -->
-                <h6 class="fw-normal mt-5"><a href="/informasi/berita" class="btn btn-sm btn-outlined-light"><i class="fas fa-arrow-left"></i></a> Informasi KESBANG Terkini</h6>
-                <div class="row g-4" style="text-align:justify;font-size:10pt;">
-                    <div class="col-12">
-                        <h5 class="fw-bold mt-3 mb-4"><?= $detail['namaBerita'] ?></h5>
-                        <img class="w-100" src="/assets/media/<?= $detail['pathMedia'] ?>" alt="Gambar Berita">
-                        <p class="mt-4"><?= html_entity_decode(nl2br($detail['deskripsiBerita'])) ?></p>
+                <div class="card rounded-3 mt-5 px-3">
+                    <div class="card-body">
+                        <!-- START CODE -->
+                        <h6 class="fw-normal mt-2"><a href="/informasi/berita" class="btn btn-sm btn-outline-secondary"><i class="fas fa-arrow-left"></i></a>&nbsp;&nbsp; Informasi Terkini</h6>
+                        <div class="row g-4" style="text-align:justify;font-size:10pt;">
+                            <div class="col-12">
+                                <h5 class="fw-bold mt-3 mb-4"><?= $detail['namaBerita'] ?></h5>
+                                <img class="w-100" src="/assets/media/<?= $detail['pathMedia'] ?>" alt="Gambar Berita">
+                                <p class="mt-4"><?= html_entity_decode(nl2br($detail['deskripsiBerita'])) ?></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-        </div>
-            </div>
             </div>
             <?php include(__DIR__ . '/../../sidebar.php') ?>
         </div>
-        <?php include(__DIR__ . '/../../footer.php') ?>
     </div>
+    <?php include(__DIR__ . '/../../footer.php') ?>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">

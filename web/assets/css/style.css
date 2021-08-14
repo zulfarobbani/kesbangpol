@@ -258,7 +258,8 @@ header p {
 
 .news-card {
   border: 0px solid aqua;
-  margin: 0.5rem;
+  /* margin: 0.5rem; */
+  margin: 0.5rem 0.5rem 0.5rem 0;
   position: relative;
   height: 12rem;
   overflow: hidden;

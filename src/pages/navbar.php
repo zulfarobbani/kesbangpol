@@ -13,46 +13,46 @@
      <div class="collapse navbar-collapse" id="navbarNav" style="height: 55px;">
        <div class="container-fluid d-flex justify-content-center" style="height: 55px;">
          <ul class="navbar-nav">
-           <li class="nav-item <?= $requestUri == '/beranda' ? 'nav-item-active' : '' ?> text-center px-3 py-1">
+           <li class="nav-item <?= strpos($requestUri, 'beranda') ? 'nav-item-active' : '' ?> text-center px-3 py-1">
              <div class="container-fluid">
-               <a class="nav-link <?= $requestUri == '/beranda' ? 'nav-link-active' : '' ?>" aria-current="page" href="\beranda" style="font-size: 12px;padding:0;">
+               <a class="nav-link <?= strpos($requestUri, 'beranda') ? 'nav-link-active' : '' ?>" aria-current="page" href="\beranda" style="font-size: 12px;padding:0;">
                  <span class="material-icons-outlined" style=>home</span>
-                 <br><span class="<?= $requestUri == '/beranda' ? 'teksactive' : '' ?>">Beranda</span></a>
+                 <br><span class="<?= strpos($requestUri, 'beranda') ? 'teksactive' : '' ?>">Beranda</span></a>
              </div>
            </li>
-           <li class="nav-item <?= $requestUri == '/struktur-organisasi' || $requestUri == '/visi-misi' || $requestUri == '/tupoksi' || $requestUri == '/sakip' || $requestUri == '/regulasi' || $requestUri == '/profile-kesbangpol' ? 'nav-item-active' : '' ?> text-center px-3 py-1">
+           <li class="nav-item <?= strpos($requestUri, 'struktur-organisasi') || strpos($requestUri, 'visi-misi') || strpos($requestUri, 'tupoksi') || strpos($requestUri, 'informasi/sakip') || strpos($requestUri, 'regulasi') || strpos($requestUri, 'profile-kesbangpol') ? 'nav-item-active' : '' ?> text-center px-3 py-1">
              <div class="container-fluid">
-               <a class="nav-link <?= $requestUri == '/struktur-organisasi' || $requestUri == '/visi-misi' || $requestUri == '/tupoksi' || $requestUri == '/sakip' || $requestUri == '/regulasi' || $requestUri == '/profile-kesbangpol' ? 'nav-link-active' : '' ?>" href="/struktur-organisasi" style="font-size: 12px;padding:0;">
+               <a class="nav-link <?= strpos($requestUri, 'struktur-organisasi') || strpos($requestUri, 'visi-misi') || strpos($requestUri, 'tupoksi') || strpos($requestUri, 'informasi/sakip') || strpos($requestUri, 'regulasi') || strpos($requestUri, 'profile-kesbangpol') ? 'nav-link-active' : '' ?>" href="/struktur-organisasi" style="font-size: 12px;padding:0;">
                  <span class="material-icons-outlined" style=>people</span>
-                 <br><span class="<?= $requestUri == '/struktur-organisasi' || $requestUri == '/visi-misi' || $requestUri == '/tupoksi' || $requestUri == '/sakip' || $requestUri == '/regulasi' || $requestUri == '/profile-kesbangpol' ? 'teksactive' : '' ?>">Profile</span></a>
+                 <br><span class="<?= strpos($requestUri, 'struktur-organisasi') || strpos($requestUri, 'visi-misi') || strpos($requestUri, 'tupoksi') || strpos($requestUri, 'informasi/sakip') || strpos($requestUri, 'regulasi') || strpos($requestUri, 'profile-kesbangpol') ? 'teksactive' : '' ?>">Profile</span></a>
              </div>
            </li>
-           <li class="nav-item <?= $requestUri == '/layanan/pendataan' || $requestUri == '/layanan/permohonan-hibah' || $requestUri == '/layanan/permohonan-penelitian' || $requestUri == '/layanan/unduhan' || $requestUri == '/layanan-kesbangpol' ? 'nav-item-active' : '' ?> text-center px-3 py-1">
+           <li class="nav-item <?= strpos($requestUri, 'layanan/pendataan') || strpos($requestUri, 'layanan/permohonan-hibah') || strpos($requestUri, 'layanan/permohonan-penelitian') || strpos($requestUri, 'layanan/unduhan') || strpos($requestUri, 'layanan/kesbangpol') ? 'nav-item-active' : '' ?> text-center px-3 py-1">
              <div class="container-fluid">
-               <a class="nav-link <?= $requestUri == '/layanan/pendataan' || $requestUri == '/layanan/permohonan-hibah' || $requestUri == '/layanan/permohonan-penelitian' || $requestUri == '/layanan/unduhan' || $requestUri == '/layanan-kesbangpol' ? 'nav-link-active' : '' ?>" href="/layanan/pendataan" style="font-size: 12px;padding:0;">
+               <a class="nav-link <?= strpos($requestUri, 'layanan/pendataan') || strpos($requestUri, 'layanan/permohonan-hibah') || strpos($requestUri, 'layanan/permohonan-penelitian') || strpos($requestUri, 'layanan/unduhan') || strpos($requestUri, 'layanan/kesbangpol') ? 'nav-link-active' : '' ?>" href="/layanan/pendataan" style="font-size: 12px;padding:0;">
                  <span class="material-icons-outlined" style=>rss_feed</span>
-                 <br><span class="<?= $requestUri == '/layanan/pendataan' || $requestUri == '/layanan/permohonan-hibah' || $requestUri == '/layanan/permohonan-penelitian' || $requestUri == '/layanan/unduhan' || $requestUri == '/layanan-kesbangpol' ? 'teksactive' : '' ?>">Layanan</span></a>
+                 <br><span class="<?= strpos($requestUri, 'layanan/pendataan') || strpos($requestUri, 'layanan/permohonan-hibah') || strpos($requestUri, 'layanan/permohonan-penelitian') || strpos($requestUri, 'layanan/unduhan') || strpos($requestUri, 'layanan/kesbangpol') ? 'teksactive' : '' ?>">Layanan</span></a>
              </div>
            </li>
-           <li class="nav-item <?= $requestUri == '/informasi/berita' || $requestUri == '/informasi/pengumuman' || $requestUri == '/informasi/agenda' || $requestUri == '/informasi/galeri' || $requestUri == '/informasi/kontak-darurat' || $requestUri == '/informasi/banner' ? 'nav-item-active' : '' ?> text-center px-3 py-1">
+           <li class="nav-item <?= strpos($requestUri, 'informasi/berita') || strpos($requestUri, 'informasi/pengumuman') || strpos($requestUri, 'informasi/agenda') || strpos($requestUri, 'informasi/galeri') || strpos($requestUri, 'informasi/kontak-darurat') || strpos($requestUri, 'informasi/banner') ? 'nav-item-active' : '' ?> text-center px-3 py-1">
              <div class="container-fluid">
-               <a class="nav-link <?= $requestUri == '/informasi/berita' || $requestUri == '/informasi/pengumuman' || $requestUri == '/informasi/agenda' || $requestUri == '/informasi/galeri' || $requestUri == '/informasi/kontak-darurat' || $requestUri == '/informasi/banner' ? 'nav-link-active' : '' ?>" href="/informasi/berita" style="font-size: 12px;padding:0;">
+               <a class="nav-link <?= strpos($requestUri, 'informasi/berita') || strpos($requestUri, 'informasi/pengumuman') || strpos($requestUri, 'informasi/agenda') || strpos($requestUri, 'informasi/galeri') || strpos($requestUri, 'informasi/kontak-darurat') || strpos($requestUri, 'informasi/banner') ? 'nav-link-active' : '' ?>" href="/informasi/berita" style="font-size: 12px;padding:0;">
                  <span class="material-icons-outlined" style=>info</span>
-                 <br><span class="<?= $requestUri == '/informasi/berita' || $requestUri == '/informasi/pengumuman' || $requestUri == '/informasi/agenda' || $requestUri == '/informasi/galeri' || $requestUri == '/informasi/kontak-darurat' || $requestUri == '/informasi/banner' ? 'teksactive' : '' ?>">informasi</span></a>
+                 <br><span class="<?= strpos($requestUri, 'informasi/berita') || strpos($requestUri, 'informasi/pengumuman') || strpos($requestUri, 'informasi/agenda') || strpos($requestUri, 'informasi/galeri') || strpos($requestUri, 'informasi/kontak-darurat') || strpos($requestUri, 'informasi/banner') ? 'teksactive' : '' ?>">informasi</span></a>
              </div>
            </li>
-           <li class="nav-item <?= $requestUri == '/organisasi-terdaftar/ormas' || $requestUri == '/organisasi-terdaftar/okp' || $requestUri == '/organisasi-terdaftar/komunitas' || $requestUri == '/organisasi-terdaftar/parpol' || $requestUri == '/organisasi-terdaftar-kesbangpol/ormas' ? 'nav-item-active' : '' ?> text-center px-3 py-1">
+           <li class="nav-item <?= strpos($requestUri, 'organisasi-terdaftar/ormas') || strpos($requestUri, 'organisasi-terdaftar/okp') || strpos($requestUri, 'organisasi-terdaftar/komunitas') || strpos($requestUri, 'organisasi-terdaftar/parpol') || strpos($requestUri, 'organisasi-terdaftar-kesbangpol/ormas') ? 'nav-item-active' : '' ?> text-center px-3 py-1">
              <div class="container-fluid">
-               <a class="nav-link <?= $requestUri == '/organisasi-terdaftar/ormas' || $requestUri == '/organisasi-terdaftar/okp' || $requestUri == '/organisasi-terdaftar/komunitas' || $requestUri == '/organisasi-terdaftar/parpol' || $requestUri == '/organisasi-terdaftar-kesbangpol/ormas' ? 'nav-link-active' : '' ?>" href="/organisasi-terdaftar/ormas" style="font-size: 12px;padding:0;">
+               <a class="nav-link <?= strpos($requestUri, 'organisasi-terdaftar/ormas') || strpos($requestUri, 'organisasi-terdaftar/okp') || strpos($requestUri, 'organisasi-terdaftar/komunitas') || strpos($requestUri, 'organisasi-terdaftar/parpol') || strpos($requestUri, 'organisasi-terdaftar-kesbangpol/ormas') ? 'nav-link-active' : '' ?>" href="/organisasi-terdaftar/ormas" style="font-size: 12px;padding:0;">
                  <span class="material-icons-outlined" style=>groups</span>
-                 <br><span class="<?= $requestUri == '/organisasi-terdaftar/ormas' || $requestUri == '/organisasi-terdaftar/okp' || $requestUri == '/organisasi-terdaftar/komunitas' || $requestUri == '/organisasi-terdaftar/parpol' || $requestUri == '/organisasi-terdaftar-kesbangpol/ormas' ? 'teksactive' : '' ?>">Organisasi Terdaftar</span></a>
+                 <br><span class="<?= strpos($requestUri, 'organisasi-terdaftar/ormas') || strpos($requestUri, 'organisasi-terdaftar/okp') || strpos($requestUri, 'organisasi-terdaftar/komunitas') || strpos($requestUri, 'organisasi-terdaftar/parpol') || strpos($requestUri, 'organisasi-terdaftar-kesbangpol/ormas') ? 'teksactive' : '' ?>">Organisasi Terdaftar</span></a>
              </div>
            </li>
-           <li class="nav-item <?= $requestUri == '/forum-umum' || $requestUri == '/forum-private' ? 'nav-item-active' : '' ?> text-center px-3 py-1">
+           <li class="nav-item <?= strpos($requestUri, 'forum-umum') || strpos($requestUri, 'forum-private') ? 'nav-item-active' : '' ?> text-center px-3 py-1">
              <div class="container-fluid">
-               <a class="nav-link <?= $requestUri == '/forum-umum' || $requestUri == '/forum-private' ? 'nav-link-active' : '' ?>" href="/forum-umum" style="font-size: 12px;padding:0;">
+               <a class="nav-link <?= strpos($requestUri, 'forum-umum') || strpos($requestUri, 'forum-private') ? 'nav-link-active' : '' ?>" href="/forum-umum" style="font-size: 12px;padding:0;">
                  <span class="material-icons-outlined" style=>forum</span>
-                 <br><span class="<?= $requestUri == '/forum-umum' || $requestUri == '/forum-private' ? 'teksactive' : '' ?>">Forum Orsospol</span></a>
+                 <br><span class="<?= strpos($requestUri, 'forum-umum') || strpos($requestUri, 'forum-private') ? 'teksactive' : '' ?>">Forum Orsospol</span></a>
              </div>
            </li>
            <li class="nav-item text-center px-3 py-1">
@@ -63,20 +63,20 @@
              </div>
            </li>
            <?php if ($idRole == '9asdkqhjwew') { ?>
-             <li class="nav-item <?= $requestUri == '/users' || $requestUri == '/roles' || $requestUri == '/permissions' ? 'nav-item-active' : '' ?> text-center px-3 py-1">
+             <li class="nav-item <?= strpos($requestUri, 'users') || strpos($requestUri, 'roles') || strpos($requestUri, 'permissions') ? 'nav-item-active' : '' ?> text-center px-3 py-1">
                <div class="container-fluid">
-                 <a class="nav-link <?= $requestUri == '/users' || $requestUri == '/roles' || $requestUri == '/permissions' ? 'nav-link-active' : '' ?>" href="/users" style="font-size: 12px;padding:0;">
+                 <a class="nav-link <?= strpos($requestUri, 'users') || strpos($requestUri, 'roles') || strpos($requestUri, 'permissions') ? 'nav-link-active' : '' ?>" href="/users" style="font-size: 12px;padding:0;">
                    <span class="material-icons-outlined  style=font-center">groups</span>
-                   <br><span class="<?= $requestUri == '/users' || $requestUri == '/roles' || $requestUri == '/permissions' ? 'teksactive' : '' ?>"></span>Manajemen User</a>
+                   <br><span class="<?= strpos($requestUri, 'users') || strpos($requestUri, 'roles') || strpos($requestUri, 'permissions') ? 'teksactive' : '' ?>"></span>Manajemen User</a>
                </div>
              </li>
            <?php } ?>
            <?php if ($idRole == null) { ?>
-             <li class="nav-item <?= $requestUri == '/login-register' ? 'nav-item-active' : '' ?> text-center px-3 py-1">
+             <li class="nav-item <?= strpos($requestUri, 'login-register') ? 'nav-item-active' : '' ?> text-center px-3 py-1">
                <div class="container-fluid">
-                 <a class="nav-link <?= $requestUri == '/login-register' ? 'nav-link-active' : '' ?>" href="/login-register" style="font-size: 12px;padding:0;">
+                 <a class="nav-link <?= strpos($requestUri, 'login-register') ? 'nav-link-active' : '' ?>" href="/login-register" style="font-size: 12px;padding:0;">
                    <span class="material-icons-outlined  style=font-center">meeting_room</span>
-                   <br><span class="<?= $requestUri == '/login-register' ? 'teksactive' : '' ?>">Login</span></a>
+                   <br><span class="<?= strpos($requestUri, 'login-register') ? 'teksactive' : '' ?>">Login</span></a>
                </div>
              </li>
            <?php } ?>

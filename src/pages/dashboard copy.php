@@ -100,8 +100,8 @@
             <div class="col-6 col-md-4 col-lg my-3">
                 <div class="menu-dashboard" style="box-sizing: border-box;padding: 0 0;">
                     <div class="item-menu-dashboard shadow-sm">
-                        <a href="/beranda"><img src="/assets/icon/home.png" class="d-block mx-auto text-info" style="height:30px" alt="home">
-                            <p class="text-center menu-depan fw-bold" style="color:#000099;margin:0;font-size: 12pt;">Beranda</p>
+                        <a href="/beranda"><img src="/assets/icon/home.png" class="d-block mx-auto text-info" style="height:50px" alt="home">
+                            <p class="text-center menu-depan fw-bold" style="color:#000099;margin:0;">Beranda</p>
                         </a>
                     </div>
                 </div>
@@ -109,8 +109,8 @@
             <div class="col-6 col-md-4 col-lg my-3 ">
                 <div class="menu-dashboard " style="box-sizing: border-box;padding: 0 0;">
                     <div class="item-menu-dashboard shadow-sm">
-                        <a href="/struktur-organisasi" class="menu-dashboard"><img src="/assets/icon/dashboard.png" class="d-block mx-auto text-info" style="height:30px" alt="profil">
-                            <p class="text-center menu-depan fw-bold" style="color:#000099;margin:0;font-size: 12pt;">Profil</p>
+                        <a href="/struktur-organisasi" class="menu-dashboard"><img src="/assets/icon/dashboard.png" class="d-block mx-auto text-info" style="height:50px" alt="profil">
+                            <p class="text-center menu-depan fw-bold" style="color:#000099;margin:0;">Profil</p>
                         </a>
                     </div>
                 </div>
@@ -118,8 +118,8 @@
             <div class="col-6 col-md-4 col-lg my-3 ">
                 <div class="menu-dashboard " style="box-sizing: border-box;padding: 0 0;">
                     <div class="item-menu-dashboard shadow-sm">
-                        <a href="/ormas" class="menu-dashboard"><img src="/assets/icon/organization.png" class="d-block mx-auto" style="height:30px" alt="Organisasi Terdaftar">
-                            <p class="text-center menu-depan fw-bold" style="color:#000099;margin:0;font-size: 12pt;">Organisasi Terdaftar</p>
+                        <a href="/ormas" class="menu-dashboard"><img src="/assets/icon/organization.png" class="d-block mx-auto" style="height:50px" alt="Organisasi Terdaftar">
+                            <p class="text-center menu-depan fw-bold" style="color:#000099;margin:0;">Organisasi Terdaftar</p>
                         </a>
                     </div>
                 </div>
@@ -127,8 +127,8 @@
             <div class="col-6 col-md-4 col-lg my-3 ">
                 <div class="menu-dashboard " style="box-sizing: border-box;padding: 0 0;">
                     <div class="item-menu-dashboard shadow-sm">
-                        <a href="/forum-umum" class="menu-dashboard"><img src="/assets/icon/forum.png" class="d-block mx-auto" style="height:30px" alt="Forum Orsospol">
-                            <p class="text-center menu-depan fw-bold" style="color:#000099;margin:0;font-size: 12pt;">Forum Orsospol</p>
+                        <a href="/forum-umum" class="menu-dashboard"><img src="/assets/icon/forum.png" class="d-block mx-auto" style="height:50px" alt="Forum Orsospol">
+                            <p class="text-center menu-depan fw-bold" style="color:#000099;margin:0;">Forum Orsospol</p>
                         </a>
                     </div>
                 </div>
@@ -136,8 +136,8 @@
             <div class="col-6 col-md-4 col-lg my-3 ">
                 <div class="menu-dashboard " style="box-sizing: border-box;padding: 0 0;">
                     <div class="item-menu-dashboard shadow-sm">
-                        <a href="/layanan/pendataan" class="menu-dashboard"><img src="/assets/icon/service.png" class="d-block mx-auto" style="height:30px" alt="Layanan">
-                            <p class="text-center menu-depan fw-bold" style="color:#000099;margin:0;font-size: 12pt;">Layanan</p>
+                        <a href="/layanan/pendataan" class="menu-dashboard"><img src="/assets/icon/service.png" class="d-block mx-auto" style="height:50px" alt="Layanan">
+                            <p class="text-center menu-depan fw-bold" style="color:#000099;margin:0;">Layanan</p>
                         </a>
                     </div>
                 </div>
@@ -145,8 +145,8 @@
             <div class="col-6 col-md-4 col-lg my-3 ">
                 <div class="menu-dashboard " style="box-sizing: border-box;padding: 0 0;">
                     <div class="item-menu-dashboard shadow-sm">
-                        <a class="menu-dashboard" href="https://linktr.ee/ardhin" target="_blank"><img src="/assets/icon/contact.png" class="d-block mx-auto" style="height:30px" alt="Hubungi Kami">
-                            <p class="text-center menu-depan fw-bold" style="color:#000099;margin:0;font-size: 12pt;">Hubungi Kami</p>
+                        <a class="menu-dashboard" href="https://linktr.ee/ardhin" target="_blank"><img src="/assets/icon/contact.png" class="d-block mx-auto" style="height:50px" alt="Hubungi Kami">
+                            <p class="text-center menu-depan fw-bold" style="color:#000099;margin:0;">Hubungi Kami</p>
                         </a>
                     </div>
                 </div>
