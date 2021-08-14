@@ -438,9 +438,16 @@ box-shadow: 0px 10px 11px -6px rgba(0,0,0,0.33);
       display: inline-flex;
       padding: 1rem;
     }
+    @media only screen and (max-width: 600px) {
+      .cards__item {
+        padding: 0.5rem;
+        display:block;
+      }
+    }
     @media (min-width: 40rem) {
       .cards__item {
-        width: 50%;
+        width: 49%;
+        padding: 0.3rem;
       }
     }
     @media (min-width: 56rem) {
@@ -517,9 +524,38 @@ box-shadow: 0px 10px 11px -6px rgba(0,0,0,0.33);
 .nav-item-active {
   background-color: white;
 }
-
-.teksnav{
-  font-size: 9pt;;
+@media only screen and (max-width: 600px) {
+  .material-icons-outlined{
+    font-size:14pt;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .material-icons-outlined{
+    font-size:12pt;
+    display: block!important;
+  }
+  .teksnav{
+    font-size: 7pt;
+    display: block!important;
+}
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) { 
+  .material-icons-outlined{
+    font-size:12pt;
+  }
+  .teksnav{
+  font-size: 7pt;
+  line-height: 7pt;
+}
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .teksnav{
+    font-size: 9pt;
+  }
+  
 }
 
 .nav-link-active{
