@@ -57,7 +57,7 @@
            </li>
            <li class="nav-item text-center px-3 py-1">
              <div class="container-fluid">
-               <a class="nav-link hubungiKami" href="#" data-bs-toggle="modal" data-bs-target="#modalSosmed" target="_blank" style="font-size: 12px;padding:0;">
+               <a class="nav-link hubungiKami" href="#" data-bs-toggle="modal" data-bs-target="#hubungiKami" target="_blank" style="font-size: 12px;padding:0;">
                  <span class="material-icons-outlined  style=font-center">support_agent</span>
                  <br>Hubungi Kami</a>
              </div>
@@ -95,32 +95,21 @@
               <button type="button" class="btn btn-outline-danger btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <div class="row justify-content-center">
+              <h6 class="text-center">Hubungi kami melalui tautan berikut :</h6>
+              <div class="row justify-content-center my-2">
                 <div class="col-2 mb-3"> 
-                  <a href="" class="whatsapp" target="_blank"><img src="/assets/icon/sosmed/whatsapp.svg" class="w-50 d-block mx-auto" alt=""><p class="text-dark text-center" style="font-size: 12px"><br>Whatsapp</p></a>
+                  <a href="" class="whatsapp" target="_blank"><img src="/assets/icon/sosmed/whatsapp.svg" class="w-50 d-block mx-auto pt-3" alt=""><p class="hubungiteks text-dark text-center" style="margin-top:0;"><br>Whatsapp</p></a>
                 </div>
                 <div class="col-2 mb-3">
-                  <a href="" class="telegram" target="_blank"><img src="/assets/icon/sosmed/telegram.svg" class="w-50 d-block mx-auto" alt=""><p class="text-dark text-center" style="font-size: 12px"><br>Telegram</p></a>
+                  <a href="" class="telegram" target="_blank"><img src="/assets/icon/sosmed/telegram.svg" class="w-50 d-block mx-auto pt-3" alt=""><p class="hubungiteks text-dark text-center" style="margin-top:0;"><br>Telegram</p></a>
                 </div>
                 <div class="col-2 mb-3">
-                  <a href="" class="instagram" target="_blank"><img src="/assets/icon/sosmed/instagram.svg" class="w-50 d-block mx-auto" alt=""><p class="text-dark text-center" style="font-size: 12px"><br>Instagram</p></a>
-                </div>
-                <!-- <div class="col-2 mb-3">
-                  <a href="" class="googleplus" target="_blank"><img src="/assets/icon/sosmed/google-plus.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Google +</span></a>
-                </div> 
-                <div class="col-2 mb-3">
-                  <a href="" class="reddit" target="_blank"><img src="/assets/icon/sosmed/reddit.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Reddit</span></a>
-                </div>
-                <div class="col-2 mb-3">
-                  <a href="" class="linkedin" target="_blank"><img src="/assets/icon/sosmed/linkedin.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>LinkedIn</span></a>
-                </div>
-                <div class="col-2 mb-3">
-                  <a href="" class="pinterest" target="_blank"><img src="/assets/icon/sosmed/pinterest.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Pinterest</span></a>
-                </div> -->
-                <div class="col-2 mb-3">
-                  <a href="" class="email" target="_blank"><img src="/assets/icon/sosmed/email.svg" class="w-50 d-block mx-auto" alt=""><p class="text-dark text-center" style="font-size: 12px"><br>Email</p></a>
+                  <a href="" class="email" target="_blank"><img src="/assets/icon/sosmed/email.svg" class="w-50 d-block mx-auto pt-3" alt=""><p class="hubungiteks text-dark text-center" style="margin-top:0;"><br>Email</p></a>
                 </div>
               </div>
+              <h6 class="text-center">Kantor Kesatuan Bangsa dan Politik<br>Pemerintah Kota Cimahi</h6>
+              <p class="text-center hubungiteks">Gedung Perkantoran Pemkot Cimahi<br>Jl. Demang Hardjakusumah Gedung C,<br>Lantai 4 Kota Cimahi</p>
+              <p class="text-center hubungiteks">022 1234 5678</p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

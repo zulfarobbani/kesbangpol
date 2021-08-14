@@ -30,16 +30,35 @@
             border: 2px solid #80808000;
             padding: 10px 0;
             border-radius: 10px;
+            transition: border-color 0.5s, box-shadow 0.5s;
         }
 
         .item-menu-dashboard:hover {
-            border: 2px solid lightgray;
+            border: 2px solid #e88c4b;
             padding: 10px 0;
+            -webkit-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.12)!important;
+-moz-box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.12)!important;
+box-shadow: -1px 0px 5px 0px rgba(0,0,0,0.12)!important;
         }
 
         .put{
             position: absolute!important;bottom: 0!important;
         }
+
+        .menu-depan{
+            font-size:1rem;
+        }
+        @media only screen and (max-width: 600px) {
+            .menu-depan{
+            font-size:0.7rem;
+        }
+        }
+        /* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .menu-depan{
+            font-size:0.7rem;
+        }
+}
     </style>
 </head>
 
@@ -51,7 +70,7 @@
             <img src="/assets/image/header/header-03.png" alt="" style="width: 150px;position:absolute;left: 50%;margin-left: -70px;top: 70%;margin-top: -50px;">
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container h-100">
         <div class="wrapper mt-3 mb-4">
             <div class="carousel owl-carousel">
                 <?php foreach ($banner as $key => $value) { ?>
@@ -60,7 +79,7 @@
                          <?php } ?>
                     </div>
             </div>
-        </div>
+        
         
 
         <!-- <h3 class="d-flex justify-content-center mt-2" style="color: #adadad;margin: 0;">Selamat Datang</h3>
@@ -72,62 +91,63 @@
         <h3 class="d-flex justify-content-center text-center" style="color: grey;margin: 5px 0 5px 0;">Badan Kesatuan Bangsa dan Politik</h3>
         <h5 class="d-flex justify-content-center text-center" style="color: grey; ">Kota Cimahi</h5>
 
-        <div class="row mt-4" id="menudepan">
-            <div class="col-4 col-md-4 col-lg-2">
+        <div class="row align-items-center mt-4" id="menudepan">
+            <div class="col-6 col-md-4 col-lg my-3">
                 <div class="menu-dashboard" style="box-sizing: border-box;padding: 0 0;">
-                    <div class="item-menu-dashboard">
-                        <a href="/beranda"><img src="/assets/icon/Beranda_info.png" class="d-block mx-auto text-info" style="width: 40px;" alt="home">
-                            <p class="text-center fw-bold fs-5" style="color:#000099;margin:0;">Beranda</p>
+                    <div class="item-menu-dashboard shadow-sm">
+                        <a href="/beranda"><img src="/assets/icon/home.png" class="d-block mx-auto text-info" style="height:50px" alt="home">
+                            <p class="text-center menu-depan fw-bold" style="color:#000099;margin:0;">Beranda</p>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="col-4 col-md-4 col-lg-2">
-                <div class="menu-dashboard" style="box-sizing: border-box;padding: 0 0;">
-                    <div class="item-menu-dashboard">
-                        <a href="/struktur-organisasi" class="menu-dashboard"><img src="/assets/icon/Icon_Profil_dashboard_info.png" style="width: 40px;" class="d-block mx-auto text-info" alt="profil">
-                            <p class="text-center fw-bold fs-5" style="color:#000099;margin:0;">Profil</p>
+            <div class="col-6 col-md-4 col-lg my-3 ">
+                <div class="menu-dashboard " style="box-sizing: border-box;padding: 0 0;">
+                    <div class="item-menu-dashboard shadow-sm">
+                        <a href="/struktur-organisasi" class="menu-dashboard"><img src="/assets/icon/dashboard.png" class="d-block mx-auto text-info" style="height:50px" alt="profil">
+                            <p class="text-center menu-depan fw-bold" style="color:#000099;margin:0;">Profil</p>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="col-4 col-md-4 col-lg-2">
-                <div class="menu-dashboard" style="box-sizing: border-box;padding: 0 0;">
-                    <div class="item-menu-dashboard">
-                        <a href="/ormas" class="menu-dashboard"><img src="/assets/icon/Organisasi_terdaftar_info.png" style="width: 40px;" class="d-block mx-auto" alt="Organisasi Terdaftar">
-                            <p class="text-center fw-bold fs-5" style="color:#000099;margin:0;">Organisasi Terdaftar</p>
+            <div class="col-6 col-md-4 col-lg my-3 ">
+                <div class="menu-dashboard " style="box-sizing: border-box;padding: 0 0;">
+                    <div class="item-menu-dashboard shadow-sm">
+                        <a href="/ormas" class="menu-dashboard"><img src="/assets/icon/organization.png" class="d-block mx-auto" style="height:50px" alt="Organisasi Terdaftar">
+                            <p class="text-center menu-depan fw-bold" style="color:#000099;margin:0;">Organisasi Terdaftar</p>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="col-4 col-md-4 col-lg-2">
-                <div class="menu-dashboard" style="box-sizing: border-box;padding: 0 0;">
-                    <div class="item-menu-dashboard">
-                        <a href="/forum-umum" class="menu-dashboard"><img src="/assets/icon/Forum_orsospol_info.png" style="width: 40px;" class="d-block mx-auto" alt="Forum Orsospol">
-                            <p class="text-center fw-bold fs-5" style="color:#000099;margin:0;">Forum Orsospol</p>
+            <div class="col-6 col-md-4 col-lg my-3 ">
+                <div class="menu-dashboard " style="box-sizing: border-box;padding: 0 0;">
+                    <div class="item-menu-dashboard shadow-sm">
+                        <a href="/forum-umum" class="menu-dashboard"><img src="/assets/icon/forum.png" class="d-block mx-auto" style="height:50px" alt="Forum Orsospol">
+                            <p class="text-center menu-depan fw-bold" style="color:#000099;margin:0;">Forum Orsospol</p>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="col-4 col-md-4 col-lg-2">
-                <div class="menu-dashboard" style="box-sizing: border-box;padding: 0 0;">
-                    <div class="item-menu-dashboard">
-                        <a href="/layanan/pendataan" class="menu-dashboard"><img src="/assets/icon/Icon_Layanan_Dashboard_info.png" style="width: 40px;" class="d-block mx-auto" alt="Layanan">
-                            <p class="text-center fw-bold fs-5" style="color:#000099;margin:0;">Layanan</p>
+            <div class="col-6 col-md-4 col-lg my-3 ">
+                <div class="menu-dashboard " style="box-sizing: border-box;padding: 0 0;">
+                    <div class="item-menu-dashboard shadow-sm">
+                        <a href="/layanan/pendataan" class="menu-dashboard"><img src="/assets/icon/service.png" class="d-block mx-auto" style="height:50px" alt="Layanan">
+                            <p class="text-center menu-depan fw-bold" style="color:#000099;margin:0;">Layanan</p>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="col-4 col-md-4 col-lg-2">
-                <div class="menu-dashboard" style="box-sizing: border-box;padding: 0 0;">
-                    <div class="item-menu-dashboard">
-                        <a class="menu-dashboard" href="https://linktr.ee/ardhin" target="_blank"><img src="/assets/icon/Contact_us_info.png" style="width: 40px;" class="d-block mx-auto" alt="Hubungi Kami">
-                            <p class="text-center fw-bold fs-5" style="color:#000099;margin:0;">Hubungi Kami</p>
+            <div class="col-6 col-md-4 col-lg my-3 ">
+                <div class="menu-dashboard " style="box-sizing: border-box;padding: 0 0;">
+                    <div class="item-menu-dashboard shadow-sm">
+                        <a class="menu-dashboard" href="https://linktr.ee/ardhin" target="_blank"><img src="/assets/icon/contact.png" class="d-block mx-auto" style="height:50px" alt="Hubungi Kami">
+                            <p class="text-center menu-depan fw-bold" style="color:#000099;margin:0;">Hubungi Kami</p>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <?php include(__DIR__ . '/footer.php') ?>
     <style>

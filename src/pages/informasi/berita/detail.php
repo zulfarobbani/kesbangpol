@@ -23,11 +23,11 @@
         <div class="card-body">
                 <!-- START CODE -->
                 <h6 class="fw-normal mt-5"><a href="/informasi/berita" class="btn btn-sm btn-outlined-light"><i class="fas fa-arrow-left"></i></a> Informasi KESBANG Terkini</h6>
-                <div class="row g-4">
+                <div class="row g-4" style="text-align:justify;font-size:10pt;">
                     <div class="col-12">
-                        <h3 class="fw-bold mt-3 mb-4"><?= $detail['namaBerita'] ?></h3>
+                        <h5 class="fw-bold mt-3 mb-4"><?= $detail['namaBerita'] ?></h5>
                         <img class="w-100" src="/assets/media/<?= $detail['pathMedia'] ?>" alt="Gambar Berita">
-                        <p class="mt-4" align="justify"><?= html_entity_decode(nl2br($detail['deskripsiBerita'])) ?></p>
+                        <p class="mt-4"><?= html_entity_decode(nl2br($detail['deskripsiBerita'])) ?></p>
                     </div>
                 </div>
         </div>

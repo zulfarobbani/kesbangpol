@@ -9,12 +9,12 @@
     background-color: #e0e0e0;
   }
 </style>
-<div class="container px-0 py-3 rounded justify-content-start">
+<div class="container  py-3 rounded justify-content-start">
   <div class="row d-flex justify-content-center" id="bgprofile">
-    <div class="col px-2 mb-1">
-      <a class="nav-link <?= $requestUri == '/informasi/berita' ? 'nav-link-active' : '' ?> p-0 text-center position-relative top-50 start-50 translate-middle fw-bold" aria-current="page" href="/informasi/berita">
-        <span class="material-icons-outlined align-middle" style="font-size: 17px;">article</span>
-        <span class="d-none d-md-block" style="font-size: 13px;">Berita</span>
+    <div class="col d-flex px-2 mb-1  ">
+      <a class="nav-link <?= $requestUri == '/informasi/berita' ? 'nav-link-active' : '' ?> p-0 text-center d-flex flex-fill flex-row fw-bold" aria-current="page" href="/informasi/berita">
+        <span class="material-icons-outlined text-end flex-fill align-self-center">article</span>
+        <span class="d-none d-md-block text-start align-self-center flex-fill teksnav">Berita</span>
       </a>
     </div>
     <div class="col px-2 mb-1">
