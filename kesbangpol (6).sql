@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 13, 2021 at 05:04 PM
+-- Generation Time: Aug 16, 2021 at 11:40 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -135,7 +135,10 @@ INSERT INTO `chronology` (`idChronology`, `deskripsiChronology`, `idRelation`, `
 ('crn61039ddb64758', 'User 1 telah mengubah user \"\"', 'usr61039d7730554', '2021-07-30'),
 ('crn61039de82ed59', 'User 1 telah mengubah user \"\"', 'usr61039d7730554', '2021-07-30'),
 ('crn610fe332cc62a', 'User 1 telah menambah user \"\"', 'usr610fe332697bd', '2021-08-08'),
-('crn610fe3c6539dc', 'User 1 telah menambah user \"\"', 'usr610fe3c61b6e5', '2021-08-08');
+('crn610fe3c6539dc', 'User 1 telah menambah user \"\"', 'usr610fe3c61b6e5', '2021-08-08'),
+('crn611a1b4b715c9', 'usr61037f9c85184 telah mengubah gallery \"Gallery 1\"', 'prt60fcfee3d114d', '2021-08-16'),
+('crn611a1b8646075', 'usr61037f9c85184 telah mengubah gallery \"Gallery 1\"', 'prt60fcfee3d114d', '2021-08-16'),
+('crn611a1bc308168', 'usr61037f9c85184 telah mengubah gallery \"Gallery 2\"', 'prt60fcff0f3d877', '2021-08-16');
 
 -- --------------------------------------------------------
 
@@ -87497,12 +87500,12 @@ CREATE TABLE `kontakdarurat` (
 --
 
 INSERT INTO `kontakdarurat` (`idKontakdarurat`, `namaKontakdarurat`, `isiKontakdarurat`, `dateCreate`) VALUES
-('kdr61038b129fcc2', 'PLN', '12837812', '2021-07-30'),
-('kdr61038b1dd1968', 'DAMKAR', '812387123', '2021-07-30'),
-('kdr61038b2886622', 'Polisi', '23237434', '2021-07-30'),
-('kdr61038b32ea7f3', 'Ambulance', '273847234', '2021-07-30'),
-('kdr61038b4269d2e', 'Satpol PP', '8748234', '2021-07-30'),
-('kdr61038d165b7c2', 'Hotline Publik', '8278234', '2021-07-30');
+('kdr61038b129fcc2', 'PLN', '(022) 12837812', '2021-07-30'),
+('kdr61038b1dd1968', 'DAMKAR', '(022) 812387123', '2021-07-30'),
+('kdr61038b2886622', 'Polisi', '(022) 23237434', '2021-07-30'),
+('kdr61038b32ea7f3', 'Ambulance', '(022) 273847234', '2021-07-30'),
+('kdr61038b4269d2e', 'Satpol PP', '(022) 8748234', '2021-07-30'),
+('kdr61038d165b7c2', 'Hotline Publik', '(022) 8278234', '2021-07-30');
 
 -- --------------------------------------------------------
 
@@ -87609,7 +87612,15 @@ CREATE TABLE `layananunduhan` (
 
 INSERT INTO `layananunduhan` (`idLayananunduhan`, `namaLayananunduhan`, `dateCreate`) VALUES
 ('ldn60eadae8b2818', 'Unduhan Layanan 1', '2021-07-11'),
-('ldn60eadaf63316b', 'Unduhan Layanan 2', '2021-07-11');
+('ldn60eadaf63316b', 'Unduhan Layanan 2', '2021-07-11'),
+('ldn611a17bebbf41', 'Unduhan Layanan 3', '2021-08-16'),
+('ldn611a17c3f33c3', 'Unduhan Layanan 4', '2021-08-16'),
+('ldn611a17d5d57a9', 'Unduhan Layanan 5', '2021-08-16'),
+('ldn611a17deda9a3', 'Unduhan Layanan 6', '2021-08-16'),
+('ldn611a17e80c2f1', 'Unduhan Layanan 7', '2021-08-16'),
+('ldn611a17f21ffcb', 'Unduhan Layanan 8', '2021-08-16'),
+('ldn611a17fbe67cb', 'Unduhan Layanan 9', '2021-08-16'),
+('ldn611a18065d6de', 'Unduhan Layanan 10', '2021-08-16');
 
 -- --------------------------------------------------------
 
@@ -87636,25 +87647,11 @@ INSERT INTO `media` (`idMedia`, `pathMedia`, `idRelation`, `idEntity`, `jenisDok
 ('med60e2b875a099d', '[Kusonime] Angel Beats! BD - 05.mkv_snapshot_23.56_[2020.03.26_05.05.25].jpg', '1', '1', NULL, '2021-07-05'),
 ('med60e2cc9f19a0d', '[Kusonime] Black Clover - 65.mkv_snapshot_01.59_[2020.09.17_23.35.30].jpg', '', '1', NULL, '2021-07-05'),
 ('med60e2d40f44d41', '[Kusonime] Angel Beats! BD - OVA1.mkv_snapshot_28.41_[2020.03.16_15.26.38].jpg', '1', '1', NULL, '2021-07-05'),
-('med60ea79499c3a3', '1.jpg', 'skp60ea79498f727', '1', '', '2021-07-11'),
-('med60ea86f7e328e', '3.jpg', 'reg60ea86f7d7a5c', '1', '', '2021-07-11'),
-('med60ea997406846', 'arios_swiss_bel_hotel60ea99740685f.png', 'skp60ea9973dca17', '1', '', '2021-07-11'),
 ('med60eac521144c9', 'networking60eac521144d4.png', 'lyn60eac520efc12', '1', '', '2021-07-11'),
 ('med60eac57cdd395', 'love60eac57cdd3aa.png', 'lyn60eac57caf4e0', '1', '', '2021-07-11'),
 ('med60eac5d194b5d', 'paper60eac5d194b7a.png', 'lyn60eac5d14f639', '1', '', '2021-07-11'),
-('med60eadae8bc4f3', '160eadae8bc4fc.jpg', 'ldn60eadae8b2818', '1', '', '2021-07-11'),
-('med60eadaf643c0e', '260eadaf643c22.jpg', 'ldn60eadaf63316b', '1', '', '2021-07-11'),
 ('med60eadde8b4aa6', 'struktur60eadde99a5d9.jpg', '1', '1', 'struktur_organisasi', '2021-07-11'),
 ('med60ec20a639217', 'wfqlftfbbbffogrryrrs60ec20a639233.jpg', 'png60ec1e54badf2', '1', 'cover_pengumuman', '2021-07-12'),
-('med60fcfee3ed16c', '160fcfee3ed178.jpg', 'prt60fcfee3d114d', '', '', '2021-07-25'),
-('med60fcfee41a243', '260fcfee41a261.jpg', 'dpr60fcfee40a672', '', '', '2021-07-25'),
-('med60fcfee450905', '160fcfee450915.jpg', 'dpr60fcfee43abcf', '', '', '2021-07-25'),
-('med60fcfee476e7f', '260fcfee476e93.jpg', 'dpr60fcfee461127', '', '', '2021-07-25'),
-('med60fcff0f4c207', '460fcff0f4c212.jpg', 'prt60fcff0f3d877', '', '', '2021-07-25'),
-('med60fcff0f7b347', '460fcff0f7b367.jpg', 'dpr60fcff0f6f28b', '', '', '2021-07-25'),
-('med60fcff0f9f111', '360fcff0f9f11e.jpg', 'dpr60fcff0f8bb81', '', '', '2021-07-25'),
-('med60fcff0fbcf17', '260fcff0fbcf24.jpg', 'dpr60fcff0fadecc', '', '', '2021-07-25'),
-('med60fcff0fd026c', '160fcff0fd027b.jpg', 'dpr60fcff0fc9260', '', '', '2021-07-25'),
 ('med60fd135c26178', 'xfynxlec6ni0sjsovhbj60fd135c26188.jpg', 'nws60fd135c15b04', '1', 'cover_berita', '2021-07-25'),
 ('med6100c2bb2be09', '16100c2bb2be1d.jpg', 'ors6100c2babda0a', '1', 'kemenkumhamOrsospol', '2021-07-28'),
 ('med6100c2bb554b4', '16100c2bb554cb.jpg', 'ors6100c2babda0a', '1', 'npwpOrsospol', '2021-07-28'),
@@ -87678,6 +87675,96 @@ INSERT INTO `media` (`idMedia`, `pathMedia`, `idRelation`, `idEntity`, `jenisDok
 ('med6114cb6778fd7', 'bupati-belitung-timur-burhanuddin-kesbangp6114cb6778fe4.jpg', 'nws6114cb676caf3', 'usr61037f9c85184', 'cover_berita', '2021-08-12'),
 ('med6114cbf6e9927', 'bagikan-sembako-libatkan-ormas6114cbf6e9934.jpg', 'nws6114cbf6d58f1', 'usr61037f9c85184', 'cover_berita', '2021-08-12'),
 ('med6114cc60a7dee', 'sony-suwito-adicahyono6114cc60a7e00.jpg', 'nws6114cc6092b16', 'usr61037f9c85184', 'cover_berita', '2021-08-12'),
+('med6119f4993ed9a', 'cimahi6119f4993eda4.png', 'reg6119f49932b03', '1', '', '2021-08-16'),
+('med6119f4a28b4db', 'cimahi6119f4a28b4ee.png', 'reg6119f4a274936', '1', '', '2021-08-16'),
+('med6119f611211ed', 'cimahi6119f611211fb.png', 'reg6119f610e7eb7', '1', '', '2021-08-16'),
+('med6119f61d96575', 'cimahi6119f61d96585.png', 'reg6119f61d72c2b', '1', '', '2021-08-16'),
+('med6119f626d8449', 'cimahi6119f626d8465.png', 'reg6119f626c194e', '1', '', '2021-08-16'),
+('med6119f631c147a', 'cimahi6119f631c148b.png', 'reg6119f63193471', '1', '', '2021-08-16'),
+('med6119f63b83eac', 'cimahi6119f63b83ebc.png', 'reg6119f639e208a', '1', '', '2021-08-16'),
+('med6119f644f39bf', 'cimahi6119f644f39d4.png', 'reg6119f644cdab5', '1', '', '2021-08-16'),
+('med6119f64e8104f', 'cimahi6119f64e8105a.png', 'reg6119f64e1ce58', '1', '', '2021-08-16'),
+('med6119f656ee6c3', 'cimahi6119f656ee6d7.png', 'reg6119f656da2d9', '1', '', '2021-08-16'),
+('med6119f88304ffe', 'uu-15590096286119f88305008.pdf', 'reg60ea86f7d7a5c', '1', '', '2021-08-16'),
+('med611a13db920d9', 'uu-1559009628611a13db920fa.pdf', 'skp60ea79498f727', '1', '', '2021-08-16'),
+('med611a13e48c330', 'cimahi611a13e48c360.png', 'skp60ea9973dca17', '1', '', '2021-08-16'),
+('med611a17ac85f5b', 'cimahi611a17ac85f74.png', 'ldn60eadae8b2818', '1', '', '2021-08-16'),
+('med611a17b53d1f1', 'cimahi611a17b53d20d.png', 'ldn60eadaf63316b', '1', '', '2021-08-16'),
+('med611a17becf9ac', 'cimahi611a17becf9b9.png', 'ldn611a17bebbf41', '1', '', '2021-08-16'),
+('med611a17cbcaeba', 'cimahi611a17cbcaed2.png', 'ldn611a17c3f33c3', '1', '', '2021-08-16'),
+('med611a17d5de408', 'cimahi611a17d5de412.png', 'ldn611a17d5d57a9', '1', '', '2021-08-16'),
+('med611a17deef4d3', 'cimahi611a17deef4df.png', 'ldn611a17deda9a3', '1', '', '2021-08-16'),
+('med611a17e832452', 'cimahi611a17e832468.png', 'ldn611a17e80c2f1', '1', '', '2021-08-16'),
+('med611a17f230654', 'cimahi611a17f230665.png', 'ldn611a17f21ffcb', '1', '', '2021-08-16'),
+('med611a17fbede30', 'cimahi611a17fbede3b.png', 'ldn611a17fbe67cb', '1', '', '2021-08-16'),
+('med611a1806691a0', 'cimahi611a1806691b3.png', 'ldn611a18065d6de', '1', '', '2021-08-16'),
+('med611a192b43760', 'cimahi611a192b43772.png', 'reg6119f4a2347493sd', '1', '', '2021-08-16'),
+('med611a1b4b5b1af', 'cimahi611a1b4b5b1d6.png', 'prt60fcfee3d114d', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a1b86049e5', 'cimahi611a1b86049f8.png', 'dpr60fcfee40a672', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a1b861d4ba', 'lapse611a1b861d4cc.png', 'dpr60fcfee43abcf', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a1b8635a62', 'cimasistaker611a1b8635a72.png', 'dpr60fcfee461127', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a1bc276b37', 'cimasistaker611a1bc276b48.png', 'dpr60fcff0f6f28b', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a1bc294a6a', 'copendata_dark611a1bc294a7b.png', 'dpr60fcff0f8bb81', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a1bc2bdef6', 'epad611a1bc2bdf0f.png', 'dpr60fcff0fadecc', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a1bc2d67a2', 'inlislite611a1bc2d67ba.png', 'dpr60fcff0fc9260', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a1bc2f1f26', 'copendata_dark611a1bc2f1f46.png', 'prt60fcff0f3d877', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a1bfbd2117', 'cimahi611a1bfbd2138.png', 'skp611a1bfbbe099', '1', '', '2021-08-16'),
+('med611a1c06d3608', 'cimahi611a1c06d3616.png', 'skp611a1c06afb83', '1', '', '2021-08-16'),
+('med611a1c11b7d90', 'cimahi611a1c11b7dad.png', 'skp611a1c11aa3dc', '1', '', '2021-08-16'),
+('med611a1c1de6b19', 'cimahi611a1c1de6b31.png', 'skp611a1c1dca47c', '1', '', '2021-08-16'),
+('med611a1c2b3206c', 'cimahi611a1c2b32088.png', 'skp611a1c2b177ea', '1', '', '2021-08-16'),
+('med611a1c3793a27', 'cimahi611a1c3793a32.png', 'skp611a1c37869cb', '1', '', '2021-08-16'),
+('med611a1c430ecf5', 'cimahi611a1c430ed00.png', 'skp611a1c4304c8c', '1', '', '2021-08-16'),
+('med611a1c5e8e409', 'cimahi611a1c5e8e41c.png', 'skp611a1c5e797e2', '1', '', '2021-08-16'),
+('med611a1c695cb60', 'cimahi611a1c695cb73.png', 'skp611a1c6946115', '1', '', '2021-08-16'),
+('med611a24f9a24c2', '611a24f9a24de.', 'ors611a24f988c6c', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a24f9d0e65', '611a24f9d0e7f.', 'ors611a24f988c6c', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a2524b17e2', '611a2524b17fb.', 'ors611a2524a03ef', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a2524bba8a', '611a2524bbaab.', 'ors611a2524a03ef', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a253b70a79', '611a253b70aab.', 'ors611a253b49924', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a253bb895d', '611a253bb896f.', 'ors611a253b49924', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a257a88181', '611a257a881a7.', 'ors611a257a6cb0f', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a257aa2303', '611a257aa2328.', 'ors611a257a6cb0f', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a259306089', '611a25930609d.', 'ors611a2592e8a30', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a25930fb40', '611a25930fb5c.', 'ors611a2592e8a30', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a267d92b6d', '611a267d92b98.', 'ors611a267d64178', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a267dac9c9', '611a267dac9d9.', 'ors611a267d64178', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a2698d070f', '611a2698d0731.', 'ors611a2698bb1d9', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a2698de07d', '611a2698de0a0.', 'ors611a2698bb1d9', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a29127b5e2', '611a29127b5f8.', 'ors611a291268bcb', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a29128668e', '611a2912866a7.', 'ors611a291268bcb', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a292ada03d', '611a292ada07e.', 'ors611a292aabe0e', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a292af3db1', '611a292af3dd8.', 'ors611a292aabe0e', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a294fd2678', '611a294fd2696.', 'ors611a294fc47e5', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a294fe206a', '611a294fe2087.', 'ors611a294fc47e5', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a296d2abc3', '611a296d2abf8.', 'ors611a296d03a38', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a296d660f2', '611a296d66112.', 'ors611a296d03a38', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a29dc3633b', '611a29dc36351.', 'ors611a29dc1ea0b', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a29dc4f405', '611a29dc4f41d.', 'ors611a29dc1ea0b', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a29f3c48f3', '611a29f3c4912.', 'ors611a29f3a5a31', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a29f400c16', '611a29f400c3a.', 'ors611a29f3a5a31', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a2a09998da', '611a2a0999906.', 'ors611a2a099348d', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a2a09a22aa', '611a2a09a22d3.', 'ors611a2a099348d', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a2a2985607', '611a2a298562a.', 'ors611a2a297cd6d', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a2a29955dd', '611a2a29955fd.', 'ors611a2a297cd6d', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a2a4109788', '611a2a410979e.', 'ors611a2a40e3706', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a2a4119879', '611a2a4119890.', 'ors611a2a40e3706', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a2a55b13a6', '611a2a55b13ce.', 'ors611a2a5565a92', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a2a55d6742', '611a2a55d6753.', 'ors611a2a5565a92', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a2a6b8a1b9', '611a2a6b8a1c5.', 'ors611a2a6b5610b', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a2a6b984e6', '611a2a6b984f8.', 'ors611a2a6b5610b', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a2b29090cc', '611a2b29090e4.', 'ors611a2b28e6906', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a2b291f20e', '611a2b291f227.', 'ors611a2b28e6906', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a2b480a42a', '611a2b480a43b.', 'ors611a2b47ee2fa', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a2b4829a8a', '611a2b4829aaf.', 'ors611a2b47ee2fa', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a2b69348a7', '611a2b69348c5.', 'ors611a2b692a1da', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a2b693ff5c', '611a2b693ff70.', 'ors611a2b692a1da', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a2b7d83a90', '611a2b7d83aa6.', 'ors611a2b7d4e2cd', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a2b7d8f5a3', '611a2b7d8f5c2.', 'ors611a2b7d4e2cd', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a2c4426f1d', '611a2c4426f37.', 'ors611a2c4413fc7', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a2c44348c9', '611a2c44348e3.', 'ors611a2c4413fc7', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a2c600f30f', '611a2c600f324.', 'ors611a2c5ff2cc0', '1', 'kemenkumhamOrsospol', '2021-08-16'),
+('med611a2c604941f', '611a2c6049436.', 'ors611a2c5ff2cc0', '1', 'npwpOrsospol', '2021-08-16'),
 ('png60fd082fe5c13', 'ojdp6fmf0fv4djzjthns60fd082fe5c1e.jpg', 'png60fd082fba29f', '1', 'cover_pengumuman', '2021-07-25');
 
 -- --------------------------------------------------------
@@ -87748,11 +87835,34 @@ CREATE TABLE `orsospol` (
 --
 
 INSERT INTO `orsospol` (`idOrsospol`, `namaOrsospol`, `idJenisorsospol`, `notarisOrsospol`, `kemenkumhamOrsospol`, `npwpOrsospol`, `rekeningOrsospol`, `bankOrsospol`, `alamatOrsospol`, `idProvinsi`, `idKabupaten`, `idKecamatan`, `idKelurahan`, `emailOrsospol`, `teleponOrsospol`, `websiteOrsospol`, `idSosialmedia`, `approvalOrsospol`, `dateCreate`, `noAHU`, `idUser`, `singkatanOrsospol`) VALUES
-('ors60e2d5bf34b8f', 'kjasd', 'jor60d0575b7b225', 'sdads', 'asdas', '029183120421847', '327825678326832', 'BCA', 'Jl.Kanto no.24', '32', '3204', '3204140', '3204140003', 'KANTOMANJI@gmail.com', '062749138242', 'KANTOMANJI.com', 'sos60e2d5bf34b65', 1, '2021-07-05', '0000002', '', ''),
-('ors6100c2babda0a', 'asd1', 'jor60d0573fb33fe', 'asd', 'asd', 'asd', 'asd', 'asd', 'as', '13', '1301', '1301011', '1301011001', 'asd@asd.sd', 'asdasd', 'asd', 'sos6100c2bb0efe2', 1, '2021-07-28', '0000002', '', ''),
-('ors610248086c2af', 'asd', 'jor60d0574b03b65', 'asd', 'asd', 'asd', 'asd', 'asd', 'asd', '33', '3315', '3315130', '3315130013', 'asd@asd.sd', 'asd', 'asd', 'sos61024807cbcad', 1, '2021-07-29', '0000001', '', ''),
-('ors61024b489c9b8', 'asd', 'jor60d05997283b8', 'asd', 'asd', 'asd', 'asd', 'asd', 'asd', '14', '1401', '1401012', '1401012001', 'asd@asd.sd', 'asd', 'ads', 'sos61024b485d17b', 1, '2021-07-29', '0000001', '', ''),
-('ors6106c82a70f77', 'Orsospol 1', 'jor60d0573fb33fe', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, '2021-08-01', '0000003', 'usr6106c82a3b736', 'Orsos1');
+('ors60e2d5bf34b8f', 'PERSATUAN PUTRA NUSANTARA', 'jor60d0575b7b225', 'sdads', 'asdas', '029183120421847', '327825678326832', 'BCA', 'Jl. Batu Jamus  Wungurejo RT10 Mojodoyong Kedawung Sragen', '32', '3204', '3204140', '3204140003', 'KANTOMANJI@gmail.com', '062749138242', 'KANTOMANJI.com', 'sos60e2d5bf34b65', 1, '2021-07-05', 'AHU-0000267.AH.01.07 Th. 2015', '', ''),
+('ors6100c2babda0a', 'RADIO ANTAR PENDUDUK INDONESIA', 'jor60d0573fb33fe', '', '', '', '', '', 'JL. Lamongan Barat VII No.1 Sampangan, Gajahmungkur Smg', '13', '1301', '1301011', '1301011001', 'asd@asd.sd', 'asdasd', 'asd', 'sos6100c2bb0efe2', 1, '2021-07-28', 'AHU-39 AH 01  06 TH.2008', '', ''),
+('ors610248086c2af', 'KOALISI LSM DAN PENGACARA PENEGAK HUKUM DAN KEBENARAN JAWA TENGAH', 'jor60d0574b03b65', 'asd', 'asd', 'asd', 'asd', 'asd', 'Jl. Wonodri Kopen Timur III No. 04  Semarang', '33', '3315', '3315130', '3315130013', 'asd@asd.sd', 'asd', 'asd', 'sos61024807cbcad', 1, '2021-07-29', 'AHU-0001112.AH.01.07 TH. 2015', '', ''),
+('ors61024b489c9b8', 'GERAKAN   BANGUN DESA MENUJU MAKMUR', 'jor60d05997283b8', 'asd', 'asd', 'asd', 'asd', 'asd', 'Kalisari dukuhan RT.06/II Kel. Kalisari Kec. Sayung Kab. Demak', '14', '1401', '1401012', '1401012001', 'asd@asd.sd', 'asd', 'ads', 'sos61024b485d17b', 1, '2021-07-29', 'AHU -0004894.AH.01.07 TAHUN 2016', '', ''),
+('ors6106c82a70f77', 'LEMBAGA PENGAWAS KORUPSI DAN PEMANTAU PENEGAK HUKUM INDONESIA', 'jor60d0573fb33fe', '', '', '', '', '', 'Jl. Simpang Dukuh No. I Surabaya', '11', '', '', '', '', '087850000125', '', '', 1, '2021-08-01', 'AHU-00404.60.10.2014', 'usr6106c82a3b736', 'Orsos1'),
+('ors611a24f988c6c', 'DEWAN PENGURUS WILAYAH  ASOSIASI  PERUSAHAAN BONGKAR MUAT INDONESIA ', 'jor60d0573fb33fe', '', '', '', '', '', 'JL. Sleko No. 4 Semarang ', '11', '1103', '1103080', '1103080014', '', '', '', 'sos611a24f9260c8', 1, '2021-08-16', 'AHU- 174.AH.01.07.2012', '', ''),
+('ors611a2524a03ef', 'IKATAN GURU TAMAN KANAK-KANAK INDONESIA', 'jor60d0573fb33fe', '', '', '', '', '', 'Jl. Kelud Raya No. 07  Semarang', '14', '1403', '1403090', '1403090001', '', '', '', 'sos611a2524889dd', 1, '2021-08-16', 'C-04.HT.01.03.TH.2007 ', '', ''),
+('ors611a253b49924', 'PERSATUAN ARTIS PENYANYI , PENCIPTA LAGU dan PEMUSIK REPUBLIK INDONESIA', 'jor60d0573fb33fe', '', '', '', '', '', 'Jl. Karanganyar No. 07 Pudak Payung Semarang', '', '', '', '', '', '', '', 'sos611a253b28087', 1, '2021-08-16', 'C2-2939.H.01.03.TH.90', '', ''),
+('ors611a257a6cb0f', 'LINDU AJI', 'jor60d0573fb33fe', '', '', '', '', '', 'Griya  Raharja Jl. Supriyadi Kec. Pedurungan ', '', '', '', '', '', '', '', 'sos611a2578b90f5', 1, '2021-08-16', 'AHU-0002252.AH.01.07 TH.2015', '', ''),
+('ors611a2592e8a30', 'LEMBAGA SWADAYA MASYARAKAT GERAKAN PEDULI   ANAK BANGSA', 'jor60d0573fb33fe', '', '', '', '', '', 'Jl. Sambiroto  IV RT.02 RW.01 Tembalang Semarang ', '', '', '', '', '', '', '', 'sos611a2592ca896', 1, '2021-08-16', 'AHU-0010201.AHA.01.07  TH. 2015', '', ''),
+('ors611a267d64178', 'BARISAN PATRIOT  BELA NEGARA ', 'jor60d0574b03b65', '', '', '', '', '', 'Kelurahan Pekuncen Rt.03/01 No. 25 Kec. Wiradesa.Kab.Pekalongan', '', '', '', '', '', '', '', 'sos611a267d41071', 1, '2021-08-16', 'AHU- 0000066.AH.01.07 TH. 2015', '', ''),
+('ors611a2698bb1d9', 'YAYASAN  DARUL  QALAM  NUSANTARA', 'jor60d0574b03b65', '', '', '', '', '', 'Jl. Pesantren  PPPDQI No. 01 Desa Baros Kec. Ketanggungan Kab. Brebes', '', '', '', '', '', '', '', 'sos611a2697dfca2', 1, '2021-08-16', 'AHU-0013665.AH.01.04 Th. 2015', '', ''),
+('ors611a291268bcb', 'PEMANTAU PENGGUNAAN KEUANGAN NEGARA', 'jor60d0574b03b65', '', '', '', '', '', 'Kp. Sedompyong Gang 2 No. 11 RT.02. RW 10 Kel. ', '', '', '', '', '', '', '', 'sos611a2912515ff', 1, '2021-08-16', 'AHU-0020019.AH.01.07  Th. 2015', '', ''),
+('ors611a292aabe0e', 'LENTERA ABADI', 'jor60d0574b03b65', '', '', '', '', '', 'Jl. Dr. Wahidin No. 25 RT .005/RW.001 Desa Sindangsari Kec. Majenang ', '', '', '', '', '', '', '', 'sos611a292a8a9ff', 1, '2021-08-16', 'AHU-001473.AH.01.07.Th 2015', '', ''),
+('ors611a294fc47e5', 'MASYARAKAT PERS ANTI NARKOBA', 'jor60d0574b03b65', '', '', '', '', '', 'Jl. Raya Mangkang Km.15 Semarang', '', '', '', '', '', '', '', 'sos611a294fa6291', 1, '2021-08-16', 'AHU -0005461.AH.01.07 Th.2015', '', ''),
+('ors611a296d03a38', 'GERAKAN NASIONAL PENCEGAHAN KORUPSI REPUBLIK INDONESIA PROVINSI JAWA TENGAH', 'jor60d0574b03b65', '', '', '', '', '', 'Jl. Terate No. 07 Klego Kota Pekalongan ', '', '', '', '', '', '', '', 'sos611a296bc4188', 1, '2021-08-16', 'AHU-0000201.AH.01.07 TH.2015', '', ''),
+('ors611a29dc1ea0b', 'LEMBAGA PENGAWAS KINERJA APARATUR NEGARA REPUBLIK INDONESIA', 'jor60d0575b7b225', '', '', '', '', '', 'Semarang', '', '', '', '', '', '', '', 'sos611a29db4b87c', 1, '2021-08-16', 'AHU-0006803.AH.01.07. Th.2016', '', ''),
+('ors611a29f3a5a31', 'LEMBAGA SWADAYA MASYARAKAT KOMANDO BERSAMA RAKYAT', 'jor60d0575b7b225', '', '', '', '', '', 'Jl. Jend. A. Yani No. 357 Sidomulyo Sukoharjo (0271) 733128', '', '', '', '', '', '', '', 'sos611a29f387363', 1, '2021-08-16', 'AHU-0002562.AH.01.07.tahun 2015', '', ''),
+('ors611a2a297cd6d', 'FORUM  KOMUNIKASI SAHABAT BANSER', 'jor60d0575b7b225', '', '', '', '', '', 'Jl. Karang Tengah II Rt.08/II Genuksari Semarang', '', '', '', '', '', '', '', 'sos611a2a296c532', 1, '2021-08-16', 'AHU-0027649.AH.01.07 Tahun 2015', '', ''),
+('ors611a2a40e3706', 'BKM SUMBER REJEKI', 'jor60d0575b7b225', '', '', '', '', '', 'Desa Jatihadi RT.02/05 Kec. Sumber Rembang', '', '', '', '', '', '', '', 'sos611a2a40bdef3', 1, '2021-08-16', 'AHU-0003977.AH.01.07.Tahun 2015', '', ''),
+('ors611a2a5565a92', 'HIZBUT TAHRIR INDONESIA', 'jor60d0575b7b225', '', '', '', '', '', 'Jl. Kintelan  Baru No. 32 Semarang', '', '', '', '', '', '', '', 'sos611a2a554f384', 1, '2021-08-16', 'AHU-00282.60.10 Tahun 2014', '', ''),
+('ors611a2a6b5610b', 'GERAKAN PEMBANGUNAN DESA MAKMUR', 'jor60d0575b7b225', '', '', '', '', '', 'Desa Tegalsambi RT.08/02 Kec.Tahunan Kab. Jepara', '', '', '', '', '', '', '', 'sos611a2a6b382a3', 1, '2021-08-16', 'AHU-0006580.AH.01.07 Tahun 2016', '', ''),
+('ors611a2b28e6906', 'FORUM PENYELENGGARA KURSUS SELURUH INDONESIA', 'jor60d05997283b8', '', '', '', '', '', 'Jl. Sedayu Kenangan III Blok E No. 1 Woltermonginsidi Semarang', '', '', '', '', '', '', '', 'sos611a2b28b08f2', 1, '2021-08-16', 'AHU-0018976.ah.01.07tAHUN 2015', '', ''),
+('ors611a2b47ee2fa', 'GERAKAN EDUKASI MASYARAKAT PEDULI IRIGASI TANAH AIR', 'jor60d05997283b8', '', '', '', '', '', 'Bilo Lor RT.02/03 Desa Pundenarum Kec. Karangawen Kab.Demak', '', '', '', '', '', '', '', 'sos611a2b47c33f1', 1, '2021-08-16', 'AHU-0004870.AH.01.07.Tahun 2016', '', ''),
+('ors611a2b692a1da', 'GERAKAN PEDULI RAKYAT INDONESIA', 'jor60d05997283b8', '', '', '', '', '', 'Jl. Karangrejo II/12 RT.04/07 Srondol Wetan Banyumanik Semarang ', '', '', '', '', '', '', '', 'sos611a2b6910c06', 1, '2021-08-16', 'AHU-0007915.AH.01.07 Tahun 2016 ', '', ''),
+('ors611a2b7d4e2cd', 'FORUM  RAKYAT TANI LESTARI', 'jor60d05997283b8', '', '', '', '', '', 'Desa Jatihadi RT.02/05 Kec. Sumber Rembang', '', '', '', '', '', '', '', 'sos611a2b7d2ebe2', 1, '2021-08-16', 'AHU-0009089.AH.01.07 Tahun 2016', '', ''),
+('ors611a2c4413fc7', 'JARINGAN PENDAMPINGAN KEBIJAKAN DAN PEMBANGUNAN ', 'jor60d05997283b8', '', '', '', '', '', 'Jl. Raya Brangsong No. 57 Kec. Brangsong Kab.Kendal ', '', '', '', '', '', '', '', 'sos611a2c43f35e1', 1, '2021-08-16', 'AHU-0001682.AH.01.07-Tahun 2015', '', ''),
+('ors611a2c5ff2cc0', 'ASOSIASI  PETANI TEMBAKAU INDONESIA', 'jor60d05997283b8', '', '', '', '', '', 'Temanggung', '', '', '', '', '', '', '', 'sos611a2c5fcd4ab', 1, '2021-08-16', 'AHU-0006126.AH.01.07.Tahun 2015', '', '');
 
 -- --------------------------------------------------------
 
@@ -87792,7 +87902,7 @@ CREATE TABLE `pengumuman` (
 --
 
 INSERT INTO `pengumuman` (`idPengumuman`, `namaPengumuman`, `deskripsiPengumuman`, `dateCreate`) VALUES
-('png60ec1e54badf2', 'Bupati Bekasi Meninggal karena COVID-19, Plt Sekda Jadi Pelaksana Harian', '<p>Bupati Kabupaten Bekasi Eka Supri Atmadja meninggal dunia karena COVID-19 pada Minggu (11/7) malam. Kondisi itu membuat Bekasi tidak memiliki kepala daerah definitif.&nbsp;</p>', '2021-07-12'),
+('png60ec1e54badf2', 'Bupati Bekasi Meninggal karena COVID-19, Plt Sekda Jadi Pelaksana Harian', '<p>Bupati Kabupaten Bekasi Eka Supri Atmadja meninggal dunia karena COVID-19 pada Minggu (11/7) malam. Kondisi itu membuat Bekasi tidak memiliki kepala daerah definitif.&nbsp;</p><p>\"Tidak ada kekosongan pimpinan di Kabupaten Bekasi karena sesuai peraturan perundang-undangan, \"Tidak ada kekosongan pimpinan di Kabupaten Bekasi karena sesuai peraturan perundang-undangan,\" ucap Benny dalam pesan singkat, Senin (12/7).</p><p>Siapa penggantinya?</p><p>Eka adalah wakil bupati yang naik menjadi bupati karena bupati sebelumnya, Neneng Hasanah Yasin, tersangkut kasus korupsi. Eka lalu dilantik pada 12 Juni 2019 sebagai bupati. Tapi sejak saat itu Kabupaten Bekasi tidak memiliki wakil.</p><p>Selain itu, Bekasi juga tidak punya sekretaris daerah karena Sekda sebelumnya pensiun. Kemudian ditunjuk Pelaksana Tugas (Plt) Sekda yaitu Kepala Badan Pendapatan Daerah Herman Hanafi. Maka, pengganti sementara bupati Bekasi adalah Plt Sekda.</p><p>\"Saat ini Plt Sekda akan melaksanakan tugas kepala daerah sehari-hari (Plh kepala daerah). Ini sebagai kebijakan awal,\" kata Benny.</p><p>Benny mengatakan pagi ini Kemendagri akan mengirim surat atau radiogram ke Pemprov Jabar soal penunjukan tersebut.</p><p>\"Hal ini sudah menjadi perhatian Kemendagri dan sudah dikoordinasikan dengan Pemerintah Daerah Provinsi Jawa Barat untuk ditindaklanjuti sesuai ketentuan yang berlaku,\" pungkasnya.</p><p>Sumber : https://kumparan.com/kumparannews/bupati-bekasi-meninggal-karena-covid-19-plt-sekda-jadi-pelaksana-harian-1w7MsDYguhI/full</p>', '2021-07-12'),
 ('png60fd082fba29f', '1 Kota dan 2 Kabupaten di NTT Ini Masuk Penerapan PPKM Level 4', '<p><strong>MAUMERE</strong> â€“ Berdasarakan hasil Rapat Koordinasi (Rakor) yang yang dilakukan secara virtual pada Sabtu (24/7) dari pukul 14.00 WITA â€“ 16.30 WITA dengan agenda Pembahasan Penerapan PPKM Level IV di luar Jawa Bali, tiga daerah di Provinsi NTT ini masuk penerapan PPKM Level IV.</p><p>Rakor Pembahasan Penerapan PPKM Level IV di luar Jawa Bali dengan nara sumber, Menko Perekonomian RI, Menteri Keuangan RI, Menteri Perhubungan RI, Wamenkes, dan Staf khusus menteri sosial itu memperoleh kesimpulan, pemberlakukan PPKM diluar Jawa Bali digelar terhitung mulai tanggal 26 Juli sd 8 Agustus 2021, penetapan level PPKM untuk Kabupaten dan kota akan diterapkan pada 45 Kabupaten dan kota di 21 Provinsi, termasuk di Provinsi NTT di Kupang Kota, Sikka dan Sumba Timur.</p>', '2021-07-25');
 
 -- --------------------------------------------------------
@@ -87959,7 +88069,17 @@ CREATE TABLE `regulasi` (
 --
 
 INSERT INTO `regulasi` (`idRegulasi`, `namaRegulasi`, `dateCreate`) VALUES
-('reg60ea86f7d7a5c', 'Peraturan Umum', '2021-07-11');
+('reg60ea86f7d7a5c', 'Peraturan Umum', '2021-07-11'),
+('reg6119f49932b03', 'Regulasi 2', '2021-08-16'),
+('reg6119f4a2347493sd', 'Regulasi 3', '2021-08-16'),
+('reg6119f610e7eb7', 'Regulasi 4', '2021-08-16'),
+('reg6119f61d72c2b', 'Regulasi 5', '2021-08-16'),
+('reg6119f626c194e', 'Regulasi 6', '2021-08-16'),
+('reg6119f63193471', 'Regulasi 7', '2021-08-16'),
+('reg6119f639e208a', 'Regulasi 7', '2021-08-16'),
+('reg6119f644cdab5', 'Regulasi 8', '2021-08-16'),
+('reg6119f64e1ce58', 'Regulasi 9', '2021-08-16'),
+('reg6119f656da2d9', 'Regulasi 10', '2021-08-16');
 
 -- --------------------------------------------------------
 
@@ -88023,7 +88143,16 @@ CREATE TABLE `sakip` (
 
 INSERT INTO `sakip` (`idSakip`, `namaSakip`, `dateCreate`) VALUES
 ('skp60ea79498f727', 'SOP', '2021-07-11'),
-('skp60ea9973dca17', 'SOP1', '2021-07-11');
+('skp60ea9973dca17', 'SOP1', '2021-07-11'),
+('skp611a1bfbbe099', 'SOP 2', '2021-08-16'),
+('skp611a1c06afb83', 'SOP 3', '2021-08-16'),
+('skp611a1c11aa3dc', 'SOP 4', '2021-08-16'),
+('skp611a1c1dca47c', 'SOP 5', '2021-08-16'),
+('skp611a1c2b177ea', 'SOP 6', '2021-08-16'),
+('skp611a1c37869cb', 'SOP 7', '2021-08-16'),
+('skp611a1c4304c8c', 'SOP 8', '2021-08-16'),
+('skp611a1c5e797e2', 'SOP 9', '2021-08-16'),
+('skp611a1c6946115', 'SOP 10', '2021-08-16');
 
 -- --------------------------------------------------------
 
@@ -88055,7 +88184,31 @@ INSERT INTO `sosialmedia` (`idSosialmedia`, `instagramSosialmedia`, `facebookSos
 ('sos61023bcb248f2', 'asd', 'asd', 'asd', 'asd', 'asd', 'asd', '2021-07-29'),
 ('sos61024710369f0', 'asd', 'asd', 'asd', 'asd', 'asd', 'asd', '2021-07-29'),
 ('sos61024807cbcad', 'asd', 'asd', 'asd', 'asd', 'asd', 'asd', '2021-07-29'),
-('sos61024b485d17b', 'asd', 'aasd', 'asd', 'asd', 'asd', 'asd', '2021-07-29');
+('sos61024b485d17b', 'asd', 'aasd', 'asd', 'asd', 'asd', 'asd', '2021-07-29'),
+('sos611a24f9260c8', '', '', '', '', '', '', '2021-08-16'),
+('sos611a2524889dd', '', '', '', '', '', '', '2021-08-16'),
+('sos611a253b28087', '', '', '', '', '', '', '2021-08-16'),
+('sos611a2578b90f5', '', '', '', '', '', '', '2021-08-16'),
+('sos611a2592ca896', '', '', '', '', '', '', '2021-08-16'),
+('sos611a267d41071', '', '', '', '', '', '', '2021-08-16'),
+('sos611a2697dfca2', '', '', '', '', '', '', '2021-08-16'),
+('sos611a2912515ff', '', '', '', '', '', '', '2021-08-16'),
+('sos611a292a8a9ff', '', '', '', '', '', '', '2021-08-16'),
+('sos611a294fa6291', '', '', '', '', '', '', '2021-08-16'),
+('sos611a296bc4188', '', '', '', '', '', '', '2021-08-16'),
+('sos611a29db4b87c', '', '', '', '', '', '', '2021-08-16'),
+('sos611a29f387363', '', '', '', '', '', '', '2021-08-16'),
+('sos611a2a098820a', '', '', '', '', '', '', '2021-08-16'),
+('sos611a2a296c532', '', '', '', '', '', '', '2021-08-16'),
+('sos611a2a40bdef3', '', '', '', '', '', '', '2021-08-16'),
+('sos611a2a554f384', '', '', '', '', '', '', '2021-08-16'),
+('sos611a2a6b382a3', '', '', '', '', '', '', '2021-08-16'),
+('sos611a2b28b08f2', '', '', '', '', '', '', '2021-08-16'),
+('sos611a2b47c33f1', '', '', '', '', '', '', '2021-08-16'),
+('sos611a2b6910c06', '', '', '', '', '', '', '2021-08-16'),
+('sos611a2b7d2ebe2', '', '', '', '', '', '', '2021-08-16'),
+('sos611a2c43f35e1', '', '', '', '', '', '', '2021-08-16'),
+('sos611a2c5fcd4ab', '', '', '', '', '', '', '2021-08-16');
 
 -- --------------------------------------------------------
 
