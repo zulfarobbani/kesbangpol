@@ -21,7 +21,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-8 mb-3">
-        <div class="card rounded-3 mt-5 px-3">
+        <div class="card bg-light rounded-3 mt-5 px-3">
           <div class="card-body">
             <?php include(__DIR__ . '/../../navtabsinformasi.php') ?>
             <!-- START CODE -->
@@ -29,18 +29,18 @@
               <?php foreach ($datas as $key => $values) { ?>
                 <li class="cards__item">
                   <div class="kartu">
-                    <div class="kartu__image" style="background-image: url(/assets/media/<?= $values['pathMedia'] ?>);"></div>
+                    <div class="kartu__image" style="background-image: url(/assets/media/<?= $values['pathMedia'] ?>);background-size:contain;"></div>
                     <div class="kartu__content">
                       <div class="kartu__title"><a href="/informasi/galeri/<?= $values['idGallery'] ?>/detail">
                           <h6><?= $values['namaGallery'] ?></h6>
                         </a></div>
-                      <p class="kartu__text paragraf"><?= html_entity_decode(nl2br(substr($values['deskripsiGallery'], 0, 32))) . " ..." ?></p>
+                      <p class="kartu__text paragraf"><?= html_entity_decode(nl2br(substr($values['deskripsiGallery'], 0, 47))) . " ..." ?></p>
                       <div class="row">
                         <div class="col-6 p-0">
                           <button class="btn btn--block kartu__btn ms-auto paragraf"><em><?= $values['dateCreate'] ?></em></button>
                         </div>
-                        <div class="col-6 p-0">
-                          <a href="/informasi/galeri/<?= $values['idGallery'] ?>/detail" class="btn btn-sm btn-outline-secondary d-inline">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+                        <div class="col-6 p-0 hstack">
+                          <a href="/informasi/galeri/<?= $values['idGallery'] ?>/detail" class="btn btn-sm btn-outline-secondary d-inline ms-auto">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
                         </div>
                       </div>
 
