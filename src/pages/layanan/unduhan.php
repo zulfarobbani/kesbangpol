@@ -26,7 +26,8 @@
         <?php include(__DIR__ . '/../navtabslayanan.php') ?>
         <!-- START CODE -->
         <div class="col-12">
-          <table class="table table-striped mt-3">
+          <h3>Berkas Persyaratan</h3>
+          <table class="table mt-3">
             <thead style="color: navy;">
               <tr>
                 <th>Nama Berkas</th>

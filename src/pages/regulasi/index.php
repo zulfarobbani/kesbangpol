@@ -44,23 +44,7 @@
                       <!-- bere modal pratinjau regulasi d list ieu -->
                       <td class="align-middle hstack">
                         <?= $values['namaRegulasi'] ?>
-                        <a class="btn btn-outline-danger navy ms-auto" data-bs-toggle="collapse" data-bs-target="#collapseExample_<?= $key ?>" aria-expanded="false" aria-controls="collapseExample"><i class=" fas fa-eye"></i> Pratinjau Berkas</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="2">
-                        <div class="collapse" id="collapseExample_<?= $key ?>">
-                          <div class="card card-body">
-                            <?php
-                            $arr_ext = explode('.', $values['pathMedia']);
-                            if (end($arr_ext) == 'pdf') {
-                            ?>
-                              <iframe class="pdf_document" src="/assets/media/<?= $values['pathMedia'] ?>" frameborder="0" width="100%"></iframe>
-                            <?php } else { ?>
-                              <img src="/assets/media/<?= $values['pathMedia'] ?>" alt="" class="img-fluid">
-                            <?php } ?>
-                          </div>
-                        </div>
+                        <a class="btn btn-outline-danger navy ms-auto" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-file="/assets/media/<?= $values['pathMedia'] ?>"><i class=" fas fa-eye"></i> Pratinjau Berkas</a>
                       </td>
                     </tr>
                   <?php } ?>
@@ -75,9 +59,53 @@
   </div>
   <?php include(__DIR__ . '/../footer.php') ?>
 
+  <!-- Modal Detail -->
+  <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h6 class="modal-title" id="exampleModalLabel">File Regulasi</h6>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="" alt="" class="img-fluid fileSakip">
+          <iframe src="" frameborder="0" class="fileSakipPDF w-100" height="500px" toolbar="false"></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
+  </script>
+  <script>
+    var detailModal = document.getElementById('detailModal')
+    detailModal.addEventListener('show.bs.modal', function(event) {
+      // Button that triggered the modal
+      var button = event.relatedTarget
+      // Extract info from data-bs-* attributes
+      var fileSakip = button.getAttribute('data-bs-file')
+      // If necessary, you could initiate an AJAX request here
+      // and then do the updating in a callback.
+      //
+      // Update the modal's content.
+
+      var fileSakipContainerPDF = detailModal.querySelector('.fileSakipPDF')
+      var fileSakipContainer = detailModal.querySelector('.fileSakip')
+      if (fileSakip.split('.')[1] == "pdf") {
+        fileSakipContainerPDF.setAttribute('src', fileSakip)
+        fileSakipContainer.setAttribute('style', 'display: none');
+        fileSakipContainerPDF.setAttribute('style', 'display: block');
+      } else {
+        fileSakipContainer.setAttribute('src', fileSakip)
+        fileSakipContainerPDF.setAttribute('style', 'display: none');
+        fileSakipContainer.setAttribute('style', 'display: block');
+      }
+    })
   </script>
 </body>
 

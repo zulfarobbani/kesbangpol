@@ -31,9 +31,9 @@
                 <?= $layanan['deskripsiLayanan'] ?>
               </div>
 
-              <div class="d-block mt-4">
-                <a class="btn btn-outline-danger navy ms-auto hstack gap-1 justify-content-center" href="/login-register">
-                <span class="material-icons-outlined align-middle" style="font-size: 17px;margin-right: 5px;">person_add_alt_1</span> Daftarkan organisasi anda</a>
+              <div class="mt-4">
+                <a class="btn btn-danger btn-sm navy  float-end" href="/login-register">
+                <span class="material-icons-outlined text-white" style="font-size: 17px;margin-right: 5px;">person_add_alt_1</span><span class="text-white">Daftarkan Organisasi Anda</span></a>
               </div>
               <!-- <div class="float-end"><button class="btn btn-outline-danger">Unduh</button></div> -->
             </div>
