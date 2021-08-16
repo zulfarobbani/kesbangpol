@@ -24,7 +24,7 @@
                     <div class="card-body">
                         <div class="container mt-4">
                             <h4>Gallery</h4>
-                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
+                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modaltambahproduct">
                                 Tambah
                             </button>
 

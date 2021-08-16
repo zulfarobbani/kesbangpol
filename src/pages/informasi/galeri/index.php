@@ -40,7 +40,7 @@
                           <button class="btn btn--block kartu__btn ms-auto paragraf"><em><?= $values['dateCreate'] ?></em></button>
                         </div>
                         <div class="col-6 p-0">
-                          <a href="/informasi/galeri/<?= $values['idGallery'] ?>/detail" class="btn btn-sm btn-outline-secondary d-inline">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
+                          <a href="/informasi/galeri/<?= $values['idGallery'] ?>/detail" class="btn btn-sm btn-outline-danger d-inline">Read more <i class="fas fa-long-arrow-alt-right"></i></a>
                         </div>
                       </div>
 

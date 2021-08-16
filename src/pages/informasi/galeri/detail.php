@@ -24,7 +24,7 @@
             <div class="col-md-8 mb-3">
                 <div class="card rounded-3 mt-5 px-3">
                     <div class="card-body">
-                        <h3 class="fw-normal mt-5"><a href="/informasi/galeri" class="btn btn-sm btn-outlined-light"><i class="fas fa-arrow-left"></i></a> <?= $detail['namaGallery'] ?></h3>
+                        <h3 class="fw-normal mt-5"><a href="/informasi/galeri" class="btn btn-sm btn-outline-danger"><i class="fas fa-arrow-left"></i></a> <?= $detail['namaGallery'] ?></h3>
                         <div id="top"></div>
                         <section class="gallery">
                             <div class="row nest">
@@ -55,8 +55,9 @@
             </div>
             <?php include(__DIR__ . '/../../sidebar.php') ?>
         </div>
-        <?php include(__DIR__ . '/../../footer.php') ?>
     </div>
+    <?php include(__DIR__ . '/../../footer.php') ?>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
