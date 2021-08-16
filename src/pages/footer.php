@@ -17,9 +17,10 @@
 </footer> -->
 
 <style type="text/css">
-*{
+    * {
         font-family: 'Atkinson Hyperlegible', sans-serif;
     }
+
     footer {
         /* background-image: url(/assets/image/footer.png);
         background-size: cover; */
@@ -35,17 +36,20 @@
     .judul-kesbangpol {
         /*font-family: Bodoni;*/
     }
-    .berem:hover{
+
+    .berem:hover {
         filter: hue-rotate(150deg) saturate(299%) brightness(111%)contrast(293%);
     }
-    .b:hover{
+
+    .b:hover {
         filter: hue-rotate(150deg) saturate(227%) brightness(110%)contrast(208%);
     }
 </style>
 <!-- Footer Main Area-->
-<footer class="p-2 d-none d-md-block put pb-2" style="border-top: 2px solid #bfbfbf;background: #d2d2d2;width: 100%;">
+<footer class="d-none d-md-block put pb-2" style="border-top: 5px solid red;background: #d2d2d2;width: 100%;">
+    <div style="background: white;height: 5px;width: 100%;"></div>
     <!-- Grid row -->
-    <div class="row m-0" id="rowfooter">
+    <div class="row m-0 mt-2" id="rowfooter">
         <!-- End of Full-width single-column -->
         <!-- Multi-column 3 of 3 -->
         <div class="col-12 col-md-4 text-center" style="height: fit-content;">

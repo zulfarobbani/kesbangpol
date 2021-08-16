@@ -58,21 +58,21 @@
                                                 <td><?= date('d M Y', strtotime($data['dateCreate'])) ?></td>
                                                 <td>
                                                     <div class="row">
-                                                        <div class="col-12 col-md-3">
+                                                        <div class="col-12 col-md-3" style="padding: 3px;">
 
                                                             <button type="button" class="btn hstack gap-1 paragraf w-100 btn-primary px-2 py-1  btnEdit" id="btnBiru" data-bs-toggle="modal" data-bs-target="#ModalUbahUser" data-bs-idUser="<?= $data['idUser'] ?>"><i class="fa fa-edit"></i> Ubah</button>
                                                         </div>
-                                                        <div class="col-12 col-md-3">
+                                                        <div class="col-12 col-md-3" style="padding: 3px;">
 
                                                             <button type="button" class="btn hstack gap-1 paragraf w-100 btn-warning px-2 py-1  btnDetail" id="btnKuning" data-bs-toggle="modal" data-bs-target="#ModalRincianUser" data-bs-idUser="<?= $data['idUser'] ?>"><i class="fa fa-search-plus"></i> Lihat
                                                             </button>
                                                         </div>
-                                                        <div class="col-12 col-md-3">
+                                                        <div class="col-12 col-md-3" style="padding: 3px;">
 
                                                             <button type="button" class="btn hstack gap-1 paragraf w-100 btn-danger px-2 py-1  btnHapus" id="btnMerah" data-bs-toggle="modal" data-bs-target="#ModalHapusUser" data-bs-idUser="<?= $data['idUser'] ?>"><i class="fa fa-trash-alt"></i> Hapus</button>
                                                         </div>
 
-                                                        <div class="col-12 col-md-3">
+                                                        <div class="col-12 col-md-3" style="padding: 3px;">
                                                             <button type="button" class="btn hstack gap-1 paragraf w-100 btn-info px-2 py-1 btnResetPassword" id="btnMerah" data-bs-toggle="modal" data-bs-target="#ModalResetPassword" data-bs-idUser="<?= $data['idUser'] ?>"><i class="fa fa-lock-open"></i> Reset</button>
                                                         </div>
                                                     </div>

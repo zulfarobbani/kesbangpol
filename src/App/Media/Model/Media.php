@@ -40,7 +40,7 @@ class Media extends GlobalFunc
         $file = $fileUpload;
         $namaMedia = $file['name'];
         $namaSementara = $file['tmp_name'];
-        $ekstensi_diperbolehkan = array('png', 'jpg', 'pdf');
+        $ekstensi_diperbolehkan = array('png', 'jpg', 'jpeg', 'pdf');
         $x = explode('.', $namaMedia);
         $nama = strtolower($x['0']);
         $ekstensi = strtolower(end($x));
