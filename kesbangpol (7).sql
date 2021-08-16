@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 16, 2021 at 11:40 AM
+-- Generation Time: Aug 16, 2021 at 12:12 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -138,7 +138,19 @@ INSERT INTO `chronology` (`idChronology`, `deskripsiChronology`, `idRelation`, `
 ('crn610fe3c6539dc', 'User 1 telah menambah user \"\"', 'usr610fe3c61b6e5', '2021-08-08'),
 ('crn611a1b4b715c9', 'usr61037f9c85184 telah mengubah gallery \"Gallery 1\"', 'prt60fcfee3d114d', '2021-08-16'),
 ('crn611a1b8646075', 'usr61037f9c85184 telah mengubah gallery \"Gallery 1\"', 'prt60fcfee3d114d', '2021-08-16'),
-('crn611a1bc308168', 'usr61037f9c85184 telah mengubah gallery \"Gallery 2\"', 'prt60fcff0f3d877', '2021-08-16');
+('crn611a1bc308168', 'usr61037f9c85184 telah mengubah gallery \"Gallery 2\"', 'prt60fcff0f3d877', '2021-08-16'),
+('crn611a342fbd477', 'usr61037f9c85184 telah mengubah gallery \"Gallery 1\"', 'prt60fcfee3d114d', '2021-08-16'),
+('crn611a34a095660', 'usr61037f9c85184 telah mengubah gallery \"Gallery 1\"', 'prt60fcfee3d114d', '2021-08-16'),
+('crn611a34aa73de3', 'usr61037f9c85184 telah mengubah gallery \"Gallery 1\"', 'prt60fcfee3d114d', '2021-08-16'),
+('crn611a34b236f06', 'usr61037f9c85184 telah mengubah gallery \"Gallery 1\"', 'prt60fcfee3d114d', '2021-08-16'),
+('crn611a34c9c9676', 'usr61037f9c85184 telah mengubah gallery \"Gallery 2\"', 'prt60fcff0f3d877', '2021-08-16'),
+('crn611a355f82e76', 'usr61037f9c85184 telah menambah gallery \"\"', 'prt611a355eac44e', '2021-08-16'),
+('crn611a3594ac223', 'usr61037f9c85184 telah menambah gallery \"\"', 'prt611a3593ee40a', '2021-08-16'),
+('crn611a37c068d01', 'usr61037f9c85184 telah menambah gallery \"\"', 'prt611a37bf88977', '2021-08-16'),
+('crn611a3802bb77e', 'usr61037f9c85184 telah menambah gallery \"\"', 'prt611a3801e5877', '2021-08-16'),
+('crn611a3848227d3', 'usr61037f9c85184 telah menambah gallery \"\"', 'prt611a38478ec60', '2021-08-16'),
+('crn611a3885312ac', 'usr61037f9c85184 telah menambah gallery \"\"', 'prt611a3884a2c9f', '2021-08-16'),
+('crn611a39529b520', 'usr61037f9c85184 telah menambah gallery \"\"', 'prt611a395230605', '2021-08-16');
 
 -- --------------------------------------------------------
 
@@ -216,7 +228,14 @@ CREATE TABLE `gallery` (
 
 INSERT INTO `gallery` (`idGallery`, `namaGallery`, `deskripsiGallery`, `idRelation`, `approvalGallery`, `dateCreate`) VALUES
 ('prt60fcfee3d114d', 'Gallery 1', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem ipsa quia, quod sapiente aliquid officiis numquam cumque dicta dolorum, excepturi architecto, est iure autem praesentium aut minima ullam saepe in.', '', 0, '2021-07-25'),
-('prt60fcff0f3d877', 'Gallery 2', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem ipsa quia, quod sapiente aliquid officiis numquam cumque dicta dolorum, excepturi architecto, est iure autem praesentium aut minima ullam saepe in.', '', 0, '2021-07-25');
+('prt60fcff0f3d877', 'Gallery 2', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem ipsa quia, quod sapiente aliquid officiis numquam cumque dicta dolorum, excepturi architecto, est iure autem praesentium aut minima ullam saepe in.', '', 0, '2021-07-25'),
+('prt611a355eac44e', 'Gallery 3', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis qui unde vel praesentium debitis ea magnam, blanditiis consectetur exercitationem consequatur minus magni voluptatibus dolores necessitatibus adipisci, officia repudiandae nemo.', '', 0, '2021-08-16'),
+('prt611a3593ee40a', 'Gallery 4', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis qui unde vel praesentium debitis ea magnam, blanditiis consectetur exercitationem consequatur minus magni voluptatibus dolores necessitatibus adipisci, officia repudiandae nemo.', '', 0, '2021-08-16'),
+('prt611a37bf88977', 'Gallery 5', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '', 0, '2021-08-16'),
+('prt611a3801e5877', 'Gallery 6', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '', 0, '2021-08-16'),
+('prt611a38478ec60', 'Gallery 7', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '', 0, '2021-08-16'),
+('prt611a3884a2c9f', 'Gallery 8', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '', 0, '2021-08-16'),
+('prt611a395230605', 'Gallery 9', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '', 0, '2021-08-16');
 
 -- --------------------------------------------------------
 
@@ -243,7 +262,35 @@ INSERT INTO `gallerydetail` (`idGallerydetail`, `idGallery`, `namaGallerydetail`
 ('dpr60fcff0f6f28b', 'prt60fcff0f3d877', 'Image 1', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem ipsa quia, quod sapiente aliquid officiis numquam cumque dicta dolorum, excepturi architecto, est iure autem praesentium aut minima ullam saepe in.', '2021-07-25'),
 ('dpr60fcff0f8bb81', 'prt60fcff0f3d877', 'Image 2', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem ipsa quia, quod sapiente aliquid officiis numquam cumque dicta dolorum, excepturi architecto, est iure autem praesentium aut minima ullam saepe in.', '2021-07-25'),
 ('dpr60fcff0fadecc', 'prt60fcff0f3d877', 'Image 3', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem ipsa quia, quod sapiente aliquid officiis numquam cumque dicta dolorum, excepturi architecto, est iure autem praesentium aut minima ullam saepe in.', '2021-07-25'),
-('dpr60fcff0fc9260', 'prt60fcff0f3d877', 'Image 4', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem ipsa quia, quod sapiente aliquid officiis numquam cumque dicta dolorum, excepturi architecto, est iure autem praesentium aut minima ullam saepe in.', '2021-07-25');
+('dpr60fcff0fc9260', 'prt60fcff0f3d877', 'Image 4', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem ipsa quia, quod sapiente aliquid officiis numquam cumque dicta dolorum, excepturi architecto, est iure autem praesentium aut minima ullam saepe in.', '2021-07-25'),
+('dpr611a355ec226c', 'prt611a355eac44e', 'Foto 1', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis qui unde vel praesentium debitis ea magnam, blanditiis consectetur exercitationem consequatur minus magni voluptatibus dolores necessitatibus adipisci, officia repudiandae nemo.', '2021-08-16'),
+('dpr611a355ed7cc1', 'prt611a355eac44e', 'Foto 2', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis qui unde vel praesentium debitis ea magnam, blanditiis consectetur exercitationem consequatur minus magni voluptatibus dolores necessitatibus adipisci, officia repudiandae nemo.', '2021-08-16'),
+('dpr611a355f0881f', 'prt611a355eac44e', 'Foto 3', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis qui unde vel praesentium debitis ea magnam, blanditiis consectetur exercitationem consequatur minus magni voluptatibus dolores necessitatibus adipisci, officia repudiandae nemo.', '2021-08-16'),
+('dpr611a355f3165a', 'prt611a355eac44e', 'Foto 4', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis qui unde vel praesentium debitis ea magnam, blanditiis consectetur exercitationem consequatur minus magni voluptatibus dolores necessitatibus adipisci, officia repudiandae nemo.', '2021-08-16'),
+('dpr611a355f63d14', 'prt611a355eac44e', 'Foto 5', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis qui unde vel praesentium debitis ea magnam, blanditiis consectetur exercitationem consequatur minus magni voluptatibus dolores necessitatibus adipisci, officia repudiandae nemo.', '2021-08-16'),
+('dpr611a359429538', 'prt611a3593ee40a', 'Foto 1', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis qui unde vel praesentium debitis ea magnam, blanditiis consectetur exercitationem consequatur minus magni voluptatibus dolores necessitatibus adipisci, officia repudiandae nemo.', '2021-08-16'),
+('dpr611a35944c144', 'prt611a3593ee40a', 'Foto 2', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis qui unde vel praesentium debitis ea magnam, blanditiis consectetur exercitationem consequatur minus magni voluptatibus dolores necessitatibus adipisci, officia repudiandae nemo.', '2021-08-16'),
+('dpr611a3594648f8', 'prt611a3593ee40a', 'Foto 3', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis qui unde vel praesentium debitis ea magnam, blanditiis consectetur exercitationem consequatur minus magni voluptatibus dolores necessitatibus adipisci, officia repudiandae nemo.', '2021-08-16'),
+('dpr611a35948692c', 'prt611a3593ee40a', 'Foto 3', 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste veritatis qui unde vel praesentium debitis ea magnam, blanditiis consectetur exercitationem consequatur minus magni voluptatibus dolores necessitatibus adipisci, officia repudiandae nemo.', '2021-08-16'),
+('dpr611a37bf9ee92', 'prt611a37bf88977', 'Foto 1', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16'),
+('dpr611a37bfb480d', 'prt611a37bf88977', 'Foto 2', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16'),
+('dpr611a37bfd6b25', 'prt611a37bf88977', 'Foto 3', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16'),
+('dpr611a37c03dea2', 'prt611a37bf88977', 'Foto 4', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16'),
+('dpr611a380219f24', 'prt611a3801e5877', 'Foto 1', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16'),
+('dpr611a38022e11e', 'prt611a3801e5877', 'Foto 2', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16'),
+('dpr611a38025012a', 'prt611a3801e5877', 'Foto 3', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16'),
+('dpr611a380272487', 'prt611a3801e5877', 'Foto 4', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16'),
+('dpr611a380298a64', 'prt611a3801e5877', 'Foto 5', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16'),
+('dpr611a3847a75f2', 'prt611a38478ec60', 'Foto 1', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16'),
+('dpr611a3847cbd23', 'prt611a38478ec60', 'Foto 2', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16'),
+('dpr611a3847e5fe2', 'prt611a38478ec60', 'Foto 3', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16'),
+('dpr611a38480e84c', 'prt611a38478ec60', 'Foto 4', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16'),
+('dpr611a3884ccf08', 'prt611a3884a2c9f', 'Foto 1', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16'),
+('dpr611a3884e178a', 'prt611a3884a2c9f', 'Foto 2', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16'),
+('dpr611a38850cdc0', 'prt611a3884a2c9f', 'Foto 3', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16'),
+('dpr611a39525fcf3', 'prt611a395230605', 'Foto 1', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16'),
+('dpr611a395276d50', 'prt611a395230605', 'Foto 2', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16'),
+('dpr611a395289fca', 'prt611a395230605', 'Foto 3', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16');
 
 -- --------------------------------------------------------
 
@@ -87700,13 +87747,6 @@ INSERT INTO `media` (`idMedia`, `pathMedia`, `idRelation`, `idEntity`, `jenisDok
 ('med611a1806691a0', 'cimahi611a1806691b3.png', 'ldn611a18065d6de', '1', '', '2021-08-16'),
 ('med611a192b43760', 'cimahi611a192b43772.png', 'reg6119f4a2347493sd', '1', '', '2021-08-16'),
 ('med611a1b4b5b1af', 'cimahi611a1b4b5b1d6.png', 'prt60fcfee3d114d', 'usr61037f9c85184', '', '2021-08-16'),
-('med611a1b86049e5', 'cimahi611a1b86049f8.png', 'dpr60fcfee40a672', 'usr61037f9c85184', '', '2021-08-16'),
-('med611a1b861d4ba', 'lapse611a1b861d4cc.png', 'dpr60fcfee43abcf', 'usr61037f9c85184', '', '2021-08-16'),
-('med611a1b8635a62', 'cimasistaker611a1b8635a72.png', 'dpr60fcfee461127', 'usr61037f9c85184', '', '2021-08-16'),
-('med611a1bc276b37', 'cimasistaker611a1bc276b48.png', 'dpr60fcff0f6f28b', 'usr61037f9c85184', '', '2021-08-16'),
-('med611a1bc294a6a', 'copendata_dark611a1bc294a7b.png', 'dpr60fcff0f8bb81', 'usr61037f9c85184', '', '2021-08-16'),
-('med611a1bc2bdef6', 'epad611a1bc2bdf0f.png', 'dpr60fcff0fadecc', 'usr61037f9c85184', '', '2021-08-16'),
-('med611a1bc2d67a2', 'inlislite611a1bc2d67ba.png', 'dpr60fcff0fc9260', 'usr61037f9c85184', '', '2021-08-16'),
 ('med611a1bc2f1f26', 'copendata_dark611a1bc2f1f46.png', 'prt60fcff0f3d877', 'usr61037f9c85184', '', '2021-08-16'),
 ('med611a1bfbd2117', 'cimahi611a1bfbd2138.png', 'skp611a1bfbbe099', '1', '', '2021-08-16'),
 ('med611a1c06d3608', 'cimahi611a1c06d3616.png', 'skp611a1c06afb83', '1', '', '2021-08-16'),
@@ -87765,6 +87805,48 @@ INSERT INTO `media` (`idMedia`, `pathMedia`, `idRelation`, `idEntity`, `jenisDok
 ('med611a2c44348c9', '611a2c44348e3.', 'ors611a2c4413fc7', '1', 'npwpOrsospol', '2021-08-16'),
 ('med611a2c600f30f', '611a2c600f324.', 'ors611a2c5ff2cc0', '1', 'kemenkumhamOrsospol', '2021-08-16'),
 ('med611a2c604941f', '611a2c6049436.', 'ors611a2c5ff2cc0', '1', 'npwpOrsospol', '2021-08-16'),
+('med611a34a02bdee', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a34a02be00.jpg', 'dpr60fcfee40a672', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a34a04f310', '20171020_131938-676x320611a34a04f31c.jpg', 'dpr60fcfee43abcf', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a34b225f60', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a34b225f84.jpg', 'dpr60fcfee461127', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a34c9513e6', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a34c951401.jpg', 'dpr60fcff0f6f28b', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a34c969c0f', '20171020_131938-676x320611a34c969c1e.jpg', 'dpr60fcff0f8bb81', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a34c993ccb', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a34c993cdd.jpg', 'dpr60fcff0fadecc', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a34c9b723e', '20171020_131938-676x320611a34c9b724e.jpg', 'dpr60fcff0fc9260', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a355eb649e', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a355eb64b1.jpg', 'prt611a355eac44e', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a355ecb980', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a355ecb99f.jpg', 'dpr611a355ec226c', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a355ee6cdf', '20171020_131938-676x320611a355ee6cf0.jpg', 'dpr611a355ed7cc1', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a355f1baa5', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a355f1bab5.jpg', 'dpr611a355f0881f', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a355f4b4b1', '20171020_131938-676x320611a355f4b4c5.jpg', 'dpr611a355f3165a', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a355f7001d', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a355f7002e.jpg', 'dpr611a355f63d14', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a35940c6da', '20171020_131938-676x320611a35940c6e6.jpg', 'prt611a3593ee40a', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a35943a50d', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a35943a520.jpg', 'dpr611a359429538', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a35945ae8c', '20171020_131938-676x320611a35945ae99.jpg', 'dpr611a35944c144', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a359470b48', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a359470b67.jpg', 'dpr611a3594648f8', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a35949c1aa', '20171020_131938-676x320611a35949c1b7.jpg', 'dpr611a35948692c', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a37bf92f81', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a37bf92f90.jpg', 'prt611a37bf88977', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a37bfa85bc', '20171020_131938-676x320611a37bfa85d1.jpg', 'dpr611a37bf9ee92', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a37bfc0da5', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a37bfc0dcd.jpg', 'dpr611a37bfb480d', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a37c004c6f', '20171020_131938-676x320611a37c004c7d.jpg', 'dpr611a37bfd6b25', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a37c05bd0d', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a37c05bd1f.jpg', 'dpr611a37c03dea2', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a3801f2d74', '20171020_131938-676x320611a3801f2d83.jpg', 'prt611a3801e5877', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a380227110', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a380227123.jpg', 'dpr611a380219f24', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a38023ce63', '20171020_131938-676x320611a38023ce74.jpg', 'dpr611a38022e11e', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a380260bf3', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a380260c05.jpg', 'dpr611a38025012a', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a380288203', '20171020_131938-676x320611a380288221.jpg', 'dpr611a380272487', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a3802a4feb', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a3802a5010.jpg', 'dpr611a380298a64', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a38479b230', 'cimahi611a38479b23c.png', 'prt611a38478ec60', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a3847b3455', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a3847b3481.jpg', 'dpr611a3847a75f2', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a3847dc4da', '20171020_131938-676x320611a3847dc4e7.jpg', 'dpr611a3847cbd23', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a38480508b', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a38480509b.jpg', 'dpr611a3847e5fe2', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a3848182c5', '20171020_131938-676x320611a3848182d3.jpg', 'dpr611a38480e84c', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a3884b1e4c', '20171020_131938-676x320611a3884b1e58.jpg', 'prt611a3884a2c9f', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a3884d7cb5', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a3884d7cc9.jpg', 'dpr611a3884ccf08', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a3884f07d6', '20171020_131938-676x320611a3884f07e6.jpg', 'dpr611a3884e178a', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a38852005f', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a388520070.jpg', 'dpr611a38850cdc0', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a3952505cf', 'cimahi611a3952505d9.png', 'prt611a395230605', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a395270088', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a3952700a7.jpg', 'dpr611a39525fcf3', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a3952807e2', '20171020_131938-676x320611a3952807f8.jpg', 'dpr611a395276d50', 'usr61037f9c85184', '', '2021-08-16'),
+('med611a395290fb1', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a395290fc1.jpg', 'dpr611a395289fca', 'usr61037f9c85184', '', '2021-08-16'),
 ('png60fd082fe5c13', 'ojdp6fmf0fv4djzjthns60fd082fe5c1e.jpg', 'png60fd082fba29f', '1', 'cover_pengumuman', '2021-07-25');
 
 -- --------------------------------------------------------
