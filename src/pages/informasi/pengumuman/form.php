@@ -22,14 +22,15 @@
                 <div class="card mt-5">
                     <div class="card-body">
                         <div class="container mt-4">
-                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
+                            <h4>Pengumuman</h4>
+                            <button type="button" class="btn btn-sm btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#createModal">
                                 Tambah
                             </button>
                             <table class="table table-sm">
                                 <thead>
                                     <tr>
                                         <td>No</td>
-                                        <td>Judul Pengumuman</td>
+                                        <td style="width: 400px;">Judul Pengumuman</td>
                                         <!-- <td>Author Berita</td> -->
                                         <td>Tanggal</td>
                                         <td>Aksi</td>
@@ -43,13 +44,13 @@
                                             <!-- <td><?= $value['authorBerita'] ?></td> -->
                                             <td><?= $value['dateCreate'] ?></td>
                                             <td>
-                                                <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-idPengumuman="<?= $value['idPengumuman'] ?>">
+                                                <button type="button" class="btn btn-sm btn-success m-1" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-idPengumuman="<?= $value['idPengumuman'] ?>">
                                                     Lihat
                                                 </button>
-                                                <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-idPengumuman="<?= $value['idPengumuman'] ?>">
+                                                <button type="button" class="btn btn-sm btn-secondary m-1" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-idPengumuman="<?= $value['idPengumuman'] ?>">
                                                     Edit
                                                 </button>
-                                                <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idPengumuman="<?= $value['idPengumuman'] ?>">
+                                                <button type="button" class="btn btn-sm btn-danger m-1" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idPengumuman="<?= $value['idPengumuman'] ?>">
                                                     Hapus
                                                 </button>
                                             </td>

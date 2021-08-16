@@ -48,7 +48,7 @@
       </div>
       <div class="col  mb-1">
         <a class="nav-link <?= $requestUri == '/informasi/banner' ? 'nav-link-active' : '' ?> p-2 text-center hstack gap-1 justify-content-center  fw-bold" href="/informasi/banner">
-        <span class="material-icons-outlined">panorama</span>
+          <span class="material-icons-outlined">panorama</span>
           <span class="d-none d-md-block text-start align-self-center  teksnav">Banner</span>
         </a>
       </div>
@@ -56,8 +56,18 @@
 
   </div>
   <?php if ($idRole == '9asdkqhjwew') { ?>
-    <div class="hstack mt-3">
-      <a class="ms-auto btn btn-outline-danger navy" href="/informasi-kesbangpol/berita"><i class="fas fa-edit"></i> Edit</a>
-    </div>
+    <?php if ($requestUri == '/informasi/berita') { ?>
+      <div class="hstack mt-3">
+        <a class="ms-auto btn btn-outline-danger navy" href="/informasi-kesbangpol/berita"><i class="fas fa-edit"></i> Edit</a>
+      </div>
+    <?php } else if ($requestUri == '/informasi/pengumuman') { ?>
+      <div class="hstack mt-3">
+        <a class="ms-auto btn btn-outline-danger navy" href="/informasi-kesbangpol/pengumuman"><i class="fas fa-edit"></i> Edit</a>
+      </div>
+    <?php } else if ($requestUri == '/informasi/galeri') { ?>
+      <div class="hstack mt-3">
+        <a class="ms-auto btn btn-outline-danger navy" href="/informasi-kesbangpol/gallery"><i class="fas fa-edit"></i> Edit</a>
+      </div>
+    <?php } ?>
   <?php } ?>
 </div>

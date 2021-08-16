@@ -18,7 +18,7 @@
   <?php include(__DIR__ . '/../mobilemenu.php') ?>
   <?php include(__DIR__ . '/../mobilenav.php') ?>
   <?php include(__DIR__ . '/../navbar.php') ?>
-  <div class="container-fluid">
+  <div class="container-fluid content-main">
     <div class="row" style="background-color : #EEEEEE;">
       <div class="col-md-8">
         <div class="card rounded-3 mt-5 px-3">

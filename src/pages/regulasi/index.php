@@ -18,7 +18,7 @@
   <?php include(__DIR__ . '/../mobilemenu.php') ?>
   <?php include(__DIR__ . '/../mobilenav.php') ?>
   <?php include(__DIR__ . '/../navbar.php') ?>
-  <div class="container-fluid">
+  <div class="container-fluid content-main">
     <div class="row" style="background-color : #EEEEEE;">
       <div class="col-md-8 mb-3">
         <div class="card rounded-3 mt-5 px-3">
@@ -30,7 +30,7 @@
             </div>
             <!-- <span><a href="regulasi/create">TAMBAH REGULASI</a></span> -->
             <div class="col-12">
-              <table class="table table-striped mt-3">
+              <table class="table mt-3">
                 <thead style="color: navy;">
                   <tr>
                     <!--<th class="col-1">No</th>-->
@@ -44,12 +44,12 @@
                       <!-- bere modal pratinjau regulasi d list ieu -->
                       <td class="align-middle hstack">
                         <?= $values['namaRegulasi'] ?>
-                        <a class="btn btn-outline-danger navy ms-auto" data-bs-toggle="collapse" data-bs-target="#collapseExample_1" aria-expanded="false" aria-controls="collapseExample"><i class=" fas fa-eye"></i> Pratinjau Berkas</a>
+                        <a class="btn btn-outline-danger navy ms-auto" data-bs-toggle="collapse" data-bs-target="#collapseExample_<?= $key ?>" aria-expanded="false" aria-controls="collapseExample"><i class=" fas fa-eye"></i> Pratinjau Berkas</a>
                       </td>
                     </tr>
                     <tr>
                       <td colspan="2">
-                        <div class="collapse" id="collapseExample_1">
+                        <div class="collapse" id="collapseExample_<?= $key ?>">
                           <div class="card card-body">
                             <?php
                             $arr_ext = explode('.', $values['pathMedia']);

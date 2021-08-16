@@ -4,7 +4,8 @@
 
   }
   .btn-outline-secondary:hover .sidegamar{
-    filter:hue-rotate(150deg) saturate(299%) brightness(198%)contrast(284%);
+    /* filter:hue-rotate(150deg) saturate(299%) brightness(198%)contrast(284%); */
+    filter: brightness(10.5);
   }
   .p-8{
     padding:0.8rem!important;
@@ -96,19 +97,19 @@
     <h5 class="text-muted my-4 text-center" id="layananpublik">Tautan Layanan Publik<br><b>Kota Cimahi</b></h5>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="http://sipt.kemendag.go.id" target="_blank" class="btn btn-sm btn-outline-secondary d-flex flex-row mb-2">
-        <img src="/assets/image/sipt.png" class="sidegamar align-self-center img-fluid" >
+        <img src="/assets/image/logo link eskternal/Link External Grey/Grey/sipt_grey.png" class="sidegamar align-self-center img-fluid" style="margin-right: 10px;">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Sistem Informasi </b> Perizinan Terpadu</span>
       </a>
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://bphtb.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid" >
+        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid  ms-1 me-2" >
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>BPHTB ONLINE</b><br>Kota Cimahi</span>
       </a>
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://bpbj.sukabumikota.go.id" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="/assets/image/tepra.png" class="sidegamar align-self-center img-fluid" >
+        <img src="/assets/image/logo link eskternal/Link External Grey/Grey/tepra_grey.png" class="sidegamar align-self-center img-fluid" style="margin-right: 10px;">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Evaluasi Pengawasan</b> Realisasi Anggaran</span>
       </a>
     </div>
@@ -120,8 +121,8 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="http://www.simbah.co.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="/assets/image/simbah.png" class="sidegamar align-self-center img-fluid" >
-        <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Informasi Pengelolaan</b> Bank Sampah</span>
+        <img src="/assets/image/logo link eskternal/Link External Grey/Grey/simbah_grey.png" class="sidegamar align-self-center img-fluid" style="margin-right: 40px;">
+        <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Informasi Pengelolaan</b> <br>Bank Sampah</span>
       </a>
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
@@ -132,7 +133,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://library.cimahikota.go.id" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="https://library.cimahikota.go.id/uploaded_files/aplikasi/inlislite.png" class="sidegamar align-self-center img-fluid">
+        <img src="/assets/image/logo link eskternal/Link External Grey/Grey/inlislite_grey.png" class="sidegamar align-self-center img-fluid" style="margin-right: 10px;">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Aplikasi Perpustakaan</b></span>
       </a>
     </div>
@@ -144,7 +145,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://pesduk.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="/assets/image/pesduk_dark.png" class="sidegamar align-self-center img-fluid" style="filter: invert(100%);">
+        <img src="/assets/image/logo link eskternal/Link External Grey/Grey/pesduk_dark_grey.png" class="sidegamar align-self-center img-fluid" style="margin-right: 10px;">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Pesan Singkat</b> Penduduk</span>
       </a>
     </div>
@@ -156,7 +157,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://epad.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="/assets/image/Epad.png" class="sidegamar align-self-center img-fluid" style="filter: invert(100%);">
+        <img src="/assets/image/logo link eskternal/Link External Grey/Grey/Epad_grey.png" class="sidegamar align-self-center img-fluid" style="margin-right: 10px;">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Sistem Informasi</b> Pendapatan</span>
       </a>
     </div>
@@ -168,8 +169,8 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://sipd.kemendagri.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="/assets/image/kdn.png" class="sidegamar align-self-center img-fluid ms-1 me-2">
-        <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Sistem Informasi Pemerintahan Daerah</b></span>
+        <img src="/assets/image/kdn.png" class="sidegamar align-self-center img-fluid ms-1" style="margin-right: 40px;">
+        <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Sistem Informasi <br>Pemerintahan Daerah</b></span>
       </a>
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
@@ -180,7 +181,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;;" href="http://simantra.ntbprov.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="/assets/image/mantra.png" class="sidegamar align-self-center img-fluid" >
+        <img src="/assets/image/logo link eskternal/Link External Grey/Grey/mantra_grey.png" class="sidegamar align-self-center img-fluid" style="margin-right: 10px;">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Manajemen Integrasi</b> Pertukaran Data</span>
       </a>
     </div>
@@ -192,7 +193,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://webmail.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-2 me-3" >
+        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-2" style="margin-right: 35px;">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar;"><b>Webmail</b><br>Kota Cimahi</span>
       </a>
     </div>
@@ -204,8 +205,8 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="http://silatik.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="/assets/image/silatikk.png" class="sidegamar align-self-center img-fluid ms-2 me-2" >
-        <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Sistem Informasi</b> Layanan TIK</span>
+        <img src="/assets/image/logo link eskternal/Link External Grey/Grey/silatikk_grey.png" class="sidegamar align-self-center img-fluid ms-2" style="margin-right: 35px;">
+        <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Sistem Informasi</b> <br>Layanan TIK</span>
       </a>
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
@@ -216,8 +217,8 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://www.online-pajak.com/kantor-pajak/kpp-pratama-cimahi" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="/assets/image/wpo.png" class="sidegamar align-self-center img-fluid">
-        <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Wajib Pajak Online</b> Kota Cimahi</span>
+        <img src="/assets/image/logo link eskternal/Link External Grey/Grey/wpo_grey.png" class="sidegamar align-self-center img-fluid" style="margin-right: 10px;">
+        <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Wajib Pajak Online</b> <br>Kota Cimahi</span>
       </a>
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
@@ -228,7 +229,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://jdihn.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="/assets/image/jdihn.png" class="sidegamar align-self-center img-fluid ">
+        <img src="/assets/image/logo link eskternal/Link External Grey/Grey/jdihn_grey.png" class="sidegamar align-self-center img-fluid " style="margin-right: 10px;">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Jaringan Dokumentasi</b> Informasi Hukum Nasional</span>
       </a>
     </div>
@@ -240,7 +241,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://chimasistaker.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="/assets/image/cimasistaker.png"  class="sidegamar align-self-center img-fluid">
+        <img src="/assets/image/logo link eskternal/Link External Grey/Grey/cimasistaker_grey.png"  class="sidegamar align-self-center img-fluid" style="margin-right: 10px;">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Cimahi Sistem</b> Ketenagakerjaan</span>
       </a>
     </div>
@@ -252,7 +253,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://lpse.jabarprov.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="/assets/image/lapse.png" class="sidegamar align-self-center img-fluid" >
+        <img src="/assets/image/logo link eskternal/Link External Grey/Grey/lapse_grey.png" class="sidegamar align-self-center img-fluid" style="margin-right: 10px;">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Layanan Pengadaan</b> Secara Elektronik</span>
       </a>
     </div>
@@ -264,7 +265,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://data.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="/assets/image/copendata_dark.png" class="sidegamar align-self-center img-fluid" style="filter: invert(60%);">
+        <img src="/assets/image/logo link eskternal/Link External Grey/Grey/copendata_dark grey.png" class="sidegamar align-self-center img-fluid" style="margin-right: 10px;">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Open Data Cimahi</b></span>
       </a>
     </div>
@@ -276,7 +277,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://silima.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="/assets/image/silima1.png" class="sidegamar align-self-center img-fluid" >
+        <img src="/assets/image/logo link eskternal/Link External Grey/Grey/silima1_grey.png" class="sidegamar align-self-center img-fluid" style="margin-right: 40px;">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Dinas Tenaga Kerja</b> Kota Cimahi</span>
       </a>
     </div>
@@ -288,7 +289,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://sirup.lkpp.go.id/sirup/ro/penyedia/kldi/D111" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="/assets/image/sirup1.png" class="sidegamar align-self-center img-fluid" >
+        <img src="/assets/image/logo link eskternal/Link External Grey/Grey/sirup1_grey.png" class="sidegamar align-self-center img-fluid" style="margin-right: 10px;">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Sistem Informasi</b> Rencana Umum Pengadaan</span>
       </a>
     </div>
@@ -300,19 +301,19 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://bkpsdmd.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="/assets/image/sikacii_dark.png" class="sidegamar align-self-center img-fluid" style="filter: invert(30%);">
-        <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Sistem Informasi</b>Kinerja Pegawai</span>
+        <img src="/assets/image/logo link eskternal/Link External Grey/Grey/sikacii_dark_grey.png" class="sidegamar align-self-center img-fluid" style="margin-right: 10px;">
+        <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Sistem Informasi</b><br>Kinerja Pegawai</span>
       </a>
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://simrenda.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="/assets/image/simrenda_dark.png" class="sidegamar align-self-center img-fluid ms-1 me-2" style="filter: invert(60%);">
+        <img src="/assets/image/simrenda_dark.png" class="sidegamar align-self-center img-fluid ms-1 me-2" style="">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Perencanaan Daerah</b><br> Kota Cimahi</span>
       </a>
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://sipkd.jabarprov.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="/assets/image/sipkd.png" class="sidegamar align-self-center img-fluid" style="filter: invert(30%);">
+        <img src="/assets/image/logo link eskternal/Link External Grey/Grey/sipkd_grey.png" class="sidegamar align-self-center img-fluid" style="margin-right: 10px;">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Informasi Pengelolaan</b> Keuangan Daerah</span>
       </a>
     </div>
@@ -320,16 +321,16 @@
     <div class="p-3">
       <h5 class="text-muted my-4 text-center" id="kontakdarurat">Kontak Darurat</h5>
       <div class="border border-secondary rounded">
-        <div class="col-8 text-start py-3 mx-auto" id="pict">
+        <div class="col-10 text-start py-3 mx-auto" id="pict">
           <div class="row">
             <?php foreach ($kontakDarurat as $key => $value) { ?>
-              <div class="col-6">
+              <div class="col-5">
                 <span><?= $value['namaKontakdarurat'] ?></span>
               </div>
               <div class="col-2">
                 <span>:</span>
               </div>
-              <div class="col-3">
+              <div class="col">
                 <span><?= $value['isiKontakdarurat'] ?></span>
               </div>
             <?php } ?>

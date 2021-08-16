@@ -17,40 +17,41 @@
 
 <body>
 
+    <?php include(__DIR__ . '/../../mobilenav.php') ?>
     <?php include(__DIR__ . '/../../navbar.php') ?>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 mb-3">
-            <div class="card rounded-3 mt-5 px-3">
-        <div class="card-body">
-                <h3 class="fw-normal mt-5"><a href="/informasi/galeri" class="btn btn-sm btn-outlined-light"><i class="fas fa-arrow-left"></i></a> <?= $detail['namaGallery'] ?></h3>
-                <div id="top"></div>
-                <section class="gallery">
-                    <div class="row nest">
-                    <a href="#" class="close" style="filter:invert(75%);"></a>
-                        <?php foreach ($detailItem as $key => $value) { ?>
-                            <div class="col-6 col-md-4 subnest">
-                                <a href="#item01" class="galleryDetail" data-image="/assets/media/<?= $value['pathMedia'] ?>" data-name="<?= $value['namaGallerydetail'] ?>" data-deskripsi="<?= $value['deskripsiGallerydetail'] ?>">
-                                    <img src="/assets/media/<?= $value['pathMedia'] ?>" class="img-fluid" alt="">
-                                </a>
-                            </div>
-                        <?php } ?>
-                    </div> <!-- / row -->
+                <div class="card rounded-3 mt-5 px-3">
+                    <div class="card-body">
+                        <h3 class="fw-normal mt-5"><a href="/informasi/galeri" class="btn btn-sm btn-outlined-light"><i class="fas fa-arrow-left"></i></a> <?= $detail['namaGallery'] ?></h3>
+                        <div id="top"></div>
+                        <section class="gallery">
+                            <div class="row nest">
+                                <a href="#" class="close" style="filter:invert(75%);"></a>
+                                <?php foreach ($detailItem as $key => $value) { ?>
+                                    <div class="col-6 col-md-4 subnest">
+                                        <a href="#item01" class="galleryDetail" data-image="/assets/media/<?= $value['pathMedia'] ?>" data-name="<?= $value['namaGallerydetail'] ?>" data-deskripsi="<?= $value['deskripsiGallerydetail'] ?>">
+                                            <img src="/assets/media/<?= $value['pathMedia'] ?>" class="img-fluid" alt="">
+                                        </a>
+                                    </div>
+                                <?php } ?>
+                            </div> <!-- / row -->
 
-                    <!-- Item 01 -->
-                    <div id="item01" class="port">
-                   
-                        <div class="row">
-                            <div class="description col">
-                                <h1 class="namaGallerydetail"></h1>
-                                <img class="imageGallerydetail w-100" src="" alt="" >
-                                <p class="deskripsiGallerydetail"></p>
-                            </div>
-                        </div>
-                    </div> <!-- / row -->
-                </section> <!-- / projects -->
-        </div>
-        </div>
+                            <!-- Item 01 -->
+                            <div id="item01" class="port">
+
+                                <div class="row">
+                                    <div class="description col">
+                                        <h1 class="namaGallerydetail"></h1>
+                                        <img class="imageGallerydetail w-100" src="" alt="">
+                                        <p class="deskripsiGallerydetail"></p>
+                                    </div>
+                                </div>
+                            </div> <!-- / row -->
+                        </section> <!-- / projects -->
+                    </div>
+                </div>
             </div>
             <?php include(__DIR__ . '/../../sidebar.php') ?>
         </div>

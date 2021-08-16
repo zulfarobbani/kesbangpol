@@ -80,6 +80,7 @@ class RegulasiController extends GlobalFunc
 
             $idMedia = uniqid('med');
             $idUser = '1';
+            // $this->dd($_FILES['fileRegulasi']);
             $fileRegulasi = $media->create($idMedia, $_FILES['fileRegulasi'], $regulasi, $idUser);
         }
 

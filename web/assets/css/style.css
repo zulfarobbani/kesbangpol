@@ -624,26 +624,34 @@ font-size:10pt!important;
 }
 
 .menumobile{
-  font-size:38pt!important;
+  font-size:24pt!important;
   transition:color(2s);
 }
 
 .menumobile:active{
-  font-size:38pt!important;
+  font-size:24pt!important;
   color:antiquewhite;
 }
 
 .menumobile:visited{
-  font-size:38pt!important;
+  font-size:24pt!important;
   color:antiquewhite;
 }
 
 .menumobile:link{
-  font-size:38pt!important;
+  font-size:24pt!important;
   color:antiquewhite;
 }
 
 .menumobile:hover{
-  font-size:38pt!important;
+  font-size:24pt!important;
   color:#fff;
+}
+
+.content-main {
+  margin-bottom: 100px;
+}
+
+.btn-close:hover {
+  background-color: red !important;
 }

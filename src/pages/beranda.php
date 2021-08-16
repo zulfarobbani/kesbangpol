@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
   <link rel="stylesheet" href="/assets/css/style.css">
   <title>KESBANGPOL</title>
@@ -37,7 +37,7 @@
                       </a>
                       <div class="news-card__post-date"><?= $value['dateCreate'] ?></div>
                       <div class="news-card__details-wrapper">
-                        <a href="#" class="float-end btn-sosmed d-inline" data-bs-toggle="modal" data-bs-target="#modalSosmed" data-bs-url="<?= $site_url ?>/informasi/berita/<?= $value['idBerita'] ?>">
+                        <a href="#" class="float-end btn-sosmed d-inline text-decoration-none" data-bs-toggle="modal" data-bs-target="#modalSosmed" data-bs-url="<?= $site_url ?>/informasi/berita/<?= $value['idBerita'] ?>">
                           <span class="material-icons-outlined fs-6 mr-3 mt-3" style="color: white;">more_vert</span>
                         </a>
                         <a href="/informasi/berita/<?= $value['idBerita'] ?>" class="news-card__read-more d-inline text-white">Read more <i class="fas fa-long-arrow-alt-right mt-3"></i></a>
@@ -55,27 +55,37 @@
       <!-- Modal -->
       <div class="modal fade" id="modalSosmed" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
+          <div class="modal-content" style="background: #d0d0d0;">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Share Berita</h5>
-              <button type="button" class="btn btn-outline-danger btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <button type="button" class="btn btn-outline-danger btn-close" data-bs-dismiss="modal" aria-label="Close" style="background: url(assets/icon/cancel.png);background-position: center;background-size: 18px;background-repeat: no-repeat;"></button>
             </div>
             <div class="modal-body">
               <div class="row justify-content-center">
                 <div class="col-2 mb-3">
-                  <a href="" class="facebook" target="_blank"><img src="/assets/icon/sosmed/facebook.svg" class="w-50 d-block mx-auto" alt=""><p class="text-dark text-center" style="font-size: 12px"><br>Facebook</p></a>
+                  <a href="" class="whatsapp" target="_blank"><img src="/assets/icon/sosmed/whatsapp.svg" class="w-50 d-block mx-auto" alt="">
+                    <p class="text-dark text-center" style="font-size: 12px"><br>Whatsapp</p>
+                  </a>
                 </div>
                 <div class="col-2 mb-3">
-                  <a href="" class="twitter" target="_blank"><img src="/assets/icon/sosmed/twitter.svg" class="w-50 d-block mx-auto" alt=""><p class="text-dark text-center" style="font-size: 12px"><br>Twitter</p></a>
-                </div>
-                <div class="col-2 mb-3"> 
-                  <a href="" class="whatsapp" target="_blank"><img src="/assets/icon/sosmed/whatsapp.svg" class="w-50 d-block mx-auto" alt=""><p class="text-dark text-center" style="font-size: 12px"><br>Whatsapp</p></a>
-                </div>
-                <div class="col-2 mb-3">
-                  <a href="" class="telegram" target="_blank"><img src="/assets/icon/sosmed/telegram.svg" class="w-50 d-block mx-auto" alt=""><p class="text-dark text-center" style="font-size: 12px"><br>Telegram</p></a>
+                  <a href="" class="instagram" target="_blank"><img src="/assets/icon/sosmed/instagram.svg" class="w-50 d-block mx-auto" alt="">
+                    <p class="text-dark text-center" style="font-size: 12px"><br>Instagram</p>
+                  </a>
                 </div>
                 <div class="col-2 mb-3">
-                  <a href="" class="instagram" target="_blank"><img src="/assets/icon/sosmed/instagram.svg" class="w-50 d-block mx-auto" alt=""><p class="text-dark text-center" style="font-size: 12px"><br>Instagram</p></a>
+                  <a href="" class="telegram" target="_blank"><img src="/assets/icon/sosmed/telegram.svg" class="w-50 d-block mx-auto" alt="">
+                    <p class="text-dark text-center" style="font-size: 12px"><br>Telegram</p>
+                  </a>
+                </div>
+                <div class="col-2 mb-3">
+                  <a href="" class="facebook" target="_blank"><img src="/assets/icon/sosmed/facebook.svg" class="w-50 d-block mx-auto" alt="">
+                    <p class="text-dark text-center" style="font-size: 12px"><br>Facebook</p>
+                  </a>
+                </div>
+                <div class="col-2 mb-3">
+                  <a href="" class="twitter" target="_blank"><img src="/assets/icon/sosmed/twitter.svg" class="w-50 d-block mx-auto" alt="">
+                    <p class="text-dark text-center" style="font-size: 12px"><br>Twitter</p>
+                  </a>
                 </div>
                 <!-- <div class="col-2 mb-3">
                   <a href="" class="googleplus" target="_blank"><img src="/assets/icon/sosmed/google-plus.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Google +</span></a>
@@ -90,7 +100,9 @@
                   <a href="" class="pinterest" target="_blank"><img src="/assets/icon/sosmed/pinterest.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Pinterest</span></a>
                 </div> -->
                 <div class="col-2 mb-3">
-                  <a href="" class="email" target="_blank"><img src="/assets/icon/sosmed/email.svg" class="w-50 d-block mx-auto" alt=""><p class="text-dark text-center" style="font-size: 12px"><br>Email</p></a>
+                  <a href="" class="email" target="_blank"><img src="/assets/icon/sosmed/email.svg" class="w-50 d-block mx-auto" alt="">
+                    <p class="text-dark text-center" style="font-size: 12px"><br>Email</p>
+                  </a>
                 </div>
               </div>
             </div>
@@ -122,7 +134,8 @@
       // modal.find('.googleplus').prop('href', 'https://plus.google.com/share?url='+btn.attr('data-bs-url'));
       modal.find('.reddit').prop('href', 'http://reddit.com/submit?url=' + btn.attr('data-bs-url'));
       modal.find('.pinterest').prop('href', 'http://pinterest.com/pin/create/button/?url=' + btn.attr('data-bs-url'));
-      modal.find('.whatsapp').prop('href', 'http://pinterest.com/pin/create/button/?url=' + btn.attr('data-bs-url'));
+      modal.find('.whatsapp').prop('href', 'https://api.whatsapp.com/send?phone=6281234567890&text=' + btn.attr('data-bs-url'));
+      modal.find('.telegram').prop('href', 'https://telegram.me/share/url?url=' + btn.attr('data-bs-url'));
       modal.find('.email').prop('href', 'mailto:?Subject=Berita Kesbangpol&Body=Klik%20link%20untuk%20melihat%20berita%20%20 ' + btn.attr('data-bs-url'));
     });
     $(document).on('click', '.hubungiKami', function() {

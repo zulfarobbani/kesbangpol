@@ -34,7 +34,7 @@
     <div class="col p-0">
       <a class="nav-link <?= $requestUri == '/layanan/unduhan' ? 'nav-link-active' : '' ?> p-0 text-center hstack gap-1 justify-content-center  fw-bold" href="/layanan/unduhan">
         <span class="material-icons-outlined align-self-center">file_download</span>
-        <span class="d-none d-md-block text-start teksnav">Unduhan Form<br>Lainnya</span>
+        <span class="d-none d-md-block text-start teksnav">Berkas<br>Persyaratan</span>
       </a>
     </div>
   </div>

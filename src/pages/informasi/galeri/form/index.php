@@ -14,24 +14,19 @@
 </head>
 
 <body style="background-color : #EEEEEE; color:navy;">
+    <?php include(__DIR__ . '/../../../mobilenav.php') ?>
     <?php include(__DIR__ . '/../../../navbar.php') ?>
-    <div class="container-fluid">
+    <div class="container-fluid content-main">
         <div class="row">
             <div class="col-md-8 top-1 start-0 ps-5 mb-3">
                 <!-- START CODE -->
                 <div class="card mt-5">
                     <div class="card-body">
                         <div class="container mt-4">
-                            <div class="row">
-                                <div class="col-6">
-                                    <h4>Gallery</h4>
-                                </div>
-                                <div class="col-6 text-end">
-                                    <button type="button" class="btn btn-sm btn-primary rounded-pill h-75 px-4 btnTambah" data-bs-toggle="modal" data-bs-target="#modaltambahproduct" id="btnIjo">
-                                        <span class="material-icons-outlined">add_box</span>
-                                        <span class="align-top">Tambah Gallery</span></button>
-                                </div>
-                            </div>
+                            <h4>Gallery</h4>
+                            <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
+                                Tambah
+                            </button>
 
                             <div class="table-responsive">
 
@@ -49,29 +44,17 @@
                                                 <td><?= $data['namaGallery'] ?></td>
                                                 <td><?= date('d M Y', strtotime($data['dateCreate'])) ?></td>
                                                 <td class="d-flex">
-                                                    <button type="button" class="btn px-2 py-1 me-1 text-dark btnEdit" id="btnBiru" data-bs-toggle="modal" data-bs-target="#modalubahproduct" data-bs-id="<?= $data['idGallery'] ?>"><i class="fa fa-edit"></i></button>
-
-                                                    <button type="button" class="btn px-2 py-1 me-1 text-dark btnHapus" id="btnMerah" data-bs-toggle="modal" data-bs-target="#modalhapusproduct" data-bs-id="<?= $data['idGallery'] ?>"><i class="fa fa-trash-alt"></i></button>
+                                                    <button type="button" class="btn btn-sm btn-secondary my-2 m-1 btnEdit" data-bs-toggle="modal" data-bs-target="#modalubahproduct" data-bs-id="<?= $data['idGallery'] ?>">
+                                                        Edit
+                                                    </button>
+                                                    <button type="button" class="btn btn-sm btn-danger my-2 m-1 btnHapus" data-bs-toggle="modal" data-bs-target="#modalhapusproduct" data-bs-id="<?= $data['idGallery'] ?>">
+                                                        Hapus
+                                                    </button>
                                                 </td>
                                             </tr>
                                         <?php } ?>
                                     </tbody>
                                 </table>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-6">
-                                    <h6 class="text-muted">Showing <?= $pagination['page_first_result'] + 1 ?> to <?= count($datas) ?> of <?= $pagination['countRows'] ?> entries</h6>
-                                </div>
-                                <div class="col-6">
-                                    <ul class="pagination float-end">
-                                        <li class="page-item <?= $pagination['current_page'] - 1 == 0 ? 'disabled' : '' ?>"><a class="page-link" href="?page=<?= intval($pagination['current_page']) - 1 ?>"><i class="fas fa-angle-left"></i></a></li>
-                                        <?php for ($page = 1; $page <= $pagination['number_of_page']; $page++) { ?>
-                                            <li class="page-item <?= $pagination['current_page'] == $page ? 'active' : '' ?>"><a class="page-link" href="?page=<?= $page ?>"><?= $page ?></a></li>
-                                        <?php } ?>
-                                        <li class="page-item <?= $pagination['current_page'] + 1 > $pagination['number_of_page'] ? 'disabled' : '' ?>"><a class="page-link" href="?page=<?= intval($pagination['current_page']) + 1 ?>"><i class="fas fa-angle-right"></i></a></li>
-                                    </ul>
-                                </div>
                             </div>
 
                         </div>
@@ -90,13 +73,13 @@
                                     <form action="/informasi-kesbangpol/gallery/store" method="post" enctype="multipart/form-data" class="formDetail">
                                         <div class="modal-body">
                                             <div class="row">
-                                                <div class="col-6">
+                                                <div class="col-12 col-md-6">
                                                     <div class="mb-1">
                                                         <label for="">Nama Gallery</label>
                                                         <input type="text" class="form-control namaGallery" name="namaGallery" required>
                                                     </div>
                                                 </div>
-                                                <div class="col-6">
+                                                <div class="col-12 col-md-6">
                                                     <div class="mb-1">
                                                         <label for="">Cover Gallery</label>
                                                         <input type="file" class="form-control coverGallery" name="coverGallery" required>
@@ -166,13 +149,13 @@
                                         <input type="hidden" name="idGallerydetail" class="idGallerydetail">
                                         <div class="modal-body">
                                             <div class="row">
-                                                <div class="col-6">
+                                                <div class="col-12 col-md-6">
                                                     <div class="mb-1">
                                                         <label for="">Nama Gallery</label>
                                                         <input type="text" class="form-control namaGallery" name="namaGallery" required>
                                                     </div>
                                                 </div>
-                                                <div class="col-6">
+                                                <div class="col-12 col-md-6">
                                                     <div class="row">
                                                         <div class="col-3">
                                                             <img src="" alt="" class="img-fluid img-thumbnail coverfotoPortfolio">
@@ -266,15 +249,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-

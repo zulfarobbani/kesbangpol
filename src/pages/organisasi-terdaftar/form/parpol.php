@@ -9,57 +9,61 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
 
     <title>PARPOL Terdaftar</title>
 </head>
 
 <body style="background-color : #EEEEEE; color:navy;">
+    <?php include(__DIR__ . '/../../mobilenav.php') ?>
     <?php include(__DIR__ . '/../../navbar.php') ?>
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-bottom: 130px;">
         <div class="row">
-            <div class="col-md-8 top-1 start-0 ps-5 mb-3">
+            <div class="col-md-8 top-1 start-0 mb-3">
                 <!-- START CODE -->
                 <div class="card mt-5">
                     <div class="card-body">
                         <div class="container mt-4">
-                        <div class="hstack mb-3">
-                        <h5>PARPOL Terdaftar</h5>
-                            <button type="button" class="ms-auto btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
-                                Tambah
-                            </button>
+                            <div class="hstack mb-3">
+                                <h5>PARPOL Terdaftar</h5>
+                                <button type="button" class="ms-auto btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
+                                    Tambah
+                                </button>
                             </div>
-                            <table class="table table-bordered table-sm">
-                                <thead>
-                                    <tr>
-                                        <th>No. AHU</th>
-                                        <th>Nama</th>
-                                        <th>Alamat</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach ($datas as $key => $value) { ?>
-                                        <tr class="align-middle paragraf">
-                                            <td><?= $value['noAHU'] ?></td>
-                                            <td><?= $value['namaOrsospol'] ?></td>
-                                            <td><?= $value['alamatOrsospol'] ?></td>
-                                            <td class="hstack gap-1">
-                                                <button type="button" class="btn w-100 btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
-                                                    Lihat
-                                                </button>
-                                                <button type="button" class="btn w-100 btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
-                                                    Edit
-                                                </button>
-                                                <button type="button" class="btn w-100 btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
-                                                    Hapus
-                                                </button>
-                                            </td>
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>No. AHU</th>
+                                            <th>Nama</th>
+                                            <th>Alamat</th>
+                                            <th>Aksi</th>
                                         </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach ($datas as $key => $value) { ?>
+                                            <tr class="align-middle paragraf">
+                                                <td><?= $value['noAHU'] ?></td>
+                                                <td><?= $value['namaOrsospol'] ?></td>
+                                                <td><?= $value['alamatOrsospol'] ?></td>
+                                                <td class="hstack gap-1">
+                                                    <button type="button" class="btn w-100 btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
+                                                        Lihat
+                                                    </button>
+                                                    <button type="button" class="btn w-100 btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
+                                                        Edit
+                                                    </button>
+                                                    <button type="button" class="btn w-100 btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
+                                                        Hapus
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        <?php } ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
 

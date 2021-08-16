@@ -11,13 +11,18 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 
     <title>Struktur Organisasi</title>
+    <style>
+        #toolbar #end {
+            display: none;
+        }
+    </style>
 </head>
 
 <body style="background-color : #EEEEEE; color:navy;">
-<?php include(__DIR__ . '/../mobilemenu.php') ?>
-<?php include(__DIR__ . '/../mobilenav.php') ?>
+    <?php include(__DIR__ . '/../mobilemenu.php') ?>
+    <?php include(__DIR__ . '/../mobilenav.php') ?>
     <?php include(__DIR__ . '/../navbar.php') ?>
-    <div class="container-fluid">
+    <div class="container-fluid content-main">
         <div class="row">
             <div class="col-md-8 mb-3">
                 <!-- START CODE -->
@@ -47,10 +52,10 @@
                                         <div class="mb-3">
                                             <label for="exampleFormControlInput1" class="form-label">Gambar Struktur Organisasi</label>
                                             <div class="row">
-                                                <div class="col-8 col-md-10">
-                                                    <input type="file" class="form-control" id="exampleFormControlInput1" name="sotk">
+                                                <div class="col-12 col-md-10">
+                                                    <input type="file" class="form-control mb-2" id="exampleFormControlInput1" name="sotk">
                                                 </div>
-                                                <div class="col-4 col-md-2">
+                                                <div class="col-12 col-md-2">
                                                     <?php if ($struktur_organisasi) { ?>
                                                         <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-image="/assets/media/<?= $struktur_organisasi['pathMedia'] ?>" style="font-size:0.7rem;">
                                                             Lihat Struktur Organisasi
@@ -99,37 +104,37 @@
                                         Tambah
                                     </button>
                                     <div class="table-responsive">
-                                    <table class="table table-sm">
-                                        <thead>
-                                            <tr>
-                                                <td>No</td>
-                                                <td>Nama Berkas</td>
-                                                <td>Berkas</td>
-                                                <td>Aksi</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php foreach ($sakip as $key => $value) { ?>
+                                        <table class="table table-sm">
+                                            <thead>
                                                 <tr>
-                                                    <td><?= $key += 1 ?></td>
-                                                    <td><?= $value['namaSakip'] ?></td>
-                                                    <td><?= $value['pathMedia'] ?></td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-file="/assets/media/<?= $value['pathMedia'] ?>">
-                                                            Lihat
-                                                        </button>
-                                                        <a href="/sakip/<?= $value['idSakip'] ?>/download" class="btn btn-sm btn-light" target="_blank">Download</a>
-                                                        <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-namaSakip="<?= $value['namaSakip'] ?>" data-bs-idSakip="<?= $value['idSakip'] ?>">
-                                                            Edit
-                                                        </button>
-                                                        <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idSakip="<?= $value['idSakip'] ?>">
-                                                            Hapus
-                                                        </button>
-                                                    </td>
+                                                    <td>No</td>
+                                                    <td>Nama Berkas</td>
+                                                    <td>Berkas</td>
+                                                    <td>Aksi</td>
                                                 </tr>
-                                            <?php } ?>
-                                        </tbody>
-                                    </table>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach ($sakip as $key => $value) { ?>
+                                                    <tr>
+                                                        <td><?= $key += 1 ?></td>
+                                                        <td><?= $value['namaSakip'] ?></td>
+                                                        <td><?= $value['pathMedia'] ?></td>
+                                                        <td>
+                                                            <button type="button" class="btn btn-sm btn-success m-1" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-file="/assets/media/<?= $value['pathMedia'] ?>">
+                                                                Lihat
+                                                            </button>
+                                                            <a href="/sakip/<?= $value['idSakip'] ?>/download" class="btn btn-sm btn-light m-1" target="_blank">Download</a>
+                                                            <button type="button" class="btn btn-sm btn-secondary m-1" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-namaSakip="<?= $value['namaSakip'] ?>" data-bs-idSakip="<?= $value['idSakip'] ?>">
+                                                                Edit
+                                                            </button>
+                                                            <button type="button" class="btn btn-sm btn-danger m-1" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idSakip="<?= $value['idSakip'] ?>">
+                                                                Hapus
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                <?php } ?>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
@@ -152,14 +157,14 @@
                                                     <td><?= $key += 1 ?></td>
                                                     <td><?= $value['namaRegulasi'] ?></td>
                                                     <td>
-                                                        <button type="button" class="btn btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#detailModalRegulasi" data-bs-fileRegulasi="/assets/media/<?= $value['pathMedia'] ?>">
+                                                        <button type="button" class="btn btn-sm btn-success m-1" data-bs-toggle="modal" data-bs-target="#detailModalRegulasi" data-bs-fileRegulasi="/assets/media/<?= $value['pathMedia'] ?>">
                                                             Lihat
                                                         </button>
-                                                        <a href="/regulasi/<?= $value['idRegulasi'] ?>/download" class="btn btn-sm btn-light" target="_blank">Download</a>
-                                                        <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#editModalRegulasi" data-bs-namaRegulasi="<?= $value['namaRegulasi'] ?>" data-bs-idRegulasi="<?= $value['idRegulasi'] ?>">
+                                                        <a href="/regulasi/<?= $value['idRegulasi'] ?>/download" class="btn btn-sm btn-light m-1" target="_blank">Download</a>
+                                                        <button type="button" class="btn btn-sm btn-secondary m-1" data-bs-toggle="modal" data-bs-target="#editModalRegulasi" data-bs-namaRegulasi="<?= $value['namaRegulasi'] ?>" data-bs-idRegulasi="<?= $value['idRegulasi'] ?>">
                                                             Edit
                                                         </button>
-                                                        <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModalRegulasi" data-bs-idRegulasi="<?= $value['idRegulasi'] ?>">
+                                                        <button type="button" class="btn btn-sm btn-danger m-1" data-bs-toggle="modal" data-bs-target="#hapusModalRegulasi" data-bs-idRegulasi="<?= $value['idRegulasi'] ?>">
                                                             Hapus
                                                         </button>
                                                     </td>
@@ -208,6 +213,7 @@
                                             <div class="mb-3">
                                                 <label for="exampleFormControlInput1" class="form-label">File Sakip</label>
                                                 <input type="file" name="fileSakip" class="form-control">
+                                                <span>Ekstensi file yang diperbolehkan : <b>.jpeg</b> / <b>.jpg</b> / <b>.png</b> / <b>.pdf</b></span>
                                             </div>
                                             <button type="submit" class="btn btn-primary">Submit</button>
                                         </form>
@@ -236,6 +242,7 @@
                                             <div class="mb-3">
                                                 <label for="exampleFormControlInput1" class="form-label">File Sakip</label>
                                                 <input type="file" name="fileSakip" class="form-control">
+                                                <span>Ekstensi file yang diperbolehkan : <b>.jpeg</b> / <b>.jpg</b> / <b>.png</b> / <b>.pdf</b></span>
                                             </div>
                                             <button type="submit" class="btn btn-primary">Submit</button>
                                         </form>
@@ -257,6 +264,7 @@
                                     </div>
                                     <div class="modal-body">
                                         <img src="" alt="" class="img-fluid fileSakip">
+                                        <iframe src="" frameborder="0" class="fileSakipPDF w-100" height="500px" toolbar="false"></iframe>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -304,6 +312,7 @@
                                             <div class="mb-3">
                                                 <label for="exampleFormControlInput1" class="form-label">File Regulasi</label>
                                                 <input type="file" name="fileRegulasi" class="form-control">
+                                                <span>Ekstensi file yang diperbolehkan : <b>.jpeg</b> / <b>.jpg</b> / <b>.png</b> / <b>.pdf</b></span>
                                             </div>
                                             <button type="submit" class="btn btn-primary">Submit</button>
                                         </form>
@@ -332,6 +341,7 @@
                                             <div class="mb-3">
                                                 <label for="exampleFormControlInput1" class="form-label">File Sakip</label>
                                                 <input type="file" name="fileRegulasi" class="form-control">
+                                                <span>Ekstensi file yang diperbolehkan : <b>.jpeg</b> / <b>.jpg</b> / <b>.png</b> / <b>.pdf</b></span>
                                             </div>
                                             <button type="submit" class="btn btn-primary">Submit</button>
                                         </form>
@@ -353,6 +363,7 @@
                                     </div>
                                     <div class="modal-body">
                                         <img src="" alt="" class="img-fluid fileRegulasi">
+                                        <iframe src="" frameborder="0" class="fileRegulasiPDF w-100" height="500px" toolbar="false"></iframe>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -387,130 +398,150 @@
             </div>
             <!-- end form -->
             <?php include(__DIR__ . '/../sidebar.php') ?>
-
-            <?php include(__DIR__ . '/../footer.php') ?>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-        <script src="/assets/js/jquery-3.3.1.min.js"></script>
-        <script>
-            var detailModalSotk = document.getElementById('exampleModal')
-            detailModalSotk.addEventListener('show.bs.modal', function(event) {
-                // Button that triggered the modal
-                var button = event.relatedTarget
-                // Extract info from data-bs-* attributes
-                var image = button.getAttribute('data-bs-image')
-                // If necessary, you could initiate an AJAX request here
-                // and then do the updating in a callback.
-                //
-                // Update the modal's content.
-                var imageSotk = detailModalSotk.querySelector('.imageSotk')
-                imageSotk.setAttribute('src', image)
-            })
+    </div>
+    <?php include(__DIR__ . '/../footer.php') ?>
 
-            // ======================== SAKIP ======================== 
-            var editModal = document.getElementById('editModal')
-            editModal.addEventListener('show.bs.modal', function(event) {
-                // Button that triggered the modal
-                var button = event.relatedTarget
-                // Extract info from data-bs-* attributes
-                var idSakip = button.getAttribute('data-bs-idSakip')
-                var namaSakip = button.getAttribute('data-bs-namaSakip')
-                // If necessary, you could initiate an AJAX request here
-                // and then do the updating in a callback.
-                //
-                // Update the modal's content.
-                var inputnamaSakip = editModal.querySelector('.namaSakip')
-                inputnamaSakip.value = namaSakip
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script src="/assets/js/jquery-3.3.1.min.js"></script>
+    <script>
+        var detailModalSotk = document.getElementById('exampleModal')
+        detailModalSotk.addEventListener('show.bs.modal', function(event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            var image = button.getAttribute('data-bs-image')
+            // If necessary, you could initiate an AJAX request here
+            // and then do the updating in a callback.
+            //
+            // Update the modal's content.
+            var imageSotk = detailModalSotk.querySelector('.imageSotk')
+            imageSotk.setAttribute('src', image)
+        })
 
-                var formSakip = editModal.querySelector('.formEdit')
-                formSakip.setAttribute('action', '/sakip/' + idSakip + '/update')
-            })
+        // ======================== SAKIP ======================== 
+        var editModal = document.getElementById('editModal')
+        editModal.addEventListener('show.bs.modal', function(event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            var idSakip = button.getAttribute('data-bs-idSakip')
+            var namaSakip = button.getAttribute('data-bs-namaSakip')
+            // If necessary, you could initiate an AJAX request here
+            // and then do the updating in a callback.
+            //
+            // Update the modal's content.
+            var inputnamaSakip = editModal.querySelector('.namaSakip')
+            inputnamaSakip.value = namaSakip
 
-            var detailModal = document.getElementById('detailModal')
-            detailModal.addEventListener('show.bs.modal', function(event) {
-                // Button that triggered the modal
-                var button = event.relatedTarget
-                // Extract info from data-bs-* attributes
-                var fileSakip = button.getAttribute('data-bs-file')
-                // If necessary, you could initiate an AJAX request here
-                // and then do the updating in a callback.
-                //
-                // Update the modal's content.
-                var fileSakipContainer = detailModal.querySelector('.fileSakip')
+            var formSakip = editModal.querySelector('.formEdit')
+            formSakip.setAttribute('action', '/sakip/' + idSakip + '/update')
+        })
+
+        var detailModal = document.getElementById('detailModal')
+        detailModal.addEventListener('show.bs.modal', function(event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            var fileSakip = button.getAttribute('data-bs-file')
+            // If necessary, you could initiate an AJAX request here
+            // and then do the updating in a callback.
+            //
+            // Update the modal's content.
+
+            var fileSakipContainerPDF = detailModal.querySelector('.fileSakipPDF')
+            var fileSakipContainer = detailModal.querySelector('.fileSakip')
+            if (fileSakip.split('.')[1] == "pdf") {
+                fileSakipContainerPDF.setAttribute('src', fileSakip)
+                fileSakipContainer.setAttribute('style', 'display: none');
+                fileSakipContainerPDF.setAttribute('style', 'display: block');
+            } else {
                 fileSakipContainer.setAttribute('src', fileSakip)
-            })
+                fileSakipContainerPDF.setAttribute('style', 'display: none');
+                fileSakipContainer.setAttribute('style', 'display: block');
+            }
+        })
 
-            var hapusModal = document.getElementById('hapusModal')
-            hapusModal.addEventListener('show.bs.modal', function(event) {
-                // Button that triggered the modal
-                var button = event.relatedTarget
-                // Extract info from data-bs-* attributes
-                var idSakip = button.getAttribute('data-bs-idSakip')
-                // If necessary, you could initiate an AJAX request here
-                // and then do the updating in a callback.
-                //
-                // Update the modal's content.
-                var formHapus = hapusModal.querySelector('.form-hapus')
-                formHapus.setAttribute('action', '/sakip/' + idSakip + '/delete')
-            })
+        var hapusModal = document.getElementById('hapusModal')
+        hapusModal.addEventListener('show.bs.modal', function(event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            var idSakip = button.getAttribute('data-bs-idSakip')
+            // If necessary, you could initiate an AJAX request here
+            // and then do the updating in a callback.
+            //
+            // Update the modal's content.
+            var formHapus = hapusModal.querySelector('.form-hapus')
+            formHapus.setAttribute('action', '/sakip/' + idSakip + '/delete')
+        })
 
-            $('.btn-hapus').on('click', function() {
-                $('.form-hapus').submit();
-            })
-            // ======================== END SAKIP ======================== 
+        $('.btn-hapus').on('click', function() {
+            $('.form-hapus').submit();
+        })
+        // ======================== END SAKIP ======================== 
 
-            // ======================== Regulasi ======================== 
-            var editModalRegulasi = document.getElementById('editModalRegulasi')
-            editModalRegulasi.addEventListener('show.bs.modal', function(event) {
-                // Button that triggered the modal
-                var button = event.relatedTarget
-                // Extract info from data-bs-* attributes
-                var idRegulasi = button.getAttribute('data-bs-idRegulasi')
-                var namaRegulasi = button.getAttribute('data-bs-namaRegulasi')
-                // If necessary, you could initiate an AJAX request here
-                // and then do the updating in a callback.
-                //
-                // Update the modal's content.
-                var inputnamaRegulasi = editModalRegulasi.querySelector('.namaRegulasi')
-                inputnamaRegulasi.value = namaRegulasi
+        // ======================== Regulasi ======================== 
+        var editModalRegulasi = document.getElementById('editModalRegulasi')
+        editModalRegulasi.addEventListener('show.bs.modal', function(event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            var idRegulasi = button.getAttribute('data-bs-idRegulasi')
+            var namaRegulasi = button.getAttribute('data-bs-namaRegulasi')
+            // If necessary, you could initiate an AJAX request here
+            // and then do the updating in a callback.
+            //
+            // Update the modal's content.
+            var inputnamaRegulasi = editModalRegulasi.querySelector('.namaRegulasi')
+            inputnamaRegulasi.value = namaRegulasi
 
-                var formRegulasi = editModalRegulasi.querySelector('.formEditRegulasi')
-                formRegulasi.setAttribute('action', '/regulasi/' + idRegulasi + '/update')
-            })
+            var formRegulasi = editModalRegulasi.querySelector('.formEditRegulasi')
+            formRegulasi.setAttribute('action', '/regulasi/' + idRegulasi + '/update')
+        })
 
-            var detailModalRegulasi = document.getElementById('detailModalRegulasi')
-            detailModalRegulasi.addEventListener('show.bs.modal', function(event) {
-                // Button that triggered the modal
-                var button = event.relatedTarget
-                // Extract info from data-bs-* attributes
-                var fileRegulasi = button.getAttribute('data-bs-fileRegulasi')
-                // If necessary, you could initiate an AJAX request here
-                // and then do the updating in a callback.
-                //
-                // Update the modal's content.
-                var fileRegulasiContainer = detailModalRegulasi.querySelector('.fileRegulasi')
+        var detailModalRegulasi = document.getElementById('detailModalRegulasi')
+        detailModalRegulasi.addEventListener('show.bs.modal', function(event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            var fileRegulasi = button.getAttribute('data-bs-fileRegulasi')
+            // If necessary, you could initiate an AJAX request here
+            // and then do the updating in a callback.
+            //
+            // Update the modal's content.
+            var fileRegulasiContainerPDF = detailModalRegulasi.querySelector('.fileRegulasiPDF')
+            var fileRegulasiContainer = detailModalRegulasi.querySelector('.fileRegulasi')
+            if (fileRegulasi.split('.')[1] == "pdf") {
+                fileRegulasiContainerPDF.setAttribute('src', fileRegulasi)
+                fileRegulasiContainer.setAttribute('style', 'display: none');
+                fileRegulasiContainerPDF.setAttribute('style', 'display: block');
+            } else {
                 fileRegulasiContainer.setAttribute('src', fileRegulasi)
-            })
+                fileRegulasiContainerPDF.setAttribute('style', 'display: none');
+                fileRegulasiContainer.setAttribute('style', 'display: block');
+            }
+        })
 
-            var hapusModalRegulasi = document.getElementById('hapusModalRegulasi')
-            hapusModalRegulasi.addEventListener('show.bs.modal', function(event) {
-                // Button that triggered the modal
-                var button = event.relatedTarget
-                // Extract info from data-bs-* attributes
-                var idRegulasi = button.getAttribute('data-bs-idRegulasi')
-                // If necessary, you could initiate an AJAX request here
-                // and then do the updating in a callback.
-                //
-                // Update the modal's content.
-                var formHapusRegulasi = hapusModalRegulasi.querySelector('.form-hapus-regulasi')
-                formHapusRegulasi.setAttribute('action', '/regulasi/' + idRegulasi + '/delete')
-            })
+        var hapusModalRegulasi = document.getElementById('hapusModalRegulasi')
+        hapusModalRegulasi.addEventListener('show.bs.modal', function(event) {
+            // Button that triggered the modal
+            var button = event.relatedTarget
+            // Extract info from data-bs-* attributes
+            var idRegulasi = button.getAttribute('data-bs-idRegulasi')
+            // If necessary, you could initiate an AJAX request here
+            // and then do the updating in a callback.
+            //
+            // Update the modal's content.
+            var formHapusRegulasi = hapusModalRegulasi.querySelector('.form-hapus-regulasi')
+            formHapusRegulasi.setAttribute('action', '/regulasi/' + idRegulasi + '/delete')
+        })
 
-            $('.btn-hapus-regulasi').on('click', function() {
-                $('.form-hapus-regulasi').submit();
-            })
-            // ======================== END SAKIP ======================== 
-        </script>
+        $('.btn-hapus-regulasi').on('click', function() {
+            $('.form-hapus-regulasi').submit();
+        })
+        // ======================== END SAKIP ======================== 
+    </script>
 </body>
 
 </html>

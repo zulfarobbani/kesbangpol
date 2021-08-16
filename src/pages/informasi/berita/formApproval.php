@@ -28,37 +28,39 @@
                                 <a href="./" class="btn btn-sm btn-primary" style="margin-right: 20px;"><span class="material-icons-outlined fs-5">arrow_back</span></a>
                                 <h4>Approval Berita</h4>
                             </div>
-                            <table class="table table-sm">
-                                <thead>
-                                    <tr>
-                                        <td>No</td>
-                                        <td>Judul Berita</td>
-                                        <td>Penulis Berita</td>
-                                        <td>Tanggal Publish</td>
-                                        <td>Approval Berita</td>
-                                        <td>Aksi</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach ($datas as $key => $value) { ?>
+                            <div class="table-responsive">
+                                <table class="table table-sm">
+                                    <thead>
                                         <tr>
-                                            <td><?= $key += 1 ?></td>
-                                            <td><?= $value['namaBerita'] ?></td>
-                                            <td><?= $value['namaUser'] ?></td>
-                                            <td><?= $value['dateCreate'] ?></td>
-                                            <td><?= $value['approvalBerita'] == 1 ? 'Disetujui' : 'Belum disetujui' ?></td>
-                                            <td>
-                                                <button type="button" class="btn btn-sm btn-success my-2" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-idBerita="<?= $value['idBerita'] ?>">
-                                                    Lihat
-                                                </button>
-                                                <button type="button" class="btn btn-sm btn-primary my-2" data-bs-toggle="modal" data-bs-target="#approvalModal" data-bs-idBerita="<?= $value['idBerita'] ?>">
-                                                    Approval
-                                                </button>
-                                            </td>
+                                            <td>No</td>
+                                            <td>Judul Berita</td>
+                                            <td>Penulis Berita</td>
+                                            <td>Tanggal Publish</td>
+                                            <td>Approval Berita</td>
+                                            <td>Aksi</td>
                                         </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach ($datas as $key => $value) { ?>
+                                            <tr>
+                                                <td><?= $key += 1 ?></td>
+                                                <td><?= $value['namaBerita'] ?></td>
+                                                <td><?= $value['namaUser'] ?></td>
+                                                <td><?= $value['dateCreate'] ?></td>
+                                                <td><?= $value['approvalBerita'] == 1 ? 'Disetujui' : 'Belum disetujui' ?></td>
+                                                <td>
+                                                    <button type="button" class="btn btn-sm btn-success my-2" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-idBerita="<?= $value['idBerita'] ?>">
+                                                        Lihat
+                                                    </button>
+                                                    <button type="button" class="btn btn-sm btn-primary my-2" data-bs-toggle="modal" data-bs-target="#approvalModal" data-bs-idBerita="<?= $value['idBerita'] ?>">
+                                                        Approval
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        <?php } ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
 

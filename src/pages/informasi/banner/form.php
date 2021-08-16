@@ -9,15 +9,15 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
 
     <title>Banner</title>
 </head>
 
 <body style="background-color : #EEEEEE; color:navy;">
-<?php include(__DIR__ . '/../../mobilemenu.php') ?>
-<?php include(__DIR__ . '/../../mobilenav.php') ?>
+    <?php include(__DIR__ . '/../../mobilemenu.php') ?>
+    <?php include(__DIR__ . '/../../mobilenav.php') ?>
     <?php include(__DIR__ . '/../../navbar.php') ?>
     <div class="container-fluid">
         <div class="row">
@@ -26,57 +26,54 @@
                 <div class="card mt-5">
                     <div class="card-body">
                         <div class="container mt-4">
-                        <div class="row">
-                            <div class="col-6">
                             <h4>Banner</h4>
-                            </div>
-                            <div class="col-6 hstack">
-                            <button type="button" class="btn btn-sm btn-primary ms-auto" data-bs-toggle="modal" data-bs-target="#createModal">
+                            <button type="button" class="btn btn-sm btn-primary ms-auto mb-3" data-bs-toggle="modal" data-bs-target="#createModal">
                                 Tambah
                             </button>
-                            </div>
-                            </div>
-                            <table class="table table-bordered table-sm">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Nama Banner</th>
-                                        <th>Banner</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach ($datas as $key => $value) { ?>
-                                        <tr class="paragraf align-middle">
-                                            <td><?= $key += 1 ?></td>
-                                            <td><?= $value['namaBanner'] ?></td>
-                                            <td><?= $value['pathMedia'] ?></td>
-                                            <td>
-                                                <div class="row">
-                                                    <div class="col">
-                                                <button type="button" class="btn btn-sm btn-success w-100 my-1" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-file="/assets/media/<?= $value['pathMedia'] ?>">
-                                                    Lihat
-                                                </button>
-                                                </div>
-                                                <div class="col">
-                                                <a href="/banner/<?= $value['idBanner'] ?>/download" class="btn btn-sm btn-light w-100 my-1" target="_blank">Download</a>
-                                                </div>
-                                                <div class="col">
-                                                <button type="button" class="btn btn-sm btn-secondary w-100 my-1" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-namaBanner="<?= $value['namaBanner'] ?>" data-bs-idBanner="<?= $value['idBanner'] ?>">
-                                                    Edit
-                                                </button>
-                                                </div>
-                                                <div class="col">
-                                                <button type="button" class="btn btn-sm btn-danger w-100 my-1" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idBanner="<?= $value['idBanner'] ?>">
-                                                    Hapus
-                                                </button>
-                                                </div>
-                                                </div>
-                                            </td>
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Nama Banner</th>
+                                            <th>Banner</th>
+                                            <th>Aksi</th>
                                         </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach ($datas as $key => $value) { ?>
+                                            <tr class="paragraf align-middle">
+                                                <td><?= $key += 1 ?></td>
+                                                <td><?= $value['namaBanner'] ?></td>
+                                                <td><?= $value['pathMedia'] ?></td>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <button type="button" class="btn btn-sm btn-success w-100 my-1" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-file="/assets/media/<?= $value['pathMedia'] ?>">
+                                                                Lihat
+                                                            </button>
+                                                        </div>
+                                                        <div class="col">
+                                                            <a href="/banner/<?= $value['idBanner'] ?>/download" class="btn btn-sm btn-light w-100 my-1" target="_blank">Download</a>
+                                                        </div>
+                                                        <div class="col">
+                                                            <button type="button" class="btn btn-sm btn-secondary w-100 my-1" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-namaBanner="<?= $value['namaBanner'] ?>" data-bs-idBanner="<?= $value['idBanner'] ?>">
+                                                                Edit
+                                                            </button>
+                                                        </div>
+                                                        <div class="col">
+                                                            <button type="button" class="btn btn-sm btn-danger w-100 my-1" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idBanner="<?= $value['idBanner'] ?>">
+                                                                Hapus
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        <?php } ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
 
                         <!-- Modal Detail Struktur Organisasi -->
@@ -200,9 +197,9 @@
             </div>
             <!-- end form -->
             <?php include(__DIR__ . '/../../sidebar.php') ?>
-
-            <?php include(__DIR__ . '/../../footer.php') ?>
         </div>
+        <?php include(__DIR__ . '/../../footer.php') ?>
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
         <script src="/assets/js/jquery-3.3.1.min.js"></script>
         <script>

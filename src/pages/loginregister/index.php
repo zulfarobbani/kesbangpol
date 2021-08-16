@@ -22,7 +22,7 @@
 <?php include(__DIR__ . '/../mobilenav.php') ?>
   <?php include(__DIR__ . '/../navbar.php') ?>
   
-  <div class="container-fluid">
+  <div class="container-fluid content-main">
     <div class="row">
       <div class="col-md-8">
       <div class="card rounded-3 mt-5 px-3">
@@ -40,7 +40,7 @@
           <?php } ?>
         </div>
         <div class="row">
-          <div class="col-md-6 text-end">
+          <div class="col-md-6 text-end mb-5">
             <h4 class="fw-light">Login</h4>
             <form action="login" method="POST">
               <input type="text" class="form-control shadow-sm mb-3" name="usernameUser" placeholder="Username">

@@ -17,56 +17,58 @@
 </head>
 
 <body style="background-color : #EEEEEE; color:navy;">
-<?php include(__DIR__ . '/../../mobilemenu.php') ?>
-<?php include(__DIR__ . '/../../mobilenav.php') ?>
+    <?php include(__DIR__ . '/../../mobilemenu.php') ?>
+    <?php include(__DIR__ . '/../../mobilenav.php') ?>
     <?php include(__DIR__ . '/../../navbar.php') ?>
-    <div class="container-fluid">
+    <div class="container-fluid content-main">
         <div class="row">
             <div class="col-md-8 mb-3">
                 <!-- START CODE -->
                 <div class="card mt-5">
                     <div class="card-body">
                         <div class="container mt-4">
-                        <div class="hstack gap-1 mb-3">
-                        <h5>ORMAS Berbadan Hukum Terdaftar</h5>
-                            <?php if ($idRole == '9asdkqhjwew') { ?>
-                            <button type="button" class="btn btn-sm btn-primary ms-auto" data-bs-toggle="modal" data-bs-target="#createModal">
-                                Tambah
-                            </button>
-                            <?php } ?>
+                            <div class="hstack gap-1 mb-3">
+                                <h5>ORMAS Berbadan Hukum Terdaftar</h5>
+                                <?php if ($idRole == '9asdkqhjwew') { ?>
+                                    <button type="button" class="btn btn-sm btn-primary ms-auto" data-bs-toggle="modal" data-bs-target="#createModal">
+                                        Tambah
+                                    </button>
+                                <?php } ?>
                             </div>
-                            <table class="table table-bordered table-striped table-sm">
-                                <thead>
-                                    <tr>
-                                        <th>No. AHU</th>
-                                        <th>Nama</th>
-                                        <th>Alamat</th>
-                                        <th>Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach ($datas as $key => $value) { ?>
-                                        <tr class="align-middle ">
-                                            <td><?= $value['noAHU'] ?></td>
-                                            <td><?= $value['namaOrsospol'] ?></td>
-                                            <td><?= $value['alamatOrsospol'] ?></td>
-                                            <td class="hstack gap-1">
-                                                <button type="button" class="btn w-100 btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
-                                                    Lihat
-                                                </button>
-                                                <button type="button" class="btn w-100 btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
-                                                    Edit
-                                                </button>
-                                                <?php if ($idRole == '9asdkqhjwew') { ?>
-                                                <button type="button" class="btn w-100 btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
-                                                    Hapus
-                                                </button>
-                                                <?php } ?>
-                                            </td>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped table-sm">
+                                    <thead>
+                                        <tr>
+                                            <th>No. AHU</th>
+                                            <th>Nama</th>
+                                            <th>Alamat</th>
+                                            <th>Aksi</th>
                                         </tr>
-                                    <?php } ?>
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                        <?php foreach ($datas as $key => $value) { ?>
+                                            <tr class="align-middle ">
+                                                <td><?= $value['noAHU'] ?></td>
+                                                <td><?= $value['namaOrsospol'] ?></td>
+                                                <td><?= $value['alamatOrsospol'] ?></td>
+                                                <td class="hstack gap-1">
+                                                    <button type="button" class="btn w-100 btn-sm btn-success" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
+                                                        Lihat
+                                                    </button>
+                                                    <button type="button" class="btn w-100 btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
+                                                        Edit
+                                                    </button>
+                                                    <?php if ($idRole == '9asdkqhjwew') { ?>
+                                                        <button type="button" class="btn w-100 btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapusModal" data-bs-idOrsospol="<?= $value['idOrsospol'] ?>">
+                                                            Hapus
+                                                        </button>
+                                                    <?php } ?>
+                                                </td>
+                                            </tr>
+                                        <?php } ?>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
 

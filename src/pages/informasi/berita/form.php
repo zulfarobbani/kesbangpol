@@ -14,9 +14,10 @@
 </head>
 
 <body style="background-color : #EEEEEE; color:navy;">
-<?php include(__DIR__ . '/../../mobilemenu.php') ?>
-<?php include(__DIR__ . '/../../mobilenav.php') ?>
+    <?php include(__DIR__ . '/../../mobilemenu.php') ?>
+    <?php include(__DIR__ . '/../../mobilenav.php') ?>
     <?php include(__DIR__ . '/../../navbar.php') ?>
+    
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 mb-3">
@@ -34,7 +35,6 @@
                                     <tr>
                                         <td>No</td>
                                         <td>Judul Berita</td>
-                                        <!-- <td>Author Berita</td> -->
                                         <td>Tanggal Publish</td>
                                         <td>Aksi</td>
                                     </tr>
@@ -239,7 +239,7 @@
                     coverBerita.setAttribute('src', '/assets/media/' + response.data.pathMedia)
                     var kontenBerita = editModal.querySelector('.kontenBerita')
                     kontenBerita.innerHTML = response.data.deskripsiBerita
-                    
+
                     ClassicEditor
                         .create(document.querySelector('#editor2'), {
                             removePlugins: ['Heading']

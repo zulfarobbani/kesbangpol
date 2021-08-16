@@ -7,7 +7,7 @@
       <a href="/informasi/berita"><span class="material-icons-outlined fs-4 text-white">info</span><span>Informasi</span></a>
       <a href="/organisasi-terdaftar/ormas"><span class="material-icons-outlined fs-4 text-white">groups</span><span>Organisasi Terdaftar</span></a>
       <a href="/forum-umum"><span class="material-icons-outlined fs-4 text-white">forum</span><span>Forum ORSOSPOL</span></a>
-      <a href="https://linktr.ee/ardhin"><span class="material-icons-outlined fs-4 font-center text-white">support_agent</span><span>Hubungi Kami</span></a>
+      <a href="#" data-bs-toggle="modal" data-bs-target="#hubungiKami"><span class="material-icons-outlined fs-4 font-center text-white">support_agent</span><span>Hubungi Kami</span></a>
       <?php if ($idRole == '9asdkqhjwew') { ?>
         <a href="/users"><span class="material-icons-outlined fs-4 font-center" style="color: white;">groups</span><span>User Manajemen</span></a>
       <?php } ?>

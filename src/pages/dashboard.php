@@ -118,7 +118,7 @@
             <div class="col-6 col-md-4 col-lg my-3 ">
                 <div class="menu-dashboard " style="box-sizing: border-box;padding: 0 0;">
                     <div class="item-menu-dashboard shadow-sm">
-                        <a href="/ormas" class="menu-dashboard"><img src="/assets/icon/organization.png" class="d-block mx-auto" style="height:30px" alt="Organisasi Terdaftar">
+                        <a href="/organisasi-terdaftar/ormas" class="menu-dashboard"><img src="/assets/icon/organization.png" class="d-block mx-auto" style="height:30px" alt="Organisasi Terdaftar">
                             <p class="text-center menu-depan fw-bold" style="color:#000099;margin:0;font-size: 12pt;">Organisasi Terdaftar</p>
                         </a>
                     </div>

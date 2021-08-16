@@ -9,15 +9,15 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
 
     <title>Users</title>
 </head>
 
 <body style="background-color : #EEEEEE; color:navy;">
-<?php include(__DIR__ . '/../mobilemenu.php') ?>
-<?php include(__DIR__ . '/../mobilenav.php') ?>
+    <?php include(__DIR__ . '/../mobilemenu.php') ?>
+    <?php include(__DIR__ . '/../mobilenav.php') ?>
     <?php include(__DIR__ . '/../navbar.php') ?>
     <div class="container-fluid">
         <div class="row">
@@ -27,16 +27,16 @@
                     <div class="card-body">
                         <div class="container mt-4">
                             <div class="row mb-3">
-                            <div class="col-12 col-md">
-                            <h3 class="d-inline">Manajemen User</h3>
+                                <div class="col-12 col-md">
+                                    <h3 class="d-inline">Manajemen User</h3>
+                                </div>
+                                <div class="col-12 col-md">
+                                    <button type="button" class="btn ms-auto btn-success rounded-2 hstack gap-2 mx-0 px-3" id="btnIjo" data-bs-toggle="modal" data-bs-target="#ModalTambahUser">
+                                        <span class="material-icons-outlined">person_add</span>
+                                        <span class="align-top">Tambah User</span>
+                                    </button>
+                                </div>
                             </div>
-                            <div class="col-12 col-md">
-                            <button type="button" class="btn ms-auto btn-success rounded-2 hstack gap-2 mx-0 px-3" id="btnIjo" data-bs-toggle="modal" data-bs-target="#ModalTambahUser">
-                                <span class="material-icons-outlined">person_add</span>
-                                <span class="align-top">Tambah User</span>
-                            </button>
-                            </div>
-</div>
 
                             <div class="table-responsive">
                                 <table class="table table-bordered table-striped">
@@ -56,27 +56,29 @@
                                                 <td><?= $data['usernameUser'] ?></td>
                                                 <td><?= $data['emailUser'] ?></td>
                                                 <td><?= date('d M Y', strtotime($data['dateCreate'])) ?></td>
-                                                <td >
+                                                <td>
                                                     <div class="row">
-                                                    <div class="col-12 col-md">
-                                                    
-                                                    <button type="button" class="btn hstack gap-1 paragraf w-100 btn-primary px-2 py-1  btnEdit" id="btnBiru" data-bs-toggle="modal" data-bs-target="#ModalUbahUser" data-bs-idUser="<?= $data['idUser'] ?>"><i class="fa fa-edit"></i> Ubah</button>
-                                                    </div>
-                                                    <div class="col-12 col-md">
-                                                    
-                                                    <button type="button" class="btn hstack gap-1 paragraf w-100 btn-warning px-2 py-1  btnDetail" id="btnKuning" data-bs-toggle="modal" data-bs-target="#ModalRincianUser" data-bs-idUser="<?= $data['idUser'] ?>"><i class="fa fa-search-plus"></i> Lihat
-                                        </button></div>
-                                                    <div class="col-12 col-md">
-                                                    
-                                                    <button type="button" class="btn hstack gap-1 paragraf w-100 btn-danger px-2 py-1  btnHapus" id="btnMerah" data-bs-toggle="modal" data-bs-target="#ModalHapusUser" data-bs-idUser="<?= $data['idUser'] ?>"><i class="fa fa-trash-alt"></i> Hapus</button></div>
+                                                        <div class="col-12 col-md-3">
 
-                                                    <div class="col-12 col-md">
-                                                    <button type="button" class="btn hstack gap-1 paragraf w-100 btn-info px-3 py-1 btnResetPassword" id="btnMerah" data-bs-toggle="modal" data-bs-target="#ModalResetPassword" data-bs-idUser="<?= $data['idUser'] ?>"><i class="fa fa-lock-open"></i> Reset</button>
-                                                    </div> 
+                                                            <button type="button" class="btn hstack gap-1 paragraf w-100 btn-primary px-2 py-1  btnEdit" id="btnBiru" data-bs-toggle="modal" data-bs-target="#ModalUbahUser" data-bs-idUser="<?= $data['idUser'] ?>"><i class="fa fa-edit"></i> Ubah</button>
+                                                        </div>
+                                                        <div class="col-12 col-md-3">
+
+                                                            <button type="button" class="btn hstack gap-1 paragraf w-100 btn-warning px-2 py-1  btnDetail" id="btnKuning" data-bs-toggle="modal" data-bs-target="#ModalRincianUser" data-bs-idUser="<?= $data['idUser'] ?>"><i class="fa fa-search-plus"></i> Lihat
+                                                            </button>
+                                                        </div>
+                                                        <div class="col-12 col-md-3">
+
+                                                            <button type="button" class="btn hstack gap-1 paragraf w-100 btn-danger px-2 py-1  btnHapus" id="btnMerah" data-bs-toggle="modal" data-bs-target="#ModalHapusUser" data-bs-idUser="<?= $data['idUser'] ?>"><i class="fa fa-trash-alt"></i> Hapus</button>
+                                                        </div>
+
+                                                        <div class="col-12 col-md-3">
+                                                            <button type="button" class="btn hstack gap-1 paragraf w-100 btn-info px-2 py-1 btnResetPassword" id="btnMerah" data-bs-toggle="modal" data-bs-target="#ModalResetPassword" data-bs-idUser="<?= $data['idUser'] ?>"><i class="fa fa-lock-open"></i> Reset</button>
+                                                        </div>
                                                     </div>
                                                 </td>
-                                                <?php } ?>
-                                          </tr>
+                                            <?php } ?>
+                                            </tr>
                                     </tbody>
                                 </table>
                             </div>

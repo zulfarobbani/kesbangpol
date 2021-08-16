@@ -43,7 +43,7 @@
     }
 </style>
 <!-- Footer Main Area-->
-<footer class="p-2 d-none d-md-block put" style="border-top: 2px solid #bfbfbf;background: #d2d2d2;width: 100%;">
+<footer class="p-2 d-none d-md-block put pb-2" style="border-top: 2px solid #bfbfbf;background: #d2d2d2;width: 100%;">
     <!-- Grid row -->
     <div class="row m-0" id="rowfooter">
         <!-- End of Full-width single-column -->
@@ -81,7 +81,7 @@
 </footer>
 <footer class="p-2 d-block d-md-none" style="border-top: 2px solid #bfbfbf;background: #d2d2d2;width: 100%;">
     <!-- Grid row -->
-    <div class="row m-0" id="rowfooter">
+    <div class="row m-0 mb-2" id="rowfooter">
         <!-- End of Full-width single-column -->
         <!-- Multi-column 3 of 3 -->
         <div class="col-12 col-md-4 text-center" style="height: fit-content;">
