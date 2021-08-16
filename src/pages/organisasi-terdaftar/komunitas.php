@@ -44,8 +44,8 @@
                   <th>Alamat</th>
                 </tr>
               </thead>
-              <?php foreach($data_komunitas as $key => $values) { ?>
               <tbody>
+              <?php foreach($data_komunitas as $key => $values) { ?>
                 <tr class="align-middle paragraf">
 
                   <td><?=$key+=1?></td>
@@ -58,8 +58,8 @@
                   </td> -->
                             
                   </tr>
-              </tbody>
               <?php }?>
+              </tbody>
             </table>
           </div>
         </div>

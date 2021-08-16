@@ -45,7 +45,7 @@
                                     </thead>
                                     <tbody>
                                         <?php foreach ($datas as $key => $value) { ?>
-                                            <tr class="paragraf align-middle">
+                                            <tr class="align-middle">
                                                 <td><?= $value['noAHU'] ?></td>
                                                 <td><?= $value['namaOrsospol'] ?></td>
                                                 <td><?= $value['alamatOrsospol'] ?></td>
@@ -531,7 +531,7 @@
 
 
                 </div>
-                <a class="btn btn-outline-danger navy mt-3 float-end" href="/organisasi-terdaftar/okp"><i class="fas fa-check"></i> Selesai Ubah</a>
+                <a class="btn btn-outline-danger navy mt-3 float-end" href="/organisasi-terdaftar/komunitas"><i class="fas fa-check"></i> Selesai Ubah</a>
             </div>
             <!-- end form -->
             <?php include(__DIR__ . '/../../sidebar.php') ?>

@@ -55,10 +55,10 @@
       <!-- Modal -->
       <div class="modal fade" id="modalSosmed" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content" style="background: #d0d0d0;">
+          <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLabel">Share Berita</h5>
-              <button type="button" class="btn btn-outline-danger btn-close" data-bs-dismiss="modal" aria-label="Close" style="background: url(assets/icon/cancel.png);background-position: center;background-size: 18px;background-repeat: no-repeat;"></button>
+              <button type="button" class="btn btn-outline-danger btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <div class="row justify-content-center">

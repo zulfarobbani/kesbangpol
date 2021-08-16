@@ -36,7 +36,7 @@
                                 <?php } ?>
                             </div>
                             <div class="table-responsive">
-                                <table class="table table-bordered table-striped table-sm">
+                                <table class="table table-bordered table-sm">
                                     <thead>
                                         <tr>
                                             <th>No. AHU</th>
@@ -82,7 +82,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="/organisasi-terdaftar-kesbangpol/ormas/store" method="post" enctype="multipart/form-data">
+                                    <form action="/organisasi-terdaftar-kesbangpol/orsospol/store" method="post" enctype="multipart/form-data">
                                         <div class="row">
                                             <div class="mb-3 col-12 col-md-6">
                                                 <label for="exampleFormControlInput1" class="form-label">No. AHU</label>

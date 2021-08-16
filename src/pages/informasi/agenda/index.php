@@ -200,6 +200,9 @@
                     });
                 }
             });
+
+            $('#agenda').find('.fc-today-button').html('Today')
+            $('#agenda').find('.fc-today').css('background-color', 'red')
         });
     </script>
 
