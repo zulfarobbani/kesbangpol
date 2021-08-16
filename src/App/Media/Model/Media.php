@@ -46,8 +46,9 @@ class Media extends GlobalFunc
         $ekstensi = strtolower(end($x));
         $ukuran    = $file['size'];
         $filename = $nama."".uniqid().".".$ekstensi;
+        $this->dd($namaSementara);
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
-            if ($ukuran < 1044070) {
+            if ($ukuran < 2044070) {
                 move_uploaded_file($namaSementara, __DIR__ . '/../../../../web/assets/media/' . $filename);
             }
         }
