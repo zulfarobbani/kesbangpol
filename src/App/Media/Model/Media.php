@@ -46,7 +46,7 @@ class Media extends GlobalFunc
         $ekstensi = strtolower(end($x));
         $ukuran    = $file['size'];
         $filename = $nama."".uniqid().".".$ekstensi;
-        $this->dd($namaSementara);
+        // $this->dd($namaSementara);
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 2044070) {
                 move_uploaded_file($namaSementara, __DIR__ . '/../../../../web/assets/media/' . $filename);
@@ -55,7 +55,7 @@ class Media extends GlobalFunc
         $dateCreate = date('Y-m-d');
 
         $sql = "INSERT INTO " . $this->table . " VALUES ('$idMedia', '$filename', '$idRelation', '$idEntity', '$jenisDokumen', '$dateCreate')";
-
+        $this->dd($sql);
         try {
             $data = $this->conn->prepare($sql);
             $data->execute();
