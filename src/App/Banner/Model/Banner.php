@@ -17,9 +17,9 @@ class Banner extends GlobalFunc
         $this->conn = $globalFunc->conn;
     }
     
-    public function selectAll()
+    public function selectAll($where = "")
     {
-        $sql = "SELECT * FROM ".$this->table." LEFT JOIN media ON media.idRelation = ".$this->table.".".$this->primaryKey;
+        $sql = "SELECT * FROM ".$this->table." LEFT JOIN media ON media.idRelation = ".$this->table.".".$this->primaryKey." ".$where;
         
         try {
             $query = $this->conn->prepare($sql);
@@ -32,14 +32,15 @@ class Banner extends GlobalFunc
             die();
         }
     }
-    public function create($data_test = [])
+    public function create($datas)
     {
          $id = uniqid("skp");
-         $namaBanner = $data_test['namaBanner'];
+         $namaBanner = $datas->get('namaBanner');
+         $halamanmunculBanner = implode(',', $datas->get('halamanmunculBanner'));
          
          $dateCreate = date('Y-m-d');
 
-        $sql = "INSERT INTO ".$this->table." VALUES ('$id','$namaBanner', '$dateCreate')";
+        $sql = "INSERT INTO ".$this->table." VALUES ('$id','$namaBanner', '$halamanmunculBanner', '$dateCreate')";
         
         try {
             $data = $this->conn->prepare($sql);
@@ -66,11 +67,12 @@ class Banner extends GlobalFunc
             die();
         }
     }
-    public function update($id, $data_test = [])
+    public function update($id, $datas)
     {
-        $namaBanner = $data_test['namaBanner'];
+        $namaBanner = $datas->get('namaBanner');
+        $halamanmunculBanner = implode(',', $datas->get('halamanmunculBanner'));
         
-        $sql = "UPDATE ".$this->table." SET namaBanner = '$namaBanner' WHERE ".$this->primaryKey." ='$id'";
+        $sql = "UPDATE ".$this->table." SET namaBanner = '$namaBanner', halamanmunculBanner = '$halamanmunculBanner' WHERE ".$this->primaryKey." ='$id'";
         
         try{
             $data = $this->conn->prepare($sql);

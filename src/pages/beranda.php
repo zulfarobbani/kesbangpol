@@ -138,6 +138,7 @@
       modal.find('.telegram').prop('href', 'https://telegram.me/share/url?url=' + btn.attr('data-bs-url'));
       modal.find('.email').prop('href', 'mailto:?Subject=Berita Kesbangpol&Body=Klik%20link%20untuk%20melihat%20berita%20%20 ' + btn.attr('data-bs-url'));
     });
+    
     $(document).on('click', '.hubungiKami', function() {
       var btn = $(this);
       var modal = $('#hubungiKami');

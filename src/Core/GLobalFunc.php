@@ -2,6 +2,7 @@
 
 namespace Core;
 
+use App\Banner\Model\Banner;
 use App\KontakDarurat\Model\KontakDarurat;
 use App\Permissions\Model\RolePermissions;
 use Config\Database;
@@ -36,7 +37,7 @@ class GlobalFunc
             extract($request->attributes->all(), EXTR_SKIP);
         }
 
-        global $requestUri;
+        global $requestUri, $site_url;
 
         $this->beginSession();
 
@@ -83,6 +84,15 @@ class GlobalFunc
             return $result;
         };
         $data['isPermited'] = $isPermited;
+
+        $banner = new Banner();
+        $data_banner = $banner->selectAll();
+        $list_banner = [];
+        foreach ($data_banner as $key => $value) {
+            if (in_array('sidebar-link-eksternal', explode(',', $value['halamanmunculBanner']))) {
+                array_push($list_banner, $value);
+            }
+        }
 
         extract($data, EXTR_SKIP);
 

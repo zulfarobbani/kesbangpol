@@ -45,17 +45,18 @@ class GalleryKesbangpolController extends GlobalFunc
         $result_per_page = 10;
         $page_first_result = ($page-1)*$result_per_page;
         $number_of_page = ceil($countRows/$result_per_page);
+        $where = "LIMIT ".$page_first_result.",".$result_per_page;
 
-        $datas = $this->model->selectAll("LIMIT ".$page_first_result.",".$result_per_page);
-        $pagination = [
-            'current_page' => $page,
-            'number_of_page' => $number_of_page,
-            'page_first_result' => $page_first_result,
-            'result_per_page' => $result_per_page,
-            'countRows' => $countRows
-        ];
+        $datas = $this->model->selectAll();
+        // $pagination = [
+        //     'current_page' => $page,
+        //     'number_of_page' => $number_of_page,
+        //     'page_first_result' => $page_first_result,
+        //     'result_per_page' => $result_per_page,
+        //     'countRows' => $countRows
+        // ];
 
-        return $this->render_template('informasi/galeri/form/index', ['datas' => $datas, 'pagination' => $pagination]);
+        return $this->render_template('informasi/galeri/form/index', ['datas' => $datas]);
     }
 
     public function create(Request $request)
@@ -98,6 +99,7 @@ class GalleryKesbangpolController extends GlobalFunc
 
         return new RedirectResponse('/informasi-kesbangpol/gallery');
     }
+
     public function edit(Request $request)
     {
         // if ($this->emailUser == null) {

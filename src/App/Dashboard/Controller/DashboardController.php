@@ -30,8 +30,14 @@ class DashboardController extends GlobalFunc
     public function tampil(Request $request){
         $banner = new Banner();
         $data_banner = $banner->selectAll();
+        $list_banner = [];
+        foreach ($data_banner as $key => $value) {
+            if (in_array('dashboard', explode(',', $value['halamanmunculBanner']))) {
+                array_push($list_banner, $value);
+            }
+        }
 
-        return $this->render_template('dashboard', ['banner' => $data_banner]);
+        return $this->render_template('dashboard', ['banner' => $list_banner]);
     }
     //beranda
     public function home(Request $request){

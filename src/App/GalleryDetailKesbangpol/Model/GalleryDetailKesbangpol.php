@@ -56,12 +56,13 @@ class GalleryDetailKesbangpol extends GlobalFunc
         $file = $fileUpload;
         $namaMedia = $file['name'][$key];
         $namaSementara = $file['tmp_name'][$key];
-        $ekstensi_diperbolehkan    = array('png', 'jpg');
+        $ekstensi_diperbolehkan    = array('png', 'jpg', 'jpeg', 'pdf');
         $x = explode('.', $namaMedia);
         $nama = strtolower($x['0']);
         $ekstensi = strtolower(end($x));
         $ukuran    = $file['size'][$key];
         $filename = $nama . "" . uniqid() . "." . $ekstensi;
+        
         if (in_array($ekstensi, $ekstensi_diperbolehkan) === true) {
             if ($ukuran < 1055070) {
                 move_uploaded_file($namaSementara, __DIR__ . '/../../../../web/assets/media/' . $filename);

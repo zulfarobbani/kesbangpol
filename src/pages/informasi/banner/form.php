@@ -37,7 +37,8 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Nama Banner</th>
-                                            <th>Banner</th>
+                                            <!-- <th>Banner</th> -->
+                                            <!-- <th>Muncul di halaman</th> -->
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
@@ -46,11 +47,12 @@
                                             <tr class="paragraf align-middle">
                                                 <td><?= $key += 1 ?></td>
                                                 <td><?= $value['namaBanner'] ?></td>
-                                                <td><?= $value['pathMedia'] ?></td>
+                                                <!-- <td><?= $value['pathMedia'] ?></td> -->
+                                                <!-- <td></td> -->
                                                 <td>
                                                     <div class="row">
                                                         <div class="col">
-                                                            <button type="button" class="btn btn-sm btn-success w-100 my-1" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-file="/assets/media/<?= $value['pathMedia'] ?>">
+                                                            <button type="button" class="btn btn-sm btn-success w-100 my-1" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-file="/assets/media/<?= $value['pathMedia'] ?>" data-bs-halamanmunculBanner="<?= $value['halamanmunculBanner'] ?>">
                                                                 Lihat
                                                             </button>
                                                         </div>
@@ -58,7 +60,7 @@
                                                             <a href="/banner/<?= $value['idBanner'] ?>/download" class="btn btn-sm btn-light w-100 my-1" target="_blank">Download</a>
                                                         </div>
                                                         <div class="col">
-                                                            <button type="button" class="btn btn-sm btn-secondary w-100 my-1" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-namaBanner="<?= $value['namaBanner'] ?>" data-bs-idBanner="<?= $value['idBanner'] ?>">
+                                                            <button type="button" class="btn btn-sm btn-secondary w-100 my-1" data-bs-toggle="modal" data-bs-target="#editModal" data-bs-namaBanner="<?= $value['namaBanner'] ?>" data-bs-idBanner="<?= $value['idBanner'] ?>" data-bs-halamanmunculBanner="<?= $value['halamanmunculBanner'] ?>">
                                                                 Edit
                                                             </button>
                                                         </div>
@@ -73,24 +75,6 @@
                                         <?php } ?>
                                     </tbody>
                                 </table>
-                            </div>
-                        </div>
-
-                        <!-- Modal Detail Struktur Organisasi -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-xl">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h6 class="modal-title" id="exampleModalLabel">Banner</h6>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <img src="" alt="" class="img-fluid imageSotk">
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
                             </div>
                         </div>
 
@@ -113,7 +97,18 @@
                                                 <label for="exampleFormControlInput1" class="form-label">File Banner</label>
                                                 <input type="file" name="fileBanner" class="form-control">
                                             </div>
-                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Muncul di halaman</label>
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <input type="checkbox" name="halamanmunculBanner[]" value="dashboard"> Dashboard
+                                                    </div>
+                                                    <div class="col-3">
+                                                    <input type="checkbox" name="halamanmunculBanner[]" value="sidebar-link-eksternal"> Sidebar Link Eksternal
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary mt-3">Submit</button>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
@@ -141,7 +136,18 @@
                                                 <label for="exampleFormControlInput1" class="form-label">File Banner</label>
                                                 <input type="file" name="fileBanner" class="form-control">
                                             </div>
-                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlInput1" class="form-label">Muncul di halaman</label>
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <input type="checkbox" class="banner-check-input dashboard" name="halamanmunculBanner[]" value="dashboard"> Dashboard
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <input type="checkbox" class="banner-check-input sidebar-link-eksternal" name="halamanmunculBanner[]" value="sidebar-link-eksternal"> Sidebar Link Eksternal
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary mt-3">Submit</button>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
@@ -160,6 +166,8 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
+                                        <label for="">Banner Muncul di halaman</label>
+                                        <div class="halamanmunculBanner d-block mb-3"></div>
                                         <img src="" alt="" class="img-fluid fileBanner">
                                     </div>
                                     <div class="modal-footer">
@@ -203,28 +211,16 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
         <script src="/assets/js/jquery-3.3.1.min.js"></script>
         <script>
-            var detailModalSotk = document.getElementById('exampleModal')
-            detailModalSotk.addEventListener('show.bs.modal', function(event) {
-                // Button that triggered the modal
-                var button = event.relatedTarget
-                // Extract info from data-bs-* attributes
-                var image = button.getAttribute('data-bs-image')
-                // If necessary, you could initiate an AJAX request here
-                // and then do the updating in a callback.
-                //
-                // Update the modal's content.
-                var imageSotk = detailModalSotk.querySelector('.imageSotk')
-                imageSotk.setAttribute('src', image)
-            })
-
             // ======================== Banner ======================== 
             var editModal = document.getElementById('editModal')
             editModal.addEventListener('show.bs.modal', function(event) {
+                editModal = document.getElementById('editModal')
                 // Button that triggered the modal
                 var button = event.relatedTarget
                 // Extract info from data-bs-* attributes
                 var idBanner = button.getAttribute('data-bs-idBanner')
                 var namaBanner = button.getAttribute('data-bs-namaBanner')
+                var halamanmunculBanner = button.getAttribute('data-bs-halamanmunculBanner')
                 // If necessary, you could initiate an AJAX request here
                 // and then do the updating in a callback.
                 //
@@ -234,20 +230,36 @@
 
                 var formSakip = editModal.querySelector('.formEdit')
                 formSakip.setAttribute('action', '/informasi/banner/' + idBanner + '/update')
+
+                editModal = $('#editModal');
+                editModal.find(".banner-check-input").prop("checked", false);
+                halamanmunculBanner.split(',').forEach(element => {
+                    editModal.find("." + element).prop("checked", true);
+                });
             })
 
             var detailModal = document.getElementById('detailModal')
             detailModal.addEventListener('show.bs.modal', function(event) {
+                detailModal = document.getElementById('detailModal')
                 // Button that triggered the modal
                 var button = event.relatedTarget
                 // Extract info from data-bs-* attributes
                 var fileBanner = button.getAttribute('data-bs-file')
+                var halamanmunculBanner = button.getAttribute('data-bs-halamanmunculBanner')
                 // If necessary, you could initiate an AJAX request here
                 // and then do the updating in a callback.
                 //
                 // Update the modal's content.
                 var fileBannerContainer = detailModal.querySelector('.fileBanner')
                 fileBannerContainer.setAttribute('src', fileBanner)
+
+                detailModal = $('#detailModal');
+                var halamanBanner = '';
+                halamanmunculBanner.split(',').forEach(element => {
+                    halamanBanner += '<span class="badge bg-secondary m-2 fs-6">' + element + '</span>';
+                });
+                console.log(halamanBanner)
+                detailModal.find('.halamanmunculBanner').html(halamanBanner);
             })
 
             var hapusModal = document.getElementById('hapusModal')

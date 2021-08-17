@@ -29,7 +29,7 @@
               <?php foreach ($datas as $key => $values) { ?>
                 <li class="cards__item">
                   <div class="kartu">
-                    <div class="kartu__image" style="background-image: url(/assets/media/<?= $values['pathMedia'] ?>);background-size:contain;"></div>
+                    <div class="kartu__image" style="background-image: url('/assets/media/<?= $values['pathMedia'] ?>');background-size:contain;"></div>
                     <div class="kartu__content">
                       <div class="kartu__title"><a href="/informasi/galeri/<?= $values['idGallery'] ?>/detail">
                           <h6><?= $values['namaGallery'] ?></h6>

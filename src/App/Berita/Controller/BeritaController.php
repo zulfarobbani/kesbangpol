@@ -2,6 +2,7 @@
 
 namespace App\Berita\Controller;
 
+use App\Banner\Model\Banner;
 use App\Berita\Model\Berita;
 use App\Media\Model\Media;
 use Core\GlobalFunc;

@@ -56,10 +56,7 @@ class BannerController extends GlobalFunc
     // }
     public function store(Request $request)
     {
-        $datas = [
-            'namaBanner' => $request->request->get('namaBanner'),
-        ];
-        $banner = $this->model->create($datas);
+        $banner = $this->model->create($request->request);
 
         $media = new Media();
         $idMedia = uniqid('med');
@@ -103,11 +100,8 @@ class BannerController extends GlobalFunc
     }
     public function update(Request $request)
     {
-        $datas = [
-            'namaBanner' => $request->request->get('namaBanner'),
-        ];
         $id = $request->attributes->get('id');
-        $banner = $this->model->update($id, $datas);
+        $banner = $this->model->update($id, $request->request);
 
         if ($_FILES['fileBanner']['name'] != '') {
             $media = new Media();

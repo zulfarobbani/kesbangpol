@@ -3,62 +3,71 @@
     filter: grayscale(100%);
 
   }
-  .btn-outline-secondary:hover .sidegamar{
+
+  .btn-outline-secondary:hover .sidegamar {
     /* filter:hue-rotate(150deg) saturate(299%) brightness(198%)contrast(284%); */
     filter: brightness(10.5);
   }
-  .p-8{
-    padding:0.8rem!important;
+
+  .p-8 {
+    padding: 0.8rem !important;
   }
-/* Medium devices (landscape tablets, below 600) */
-@media only screen and (max-width: 600px) {
-  .spansidebar{
-    font-size:7pt!important;
+
+  /* Medium devices (landscape tablets, below 600) */
+  @media only screen and (max-width: 600px) {
+    .spansidebar {
+      font-size: 7pt !important;
+    }
+
+    .sidegamar {
+      max-height: 50% !important;
+    }
   }
-  .sidegamar{
-    max-height:50%!important;
+
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    .spansidebar {
+      font-size: 9pt !important;
+    }
+
+    .sidegamar {
+      max-height: 50% !important;
+    }
   }
-}
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .spansidebar{
-    font-size:9pt!important;
-  }
-  .sidegamar{
-    max-height:50%!important;
-  }
-}
+
   /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .spansidebar{
-    font-size:7pt!important;
+  @media only screen and (min-width: 992px) {
+    .spansidebar {
+      font-size: 7pt !important;
+    }
+
+    .sidegamar {
+      max-height: 50% !important;
+    }
   }
-  .sidegamar{
-    max-height:50%!important;
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .spansidebar {
+      font-size: 7pt !important;
+    }
+
+    .sidegamar {
+      max-height50% !important;
+    }
   }
-}
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .spansidebar{
-    font-size:7pt!important;
-  }
-  .sidegamar{
-    max-height50%!important;
-  }
-}
-  
 </style>
 <div class="col py-3 pe-4 mt-5 d-none d-md-block">
   <?php if ($idRole != null) { ?>
     <div class="row d-flex align-items-center">
       <h5 class="text-muted mb-3"><b>Selamat Datang</b></h5>
       <div class="col-8 hstack gap-1">
-      <img src="https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png" width="50px" height="50px">
-          <span class="text-mute fw-bold"><?= $idRole == '9asdkqhjwew' ? 'Admin' : $namaOrsospol ?></span><br>
-          <?php if ($idRole != '9asdkqhjwew') { ?>
-            <span><?= $noAHU ?></span>
-          <?php } ?>
-          <!-- <span>No. AHU/No. Register</span> -->
+        <img src="https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png" width="50px" height="50px">
+        <span class="text-mute fw-bold"><?= $idRole == '9asdkqhjwew' ? 'Admin' : $namaOrsospol ?></span><br>
+        <?php if ($idRole != '9asdkqhjwew') { ?>
+          <span><?= $noAHU ?></span>
+        <?php } ?>
+        <!-- <span>No. AHU/No. Register</span> -->
 
       </div>
       <div class="col-4 px-2">
@@ -68,7 +77,7 @@
   <?php } ?>
 
   <div class="row">
-    <h5 class="text-muted my-4 text-center" id="layanankesbangpol">Layanan<br><b>KESBANGPOL</b></h5> 
+    <h5 class="text-muted my-4 text-center" id="layanankesbangpol">Layanan<br><b>KESBANGPOL</b></h5>
     <div class="col-6 col-md-12 col-xl-6">
       <a href="/layanan/pendataan" class="btn btn-sm btn-outline-secondary d-flex mb-2 py-2">
         <span class="material-icons-outlined align-middle">person_add_alt_1</span>&nbsp;&nbsp;
@@ -103,7 +112,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://bphtb.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid  ms-1 me-2" >
+        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid  ms-1 me-2">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>BPHTB ONLINE</b><br>Kota Cimahi</span>
       </a>
     </div>
@@ -115,7 +124,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://uptpasar.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2" >
+        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>UPT PASAR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><br>Kota Cimahi</span>
       </a>
     </div>
@@ -127,7 +136,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://ppid.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2" >
+        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>PPID</b><br>Kota Cimahi</span>
       </a>
     </div>
@@ -139,7 +148,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://sip.cimahikota.go.id/be/index" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2" >
+        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>eSIP</b><br>Kota Cimahi</span>
       </a>
     </div>
@@ -151,7 +160,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="http://siempus.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2" >
+        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Si-Empus</b><br>Kota Cimahi</span>
       </a>
     </div>
@@ -163,7 +172,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://pmks.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2" >
+        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b style="font-size: 11px;">Kesejahteraan Sosial</b> <br>Kota Cimahi</span>
       </a>
     </div>
@@ -175,7 +184,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://rsudcibabat.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2" >
+        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>RSUD CIBABAT ONLINE</b><br>Kota Cimahi</span>
       </a>
     </div>
@@ -187,7 +196,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://disdukcapil.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2" >
+        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>DINAS KEPENDUDUKAN DAN PENCATATAN SIPIL </b><span>Kota Cimahi</span></span>
       </a>
     </div>
@@ -199,7 +208,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://e-reporting.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2" >
+        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>e-Reporting v.2</b><br>Kota Cimahi</span>
       </a>
     </div>
@@ -211,7 +220,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2" >
+        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Financial Dashboard</b><br>Kota Cimahi</span>
       </a>
     </div>
@@ -235,19 +244,19 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://sid.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2" >
+        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>SID</b><br>Kota Cimahi</span>
       </a>
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://chimasistaker.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="/assets/image/logo link eskternal/Link External Grey/Grey/cimasistaker_grey.png"  class="sidegamar align-self-center img-fluid" style="margin-right: 10px;">
+        <img src="/assets/image/logo link eskternal/Link External Grey/Grey/cimasistaker_grey.png" class="sidegamar align-self-center img-fluid" style="margin-right: 10px;">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Cimahi Sistem</b> Ketenagakerjaan</span>
       </a>
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://arsipstatis.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2" >
+        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>ARSIP STATIS</b><br>Kota Cimahi</span>
       </a>
     </div>
@@ -259,7 +268,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2" >
+        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>SIMKEL</b><br>Kota Cimahi</span>
       </a>
     </div>
@@ -271,7 +280,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="http://103.18.117.33/stats/list/id/549/type/Online" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2" >
+        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>SIMKESBANG</b><br>Kota Cimahi</span>
       </a>
     </div>
@@ -283,7 +292,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://ukpbj.depok.go.id/simanda/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2" >
+        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>SIMANDA <span style="font-size: 10px;">v.2</span></b><br>Kota Cimahi</span>
       </a>
     </div>
@@ -295,7 +304,7 @@
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://smartcity.cimahikota.go.id/cctv" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2" >
+        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>CCTV</b><br>Kota Cimahi</span>
       </a>
     </div>
@@ -338,6 +347,21 @@
         </div>
       </div>
     </div>
+
+    <?php if ($idRole == '9asdkqhjwew') { ?>
+      <div class="card">
+        <a href="/informasi/banner" class="btn btn-sm btn-danger float-end mt-3"><i class="fas fa-edit"></i> Edit Banner</a>
+      <?php } ?>
+      <div class="p-3">
+        <?php foreach ($list_banner as $key => $value) { ?>
+          <div class="card mt-2 mb-2 px-2 py-2">
+            <img class="m-0" src="/assets/media/<?= $value['pathMedia'] ?>" width="100%" class="rounded my-3">
+          </div>
+        <?php } ?>
+      </div>
+      <?php if ($idRole == '9asdkqhjwew') { ?>
+      </div>
+    <?php } ?>
 
     <!-- <h5 class="text-muted my-4 text-center">Informasi Covid-19</h5>
 
