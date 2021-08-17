@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 16, 2021 at 12:12 PM
+-- Generation Time: Aug 17, 2021 at 10:38 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -53,6 +53,7 @@ INSERT INTO `agenda` (`idAgenda`, `namaAgenda`, `deskripsiAgenda`, `datestartAge
 CREATE TABLE `banner` (
   `idBanner` varchar(255) NOT NULL,
   `namaBanner` varchar(255) NOT NULL,
+  `halamanmunculBanner` varchar(255) NOT NULL,
   `createdAt` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -60,10 +61,11 @@ CREATE TABLE `banner` (
 -- Dumping data for table `banner`
 --
 
-INSERT INTO `banner` (`idBanner`, `namaBanner`, `createdAt`) VALUES
-('skp610cf727f0cc9', 'banner 1', '2021-08-06'),
-('skp610cf7a3838ad', 'banner 2', '2021-08-06'),
-('skp610e835834f94', 'banner 3', '2021-08-07');
+INSERT INTO `banner` (`idBanner`, `namaBanner`, `halamanmunculBanner`, `createdAt`) VALUES
+('skp610cf727f0cc9', 'banner 1', 'dashboard', '2021-08-06'),
+('skp610cf7a3838ad', 'banner 2', 'dashboard', '2021-08-06'),
+('skp611b67ace1afe', 'Banner 3', 'dashboard,sidebar-link-eksternal', '2021-08-17'),
+('skp611b70923fb56', 'Banner 4', 'sidebar-link-eksternal', '2021-08-17');
 
 -- --------------------------------------------------------
 
@@ -150,7 +152,15 @@ INSERT INTO `chronology` (`idChronology`, `deskripsiChronology`, `idRelation`, `
 ('crn611a3802bb77e', 'usr61037f9c85184 telah menambah gallery \"\"', 'prt611a3801e5877', '2021-08-16'),
 ('crn611a3848227d3', 'usr61037f9c85184 telah menambah gallery \"\"', 'prt611a38478ec60', '2021-08-16'),
 ('crn611a3885312ac', 'usr61037f9c85184 telah menambah gallery \"\"', 'prt611a3884a2c9f', '2021-08-16'),
-('crn611a39529b520', 'usr61037f9c85184 telah menambah gallery \"\"', 'prt611a395230605', '2021-08-16');
+('crn611a39529b520', 'usr61037f9c85184 telah menambah gallery \"\"', 'prt611a395230605', '2021-08-16'),
+('crn611a469d8de24', 'usr61037f9c85184 telah mengubah gallery \"Gallery 9\"', 'prt611a395230605', '2021-08-16'),
+('crn611b5c3283138', 'usr61037f9c85184 telah menambah gallery \"\"', 'prt611b5c3234838', '2021-08-17'),
+('crn611b5e0fd388a', 'User 1 telah menghapus gallery \"as\"', 'prt611b5c3234838', '2021-08-17'),
+('crn611b5e1360fbe', 'User 1 telah menghapus gallery \"a\"', 'prt611b5b94858e6', '2021-08-17'),
+('crn611b5e17af268', 'User 1 telah menghapus gallery \"alsk\"', 'prt611b5ae97f999', '2021-08-17'),
+('crn611b5e1a9193c', 'User 1 telah menghapus gallery \"alsk\"', 'prt611b5adfce4ca', '2021-08-17'),
+('crn611b5e1da64fc', 'User 1 telah menghapus gallery \"alsk\"', 'prt611b5ac7a115c', '2021-08-17'),
+('crn611b5e20d0077', 'User 1 telah menghapus gallery \"alsk\"', 'prt611b5ab6cbe3b', '2021-08-17');
 
 -- --------------------------------------------------------
 
@@ -235,7 +245,8 @@ INSERT INTO `gallery` (`idGallery`, `namaGallery`, `deskripsiGallery`, `idRelati
 ('prt611a3801e5877', 'Gallery 6', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '', 0, '2021-08-16'),
 ('prt611a38478ec60', 'Gallery 7', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '', 0, '2021-08-16'),
 ('prt611a3884a2c9f', 'Gallery 8', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '', 0, '2021-08-16'),
-('prt611a395230605', 'Gallery 9', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '', 0, '2021-08-16');
+('prt611a395230605', 'Gallery 9', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '', 0, '2021-08-16'),
+('prt611a4683ca402', 'Gallery 10', '', '', 0, '2021-08-16');
 
 -- --------------------------------------------------------
 
@@ -87712,7 +87723,6 @@ INSERT INTO `media` (`idMedia`, `pathMedia`, `idRelation`, `idEntity`, `jenisDok
 ('med61024b48cd45b', '161024b48cd479.jpg', 'ors61024b489c9b8', '1', 'npwpOrsospol', '2021-07-29'),
 ('med610e8340bd8ba', 'kesbangpol1610e8340bd8d4.png', 'skp610cf727f0cc9', '1', '', '2021-08-07'),
 ('med610e834eec6b5', 'kesbangpol2610e834eec6c4.png', 'skp610cf7a3838ad', '1', '', '2021-08-07'),
-('med610e8364d1966', 'kesbangpol3610e8364d1972.png', 'skp610e835834f94', '1', '', '2021-08-07'),
 ('med610e9c6d06815', '20210806-img-20210806-wa0013610e9c6d06827.jpg', 'nws60ec078cde90c', '1', 'cover_berita', '2021-08-07'),
 ('med6114c8fb20518', 'tolak_ppkm_darurat_di_bandung6114c8fb20524.jpg', 'nws6114c8fae9013', 'usr61037f9c85184', 'cover_berita', '2021-08-12'),
 ('med6114c951d4366', '83kesbangpol-orang-asing6114c951d4378.jpg', 'nws6114c9516e7a2', 'usr61037f9c85184', 'cover_berita', '2021-08-12'),
@@ -87847,6 +87857,8 @@ INSERT INTO `media` (`idMedia`, `pathMedia`, `idRelation`, `idEntity`, `jenisDok
 ('med611a395270088', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a3952700a7.jpg', 'dpr611a39525fcf3', 'usr61037f9c85184', '', '2021-08-16'),
 ('med611a3952807e2', '20171020_131938-676x320611a3952807f8.jpg', 'dpr611a395276d50', 'usr61037f9c85184', '', '2021-08-16'),
 ('med611a395290fb1', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a395290fc1.jpg', 'dpr611a395289fca', 'usr61037f9c85184', '', '2021-08-16'),
+('med611b67acf0eb8', 'kesbangpol-3611b67acf0ec6.png', 'skp611b67ace1afe', '1', '', '2021-08-17'),
+('med611b709255c30', '1625710614-60e660164c768611b709255c3d.png', 'skp611b70923fb56', '1', '', '2021-08-17'),
 ('png60fd082fe5c13', 'ojdp6fmf0fv4djzjthns60fd082fe5c1e.jpg', 'png60fd082fba29f', '1', 'cover_pengumuman', '2021-07-25');
 
 -- --------------------------------------------------------
