@@ -93,7 +93,7 @@ class Users extends GlobalFunc
         $dateCreate = date('Y-m-d');
 
         $sql = "INSERT INTO " . $this->table . " VALUES('$idUsers', '$namaUser', '$usernameUser', '$passwordUser', '$idRole', '$emailUser', '$dateCreate')";
-
+        
         try {
             $query = $this->conn->prepare($sql);
             $status = $query->execute();

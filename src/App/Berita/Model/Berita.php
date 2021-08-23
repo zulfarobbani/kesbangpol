@@ -17,9 +17,10 @@ class Berita extends GlobalFunc
         $this->conn = $globalFunc->conn;
     }
 
-    public function selectAll()
+    public function selectAll($where = "")
     {
-        $sql = "SELECT * FROM " . $this->table . " LEFT JOIN users ON users.idUser = ".$this->table.".authorBerita LEFT JOIN orsospol ON orsospol.idUser = users.idUser LEFT JOIN media ON " . $this->table . ".".$this->primaryKey." = media.idRelation";
+        $sql = "SELECT * FROM " . $this->table . " LEFT JOIN users ON users.idUser = ".$this->table.".authorBerita LEFT JOIN orsospol ON orsospol.idUser = users.idUser LEFT JOIN pegawai ON pegawai.idUser = users.idUser LEFT JOIN media ON " . $this->table . ".".$this->primaryKey." = media.idRelation ".$where;
+        
         try {
             $query = $this->conn->prepare($sql);
             $query->execute();
@@ -75,6 +76,94 @@ class Berita extends GlobalFunc
 
             $data->execute();
             return $idBerita;
+        } catch (PDOException $e) {
+            echo $e;
+            die();
+        }
+    }
+
+    public function createTimeditor($datas, $berita)
+    {
+        $sql = "INSERT INTO timeditorberita VALUES ";
+        foreach ($datas->get('idUser') as $key => $value) {
+            $id = uniqid('teb');
+            $dateCreate = date('Y-m-d');
+            $sql.= $key > 0 ? ',' : '';
+            $sql.= "('$id', '$value', '$berita', '$dateCreate')";
+        }
+        
+        try {
+            $data = $this->conn->prepare($sql);
+            $data->execute();
+        } catch (PDOException $e) {
+            echo $e;
+            die();
+        }
+        return true;
+    }
+
+    public function createTagberita($datas, $berita)
+    {
+        $sql = "INSERT INTO tagberita VALUES ";
+        foreach ($datas as $key => $value) {
+            $id = uniqid('tag');
+            $dateCreate = date('Y-m-d');
+            $sql.= $key > 0 ? ',' : '';
+            $sql.= "('$id', '$value', '$berita', '$dateCreate')";
+        }
+        
+        try {
+            $data = $this->conn->prepare($sql);
+            $data->execute();
+        } catch (PDOException $e) {
+            echo $e;
+            die();
+        }
+        return true;
+    }
+
+    public function selectTimeditorberita($id)
+    {
+        $sql = "SELECT * FROM timeditorberita LEFT JOIN users ON users.idUser = timeditorberita.idUser LEFT JOIN pegawai ON pegawai.idUser = timeditorberita.idUser LEFT JOIN media ON media.idRelation = pegawai.idUser WHERE idBerita = '$id'";
+        
+        try {
+            $query = $this->conn->prepare($sql);
+            $query->execute();
+            $data = $query->fetchAll();
+
+            return $data;
+        } catch (PDOException $e) {
+            echo $e;
+            die();
+        }
+    }
+
+    public function selectAuthorberita($id)
+    {
+        $sql = "SELECT * FROM users LEFT JOIN pegawai ON pegawai.idUser = users.idUser LEFT JOIN media ON media.idRelation = users.idUser WHERE users.idUser = '$id'";
+        
+        try {
+            $query = $this->conn->prepare($sql);
+            $query->execute();
+            $data = $query->fetch();
+
+            return $data;
+        } catch (PDOException $e) {
+            echo $e;
+            die();
+        }
+    }
+
+    public function selectTag($id)
+    {
+        $sql = "SELECT * FROM tagberita WHERE idBerita = '$id'";
+        
+        try {
+            $query = $this->conn->prepare($sql);
+            $query->execute();
+            $data = $query->fetchAll();
+
+            return $data;
         } catch (PDOException $e) {
             echo $e;
             die();

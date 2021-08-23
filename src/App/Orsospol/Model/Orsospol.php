@@ -8,12 +8,30 @@ use PDOException;
 class Orsospol extends GlobalFunc
 {
     private $table = 'orsospol';
+    private $primaryKey = 'idOrsospol';
     public $conn;
 
     public function __construct()
     {
         $globalFunc = new GlobalFunc();
         $this->conn = $globalFunc->conn;
+    }
+
+    public function countRows($idJenisOrsospol, $where = "")
+    {
+        $sql = "SELECT COUNT(".$this->primaryKey.") as count FROM " . $this->table . " LEFT JOIN jenisorsospol ON orsospol.idJenisorsospol = jenisorsospol.idJenisorsospol
+        LEFT JOIN sosialmedia ON orsospol.idSosialmedia = sosialmedia.idSosialmedia WHERE orsospol.idJenisorsospol = '$idJenisOrsospol' ".$where;
+
+        try {
+            $query = $this->conn->prepare($sql);
+            $query->execute();
+            $data = $query->fetch();
+
+            return $data;
+        } catch (PDOException $e) {
+            echo $e;
+            die();
+        }
     }
     
     public function selectAll($idJenisOrsospol, $moreWhere = "")

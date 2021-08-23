@@ -37,7 +37,7 @@ class DashboardController extends GlobalFunc
             }
         }
 
-        return $this->render_template('dashboard', ['banner' => $list_banner]);
+        return $this->render_template('dashboard', ['banner_dashboard' => $list_banner]);
     }
     //beranda
     public function home(Request $request){

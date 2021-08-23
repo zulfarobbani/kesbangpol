@@ -32,7 +32,7 @@
 
             <div class="d-block mt-4">
             <a class="btn btn-danger btn-sm navy  float-end" href="/login-register">
-                <span class="material-icons-outlined text-white" style="font-size: 17px;margin-right: 5px;">person_add_alt_1</span><span class="text-white">Daftarkan Organisasi Anda</span></a>
+                <span class="material-icons-outlined text-white" style="font-size: 17px;margin-right: 5px;">person_add_alt_1</span><span class="text-white">Daftar Penelitian</span></a>
               </div>
           </div>
         </div>

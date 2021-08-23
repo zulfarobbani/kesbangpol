@@ -62,16 +62,20 @@
     <div class="row d-flex align-items-center">
       <h5 class="text-muted mb-3"><b>Selamat Datang</b></h5>
       <div class="col-8 hstack gap-1">
-        <img src="https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png" width="50px" height="50px">
-        <span class="text-mute fw-bold"><?= $idRole == '9asdkqhjwew' ? 'Admin' : $namaOrsospol ?></span><br>
-        <?php if ($idRole != '9asdkqhjwew') { ?>
-          <span><?= $noAHU ?></span>
-        <?php } ?>
-        <!-- <span>No. AHU/No. Register</span> -->
-
+      <img src="https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png" width="50px" height="50px">
+        <div>
+          <?php if ($idRole == '89wsnfsuweer' || $idRole == 'rol611f11be4a52a') { ?>
+            <span class="text-mute fw-bold"><?= $namaUser ?></span><br>
+          <?php } else { ?>
+            <h6 class="text-mute fw-bold"><?= $idRole == '9asdkqhjwew' ? 'Admin' : $singkatanOrsospol ?></h6>
+          <?php } ?>
+          <?php if ($idRole != '9asdkqhjwew') { ?>
+            <h6><?= $noAHU ?></h6>
+          <?php } ?>
+        </div>
       </div>
       <div class="col-4 px-2">
-        <a href="/logout" class="btn btn-outline-danger py-2 px-0 text-center hstack gap-1 justify-content-center" style="color:navy;"><i class="fas fa-door-open"></i><span class="teksnav"> Keluar</span></a>
+        <a href="/logout" class="btn btn-outline-danger py-2 px-0 text-center hstack gap-1 justify-content-center"><i class="fas fa-door-open"></i><span class="teksnav"> Keluar</span></a>
       </div>
     </div>
   <?php } ?>

@@ -30,7 +30,8 @@ class OrsospolKesbangpolController extends GlobalFunc
 
         $jenisOrsospol = new JenisOrsospolKesbangpol();
         $data_jenisOrssospol = $jenisOrsospol->selectAll("WHERE namaJenisorsospol = 'ORMAS'")[0];
-        $datas = $this->ormas->selectAll($data_jenisOrssospol['idJenisorsospol'], $where);
+
+        $datas = $this->ormas->selectAll($data_jenisOrssospol['idJenisorsospol']);
 
         $provinsi = new Provinsi();
         $data_provinsi = $provinsi->selectAll();

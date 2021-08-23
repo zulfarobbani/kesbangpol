@@ -31,33 +31,96 @@
                                 <h5 class="fw-bold mt-3 mb-4"><?= $detail['namaBerita'] ?></h5>
                                 <img class="w-100" src="/assets/media/<?= $detail['pathMedia'] ?>" alt="Gambar Berita">
                                 <p class="mt-4"><?= html_entity_decode(nl2br($detail['deskripsiBerita'])) ?></p>
-                                <span class="badge bg-danger fs-6">Opini suara & publik</span>
-                                <span class="badge bg-danger fs-6">Public Government</span>
+                                <?php foreach ($tagberita as $tag) { ?>
+                                    <span class="badge bg-danger fs-6"><?= $tag['namaTag'] ?></span>
+                                <?php } ?>
                                 <div class="row">
                                     <h4 class="my-3">Tim Editor</h4>
                                     <div class="col-1">
-                                        <img src="https://awsimages.detik.net.id/community/media/visual/2019/09/25/7384aef5-e918-48f0-a8da-36b99c78116d.jpeg?w=750&q=90" width="50px" height="50px" class="img rounded-circle">
+                                        <img src="/assets/media/<?= $authorberita['pathMedia'] ?>" width="50px" height="50px" class="img rounded-circle">
                                     </div>
-                                    <div class="col-4 ps-3">
-                                        <h5>Gina Agustina<br><span class="text-muted" style="font-size: 11px;">Writer</span></h5>
-                                        <button class="btn btn-danger">&nbsp;&nbsp;&nbsp;&nbsp;Ikuti&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                                    <div class="col-2 ps-3">
+                                        <h5><?= $authorberita['namaPegawai'] ?><br><span class="text-muted" style="font-size: 13px;">Writer</span></h5>
+                                        <button class="btn btn-sm btn-danger btnProfil" data-bs-toggle="modal" data-bs-target="#modalProfil" data-bs-idPegawai="<?= $authorberita['idPegawai'] ?>">Profil</button>
                                     </div>
-                                    <div class="col-1">
-                                        <img src="https://awsimages.detik.net.id/community/media/visual/2019/02/19/3fc2caf6-118c-457d-8a28-8868c1753fda.jpeg?w=750&q=90" width="50px" height="50px" class="img rounded-circle">
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="modalProfil" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Profil Pegawai</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row mb-3">
+                                                        <div class="col-1">
+                                                            <img src="" width="80px" height="80px" class="img imgPegawai rounded-circle">
+                                                        </div>
+                                                        <div class="col" style="padding-left: 50px;">
+                                                            <label for="">Nama Pegawai</label>
+                                                            <h5><b class="namaPegawai"></b></h5>
+                                                        </div>
+                                                    </div>
+                                                    <table>
+                                                        <tr>
+                                                            <td>
+                                                                <h6>Jabatan</h6>
+                                                            </td>
+                                                            <td style="padding: 0 20px 0 20px;">:</td>
+                                                            <td>
+                                                                <h5><b class="jabatanPegawai"></b></h5>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <h6>NIP</h6>
+                                                            </td>
+                                                            <td style="padding: 0 20px 0 20px;">:</td>
+                                                            <td>
+                                                                <h5><b class="nipPegawai"></b></h5>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <h6>Email</h6>
+                                                            </td>
+                                                            <td style="padding: 0 20px 0 20px;">:</td>
+                                                            <td>
+                                                                <h5><b class="emailPegawai"></b></h5>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="col-4 ps-3">
-                                        <h5>Arya Aprian<br><span class="text-muted" style="font-size: 11px;">Editor</span></h5>
-                                        <button class="btn btn-danger">&nbsp;&nbsp;&nbsp;&nbsp;Ikuti&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                                    </div>
+
+                                    <?php foreach ($timeditorberita as $data) { ?>
+                                        <div class="col-1">
+                                            <img src="/assets/media/<?= $data['pathMedia'] ?>" width="50px" height="50px" class="img rounded-circle">
+                                        </div>
+                                        <div class="col-2 ps-3 mb-4">
+                                            <h5><?= $data['namaPegawai'] ?><br><span class="text-muted" style="font-size: 13px;">Editor</span></h5>
+                                            <button class="btn btn-sm btn-danger btnProfil" data-bs-toggle="modal" data-bs-target="#modalProfil" data-bs-idPegawai="<?= $data['idPegawai'] ?>">Profil</button>
+                                        </div>
+                                    <?php } ?>
                                 </div>
                                 <hr>
                                 <div class="row d-flex justify-content-center">
                                     <div class="col-2 text-center text-grey">
-                                        <i class="far fa-thumbs-up"></i>
+                                        <a href="/likeBerita/<?= $detail['idBerita'] ?>/store" class="text-dark text-decoration-none">
+                                            <i class="far fa-thumbs-up"></i>
+                                        </a>
                                         <span>0</span> Suka
                                     </div>
                                     <div class="col-2 text-center text-grey">
-                                        <i class="far fa-thumbs-up" style="-ms-transform: rotate(180deg);transform: rotate(180deg);"></i>
+                                        <a href="/dislikeBerita/<?= $detail['idBerita'] ?>/store" class="text-dark text-decoration-none">
+                                            <i class="far fa-thumbs-up" style="-ms-transform: rotate(180deg);transform: rotate(180deg);"></i>
+                                        </a>
                                         <span>0</span> Tidak Suka
                                     </div>
                                     <div class="col-2 text-center text-grey">
@@ -75,66 +138,102 @@
                         </div>
                     </div>
                 </div>
-                <div class="card my-2 p-4">
-                    <textarea class="form-control" rows="5" placeholder="Silahkan tuliskan komentarmu...."></textarea>
-                    <div class="d-flex flex-row-reverse">
-                        <button class="btn btn-danger rounded mt-3">Kirim</button>
+                <?php if ($idRole != null) { ?>
+                    <div class="card my-2 p-4">
+                        <?php if (count($msgSuccess) > 0) { ?>
+                            <?php foreach ($msgSuccess as $msg) { ?>
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                    <strong><?= $msg ?></strong>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            <?php } ?>
+                        <?php } ?>
+                        <form action="/comment/<?= $detail['idBerita']; ?>/store" method="POST">
+                            <textarea class="form-control" rows="5" name="commentText" placeholder="Silahkan tuliskan komentarmu...."></textarea>
+                            <div class="d-flex flex-row-reverse">
+                                <button type="submit" class="btn btn-danger rounded mt-3">Kirim</button>
+                            </div>
+                        </form>
                     </div>
-                </div>
+                <?php } ?>
                 <div class="card my-2 p-4">
-                    <nav>
+                    <!-- <nav>
                         <div class="nav nav-tabs" id="nav-tab">
                             <a class="nav-item nav-link active" data-toggle="tab" href="#nav-semua" role="tab">Semua Komentar</a>
                             <a class="nav-item nav-link" data-toggle="tab" href="#nav-populer" role="tab">Terpopuler</a>
                             <a class="nav-item nav-link" data-toggle="tab" href="#nav-terbaru" role="tab">Terbaru</a>
                             <a class="nav-item nav-link" data-toggle="tab" href="#nav-terdahulu" role="tab">Terdahulu</a>
                         </div>
-                    </nav>
+                    </nav> -->
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active p-3" id="nav-semua" role="tabpanel">
-                            <span>2 Komentar</span>
-                            <div class="row my-3">
-                                <div class="col-sm-2">
-                                    <img src="https://awsimages.detik.net.id/community/media/visual/2019/09/25/f970f73a-2f96-47f0-9de8-70ba736a287f.jpeg?w=750&q=90" class="rounded-circle" width="80px">
-                                </div>
-                                <div class="col-sm-9">
-                                    <div class="d-flex">
-                                        <h6>Johan Yudiono</h6>
-                                        <span class="text-muted ps-3" style="font-size: 13px;">2 Bulan yang lalu</span>
+                            <span><?= count($commentBerita) ?> Komentar</span>
+                            <?php foreach ($commentBerita as $data) { ?>
+                                <div class="row my-3">
+                                    <div class="col-sm-2">
+                                        <img src="/assets/media/<?= $data['pathMedia'] ?>" class="rounded-circle" width="80px" height="80px">
                                     </div>
-                                    <p class="text-grey">
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                        erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
-                                        tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                                    </p>
-                                    <span class="pe-2 text-lightgrey"><i class="far fa-thumbs-up"></i>2k</span>
-                                    <span class="pe-2 text-lightgrey"><i class="far fa-thumbs-down"></i></i>50</span>
-                                    <span class="pe-2 text-lightgrey"><i class="far fa-comment"></i>1</span>
-                                    <div class="card shadow my-2 p-2">
-                                        <span>Balasan</span>
-                                        <div class="row my-3">
-                                            <div class="col-sm-3">
-                                                <img src="https://awsimages.detik.net.id/community/media/visual/2019/09/25/f970f73a-2f96-47f0-9de8-70ba736a287f.jpeg?w=750&q=90" class="rounded-circle" width="80px">
+                                    <div class="col-sm-9">
+                                        <div class="d-flex">
+                                            <h6 class="fw-bold"><?= $data['namaUser'] ?></h6>
+                                            <!-- <span class="text-muted ps-3" style="font-size: 13px;">2 Bulan yang lalu</span> -->
+                                        </div>
+                                        <p class="text-grey">
+                                            <?= $data['commentText'] ?>
+                                        </p>
+                                        <div class="row d-flex mb-2">
+                                            <div class="col-2 text-center text-grey">
+                                                <a href="/likeBerita/<?= $detail['idBerita'] ?>/store" class="text-dark text-decoration-none">
+                                                    <i class="far fa-thumbs-up"></i>
+                                                </a>
+                                                <span style="font-size: 12px;"><span>0</span> Suka</span>
                                             </div>
-                                            <div class="col-sm-8">
-                                                <div class="d-flex">
-                                                    <h6>Johan Yudiono</h6>
-                                                    <span class="text-muted ps-3" style="font-size: 13px;">2 Bulan yang lalu</span>
+                                            <div class="col-3 text-center text-grey">
+                                                <a href="/dislikeBerita/<?= $detail['idBerita'] ?>/store" class="text-dark text-decoration-none">
+                                                    <i class="far fa-thumbs-up" style="-ms-transform: rotate(180deg);transform: rotate(180deg);"></i>
+                                                </a>
+                                                <span style="font-size: 12px;"><span>0</span> Tidak Suka</span>
+                                            </div>
+                                            <div class="col-3 text-center text-grey">
+                                                <a href="#" class="text-dark text-decoration-none" data-bs-toggle="collapse" data-bs-target="#collapseExample<?= $data['idCommentberita'] ?>" aria-expanded="false" aria-controls="collapseExample<?= $data['idCommentberita'] ?>">
+                                                    <i class="far fa-comment"></i>
+                                                </a>
+                                                <span style="font-size: 12px;"><span><?= $data['countcommentComment'] ?></span> Komentar</span>
+                                            </div>
+                                        </div>
+                                        <div class="collapse" id="collapseExample<?= $data['idCommentberita'] ?>">
+                                            <form action="/comment/reply/<?= $data['idCommentberita'] ?>" method="POST">
+                                                <textarea name="commentText" id="" class="form-control" placeholder="Komentar"></textarea>
+                                                <div class="d-flex flex-row-reverse">
+                                                    <button type="submit" class="btn btn-danger rounded mt-3">Kirim</button>
                                                 </div>
-                                                <p class="text-grey">
-                                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                    nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                                    erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
-                                                    tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                                                </p>
-                                                <span class="pe-2 text-lightgrey"><i class="far fa-thumbs-up"></i>2k</span>
-                                                <span class="pe-2 text-lightgrey"><i class="far fa-thumbs-down"></i></i>50</span>
+                                            </form>
+                                        </div>
+                                        <div class="card shadow my-2 p-2">
+                                            <span>Balasan</span>
+                                            <div class="row my-3">
+                                                <div class="col-sm-3">
+                                                    <img src="https://awsimages.detik.net.id/community/media/visual/2019/09/25/f970f73a-2f96-47f0-9de8-70ba736a287f.jpeg?w=750&q=90" class="rounded-circle" width="80px">
+                                                </div>
+                                                <div class="col-sm-8">
+                                                    <div class="d-flex">
+                                                        <h6>Johan Yudiono</h6>
+                                                        <span class="text-muted ps-3" style="font-size: 13px;">2 Bulan yang lalu</span>
+                                                    </div>
+                                                    <p class="text-grey">
+                                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                                                        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+                                                        erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+                                                        tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+                                                    </p>
+                                                    <span class="pe-2 text-lightgrey"><i class="far fa-thumbs-up"></i>2k</span>
+                                                    <span class="pe-2 text-lightgrey"><i class="far fa-thumbs-down"></i></i>50</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            <?php } ?>
                         </div>
                         <div class="tab-pane fade" id="nav-populer" role="tabpanel">
                             <h4>Komentar Populer</h4>
@@ -205,7 +304,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-outline-danger btn-sm" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -221,15 +320,33 @@
             var btn = $(this);
             var modal = $('#modalSosmed');
 
-            modal.find('.facebook').prop('href', 'http://www.facebook.com/sharer.php?u=' + btn.attr('data-bs-url'));
-            modal.find('.twitter').prop('href', 'http://twitter.com/share?url=' + btn.attr('data-bs-url'));
+            // modal.find('.facebook').prop('href', 'http://www.facebook.com/sharer.php?u=' + btn.attr('data-bs-url'));
+            modal.find('.facebook').prop('href', 'https://id-id.facebook.com/login/web/');
+            // modal.find('.twitter').prop('href', 'http://twitter.com/share?url=' + btn.attr('data-bs-url'));
+            modal.find('.twitter').prop('href', 'https://twitter.com/login?lang=id');
             // modal.find('.googleplus').prop('href', 'https://plus.google.com/share?url='+btn.attr('data-bs-url'));
+            modal.find('.instagram').prop('href', 'https://www.instagram.com/accounts/login');
             modal.find('.reddit').prop('href', 'http://reddit.com/submit?url=' + btn.attr('data-bs-url'));
             modal.find('.pinterest').prop('href', 'http://pinterest.com/pin/create/button/?url=' + btn.attr('data-bs-url'));
-            modal.find('.whatsapp').prop('href', 'https://api.whatsapp.com/send?phone=6281234567890&text=' + btn.attr('data-bs-url'));
-            modal.find('.telegram').prop('href', 'https://telegram.me/share/url?url=' + btn.attr('data-bs-url'));
+            // modal.find('.whatsapp').prop('href', 'http://pinterest.com/pin/create/button/?url=' + btn.attr('data-bs-url'));
+            modal.find('.whatsapp').prop('href', 'https://web.whatsapp.com');
+            modal.find('.telegram').prop('href', 'https://web.telegram.org/');
             modal.find('.email').prop('href', 'mailto:?Subject=Berita Kesbangpol&Body=Klik%20link%20untuk%20melihat%20berita%20%20 ' + btn.attr('data-bs-url'));
         });
+
+        $(document).on('click', '.btnProfil', function() {
+            var modal = $('#modalProfil');
+            $.ajax({
+                type: 'GET',
+                url: '/pegawai-kesbangpol/' + $(this).attr('data-bs-idPegawai') + '/get'
+            }).done(function(data) {
+                modal.find('.imgPegawai').prop('src', '/assets/media/' + data.detail.pathMedia)
+                modal.find('.namaPegawai').html(data.detail.namaPegawai)
+                modal.find('.jabatanPegawai').html(data.detail.jabatanPegawai)
+                modal.find('.nipPegawai').html(data.detail.nipPegawai)
+                modal.find('.emailPegawai').html(data.detail.emailPegawai)
+            })
+        })
     </script>
 </body>
 

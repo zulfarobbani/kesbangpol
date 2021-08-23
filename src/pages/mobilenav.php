@@ -64,10 +64,10 @@
          </div>
          <h6 class="text-center">Kantor Kesatuan Bangsa dan Politik<br>Pemerintah Kota Cimahi</h6>
          <p class="text-center hubungiteks">Gedung Perkantoran Pemkot Cimahi<br>Jl. Demang Hardjakusumah Gedung C,<br>Lantai 4 Kota Cimahi</p>
-         <p class="text-center hubungiteks">022 1234 5678</p>
+         <p class="text-center hubungiteks"><i class="fas fa-phone"></i> (022) 1234 5678</p>
        </div>
        <div class="modal-footer">
-         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+         <button type="button" class="btn btn-outline-danger btn-sm" data-bs-dismiss="modal">Close</button>
        </div>
      </div>
    </div>

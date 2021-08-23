@@ -44,8 +44,9 @@
     <div class="modal fade" id="ModalAdd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
+                <?php if ($aliasRole == 'pegawai' || $aliasRole == 'kesbangpol') { ?>
                 <form class="form-horizontal" method="POST" action="/informasi/agenda/store">
-
+                <?php } ?>
                     <div class="modal-header">
                         <h4 class="modal-title" id="myModalLabel">Add Event</h4>
                     </div>
@@ -55,7 +56,7 @@
                             <div class="form-group">
                                 <label for="title" class="col-sm-6 control-label">Nama Agenda</label>
                                 <div class="col-sm">
-                                    <input type="text" name="namaAgenda" class="form-control" id="title" placeholder="Nama Agenda">
+                                    <input type="text" name="namaAgenda" class="form-control" id="title" placeholder="Nama Agenda" <?= $aliasRole == 'pegawai' || $aliasRole == 'kesbangpol' ? '' : 'disabled' ?>>
                                 </div>
                             </div>
                         </div>
@@ -63,7 +64,7 @@
                             <div class="form-group">
                                 <label for="deskripsi" class="col-sm-6 control-label">Deskripsi Agenda</label>
                                 <div class="col-sm">
-                                    <textarea name="deskripsiAgenda" class="form-control" id="deskripsi" placeholder="Deskripsi Agenda" rows="4"></textarea>
+                                    <textarea name="deskripsiAgenda" class="form-control" id="deskripsi" placeholder="Deskripsi Agenda" rows="4" <?= $aliasRole == 'pegawai' || $aliasRole == 'kesbangpol' ? '' : 'disabled' ?>></textarea>
                                 </div>
                             </div>
                         </div>
@@ -85,10 +86,14 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-outline-danger btn-sm" data-bs-dismiss="modal">Close</button>
+                        <?php if ($aliasRole == 'pegawai' || $aliasRole == 'kesbangpol') { ?>
                         <button type="submit" class="btn btn-primary">Save changes</button>
+                        <?php } ?>
                     </div>
+                <?php if ($aliasRole == 'pegawai' || $aliasRole == 'kesbangpol') { ?>
                 </form>
+                <?php } ?>
             </div>
         </div>
     </div>
@@ -97,9 +102,11 @@
     <div class="modal fade" id="ModalEdit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
+                <?php if ($aliasRole == 'pegawai' || $aliasRole == 'kesbangpol') { ?>
                 <form class="form-horizontal" id="formEdit" method="POST">
+                <?php } ?>
                     <div class="modal-header">
-                        <h4 class="modal-title" id="myModalLabel">Edit Event</h4>
+                        <h4 class="modal-title" id="myModalLabel"><?= $aliasRole == 'pegawai' || $aliasRole == 'kesbangpol' ? 'Edit Event' : 'Detail Event' ?></h4>
                     </div>
                     <div class="modal-body">
 
@@ -107,7 +114,7 @@
                             <div class="form-group">
                                 <label for="title" class="col-sm-6 control-label">Nama Agenda</label>
                                 <div class="col-sm">
-                                    <input type="text" name="namaAgenda" class="form-control" id="title" placeholder="Nama Agenda">
+                                    <input type="text" name="namaAgenda" class="form-control" id="title" placeholder="Nama Agenda" <?= $aliasRole == 'pegawai' || $aliasRole == 'kesbangpol' ? '' : 'disabled' ?>>
                                 </div>
                             </div>
                         </div>
@@ -115,10 +122,11 @@
                             <div class="form-group">
                                 <label for="deskripsi" class="col-sm-6 control-label">Deskripsi Agenda</label>
                                 <div class="col-sm">
-                                    <textarea name="deskripsiAgenda" class="form-control" id="deskripsi" placeholder="Deskripsi Agenda" rows="4"></textarea>
+                                    <textarea name="deskripsiAgenda" class="form-control" id="deskripsi" placeholder="Deskripsi Agenda" rows="4" <?= $aliasRole == 'pegawai' || $aliasRole == 'kesbangpol' ? '' : 'disabled' ?>></textarea>
                                 </div>
                             </div>
                         </div>
+                        <?php if ($aliasRole == 'pegawai' || $aliasRole == 'kesbangpol') { ?>
                         <div class="row">
                             <div class="form-group">
                                 <div class="col-sm-offset-6 col-sm">
@@ -129,12 +137,17 @@
                                 </div>
                             </div>
                         </div>
+                        <?php } ?>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-outline-danger btn-sm" data-bs-dismiss="modal">Close</button>
+                        <?php if ($aliasRole == 'pegawai' || $aliasRole == 'kesbangpol') { ?>
                         <button type="submit" class="btn btn-primary">Save changes</button>
+                        <?php } ?>
                     </div>
+                <?php if ($aliasRole == 'pegawai' || $aliasRole == 'kesbangpol') { ?>
                 </form>
+                <?php } ?>
             </div>
         </div>
     </div>

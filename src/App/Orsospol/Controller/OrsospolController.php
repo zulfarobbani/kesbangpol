@@ -29,8 +29,10 @@ class OrsospolController extends GlobalFunc
             $where.= " AND namaOrsospol LIKE '%$search%'";
         }
 
+
         $jenisOrsospol = new JenisOrsospolKesbangpol();
         $data_jenisOrsospol = $jenisOrsospol->selectAll("WHERE namaJenisorsospol = 'ORMAS'")[0];
+
         $datas = $this->ormas->selectAll($data_jenisOrsospol['idJenisorsospol'], $where);
 
         return $this->render_template('orsospol/index', ['datas' => $datas]);
@@ -41,28 +43,100 @@ class OrsospolController extends GlobalFunc
         $idUser = $this->session->get('idUser');
         $jenisOrsospol = new JenisOrsospolKesbangpol();
         $data_jenisOrsospol = $jenisOrsospol->selectAll("WHERE namaJenisorsospol = 'ORMAS'")[0];
-        $datas = $this->model->selectAll($data_jenisOrsospol['idJenisorsospol']);
-        // $datas = $this->model->selectAll($data_jenisOrsospol['idJenisorsospol'], "AND idUser = '$idUser'");
 
-        return $this->render_template('organisasi-terdaftar/ormas', ['datas' => $datas]);
+        // pagination
+        $page = $request->query->get('page') ? $request->query->get('page') : '1';
+        $result_per_page = 6;
+
+        $countRows = $this->model->countRows($data_jenisOrsospol['idJenisorsospol'])['count'];
+        $page_first_result = ($page - 1) * $result_per_page;
+        $number_of_page = ceil($countRows / $result_per_page);
+
+        $pagination = [
+            'current_page' => $page,
+            'number_of_page' => $number_of_page,
+            'page_first_result' => $page_first_result,
+            'result_per_page' => $result_per_page,
+            'countRows' => $countRows
+        ];
+
+        $datas = $this->model->selectAll($data_jenisOrsospol['idJenisorsospol'], " LIMIT " . $page_first_result . "," . $result_per_page);
+
+        return $this->render_template('organisasi-terdaftar/ormas', ['datas' => $datas, 'pagination' => $pagination]);
     }
+
     public function okp(Request $request)
     {
-        $data_okp = $this->model->selectAll("jor60d0574b03b65");
+        $jenisOrsospol = new JenisOrsospolKesbangpol();
+        $data_jenisOrsospol = $jenisOrsospol->selectAll("WHERE namaJenisorsospol = 'OKP'")[0];
 
-        return $this->render_template('organisasi-terdaftar/okp', ['data_okp' => $data_okp]);
+        // pagination
+        $page = $request->query->get('page') ? $request->query->get('page') : '1';
+        $result_per_page = 6;
+
+        $countRows = $this->model->countRows($data_jenisOrsospol['idJenisorsospol'])['count'];
+        $page_first_result = ($page - 1) * $result_per_page;
+        $number_of_page = ceil($countRows / $result_per_page);
+
+        $pagination = [
+            'current_page' => $page,
+            'number_of_page' => $number_of_page,
+            'page_first_result' => $page_first_result,
+            'result_per_page' => $result_per_page,
+            'countRows' => $countRows
+        ];
+        $datas = $this->model->selectAll($data_jenisOrsospol['idJenisorsospol'], " LIMIT " . $page_first_result . "," . $result_per_page);
+
+        return $this->render_template('organisasi-terdaftar/okp', ['datas' => $datas, 'pagination' => $pagination]);
     }
+    
     public function komunitas(Request $request)
     {
-        $data_komunitas = $this->model->selectAll("jor60d0575b7b225");
+        $jenisOrsospol = new JenisOrsospolKesbangpol();
+        $data_jenisOrsospol = $jenisOrsospol->selectAll("WHERE namaJenisorsospol = 'Komunitas'")[0];
 
-        return $this->render_template('organisasi-terdaftar/komunitas', ['data_komunitas' => $data_komunitas]);
+        // pagination
+        $page = $request->query->get('page') ? $request->query->get('page') : '1';
+        $result_per_page = 6;
+
+        $countRows = $this->model->countRows($data_jenisOrsospol['idJenisorsospol'])['count'];
+        $page_first_result = ($page - 1) * $result_per_page;
+        $number_of_page = ceil($countRows / $result_per_page);
+
+        $pagination = [
+            'current_page' => $page,
+            'number_of_page' => $number_of_page,
+            'page_first_result' => $page_first_result,
+            'result_per_page' => $result_per_page,
+            'countRows' => $countRows
+        ];
+        $datas = $this->model->selectAll($data_jenisOrsospol['idJenisorsospol'], " LIMIT " . $page_first_result . "," . $result_per_page);
+
+        return $this->render_template('organisasi-terdaftar/komunitas', ['datas' => $datas, 'pagination' => $pagination]);
     }
     public function parpol(Request $request)
     {
-        $data_parpol = $this->model->selectAll("jor60d05997283b8");
+        $jenisOrsospol = new JenisOrsospolKesbangpol();
+        $data_jenisOrsospol = $jenisOrsospol->selectAll("WHERE namaJenisorsospol = 'PARPOL'")[0];
 
-        return $this->render_template('organisasi-terdaftar/parpol', ['data_parpol' => $data_parpol]);
+        // pagination
+        $page = $request->query->get('page') ? $request->query->get('page') : '1';
+        $result_per_page = 6;
+
+        $countRows = $this->model->countRows($data_jenisOrsospol['idJenisorsospol'])['count'];
+        $page_first_result = ($page - 1) * $result_per_page;
+        $number_of_page = ceil($countRows / $result_per_page);
+
+        $pagination = [
+            'current_page' => $page,
+            'number_of_page' => $number_of_page,
+            'page_first_result' => $page_first_result,
+            'result_per_page' => $result_per_page,
+            'countRows' => $countRows
+        ];
+        $datas = $this->model->selectAll($data_jenisOrsospol['idJenisorsospol'], " LIMIT " . $page_first_result . "," . $result_per_page);
+
+        return $this->render_template('organisasi-terdaftar/parpol', ['datas' => $datas, 'pagination' => $pagination]);
     }
 
     public function create(Request $request)

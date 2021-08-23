@@ -72,7 +72,7 @@
           <iframe src="" frameborder="0" class="fileSakipPDF w-100" height="500px" toolbar="false"></iframe>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-outline-danger btn-sm" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>

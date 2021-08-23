@@ -17,7 +17,7 @@
     <?php include(__DIR__ . '/../../mobilemenu.php') ?>
     <?php include(__DIR__ . '/../../mobilenav.php') ?>
     <?php include(__DIR__ . '/../../navbar.php') ?>
-    
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 mb-3">
@@ -29,13 +29,16 @@
                             <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
                                 Tambah
                             </button>
-                            <a href="/informasi-kesbangpol/berita/approval" class="btn btn-sm btn-success">Approval berita</a>
+                            <?php if ($aliasRole == 'kesbangpol') { ?>
+                                <a href="/informasi-kesbangpol/berita/approval" class="btn btn-sm btn-success">Approval berita</a>
+                            <?php } ?>
                             <table class="table table-sm">
                                 <thead>
                                     <tr>
                                         <td>No</td>
                                         <td>Judul Berita</td>
                                         <td>Tanggal Publish</td>
+                                        <td>Penulis</td>
                                         <td>Aksi</td>
                                     </tr>
                                 </thead>
@@ -46,6 +49,7 @@
                                             <td><?= $value['namaBerita'] ?></td>
                                             <!-- <td><?= $value['authorBerita'] ?></td> -->
                                             <td><?= $value['dateCreate'] ?></td>
+                                            <td><?= $value['namaUser'] ?></td>
                                             <td>
                                                 <button type="button" class="btn btn-sm btn-success my-2" data-bs-toggle="modal" data-bs-target="#detailModal" data-bs-idBerita="<?= $value['idBerita'] ?>">
                                                     Lihat
@@ -74,7 +78,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="berita/store" method="post" enctype="multipart/form-data">
+                                    <form action="berita/store" method="post" enctype="multipart/form-data" class="formSubmit">
                                         <div class="mb-3">
                                             <label for="exampleFormControlInput1" class="form-label">Judul Berita</label>
                                             <input type="text" name="namaBerita" class="form-control">
@@ -92,14 +96,36 @@
                                             </select>
                                         </div>
                                         <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">Konten Berita</label>
-                                            <textarea id="editor1" name="deskripsiBerita"></textarea>
+                                            <label for="exampleFormControlInput1" class="form-label">Tag Berita (Opsional)</label>
+                                            <textarea name="tagBerita" class="form-control"></textarea>
+                                            <span class="text-muted">Masukan tag berita menggunakan separator koma</span>
                                         </div>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <label for="">Tim Editor</label>
+                                        <div class="input-group mb-3" style="width: 60%;">
+                                            <input type="text" class="form-control search-pegawai" placeholder="Cari berdasarkan nama pegawai" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
+                                        </div>
+                                        <table class="table table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <td><b>Nama Pegawai</b></td>
+                                                    <td><b>Jabatan</b></td>
+                                                    <td><b>NIP</b></td>
+                                                    <td><b>Email</b></td>
+                                                    <td><b>Aksi</b></td>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="selected-pegawai">
+                                            </tbody>
+                                            <tbody class="list-pegawai">
+                                            </tbody>
+                                        </table>
+
+                                        <button type="submit" class="btn btn-primary mt-3">Submit</button>
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-outline-danger btn-sm" data-bs-dismiss="modal">Close</button>
                                 </div>
                             </div>
                         </div>
@@ -138,7 +164,7 @@
                                     </form>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-outline-danger btn-sm" data-bs-dismiss="modal">Close</button>
                                 </div>
                             </div>
                         </div>
@@ -175,7 +201,7 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-outline-danger btn-sm" data-bs-dismiss="modal">Close</button>
                                 </div>
                             </div>
                         </div>
@@ -296,6 +322,42 @@
                 .catch(error => {
                     console.error(error);
                 });
+
+            $('.search-pegawai').on('keyup', function() {
+                var modal = $(this).parents().find('.formSubmit');
+                $.ajax({
+                    type: "GET",
+                    url: "/pegawai-kesbangpol/get",
+                    data: {search: $(this).val()}
+                }).done(function(data) {
+                    var content = "";
+                    for (let index = 0; index < data.detail.length; index++) {
+                        const element = data.detail[index];
+                        content+= '<tr><td><input class="inputIdpegawai" type="hidden" name="" value="'+element.idUser+'">'+element.namaPegawai+'</td><td>'+element.jabatanPegawai+'</td><td>'+element.nipPegawai+'</td><td>'+element.emailPegawai+'</td><td><button type="button" class="select-pegawai btn btn-success btn-sm">Pilih</button></td></tr>';
+                    }
+                    modal.find('.list-pegawai').html(content);
+                })
+            });
+
+            $(document).on('click', '.select-pegawai', function() {
+                var tableRow = $(this).parent().parent();
+                var modal = $(this).parents().find('.formSubmit');
+                tableRow.find('.inputIdpegawai').prop('name', 'idUser[]');
+                tableRow.css('background-color', 'lightgrey')
+                var tdButton = $(this).parent();
+                tdButton.html('<button type="button" class="hapus-pegawai btn btn-danger btn-sm">Hapus</button>');
+                modal.find('.selected-pegawai').append(tableRow);
+            })
+
+            $(document).on('click', '.hapus-pegawai', function() {
+                var tableRow = $(this).parent().parent();
+                var tdButton = $(this).parent();
+                var modal = $(this).parents().find('.formSubmit');
+                tdButton.html('<button type="button" class="select-pegawai btn btn-success btn-sm">Pilih</button>');
+                tableRow.css('background-color', 'white')
+                tableRow.find('.inputIdpegawai').prop('name', '');
+                modal.find('.list-pegawai').append(tableRow);
+            })
 
         })
     </script>

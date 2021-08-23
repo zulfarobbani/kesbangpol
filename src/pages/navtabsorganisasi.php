@@ -45,21 +45,24 @@
   </div>
 </div>
 <?php if ($idRole != '') { ?>
-  <?php if ($requestUri == '/organisasi-terdaftar/ormas') { ?>
+  <?php if ($requestUri == '/organisasi-terdaftar/ormas' && $idJenisorsospol == 'jor60d0573fb33fe') { ?>
     <div class="d-flex flex-row-reverse">
-      <a class="btn btn-outline-danger navy" href="/organisasi-terdaftar-kesbangpol/ormas"><i class="fas fa-edit"></i> Edit</a>
+      <a class="btn btn-outline-danger navy" href="/organisasi-terdaftar-kesbangpol/ormas"><i class="fas fa-edit"></i> <?= $idRole == '9asdkqhjwew' ? 'Edit' : 'Profil Organisasi Anda' ?></a>
     </div>
-  <?php } else if ($requestUri == '/organisasi-terdaftar/okp') { ?>
+  <?php } ?>
+  <?php if ($requestUri == '/organisasi-terdaftar/okp' && $idJenisorsospol == 'jor60d0574b03b65') { ?>
     <div class="d-flex flex-row-reverse">
-      <a class="btn btn-outline-danger navy" href="/organisasi-terdaftar-kesbangpol/okp"><i class="fas fa-edit"></i> Edit</a>
+      <a class="btn btn-outline-danger navy" href="/organisasi-terdaftar-kesbangpol/okp"><i class="fas fa-edit"></i> <?= $idRole == '9asdkqhjwew' ? 'Edit' : 'Profil Organisasi Anda' ?></a>
     </div>
-  <?php } else if ($requestUri == '/organisasi-terdaftar/komunitas') { ?>
+  <?php } ?>
+  <?php if ($requestUri == '/organisasi-terdaftar/komunitas' && $idJenisorsospol == 'jor60d0575b7b225') { ?>
     <div class="d-flex flex-row-reverse">
-      <a class="btn btn-outline-danger navy" href="/organisasi-terdaftar-kesbangpol/komunitas"><i class="fas fa-edit"></i> Edit</a>
+      <a class="btn btn-outline-danger navy" href="/organisasi-terdaftar-kesbangpol/komunitas"><i class="fas fa-edit"></i> <?= $idRole == '9asdkqhjwew' ? 'Edit' : 'Profil Organisasi Anda' ?></a>
     </div>
-  <?php } else { ?>
+  <?php } ?>
+  <?php if ($requestUri == '/organisasi-terdaftar/parpol' && $idJenisorsospol == 'jor60d05997283b8') { ?>
     <div class="d-flex flex-row-reverse">
-      <a class="btn btn-outline-danger navy" href="/organisasi-terdaftar-kesbangpol/parpol"><i class="fas fa-edit"></i> Edit</a>
+      <a class="btn btn-outline-danger navy" href="/organisasi-terdaftar-kesbangpol/parpol"><i class="fas fa-edit"></i> <?= $idRole == '9asdkqhjwew' ? 'Edit' : 'Profil Organisasi Anda' ?></a>
     </div>
   <?php } ?>
 <?php } ?>

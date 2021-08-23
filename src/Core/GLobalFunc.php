@@ -42,10 +42,13 @@ class GlobalFunc
         $this->beginSession();
 
         $data['namaUser'] = !is_null($this->session) ? $this->session->get('namaUser') : null;
+        $data['idOrsospol'] = !is_null($this->session) ? $this->session->get('idOrsospol') : null;
         $data['namaOrsospol'] = !is_null($this->session) ? $this->session->get('namaOrsospol') : null;
+        $data['singkatanOrsospol'] = !is_null($this->session) ? $this->session->get('singkatanOrsospol') : null;
         $data['noAHU'] = !is_null($this->session) ? $this->session->get('noAHU') : null;
         $data['idJenisorsospol'] = !is_null($this->session) ? $this->session->get('idJenisorsospol') : null;
         $data['idRole'] = !is_null($this->session) ? $this->session->get('idRole') : null;
+        $data['aliasRole'] = !is_null($this->session) ? $this->session->get('aliasRole') : null;
 
         $kontakdaruratModel = new KontakDarurat();
         $data['kontakDarurat'] = $kontakdaruratModel->selectAll();

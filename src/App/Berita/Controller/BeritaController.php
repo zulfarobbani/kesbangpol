@@ -4,6 +4,7 @@ namespace App\Berita\Controller;
 
 use App\Banner\Model\Banner;
 use App\Berita\Model\Berita;
+use App\CommentBerita\Model\CommentBerita;
 use App\Media\Model\Media;
 use Core\GlobalFunc;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -33,13 +34,23 @@ class BeritaController extends GlobalFunc
     {
         $id = $request->attributes->get('id');
         $detail = $this->model->selectOne($id);
+        $timeditorberita = $this->model->selectTimeditorberita($id);
+        $authorberita = $this->model->selectAuthorberita($detail['authorBerita']);
+        $tagberita = $this->model->selectTag($detail['idBerita']);
 
-        return $this->render_template('informasi/berita/detail', ['detail' => $detail]);
+        $msgSuccess = $this->session->getFlashBag()->get('msgSuccess', []);
+
+        $comment = new CommentBerita();
+        $commentBerita = $comment->selectAll("WHERE idBerita = '$id'");
+        // dd($commentBerita);
+
+        return $this->render_template('informasi/berita/detail', ['detail' => $detail, 'timeditorberita' => $timeditorberita, 'authorberita' => $authorberita, 'tagberita' => $tagberita, 'msgSuccess' => $msgSuccess, 'commentBerita' => $commentBerita]);
     }
 
     public function beritaKonten(Request $request)
     {
-        $datas = $this->model->selectAll();
+        $idUser = $this->session->get('idUser');
+        $datas = $this->model->selectAll("WHERE authorBerita = '$idUser'");
 
         return $this->render_template('informasi/berita/form', ['datas' => $datas]);
     }
@@ -53,9 +64,13 @@ class BeritaController extends GlobalFunc
 
     public function beritaKontenStore(Request $request)
     {
-        $idUser = $this->session->get('idUser');
+        // dd($request->request);
         $data = $request->request;
+        $tagBerita = explode(',', $request->request->get('tagBerita'));
+        $idUser = $this->session->get('idUser');
         $berita = $this->model->create($data, $idUser);
+        $timeditorberita = $this->model->createTimeditor($data, $berita);
+        $storetagBerita = $this->model->createTagberita($tagBerita, $berita);
 
         // store cover berita
         $media = new Media();

@@ -78,14 +78,12 @@
     <div class="container h-100">
         <div class="wrapper mt-3 mb-4">
             <div class="carousel owl-carousel">
-                <?php foreach ($banner as $key => $value) { ?>
+                <?php foreach ($banner_dashboard as $key => $value) { ?>
                     <!--<div class="card card-1" style="height: 170px;background: url(/assets/media/<?= $value['pathMedia'] ?>);background-size: 460px;background-position: center;background-repeat: no-repeat;">-->
                     <img src="/assets/media/<?= $value['pathMedia'] ?>" class="card-img img-fluid" alt="...">
                 <?php } ?>
             </div>
         </div>
-
-
 
         <!-- <h3 class="d-flex justify-content-center mt-2" style="color: #adadad;margin: 0;">Selamat Datang</h3>
         <h6 class="d-flex justify-content-center text-center" style="color: #adadad;margin: 0;">di</h6>
@@ -185,10 +183,10 @@
          </div>
          <h6 class="text-center">Kantor Kesatuan Bangsa dan Politik<br>Pemerintah Kota Cimahi</h6>
          <p class="text-center hubungiteks">Gedung Perkantoran Pemkot Cimahi<br>Jl. Demang Hardjakusumah Gedung C,<br>Lantai 4 Kota Cimahi</p>
-         <p class="text-center hubungiteks">022 1234 5678</p>
+         <p class="text-center hubungiteks"><i class="fas fa-phone"></i> (022) 1234 5678</p>
        </div>
        <div class="modal-footer">
-         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+         <button type="button" class="btn btn-outline-danger btn-sm" data-bs-dismiss="modal">Close</button>
        </div>
      </div>
    </div>

@@ -76,7 +76,7 @@ header p {
 .gallery {
   padding: 40px 0 300px;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .gallery .nest {
   padding-top: 25px;
@@ -662,4 +662,74 @@ font-size:10pt!important;
 
 .tomol{
   transition:background-color 0.5s ease;
+}
+
+.tdMerahPutih {
+  height:100%;
+  width:100%;
+}
+.tdMerahPutih:hover {
+  background: linear-gradient(180deg, red 50%, white 50%)!important;
+}
+.text-tdMerahputih {
+  z-index: 1;
+}
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: #fd0d0d;
+  border-color: #fd0d0d;
+}
+
+.page-link:focus {
+  z-index: 3;
+  color: #ca0a0a;
+  background-color: #efe9e9;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(253 13 13 / 25%);
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  color: #fd0d0d;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #e6dede;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  color: #fd0d0d;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #e6dede;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  color: #fd0d0d;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #e6dede;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.page-item.disabled .page-link {
+  color: #7d6c6c;
+  pointer-events: none;
+  background-color: #fff;
+  border-color: #e6dede;
+}
+
+.page-link:hover {
+  z-index: 2;
+  color: #ca0a0a;
+  background-color: #efe9e9;
+  border-color: #e6dede;
 }

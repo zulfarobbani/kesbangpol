@@ -22,14 +22,43 @@ $app = new GlobalFunc();
 //     }
 // ]));
 
-$routes->add('LoginRegister', new Route('/login-register', [
-    '_controller' => 'App\LoginRegister\Controller\LoginRegisterController::index',
+// login orsospol
+$routes->add('LoginRegister', new Route('/login-orsospol', [
+    '_controller' => 'App\Login\Controller\LoginController::index',
 ]));
 $routes->add('login', new Route('/login', [
     '_controller' => 'App\Login\Controller\LoginController::login',
 ]));
+// login pegawai
+$routes->add('LoginRegisterPegawai', new Route('/login-pegawai', [
+    '_controller' => 'App\Login\Controller\LoginController::indexPegawai',
+]));
+$routes->add('loginActionPegawai', new Route('/login-action-pegawai', [
+    '_controller' => 'App\Login\Controller\LoginController::loginPegawai',
+]));
+// login publik
+$routes->add('LoginRegisterPublik', new Route('/login-publik', [
+    '_controller' => 'App\Login\Controller\LoginController::indexPublik',
+]));
+$routes->add('loginActionPublik', new Route('/login-action-publik', [
+    '_controller' => 'App\Login\Controller\LoginController::loginPublik',
+]));
+
 $routes->add('logout', new Route('/logout', [
     '_controller' => 'App\Login\Controller\LoginController::logout',
+]));
+
+// register orsospol
+$routes->add('registerOrsospol', new Route('/register-orsospol', [
+    '_controller' => 'App\Register\Controller\RegisterController::register',
+]));
+// register pegawai
+$routes->add('registerPegawai', new Route('/register-pegawai', [
+    '_controller' => 'App\Register\Controller\RegisterController::registerPegawai',
+]));
+// register publik
+$routes->add('registerPublik', new Route('/register-publik', [
+    '_controller' => 'App\Register\Controller\RegisterController::registerPublik',
 ]));
 
 
@@ -73,8 +102,24 @@ $routes->add('layananKontenDelete', new Route('/layanan-kesbangpol/{id}/delete',
     '_controller' => 'App\LayananKesbangpol\Controller\LayananKesbangpolController::layananKontenDelete',
 ]));
 
-$routes->add('registerOrsospol', new Route('/register-orsospol', [
-    '_controller' => 'App\Register\Controller\RegisterController::register',
+//pegawai
+$routes->add('pegawaiKonten', new Route('/pegawai-kesbangpol', [
+    '_controller' => 'App\Pegawai\Controller\PegawaiController::pegawaiKonten',
+]));
+$routes->add('pegawaiKontenStore', new Route('/pegawai-kesbangpol/store', [
+    '_controller' => 'App\Pegawai\Controller\PegawaiController::pegawaiKontenStore',
+]));
+$routes->add('pegawaiKontenGet', new Route('/pegawai-kesbangpol/{id}/get', [
+    '_controller' => 'App\Pegawai\Controller\PegawaiController::    ',
+]));
+$routes->add('pegawaiKontenSearch', new Route('/pegawai-kesbangpol/get', [
+    '_controller' => 'App\Pegawai\Controller\PegawaiController::pegawaiKontenSearch',
+]));
+$routes->add('pegawaiKontenUpdate', new Route('/pegawai-kesbangpol/{id}/update', [
+    '_controller' => 'App\Pegawai\Controller\PegawaiController::pegawaiKontenUpdate',
+]));
+$routes->add('pegawaiKontenDelete', new Route('/pegawai-kesbangpol/{id}/delete', [
+    '_controller' => 'App\Pegawai\Controller\PegawaiController::pegawaiKontenDelete',
 ]));
 
 //layanan unduhan
@@ -196,15 +241,29 @@ $routes->add('forumPrivate', new Route('/forum-private',[
 $routes->add('hubungiKami', new Route('/hubungi-kami', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::hubungiKami',
 ]));
+
+// berita
 $routes->add('informasiBerita', new Route('/informasi-berita', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::informasiBerita',
 ]));
+$routes->add('storeCommentberita', new Route('/comment/{id}/store', [
+    '_controller' => 'App\CommentBerita\Controller\CommentBeritaController::storeComment',
+]));
+$routes->add('storeCommentReplyberita', new Route('/comment/reply/{id}', [
+    '_controller' => 'App\CommentBerita\Controller\CommentBeritaController::storeCommentonReply',
+]));
+
+// galeri
 $routes->add('informasiGaleri', new Route('/informasi-galeri', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::informasiGaleri',
 ]));
+
+// pengumuman
 $routes->add('informasiPengumuman', new Route('/informasi-pengumuman', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::informasiPengumuman',
 ]));
+
+// struktur organisasi
 $routes->add('strukturOrganisasiTerdaftar', new Route('/struktur-organisasi-terdaftar', [
     '_controller' => 'App\Dashboard\Controller\DashboardController::strukturOrganisasiTerdaftar',
 ]));
@@ -323,7 +382,7 @@ $routes->add('bannerdelete', new Route('/informasi/banner/{id}/delete', [
 ]));
 // crud sakip end
 
-//curd users
+// users
 $routes->add('users', new Route('/users', [
     '_controller' => 'App\Users\Controller\UsersController::index',
 ]));
