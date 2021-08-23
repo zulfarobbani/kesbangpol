@@ -1,53 +1,59 @@
 <?php
 
-namespace App\CommentBerita\Controller;
+namespace App\LikeBerita\Controller;
 
 use App\Berita\Model\Berita;
-use App\CommentBerita\Model\CommentBerita;
+use App\LikeBerita\Model\LikeBerita;
 use App\Media\Model\Media;
 use Core\GlobalFunc;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 
-class CommentBeritaController extends GlobalFunc
+class LikeBeritaController extends GlobalFunc
 {
     public $model;
     public $model2;
 
     public function __construct()
     {
-        $this->model = new CommentBerita();
+        $this->model = new LikeBerita();
         $this->model2 = new Media();
         parent::beginSession();
     }
 
-    public function index(Request $request)
-    {
-        $datas = $this->model->selectAll();
-        return $this->render_template('informasi/pengumuman/index', ['datas' => $datas]);
-    }
-
-    public function create(Request $request)
-    {
-        return $this->render_template('informasi/pengumuman/create');
-    }
-
-    public function komentarBeritaApproval(Request $request)
-    {
-        $datas = $this->model->selectAll();
-
-        return $this->render_template('informasi/komentar/formApproval', ['datas' => $datas]);
-    }
-
-    public function komentarBeritaGet(Request $request)
+    public function storeLikeBerita(Request $request)
     {
         $id = $request->attributes->get('id');
-        $data = $this->model->selectOne($id);
-
-        return new JsonResponse([
-            'data' => $data
+        $this->model->create($request->request, $id, $this->session->get('idUser'));
+        
+        $berita = new Berita();
+        $getBerita = $berita->selectOne($id);
+        $berita->updateLikeComment($id, [
+            'countlikeBerita' => intval($getBerita['countlikeBerita']) + 1,
+            'countdislikeBerita' => $getBerita['countdislikeBerita'],
+            'countcommentBerita' => $getBerita['countcommentBerita'],
+            'countshareBerita' => $getBerita['countshareBerita']
         ]);
+
+        return new RedirectResponse('/informasi/berita/'.$id);
+    }
+    
+    public function storeDislikeBerita(Request $request)
+    {
+        $id = $request->attributes->get('id');
+        $this->model->create($request->request, $id, $this->session->get('idUser'));
+        
+        $berita = new Berita();
+        $getBerita = $berita->selectOne($id);
+        $berita->updateLikeComment($id, [
+            'countlikeBerita' => $getBerita['countlikeBerita'],
+            'countdislikeBerita' => intval($getBerita['countdislikeBerita']) + 1,
+            'countcommentBerita' => $getBerita['countcommentBerita'],
+            'countshareBerita' => $getBerita['countshareBerita']
+        ]);
+
+        return new RedirectResponse('/informasi/berita/'.$id);
     }
 
     public function storeComment(Request $request)
@@ -59,10 +65,10 @@ class CommentBeritaController extends GlobalFunc
         $berita = new Berita();
         $getBerita = $berita->selectOne($idBerita);
         $berita->updateLikeComment($idBerita, [
-            'countlikeBerita' => 0,
-            'countdislikeBerita' => 0,
+            'countlikeBerita' => $getBerita['countlikeBerita'],
+            'countdislikeBerita' => $getBerita['countdislikeBerita'],
             'countcommentBerita' => intval($getBerita['countcommentBerita']) + 1,
-            'countshareBerita' => 0
+            'countshareBerita' => $getBerita['countshareBerita']
         ]);
 
         $this->session->getFlashBag()->add('msgSuccess', "Komentar anda berhasil di tambahkan!");

@@ -252,6 +252,12 @@ $routes->add('storeCommentberita', new Route('/comment/{id}/store', [
 $routes->add('storeCommentReplyberita', new Route('/comment/reply/{id}', [
     '_controller' => 'App\CommentBerita\Controller\CommentBeritaController::storeCommentonReply',
 ]));
+$routes->add('storeLikeberita', new Route('/likeBerita/{id}/store', [
+    '_controller' => 'App\LikeBerita\Controller\LikeBeritaController::storeLikeBerita',
+]));
+$routes->add('storeDislikeberita', new Route('/dislikeBerita/{id}/store', [
+    '_controller' => 'App\LikeBerita\Controller\LikeBeritaController::storeDislikeBerita',
+]));
 
 // galeri
 $routes->add('informasiGaleri', new Route('/informasi-galeri', [
@@ -320,6 +326,17 @@ $routes->add('beritaKontenApproval', new Route('/informasi-kesbangpol/berita/app
 ]));
 $routes->add('beritaKontenApprovalStore', new Route('/informasi-kesbangpol/berita/{id}/approval', [
     '_controller' => 'App\Berita\Controller\BeritaController::beritaKontenApprovalStore',
+]));
+
+// approval komentar
+$routes->add('komentarBeritaApproval', new Route('/informasi-kesbangpol/komentar/approval', [
+    '_controller' => 'App\CommentBerita\Controller\CommentBeritaController::komentarBeritaApproval',
+]));
+$routes->add('komentarBeritaApprovalGet', new Route('/informasi-kesbangpol/komentar/approval/{id}/get', [
+    '_controller' => 'App\CommentBerita\Controller\CommentBeritaController::komentarBeritaGet',
+]));
+$routes->add('komentarBeritaApprovalStore', new Route('/informasi-kesbangpol/komentar/{id}/approval', [
+    '_controller' => 'App\CommentBerita\Controller\CommentBeritaController::komentarBeritaApprovalStore',
 ]));
 
 //curd pengumuman

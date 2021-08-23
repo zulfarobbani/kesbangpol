@@ -115,22 +115,22 @@
                                         <a href="/likeBerita/<?= $detail['idBerita'] ?>/store" class="text-dark text-decoration-none">
                                             <i class="far fa-thumbs-up"></i>
                                         </a>
-                                        <span>0</span> Suka
+                                        <span><?= $detail['countlikeBerita'] ?></span> Suka
                                     </div>
                                     <div class="col-2 text-center text-grey">
                                         <a href="/dislikeBerita/<?= $detail['idBerita'] ?>/store" class="text-dark text-decoration-none">
                                             <i class="far fa-thumbs-up" style="-ms-transform: rotate(180deg);transform: rotate(180deg);"></i>
                                         </a>
-                                        <span>0</span> Tidak Suka
+                                        <span><?= $detail['countdislikeBerita'] ?></span> Tidak Suka
                                     </div>
                                     <div class="col-2 text-center text-grey">
                                         <i class="far fa-comment"></i>
-                                        <span>0</span> Komentar
+                                        <span><?= $detail['countcommentBerita'] ?></span> Komentar
                                     </div>
                                     <div class="col-2 text-center text-grey">
                                         <a href="#" class="text-dark text-decoration-none btn-sosmed" data-bs-toggle="modal" data-bs-target="#modalSosmed" data-bs-url="<?= $site_url ?>/informasi/berita/<?= $detail['idBerita'] ?>">
                                             <i class="fas fa-share-alt"></i>
-                                            <span>0</span> Bagikan
+                                            <span><?= $detail['countshareBerita'] ?></span> Bagikan
                                         </a>
                                     </div>
                                 </div>
@@ -209,28 +209,40 @@
                                                 </div>
                                             </form>
                                         </div>
-                                        <div class="card shadow my-2 p-2">
-                                            <span>Balasan</span>
-                                            <div class="row my-3">
-                                                <div class="col-sm-3">
-                                                    <img src="https://awsimages.detik.net.id/community/media/visual/2019/09/25/f970f73a-2f96-47f0-9de8-70ba736a287f.jpeg?w=750&q=90" class="rounded-circle" width="80px">
-                                                </div>
-                                                <div class="col-sm-8">
-                                                    <div class="d-flex">
-                                                        <h6>Johan Yudiono</h6>
-                                                        <span class="text-muted ps-3" style="font-size: 13px;">2 Bulan yang lalu</span>
+                                        <?php if (count($data['reply']) > 0) { ?>
+                                            <?php foreach ($data['reply'] as $key1 => $data1) { ?>
+                                                <div class="card shadow my-2 p-2">
+                                                    <span>Balasan</span>
+                                                    <div class="row my-3">
+                                                        <div class="col-sm-3">
+                                                            <img src="https://awsimages.detik.net.id/community/media/visual/2019/09/25/f970f73a-2f96-47f0-9de8-70ba736a287f.jpeg?w=750&q=90" class="rounded-circle" width="80px">
+                                                        </div>
+                                                        <div class="col-sm-8">
+                                                            <div class="d-flex">
+                                                                <h6><b><?= $data1['namaUser'] ?></b></h6>
+                                                                <!-- <span class="text-muted ps-3" style="font-size: 13px;">2 Bulan yang lalu</span> -->
+                                                            </div>
+                                                            <p class="text-grey"><?= $data1['commentText'] ?></p>
+                                                            <div class="row d-flex mb-2">
+                                                                <div class="col-3 text-center text-grey">
+                                                                    <a href="/likeBerita/<?= $detail['idBerita'] ?>/store" class="text-dark text-decoration-none">
+                                                                        <i class="far fa-thumbs-up"></i>
+                                                                    </a>
+                                                                    <span style="font-size: 12px;"><span>0</span> Suka</span>
+                                                                </div>
+                                                                <div class="col-6 text-center text-grey">
+                                                                    <a href="/dislikeBerita/<?= $detail['idBerita'] ?>/store" class="text-dark text-decoration-none">
+                                                                        <i class="far fa-thumbs-up" style="-ms-transform: rotate(180deg);transform: rotate(180deg);"></i>
+                                                                    </a>
+                                                                    <span style="font-size: 12px;"><span>0</span> Tidak Suka</span>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
                                                     </div>
-                                                    <p class="text-grey">
-                                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-                                                        nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-                                                        erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
-                                                        tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-                                                    </p>
-                                                    <span class="pe-2 text-lightgrey"><i class="far fa-thumbs-up"></i>2k</span>
-                                                    <span class="pe-2 text-lightgrey"><i class="far fa-thumbs-down"></i></i>50</span>
                                                 </div>
-                                            </div>
-                                        </div>
+                                            <?php } ?>
+                                        <?php } ?>
                                     </div>
                                 </div>
                             <?php } ?>

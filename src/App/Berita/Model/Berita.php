@@ -234,4 +234,19 @@ class Berita extends GlobalFunc
             die();
         }
     }
+
+    public function updateLikeComment($idBerita, $datas)
+    {
+        $sql = "UPDATE " . $this->table . " SET countlikeBerita = '".$datas['countlikeBerita']."', countdislikeBerita = '".$datas['countdislikeBerita']."', countcommentBerita = '".$datas['countcommentBerita']."', countshareBerita = '".$datas['countshareBerita']."' WHERE ".$this->primaryKey." = '$idBerita'";
+        
+        try {
+            $data = $this->conn->prepare($sql);
+            $data->execute();
+
+            return $id;
+        } catch (PDOexception $e) {
+            echo $e;
+            die();
+        }
+    }
 }

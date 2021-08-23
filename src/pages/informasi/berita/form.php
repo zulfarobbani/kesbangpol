@@ -31,6 +31,7 @@
                             </button>
                             <?php if ($aliasRole == 'kesbangpol') { ?>
                                 <a href="/informasi-kesbangpol/berita/approval" class="btn btn-sm btn-success">Approval berita</a>
+                                <a href="/informasi-kesbangpol/komentar/approval" class="btn btn-sm btn-success">Approval Komentar Berita</a>
                             <?php } ?>
                             <table class="table table-sm">
                                 <thead>

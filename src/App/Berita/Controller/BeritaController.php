@@ -41,8 +41,7 @@ class BeritaController extends GlobalFunc
         $msgSuccess = $this->session->getFlashBag()->get('msgSuccess', []);
 
         $comment = new CommentBerita();
-        $commentBerita = $comment->selectAll("WHERE idBerita = '$id'");
-        // dd($commentBerita);
+        $commentBerita = $comment->selectAll("WHERE commentberita.idBerita = '$id' AND (commentonComment IS NULL OR commentonComment = '') AND approval = '1'");
 
         return $this->render_template('informasi/berita/detail', ['detail' => $detail, 'timeditorberita' => $timeditorberita, 'authorberita' => $authorberita, 'tagberita' => $tagberita, 'msgSuccess' => $msgSuccess, 'commentBerita' => $commentBerita]);
     }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 17, 2021 at 10:38 AM
+-- Generation Time: Aug 23, 2021 at 06:48 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -81,24 +81,31 @@ CREATE TABLE `berita` (
   `approvalBerita` int(1) NOT NULL DEFAULT 2,
   `authorBerita` varchar(255) NOT NULL,
   `dateCreate` date NOT NULL,
-  `jenisBerita` char(1) NOT NULL COMMENT '1=berita kesbangpol, 2=berita orsospol'
+  `jenisBerita` char(1) NOT NULL COMMENT '1=berita kesbangpol, 2=berita orsospol',
+  `countlikeBerita` int(11) NOT NULL DEFAULT 0,
+  `countdislikeBerita` int(11) NOT NULL DEFAULT 0,
+  `countcommentBerita` int(11) NOT NULL DEFAULT 0,
+  `countshareBerita` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `berita`
 --
 
-INSERT INTO `berita` (`idBerita`, `namaBerita`, `deskripsiBerita`, `idRelation`, `approvalBerita`, `authorBerita`, `dateCreate`, `jenisBerita`) VALUES
-('nws60ec078cde90c', 'Kesbangpol Aceh Dialog Isu Aktual Bersama Tokoh Abdya  Salinan', '&lt;p&gt;BLANGPIDIE - Badan Kesatuan Bangsa dan Kesatuan Politik (Kesbangpol) Provinsi Aceh melaksanakan kegiatan dialog isu Aktual di Aceh angkatan IX tahun 2021 bersama Lembaga Swadaya Masyarakat (LSM), Wartawan, Mahasiswa, Kepolisian, Kodim dan Satuan Kerja Perangkat Kabupaten (SKPK) Kabupaten Aceh Barat Daya (Abdya).&amp;nbsp;&lt;/p&gt;&lt;p&gt;Kegiatan yang mengusung tema &quot;Peran Sinergi Pemerintah dengan Masyarakat Dalam Kewaspadaan Dini di Daerah&quot; berlangsung di Aula Bappeda Abdya, Jum\'at (6/8/2021).&amp;nbsp;&lt;/p&gt;&lt;p&gt;Kepala Kesbangpol Aceh melalui Kabid Penanganan Konflik dan Kewaspadaan Nasional Badan, Suburhan mengatakan, pemerintah Aceh melalui badan Kesbangpol selama ini telah mengumpulkan data-data dan cerita daerah-daerah yang memiliki fenomena menonjol sesuai dengan ideologi, politik, ekonomi, sosial budaya, pertahanan dan keamanan.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Ia menjelaskan pelaksanaan kegiatan untuk mencermati situasi dan kondisi yang ada di Kabupaten Aceh Barat Daya (Abdya) terkait dengan potensi dan munculnya permasalahan di kalangan masyarakat.&lt;/p&gt;&lt;p&gt;&quot;Saya berharap perlunya peran serta aktif masyarakat dalam peningkatan kapasitas kelembagaan seperti Forum Kewaspadaan Dini Masyarakat (FKDM) dalam upaya melakukan deteksi dini,&quot; jelasnya.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Menurut Suburhan dalam mencermati situasi terkini, dimana pandemi virus covid-19 telah menjangkit diseluruh dunia, termasuk di Aceh. Di mana dampak dari pandemi ini juga telah mengakibatkan terganggunya nasional maupun daerah, baik dari sisi ekonomi, maupun kehidupan sosial masyarakat yang memerlukan penanganan yang cepat dan tepat.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Maka dari itu pula diperlukan masukan dan peran serta dari seluruh elemen masyarakat dalam penanganan dampak dari pandemi covid-19 baik dari sisi sektor ekonomi, keamanan maupun sosial kemasyarakatan.&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Sementara itu Zulkarnaini, Kasubbid Kewaspadaan Dini, Analisis Evaluasi dan Kebijakan Strategis Badan Kesbangpol Aceh mengatakan bahwa dialog Isu Aktual ini merupakan yang ke-IX dan sangat penting diikuti.&amp;nbsp;&lt;/p&gt;&lt;p&gt;&quot;Disini kita bersama - sama memecahkan masalah dan memperkuat koordinasi serta kerja sama antara pemerintah dan stakeholder,&quot; pungkasnya.&lt;/p&gt;&lt;p&gt;Sumber : https://anteroaceh.com/news/kesbangpol-aceh-dialog-isu-aktual-bersama-tokoh-abdya/index.html&lt;/p&gt;', '1', 1, 'usr61037f9c85184', '2021-07-12', '1'),
-('nws60fd135c15b04', 'Nasib PPKM Segera Diumumkan, Masukan Epidemiolog hingga Pekerja Harus Didengar', '<p>Hari ini pemerintah akan mengumumkan status PPKM Level 4 yang sebelumnya disebut PPKM Darurat. Presiden Jokowi dalam pernyataan sebelumnya menyebut jika kasus COVID-19 melandai, maka PPKM akan dilonggarkan secara bertahap mulai 26 Juli, besok.</p><p>Informasi yang dihimpun, konferensi pers terkait kejelasan status PPKM itu akan digelar hari ini. Anggota Komisi Kesehatan DPR, Saleh Partaonan Daulay, memberi sejumlah catatan.</p><p>\"Saya kira, pemerintah harus mendengarkan masukan dari berbagai pihak, ahli epidemiolog, kalangan pengusaha, pekerja, masyarakat terdampak, dan juga kelompok-kelompok masyarakat lainnya,\" kata Saleh, Minggu (25/7).</p><p>\"Masukan tersebut tentu sangat perlu untuk melengkapi hasil evaluasi PPKM Darurat yang telah dilaksanakan,\" tambah Saleh.</p><p>Bagi Saleh, kombinasi antara masukan dari berbagai pihak dan hasil evaluasi itulah semestinya yang dijadikan sebagai dasar bagi pemerintah untuk mengambil kebijakan berikutnya.</p><p>\"Tanpa diminta, sudah banyak kalangan yang bersuara. Mereka memberi masukan dari banyak aspek. Termasuk aspek efektivitas PPKM Darurat, kemampuan faskes, kecukupan tenaga medis, alat dan obat-obatan, bahkan sampai pada dampak yang ditimbulkan bagi roda perekonomian masyarakat. Tidak hanya ekonomi menengah ke atas, tetapi juga UMKM dan kelas menengah ke bawah. Ada juga yang memberi masukan terkait penguatan jaminan sosial, dan lain lain,\" urai politikus PAN ini.</p><p>Saleh mengamini, tidak mudah bagi pemerintah untuk menentukan kebijakan lanjutan. Pasalnya, masukan-masukan yang disampaikan juga cukup beragam. Misalnya, menurut informasi yang diamati Saleh, ada yang menilai bahwa PPKM Darurat berhasil, namun ada juga yang menilai tidak berhasil.</p><p>Pun, ada pula yang menilai perlu diperpanjang, ada yang menilai tidak perlu, dan ada yang menilai agar dicari kebijakan alternatif lain.</p><p>\"Dari semua itu, ujungnya nanti dikembalikan kepada pemerintah. Sebab, pemerintahlah yang memiliki data status penanganan COVID-19 di Indonesia. Pemerintah juga yang mengetahui dampak dari kebijakan tersebut terhadap kehidupan sosial ekonomi masyarakat\" ujar legislator dapil Sumut ini.</p><p>Lebih lanjut, Saleh menegaskan, jika pemerintah ternyata akan memperpanjang, maka harus dipastikan bahwa jaring pengaman sosial dalam bentuk bansos dan subsidi harus benar-benar diberikan ke masyarakat dan tepat sasaran.</p><p>\"Subsidi dan bantuan sosial itu kan tidak di seluruh Indonesia. Hanya di daerah yang diberlakukan PPKM darurat atau PPKM level 4. Perhitungan terhadap hal ini juga harus dilakukan secara cermat. Harus dipastikan tidak ada masyarakat yang dilupakan,\" tutur Saleh.</p><p>Saleh menyarankan agar di dalam pengumuman perpanjangan atau pelonggaran kebijakan PPKM, pemerintah memberikan alasan secara terbuka. Tidak perlu ada yang ditutupi.</p><p>\"Pemerintah harus menunjukkan bahwa semua potensi yang dimiliki sudah dikerahkan secara maksimal. Harus dijelaskan juga bahwa masukan dari masyarakat selalu didengar. Karena itu, perbaikan selalu dilakukan sesuai dengan apa yang diharapkan oleh semua pihak,\" tutup Saleh.</p><p>Sumber : https://kumparan.com/kumparannews/nasib-ppkm-segera-diumumkan-masukan-epidemiolog-hingga-pekerja-harus-didengar-1wCZSGYvj82/full</p>', '1', 1, 'usr6106c82a3b736', '2021-07-25', '2'),
-('nws6114c8fae9013', 'Potensi Gejolak saat PPKM, Kesbangpol Minta Masyarakat Solid Hadapi pendemi', '<p>BANDUNG, iNews.id - Badan Kesatuan Bangsa dan Politik (Kesbangpol) Kota Bandung meminta masyarakat ikut terlibat menjaga stabilitas lingkungan. Permintaan itu untuk menyikapi adanya penolakan terhadap pelaksanaan PPKM Darurat.</p><p>Sekretaris Badan Kesatuan Bangsa dan Politik (Kesbangpol) Kota Bandung, Inci Dermaga Mustawan, berharap soliditas masyarakat bisa tetap dijaga untuk menghadapi pandemi Covid-19. Kekompakan masyarakat ini menjadi penguat agar upaya pemerintah dapat membuahkan hasil maksimal.</p><p>Inci menyebutkan, di masa pandemi Covid-19 ini bukan hanya berdampak terhadap sektor kesehatan dan perekonomian masyarakat. Lebih jauh lagi hal tersebut bisa memicu potensi konflik di tengah masyarakat.</p><p>&nbsp;</p>', '1', 2, 'usr61037f9c85184', '2021-08-12', '1'),
-('nws6114c9516e7a2', 'Tingkatkan Sinergisitas, Badan Kesbangpol Provinsi Jambi Gelar Raker Tim Pemantau  Orang Asing', '<p>JAMBERITA.COM-&nbsp;Badan Kesatuan Kebangsaan dan Politik (Bakesbangpol) Provinsi Jambi menggelar rapat kerja Pemnatauan Tenaga Asing (TKA) yang masuk ke Provinsi Jambi di Aula Bakesbangpol Provinsi Jambi, Selasa (27/7/2021).</p><p>Rapat kerja yang dihadiri Kapolda Jambi diwakili Kasubdit Kamneg Intelkam, Kadiv Imigrasi Kemenkumham serta instansi terkait .</p><p>Kepala Badan Kantor Kesbangpol Provinsi Jambi H.Mukti .SE dalam sambutannya mengatakan berdasarkan Peraturan Menteri Dalam Negeri (Permendagri) yang tertuang nomor 50 Tahun 2010 tentang Pedoman Pemantauan orang Asing. Organisasi masyarakat asing di daerah .</p><p>Ia mengatakan rapat ini penting&nbsp;guna meningkatkan koordinasi dan konsolidasi serta sinergitas dalam hal pemantauan orang asing.&nbsp;\"Konsolidasi dan koordinasi ini perlu sinergitas seluruh instansi terkait guna mewujudkan Jambi mantap 2024 yang Maju Aman ,Nyaman Tertib Amanah dan Profesional,\" ungkap Kaban Kesbangpol Provinsi Jambi.</p>', '1', 2, 'usr61037f9c85184', '2021-08-12', '1'),
-('nws6114c997df9e0', 'Pemkab Rejang Lebong segera cairkan bantuan 10 parpol', '<p>Rejang Lebong, Bengkulu (ANTARA) - Badan Kesatuan Bangsa dan Politik (Kesbangpol) Kabupaten Rejang Lebong, Provinsi Bengkulu, akan segera mencairkan bantuan untuk 10 partai politik (parpol) yang memperoleh kursi dewan di daerah itu.</p><p>Kepala Badan Kesbangpol Rejang Lebong Maxpinal saat dihubungi di Rejang Lebong, Rabu, mengatakan pemerintah daerah itu pada tahun ini telah menganggarkan dana sebesar Rp1,016 miliar untuk bantuan 10 partai politik yang memiliki kursi di DPRD&nbsp;setempat.</p><p>\"Mereka yang memiliki kursi di DPRD Rejang Lebong saat ini sudah mengajukan permintaan pencairan dana bantuan parpol pada tahun anggarn 2021, saat ini masih dalam&nbsp; pencairan,\" katanya.</p>', '1', 2, 'usr61037f9c85184', '2021-08-12', '1'),
-('nws6114ca5885362', 'Tim Pemantau Orang Asing Dan Kesbangpol Tapin Rekomendasikan Tiga Hal', '<p>BANJARMASINPOST.CO.ID, RANTAU - Tim Pemantauan Orang Asing bersama Badan Kesatuan Bangsa dan Politik Kabupaten Tapin menggelar Rapat Koordinasi terkait pemantauan orang asing, tenaga kerja asing dan lembaga asing di Kabupaten Tapin. Kamis, (05/08/2021).</p><p>Informasi yang diterima Banjarmasinpost.co.id rapat kordinasi ini sesuai dengan Permendagri nomor 49 tahun 2010 tentang pemantauan orang asing dan organisasi masyarakat asing di daerah serta pemantauan tenaga kerja asing di daerah yang diatur dalam Permendagri nomor 50 tahun 20210.</p><p>Kasubbid Kewaspadaan Dini dan kerjasama Intelijen Bankesbangpol Tapin, Wahyudi Noor menyampaikan bahwa terkait aturan kedua permendagri ini memang perlu sinergitas semua pihak guna mencegah dampak negatif dari keberadaan orang asing serta perlu adanya sosialisasi ke perusahaan-perusahaan agar wajib melaporkan data orang asing dan monitoring serta sinkronisasi data keberadaan TKA di perusahaan.</p>', '1', 2, 'usr61037f9c85184', '2021-08-12', '1'),
-('nws6114cabf0f377', 'Kesbangpol Aceh Dapat Piagam Penghargaan Capaian Kinerja Tim Aksi Terpadu Penanganan Konflik Sosial', '<p>SERAMBINEWS.COM, JAKARTA - &nbsp;Provinsi Aceh menduduki peringkat ke-9 dalam Capaian Kinerja Pelaporan Rencana Aksi Terpadu Penanganan Konflik Sosial tingkat provinsi tahun 2019.</p><p>Piagam penghargaan tersebut diserahkan oleh Direktur Jenderal (Dirjen) Politik dan Pemerintahan Umum (Polpum), DR Drs Bahtiar MSi dan diterima langsung oleh Kabid Penanganan Konflik dan Kewaspadaan Nasional, Suburhan SH yang mewakili Kaban&nbsp;</p>', '1', 2, 'usr61037f9c85184', '2021-08-12', '1'),
-('nws6114cb676caf3', 'Bupati Belitung Timur Burhanuddin : Kesbangpol Adalah Telinga, Mata, Tangan dan Kakinya Pemerintah', '<p>BANGKA BELITUNG TERKINI - BELITUNG - TIMUR - Bupati Belitung Timur (Beltim) Burhanudin melantik dan mengukuhkan Herial S.Si sebagai Kepala Badan Kesatuan Bangsa dan Politik (Kesbangpol) Beltim serta Pejabat Pengawas pada Badan Kesbangpol Kabupaten Beltim di Ruang Satu Hati Bangun Negeri, Selasa (03/08/2021).</p><p>Pengukuhan ini sebagai tindak lanjut dari Peraturan Menteri Dalam Negeri Nomor 11 Tahun 2019 tentang Perangkat Daerah yang Melaksanakan Urusan Pemerintahan Dibidang Kesatuan Bangsa dan Politik dan Peraturan Daerah Nomor 3 Tahun 2020 tentang Perubahan Kedua Atas Peraturan Daerah Kabupaten Belitung Timur Nomor 10 Tahun 2016 tentang Pembentukan dan Susunan Perangkat Daerah Kabupaten Belitung Timur yang mengakibatkan perubahan dari Kantor menjadi Badan.&nbsp;</p>', '1', 2, 'usr61037f9c85184', '2021-08-12', '1'),
-('nws6114cbf6d58f1', 'Distribusi Bantuan Sembako, Kesbangpol Pemprov Jabar Libatkan Ormas dan LSM di Kota Bandung', '<p>TRIBUNJABAR.ID,BANDUNG - Ormas dan LSM di Kota bandung &nbsp;dilibatkan dalam pendistribusian bantuan sembako bagi warga terdampak PPKM Level 4.</p>', '1', 2, 'usr61037f9c85184', '2021-08-12', '1'),
-('nws6114cc6092b16', 'Kepala Badan Kesbangpol Bontang Minta Posko Penyekatan Dimaksimalkan', '<p>TIMESINDONESIA, BONTANG â€“ Keberadaan posko penanganan Covid-19 di enam titik penyekatan pada sejumlah wilayah di Kota Bontang &nbsp;dilakukan untuk sebuah supervisi. Posko tersebut berfungsi untuk pencegahan, penanganan, pembinaan dan pendukung pelaksanaan penanganan Covid-19.</p>', '1', 2, 'usr61037f9c85184', '2021-08-12', '1');
+INSERT INTO `berita` (`idBerita`, `namaBerita`, `deskripsiBerita`, `idRelation`, `approvalBerita`, `authorBerita`, `dateCreate`, `jenisBerita`, `countlikeBerita`, `countdislikeBerita`, `countcommentBerita`, `countshareBerita`) VALUES
+('nws60ec078cde90c', 'Kesbangpol Aceh Dialog Isu Aktual Bersama Tokoh Abdya  Salinan', '&lt;p&gt;BLANGPIDIE - Badan Kesatuan Bangsa dan Kesatuan Politik (Kesbangpol) Provinsi Aceh melaksanakan kegiatan dialog isu Aktual di Aceh angkatan IX tahun 2021 bersama Lembaga Swadaya Masyarakat (LSM), Wartawan, Mahasiswa, Kepolisian, Kodim dan Satuan Kerja Perangkat Kabupaten (SKPK) Kabupaten Aceh Barat Daya (Abdya).&amp;nbsp;&lt;/p&gt;&lt;p&gt;Kegiatan yang mengusung tema &quot;Peran Sinergi Pemerintah dengan Masyarakat Dalam Kewaspadaan Dini di Daerah&quot; berlangsung di Aula Bappeda Abdya, Jum\'at (6/8/2021).&amp;nbsp;&lt;/p&gt;&lt;p&gt;Kepala Kesbangpol Aceh melalui Kabid Penanganan Konflik dan Kewaspadaan Nasional Badan, Suburhan mengatakan, pemerintah Aceh melalui badan Kesbangpol selama ini telah mengumpulkan data-data dan cerita daerah-daerah yang memiliki fenomena menonjol sesuai dengan ideologi, politik, ekonomi, sosial budaya, pertahanan dan keamanan.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Ia menjelaskan pelaksanaan kegiatan untuk mencermati situasi dan kondisi yang ada di Kabupaten Aceh Barat Daya (Abdya) terkait dengan potensi dan munculnya permasalahan di kalangan masyarakat.&lt;/p&gt;&lt;p&gt;&quot;Saya berharap perlunya peran serta aktif masyarakat dalam peningkatan kapasitas kelembagaan seperti Forum Kewaspadaan Dini Masyarakat (FKDM) dalam upaya melakukan deteksi dini,&quot; jelasnya.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Menurut Suburhan dalam mencermati situasi terkini, dimana pandemi virus covid-19 telah menjangkit diseluruh dunia, termasuk di Aceh. Di mana dampak dari pandemi ini juga telah mengakibatkan terganggunya nasional maupun daerah, baik dari sisi ekonomi, maupun kehidupan sosial masyarakat yang memerlukan penanganan yang cepat dan tepat.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Maka dari itu pula diperlukan masukan dan peran serta dari seluruh elemen masyarakat dalam penanganan dampak dari pandemi covid-19 baik dari sisi sektor ekonomi, keamanan maupun sosial kemasyarakatan.&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p&gt;Sementara itu Zulkarnaini, Kasubbid Kewaspadaan Dini, Analisis Evaluasi dan Kebijakan Strategis Badan Kesbangpol Aceh mengatakan bahwa dialog Isu Aktual ini merupakan yang ke-IX dan sangat penting diikuti.&amp;nbsp;&lt;/p&gt;&lt;p&gt;&quot;Disini kita bersama - sama memecahkan masalah dan memperkuat koordinasi serta kerja sama antara pemerintah dan stakeholder,&quot; pungkasnya.&lt;/p&gt;&lt;p&gt;Sumber : https://anteroaceh.com/news/kesbangpol-aceh-dialog-isu-aktual-bersama-tokoh-abdya/index.html&lt;/p&gt;', '1', 1, 'usr61037f9c85184', '2021-07-12', '1', 0, 0, 0, 0),
+('nws60fd135c15b04', 'Nasib PPKM Segera Diumumkan, Masukan Epidemiolog hingga Pekerja Harus Didengar', '<p>Hari ini pemerintah akan mengumumkan status PPKM Level 4 yang sebelumnya disebut PPKM Darurat. Presiden Jokowi dalam pernyataan sebelumnya menyebut jika kasus COVID-19 melandai, maka PPKM akan dilonggarkan secara bertahap mulai 26 Juli, besok.</p><p>Informasi yang dihimpun, konferensi pers terkait kejelasan status PPKM itu akan digelar hari ini. Anggota Komisi Kesehatan DPR, Saleh Partaonan Daulay, memberi sejumlah catatan.</p><p>\"Saya kira, pemerintah harus mendengarkan masukan dari berbagai pihak, ahli epidemiolog, kalangan pengusaha, pekerja, masyarakat terdampak, dan juga kelompok-kelompok masyarakat lainnya,\" kata Saleh, Minggu (25/7).</p><p>\"Masukan tersebut tentu sangat perlu untuk melengkapi hasil evaluasi PPKM Darurat yang telah dilaksanakan,\" tambah Saleh.</p><p>Bagi Saleh, kombinasi antara masukan dari berbagai pihak dan hasil evaluasi itulah semestinya yang dijadikan sebagai dasar bagi pemerintah untuk mengambil kebijakan berikutnya.</p><p>\"Tanpa diminta, sudah banyak kalangan yang bersuara. Mereka memberi masukan dari banyak aspek. Termasuk aspek efektivitas PPKM Darurat, kemampuan faskes, kecukupan tenaga medis, alat dan obat-obatan, bahkan sampai pada dampak yang ditimbulkan bagi roda perekonomian masyarakat. Tidak hanya ekonomi menengah ke atas, tetapi juga UMKM dan kelas menengah ke bawah. Ada juga yang memberi masukan terkait penguatan jaminan sosial, dan lain lain,\" urai politikus PAN ini.</p><p>Saleh mengamini, tidak mudah bagi pemerintah untuk menentukan kebijakan lanjutan. Pasalnya, masukan-masukan yang disampaikan juga cukup beragam. Misalnya, menurut informasi yang diamati Saleh, ada yang menilai bahwa PPKM Darurat berhasil, namun ada juga yang menilai tidak berhasil.</p><p>Pun, ada pula yang menilai perlu diperpanjang, ada yang menilai tidak perlu, dan ada yang menilai agar dicari kebijakan alternatif lain.</p><p>\"Dari semua itu, ujungnya nanti dikembalikan kepada pemerintah. Sebab, pemerintahlah yang memiliki data status penanganan COVID-19 di Indonesia. Pemerintah juga yang mengetahui dampak dari kebijakan tersebut terhadap kehidupan sosial ekonomi masyarakat\" ujar legislator dapil Sumut ini.</p><p>Lebih lanjut, Saleh menegaskan, jika pemerintah ternyata akan memperpanjang, maka harus dipastikan bahwa jaring pengaman sosial dalam bentuk bansos dan subsidi harus benar-benar diberikan ke masyarakat dan tepat sasaran.</p><p>\"Subsidi dan bantuan sosial itu kan tidak di seluruh Indonesia. Hanya di daerah yang diberlakukan PPKM darurat atau PPKM level 4. Perhitungan terhadap hal ini juga harus dilakukan secara cermat. Harus dipastikan tidak ada masyarakat yang dilupakan,\" tutur Saleh.</p><p>Saleh menyarankan agar di dalam pengumuman perpanjangan atau pelonggaran kebijakan PPKM, pemerintah memberikan alasan secara terbuka. Tidak perlu ada yang ditutupi.</p><p>\"Pemerintah harus menunjukkan bahwa semua potensi yang dimiliki sudah dikerahkan secara maksimal. Harus dijelaskan juga bahwa masukan dari masyarakat selalu didengar. Karena itu, perbaikan selalu dilakukan sesuai dengan apa yang diharapkan oleh semua pihak,\" tutup Saleh.</p><p>Sumber : https://kumparan.com/kumparannews/nasib-ppkm-segera-diumumkan-masukan-epidemiolog-hingga-pekerja-harus-didengar-1wCZSGYvj82/full</p>', '1', 1, 'usr6106c82a3b736', '2021-07-25', '2', 0, 0, 0, 0),
+('nws6114c8fae9013', 'Potensi Gejolak saat PPKM, Kesbangpol Minta Masyarakat Solid Hadapi pendemi', '<p>BANDUNG, iNews.id - Badan Kesatuan Bangsa dan Politik (Kesbangpol) Kota Bandung meminta masyarakat ikut terlibat menjaga stabilitas lingkungan. Permintaan itu untuk menyikapi adanya penolakan terhadap pelaksanaan PPKM Darurat.</p><p>Sekretaris Badan Kesatuan Bangsa dan Politik (Kesbangpol) Kota Bandung, Inci Dermaga Mustawan, berharap soliditas masyarakat bisa tetap dijaga untuk menghadapi pandemi Covid-19. Kekompakan masyarakat ini menjadi penguat agar upaya pemerintah dapat membuahkan hasil maksimal.</p><p>Inci menyebutkan, di masa pandemi Covid-19 ini bukan hanya berdampak terhadap sektor kesehatan dan perekonomian masyarakat. Lebih jauh lagi hal tersebut bisa memicu potensi konflik di tengah masyarakat.</p><p>&nbsp;</p>', '1', 2, 'usr61037f9c85184', '2021-08-12', '1', 0, 0, 0, 0),
+('nws6114c9516e7a2', 'Tingkatkan Sinergisitas, Badan Kesbangpol Provinsi Jambi Gelar Raker Tim Pemantau  Orang Asing', '<p>JAMBERITA.COM-&nbsp;Badan Kesatuan Kebangsaan dan Politik (Bakesbangpol) Provinsi Jambi menggelar rapat kerja Pemnatauan Tenaga Asing (TKA) yang masuk ke Provinsi Jambi di Aula Bakesbangpol Provinsi Jambi, Selasa (27/7/2021).</p><p>Rapat kerja yang dihadiri Kapolda Jambi diwakili Kasubdit Kamneg Intelkam, Kadiv Imigrasi Kemenkumham serta instansi terkait .</p><p>Kepala Badan Kantor Kesbangpol Provinsi Jambi H.Mukti .SE dalam sambutannya mengatakan berdasarkan Peraturan Menteri Dalam Negeri (Permendagri) yang tertuang nomor 50 Tahun 2010 tentang Pedoman Pemantauan orang Asing. Organisasi masyarakat asing di daerah .</p><p>Ia mengatakan rapat ini penting&nbsp;guna meningkatkan koordinasi dan konsolidasi serta sinergitas dalam hal pemantauan orang asing.&nbsp;\"Konsolidasi dan koordinasi ini perlu sinergitas seluruh instansi terkait guna mewujudkan Jambi mantap 2024 yang Maju Aman ,Nyaman Tertib Amanah dan Profesional,\" ungkap Kaban Kesbangpol Provinsi Jambi.</p>', '1', 2, 'usr61037f9c85184', '2021-08-12', '1', 0, 0, 0, 0),
+('nws6114c997df9e0', 'Pemkab Rejang Lebong segera cairkan bantuan 10 parpol', '<p>Rejang Lebong, Bengkulu (ANTARA) - Badan Kesatuan Bangsa dan Politik (Kesbangpol) Kabupaten Rejang Lebong, Provinsi Bengkulu, akan segera mencairkan bantuan untuk 10 partai politik (parpol) yang memperoleh kursi dewan di daerah itu.</p><p>Kepala Badan Kesbangpol Rejang Lebong Maxpinal saat dihubungi di Rejang Lebong, Rabu, mengatakan pemerintah daerah itu pada tahun ini telah menganggarkan dana sebesar Rp1,016 miliar untuk bantuan 10 partai politik yang memiliki kursi di DPRD&nbsp;setempat.</p><p>\"Mereka yang memiliki kursi di DPRD Rejang Lebong saat ini sudah mengajukan permintaan pencairan dana bantuan parpol pada tahun anggarn 2021, saat ini masih dalam&nbsp; pencairan,\" katanya.</p>', '1', 2, 'usr61037f9c85184', '2021-08-12', '1', 0, 0, 0, 0),
+('nws6114ca5885362', 'Tim Pemantau Orang Asing Dan Kesbangpol Tapin Rekomendasikan Tiga Hal', '<p>BANJARMASINPOST.CO.ID, RANTAU - Tim Pemantauan Orang Asing bersama Badan Kesatuan Bangsa dan Politik Kabupaten Tapin menggelar Rapat Koordinasi terkait pemantauan orang asing, tenaga kerja asing dan lembaga asing di Kabupaten Tapin. Kamis, (05/08/2021).</p><p>Informasi yang diterima Banjarmasinpost.co.id rapat kordinasi ini sesuai dengan Permendagri nomor 49 tahun 2010 tentang pemantauan orang asing dan organisasi masyarakat asing di daerah serta pemantauan tenaga kerja asing di daerah yang diatur dalam Permendagri nomor 50 tahun 20210.</p><p>Kasubbid Kewaspadaan Dini dan kerjasama Intelijen Bankesbangpol Tapin, Wahyudi Noor menyampaikan bahwa terkait aturan kedua permendagri ini memang perlu sinergitas semua pihak guna mencegah dampak negatif dari keberadaan orang asing serta perlu adanya sosialisasi ke perusahaan-perusahaan agar wajib melaporkan data orang asing dan monitoring serta sinkronisasi data keberadaan TKA di perusahaan.</p>', '1', 2, 'usr61037f9c85184', '2021-08-12', '1', 0, 0, 0, 0),
+('nws6114cabf0f377', 'Kesbangpol Aceh Dapat Piagam Penghargaan Capaian Kinerja Tim Aksi Terpadu Penanganan Konflik Sosial', '<p>SERAMBINEWS.COM, JAKARTA - &nbsp;Provinsi Aceh menduduki peringkat ke-9 dalam Capaian Kinerja Pelaporan Rencana Aksi Terpadu Penanganan Konflik Sosial tingkat provinsi tahun 2019.</p><p>Piagam penghargaan tersebut diserahkan oleh Direktur Jenderal (Dirjen) Politik dan Pemerintahan Umum (Polpum), DR Drs Bahtiar MSi dan diterima langsung oleh Kabid Penanganan Konflik dan Kewaspadaan Nasional, Suburhan SH yang mewakili Kaban&nbsp;</p>', '1', 2, 'usr61037f9c85184', '2021-08-12', '1', 0, 0, 0, 0),
+('nws6114cb676caf3', 'Bupati Belitung Timur Burhanuddin : Kesbangpol Adalah Telinga, Mata, Tangan dan Kakinya Pemerintah', '<p>BANGKA BELITUNG TERKINI - BELITUNG - TIMUR - Bupati Belitung Timur (Beltim) Burhanudin melantik dan mengukuhkan Herial S.Si sebagai Kepala Badan Kesatuan Bangsa dan Politik (Kesbangpol) Beltim serta Pejabat Pengawas pada Badan Kesbangpol Kabupaten Beltim di Ruang Satu Hati Bangun Negeri, Selasa (03/08/2021).</p><p>Pengukuhan ini sebagai tindak lanjut dari Peraturan Menteri Dalam Negeri Nomor 11 Tahun 2019 tentang Perangkat Daerah yang Melaksanakan Urusan Pemerintahan Dibidang Kesatuan Bangsa dan Politik dan Peraturan Daerah Nomor 3 Tahun 2020 tentang Perubahan Kedua Atas Peraturan Daerah Kabupaten Belitung Timur Nomor 10 Tahun 2016 tentang Pembentukan dan Susunan Perangkat Daerah Kabupaten Belitung Timur yang mengakibatkan perubahan dari Kantor menjadi Badan.&nbsp;</p>', '1', 2, 'usr61037f9c85184', '2021-08-12', '1', 0, 0, 0, 0),
+('nws6114cbf6d58f1', 'Distribusi Bantuan Sembako, Kesbangpol Pemprov Jabar Libatkan Ormas dan LSM di Kota Bandung', '<p>TRIBUNJABAR.ID,BANDUNG - Ormas dan LSM di Kota bandung &nbsp;dilibatkan dalam pendistribusian bantuan sembako bagi warga terdampak PPKM Level 4.</p>', '1', 2, 'usr61037f9c85184', '2021-08-12', '1', 0, 0, 0, 0),
+('nws6114cc6092b16', 'Kepala Badan Kesbangpol Bontang Minta Posko Penyekatan Dimaksimalkan', '<p>TIMESINDONESIA, BONTANG â€“ Keberadaan posko penanganan Covid-19 di enam titik penyekatan pada sejumlah wilayah di Kota Bontang &nbsp;dilakukan untuk sebuah supervisi. Posko tersebut berfungsi untuk pencegahan, penanganan, pembinaan dan pendukung pelaksanaan penanganan Covid-19.</p>', '1', 2, 'usr61037f9c85184', '2021-08-12', '1', 0, 0, 0, 0),
+('nws611cf4898f64c', 'ads', '<p>asdkjk askdj kajsd kj kjsd</p>', '1', 2, 'usr611cbed256acc', '2021-08-18', '1', 0, 0, 0, 0),
+('nws611dd28c57959', 'Kesbangpol Aceh Dialog Isu Aktual Bersama Tokoh Abdya  Salinan', '', '1', 2, 'usr611cbed256acc', '2021-08-19', '1', 1, 1, 8, 0),
+('nws611def23ab50f', 'Kesbangpol Aceh Dialog Isu Aktual Bersama Tokoh Abdya  Salinan', '', '1', 2, 'usr611cbed256acc', '2021-08-19', '1', 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -160,7 +167,44 @@ INSERT INTO `chronology` (`idChronology`, `deskripsiChronology`, `idRelation`, `
 ('crn611b5e17af268', 'User 1 telah menghapus gallery \"alsk\"', 'prt611b5ae97f999', '2021-08-17'),
 ('crn611b5e1a9193c', 'User 1 telah menghapus gallery \"alsk\"', 'prt611b5adfce4ca', '2021-08-17'),
 ('crn611b5e1da64fc', 'User 1 telah menghapus gallery \"alsk\"', 'prt611b5ac7a115c', '2021-08-17'),
-('crn611b5e20d0077', 'User 1 telah menghapus gallery \"alsk\"', 'prt611b5ab6cbe3b', '2021-08-17');
+('crn611b5e20d0077', 'User 1 telah menghapus gallery \"alsk\"', 'prt611b5ab6cbe3b', '2021-08-17'),
+('crn611c8df05bae8', 'usr611bb16ecb176 telah mengubah gallery \"Gallery 1\"', 'prt60fcfee3d114d', '2021-08-18'),
+('crn611c8e0c60ffb', 'usr611bb16ecb176 telah mengubah gallery \"Gallery 10\"', 'prt611a4683ca402', '2021-08-18'),
+('crn611c94e7a5db1', 'User 1 telah menghapus gallery \"Gallery 10\"', 'prt611a4683ca402', '2021-08-18'),
+('crn611c954e52081', 'usr61037f9c85184 telah mengubah gallery \"Gallery 9\"', 'prt611a395230605', '2021-08-18');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `commentberita`
+--
+
+CREATE TABLE `commentberita` (
+  `idCommentberita` varchar(255) NOT NULL,
+  `idUser` varchar(255) NOT NULL,
+  `idBerita` varchar(255) NOT NULL,
+  `commentText` text NOT NULL,
+  `countlikeComment` int(11) NOT NULL,
+  `countdislikeComment` int(11) NOT NULL,
+  `countcommentComment` int(11) DEFAULT NULL,
+  `commentonComment` varchar(255) DEFAULT NULL,
+  `approval` char(1) NOT NULL DEFAULT '2' COMMENT '1=disetujui, 2=pending',
+  `dateCreate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `commentberita`
+--
+
+INSERT INTO `commentberita` (`idCommentberita`, `idUser`, `idBerita`, `commentText`, `countlikeComment`, `countdislikeComment`, `countcommentComment`, `commentonComment`, `approval`, `dateCreate`) VALUES
+('bar61231f1f777c7', 'usr611cbed256acc', 'nws611dd28c57959', 'asjh ajsdh ajds', 0, 0, 2, NULL, '1', '2021-08-23'),
+('bar6123202bc3986', 'usr611cbed256acc', 'nws611dd28c57959', 'asjh ajsdh ajds', 0, 0, 1, NULL, '2', '2021-08-23'),
+('bar612321404e33c', 'usr611cbed256acc', 'nws611dd28c57959', 'xcmvcv', 0, 0, 0, 'bar61231f1f777c7', '2', '2021-08-23'),
+('bar61232fc617ee6', 'usr611cbed256acc', 'nws611dd28c57959', 'poppipo', 0, 0, 0, 'bar61231f1f777c7', '2', '2021-08-23'),
+('bar61232fe16573f', 'usr611cbed256acc', 'nws611dd28c57959', 'quweweqw', 0, 0, 0, 'bar6123202bc3986', '2', '2021-08-23'),
+('bar612330ec09156', 'usr611cbed256acc', 'nws611dd28c57959', 'sjdfhjdf', 0, 0, 0, NULL, '2', '2021-08-23'),
+('bar612334e55d976', 'usr611cbed256acc', 'nws611dd28c57959', 'sjdfhjdf', 0, 0, 0, NULL, '2', '2021-08-23'),
+('bar61233540811c1', 'usr611cbed256acc', 'nws611dd28c57959', 'tttttttttttttttttttt', 0, 0, 0, NULL, '2', '2021-08-23');
 
 -- --------------------------------------------------------
 
@@ -245,8 +289,7 @@ INSERT INTO `gallery` (`idGallery`, `namaGallery`, `deskripsiGallery`, `idRelati
 ('prt611a3801e5877', 'Gallery 6', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '', 0, '2021-08-16'),
 ('prt611a38478ec60', 'Gallery 7', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '', 0, '2021-08-16'),
 ('prt611a3884a2c9f', 'Gallery 8', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '', 0, '2021-08-16'),
-('prt611a395230605', 'Gallery 9', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '', 0, '2021-08-16'),
-('prt611a4683ca402', 'Gallery 10', '', '', 0, '2021-08-16');
+('prt611a395230605', 'Gallery 9', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '', 0, '2021-08-16');
 
 -- --------------------------------------------------------
 
@@ -301,7 +344,8 @@ INSERT INTO `gallerydetail` (`idGallerydetail`, `idGallery`, `namaGallerydetail`
 ('dpr611a38850cdc0', 'prt611a3884a2c9f', 'Foto 3', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16'),
 ('dpr611a39525fcf3', 'prt611a395230605', 'Foto 1', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16'),
 ('dpr611a395276d50', 'prt611a395230605', 'Foto 2', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16'),
-('dpr611a395289fca', 'prt611a395230605', 'Foto 3', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16');
+('dpr611a395289fca', 'prt611a395230605', 'Foto 3', 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum accusamus nostrum iusto quibusdam consectetur, amet velit ducimus non, reiciendis itaque debitis vitae sunt eaque alias repellendus aliquid aliquam error modi.', '2021-08-16'),
+('dpr611c954e312c7', 'prt611a395230605', 'sasd', 'sasd', '2021-08-18');
 
 -- --------------------------------------------------------
 
@@ -87683,6 +87727,42 @@ INSERT INTO `layananunduhan` (`idLayananunduhan`, `namaLayananunduhan`, `dateCre
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `likeberita`
+--
+
+CREATE TABLE `likeberita` (
+  `idLikeberita` varchar(255) NOT NULL,
+  `idUser` varchar(255) NOT NULL,
+  `idBerita` varchar(255) NOT NULL,
+  `jenislikeBerita` char(1) NOT NULL COMMENT '1=like, 2=dislike',
+  `dateCreate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `likeberita`
+--
+
+INSERT INTO `likeberita` (`idLikeberita`, `idUser`, `idBerita`, `jenislikeBerita`, `dateCreate`) VALUES
+('lbr6123d07dae761', 'user60eefe5a7a23d', 'nws611dd28c57959', '', '2021-08-23'),
+('lbr6123d123365af', 'user60eefe5a7a23d', 'nws611dd28c57959', '', '2021-08-23');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `likecommentberita`
+--
+
+CREATE TABLE `likecommentberita` (
+  `idLikecommentberita` varchar(255) NOT NULL,
+  `idUser` varchar(255) NOT NULL,
+  `idComment` varchar(255) NOT NULL,
+  `jenisLikecommentberita` char(1) NOT NULL COMMENT '1=like, 2=dislike',
+  `dateCreate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `media`
 --
 
@@ -87756,7 +87836,6 @@ INSERT INTO `media` (`idMedia`, `pathMedia`, `idRelation`, `idEntity`, `jenisDok
 ('med611a17fbede30', 'cimahi611a17fbede3b.png', 'ldn611a17fbe67cb', '1', '', '2021-08-16'),
 ('med611a1806691a0', 'cimahi611a1806691b3.png', 'ldn611a18065d6de', '1', '', '2021-08-16'),
 ('med611a192b43760', 'cimahi611a192b43772.png', 'reg6119f4a2347493sd', '1', '', '2021-08-16'),
-('med611a1b4b5b1af', 'cimahi611a1b4b5b1d6.png', 'prt60fcfee3d114d', 'usr61037f9c85184', '', '2021-08-16'),
 ('med611a1bc2f1f26', 'copendata_dark611a1bc2f1f46.png', 'prt60fcff0f3d877', 'usr61037f9c85184', '', '2021-08-16'),
 ('med611a1bfbd2117', 'cimahi611a1bfbd2138.png', 'skp611a1bfbbe099', '1', '', '2021-08-16'),
 ('med611a1c06d3608', 'cimahi611a1c06d3616.png', 'skp611a1c06afb83', '1', '', '2021-08-16'),
@@ -87859,7 +87938,27 @@ INSERT INTO `media` (`idMedia`, `pathMedia`, `idRelation`, `idEntity`, `jenisDok
 ('med611a395290fb1', 'direktur-organisasi-kemasyarakatan-direktorat-jenderal-politik_20181018_205548611a395290fc1.jpg', 'dpr611a395289fca', 'usr61037f9c85184', '', '2021-08-16'),
 ('med611b67acf0eb8', 'kesbangpol-3611b67acf0ec6.png', 'skp611b67ace1afe', '1', '', '2021-08-17'),
 ('med611b709255c30', '1625710614-60e660164c768611b709255c3d.png', 'skp611b70923fb56', '1', '', '2021-08-17'),
-('png60fd082fe5c13', 'ojdp6fmf0fv4djzjthns60fd082fe5c1e.jpg', 'png60fd082fba29f', '1', 'cover_pengumuman', '2021-07-25');
+('med611c8df03d434', '83kesbangpol-orang-asing6114c951d4378611c8d3c1f5f6611c8df03d470.jpg', 'prt60fcfee3d114d', 'usr611bb16ecb176', '', '2021-08-18'),
+('med611c954e41d4a', '1625710614-60e660164c768611b709255c3d611c954e41d72.png', 'dpr611c954e312c7', 'usr61037f9c85184', '', '2021-08-18'),
+('med611cbed2f121d', '160ff788db8ab3611cbed2f1228.jpg', 'usr611cbed256acc', '', '', '2021-08-18'),
+('med611cf489a497e', '16100c2bb2be1d611cf489a498d.jpg', 'nws611cf4898f64c', 'usr611cbed256acc', 'cover_berita', '2021-08-18'),
+('med611dca5b95e11', '160ff788db8ab3611dca5b95e2e.jpg', 'usr611dca5b381fb', '', '', '2021-08-19'),
+('med611dcd3dc9104', '160ff788db8ab3611dcd3dc9111.jpg', 'usr611dcd3d2c1a1', '', '', '2021-08-19'),
+('med611dd28c7ed04', '160fc1f601e516611dd28c7ed14.jpg', 'nws611dd28c57959', 'usr611cbed256acc', 'cover_berita', '2021-08-19'),
+('med611def23d3422', '160fc1f601e516611def23d3439.jpg', 'nws611def23ab50f', 'usr611cbed256acc', 'cover_berita', '2021-08-19'),
+('med611f17b63f83e', '160ff788db8ab3611dca5b95e2e611f17b63f84b.jpg', 'usr611f17b5ea5ae', '', '', '2021-08-20'),
+('med6120abb2cdac4', '16120abb2cdad0.jpg', 'usr6120abb24d3df', '', '', '2021-08-21'),
+('png60fd082fe5c13', 'ojdp6fmf0fv4djzjthns60fd082fe5c1e.jpg', 'png60fd082fba29f', '1', 'cover_pengumuman', '2021-07-25'),
+('png611c834aa0c66', 'xfynxlec6ni0sjsovhbj60fd135c26188611c834aa0c72.jpg', 'png611c834a93f3a', '1', 'cover_pengumuman', '2021-08-18'),
+('png611c838b5265b', 'rapat-kordinasi-tim-pemantauan-orang-asing-di-kabupaten-tapin-asdfasdf6114ca589484c611c838b52671.jpg', 'png611c838b4c7e2', '1', 'cover_pengumuman', '2021-08-18'),
+('png611c83b74ac7c', 'rapat-kordinasi-tim-pemantauan-orang-asing-di-kabupaten-tapin-asdfasdf6114ca589484c611c83b74ac8a.jpg', 'png611c83b74a2eb', '1', 'cover_pengumuman', '2021-08-18'),
+('png611c8d0537e73', 'rapat-kordinasi-tim-pemantauan-orang-asing-di-kabupaten-tapin-asdfasdf6114ca589484c611c8d0537e94.jpg', 'png611c8d0510f16', '1', 'cover_pengumuman', '2021-08-18'),
+('png611c8d244caa3', 'tolak_ppkm_darurat_di_bandung6114c8fb20524611c8d244caca.jpg', 'png611c8d2263200', '1', 'cover_pengumuman', '2021-08-18'),
+('png611c8d3c1f5dc', '83kesbangpol-orang-asing6114c951d4378611c8d3c1f5f6.jpg', 'png611c8d3c04fbf', '1', 'cover_pengumuman', '2021-08-18'),
+('png611c8d575d595', 'sony-suwito-adicahyono6114cc60a7e00611c8d575d5a7.jpg', 'png611c8d5667586', '1', 'cover_pengumuman', '2021-08-18'),
+('png611c8d780a198', 'rapat-kordinasi-tim-pemantauan-orang-asing-di-kabupaten-tapin-asdfasdf6114ca589484c611c838b52671611c8d780a1b8.jpg', 'png611c8d77344b7', '1', 'cover_pengumuman', '2021-08-18'),
+('png611c8d95eaa66', 'piagam-penghargaan-kepada-kesbangpol-di-jakarta6114cabf29478611c8d95eaa86.jpg', 'png611c8d95cfd2c', '1', 'cover_pengumuman', '2021-08-18'),
+('png611c8db6b2974', 'maxpinal-kakan-kesbangpol-rl6114c9997afe0611c8db6b2996.jpg', 'png611c8db6a07bb', '1', 'cover_pengumuman', '2021-08-18');
 
 -- --------------------------------------------------------
 
@@ -87951,12 +88050,38 @@ INSERT INTO `orsospol` (`idOrsospol`, `namaOrsospol`, `idJenisorsospol`, `notari
 ('ors611a2a40e3706', 'BKM SUMBER REJEKI', 'jor60d0575b7b225', '', '', '', '', '', 'Desa Jatihadi RT.02/05 Kec. Sumber Rembang', '', '', '', '', '', '', '', 'sos611a2a40bdef3', 1, '2021-08-16', 'AHU-0003977.AH.01.07.Tahun 2015', '', ''),
 ('ors611a2a5565a92', 'HIZBUT TAHRIR INDONESIA', 'jor60d0575b7b225', '', '', '', '', '', 'Jl. Kintelan  Baru No. 32 Semarang', '', '', '', '', '', '', '', 'sos611a2a554f384', 1, '2021-08-16', 'AHU-00282.60.10 Tahun 2014', '', ''),
 ('ors611a2a6b5610b', 'GERAKAN PEMBANGUNAN DESA MAKMUR', 'jor60d0575b7b225', '', '', '', '', '', 'Desa Tegalsambi RT.08/02 Kec.Tahunan Kab. Jepara', '', '', '', '', '', '', '', 'sos611a2a6b382a3', 1, '2021-08-16', 'AHU-0006580.AH.01.07 Tahun 2016', '', ''),
-('ors611a2b28e6906', 'FORUM PENYELENGGARA KURSUS SELURUH INDONESIA', 'jor60d05997283b8', '', '', '', '', '', 'Jl. Sedayu Kenangan III Blok E No. 1 Woltermonginsidi Semarang', '', '', '', '', '', '', '', 'sos611a2b28b08f2', 1, '2021-08-16', 'AHU-0018976.ah.01.07tAHUN 2015', '', ''),
+('ors611a2b28e6906', 'FORUM PENYELENGGARA KURSUS SELURUH INDONESIA', 'jor60d05997283b8', '', '', '', '', '', 'Jl. Sedayu Kenangan III Blok E No. 1 Woltermonginsidi, Kec. Genuk, Kota Semarang, Jawa Tengah, 40235, Indonesia', '', '', '', '', '', '', '', 'sos611a2b28b08f2', 1, '2021-08-16', 'AHU-0018976.ah.01.07tAHUN 2015', '', ''),
 ('ors611a2b47ee2fa', 'GERAKAN EDUKASI MASYARAKAT PEDULI IRIGASI TANAH AIR', 'jor60d05997283b8', '', '', '', '', '', 'Bilo Lor RT.02/03 Desa Pundenarum Kec. Karangawen Kab.Demak', '', '', '', '', '', '', '', 'sos611a2b47c33f1', 1, '2021-08-16', 'AHU-0004870.AH.01.07.Tahun 2016', '', ''),
 ('ors611a2b692a1da', 'GERAKAN PEDULI RAKYAT INDONESIA', 'jor60d05997283b8', '', '', '', '', '', 'Jl. Karangrejo II/12 RT.04/07 Srondol Wetan Banyumanik Semarang ', '', '', '', '', '', '', '', 'sos611a2b6910c06', 1, '2021-08-16', 'AHU-0007915.AH.01.07 Tahun 2016 ', '', ''),
 ('ors611a2b7d4e2cd', 'FORUM  RAKYAT TANI LESTARI', 'jor60d05997283b8', '', '', '', '', '', 'Desa Jatihadi RT.02/05 Kec. Sumber Rembang', '', '', '', '', '', '', '', 'sos611a2b7d2ebe2', 1, '2021-08-16', 'AHU-0009089.AH.01.07 Tahun 2016', '', ''),
 ('ors611a2c4413fc7', 'JARINGAN PENDAMPINGAN KEBIJAKAN DAN PEMBANGUNAN ', 'jor60d05997283b8', '', '', '', '', '', 'Jl. Raya Brangsong No. 57 Kec. Brangsong Kab.Kendal ', '', '', '', '', '', '', '', 'sos611a2c43f35e1', 1, '2021-08-16', 'AHU-0001682.AH.01.07-Tahun 2015', '', ''),
-('ors611a2c5ff2cc0', 'ASOSIASI  PETANI TEMBAKAU INDONESIA', 'jor60d05997283b8', '', '', '', '', '', 'Temanggung', '', '', '', '', '', '', '', 'sos611a2c5fcd4ab', 1, '2021-08-16', 'AHU-0006126.AH.01.07.Tahun 2015', '', '');
+('ors611a2c5ff2cc0', 'ASOSIASI  PETANI TEMBAKAU INDONESIA', 'jor60d05997283b8', '', '', '', '', '', 'Temanggung', '', '', '', '', '', '', '', 'sos611a2c5fcd4ab', 1, '2021-08-16', 'AHU-0006126.AH.01.07.Tahun 2015', '', ''),
+('ors611c98989a9f9', 'DEWAN PENGURUS WILAYAH ASOSIASI PERUSAHAAN BONGKAR MUAT INDONESIA', 'jor60d05997283b8', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, '2021-08-18', 'AHU- 174.AH.01.07.2012', 'usr611c98984ee67', 'DPWA');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pegawai`
+--
+
+CREATE TABLE `pegawai` (
+  `idPegawai` varchar(255) NOT NULL,
+  `namaPegawai` varchar(255) NOT NULL,
+  `jabatanPegawai` varchar(255) NOT NULL,
+  `nipPegawai` int(17) NOT NULL,
+  `emailPegawai` varchar(255) NOT NULL,
+  `idUser` varchar(255) NOT NULL,
+  `dateCreate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pegawai`
+--
+
+INSERT INTO `pegawai` (`idPegawai`, `namaPegawai`, `jabatanPegawai`, `nipPegawai`, `emailPegawai`, `idUser`, `dateCreate`) VALUES
+('pgw611cbed2c4d30', 'asd', 'asd', 2837283, 'pegawai1@mail.com', 'usr611cbed256acc', '2021-08-18'),
+('pgw611dca5b7c264', 'Pegawai 2', 'Publikasi', 348274, 'pegawai2@mail.com', 'usr611dca5b381fb', '2021-08-19'),
+('pgw611dcd3d5948e', 'Pegawai 3', 'Publikasi', 327843, 'pegawai3@mail.com', 'usr611dcd3d2c1a1', '2021-08-19');
 
 -- --------------------------------------------------------
 
@@ -87997,7 +88122,15 @@ CREATE TABLE `pengumuman` (
 
 INSERT INTO `pengumuman` (`idPengumuman`, `namaPengumuman`, `deskripsiPengumuman`, `dateCreate`) VALUES
 ('png60ec1e54badf2', 'Bupati Bekasi Meninggal karena COVID-19, Plt Sekda Jadi Pelaksana Harian', '<p>Bupati Kabupaten Bekasi Eka Supri Atmadja meninggal dunia karena COVID-19 pada Minggu (11/7) malam. Kondisi itu membuat Bekasi tidak memiliki kepala daerah definitif.&nbsp;</p><p>\"Tidak ada kekosongan pimpinan di Kabupaten Bekasi karena sesuai peraturan perundang-undangan, \"Tidak ada kekosongan pimpinan di Kabupaten Bekasi karena sesuai peraturan perundang-undangan,\" ucap Benny dalam pesan singkat, Senin (12/7).</p><p>Siapa penggantinya?</p><p>Eka adalah wakil bupati yang naik menjadi bupati karena bupati sebelumnya, Neneng Hasanah Yasin, tersangkut kasus korupsi. Eka lalu dilantik pada 12 Juni 2019 sebagai bupati. Tapi sejak saat itu Kabupaten Bekasi tidak memiliki wakil.</p><p>Selain itu, Bekasi juga tidak punya sekretaris daerah karena Sekda sebelumnya pensiun. Kemudian ditunjuk Pelaksana Tugas (Plt) Sekda yaitu Kepala Badan Pendapatan Daerah Herman Hanafi. Maka, pengganti sementara bupati Bekasi adalah Plt Sekda.</p><p>\"Saat ini Plt Sekda akan melaksanakan tugas kepala daerah sehari-hari (Plh kepala daerah). Ini sebagai kebijakan awal,\" kata Benny.</p><p>Benny mengatakan pagi ini Kemendagri akan mengirim surat atau radiogram ke Pemprov Jabar soal penunjukan tersebut.</p><p>\"Hal ini sudah menjadi perhatian Kemendagri dan sudah dikoordinasikan dengan Pemerintah Daerah Provinsi Jawa Barat untuk ditindaklanjuti sesuai ketentuan yang berlaku,\" pungkasnya.</p><p>Sumber : https://kumparan.com/kumparannews/bupati-bekasi-meninggal-karena-covid-19-plt-sekda-jadi-pelaksana-harian-1w7MsDYguhI/full</p>', '2021-07-12'),
-('png60fd082fba29f', '1 Kota dan 2 Kabupaten di NTT Ini Masuk Penerapan PPKM Level 4', '<p><strong>MAUMERE</strong> â€“ Berdasarakan hasil Rapat Koordinasi (Rakor) yang yang dilakukan secara virtual pada Sabtu (24/7) dari pukul 14.00 WITA â€“ 16.30 WITA dengan agenda Pembahasan Penerapan PPKM Level IV di luar Jawa Bali, tiga daerah di Provinsi NTT ini masuk penerapan PPKM Level IV.</p><p>Rakor Pembahasan Penerapan PPKM Level IV di luar Jawa Bali dengan nara sumber, Menko Perekonomian RI, Menteri Keuangan RI, Menteri Perhubungan RI, Wamenkes, dan Staf khusus menteri sosial itu memperoleh kesimpulan, pemberlakukan PPKM diluar Jawa Bali digelar terhitung mulai tanggal 26 Juli sd 8 Agustus 2021, penetapan level PPKM untuk Kabupaten dan kota akan diterapkan pada 45 Kabupaten dan kota di 21 Provinsi, termasuk di Provinsi NTT di Kupang Kota, Sikka dan Sumba Timur.</p>', '2021-07-25');
+('png60fd082fba29f', '1 Kota dan 2 Kabupaten di NTT Ini Masuk Penerapan PPKM Level 4', '<p><strong>MAUMERE</strong> â€“ Berdasarakan hasil Rapat Koordinasi (Rakor) yang yang dilakukan secara virtual pada Sabtu (24/7) dari pukul 14.00 WITA â€“ 16.30 WITA dengan agenda Pembahasan Penerapan PPKM Level IV di luar Jawa Bali, tiga daerah di Provinsi NTT ini masuk penerapan PPKM Level IV.</p><p>Rakor Pembahasan Penerapan PPKM Level IV di luar Jawa Bali dengan nara sumber, Menko Perekonomian RI, Menteri Keuangan RI, Menteri Perhubungan RI, Wamenkes, dan Staf khusus menteri sosial itu memperoleh kesimpulan, pemberlakukan PPKM diluar Jawa Bali digelar terhitung mulai tanggal 26 Juli sd 8 Agustus 2021, penetapan level PPKM untuk Kabupaten dan kota akan diterapkan pada 45 Kabupaten dan kota di 21 Provinsi, termasuk di Provinsi NTT di Kupang Kota, Sikka dan Sumba Timur.</p>', '2021-07-25'),
+('png611c834a93f3a', 'Nasib PPKM Segera Diumumkan, Masukan Epidemiolog hingga Pekerja Harus Didengar', '<p>Hari ini pemerintah akan mengumumkan status PPKM Level 4 yang sebelumnya disebut PPKM Darurat. Presiden Jokowi dalam pernyataan sebelumnya menyebut jika kasus COVID-19 melandai, maka PPKM akan dilonggarkan secara bertahap mulai 26 Juli, besok.</p><p>Informasi yang dihimpun, konferensi pers terkait kejelasan status PPKM itu akan digelar hari ini. Anggota Komisi Kesehatan DPR, Saleh Partaonan Daulay, memberi sejumlah catatan.</p><p>\"Saya kira, pemerintah harus mendengarkan masukan dari berbagai pihak, ahli epidemiolog, kalangan pengusaha, pekerja, masyarakat terdampak, dan juga kelompok-kelompok masyarakat lainnya,\" kata Saleh, Minggu (25/7).</p><p>\"Masukan tersebut tentu sangat perlu untuk melengkapi hasil evaluasi PPKM Darurat yang telah dilaksanakan,\" tambah Saleh.</p><p>Bagi Saleh, kombinasi antara masukan dari berbagai pihak dan hasil evaluasi itulah semestinya yang dijadikan sebagai dasar bagi pemerintah untuk mengambil kebijakan berikutnya.</p><p>\"Tanpa diminta, sudah banyak kalangan yang bersuara. Mereka memberi masukan dari banyak aspek. Termasuk aspek efektivitas PPKM Darurat, kemampuan faskes, kecukupan tenaga medis, alat dan obat-obatan, bahkan sampai pada dampak yang ditimbulkan bagi roda perekonomian masyarakat. Tidak hanya ekonomi menengah ke atas, tetapi juga UMKM dan kelas menengah ke bawah. Ada juga yang memberi masukan terkait penguatan jaminan sosial, dan lain lain,\" urai politikus PAN ini.</p><p>Saleh mengamini, tidak mudah bagi pemerintah untuk menentukan kebijakan lanjutan. Pasalnya, masukan-masukan yang disampaikan juga cukup beragam. Misalnya, menurut informasi yang diamati Saleh, ada yang menilai bahwa PPKM Darurat berhasil, namun ada juga yang menilai tidak berhasil.</p><p>Pun, ada pula yang menilai perlu diperpanjang, ada yang menilai tidak perlu, dan ada yang menilai agar dicari kebijakan alternatif lain.</p><p>\"Dari semua itu, ujungnya nanti dikembalikan kepada pemerintah. Sebab, pemerintahlah yang memiliki data status penanganan COVID-19 di Indonesia. Pemerintah juga yang mengetahui dampak dari kebijakan tersebut terhadap kehidupan sosial ekonomi masyarakat\" ujar legislator dapil Sumut ini.</p><p>Lebih lanjut, Saleh menegaskan, jika pemerintah ternyata akan memperpanjang, maka harus dipastikan bahwa jaring pengaman sosial dalam bentuk bansos dan subsidi harus benar-benar diberikan ke masyarakat dan tepat sasaran.</p><p>\"Subsidi dan bantuan sosial itu kan tidak di seluruh Indonesia. Hanya di daerah yang diberlakukan PPKM darurat atau PPKM level 4. Perhitungan terhadap hal ini juga harus dilakukan secara cermat. Harus dipastikan tidak ada masyarakat yang dilupakan,\" tutur Saleh.</p><p>Saleh menyarankan agar di dalam pengumuman perpanjangan atau pelonggaran kebijakan PPKM, pemerintah memberikan alasan secara terbuka. Tidak perlu ada yang ditutupi.</p><p>\"Pemerintah harus menunjukkan bahwa semua potensi yang dimiliki sudah dikerahkan secara maksimal. Harus dijelaskan juga bahwa masukan dari masyarakat selalu didengar. Karena itu, perbaikan selalu dilakukan sesuai dengan apa yang diharapkan oleh semua pihak,\" tutup Saleh.</p><p>Sumber : https://kumparan.com/kumparannews/nasib-ppkm-segera-diumumkan-masukan-epidemiolog-hingga-pekerja-harus-didengar-1wCZSGYvj82/full</p>', '2021-08-18'),
+('png611c8d0510f16', 'Kesbangpol Aceh Dialog Isu Aktual Bersama Tokoh Abdya Salinan', '<p>BLANGPIDIE - Badan Kesatuan Bangsa dan Kesatuan Politik (Kesbangpol) Provinsi Aceh melaksanakan kegiatan dialog isu Aktual di Aceh angkatan IX tahun 2021 bersama Lembaga Swadaya Masyarakat (LSM), Wartawan, Mahasiswa, Kepolisian, Kodim dan Satuan Kerja Perangkat Kabupaten (SKPK) Kabupaten Aceh Barat Daya (Abdya).&nbsp;</p>', '2021-08-18'),
+('png611c8d2263200', 'Potensi Gejolak saat PPKM, Kesbangpol Minta Masyarakat Solid Hadapi pendemi', '<p>BANDUNG, iNews.id - Badan Kesatuan Bangsa dan Politik (Kesbangpol) Kota Bandung meminta masyarakat ikut terlibat menjaga stabilitas lingkungan. Permintaan itu untuk menyikapi adanya penolakan terhadap pelaksanaan PPKM Darurat.</p>', '2021-08-18'),
+('png611c8d3c04fbf', 'Tingkatkan Sinergisitas, Badan Kesbangpol Provinsi Jambi Gelar Raker Tim Pemantau Orang Asing', '<p>JAMBERITA.COM-&nbsp;Badan Kesatuan Kebangsaan dan Politik (Bakesbangpol) Provinsi Jambi menggelar rapat kerja Pemnatauan Tenaga Asing (TKA) yang masuk ke Provinsi Jambi di Aula Bakesbangpol Provinsi Jambi, Selasa (27/7/2021).</p>', '2021-08-18'),
+('png611c8d5667586', 'Pemkab Rejang Lebong segera cairkan bantuan 10 parpol', '<p>Rejang Lebong, Bengkulu (ANTARA) - Badan Kesatuan Bangsa dan Politik (Kesbangpol) Kabupaten Rejang Lebong, Provinsi Bengkulu, akan segera mencairkan bantuan untuk 10 partai politik (parpol) yang memperoleh kursi dewan di daerah itu.</p>', '2021-08-18'),
+('png611c8d77344b7', 'Tim Pemantau Orang Asing Dan Kesbangpol Tapin Rekomendasikan Tiga Hal', '<p>BANJARMASINPOST.CO.ID, RANTAU - Tim Pemantauan Orang Asing bersama Badan Kesatuan Bangsa dan Politik Kabupaten Tapin menggelar Rapat Koordinasi terkait pemantauan orang asing, tenaga kerja asing dan lembaga asing di Kabupaten Tapin. Kamis, (05/08/2021).</p>', '2021-08-18'),
+('png611c8d95cfd2c', 'Kesbangpol Aceh Dapat Piagam Penghargaan Capaian Kinerja Tim Aksi Terpadu Penanganan Konflik Sosial', '<p>SERAMBINEWS.COM, JAKARTA - &nbsp;Provinsi Aceh menduduki peringkat ke-9 dalam Capaian Kinerja Pelaporan Rencana Aksi Terpadu Penanganan Konflik Sosial tingkat provinsi tahun 2019.</p>', '2021-08-18'),
+('png611c8db6a07bb', 'Bupati Belitung Timur Burhanuddin : Kesbangpol Adalah Telinga, Mata, Tangan dan Kakinya Pemerintah', '<p>BANGKA BELITUNG TERKINI - BELITUNG - TIMUR - Bupati Belitung Timur (Beltim) Burhanudin melantik dan mengukuhkan Herial S.Si sebagai Kepala Badan Kesatuan Bangsa dan Politik (Kesbangpol) Beltim serta Pejabat Pengawas pada Badan Kesbangpol Kabupaten Beltim di Ruang Satu Hati Bangun Negeri, Selasa (03/08/2021).</p>', '2021-08-18');
 
 -- --------------------------------------------------------
 
@@ -88024,7 +88157,9 @@ INSERT INTO `permissions` (`idPermission`, `namaPermission`, `aliasPermission`, 
 ('per610ff96c0d785', 'Visi & Misi Konten', 'visi-&-misi-konten', '2021-08-08'),
 ('per61100198641d1', 'Role User', 'role-user', '2021-08-08'),
 ('per611001a3b8ade', 'Permission User', 'permission-user', '2021-08-08'),
-('per611001c5c0693', 'User', 'user', '2021-08-08');
+('per611001c5c0693', 'User', 'user', '2021-08-08'),
+('per611cc8870dd14', 'Berita Konten', 'berita-konten', '2021-08-18'),
+('per611cc88eade13', 'Pengumuman Konten', 'pengumuman-konten', '2021-08-18');
 
 -- --------------------------------------------------------
 
@@ -88149,6 +88284,29 @@ INSERT INTO `provinsi` (`idProvinsi`, `nameprov`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `publik`
+--
+
+CREATE TABLE `publik` (
+  `idPublik` varchar(255) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `nohandphone` varchar(15) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `idUser` varchar(255) NOT NULL,
+  `dateCreate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `publik`
+--
+
+INSERT INTO `publik` (`idPublik`, `nama`, `nohandphone`, `email`, `idUser`, `dateCreate`) VALUES
+('pbk611f17b62646d', 'Pengunjung 1', '12234', 'pengunjung1@mail.com', 'usr611f17b5ea5ae', '2021-08-20'),
+('pbk6120abb2b59e9', '', '23432847', 'pegawai2@mail.com', 'usr6120abb24d3df', '2021-08-21');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `regulasi`
 --
 
@@ -88193,7 +88351,9 @@ CREATE TABLE `role` (
 --
 
 INSERT INTO `role` (`idRole`, `namaRole`, `aliasRole`, `dateCreate`) VALUES
+('89wsnfsuweer', 'Pegawai', 'pegawai', '2021-08-18'),
 ('9asdkqhjwew', 'KESBANGPOL', 'kesbangpol', '2021-07-29'),
+('rol611f11be4a52a', 'Publik', 'publik', '2021-08-20'),
 ('zxc98djh232', 'Orsospol', 'orsospol', '2021-07-29');
 
 -- --------------------------------------------------------
@@ -88217,7 +88377,10 @@ INSERT INTO `rolepermission` (`idRolepermission`, `idRole`, `idPermission`, `dat
 ('rpm610ffa455019a', '9asdkqhjwew', 'per610fe6c9d8f5d', '2021-08-08'),
 ('rpm610ffa456d49d', '9asdkqhjwew', 'per610fe6d56a596', '2021-08-08'),
 ('rpm610ffa457daf7', '9asdkqhjwew', 'per610fe83335a29', '2021-08-08'),
-('rpm610ffa45875e7', '9asdkqhjwew', 'per610fe865c0502', '2021-08-08');
+('rpm610ffa45875e7', '9asdkqhjwew', 'per610fe865c0502', '2021-08-08'),
+('rpm611f11dc7c996', 'rol611f11be4a52a', 'per610fe6c9d8f5d', '2021-08-20'),
+('rpm611f11dc92949', 'rol611f11be4a52a', 'per610fe6d56a596', '2021-08-20'),
+('rpm611f11dca6fe6', 'rol611f11be4a52a', 'per610fe83335a29', '2021-08-20');
 
 -- --------------------------------------------------------
 
@@ -88307,6 +88470,49 @@ INSERT INTO `sosialmedia` (`idSosialmedia`, `instagramSosialmedia`, `facebookSos
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tagberita`
+--
+
+CREATE TABLE `tagberita` (
+  `idTagberita` varchar(255) NOT NULL,
+  `namaTag` varchar(255) NOT NULL,
+  `idBerita` varchar(255) NOT NULL,
+  `dateCreate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tagberita`
+--
+
+INSERT INTO `tagberita` (`idTagberita`, `namaTag`, `idBerita`, `dateCreate`) VALUES
+('tag611def23cba34', 'tag1', 'nws611def23ab50f', '2021-08-19'),
+('tag611def23cba55', 'tag2', 'nws611def23ab50f', '2021-08-19');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `timeditorberita`
+--
+
+CREATE TABLE `timeditorberita` (
+  `idTimeditorberita` varchar(255) NOT NULL,
+  `idUser` varchar(255) NOT NULL,
+  `idBerita` varchar(255) NOT NULL,
+  `dateCreate` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `timeditorberita`
+--
+
+INSERT INTO `timeditorberita` (`idTimeditorberita`, `idUser`, `idBerita`, `dateCreate`) VALUES
+('teb611dd28c65f91', 'usr611dca5b381fb', 'nws611dd28c57959', '2021-08-19'),
+('teb611dd28c65f9c', 'usr611dcd3d2c1a1', 'nws611dd28c57959', '2021-08-19'),
+('teb611def23bccd1', 'usr611dca5b381fb', 'nws611def23ab50f', '2021-08-19');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -88327,7 +88533,13 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`idUser`, `namaUser`, `usernameUser`, `passwordUser`, `idRole`, `emailUser`, `dateCreate`) VALUES
 ('usr61037f9c85184', 'Admin', 'admin', '$2y$10$rkiappIPSzPR4j38.jmHFucb140ebGlzsHUy4ulRzsI/ygkWusXYW', '9asdkqhjwew', 'admin@gmail.com', '2021-07-30'),
 ('usr61039d7730554', 'Fulan 2', 'fulan2', '$2y$10$FwLFidxBc52iWpCzZdy9teWuJNsQXf0PAh8mNkqDqs.4czn4orvqq', 'zxc98djh232', 'fulan2@gmail.com', '2021-07-30'),
-('usr6106c82a3b736', 'Fulan', 'orsospol1', '$2y$10$Tqa71PY8tXzR3g8B5rdaJ.vQxggP/eEJl4wIY3PS.Cc3R/28YstOq', 'zxc98djh232', 'orsospol1@gmail.com', '2021-08-01');
+('usr6106c82a3b736', 'Fulan', 'orsospol1', '$2y$10$Tqa71PY8tXzR3g8B5rdaJ.vQxggP/eEJl4wIY3PS.Cc3R/28YstOq', 'zxc98djh232', 'orsospol1@gmail.com', '2021-08-01'),
+('usr611c98984ee67', 'DEWAN PENGURUS WILAYAH ASOSIASI PERUSAHAAN BONGKAR MUAT INDONESIA', 'dpwa', '$2y$10$t6DtxuqwedvB2dKx0o8h9ecj9x3cCdjGG8C7YhoiJoWc0mTFo9QoW', 'zxc98djh232', 'dpwa@mail.com', '2021-08-18'),
+('usr611cbed256acc', 'Pegawai 1', 'pegawai1', '$2y$10$t6DtxuqwedvB2dKx0o8h9ecj9x3cCdjGG8C7YhoiJoWc0mTFo9QoW', '89wsnfsuweer', '', '2021-08-18'),
+('usr611dca5b381fb', 'Pegawai 2', 'pegawai2', '$2y$10$jQAYI/VwkBy1dmjczbzOyOb6gfjUfsUj51PUJmZ0W2J0f0xw5QpDO', '89wsnfsuweer', '', '2021-08-19'),
+('usr611dcd3d2c1a1', 'Pegawai 3', 'pegawai3', '$2y$10$qr.goKA3MC0zwLNCDToVuOZTtOD0VGp0ewjDvJp/A.n84FJYci7yi', '89wsnfsuweer', '', '2021-08-19'),
+('usr611f17b5ea5ae', 'Pengunjung 1', 'pengunjung1', '$2y$10$Qc0ip05amBuDyvD79I8Gte42b8bXU5nrvjE8VE.yXsO.JM9QOioZ2', 'rol611f11be4a52a', '', '2021-08-20'),
+('usr6120abb24d3df', 'Pegawai 2', 'pegawai2', '$2y$10$UczRKY.y2o.Xgcv2vFJYx.LKngzj4sKvWs8BbeCEH.1sg15M8vPVW', 'rol611f11be4a52a', '', '2021-08-21');
 
 --
 -- Indexes for dumped tables
@@ -88357,6 +88569,12 @@ ALTER TABLE `berita`
 --
 ALTER TABLE `chronology`
   ADD PRIMARY KEY (`idChronology`);
+
+--
+-- Indexes for table `commentberita`
+--
+ALTER TABLE `commentberita`
+  ADD PRIMARY KEY (`idCommentberita`);
 
 --
 -- Indexes for table `embed`
@@ -88458,6 +88676,18 @@ ALTER TABLE `layananunduhan`
   ADD PRIMARY KEY (`idLayananunduhan`);
 
 --
+-- Indexes for table `likeberita`
+--
+ALTER TABLE `likeberita`
+  ADD PRIMARY KEY (`idLikeberita`);
+
+--
+-- Indexes for table `likecommentberita`
+--
+ALTER TABLE `likecommentberita`
+  ADD PRIMARY KEY (`idLikecommentberita`);
+
+--
 -- Indexes for table `media`
 --
 ALTER TABLE `media`
@@ -88481,6 +88711,12 @@ ALTER TABLE `member`
 --
 ALTER TABLE `orsospol`
   ADD PRIMARY KEY (`idOrsospol`);
+
+--
+-- Indexes for table `pegawai`
+--
+ALTER TABLE `pegawai`
+  ADD PRIMARY KEY (`idPegawai`);
 
 --
 -- Indexes for table `pendidikan`
@@ -88527,6 +88763,12 @@ ALTER TABLE `provinsi`
   ADD PRIMARY KEY (`idProvinsi`) USING BTREE;
 
 --
+-- Indexes for table `publik`
+--
+ALTER TABLE `publik`
+  ADD PRIMARY KEY (`idPublik`);
+
+--
 -- Indexes for table `regulasi`
 --
 ALTER TABLE `regulasi`
@@ -88555,6 +88797,18 @@ ALTER TABLE `sakip`
 --
 ALTER TABLE `sosialmedia`
   ADD PRIMARY KEY (`idSosialmedia`);
+
+--
+-- Indexes for table `tagberita`
+--
+ALTER TABLE `tagberita`
+  ADD PRIMARY KEY (`idTagberita`);
+
+--
+-- Indexes for table `timeditorberita`
+--
+ALTER TABLE `timeditorberita`
+  ADD PRIMARY KEY (`idTimeditorberita`);
 
 --
 -- Indexes for table `users`

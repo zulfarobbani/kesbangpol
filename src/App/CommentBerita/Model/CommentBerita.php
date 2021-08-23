@@ -19,13 +19,18 @@ class CommentBerita extends GlobalFunc
 
     public function selectAll($where = "")
     {
-        $sql = "SELECT * FROM " . $this->table . " LEFT JOIN users ON users.idUser = " . $this->table . ".idUser LEFT JOIN media ON media.idRelation = users.idUser " . $where;
+        $sql = "SELECT * FROM " . $this->table . " LEFT JOIN users ON users.idUser = " . $this->table . ".idUser LEFT JOIN media ON media.idRelation = users.idUser LEFT JOIN berita ON berita.idBerita = ".$this->table.".idBerita " . $where;
 
         try {
             $query = $this->conn->prepare($sql);
             $query->execute();
             $data = $query->fetchAll();
 
+            foreach ($data as $key => $value) {
+                $comment = $this->selectAll("WHERE commentonComment = '".$value['idCommentberita']."' AND approval = '1'");
+                $data[$key]['reply'] = $comment;
+            }
+            
             return $data;
         } catch (PDOException $e) {
             echo $e;
@@ -33,7 +38,7 @@ class CommentBerita extends GlobalFunc
         }
     }
 
-    public function create($datas, $idBerita, $idUser, $idComment = null)
+    public function create($datas, $idBerita, $idUser, $idComment = '')
     {
         $idCommentberita = uniqid("bar");
         $commentText = $datas->get('commentText');
@@ -81,7 +86,7 @@ class CommentBerita extends GlobalFunc
 
     public function selectOne($id)
     {
-        $sql = "SELECT * FROM " . $this->table . " LEFT JOIN media ON " . $this->table . "." . $this->primaryKey . " = media.idRelation WHERE " . $this->primaryKey . " = '$id'";
+        $sql = "SELECT * FROM " . $this->table . " LEFT JOIN media ON " . $this->table . "." . $this->primaryKey . " = media.idRelation LEFT JOIN users ON users.idUser = ".$this->table.".idUser LEFT JOIN berita ON berita.idBerita = ".$this->table.".idBerita WHERE " . $this->primaryKey . " = '$id'";
 
         try {
             $query = $this->conn->prepare($sql);
@@ -95,9 +100,24 @@ class CommentBerita extends GlobalFunc
         }
     }
 
+    public function approvalKomentar($id, $approval)
+    {
+        $sql = "UPDATE " . $this->table . " SET approval = '$approval' WHERE ".$this->primaryKey." = '$id'";
+
+        try {
+            $data = $this->conn->prepare($sql);
+
+            $data->execute();
+            return $id;
+        } catch (PDOException $e) {
+            echo $e;
+            die();
+        }
+    }
+
     public function delete($id)
     {
-        $sql = "DELETE FROM " . $this->table . " WHERE idPengumuman = '$id'";
+        $sql = "DELETE FROM " . $this->table . " WHERE ".$this->primaryKey." = '$id'";
 
         try {
             $query = $this->conn->prepare($sql);
@@ -108,4 +128,5 @@ class CommentBerita extends GlobalFunc
             die();
         }
     }
+
 }
