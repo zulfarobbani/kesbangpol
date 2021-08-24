@@ -1,14 +1,14 @@
 <?php
 
-namespace App\LikeBerita\Model;
+namespace App\LikePengumuman\Model;
 
 use Core\GlobalFunc;
 use PDOException;
 
-class LikeBerita extends GlobalFunc
+class LikePengumuman extends GlobalFunc
 {
-    private $table = 'likeberita';
-    private $primaryKey = 'idLikeberita';
+    private $table = 'likepengumuman';
+    private $primaryKey = 'idLikepengumuman';
     public $conn;
 
     public function __construct()
@@ -19,7 +19,7 @@ class LikeBerita extends GlobalFunc
 
     public function selectAll($where = "")
     {
-        $sql = "SELECT * FROM " . $this->table . " LEFT JOIN users ON users.idUser = " . $this->table . ".idUser LEFT JOIN media ON media.idRelation = users.idUser LEFT JOIN berita ON berita.idBerita = ".$this->table.".idBerita " . $where;
+        $sql = "SELECT * FROM " . $this->table . " LEFT JOIN users ON users.idUser = " . $this->table . ".idUser LEFT JOIN media ON media.idRelation = users.idUser LEFT JOIN pengumuman ON pengumuman.idPengumuman = ".$this->table.".idPengumuman " . $where;
 
         try {
             $query = $this->conn->prepare($sql);
@@ -33,37 +33,37 @@ class LikeBerita extends GlobalFunc
         }
     }
 
-    public function create($datas, $idBerita, $idUser, $jenislikeBerita)
+    public function create($datas, $idPengumuman, $idUser, $jenislikePengumuman)
     {
-        $idLikeberita = uniqid("lbr");
-        // $jenislikeBerita = $datas->get('jenislikeBerita');
+        $idLikepengumuman = uniqid("lbr");
+        // $jenislikePengumuman = $datas->get('jenislikePengumuman');
         $dateCreate = date('Y-m-d');
 
-        $sql = "INSERT INTO " . $this->table . " VALUES ('$idLikeberita', '$idUser', '$idBerita', '$jenislikeBerita', '$dateCreate')";
+        $sql = "INSERT INTO " . $this->table . " VALUES ('$idLikepengumuman', '$idUser', '$idPengumuman', '$jenislikePengumuman', '$dateCreate')";
 
         try {
             $data = $this->conn->prepare($sql);
 
             $data->execute();
-            return $idLikeberita;
+            return $idLikepengumuman;
         } catch (PDOException $e) {
             echo $e;
             die();
         }
     }
 
-    public function update($datas, $idBerita, $idUser, $idLikeberita = '')
+    public function update($datas, $idPengumuman, $idUser, $idLikepengumuman = '')
     {
-        $jenislikeBerita = $datas->get('jenislikeBerita');
+        $jenislikePengumuman = $datas->get('jenislikePengumuman');
         $dateCreate = date('Y-m-d');
 
-        $sql = "UPDATE " . $this->table . " SET idUser = '$idUser', idBerita = '$idBerita', jenislikeBerita = '$jenislikeBerita' WHERE ".$this->primaryKey." = '$idLikeberita'";
+        $sql = "UPDATE " . $this->table . " SET idUser = '$idUser', idPengumuman = '$idPengumuman', jenislikePengumuman = '$jenislikePengumuman' WHERE ".$this->primaryKey." = '$idLikepengumuman'";
 
         try {
             $data = $this->conn->prepare($sql);
 
             $data->execute();
-            return $idLikeberita;
+            return $idLikepengumuman;
         } catch (PDOException $e) {
             echo $e;
             die();
@@ -72,7 +72,7 @@ class LikeBerita extends GlobalFunc
 
     public function selectOne($id)
     {
-        $sql = "SELECT * FROM " . $this->table . " LEFT JOIN media ON " . $this->table . "." . $this->primaryKey . " = media.idRelation LEFT JOIN users ON users.idUser = ".$this->table.".idUser LEFT JOIN berita ON berita.idBerita = ".$this->table.".idBerita WHERE " . $this->primaryKey . " = '$id'";
+        $sql = "SELECT * FROM " . $this->table . " LEFT JOIN media ON " . $this->table . "." . $this->primaryKey . " = media.idRelation LEFT JOIN users ON users.idUser = ".$this->table.".idUser LEFT JOIN berita ON berita.idPengumuman = ".$this->table.".idPengumuman WHERE " . $this->primaryKey . " = '$id'";
 
         try {
             $query = $this->conn->prepare($sql);

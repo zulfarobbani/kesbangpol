@@ -25,7 +25,7 @@
   <div class="container-fluid content-main">
     <div class="row">
       <div class="col-md-8">
-      <div class="card rounded-3 mt-5 px-3">
+      <div class="card rounded-3 px-3 mt-3">
         <div class="card-body">
         <!-- START CODE -->
         <h4 class="mt-3">Pegawai</h4>

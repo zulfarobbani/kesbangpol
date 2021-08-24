@@ -22,7 +22,7 @@
     <div class="container-fluid">
         <div class="row" style="background-color: #f7f7f7;">
             <div class="col-md-8 mb-3">
-                <div class="card rounded-3 mt-5 px-3">
+                <div class="card rounded-3 px-3 mt-3">
                     <div class="card-body">
                         <!-- START CODE -->
                         <h6 class="fw-normal mt-2"><a href="/informasi/berita" class="btn btn-sm btn-outline-danger"><i class="fas fa-arrow-left"></i></a>&nbsp;&nbsp; Informasi Terkini</h6>
@@ -49,48 +49,56 @@
                                         <div class="modal-dialog modal-lg">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Profil Pegawai</h5>
+                                                    <h5 class="modal-title" id="exampleModalLabel"><b>Profil Pegawai</b></h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <div class="row mb-3">
-                                                        <div class="col-1">
-                                                            <img src="" width="80px" height="80px" class="img imgPegawai rounded-circle">
+                                                    <div class="row">
+                                                        <div class="col-4">
+                                                            <div class="row mb-3">
+                                                                <div class="col">
+                                                                    <img src="" width="80px" height="80px" class="img imgPegawai rounded-circle" style="margin-left: 50px;">
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col" style="padding-left: 50px;">
+                                                                    <!-- <label for="">Nama Pegawai</label> -->
+                                                                    <h5 class="namaPegawai"></h5>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                        <div class="col" style="padding-left: 50px;">
-                                                            <label for="">Nama Pegawai</label>
-                                                            <h5><b class="namaPegawai"></b></h5>
+                                                        <div class="col">
+                                                            <table>
+                                                                <tr>
+                                                                    <td>
+                                                                        <h6>Jabatan</h6>
+                                                                    </td>
+                                                                    <td style="padding: 0 20px 0 20px;">:</td>
+                                                                    <td>
+                                                                        <h5 class="jabatanPegawai"></h5>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <h6>NIP</h6>
+                                                                    </td>
+                                                                    <td style="padding: 0 20px 0 20px;">:</td>
+                                                                    <td>
+                                                                        <h5 class="nipPegawai"></h5>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <h6>Email</h6>
+                                                                    </td>
+                                                                    <td style="padding: 0 20px 0 20px;">:</td>
+                                                                    <td>
+                                                                        <h5 class="emailPegawai"></h5>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
                                                         </div>
                                                     </div>
-                                                    <table>
-                                                        <tr>
-                                                            <td>
-                                                                <h6>Jabatan</h6>
-                                                            </td>
-                                                            <td style="padding: 0 20px 0 20px;">:</td>
-                                                            <td>
-                                                                <h5><b class="jabatanPegawai"></b></h5>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <h6>NIP</h6>
-                                                            </td>
-                                                            <td style="padding: 0 20px 0 20px;">:</td>
-                                                            <td>
-                                                                <h5><b class="nipPegawai"></b></h5>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <h6>Email</h6>
-                                                            </td>
-                                                            <td style="padding: 0 20px 0 20px;">:</td>
-                                                            <td>
-                                                                <h5><b class="emailPegawai"></b></h5>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
@@ -113,13 +121,13 @@
                                 <div class="row d-flex justify-content-center">
                                     <div class="col-2 text-center text-grey">
                                         <a href="/likeBerita/<?= $detail['idBerita'] ?>/store" class="text-dark text-decoration-none">
-                                            <i class="far fa-thumbs-up"></i>
+                                            <i class="<?= count($likeBerita) > 0 ? 'fas' : 'far' ?> fa-thumbs-up"></i>
                                         </a>
                                         <span><?= $detail['countlikeBerita'] ?></span> Suka
                                     </div>
                                     <div class="col-2 text-center text-grey">
                                         <a href="/dislikeBerita/<?= $detail['idBerita'] ?>/store" class="text-dark text-decoration-none">
-                                            <i class="far fa-thumbs-up" style="-ms-transform: rotate(180deg);transform: rotate(180deg);"></i>
+                                            <i class="<?= count($dislikeBerita) > 0 ? 'fas' : 'far' ?> fa-thumbs-up" style="-ms-transform: rotate(180deg);transform: rotate(180deg);"></i>
                                         </a>
                                         <span><?= $detail['countdislikeBerita'] ?></span> Tidak Suka
                                     </div>
@@ -128,12 +136,13 @@
                                         <span><?= $detail['countcommentBerita'] ?></span> Komentar
                                     </div>
                                     <div class="col-2 text-center text-grey">
-                                        <a href="#" class="text-dark text-decoration-none btn-sosmed" data-bs-toggle="modal" data-bs-target="#modalSosmed" data-bs-url="<?= $site_url ?>/informasi/berita/<?= $detail['idBerita'] ?>">
+                                        <a href="#" class="text-dark text-decoration-none btn-sosmed" data-bs-toggle="modal" data-bs-target="#modalSosmed" data-bs-url="<?= $site_url ?>/informasi/berita/<?= $detail['idBerita'] ?>" data-bs-idBerita="<?= $detail['idBerita'] ?>">
                                             <i class="fas fa-share-alt"></i>
                                             <span><?= $detail['countshareBerita'] ?></span> Bagikan
                                         </a>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -182,7 +191,7 @@
                                             <?= $data['commentText'] ?>
                                         </p>
                                         <div class="row d-flex mb-2">
-                                            <div class="col-2 text-center text-grey">
+                                            <!-- <div class="col-2 text-center text-grey">
                                                 <a href="/likeBerita/<?= $detail['idBerita'] ?>/store" class="text-dark text-decoration-none">
                                                     <i class="far fa-thumbs-up"></i>
                                                 </a>
@@ -193,7 +202,7 @@
                                                     <i class="far fa-thumbs-up" style="-ms-transform: rotate(180deg);transform: rotate(180deg);"></i>
                                                 </a>
                                                 <span style="font-size: 12px;"><span>0</span> Tidak Suka</span>
-                                            </div>
+                                            </div> -->
                                             <div class="col-3 text-center text-grey">
                                                 <a href="#" class="text-dark text-decoration-none" data-bs-toggle="collapse" data-bs-target="#collapseExample<?= $data['idCommentberita'] ?>" aria-expanded="false" aria-controls="collapseExample<?= $data['idCommentberita'] ?>">
                                                     <i class="far fa-comment"></i>
@@ -223,7 +232,7 @@
                                                                 <!-- <span class="text-muted ps-3" style="font-size: 13px;">2 Bulan yang lalu</span> -->
                                                             </div>
                                                             <p class="text-grey"><?= $data1['commentText'] ?></p>
-                                                            <div class="row d-flex mb-2">
+                                                            <!-- <div class="row d-flex mb-2">
                                                                 <div class="col-3 text-center text-grey">
                                                                     <a href="/likeBerita/<?= $detail['idBerita'] ?>/store" class="text-dark text-decoration-none">
                                                                         <i class="far fa-thumbs-up"></i>
@@ -236,7 +245,7 @@
                                                                     </a>
                                                                     <span style="font-size: 12px;"><span>0</span> Tidak Suka</span>
                                                                 </div>
-                                                            </div>
+                                                            </div> -->
 
                                                         </div>
                                                     </div>
@@ -272,44 +281,44 @@
                 <div class="modal-body">
                     <div class="row justify-content-center">
                         <div class="col-2 mb-3">
-                            <a href="" class="whatsapp" target="_blank"><img src="/assets/icon/sosmed/whatsapp.svg" class="w-50 d-block mx-auto" alt="">
+                            <a href="" class="shareberita whatsapp" dataidberita="" target="_blank"><img src="/assets/icon/sosmed/whatsapp.svg" class="w-50 d-block mx-auto" alt="">
                                 <p class="text-dark text-center" style="font-size: 12px"><br>Whatsapp</p>
                             </a>
                         </div>
                         <div class="col-2 mb-3">
-                            <a href="" class="instagram" target="_blank"><img src="/assets/icon/sosmed/instagram.svg" class="w-50 d-block mx-auto" alt="">
+                            <a href="" class="shareberita instagram" dataidberita="" target="_blank"><img src="/assets/icon/sosmed/instagram.svg" class="w-50 d-block mx-auto" alt="">
                                 <p class="text-dark text-center" style="font-size: 12px"><br>Instagram</p>
                             </a>
                         </div>
                         <div class="col-2 mb-3">
-                            <a href="" class="telegram" target="_blank"><img src="/assets/icon/sosmed/telegram.svg" class="w-50 d-block mx-auto" alt="">
+                            <a href="" class="shareberita telegram" dataidberita="" target="_blank"><img src="/assets/icon/sosmed/telegram.svg" class="w-50 d-block mx-auto" alt="">
                                 <p class="text-dark text-center" style="font-size: 12px"><br>Telegram</p>
                             </a>
                         </div>
                         <div class="col-2 mb-3">
-                            <a href="" class="facebook" target="_blank"><img src="/assets/icon/sosmed/facebook.svg" class="w-50 d-block mx-auto" alt="">
+                            <a href="" class="shareberita facebook" dataidberita="" target="_blank"><img src="/assets/icon/sosmed/facebook.svg" class="w-50 d-block mx-auto" alt="">
                                 <p class="text-dark text-center" style="font-size: 12px"><br>Facebook</p>
                             </a>
                         </div>
                         <div class="col-2 mb-3">
-                            <a href="" class="twitter" target="_blank"><img src="/assets/icon/sosmed/twitter.svg" class="w-50 d-block mx-auto" alt="">
+                            <a href="" class="shareberita twitter" dataidberita="" target="_blank"><img src="/assets/icon/sosmed/twitter.svg" class="w-50 d-block mx-auto" alt="">
                                 <p class="text-dark text-center" style="font-size: 12px"><br>Twitter</p>
                             </a>
                         </div>
                         <!-- <div class="col-2 mb-3">
-                  <a href="" class="googleplus" target="_blank"><img src="/assets/icon/sosmed/google-plus.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Google +</span></a>
+                  <a href="" class="shareberita googleplus" dataidberita="" target="_blank"><img src="/assets/icon/sosmed/google-plus.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Google +</span></a>
                 </div> 
                 <div class="col-2 mb-3">
-                  <a href="" class="reddit" target="_blank"><img src="/assets/icon/sosmed/reddit.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Reddit</span></a>
+                  <a href="" class="shareberita reddit" dataidberita="" target="_blank"><img src="/assets/icon/sosmed/reddit.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Reddit</span></a>
                 </div>
                 <div class="col-2 mb-3">
-                  <a href="" class="linkedin" target="_blank"><img src="/assets/icon/sosmed/linkedin.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>LinkedIn</span></a>
+                  <a href="" class="shareberita linkedin" dataidberita="" target="_blank"><img src="/assets/icon/sosmed/linkedin.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>LinkedIn</span></a>
                 </div>
                 <div class="col-2 mb-3">
-                  <a href="" class="pinterest" target="_blank"><img src="/assets/icon/sosmed/pinterest.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Pinterest</span></a>
+                  <a href="" class="shareberita pinterest" dataidberita="" target="_blank"><img src="/assets/icon/sosmed/pinterest.svg" class="w-50" alt=""><span class="text-dark" style="font-size: 12px"><br>Pinterest</span></a>
                 </div> -->
                         <div class="col-2 mb-3">
-                            <a href="" class="email" target="_blank"><img src="/assets/icon/sosmed/email.svg" class="w-50 d-block mx-auto" alt="">
+                            <a href="" class="shareberita email" dataidberita="" target="_blank"><img src="/assets/icon/sosmed/email.svg" class="w-50 d-block mx-auto" alt="">
                                 <p class="text-dark text-center" style="font-size: 12px"><br>Email</p>
                             </a>
                         </div>
@@ -334,16 +343,24 @@
 
             // modal.find('.facebook').prop('href', 'http://www.facebook.com/sharer.php?u=' + btn.attr('data-bs-url'));
             modal.find('.facebook').prop('href', 'https://id-id.facebook.com/login/web/');
+            modal.find('.facebook').prop('dataidberita', 'asdasd');
             // modal.find('.twitter').prop('href', 'http://twitter.com/share?url=' + btn.attr('data-bs-url'));
             modal.find('.twitter').prop('href', 'https://twitter.com/login?lang=id');
+            modal.find('.twitter').prop('idberita', $(this).attr('data-bs-idBerita'));
             // modal.find('.googleplus').prop('href', 'https://plus.google.com/share?url='+btn.attr('data-bs-url'));
             modal.find('.instagram').prop('href', 'https://www.instagram.com/accounts/login');
+            modal.find('.instagram').prop('idberita', $(this).attr('data-bs-idBerita'));
             modal.find('.reddit').prop('href', 'http://reddit.com/submit?url=' + btn.attr('data-bs-url'));
+            modal.find('.reddit').prop('idberita', $(this).attr('data-bs-idBerita'));
             modal.find('.pinterest').prop('href', 'http://pinterest.com/pin/create/button/?url=' + btn.attr('data-bs-url'));
+            modal.find('.pinterest').prop('idberita', $(this).attr('data-bs-idBerita'));
             // modal.find('.whatsapp').prop('href', 'http://pinterest.com/pin/create/button/?url=' + btn.attr('data-bs-url'));
             modal.find('.whatsapp').prop('href', 'https://web.whatsapp.com');
+            modal.find('.whatsapp').prop('idberita', $(this).attr('data-bs-idBerita'));
             modal.find('.telegram').prop('href', 'https://web.telegram.org/');
+            modal.find('.telegram').prop('idberita', $(this).attr('data-bs-idBerita'));
             modal.find('.email').prop('href', 'mailto:?Subject=Berita Kesbangpol&Body=Klik%20link%20untuk%20melihat%20berita%20%20 ' + btn.attr('data-bs-url'));
+            modal.find('.email').prop('idberita', $(this).attr('data-bs-idBerita'));
         });
 
         $(document).on('click', '.btnProfil', function() {
@@ -357,6 +374,13 @@
                 modal.find('.jabatanPegawai').html(data.detail.jabatanPegawai)
                 modal.find('.nipPegawai').html(data.detail.nipPegawai)
                 modal.find('.emailPegawai').html(data.detail.emailPegawai)
+            })
+        })
+
+        $(document).on('click', '.shareberita', function() {
+            $.ajax({
+                type: 'POST',
+                url: '/shareberita/' + $(this).attr('data-bs-idBerita') + '/get'
             })
         })
     </script>

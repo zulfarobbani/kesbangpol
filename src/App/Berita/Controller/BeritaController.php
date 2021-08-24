@@ -5,6 +5,7 @@ namespace App\Berita\Controller;
 use App\Banner\Model\Banner;
 use App\Berita\Model\Berita;
 use App\CommentBerita\Model\CommentBerita;
+use App\LikeBerita\Model\LikeBerita;
 use App\Media\Model\Media;
 use Core\GlobalFunc;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -43,7 +44,11 @@ class BeritaController extends GlobalFunc
         $comment = new CommentBerita();
         $commentBerita = $comment->selectAll("WHERE commentberita.idBerita = '$id' AND (commentonComment IS NULL OR commentonComment = '') AND approval = '1'");
 
-        return $this->render_template('informasi/berita/detail', ['detail' => $detail, 'timeditorberita' => $timeditorberita, 'authorberita' => $authorberita, 'tagberita' => $tagberita, 'msgSuccess' => $msgSuccess, 'commentBerita' => $commentBerita]);
+        $like = new LikeBerita();
+        $likeBerita = $like->selectAll("WHERE likeberita.idBerita = '$id' AND likeberita.idUser = '".$this->session->get('idUser')."' AND jenislikeBerita = '1'");
+        $dislikeBerita = $like->selectAll("WHERE likeberita.idBerita = '$id' AND likeberita.idUser = '".$this->session->get('idUser')."' AND jenislikeBerita = '2'");
+
+        return $this->render_template('informasi/berita/detail', ['detail' => $detail, 'timeditorberita' => $timeditorberita, 'authorberita' => $authorberita, 'tagberita' => $tagberita, 'msgSuccess' => $msgSuccess, 'commentBerita' => $commentBerita, 'likeBerita' => $likeBerita, 'dislikeBerita' => $dislikeBerita]);
     }
 
     public function beritaKonten(Request $request)

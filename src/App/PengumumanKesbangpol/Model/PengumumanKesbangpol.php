@@ -121,4 +121,44 @@ class PengumumanKesbangpol extends GlobalFunc
             die();
         }
     }
+
+    public function createTimeditor($datas, $berita)
+    {
+        $sql = "INSERT INTO timeditorberita VALUES ";
+        foreach ($datas->get('idUser') as $key => $value) {
+            $id = uniqid('teb');
+            $dateCreate = date('Y-m-d');
+            $sql.= $key > 0 ? ',' : '';
+            $sql.= "('$id', '$value', '$berita', '$dateCreate')";
+        }
+        
+        try {
+            $data = $this->conn->prepare($sql);
+            $data->execute();
+        } catch (PDOException $e) {
+            echo $e;
+            die();
+        }
+        return true;
+    }
+
+    public function createTagpengumuman($datas, $berita)
+    {
+        $sql = "INSERT INTO tagberita VALUES ";
+        foreach ($datas as $key => $value) {
+            $id = uniqid('tag');
+            $dateCreate = date('Y-m-d');
+            $sql.= $key > 0 ? ',' : '';
+            $sql.= "('$id', '$value', '$berita', '$dateCreate')";
+        }
+        
+        try {
+            $data = $this->conn->prepare($sql);
+            $data->execute();
+        } catch (PDOException $e) {
+            echo $e;
+            die();
+        }
+        return true;
+    }
 }

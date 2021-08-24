@@ -97,7 +97,7 @@ class OrsospolKesbangpol extends GlobalFunc
         $approvalOrsospol = '1';
         $dateCreate = date('Y-m-d');
 
-        $sql = "INSERT INTO " . $this->table . " VALUES ('$id','$namaOrsosopol', '$idJenisorsospol', '$notarisOrsospol', '$kemenkumhamOrsospol','$npwpOrsospol', '$rekeningOrsospol', '$bankOrsospol', '$alamatOrsospol', '$provinsiId', '$kabupatenId', '$kecamatanId', '$kelurahanId', '$emailOrsospol', '$teleponOrsospol', '$websiteOrsospol', '$idSosmed', '$approvalOrsospol', '$dateCreate', '$noAHU', '$idUser', '$singkatanOrsospol')";
+        $sql = "INSERT INTO " . $this->table . " VALUES ('$id','$namaOrsosopol', '$idJenisorsospol', '$notarisOrsospol', '$kemenkumhamOrsospol','$npwpOrsospol', '$rekeningOrsospol', '$bankOrsospol', '$alamatOrsospol', '$provinsiId', '$kabupatenId', '$kecamatanId', '$kelurahanId', '$emailOrsospol', '$teleponOrsospol', '$websiteOrsospol', '$idSosmed', '$approvalOrsospol', '$dateCreate', '$noAHU', '$idUser', '$singkatanOrsospol', '1')";
 
         try {
             $data = $this->conn->prepare($sql);
@@ -233,7 +233,7 @@ class OrsospolKesbangpol extends GlobalFunc
         $websiteOrsospol = $datas->get('websiteOrsospol');
         $approvalOrsospol = '1';
 
-        $sql = "UPDATE " . $this->table . " SET noAHU = '$noAHU', namaOrsospol = '$namaOrsosopol', idJenisorsospol = '$idJenisorsospol', notarisOrsospol = '$notarisOrsospol', kemenkumhamOrsospol = '$kemenkumhamOrsospol', npwpOrsospol = '$npwpOrsospol', rekeningOrsospol = '$rekeningOrsospol', bankOrsospol = '$bankOrsospol', alamatOrsospol = '$alamatOrsospol', idProvinsi = '$provinsiId', idKabupaten = '$kabupatenId', idKecamatan = '$kecamatanId', idKelurahan = '$kelurahanId', emailOrsospol = '$emailOrsospol', teleponOrsospol = '$teleponOrsospol',  websiteOrsospol='$websiteOrsospol', approvalOrsospol='$approvalOrsospol'  WHERE idOrsospol ='$idOrsos'";
+        $sql = "UPDATE " . $this->table . " SET noAHU = '$noAHU', namaOrsospol = '$namaOrsosopol', idJenisorsospol = '$idJenisorsospol', notarisOrsospol = '$notarisOrsospol', kemenkumhamOrsospol = '$kemenkumhamOrsospol', npwpOrsospol = '$npwpOrsospol', rekeningOrsospol = '$rekeningOrsospol', bankOrsospol = '$bankOrsospol', alamatOrsospol = '$alamatOrsospol', idProvinsi = '$provinsiId', idKabupaten = '$kabupatenId', idKecamatan = '$kecamatanId', idKelurahan = '$kelurahanId', emailOrsospol = '$emailOrsospol', teleponOrsospol = '$teleponOrsospol',  websiteOrsospol='$websiteOrsospol', approvalOrsospol='$approvalOrsospol', regisBaru = ''  WHERE idOrsospol ='$idOrsos'";
 
         try {
             $data = $this->conn->prepare($sql);

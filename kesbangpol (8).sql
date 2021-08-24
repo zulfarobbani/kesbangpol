@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 23, 2021 at 06:48 PM
+-- Generation Time: Aug 24, 2021 at 05:32 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -104,7 +104,7 @@ INSERT INTO `berita` (`idBerita`, `namaBerita`, `deskripsiBerita`, `idRelation`,
 ('nws6114cbf6d58f1', 'Distribusi Bantuan Sembako, Kesbangpol Pemprov Jabar Libatkan Ormas dan LSM di Kota Bandung', '<p>TRIBUNJABAR.ID,BANDUNG - Ormas dan LSM di Kota bandung &nbsp;dilibatkan dalam pendistribusian bantuan sembako bagi warga terdampak PPKM Level 4.</p>', '1', 2, 'usr61037f9c85184', '2021-08-12', '1', 0, 0, 0, 0),
 ('nws6114cc6092b16', 'Kepala Badan Kesbangpol Bontang Minta Posko Penyekatan Dimaksimalkan', '<p>TIMESINDONESIA, BONTANG â€“ Keberadaan posko penanganan Covid-19 di enam titik penyekatan pada sejumlah wilayah di Kota Bontang &nbsp;dilakukan untuk sebuah supervisi. Posko tersebut berfungsi untuk pencegahan, penanganan, pembinaan dan pendukung pelaksanaan penanganan Covid-19.</p>', '1', 2, 'usr61037f9c85184', '2021-08-12', '1', 0, 0, 0, 0),
 ('nws611cf4898f64c', 'ads', '<p>asdkjk askdj kajsd kj kjsd</p>', '1', 2, 'usr611cbed256acc', '2021-08-18', '1', 0, 0, 0, 0),
-('nws611dd28c57959', 'Kesbangpol Aceh Dialog Isu Aktual Bersama Tokoh Abdya  Salinan', '', '1', 2, 'usr611cbed256acc', '2021-08-19', '1', 1, 1, 8, 0),
+('nws611dd28c57959', 'Kesbangpol Aceh Dialog Isu Aktual Bersama Tokoh Abdya  Salinan', '', '1', 2, 'usr611cbed256acc', '2021-08-19', '1', 0, 1, 8, 0),
 ('nws611def23ab50f', 'Kesbangpol Aceh Dialog Isu Aktual Bersama Tokoh Abdya  Salinan', '', '1', 2, 'usr611cbed256acc', '2021-08-19', '1', 0, 0, 0, 0);
 
 -- --------------------------------------------------------
@@ -87743,8 +87743,7 @@ CREATE TABLE `likeberita` (
 --
 
 INSERT INTO `likeberita` (`idLikeberita`, `idUser`, `idBerita`, `jenislikeBerita`, `dateCreate`) VALUES
-('lbr6123d07dae761', 'user60eefe5a7a23d', 'nws611dd28c57959', '', '2021-08-23'),
-('lbr6123d123365af', 'user60eefe5a7a23d', 'nws611dd28c57959', '', '2021-08-23');
+('lbr612453a50fff0', 'user60eefe5a7a23d', 'nws611dd28c57959', '2', '2021-08-24');
 
 -- --------------------------------------------------------
 
@@ -88020,43 +88019,44 @@ CREATE TABLE `orsospol` (
   `dateCreate` date NOT NULL,
   `noAHU` varchar(255) DEFAULT NULL,
   `idUser` varchar(255) DEFAULT NULL,
-  `singkatanOrsospol` varchar(255) NOT NULL
+  `singkatanOrsospol` varchar(255) NOT NULL,
+  `regisBaru` char(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `orsospol`
 --
 
-INSERT INTO `orsospol` (`idOrsospol`, `namaOrsospol`, `idJenisorsospol`, `notarisOrsospol`, `kemenkumhamOrsospol`, `npwpOrsospol`, `rekeningOrsospol`, `bankOrsospol`, `alamatOrsospol`, `idProvinsi`, `idKabupaten`, `idKecamatan`, `idKelurahan`, `emailOrsospol`, `teleponOrsospol`, `websiteOrsospol`, `idSosialmedia`, `approvalOrsospol`, `dateCreate`, `noAHU`, `idUser`, `singkatanOrsospol`) VALUES
-('ors60e2d5bf34b8f', 'PERSATUAN PUTRA NUSANTARA', 'jor60d0575b7b225', 'sdads', 'asdas', '029183120421847', '327825678326832', 'BCA', 'Jl. Batu Jamus  Wungurejo RT10 Mojodoyong Kedawung Sragen', '32', '3204', '3204140', '3204140003', 'KANTOMANJI@gmail.com', '062749138242', 'KANTOMANJI.com', 'sos60e2d5bf34b65', 1, '2021-07-05', 'AHU-0000267.AH.01.07 Th. 2015', '', ''),
-('ors6100c2babda0a', 'RADIO ANTAR PENDUDUK INDONESIA', 'jor60d0573fb33fe', '', '', '', '', '', 'JL. Lamongan Barat VII No.1 Sampangan, Gajahmungkur Smg', '13', '1301', '1301011', '1301011001', 'asd@asd.sd', 'asdasd', 'asd', 'sos6100c2bb0efe2', 1, '2021-07-28', 'AHU-39 AH 01  06 TH.2008', '', ''),
-('ors610248086c2af', 'KOALISI LSM DAN PENGACARA PENEGAK HUKUM DAN KEBENARAN JAWA TENGAH', 'jor60d0574b03b65', 'asd', 'asd', 'asd', 'asd', 'asd', 'Jl. Wonodri Kopen Timur III No. 04  Semarang', '33', '3315', '3315130', '3315130013', 'asd@asd.sd', 'asd', 'asd', 'sos61024807cbcad', 1, '2021-07-29', 'AHU-0001112.AH.01.07 TH. 2015', '', ''),
-('ors61024b489c9b8', 'GERAKAN   BANGUN DESA MENUJU MAKMUR', 'jor60d05997283b8', 'asd', 'asd', 'asd', 'asd', 'asd', 'Kalisari dukuhan RT.06/II Kel. Kalisari Kec. Sayung Kab. Demak', '14', '1401', '1401012', '1401012001', 'asd@asd.sd', 'asd', 'ads', 'sos61024b485d17b', 1, '2021-07-29', 'AHU -0004894.AH.01.07 TAHUN 2016', '', ''),
-('ors6106c82a70f77', 'LEMBAGA PENGAWAS KORUPSI DAN PEMANTAU PENEGAK HUKUM INDONESIA', 'jor60d0573fb33fe', '', '', '', '', '', 'Jl. Simpang Dukuh No. I Surabaya', '11', '', '', '', '', '087850000125', '', '', 1, '2021-08-01', 'AHU-00404.60.10.2014', 'usr6106c82a3b736', 'Orsos1'),
-('ors611a24f988c6c', 'DEWAN PENGURUS WILAYAH  ASOSIASI  PERUSAHAAN BONGKAR MUAT INDONESIA ', 'jor60d0573fb33fe', '', '', '', '', '', 'JL. Sleko No. 4 Semarang ', '11', '1103', '1103080', '1103080014', '', '', '', 'sos611a24f9260c8', 1, '2021-08-16', 'AHU- 174.AH.01.07.2012', '', ''),
-('ors611a2524a03ef', 'IKATAN GURU TAMAN KANAK-KANAK INDONESIA', 'jor60d0573fb33fe', '', '', '', '', '', 'Jl. Kelud Raya No. 07  Semarang', '14', '1403', '1403090', '1403090001', '', '', '', 'sos611a2524889dd', 1, '2021-08-16', 'C-04.HT.01.03.TH.2007 ', '', ''),
-('ors611a253b49924', 'PERSATUAN ARTIS PENYANYI , PENCIPTA LAGU dan PEMUSIK REPUBLIK INDONESIA', 'jor60d0573fb33fe', '', '', '', '', '', 'Jl. Karanganyar No. 07 Pudak Payung Semarang', '', '', '', '', '', '', '', 'sos611a253b28087', 1, '2021-08-16', 'C2-2939.H.01.03.TH.90', '', ''),
-('ors611a257a6cb0f', 'LINDU AJI', 'jor60d0573fb33fe', '', '', '', '', '', 'Griya  Raharja Jl. Supriyadi Kec. Pedurungan ', '', '', '', '', '', '', '', 'sos611a2578b90f5', 1, '2021-08-16', 'AHU-0002252.AH.01.07 TH.2015', '', ''),
-('ors611a2592e8a30', 'LEMBAGA SWADAYA MASYARAKAT GERAKAN PEDULI   ANAK BANGSA', 'jor60d0573fb33fe', '', '', '', '', '', 'Jl. Sambiroto  IV RT.02 RW.01 Tembalang Semarang ', '', '', '', '', '', '', '', 'sos611a2592ca896', 1, '2021-08-16', 'AHU-0010201.AHA.01.07  TH. 2015', '', ''),
-('ors611a267d64178', 'BARISAN PATRIOT  BELA NEGARA ', 'jor60d0574b03b65', '', '', '', '', '', 'Kelurahan Pekuncen Rt.03/01 No. 25 Kec. Wiradesa.Kab.Pekalongan', '', '', '', '', '', '', '', 'sos611a267d41071', 1, '2021-08-16', 'AHU- 0000066.AH.01.07 TH. 2015', '', ''),
-('ors611a2698bb1d9', 'YAYASAN  DARUL  QALAM  NUSANTARA', 'jor60d0574b03b65', '', '', '', '', '', 'Jl. Pesantren  PPPDQI No. 01 Desa Baros Kec. Ketanggungan Kab. Brebes', '', '', '', '', '', '', '', 'sos611a2697dfca2', 1, '2021-08-16', 'AHU-0013665.AH.01.04 Th. 2015', '', ''),
-('ors611a291268bcb', 'PEMANTAU PENGGUNAAN KEUANGAN NEGARA', 'jor60d0574b03b65', '', '', '', '', '', 'Kp. Sedompyong Gang 2 No. 11 RT.02. RW 10 Kel. ', '', '', '', '', '', '', '', 'sos611a2912515ff', 1, '2021-08-16', 'AHU-0020019.AH.01.07  Th. 2015', '', ''),
-('ors611a292aabe0e', 'LENTERA ABADI', 'jor60d0574b03b65', '', '', '', '', '', 'Jl. Dr. Wahidin No. 25 RT .005/RW.001 Desa Sindangsari Kec. Majenang ', '', '', '', '', '', '', '', 'sos611a292a8a9ff', 1, '2021-08-16', 'AHU-001473.AH.01.07.Th 2015', '', ''),
-('ors611a294fc47e5', 'MASYARAKAT PERS ANTI NARKOBA', 'jor60d0574b03b65', '', '', '', '', '', 'Jl. Raya Mangkang Km.15 Semarang', '', '', '', '', '', '', '', 'sos611a294fa6291', 1, '2021-08-16', 'AHU -0005461.AH.01.07 Th.2015', '', ''),
-('ors611a296d03a38', 'GERAKAN NASIONAL PENCEGAHAN KORUPSI REPUBLIK INDONESIA PROVINSI JAWA TENGAH', 'jor60d0574b03b65', '', '', '', '', '', 'Jl. Terate No. 07 Klego Kota Pekalongan ', '', '', '', '', '', '', '', 'sos611a296bc4188', 1, '2021-08-16', 'AHU-0000201.AH.01.07 TH.2015', '', ''),
-('ors611a29dc1ea0b', 'LEMBAGA PENGAWAS KINERJA APARATUR NEGARA REPUBLIK INDONESIA', 'jor60d0575b7b225', '', '', '', '', '', 'Semarang', '', '', '', '', '', '', '', 'sos611a29db4b87c', 1, '2021-08-16', 'AHU-0006803.AH.01.07. Th.2016', '', ''),
-('ors611a29f3a5a31', 'LEMBAGA SWADAYA MASYARAKAT KOMANDO BERSAMA RAKYAT', 'jor60d0575b7b225', '', '', '', '', '', 'Jl. Jend. A. Yani No. 357 Sidomulyo Sukoharjo (0271) 733128', '', '', '', '', '', '', '', 'sos611a29f387363', 1, '2021-08-16', 'AHU-0002562.AH.01.07.tahun 2015', '', ''),
-('ors611a2a297cd6d', 'FORUM  KOMUNIKASI SAHABAT BANSER', 'jor60d0575b7b225', '', '', '', '', '', 'Jl. Karang Tengah II Rt.08/II Genuksari Semarang', '', '', '', '', '', '', '', 'sos611a2a296c532', 1, '2021-08-16', 'AHU-0027649.AH.01.07 Tahun 2015', '', ''),
-('ors611a2a40e3706', 'BKM SUMBER REJEKI', 'jor60d0575b7b225', '', '', '', '', '', 'Desa Jatihadi RT.02/05 Kec. Sumber Rembang', '', '', '', '', '', '', '', 'sos611a2a40bdef3', 1, '2021-08-16', 'AHU-0003977.AH.01.07.Tahun 2015', '', ''),
-('ors611a2a5565a92', 'HIZBUT TAHRIR INDONESIA', 'jor60d0575b7b225', '', '', '', '', '', 'Jl. Kintelan  Baru No. 32 Semarang', '', '', '', '', '', '', '', 'sos611a2a554f384', 1, '2021-08-16', 'AHU-00282.60.10 Tahun 2014', '', ''),
-('ors611a2a6b5610b', 'GERAKAN PEMBANGUNAN DESA MAKMUR', 'jor60d0575b7b225', '', '', '', '', '', 'Desa Tegalsambi RT.08/02 Kec.Tahunan Kab. Jepara', '', '', '', '', '', '', '', 'sos611a2a6b382a3', 1, '2021-08-16', 'AHU-0006580.AH.01.07 Tahun 2016', '', ''),
-('ors611a2b28e6906', 'FORUM PENYELENGGARA KURSUS SELURUH INDONESIA', 'jor60d05997283b8', '', '', '', '', '', 'Jl. Sedayu Kenangan III Blok E No. 1 Woltermonginsidi, Kec. Genuk, Kota Semarang, Jawa Tengah, 40235, Indonesia', '', '', '', '', '', '', '', 'sos611a2b28b08f2', 1, '2021-08-16', 'AHU-0018976.ah.01.07tAHUN 2015', '', ''),
-('ors611a2b47ee2fa', 'GERAKAN EDUKASI MASYARAKAT PEDULI IRIGASI TANAH AIR', 'jor60d05997283b8', '', '', '', '', '', 'Bilo Lor RT.02/03 Desa Pundenarum Kec. Karangawen Kab.Demak', '', '', '', '', '', '', '', 'sos611a2b47c33f1', 1, '2021-08-16', 'AHU-0004870.AH.01.07.Tahun 2016', '', ''),
-('ors611a2b692a1da', 'GERAKAN PEDULI RAKYAT INDONESIA', 'jor60d05997283b8', '', '', '', '', '', 'Jl. Karangrejo II/12 RT.04/07 Srondol Wetan Banyumanik Semarang ', '', '', '', '', '', '', '', 'sos611a2b6910c06', 1, '2021-08-16', 'AHU-0007915.AH.01.07 Tahun 2016 ', '', ''),
-('ors611a2b7d4e2cd', 'FORUM  RAKYAT TANI LESTARI', 'jor60d05997283b8', '', '', '', '', '', 'Desa Jatihadi RT.02/05 Kec. Sumber Rembang', '', '', '', '', '', '', '', 'sos611a2b7d2ebe2', 1, '2021-08-16', 'AHU-0009089.AH.01.07 Tahun 2016', '', ''),
-('ors611a2c4413fc7', 'JARINGAN PENDAMPINGAN KEBIJAKAN DAN PEMBANGUNAN ', 'jor60d05997283b8', '', '', '', '', '', 'Jl. Raya Brangsong No. 57 Kec. Brangsong Kab.Kendal ', '', '', '', '', '', '', '', 'sos611a2c43f35e1', 1, '2021-08-16', 'AHU-0001682.AH.01.07-Tahun 2015', '', ''),
-('ors611a2c5ff2cc0', 'ASOSIASI  PETANI TEMBAKAU INDONESIA', 'jor60d05997283b8', '', '', '', '', '', 'Temanggung', '', '', '', '', '', '', '', 'sos611a2c5fcd4ab', 1, '2021-08-16', 'AHU-0006126.AH.01.07.Tahun 2015', '', ''),
-('ors611c98989a9f9', 'DEWAN PENGURUS WILAYAH ASOSIASI PERUSAHAAN BONGKAR MUAT INDONESIA', 'jor60d05997283b8', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, '2021-08-18', 'AHU- 174.AH.01.07.2012', 'usr611c98984ee67', 'DPWA');
+INSERT INTO `orsospol` (`idOrsospol`, `namaOrsospol`, `idJenisorsospol`, `notarisOrsospol`, `kemenkumhamOrsospol`, `npwpOrsospol`, `rekeningOrsospol`, `bankOrsospol`, `alamatOrsospol`, `idProvinsi`, `idKabupaten`, `idKecamatan`, `idKelurahan`, `emailOrsospol`, `teleponOrsospol`, `websiteOrsospol`, `idSosialmedia`, `approvalOrsospol`, `dateCreate`, `noAHU`, `idUser`, `singkatanOrsospol`, `regisBaru`) VALUES
+('ors60e2d5bf34b8f', 'PERSATUAN PUTRA NUSANTARA', 'jor60d0575b7b225', 'sdads', 'asdas', '029183120421847', '327825678326832', 'BCA', 'Jl. Batu Jamus  Wungurejo RT10 Mojodoyong Kedawung Sragen', '32', '3204', '3204140', '3204140003', 'KANTOMANJI@gmail.com', '062749138242', 'KANTOMANJI.com', 'sos60e2d5bf34b65', 1, '2021-07-05', 'AHU-0000267.AH.01.07 Th. 2015', '', '', ''),
+('ors6100c2babda0a', 'RADIO ANTAR PENDUDUK INDONESIA', 'jor60d0573fb33fe', '', '', '', '', '', 'JL. Lamongan Barat VII No.1 Sampangan, Gajahmungkur Smg', '13', '1301', '1301011', '1301011001', 'asd@asd.sd', 'asdasd', 'asd', 'sos6100c2bb0efe2', 1, '2021-07-28', 'AHU-39 AH 01  06 TH.2008', '', '', ''),
+('ors610248086c2af', 'KOALISI LSM DAN PENGACARA PENEGAK HUKUM DAN KEBENARAN JAWA TENGAH', 'jor60d0574b03b65', 'asd', 'asd', 'asd', 'asd', 'asd', 'Jl. Wonodri Kopen Timur III No. 04  Semarang', '33', '3315', '3315130', '3315130013', 'asd@asd.sd', 'asd', 'asd', 'sos61024807cbcad', 1, '2021-07-29', 'AHU-0001112.AH.01.07 TH. 2015', '', '', ''),
+('ors61024b489c9b8', 'GERAKAN   BANGUN DESA MENUJU MAKMUR', 'jor60d05997283b8', 'asd', 'asd', 'asd', 'asd', 'asd', 'Kalisari dukuhan RT.06/II Kel. Kalisari Kec. Sayung Kab. Demak', '14', '1401', '1401012', '1401012001', 'asd@asd.sd', 'asd', 'ads', 'sos61024b485d17b', 1, '2021-07-29', 'AHU -0004894.AH.01.07 TAHUN 2016', '', '', ''),
+('ors6106c82a70f77', 'LEMBAGA PENGAWAS KORUPSI DAN PEMANTAU PENEGAK HUKUM INDONESIA', 'jor60d0573fb33fe', '', '', '', '', '', 'Jl. Simpang Dukuh No. I Surabaya', '11', '', '', '', '', '087850000125', '', '', 1, '2021-08-01', 'AHU-00404.60.10.2014', 'usr6106c82a3b736', 'Orsos1', ''),
+('ors611a24f988c6c', 'DEWAN PENGURUS WILAYAH  ASOSIASI  PERUSAHAAN BONGKAR MUAT INDONESIA ', 'jor60d0573fb33fe', '', '', '', '', '', 'JL. Sleko No. 4 Semarang ', '11', '1103', '1103080', '1103080014', '', '', '', 'sos611a24f9260c8', 1, '2021-08-16', 'AHU- 174.AH.01.07.2012', '', '', ''),
+('ors611a2524a03ef', 'IKATAN GURU TAMAN KANAK-KANAK INDONESIA', 'jor60d0573fb33fe', '', '', '', '', '', 'Jl. Kelud Raya No. 07  Semarang', '14', '1403', '1403090', '1403090001', '', '', '', 'sos611a2524889dd', 1, '2021-08-16', 'C-04.HT.01.03.TH.2007 ', '', '', ''),
+('ors611a253b49924', 'PERSATUAN ARTIS PENYANYI , PENCIPTA LAGU dan PEMUSIK REPUBLIK INDONESIA', 'jor60d0573fb33fe', '', '', '', '', '', 'Jl. Karanganyar No. 07 Pudak Payung Semarang', '', '', '', '', '', '', '', 'sos611a253b28087', 1, '2021-08-16', 'C2-2939.H.01.03.TH.90', '', '', ''),
+('ors611a257a6cb0f', 'LINDU AJI', 'jor60d0573fb33fe', '', '', '', '', '', 'Griya  Raharja Jl. Supriyadi Kec. Pedurungan ', '', '', '', '', '', '', '', 'sos611a2578b90f5', 1, '2021-08-16', 'AHU-0002252.AH.01.07 TH.2015', '', '', ''),
+('ors611a2592e8a30', 'LEMBAGA SWADAYA MASYARAKAT GERAKAN PEDULI   ANAK BANGSA', 'jor60d0573fb33fe', '', '', '', '', '', 'Jl. Sambiroto  IV RT.02 RW.01 Tembalang Semarang ', '', '', '', '', '', '', '', 'sos611a2592ca896', 1, '2021-08-16', 'AHU-0010201.AHA.01.07  TH. 2015', '', '', ''),
+('ors611a267d64178', 'BARISAN PATRIOT  BELA NEGARA ', 'jor60d0574b03b65', '', '', '', '', '', 'Kelurahan Pekuncen Rt.03/01 No. 25 Kec. Wiradesa.Kab.Pekalongan', '', '', '', '', '', '', '', 'sos611a267d41071', 1, '2021-08-16', 'AHU- 0000066.AH.01.07 TH. 2015', '', '', ''),
+('ors611a2698bb1d9', 'YAYASAN  DARUL  QALAM  NUSANTARA', 'jor60d0574b03b65', '', '', '', '', '', 'Jl. Pesantren  PPPDQI No. 01 Desa Baros Kec. Ketanggungan Kab. Brebes', '', '', '', '', '', '', '', 'sos611a2697dfca2', 1, '2021-08-16', 'AHU-0013665.AH.01.04 Th. 2015', '', '', ''),
+('ors611a291268bcb', 'PEMANTAU PENGGUNAAN KEUANGAN NEGARA', 'jor60d0574b03b65', '', '', '', '', '', 'Kp. Sedompyong Gang 2 No. 11 RT.02. RW 10 Kel. ', '', '', '', '', '', '', '', 'sos611a2912515ff', 1, '2021-08-16', 'AHU-0020019.AH.01.07  Th. 2015', '', '', ''),
+('ors611a292aabe0e', 'LENTERA ABADI', 'jor60d0574b03b65', '', '', '', '', '', 'Jl. Dr. Wahidin No. 25 RT .005/RW.001 Desa Sindangsari Kec. Majenang ', '', '', '', '', '', '', '', 'sos611a292a8a9ff', 1, '2021-08-16', 'AHU-001473.AH.01.07.Th 2015', '', '', ''),
+('ors611a294fc47e5', 'MASYARAKAT PERS ANTI NARKOBA', 'jor60d0574b03b65', '', '', '', '', '', 'Jl. Raya Mangkang Km.15 Semarang', '', '', '', '', '', '', '', 'sos611a294fa6291', 1, '2021-08-16', 'AHU -0005461.AH.01.07 Th.2015', '', '', ''),
+('ors611a296d03a38', 'GERAKAN NASIONAL PENCEGAHAN KORUPSI REPUBLIK INDONESIA PROVINSI JAWA TENGAH', 'jor60d0574b03b65', '', '', '', '', '', 'Jl. Terate No. 07 Klego Kota Pekalongan ', '', '', '', '', '', '', '', 'sos611a296bc4188', 1, '2021-08-16', 'AHU-0000201.AH.01.07 TH.2015', '', '', ''),
+('ors611a29dc1ea0b', 'LEMBAGA PENGAWAS KINERJA APARATUR NEGARA REPUBLIK INDONESIA', 'jor60d0575b7b225', '', '', '', '', '', 'Semarang', '', '', '', '', '', '', '', 'sos611a29db4b87c', 1, '2021-08-16', 'AHU-0006803.AH.01.07. Th.2016', '', '', ''),
+('ors611a29f3a5a31', 'LEMBAGA SWADAYA MASYARAKAT KOMANDO BERSAMA RAKYAT', 'jor60d0575b7b225', '', '', '', '', '', 'Jl. Jend. A. Yani No. 357 Sidomulyo Sukoharjo (0271) 733128', '', '', '', '', '', '', '', 'sos611a29f387363', 1, '2021-08-16', 'AHU-0002562.AH.01.07.tahun 2015', '', '', ''),
+('ors611a2a297cd6d', 'FORUM  KOMUNIKASI SAHABAT BANSER', 'jor60d0575b7b225', '', '', '', '', '', 'Jl. Karang Tengah II Rt.08/II Genuksari Semarang', '', '', '', '', '', '', '', 'sos611a2a296c532', 1, '2021-08-16', 'AHU-0027649.AH.01.07 Tahun 2015', '', '', ''),
+('ors611a2a40e3706', 'BKM SUMBER REJEKI', 'jor60d0575b7b225', '', '', '', '', '', 'Desa Jatihadi RT.02/05 Kec. Sumber Rembang', '', '', '', '', '', '', '', 'sos611a2a40bdef3', 1, '2021-08-16', 'AHU-0003977.AH.01.07.Tahun 2015', '', '', ''),
+('ors611a2a5565a92', 'HIZBUT TAHRIR INDONESIA', 'jor60d0575b7b225', '', '', '', '', '', 'Jl. Kintelan  Baru No. 32 Semarang', '', '', '', '', '', '', '', 'sos611a2a554f384', 1, '2021-08-16', 'AHU-00282.60.10 Tahun 2014', '', '', ''),
+('ors611a2a6b5610b', 'GERAKAN PEMBANGUNAN DESA MAKMUR', 'jor60d0575b7b225', '', '', '', '', '', 'Desa Tegalsambi RT.08/02 Kec.Tahunan Kab. Jepara', '', '', '', '', '', '', '', 'sos611a2a6b382a3', 1, '2021-08-16', 'AHU-0006580.AH.01.07 Tahun 2016', '', '', ''),
+('ors611a2b28e6906', 'FORUM PENYELENGGARA KURSUS SELURUH INDONESIA', 'jor60d05997283b8', '', '', '', '', '', 'Jl. Sedayu Kenangan III Blok E No. 1 Woltermonginsidi, Kec. Genuk, Kota Semarang, Jawa Tengah, 40235, Indonesia', '', '', '', '', '', '', '', 'sos611a2b28b08f2', 1, '2021-08-16', 'AHU-0018976.ah.01.07tAHUN 2015', '', '', ''),
+('ors611a2b47ee2fa', 'GERAKAN EDUKASI MASYARAKAT PEDULI IRIGASI TANAH AIR', 'jor60d05997283b8', '', '', '', '', '', 'Bilo Lor RT.02/03 Desa Pundenarum Kec. Karangawen Kab.Demak', '', '', '', '', '', '', '', 'sos611a2b47c33f1', 1, '2021-08-16', 'AHU-0004870.AH.01.07.Tahun 2016', '', '', ''),
+('ors611a2b692a1da', 'GERAKAN PEDULI RAKYAT INDONESIA', 'jor60d05997283b8', '', '', '', '', '', 'Jl. Karangrejo II/12 RT.04/07 Srondol Wetan Banyumanik Semarang ', '', '', '', '', '', '', '', 'sos611a2b6910c06', 1, '2021-08-16', 'AHU-0007915.AH.01.07 Tahun 2016 ', '', '', ''),
+('ors611a2b7d4e2cd', 'FORUM  RAKYAT TANI LESTARI', 'jor60d05997283b8', '', '', '', '', '', 'Desa Jatihadi RT.02/05 Kec. Sumber Rembang', '', '', '', '', '', '', '', 'sos611a2b7d2ebe2', 1, '2021-08-16', 'AHU-0009089.AH.01.07 Tahun 2016', '', '', ''),
+('ors611a2c4413fc7', 'JARINGAN PENDAMPINGAN KEBIJAKAN DAN PEMBANGUNAN ', 'jor60d05997283b8', '', '', '', '', '', 'Jl. Raya Brangsong No. 57 Kec. Brangsong Kab.Kendal ', '', '', '', '', '', '', '', 'sos611a2c43f35e1', 1, '2021-08-16', 'AHU-0001682.AH.01.07-Tahun 2015', '', '', ''),
+('ors611a2c5ff2cc0', 'ASOSIASI  PETANI TEMBAKAU INDONESIA', 'jor60d05997283b8', '', '', '', '', '', 'Temanggung', '', '', '', '', '', '', '', 'sos611a2c5fcd4ab', 1, '2021-08-16', 'AHU-0006126.AH.01.07.Tahun 2015', '', '', ''),
+('ors611c98989a9f9', 'DEWAN PENGURUS WILAYAH ASOSIASI PERUSAHAAN BONGKAR MUAT INDONESIA', 'jor60d05997283b8', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, '2021-08-18', 'AHU- 174.AH.01.07.2012', 'usr611c98984ee67', 'DPWA', '1');
 
 -- --------------------------------------------------------
 

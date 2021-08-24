@@ -21,7 +21,7 @@
   <div class="container-fluid content-main">
     <div class="row">
       <div class="col-md-8 mb-3">
-        <div class="card rounded-3 mt-5 px-3">
+        <div class="card rounded-3 px-3 mt-3">
           <div class="card-body">
             <!-- <div class="container-fluid p-1 mt-4">
           <form action="" method="GET">

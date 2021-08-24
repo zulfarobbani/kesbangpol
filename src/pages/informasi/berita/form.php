@@ -29,15 +29,15 @@
                             <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
                                 Tambah
                             </button>
-                            <?php if ($aliasRole == 'kesbangpol') { ?>
-                                <a href="/informasi-kesbangpol/berita/approval" class="btn btn-sm btn-success">Approval berita</a>
-                                <a href="/informasi-kesbangpol/komentar/approval" class="btn btn-sm btn-success">Approval Komentar Berita</a>
-                            <?php } ?>
+                                <?php if ($aliasRole == 'kesbangpol') { ?>
+                                    <a href="/informasi-kesbangpol/berita/approval" class="btn btn-sm btn-success">Approval berita</a>
+                                    <a href="/informasi-kesbangpol/komentar/approval" class="btn btn-sm btn-success">Approval Komentar Berita</a>
+                                <?php } ?>
                             <table class="table table-sm">
                                 <thead>
                                     <tr>
                                         <td>No</td>
-                                        <td>Judul Berita</td>
+                                        <td style="width: 282px;">Judul Berita</td>
                                         <td>Tanggal Publish</td>
                                         <td>Penulis</td>
                                         <td>Aksi</td>
@@ -47,7 +47,7 @@
                                     <?php foreach ($datas as $key => $value) { ?>
                                         <tr>
                                             <td><?= $key += 1 ?></td>
-                                            <td><?= $value['namaBerita'] ?></td>
+                                            <td style="width: 282px;"><?= $value['namaBerita'] ?></td>
                                             <!-- <td><?= $value['authorBerita'] ?></td> -->
                                             <td><?= $value['dateCreate'] ?></td>
                                             <td><?= $value['namaUser'] ?></td>
@@ -99,7 +99,7 @@
                                         <div class="mb-3">
                                             <label for="exampleFormControlInput1" class="form-label">Tag Berita (Opsional)</label>
                                             <textarea name="tagBerita" class="form-control"></textarea>
-                                            <span class="text-muted">Masukan tag berita menggunakan separator koma</span>
+                                            <span class="text-muted">Masukan tag berita menggunakan separator koma.<b> Misalkan : kesbangpol, nama organisasi, politik</b></span>
                                         </div>
                                         <label for="">Tim Editor</label>
                                         <div class="input-group mb-3" style="width: 60%;">

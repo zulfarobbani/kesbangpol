@@ -121,7 +121,7 @@
       </a>
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
-      <a style="height: 52px;" href="https://bpbj.sukabumikota.go.id" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
+      <a style="height: 52px;" href="https://monev.lkpp.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
         <img src="/assets/image/logo link eskternal/Link External Grey/Grey/tepra_grey.png" class="sidegamar align-self-center img-fluid" style="margin-right: 10px;">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Evaluasi Pengawasan</b> Realisasi Anggaran</span>
       </a>
@@ -145,7 +145,7 @@
       </a>
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
-      <a style="height: 52px;" href="https://library.cimahikota.go.id" class="btn btn-sm btn-outline-secondary d-flex mb-2">
+      <a style="height: 52px;" href="https://library.cimahikota.go.id" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
         <img src="/assets/image/logo link eskternal/Link External Grey/Grey/inlislite_grey.png" class="sidegamar align-self-center img-fluid" style="margin-right: 10px;">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Aplikasi Perpustakaan</b></span>
       </a>
@@ -193,7 +193,7 @@
       </a>
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
-      <a style="height: 52px;;" href="http://simantra.ntbprov.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
+      <a style="height: 52px;;" href="https://smartcity.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
         <img src="/assets/image/logo link eskternal/Link External Grey/Grey/mantra_grey.png" class="sidegamar align-self-center img-fluid" style="margin-right: 10px;">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Manajemen Integrasi</b> Pertukaran Data</span>
       </a>
@@ -223,7 +223,7 @@
       </a>
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
-      <a style="height: 52px;" href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2">
+      <a style="height: 52px;" href="https://smartcity.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
         <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Financial Dashboard</b><br>Kota Cimahi</span>
       </a>
@@ -235,8 +235,8 @@
       </a>
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
-      <a style="height: 52px;" href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2">
-        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2">
+      <a style="height: 52px;" href="http://pbbmon.cimahikota.go.id/Security/SignIn.aspx" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
+        <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" target="_blank" class="sidegamar align-self-center img-fluid ms-1 me-2">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>PBB MON</b><br>Kota Cimahi</span>
       </a>
     </div>
@@ -271,7 +271,7 @@
       </a>
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
-      <a style="height: 52px;" href="#" class="btn btn-sm btn-outline-secondary d-flex mb-2">
+      <a style="height: 52px;" href="https://smartcity.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
         <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>SIMKEL</b><br>Kota Cimahi</span>
       </a>
@@ -291,11 +291,11 @@
     <div class="col-6 col-md-12 col-xl-6" id="pict">
       <a style="height: 52px;" href="https://silima.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
         <img src="/assets/image/logo link eskternal/Link External Grey/Grey/silima1_grey.png" class="sidegamar align-self-center img-fluid" style="margin-right: 40px;">
-        <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Dinas Tenaga Kerja</b> Kota Cimahi</span>
+        <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>Dinas Tenaga Kerja</b><br> Kota Cimahi</span>
       </a>
     </div>
     <div class="col-6 col-md-12 col-xl-6" id="pict">
-      <a style="height: 52px;" href="https://ukpbj.depok.go.id/simanda/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
+      <a style="height: 52px;" href="https://smartcity.cimahikota.go.id/" target="_blank" class="btn btn-sm btn-outline-secondary d-flex mb-2">
         <img src="https://bappenda.cimahikota.go.id/logo/cimahi.gif" class="sidegamar align-self-center img-fluid ms-1 me-2">
         <span class="text-start spansidebar align-self-center flex-fill teksidebar"><b>SIMANDA <span style="font-size: 10px;">v.2</span></b><br>Kota Cimahi</span>
       </a>

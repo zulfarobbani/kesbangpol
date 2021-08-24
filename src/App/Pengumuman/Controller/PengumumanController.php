@@ -2,6 +2,7 @@
 
 namespace App\Pengumuman\Controller;
 
+use App\LikePengumuman\Model\LikePengumuman;
 use App\Pengumuman\Model\Pengumuman;
 use App\Media\Model\Media;
 use Core\GlobalFunc;
@@ -17,7 +18,7 @@ class PengumumanController extends GlobalFunc
     {
         $this->model = new Pengumuman();
         $this->model2 = new Media();
-        
+        parent::beginSession();
     }
     
     public function index(Request $request)
@@ -92,6 +93,10 @@ class PengumumanController extends GlobalFunc
         $id = $request->attributes->get('id');
         $datas = $this->model->selectOne($id);
 
-        return $this->render_template('/informasi/pengumuman/detail', ['detail' => $datas]);
+        $like = new LikePengumuman();
+        $likepengumuman = $like->selectAll("WHERE likepengumuman.idPengumuman = '$id' AND likepengumuman.idUser = '".$this->session->get('idUser')."' AND jenislikepengumuman = '1'");
+        $dislikepengumuman = $like->selectAll("WHERE likepengumuman.idPengumuman = '$id' AND likepengumuman.idUser = '".$this->session->get('idUser')."' AND jenislikepengumuman = '2'");
+
+        return $this->render_template('/informasi/pengumuman/detail', ['detail' => $datas, 'likepengumuman' => $likepengumuman, 'dislikepengumuman' => $dislikepengumuman]);
     }
 }

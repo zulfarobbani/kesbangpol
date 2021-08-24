@@ -22,7 +22,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8 mb-3">
-                <div class="card rounded-3 mt-5 px-3">
+                <div class="card rounded-3 px-3 mt-3">
                     <div class="card-body">
                         <!-- START CODE -->
                         <h6 class="fw-normal mt-2"><a href="/informasi/pengumuman" class="btn btn-sm btn-outline-danger"><i class="fas fa-arrow-left"></i></a>&nbsp;&nbsp; Pengumuman</h6>
@@ -31,42 +31,28 @@
                                 <h5 class="fw-bold mt-3 mb-4"><?= $detail['namaPengumuman'] ?></h5>
                                 <img class="w-100" src="/assets/media/<?= $detail['pathMedia'] ?>" alt="Gambar Berita">
                                 <p class="mt-4 teksjustify"><?= html_entity_decode(nl2br($detail['deskripsiPengumuman'])) ?></p>
-                                <span class="badge bg-danger fs-6">Opini suara & publik</span>
-                                <span class="badge bg-danger fs-6">Public Government</span>
-                                <div class="row">
-                                    <h4 class="my-3">Tim Editor</h4>
-                                    <div class="col-1">
-                                        <img src="https://awsimages.detik.net.id/community/media/visual/2019/09/25/7384aef5-e918-48f0-a8da-36b99c78116d.jpeg?w=750&q=90" width="50px" height="50px" class="img rounded-circle">
-                                    </div>
-                                    <div class="col-4 ps-3">
-                                        <h5>Gina Agustina<br><span class="text-muted" style="font-size: 11px;">Writer</span></h5>
-                                        <button class="btn btn-danger">&nbsp;&nbsp;&nbsp;&nbsp;Ikuti&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                                    </div>
-                                    <div class="col-1">
-                                        <img src="https://awsimages.detik.net.id/community/media/visual/2019/02/19/3fc2caf6-118c-457d-8a28-8868c1753fda.jpeg?w=750&q=90" width="50px" height="50px" class="img rounded-circle">
-                                    </div>
-                                    <div class="col-4 ps-3">
-                                        <h5>Arya Aprian<br><span class="text-muted" style="font-size: 11px;">Editor</span></h5>
-                                        <button class="btn btn-danger">&nbsp;&nbsp;&nbsp;&nbsp;Ikuti&nbsp;&nbsp;&nbsp;&nbsp;</button>
-                                    </div>
-                                </div>
                                 <hr>
                                 <div class="row d-flex justify-content-center">
                                     <div class="col-2 text-center text-grey">
-                                        <i class="far fa-thumbs-up"></i>
-                                        <span>0</span> Suka
+                                        <a href="/likePengumuman/<?= $detail['idPengumuman'] ?>/store" class="text-dark text-decoration-none">
+                                            <i class="<?= count($likepengumuman) > 0 ? 'fas' : 'far' ?> fa-thumbs-up"></i>
+                                        </a>
+                                        <span><?= $detail['countlikePengumuman'] ?></span> Suka
                                     </div>
                                     <div class="col-2 text-center text-grey">
-                                        <i class="far fa-thumbs-up" style="-ms-transform: rotate(180deg);transform: rotate(180deg);"></i>
-                                        <span>0</span> Tidak Suka
+                                        <a href="/dislikePengumuman/<?= $detail['idPengumuman'] ?>/store" class="text-dark text-decoration-none">
+                                            <i class="<?= count($dislikepengumuman) > 0 ? 'fas' : 'far' ?> fa-thumbs-up" style="-ms-transform: rotate(180deg);transform: rotate(180deg);"></i>
+                                        </a>
+                                        <span><?= $detail['countdislikePengumuman'] ?></span> Tidak Suka
                                     </div>
                                     <div class="col-2 text-center text-grey">
-                                        <a href="#" class="text-dark text-decoration-none btn-sosmed" data-bs-toggle="modal" data-bs-target="#modalSosmed" data-bs-url="<?= $site_url ?>/informasi/pengumuman/<?= $detail['idPengumuman'] ?>">
+                                        <a href="#" class="text-dark text-decoration-none btn-sosmed" data-bs-toggle="modal" data-bs-target="#modalSosmed" data-bs-url="<?= $site_url ?>/informasi/berita/<?= $detail['idPengumuman'] ?>" data-bs-idPengumuman="<?= $detail['idPengumuman'] ?>">
                                             <i class="fas fa-share-alt"></i>
-                                            <span>0</span> Bagikan
+                                            <span><?= $detail['countsharePengumuman'] ?></span> Bagikan
                                         </a>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>

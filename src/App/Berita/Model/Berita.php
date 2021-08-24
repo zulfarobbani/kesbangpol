@@ -243,7 +243,7 @@ class Berita extends GlobalFunc
             $data = $this->conn->prepare($sql);
             $data->execute();
 
-            return $id;
+            return $idBerita;
         } catch (PDOexception $e) {
             echo $e;
             die();

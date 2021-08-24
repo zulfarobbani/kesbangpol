@@ -91,6 +91,12 @@
   </nav>
 </div>
 
+<?php if ($aliasRole == 'orsospol' && $regisBaru == '1') { ?>
+<div class="container mt-3">
+    <b class="text-center">Silahkan lengkapi data organisasi Anda <a href="/organisasi-terdaftar-kesbangpol/parpol" style="color: red;">disini</a></b>
+</div>
+<?php } ?>
+
 <!-- Modal -->
 <div class="modal fade" id="hubungiKami" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">

@@ -110,7 +110,7 @@ $routes->add('pegawaiKontenStore', new Route('/pegawai-kesbangpol/store', [
     '_controller' => 'App\Pegawai\Controller\PegawaiController::pegawaiKontenStore',
 ]));
 $routes->add('pegawaiKontenGet', new Route('/pegawai-kesbangpol/{id}/get', [
-    '_controller' => 'App\Pegawai\Controller\PegawaiController::    ',
+    '_controller' => 'App\Pegawai\Controller\PegawaiController::pegawaiKontenGet',
 ]));
 $routes->add('pegawaiKontenSearch', new Route('/pegawai-kesbangpol/get', [
     '_controller' => 'App\Pegawai\Controller\PegawaiController::pegawaiKontenSearch',
@@ -339,7 +339,7 @@ $routes->add('komentarBeritaApprovalStore', new Route('/informasi-kesbangpol/kom
     '_controller' => 'App\CommentBerita\Controller\CommentBeritaController::komentarBeritaApprovalStore',
 ]));
 
-//curd pengumuman
+//crud pengumuman
 $routes->add('pengumumanKonten', new Route('/informasi-kesbangpol/pengumuman', [
     '_controller' => 'App\PengumumanKesbangpol\Controller\PengumumanKesbangpolController::pengumumanKonten',
 ]));
@@ -354,6 +354,12 @@ $routes->add('pengumumanKontenUpdate', new Route('/informasi-kesbangpol/pengumum
 ]));
 $routes->add('pengumumanKontenDelete', new Route('/informasi-kesbangpol/pengumuman/{id}/delete', [
     '_controller' => 'App\PengumumanKesbangpol\Controller\PengumumanKesbangpolController::pengumumanKontenDelete',
+]));
+$routes->add('storeLikepengumuman', new Route('/likePengumuman/{id}/store', [
+    '_controller' => 'App\LikePengumuman\Controller\LikePengumumanController::storeLikePengumuman',
+]));
+$routes->add('storeDislikepengumuman', new Route('/dislikePengumuman/{id}/store', [
+    '_controller' => 'App\LikePengumuman\Controller\LikePengumumanController::storeDislikePengumuman',
 ]));
 
 //curd kontak darurat

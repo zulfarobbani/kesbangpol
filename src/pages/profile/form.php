@@ -155,7 +155,7 @@
                                             <?php foreach ($regulasi as $key => $value) { ?>
                                                 <tr>
                                                     <td><?= $key += 1 ?></td>
-                                                    <td><?= $value['namaRegulasi'] ?></td>
+                                                    <td style="width: 400px;"><?= $value['namaRegulasi'] ?></td>
                                                     <td>
                                                         <button type="button" class="btn btn-sm btn-success m-1" data-bs-toggle="modal" data-bs-target="#detailModalRegulasi" data-bs-fileRegulasi="/assets/media/<?= $value['pathMedia'] ?>">
                                                             Lihat

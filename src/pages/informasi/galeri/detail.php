@@ -28,7 +28,7 @@
                         <div id="top"></div>
                         <section class="gallery">
                             <div class="row nest">
-                                <a href="#" class="close" style="filter:invert(75%);"></a>
+                                <a href="#" class="close btn btn-sm btn-danger px-2"></a>
                                 <?php foreach ($detailItem as $key => $value) { ?>
                                     <div class="col-6 col-md-4 shadow-sm p-0 subnest rounded">
                                         <a href="#item01" class="galleryDetail d-flex align-items-center" data-image="/assets/media/<?= $value['pathMedia'] ?>" data-name="<?= $value['namaGallerydetail'] ?>" data-deskripsi="<?= $value['deskripsiGallerydetail'] ?>">

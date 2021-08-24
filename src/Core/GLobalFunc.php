@@ -47,6 +47,7 @@ class GlobalFunc
         $data['singkatanOrsospol'] = !is_null($this->session) ? $this->session->get('singkatanOrsospol') : null;
         $data['noAHU'] = !is_null($this->session) ? $this->session->get('noAHU') : null;
         $data['idJenisorsospol'] = !is_null($this->session) ? $this->session->get('idJenisorsospol') : null;
+        $data['regisBaru'] = !is_null($this->session) ? $this->session->get('regisBaru') : null;
         $data['idRole'] = !is_null($this->session) ? $this->session->get('idRole') : null;
         $data['aliasRole'] = !is_null($this->session) ? $this->session->get('aliasRole') : null;
 

@@ -52,7 +52,7 @@
                                     <tbody>
                                         <?php foreach ($datas as $key => $data) { ?>
                                             <tr class="paragraf align-middle">
-                                                <td><?= $data['namaUser'] ?></td>
+                                                <td style="width: 120px;"><?= $data['namaUser'] ?></td>
                                                 <td><?= $data['usernameUser'] ?></td>
                                                 <td><?= $data['emailUser'] ?></td>
                                                 <td><?= date('d M Y', strtotime($data['dateCreate'])) ?></td>

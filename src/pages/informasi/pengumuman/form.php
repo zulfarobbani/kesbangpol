@@ -67,11 +67,11 @@
                         <div class="modal-dialog modal-xl">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h6 class="modal-title" id="exampleModalLabel">Tambah Berita</h6>
+                                    <h6 class="modal-title" id="exampleModalLabel">Tambah Pengumuman</h6>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="pengumuman/store" method="post" enctype="multipart/form-data">
+                                    <form action="pengumuman/store" method="post" enctype="multipart/form-data" class="formSubmit">
                                         <div class="mb-3">
                                             <label for="exampleFormControlInput1" class="form-label">Judul Pengumuman</label>
                                             <input type="text" name="namaPengumuman" class="form-control">
@@ -84,6 +84,7 @@
                                             <label for="exampleFormControlInput1" class="form-label">Konten Pengumuman</label>
                                             <textarea id="editor1" name="deskripsiPengumuman"></textarea>
                                         </div>
+
                                         <button type="submit" class="btn btn-primary">Submit</button>
                                     </form>
                                 </div>
@@ -228,7 +229,7 @@
                     coverPengumuman.setAttribute('src', '/assets/media/' + response.data.pathMedia)
                     var kontenPengumuman = editModal.querySelector('.kontenPengumuman')
                     kontenPengumuman.innerHTML = response.data.deskripsiPengumuman
-                    
+
                     ClassicEditor
                         .create(document.querySelector('#editor2'), {
                             removePlugins: ['Heading']
@@ -285,6 +286,44 @@
                 .catch(error => {
                     console.error(error);
                 });
+
+            $('.search-pegawai').on('keyup', function() {
+                var modal = $(this).parents().find('.formSubmit');
+                $.ajax({
+                    type: "GET",
+                    url: "/pegawai-kesbangpol/get",
+                    data: {
+                        search: $(this).val()
+                    }
+                }).done(function(data) {
+                    var content = "";
+                    for (let index = 0; index < data.detail.length; index++) {
+                        const element = data.detail[index];
+                        content += '<tr><td><input class="inputIdpegawai" type="hidden" name="" value="' + element.idUser + '">' + element.namaPegawai + '</td><td>' + element.jabatanPegawai + '</td><td>' + element.nipPegawai + '</td><td>' + element.emailPegawai + '</td><td><button type="button" class="select-pegawai btn btn-success btn-sm">Pilih</button></td></tr>';
+                    }
+                    modal.find('.list-pegawai').html(content);
+                })
+            });
+
+            $(document).on('click', '.select-pegawai', function() {
+                var tableRow = $(this).parent().parent();
+                var modal = $(this).parents().find('.formSubmit');
+                tableRow.find('.inputIdpegawai').prop('name', 'idUser[]');
+                tableRow.css('background-color', 'lightgrey')
+                var tdButton = $(this).parent();
+                tdButton.html('<button type="button" class="hapus-pegawai btn btn-danger btn-sm">Hapus</button>');
+                modal.find('.selected-pegawai').append(tableRow);
+            })
+
+            $(document).on('click', '.hapus-pegawai', function() {
+                var tableRow = $(this).parent().parent();
+                var tdButton = $(this).parent();
+                var modal = $(this).parents().find('.formSubmit');
+                tdButton.html('<button type="button" class="select-pegawai btn btn-success btn-sm">Pilih</button>');
+                tableRow.css('background-color', 'white')
+                tableRow.find('.inputIdpegawai').prop('name', '');
+                modal.find('.list-pegawai').append(tableRow);
+            })
 
         })
     </script>

@@ -27,8 +27,13 @@ class PengumumanKesbangpolController extends GlobalFunc
 
     public function pengumumanKontenStore(Request $request)
     {
+        dd($request->request);
         $data = $request->request;
-        $pengumuman = $this->model->create($data);
+        $tagPengumuman = explode(',', $request->request->get('tagPengumuman'));
+        $idUser = $this->session->get('idUser');
+        $pengumuman = $this->model->create($data, $idUser);
+        $timeditorberita = $this->model->createTimeditor($data, $pengumuman);
+        $storetagPengumuman = $this->model->createTagpengumuman($tagPengumuman, $pengumuman);
 
         // store cover pengumman
         $media = new Media();

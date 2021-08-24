@@ -21,7 +21,7 @@
   <div class="container-fluid" style="margin-bottom: 150px;">
     <div class="row">
       <div class="col-md-8 mb-3">
-        <div class="card rounded-3 mt-5 px-3">
+        <div class="card rounded-3 px-3 mt-3">
           <div class="card-body">
             <!-- <div class="container-fluid p-1 mt-4">  
             <div class="input-group">
@@ -45,11 +45,11 @@
                 </thead>
                 <tbody>
                   <?php foreach ($datas as $key => $values) { ?>
-                    <tr class="align-middle paragraf" style="background-color: <?= $values['idOrsospol'] == $idOrsospol ? 'lightgrey' : 'white' ?>;">
+                    <tr class="align-middle paragraf">
 
-                      <td class="position-relative p-0">
-                        <h6 class="position-absolute top-50 start-50 translate-middle text-tdMerahputih"><?= $key += 1 ?></h6>
-                        <div class="<?= $values['idOrsospol'] == $idOrsospol ? 'tdMerahPutih' : '' ?> position-absolute top-0">
+                      <td class="position-relative p-0" style="background-color: <?= $values['idOrsospol'] == $idOrsospol ? 'red' : 'white' ?>;">
+                        <h6 class="position-absolute top-50 start-50 translate-middle <?= $values['idOrsospol'] == $idOrsospol ? 'text-white' : '' ?>"><?= $key += 1 ?></h6>
+                        <!-- <div class="<?= $values['idOrsospol'] == $idOrsospol ? 'tdMerahPutih' : '' ?> position-absolute top-0"> -->
                           <!-- <div style="display:block;width:100%;height:50%;background-color: red;position:absolute;top:0;">&nbsp;</div>
                     <div style="display:block;width:100%;height:50%;background-color: white;position:absolute;bottom:0;">&nbsp;</div> -->
                         </div>

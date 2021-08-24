@@ -99,4 +99,19 @@ class Pengumuman extends GlobalFunc
             die();
         }
     }
+
+    public function updateLike($idPengumuman, $datas)
+    {
+        $sql = "UPDATE " . $this->table . " SET countlikePengumuman = '".$datas['countlikePengumuman']."', countdislikePengumuman = '".$datas['countdislikePengumuman']."', countsharePengumuman = '".$datas['countsharePengumuman']."' WHERE ".$this->primaryKey." = '$idPengumuman'";
+        
+        try {
+            $data = $this->conn->prepare($sql);
+            $data->execute();
+
+            return $idPengumuman;
+        } catch (PDOexception $e) {
+            echo $e;
+            die();
+        }
+    }
 }

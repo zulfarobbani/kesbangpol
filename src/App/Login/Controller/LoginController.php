@@ -71,6 +71,7 @@ class LoginController extends GlobalFunc
                 $this->session->set('noAHU', $data_orsospol['noAHU']);
                 $this->session->set('idJenisorsospol', $data_orsospol['idJenisorsospol']);
                 $this->session->set('namaJenisorsospol', $data_orsospol['namaJenisorsospol']);
+                $this->session->set('regisBaru', $data_orsospol['regisBaru']);
             } else {
                 $this->session->getFlashBag()->add('errors', "Login gagal, password salah!");
 

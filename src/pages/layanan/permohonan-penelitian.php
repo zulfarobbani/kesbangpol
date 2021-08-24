@@ -21,7 +21,7 @@
   <div class="container-fluid">
     <div class="row" style="background-color : #EEEEEE;">
       <div class="col-md-8 mb-3">
-        <div class="card rounded-3 mt-5 px-3">
+        <div class="card rounded-3 px-3 mt-3">
           <div class="card-body">
             <?php include(__DIR__ . '/../navtabslayanan.php') ?>
             <!-- START CODE -->
@@ -31,7 +31,7 @@
             </div>
 
             <div class="d-block mt-4">
-            <a class="btn btn-danger btn-sm navy  float-end" href="/login-register">
+            <a class="btn btn-danger btn-sm navy  float-end" href="/login-orsospol">
                 <span class="material-icons-outlined text-white" style="font-size: 17px;margin-right: 5px;">person_add_alt_1</span><span class="text-white">Daftar Penelitian</span></a>
               </div>
           </div>

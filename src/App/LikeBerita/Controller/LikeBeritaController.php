@@ -25,35 +25,49 @@ class LikeBeritaController extends GlobalFunc
     public function storeLikeBerita(Request $request)
     {
         $id = $request->attributes->get('id');
-        $this->model->create($request->request, $id, $this->session->get('idUser'));
-        
-        $berita = new Berita();
-        $getBerita = $berita->selectOne($id);
-        $berita->updateLikeComment($id, [
-            'countlikeBerita' => intval($getBerita['countlikeBerita']) + 1,
-            'countdislikeBerita' => $getBerita['countdislikeBerita'],
-            'countcommentBerita' => $getBerita['countcommentBerita'],
-            'countshareBerita' => $getBerita['countshareBerita']
-        ]);
+        $idUser = $this->session->get('idUser');
+        $get = $this->model->selectAll("WHERE likeberita.idBerita = '$id' AND likeberita.idUser = '$idUser' AND jenislikeBerita = '1'");
+        if (count($get) < 1) {
+            $this->model->create($request->request, $id, $idUser, '1');
+            $getDislike = $this->model->selectAll("WHERE likeberita.idBerita = '$id' AND likeberita.idUser = '$idUser' AND jenislikeBerita = '2'");
 
-        return new RedirectResponse('/informasi/berita/'.$id);
+            $berita = new Berita();
+            $getBerita = $berita->selectOne($id);
+            $berita->updateLikeComment($id, [
+                'countlikeBerita' => intval($getBerita['countlikeBerita']) + 1,
+                'countdislikeBerita' => count($getDislike) > 0 ? intval($getBerita['countdislikeBerita']) - 1 : $getBerita['countdislikeBerita'],
+                'countcommentBerita' => $getBerita['countcommentBerita'],
+                'countshareBerita' => $getBerita['countshareBerita']
+            ]);
+
+            $this->model->delete("WHERE likeberita.idBerita = '$id' AND likeberita.idUser = '$idUser' AND jenislikeBerita = '2'");
+        }
+
+        return new RedirectResponse('/informasi/berita/' . $id);
     }
-    
+
     public function storeDislikeBerita(Request $request)
     {
         $id = $request->attributes->get('id');
-        $this->model->create($request->request, $id, $this->session->get('idUser'));
-        
-        $berita = new Berita();
-        $getBerita = $berita->selectOne($id);
-        $berita->updateLikeComment($id, [
-            'countlikeBerita' => $getBerita['countlikeBerita'],
-            'countdislikeBerita' => intval($getBerita['countdislikeBerita']) + 1,
-            'countcommentBerita' => $getBerita['countcommentBerita'],
-            'countshareBerita' => $getBerita['countshareBerita']
-        ]);
+        $idUser = $this->session->get('idUser');
+        $get = $this->model->selectAll("WHERE likeberita.idBerita = '$id' AND likeberita.idUser = '$idUser' AND jenislikeBerita = '2'");
+        if (count($get) < 1) {
+            $this->model->create($request->request, $id, $idUser, '2');
+            $getLike = $this->model->selectAll("WHERE likeberita.idBerita = '$id' AND likeberita.idUser = '$idUser' AND jenislikeBerita = '1'");
 
-        return new RedirectResponse('/informasi/berita/'.$id);
+            $berita = new Berita();
+            $getBerita = $berita->selectOne($id);
+            $berita->updateLikeComment($id, [
+                'countlikeBerita' => count($getLike) > 0 ? intval($getBerita['countlikeBerita']) - 1 : $getBerita['countlikeBerita'],
+                'countdislikeBerita' => intval($getBerita['countdislikeBerita']) + 1,
+                'countcommentBerita' => $getBerita['countcommentBerita'],
+                'countshareBerita' => $getBerita['countshareBerita']
+            ]);
+
+            $this->model->delete("WHERE likeberita.idBerita = '$id' AND likeberita.idUser = '$idUser' AND jenislikeBerita = '1'");
+        }
+
+        return new RedirectResponse('/informasi/berita/' . $id);
     }
 
     public function storeComment(Request $request)
@@ -61,7 +75,7 @@ class LikeBeritaController extends GlobalFunc
         $idBerita = $request->attributes->get('id');
         $idUser = $this->session->get('idUser');
         $this->model->create($request->request, $idBerita, $idUser);
-        
+
         $berita = new Berita();
         $getBerita = $berita->selectOne($idBerita);
         $berita->updateLikeComment($idBerita, [
