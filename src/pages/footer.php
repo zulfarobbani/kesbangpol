@@ -65,16 +65,16 @@
             <h6>Media Sosial</h6>
             <ul class="list-unstyled d-block text-center" style="margin: 0;">
                 <li class="d-inline btn-sosmed-footer" style="margin-right: 10px;">
-                    <a href="https://id-id.facebook.com/login/web/" target="_blank" role="button" class="btn-sosmed-footer"><img class="btn-sosmed-footer" src="/assets/icon/sosmed/facebook.png" alt="" style="width:18px;"></a>
+                    <a href="https://id-id.facebook.com/login/web/" target="_blank" role="button" class="btn-sosmed-footer berem"><img class="btn-sosmed-footer" src="/assets/icon/sosmed/facebook.png" alt="" style="width:18px;"></a>
                 </li>
                 <li class="d-inline btn-sosmed-footer" style="margin-right: 10px;">
-                    <a href="https://accounts.google.com/servicelogin" target="_blank" role="button" class="btn-sosmed-footer"><img class="btn-sosmed-footer" src="/assets/icon/sosmed/youtube.png" alt="" style="width:26px;"></a>
+                    <a href="https://accounts.google.com/servicelogin" target="_blank" role="button" class="btn-sosmed-footer berem"><img class="btn-sosmed-footer" src="/assets/icon/sosmed/youtube.png" alt="" style="width:26px;"></a>
                 </li>
                 <li class="d-inline btn-sosmed-footer" style="margin-right: 10px;">
-                    <a href="https://twitter.com/login?lang=id" target="_blank" role="button" class="btn-sosmed-footer"><img class="btn-sosmed-footer" src="/assets/icon/sosmed/twitter-sign.png" alt="" style="width:20px;"></a>
+                    <a href="https://twitter.com/login?lang=id" target="_blank" role="button" class="btn-sosmed-footer berem"><img class="btn-sosmed-footer" src="/assets/icon/sosmed/twitter-sign.png" alt="" style="width:20px;"></a>
                 </li>
                 <li class="d-inline btn-sosmed-footer" style="margin-right: 10px;">
-                    <a href="https://www.instagram.com/accounts/login" target="_blank" role="button" class="btn-sosmed-footer"><img class="btn-sosmed-footer" src="/assets/icon/sosmed/instagram.png" alt="" style="width:20px;"></a>
+                    <a href="https://www.instagram.com/accounts/login" target="_blank" role="button" class="btn-sosmed-footer berem"><img class="btn-sosmed-footer" src="/assets/icon/sosmed/instagram.png" alt="" style="width:20px;"></a>
                 </li>
             </ul>
         </div>
@@ -102,16 +102,16 @@
             <h6>Media Sosial</h6>
             <ul class="list-unstyled d-block text-center" style="margin: 0;">
                 <li class="d-inline btn-sosmed-footer" style="margin-right: 10px;">
-                    <a href="https://id-id.facebook.com/login/web/" target="_blank" role="button" class="btn-sosmed-footer"><img class="btn-sosmed-footer" src="/assets/icon/sosmed/facebook.png" alt="" style="width:18px;"></a>
+                    <a href="https://id-id.facebook.com/login/web/" target="_blank" role="button" class="btn-sosmed-footer berem"><img class="btn-sosmed-footer" src="/assets/icon/sosmed/facebook.png" alt="" style="width:18px;"></a>
                 </li>
                 <li class="d-inline btn-sosmed-footer" style="margin-right: 10px;">
-                    <a href="https://accounts.google.com/servicelogin" target="_blank" role="button" class="btn-sosmed-footer"><img class="btn-sosmed-footer" src="/assets/icon/sosmed/youtube.png" alt="" style="width:26px;"></a>
+                    <a href="https://accounts.google.com/servicelogin" target="_blank" role="button" class="btn-sosmed-footer berem"><img class="btn-sosmed-footer" src="/assets/icon/sosmed/youtube.png" alt="" style="width:26px;"></a>
                 </li>
                 <li class="d-inline btn-sosmed-footer" style="margin-right: 10px;">
-                    <a href="https://twitter.com/login?lang=id" target="_blank" role="button" class="btn-sosmed-footer"><img class="btn-sosmed-footer" src="/assets/icon/sosmed/twitter-sign.png" alt="" style="width:20px;"></a>
+                    <a href="https://twitter.com/login?lang=id" target="_blank" role="button" class="btn-sosmed-footer berem"><img class="btn-sosmed-footer" src="/assets/icon/sosmed/twitter-sign.png" alt="" style="width:20px;"></a>
                 </li>
                 <li class="d-inline btn-sosmed-footer" style="margin-right: 10px;">
-                    <a href="https://www.instagram.com/accounts/login" target="_blank" role="button" class="btn-sosmed-footer"><img class="btn-sosmed-footer" src="/assets/icon/sosmed/instagram.png" alt="" style="width:20px;"></a>
+                    <a href="https://www.instagram.com/accounts/login" target="_blank" role="button" class="btn-sosmed-footer berem"><img class="btn-sosmed-footer" src="/assets/icon/sosmed/instagram.png" alt="" style="width:20px;"></a>
                 </li>
             </ul>
         </div>

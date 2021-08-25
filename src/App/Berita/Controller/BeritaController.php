@@ -54,7 +54,9 @@ class BeritaController extends GlobalFunc
     public function beritaKonten(Request $request)
     {
         $idUser = $this->session->get('idUser');
-        $datas = $this->model->selectAll("WHERE authorBerita = '$idUser'");
+        $aliasRole = $this->session->get('aliasRole');
+        $where = $aliasRole != 'kesbangpol' ? "WHERE authorBerita = '$idUser'" : "";
+        $datas = $this->model->selectAll($where);
 
         return $this->render_template('informasi/berita/form', ['datas' => $datas]);
     }

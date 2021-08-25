@@ -27,7 +27,7 @@
                         <div class="container mt-4">
                             <div class="hstack mb-3">
                                 <h5>PARPOL Terdaftar</h5>
-                                <?php if ($aliasRole == 'KESBANGPOL') { ?>
+                                <?php if ($aliasRole == 'kesbangpol') { ?>
                                 <button type="button" class="ms-auto btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#createModal">
                                     Tambah
                                 </button>

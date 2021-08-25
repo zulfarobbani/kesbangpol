@@ -46,7 +46,7 @@ class OrsospolController extends GlobalFunc
 
         // pagination
         $page = $request->query->get('page') ? $request->query->get('page') : '1';
-        $result_per_page = 6;
+        $result_per_page = 20;
 
         $countRows = $this->model->countRows($data_jenisOrsospol['idJenisorsospol'])['count'];
         $page_first_result = ($page - 1) * $result_per_page;
@@ -72,7 +72,7 @@ class OrsospolController extends GlobalFunc
 
         // pagination
         $page = $request->query->get('page') ? $request->query->get('page') : '1';
-        $result_per_page = 6;
+        $result_per_page = 20;
 
         $countRows = $this->model->countRows($data_jenisOrsospol['idJenisorsospol'])['count'];
         $page_first_result = ($page - 1) * $result_per_page;
@@ -97,7 +97,7 @@ class OrsospolController extends GlobalFunc
 
         // pagination
         $page = $request->query->get('page') ? $request->query->get('page') : '1';
-        $result_per_page = 6;
+        $result_per_page = 20;
 
         $countRows = $this->model->countRows($data_jenisOrsospol['idJenisorsospol'])['count'];
         $page_first_result = ($page - 1) * $result_per_page;
@@ -121,7 +121,7 @@ class OrsospolController extends GlobalFunc
 
         // pagination
         $page = $request->query->get('page') ? $request->query->get('page') : '1';
-        $result_per_page = 6;
+        $result_per_page = 20;
 
         $countRows = $this->model->countRows($data_jenisOrsospol['idJenisorsospol'])['count'];
         $page_first_result = ($page - 1) * $result_per_page;
